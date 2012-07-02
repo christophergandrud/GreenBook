@@ -89,13 +89,21 @@ Federal Reserve staff create ``Green Book" forecasts\footnote{Green Book data ca
     
 <<BaseInflation, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
     
+    library(RCurl)
     library(foreign)
     library(reshape2)
     library(ggplot2)
     
     ### Load data
+
+    # Load data from GitHub
+    url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi.csv?login=christophergandrud&token=0f00c334700dda57eb08fdd1b3c1d17b"
+    cpi.data <- getURL(url)
+    cpi.data <- read.csv(textConnection(cpi.data))
+
+    ## Other data loading options
     #cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/GB_FRED_cpi.dta") # Load data locally from Christopher's computer
-    cpi.data <- read.dta("http://dl.dropbox.com/u/12581470/code/Replicability_code/GreenBook/GB_FRED_cpi.dta") # Load data from Dropbox when connected to the internet
+    # cpi.data <- read.dta("http://dl.dropbox.com/u/12581470/code/Replicability_code/GreenBook/GB_FRED_cpi.dta") # Load data from Dropbox 
     
     ### Melt data, i.e. reshape
     cpi.abs <- melt(cpi.data, id = "Quarter", measure = c("GB_CPI_QTR2", "deflator"))
@@ -243,7 +251,7 @@ FILL IN
 
 In general there was very little difference in the coefficients estimated using OLS and Bayesian linear regression (see, for example Figure \ref{basicModelsPlot}). More variables were `statistically significant' in models with the unmatched data set compared to the matched data set. %fill in 
 
-Our key treatment variable--{\bf{presidential party identification}}--had a strong positive association with Federal Reserve staff inflation forecast errors in all model specifications. This finding is what we would expect if Federal Reserve staff have a presidential partisan bias when they are making inflation forecasts.     The 95\% confidence band actually moves somewhat further away from 0--i.e. no relationship--when using matched data.  
+Our key treatment variable--{\bf{presidential party identification}}--had a strong positive association with Federal Reserve staff inflation forecast errors in all model specifications. This finding is what we would expect if Federal Reserve staff have a presidential partisan bias when they are making inflation forecasts. The 95\% confidence band actually moves somewhat further away from 0--i.e. no relationship--when using matched data.  
 
 It is important to note that this effect holds when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure, expenditure that may be higher under Democratic presidents.
 
