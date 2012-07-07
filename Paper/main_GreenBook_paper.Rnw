@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Do Elections Effect Fed Forecasts?
+% Do Elections Affect Fed Forecasts?
 % Cassandra Grafström Christopher Gandrud
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -26,7 +26,7 @@
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Does Partisanship Affect Fed Inflation Forecasts?}
 
-\author{Cassandra Grafstr\"{o}m amd Christopher Gandrud}
+\author{Christopher Gandrud and Cassandra Grafstr\"{o}m}
 
 \begin{document}
 \SweaveOpts{concordance=TRUE}
@@ -36,7 +36,7 @@
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 \noindent\emph{Very Early draft version. Comments welcome.}\footnote{The paper is written with {\tt{knitr}} \citep{knitr2012} and is fully reproducible. Please contact us for the replication files.} \\[0.2cm]
-Recent work argues that the Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred administrations. This model excludes an essential aspect of monetary policy decision-making: expectations about future inflation and growth. We use the Fed's Green Book forecasts and presidential election polling data to test whether expected electoral outcomes shape the estimates of future economic performance that influence FOMC policies. We predict systematic differences in over or underestimation of future economic fundamentals based on the partisan identity of the incumbent and beliefs about the identity of the election winner.
+Recent work argues that the Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred administrations. This model excludes an essential aspect of monetary policy decision-making: expectations about future inflation. We use the Fed's Green Book forecasts and presidential election polling data to test whether expected electoral outcomes shape the estimates of future economic performance that influence FOMC policies. We find that Federal Reserve staff probably do not bias their forecasts to influence Fed governors around elections. However, they do systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. This suggests that while not electorally motivated, Fed staff have a partisan bias when making inflation forecasts.
 
 \end{abstract}
 
@@ -46,36 +46,55 @@ Recent work argues that the Federal Reserve is not politically indifferent \cite
 
 \vspace{0.3cm}
 
-Recent work argues that the Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred administrations. This bias is assumed by Clark and Arel-Bundock to arise from a Board of Governors that prefer rightist presidents to leftist ones and so set interest rates in such a manner as to help Republican incumbents and hinder Democratic ones. 
+Recent work argues that the Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred administrations. This bias is assumed by Clark and Arel-Bundock to arise from a Board of Governors that prefer rightist presidents to leftist ones and so set interest rates to help Republican incumbents and hinder Democratic ones. 
 
-We pose another causal mechanism. Namely, that employees within the Federal Reserve Banks expect Democratic presidents produce policies that increase inflation and Republican presidents to produce policies that limit inflation. However, Republican and Democratic administrations both engage in largely expansionary fiscal policies. We argue that this leads to large overestimations of inflation during Democratic presidencies and a significant underestimation of inflation during Republican ones.
+Does this partisan preference also affect Federal Reserve staff's forecasts, which in turn influences Governors' interest rate decisions? 
+
+An alternative possibility is that Federal Reserve staff may believe that inflation will be much higher under Democratic presidents. Employees within the Federal Reserve Banks may expect that Democratic presidents produce policies that increase inflation and Republican presidents produce policies that limit inflation. However, Republican and Democratic administrations both engage in largely expansionary fiscal policies. We argue that this leads to large overestimations of inflation during Democratic presidencies and a significant underestimation of inflation during Republican ones.
 
 %THOUGHTS: THE DIFFERENCE IN ERRORS IMPLIES SOME SORT OF NAIVITE ON THE PART OF THE FED FORECASTERS IF THEY ALWAY THINK THAT THE REPUBLICAN PRESIDENT WILL SIGNIFICANTLY REDUCE SPENDING GROWTH AND FAILS TO WHILE THE DEMOCRATIC PRESIDENTS WILL SIGNIFICANTLY INCREASE SPENDING GROWTH AND FAIL TO. MAYBE THEY THINK THAT THE REPUBLICANS WILL ENGAGE IN POLICIES THAT LEAD TO HIGHER REAL GROWTH THROUGH THEIR TAX CUTS WHILE THE DEMOCRATS WILL ENGAGE IN PURELY SPENDING INCREASES (OR WITH TAX INCREASES) 
 
 %CHRISTOPHER: HAVE WE TESTED TO SEE IF INFLATION IS ACTUALLY HIGHER UNDER DEMOCRATIC PRESIDENTS (ESPECIALLY AT THE ENDS OF THEIR TERMS) THAN IT IS UNDER REPUBLICAN PRESIDENTS? SINCE I BASICALLY HAVEN'T TOUCHED THE DATA I CAN'T REMEMBER. IF IT IS THEN THIS WOULD BE A NICE THING TO KNOW. IF THEY ARE ABOUT THE SAME THEN WE ARE BASICALLY SAYING THAT ECONOMISTS IN THE FED ARE NOT UPDATING (AND THIS IS IN LINE WITH BILL AND VINCENT'S ARGUMENT), WHEREAS IF THEY DIFFER THEN THEY ARE SIMPLY OVERSHOOTING BUT AREN'T NECESSARILY WRONG ON THE BASIC PREMISE.
 
-\section{Forecasting Inflation in the Fed}\footnote{This section draws heavily on Brayton et al.'s\nocite{Brayton1997} (1997) detailed description of the changes to Federal Reserve forecasting models that took place in 1996. See Brayton et al. 1997 for further details.}
+In this paper we first provide a brief discussion of what Green Book inflation forecasts are, including their importance for monetary policy making, our current understanding of how they are made. As we demonstrate in this first section, academic scholarship up till now has not examined possible partisan causes of forecast erros. We then introduce the issues of inflation forecast partisan biases and posit a number of ways that Green Book forecasting may be influenced by them. We test these theories with a series of regression models using both unmatched and matched data on Green Book inflation forecast errors from the 1970s through 2005. The models suggest that, even when controlling for a number of important economic and political factors, Green Book forecasts show a distinct presidential partisan bias. 
+
+%%%%%%%%%%%%%% Section 1: Forecasting Inflation at the Fed %%%%%%%%%%%%%%%%%%%%%
+
+\section{Forecasting Inflation at the Fed \& Inflation Forecast Errors}
+
+In this section we briefly describe why Green Book inflation forecasts are an important part of monetary policymaking in the United States and the current understanding of how Federal Reserve inflation forecasts were made since the late 1960s.
+
+\subsection{Forecasting \& Monetary Policy Making}
+
+%% Complete Subsection %%
+
+\subsection{Our Current Understanding of Fed Inflation Forecasting}
+
+\footnote{This section draws heavily on Brayton et al.'s\nocite{Brayton1997} (1997) detailed description of the changes to Federal Reserve forecasting models that took place in 1996. See Brayton et al. 1997 for further details.}
 The Federal Reserve produces forecasts of various elements of the US and global economies in order to formulate policies appropriate to fulfill the Fed's dual mandate of maintaining output and price stability. There have been two essential sets of models used during our observation period. This section describes these two models and their importance for our BLAH BLAH BLAH. It is important to note that finalized forecasts of macroeconomic aggregates are a combination of both these mathematical models and the professional opinions of forecasters about likely changes in the economy's trajectory not necessarily picked up in these models (FIND THE CITE FOR THIS!!!). The most significant change with the move to the Federal Reserve Board (FRB) Models in the mid-1990s was the incorporation of rational, as opposed to adaptive, expectations by market actors. We discuss the early and current models followed by the implications each has for predicted forecast errors.
 
-\subsection{Early models of the economy}
+\paragraph{Early models of the economy}
 The first simultaneous equation model of the US economy was developed and adopted by the Federal Reserve between 1966 and 1975. The model, originally developed in conjunction between MIT, University of Pittsburg, and the Social Science Research Council (MPS), was based on a neo-classical growth model of production and factor demands and embraced the IS/LM/Phillip's Curve paradigm. This model was composed of more than XYZ equations modelling various interdependent aspects of the American economy in a simultaneous equations framework. Homogeneity assumptions ensured neutrality of money in the long-run -- that is, EXPLAIN WHAT THIS MEANS WHEN YOU AREN'T SO SLEEPY.
 
 The collapse of Bretton Woods spurred a number of changes to the model. First, following the introduction of floating exchange rates the trade and exchange rate sections of the domestic economy were expanded significantly. Second, and more significantly, an explicit model of the global economy was developed. The Multi-Country Model (MCM) introduced in 1975 originally included estimates of macroeconomic performance in the US, Canada, Germany, Japan, the UK, and "the rest of the world sector." This model, which included both estimates of American consumption and production but then fed into equations of American consumption and production. This model was again based on the short-run dynamics of of the IS/LM/Phillip's Curve and long-run neo-classical growth model.
 
 Both the MPS and MCM models were tweaked during the 1980s, with about one-third of the equations in the MPS model changed during this time. For instance, the second oil shock led to the inclusion of oil prices and consumption in the MCM. The MCM was also expanded to include a larger set of major trading partners.\footnote{The post-1992 model included each of the G-7 countries individually as well as Mexico, and blocks representing the OECD, newly industrialized countries, OPEC, and the rest of the world.} However, the basic assumptions of the models, specifically the adaptive expectations assumptions, remained unchanged. The exclusive use of VAR models (solely backwards looking actors) meant that the models failed to account for actors concerns about future outcomes explicitly in these models. The rational expectations revolution in economics in the 1970s and 1980s made this assumption an increasingly controversial one. Thus, the development of new models began in earnest in 1991.
  
-\subsection{Current models of the economy}
+\paragraph{Current models of the economy}
 New models of the American economy's near-term trajectory replaced the MPS in 19XY. The Federal Reserve Board US model (FRB/US) is composed of approximately 40 behavioral equations, estimated with single-equation techniques. This model explicitly considers the role of economic expectations in economic behavior. In these models, prices are sticky and aggregate demand determines short-run output. Further, monetary policy's effects on the economy are extensively modeled. 
 
 The Federal Reserve Board Global (FRB/Global) model's development began in 1993 and had replaced the MCM by 1996. The FRB/Global model links the behavioral equations of FRB/US with approximately 200 behavioral equations representing the other 11 regions of the model. Anticipated values of future variables directly influence interest and exchange rates, components of aggregate demand, and wages and prices.
 
-\subsection{Models and their effects on predicted forecast errors}
-The innovations in how the Federal Reserve Board generates estimates of future economic performance (including changes to how they incorporated the effects of expected Fed interest rate policies has XYZ implications for forecast errors. Most notably, the move to rational expectations ought to shrink errors relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. Thus, we expect that the absolute magnitude forecast errors will be smaller after 1996 than in the earlier era.
+\paragraph{Models and their effects on predicted forecast errors}
+The innovations in how the Federal Reserve Board generates estimates of future economic performance (including changes to how they incorporated the effects of expected Fed interest rate policies has XYZ implications for forecast errors. Most notably, the move to rational expectations ought to shrink errors relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. Thus, we may expect that forecast errors' absolute magnitude will be smaller after 1996 than in the earlier era.
 
 %Random thought: what if the models assume that voters have partisan expectations and behave according to those partisan characteristics. Then when the partisans fail to do so or when voters react to these as they should (by not reacting) this results in over or under-shooting inflation by the Fed, particularly under the early model?
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Inflation Forecast Error Descriptives %%%%%%%%%%%%%%%%%%%%
-\section{Inflation Forecast Errors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section 2: Partisan Biases in Fed Inflation Forecasts? %%%%%%%%%%%%%%%%%%%%
+\section{Partisan Biases in Fed Inflation Forecasts?}
+
+In this section we first describe what a partisan inflation forecast error would be and briefly demonstrate that it is plausible that such biases exist. We then draw on the political economy literature to predict what may cause these biases.
 
 Ideally forecasts should be unbiassed in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecasts errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. To determine what Federal Reserve inflation forecasts errors were we created a variable comparing forecasts to actual inflation. 
 
