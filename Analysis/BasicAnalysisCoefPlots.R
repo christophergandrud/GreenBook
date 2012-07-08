@@ -1,7 +1,7 @@
 ####################
 # Greenbook MatchIt Analyses Coef Plots Compare
 # Christopher Gandrud
-# 15 June 2012
+# 7 July 2012
 ####################
 
 library(MatchIt)
@@ -15,7 +15,13 @@ cpi.complete <- cpi.data[complete.cases(cpi.data[vars]),]
 cpi.complete <- cpi.complete[vars]
 
 #### Matching Model ####
+
+# Party 
 cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP, data = cpi.complete, method = "genetic")
+
+# Elections
+# The matching model diagnostic statistics showed that the matched data set was not balanced, this was probably because there were too few election quarters.
+cpi.matched.election <- matchit(ElectionPeriod ~ recession + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP, data = cpi.complete, method = "genetic")
 
 # Diagnostics for Covariate Balance
 # summary(cpi.matched.party)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  7 JUL 2012 13:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  8 JUL 2012 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1090,80 +1090,86 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 467.
+(Font)              <7> on input line 463.
 
-
-Package natbib Warning: Citation `Brayton1997' undefined on input line 467.
-
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 495--495
+Underfull \hbox (badness 10000) in paragraph at lines 463--463
 [][][]\OT1/cmr/m/n/8 Green Book data can be found at [][]$\OT1/cmtt/m/n/8 http 
 : / / www . phil . frb . org / research-[]and-[]data / real-[]time-[]center /
  []
 
-[4]
 
-Package xcolor Warning: Incompatible color definition on input line 504.
+Package xcolor Warning: Incompatible color definition on input line 472.
 
-<figure/BaseInflation.pdf, id=115, 505.89pt x 289.08pt>
+<figure/BaseInflation.pdf, id=89, 505.89pt x 289.08pt>
 File: figure/BaseInflation.pdf Graphic file (type pdf)
 
 <use figure/BaseInflation.pdf>
-Package pdftex.def Info: figure/BaseInflation.pdf used on input line 504.
+Package pdftex.def Info: figure/BaseInflation.pdf used on input line 472.
 (pdftex.def)             Requested size: 362.37569pt x 207.07439pt.
+ [2]
 
+Package natbib Warning: Citation `Brayton1997' undefined on input line 496.
 
-Package xcolor Warning: Incompatible color definition on input line 533.
+[3 <./figure/BaseInflation.pdf>] [4] [5]
 
-<figure/partisanError.pdf, id=121, 505.89pt x 289.08pt>
+Package xcolor Warning: Incompatible color definition on input line 538.
+
+<figure/partisanError.pdf, id=142, 505.89pt x 289.08pt>
 File: figure/partisanError.pdf Graphic file (type pdf)
 
 <use figure/partisanError.pdf>
-Package pdftex.def Info: figure/partisanError.pdf used on input line 533.
+Package pdftex.def Info: figure/partisanError.pdf used on input line 538.
 (pdftex.def)             Requested size: 362.37569pt x 207.07439pt.
- [5 <./figure/BaseInflation.pdf>] [6 <./figure/partisanError.pdf>] [7] [8] [9]
+ [6 <./figure/partisanError.pdf>] [7] [8]
+[9]
+Overfull \hbox (12.64453pt too wide) in paragraph at lines 621--622
+ []\OT1/cmr/bx/n/10 Presidential Party Iden-ti-fi-ca-tion[] \OT1/cmr/m/n/10 Our
+ sec-ond treat-ment variable--\OT1/cmr/bx/n/10 presidential party identificatio
+n\OT1/cmr/m/n/10 --
+ []
 
-Package xcolor Warning: Incompatible color definition on input line 615.
 
-<figure/BasicModelPlots.pdf, id=230, 505.89pt x 289.08pt>
+Package xcolor Warning: Incompatible color definition on input line 631.
+
+<figure/BasicModelPlots.pdf, id=237, 505.89pt x 289.08pt>
 File: figure/BasicModelPlots.pdf Graphic file (type pdf)
 
 <use figure/BasicModelPlots.pdf>
-Package pdftex.def Info: figure/BasicModelPlots.pdf used on input line 615.
+Package pdftex.def Info: figure/BasicModelPlots.pdf used on input line 631.
 (pdftex.def)             Requested size: 430.31812pt x 245.9pt.
+ [10]
 
+Package xcolor Warning: Incompatible color definition on input line 652.
 
-Package xcolor Warning: Incompatible color definition on input line 634.
-
-<figure/interPlots.pdf, id=231, 505.89pt x 361.35pt>
+<figure/interPlots.pdf, id=247, 505.89pt x 361.35pt>
 File: figure/interPlots.pdf Graphic file (type pdf)
 
 <use figure/interPlots.pdf>
-Package pdftex.def Info: figure/interPlots.pdf used on input line 634.
+Package pdftex.def Info: figure/interPlots.pdf used on input line 652.
 (pdftex.def)             Requested size: 430.31812pt x 307.37502pt.
- [10 <./figure/BasicModelPlots.pdf>]
-(./main_GreenBook_paper.bbl [11 <./figure/interPlots.pdf>] [12])
+ [11 <./figure/BasicModelPlots.pdf>]
+(./main_GreenBook_paper.bbl [12 <./figure/interPlots.pdf>])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 658.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 676.
 [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 658.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 676.
  (./main_GreenBook_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 658.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 658.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 676.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 676.
 Package rerunfilecheck Info: File `main_GreenBook_paper.out' has not changed.
-(rerunfilecheck)             Checksum: 5D359611BDEDD2F1A7C3411A2B57537F;812.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 658.
+(rerunfilecheck)             Checksum: CEB22EC350E77B918CA9DBD81174C43A;912.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 676.
  ) 
 Here is how much of TeX's memory you used:
- 14688 strings out of 493633
- 261376 string characters out of 3143377
- 325290 words of memory out of 3000000
- 17627 multiletter control sequences out of 15000+200000
+ 14692 strings out of 493633
+ 261430 string characters out of 3143377
+ 323290 words of memory out of 3000000
+ 17628 multiletter control sequences out of 15000+200000
  15228 words of font info for 57 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 56i,8n,55p,1975b,441s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,8n,55p,1851b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -1185,10 +1191,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/texmf
 dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on main_GreenBook_paper.pdf (13 pages, 332310 bytes).
+Output written on main_GreenBook_paper.pdf (13 pages, 335077 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
