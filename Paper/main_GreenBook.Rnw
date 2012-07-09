@@ -378,7 +378,7 @@ If you are only interested in replicating the analysis, you can download the {\b
     # Save workspace image.
     # Note: if you are replicating this data set you might not want to run this step, or you might want to change the working directory to something that fits your computer.
 
-    save.image(file = "/git_repositories/GreenBook/Data/GreenBookWorkspaceImage.RData", safe = FALSE)
+    # save.image(file = "/git_repositories/GreenBook/Data/GreenBookWorkspaceImage.RData", safe = FALSE, compress = "bzip2")
 
 @ 
 
