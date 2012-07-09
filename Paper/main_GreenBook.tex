@@ -666,39 +666,67 @@ FILL IN
 
 MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTATIONS WOULD NOT UPDATE THEIR INFLATION EXPECTATIONS. I.E. WHY WOULD THEY CONTINUE TO BE WRONG ABOUT INFLATION GIVEN THE PRESIDENT'S PARTY ID?
 
-
+\clearpage
 \section*{Appendix}
 
-\begin{table}[htp]
+\begin{table}[ht]
     \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched dataset)}
     \label{OutputNL}
     \vspace{0.25cm}
     \begin{center}
+    {\small
 
-\begin{kframe}
-\begin{verbatim}
-## Error: object 'NL6' not found
-\end{verbatim}
-\end{kframe}
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ Model 1 } & \multicolumn{ 1 }{ c }{ Model 2 } & \multicolumn{ 1 }{ c }{ Model 3 } & \multicolumn{ 1 }{ c }{ Model 4 } & \multicolumn{ 1 }{ c }{ Model 5 } & \multicolumn{ 1 }{ c }{ Model 6 } & \multicolumn{ 1 }{ c }{ Model 7 } \\ \hline
+ %                               & Model 1     & Model 2     & Model 3     & Model 4     & Model 5     & Model 6     & Model 7    \\ 
+(Intercept)                     & 3.4 ^{**}   & 3.2 ^{**}   & 3.3 ^{***}  & 3.6 ^{***}  & 3.8 ^{***}  & 3.6 ^{***}  & 3.2 ^{***} \\ 
+                                & (1.1)       & (1.1)       & (0.9)       & (0.9)       & (0.9)       & (0.8)       & (0.9)      \\ 
+time\_to\_election            & -0.0        &             &             & -0.0        & -0.0        & 0.0         & 0.0        \\ 
+                                & (0.0)       &             &             & (0.0)       & (0.0)       & (0.0)       & (0.0)      \\ 
+recession                       & 0.0         & -0.0        & 0.1         & 0.1         & 0.1         & 0.1 ^*      & 0.1 ^*     \\ 
+                                & (0.1)       & (0.1)       & (0.1)       & (0.1)       & (0.1)       & (0.0)       & (0.0)      \\ 
+DebtGDP                         & 0.0         & 0.0         & -0.0        & -0.0        & 0.0         &             &            \\ 
+                                & (0.0)       & (0.0)       & (0.0)       & (0.0)       & (0.0)       &             &            \\ 
+ExpenditureGDP                  & 0.1 ^{***}  & 0.1 ^{***}  & 0.2 ^{***}  & 0.2 ^{***}  & 0.1 ^{***}  & 0.1 ^{***}  & 0.1 ^{***} \\ 
+                                & (0.0)       & (0.0)       & (0.0)       & (0.0)       & (0.0)       & (0.0)       & (0.0)      \\ 
+PotentialGDP                    & -0.1 ^{***} & -0.1 ^{***} & -0.1 ^{***} & -0.1 ^{***} & -0.1 ^{***} & -0.1 ^{***} & -0.1 ^{***}\\ 
+                                & (0.0)       & (0.0)       & (0.0)       & (0.0)       & (0.0)       & (0.0)       & (0.0)      \\ 
+ElectionPeriod                  &             & 0.0         &             &             &             &             &            \\ 
+                                &             & (0.1)       &             &             &             &             &            \\ 
+pres\_party                    &             &             & 0.3 ^{***}  & 0.3 ^{***}  & 0.3 ^{***}  & 0.9 ^{***}  & 1.1 ^{***} \\ 
+                                &             &             & (0.0)       & (0.0)       & (0.0)       & (0.1)       & (0.2)      \\ 
+senate\_dem\_rep              &             &             &             &             & -0.2        & -0.2        & -0.1       \\ 
+                                &             &             &             &             & (0.1)       & (0.1)       & (0.1)      \\ 
+house\_dem\_rep               &             &             &             &             & 0.2         & 0.5 ^{***}  & 0.4 ^{***} \\ 
+                                &             &             &             &             & (0.1)       & (0.1)       & (0.1)      \\ 
+pres\_party:house\_dem\_rep  &             &             &             &             &             & -0.5 ^{***} &            \\ 
+                                &             &             &             &             &             & (0.1)       &            \\ 
+pres\_party:senate\_dem\_rep &             &             &             &             &             &             & -0.7 ^{***}\\ 
+                                &             &             &             &             &             &             & (0.1)       \\
+ $N$                             & 148         & 148         & 148         & 148         & 148         & 148         & 148        \\ 
+$R^2$                           & 0.3         & 0.3         & 0.5         & 0.5         & 0.5         & 0.6         & 0.6        \\ 
+adj. $R^2$                      & 0.3         & 0.2         & 0.5         & 0.5         & 0.5         & 0.6         & 0.6        \\ 
+Resid. sd                       & 0.2         & 0.2         & 0.2         & 0.2         & 0.2         & 0.2         & 0.2         \\ \hline
+ \multicolumn{8}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{8}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
 
-    
+
+
+    }
     \end{center}
 \end{table}
 
 
-\paragraph{Replication}
+\subsection*{Replication}
 
 This paper can be entirely replicated. All data, analysis source code, and markup files can be downloaded as a {\tt{.zip}} file from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}.
 
-If you are only interested in replicating the analysis, you can download the {\bf{R}} workspace image created while compiling this PDF file. This {\tt{.RData}} file can be downloaded at:
+If you are only interested in replicating the analysis, you can download the {\bf{R}} workspace image created while compiling this PDF file. This {\tt{.RData}} file can be downloaded at: {\url{https://github.com/christophergandrud/GreenBook/raw/master/Data/GreenBookWorkspaceImage.RData}}. You can load this file directly into {\bf{R}} with the {\tt{load}} command.
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## Error: cannot open the connection
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
+
 
 
 

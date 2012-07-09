@@ -344,15 +344,15 @@ FILL IN
 
 MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTATIONS WOULD NOT UPDATE THEIR INFLATION EXPECTATIONS. I.E. WHY WOULD THEY CONTINUE TO BE WRONG ABOUT INFLATION GIVEN THE PRESIDENT'S PARTY ID?
 
-
+\clearpage
 \section*{Appendix}
 
-\begin{table}[htp]
+\begin{table}[ht]
     \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched dataset)}
     \label{OutputNL}
     \vspace{0.25cm}
     \begin{center}
-
+    {\small
 << NLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
 
     library(apsrtable)
@@ -362,16 +362,16 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
     apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, digits = 1, order = , Sweave = TRUE, stars = "default")
 
 @
-    
+    }
     \end{center}
 \end{table}
 
 
-\paragraph{Replication}
+\subsection*{Replication}
 
 This paper can be entirely replicated. All data, analysis source code, and markup files can be downloaded as a {\tt{.zip}} file from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}.
 
-If you are only interested in replicating the analysis, you can download the {\bf{R}} workspace image created while compiling this PDF file. This {\tt{.RData}} file can be downloaded at:
+If you are only interested in replicating the analysis, you can download the {\bf{R}} workspace image created while compiling this PDF file. This {\tt{.RData}} file can be downloaded at: {\url{https://github.com/christophergandrud/GreenBook/raw/master/Data/GreenBookWorkspaceImage.RData}}. You can load this file directly into {\bf{R}} with the {\tt{load}} command.
 
 <<SaveImage, echo=FALSE, warning=FALSE, message=FALSE>>=
 
