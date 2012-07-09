@@ -52,4 +52,8 @@ NL4 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession 
 
 NL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
+NL6 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+
+NL7 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+
 
