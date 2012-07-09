@@ -38,3 +38,14 @@ cpi.Mdf.party <- match.data(cpi.matched.party)
 
 ################### Models ################
 
+###### Non-matched (N) ######
+
+#### Least Squares ####
+
+NL1 <- zelig(error.prop.deflator.q2 ~ time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+
+NL2 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+
+NL3 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+
+

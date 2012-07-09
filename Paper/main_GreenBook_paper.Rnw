@@ -296,11 +296,17 @@ It is important to note that this effect holds when we control for actual govern
     \label{basicModelsPlot}
     \begin{center}
 
-<<BasicModelPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
+<<BasicModelandPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
+    library(devtools)
+    
+    # Run main analysis source code
+    AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
 
-    source("/git_repositories/GreenBook/Analyses/MainAnalysis2.R")
+    source_url(AnalysisURL)
 
-    source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
+    # Create plots
+    CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
+    source_url(CoefPlotsURL)
 
 @
     \end{center}
