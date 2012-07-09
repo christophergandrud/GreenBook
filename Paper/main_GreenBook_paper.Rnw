@@ -298,13 +298,15 @@ It is important to note that this effect holds when we control for actual govern
 
 <<BasicModelPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
 
+    source("/git_repositories/GreenBook/Analyses/MainAnalysis2.R")
+
     source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
 
 @
+    \end{center}
     \begin{singlespace}
         {\scriptsize{Intercept values are not shown to maintain an appropriate scale for comparing covariate estimates.}}
     \end{singlespace}
-    \end{center}
 \end{figure}
 
 Nonetheless, it seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a positive coefficient for the {\bf{government expenditure variable}}, even when controlling for president's party ID. This might suggest that Federal Reserve staff, as monetarily conservative actors, generally overestimate the effect of government expenditure on inflation.
@@ -338,7 +340,8 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
 
 
 \section*{Appendix}
-FILL IN
+
+<< lsTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
 
 
 \bibliographystyle{apsr}
