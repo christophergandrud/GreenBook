@@ -44,8 +44,12 @@ cpi.Mdf.party <- match.data(cpi.matched.party)
 
 NL1 <- zelig(error.prop.deflator.q2 ~ time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
-NL2 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL2 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
-NL3 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL3 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+
+NL4 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+
+NL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
 

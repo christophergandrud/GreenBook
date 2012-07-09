@@ -629,13 +629,13 @@ It is important to note that this effect holds when we control for actual govern
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/BasicModelPlots} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/BasicModelandPlots} 
 \end{knitrout}
 
+    \end{center}
     \begin{singlespace}
         {\scriptsize{Intercept values are not shown to maintain an appropriate scale for comparing covariate estimates.}}
     \end{singlespace}
-    \end{center}
 \end{figure}
 
 Nonetheless, it seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a positive coefficient for the {\bf{government expenditure variable}}, even when controlling for president's party ID. This might suggest that Federal Reserve staff, as monetarily conservative actors, generally overestimate the effect of government expenditure on inflation.
@@ -668,7 +668,32 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
 
 
 \section*{Appendix}
-FILL IN
+
+\begin{table}[htp]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched dataset)}
+    \label{OutputNL}
+    \vspace{0.25cm}
+    \begin{center}
+
+\begin{kframe}
+\begin{flushleft}
+\ttfamily\noindent
+\hspace*{\fill}\\
+\hlstd{}\hlfunctioncall{library}\hlkeyword{(}\hlsymbol{apsrtable}\hlkeyword{)}\hspace*{\fill}\\
+\hlstd{}\hspace*{\fill}\\
+\hlstd{}\hlcomment{\usebox{\hlnormalsizeboxhash}{\ }Non-matched{\ }models{\ }with{\ }ls}\hspace*{\fill}\\
+\hlstd{}\hspace*{\fill}\\
+\hlstd{}\hlfunctioncall{apsrtable}\hlkeyword{(}\hlsymbol{NL1}\hlkeyword{,}{\ }\hlsymbol{NL2}\hlkeyword{,}{\ }\hlsymbol{NL3}\hlkeyword{,}{\ }\hlsymbol{NL4}\hlkeyword{,}{\ }\hlsymbol{NL5}\hlkeyword{,}{\ }\hlargument{Sweave}{\ }\hlargument{=}{\ }\hlnumber{TRUE}\hlkeyword{)}\mbox{}
+\normalfont
+\end{flushleft}
+\begin{verbatim}
+## Error: object 'NL4' not found
+\end{verbatim}
+\end{kframe}
+
+    
+    \end{center}
+\end{table}
 
 
 \bibliographystyle{apsr}

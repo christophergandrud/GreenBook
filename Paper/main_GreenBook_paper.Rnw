@@ -302,7 +302,7 @@ It is important to note that this effect holds when we control for actual govern
     # Run main analysis source code
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
 
-    source_url(AnalysisURL)
+    source_url(AnalysisURL, echo=TRUE)
 
     # Create plots
     CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
@@ -347,7 +347,24 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
 
 \section*{Appendix}
 
-<< lsTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+\begin{table}[htp]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched dataset)}
+    \label{OutputNL}
+    \vspace{0.25cm}
+    \begin{center}
+
+<< NLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+
+    library(apsrtable)
+    
+    # Non-matched models with ls
+    
+    apsrtable(NL1, NL2, NL3, NL4, NL5, Sweave = TRUE)
+
+@
+    
+    \end{center}
+\end{table}
 
 
 \bibliographystyle{apsr}
