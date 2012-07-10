@@ -176,7 +176,7 @@ This summary examination of inflation forecast errors suggests that there might 
     \label{errors_over_time}
     \begin{center}
     
-<<partisanError, warning=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
+<<PartisanError, warning=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
 
     #### Clean up data and create forecast error variable
     cpi.data$pres_party_name <- factor(cpi.data$pres_party, label = c("Rep", "Dem"))
@@ -273,7 +273,7 @@ All models used inflation forecast error data--as defined earlier--from the star
 
 In this section we present results from multiple regression model specifications with both matched and unmatched data sets. We graphically present the key results in this section. Traditional coefficient estimate tables are given in the Appendix.
 
-In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see, for example Figure \ref{basicModelsPlot}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models with the unmatched data set compared to both matched data sets.
+In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see, for example Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models with the unmatched data set compared to both matched data sets.
 
 \paragraph{Presidential Elections}
 
@@ -291,22 +291,31 @@ Our second treatment variable--{\bf{presidential party identification}}--had a s
 
 It is important to note that this effect holds when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure, expenditure that may be higher under Democratic presidents.
 
-\begin{figure}[t]
-    \caption{95\% Confidence Bands for Coefficients from Basic Model Specifications}
-    \label{basicModelsPlot}
-    \begin{center}
 
-<<BasicModelandPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
+<<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
     library(devtools)
     
     # Run main analysis source code
-    AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
+    #AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
 
-    source_url(AnalysisURL, echo=TRUE)
+    #source_url(AnalysisURL)
+
+    # Local
+    source("/git_repositories/GreenBook/Analysis/MainAnalysis2.R")
+@
+
+\begin{figure}[t]
+    \caption{95\% Confidence Bands for Coefficients from a Variety of Matching and Parametric Model Specifications}
+    \label{CoefComparePlots}
+    \begin{center}
+
+<<CoefComparePlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
+
+    source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
 
     # Create plots
-    CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
-    source_url(CoefPlotsURL)
+    # CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
+    #source_url(CoefPlotsURL)
 
 @
     \end{center}
@@ -326,7 +335,7 @@ COMPLETE
     \label{InteractionPlots}
     \begin{center}
 
-<<interPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=5, out.width='0.95\\linewidth'>>=
+<<InterPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=5, out.width='0.95\\linewidth'>>=
 
     source("/git_repositories/GreenBook/Analysis/interactionTest.R")
     
@@ -347,26 +356,6 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
 \clearpage
 \section*{Appendix}
 
-\begin{table}[ht]
-    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched dataset)}
-    \label{OutputNL}
-    \vspace{0.25cm}
-    \begin{center}
-    {\small
-<< NLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-
-    library(apsrtable)
-    
-    # Non-matched models with ls
-    
-    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, digits = 1, order = , Sweave = TRUE, stars = "default")
-
-@
-    }
-    \end{center}
-\end{table}
-
-
 \subsection*{Replication}
 
 This paper can be entirely replicated. All data, analysis source code, and markup files can be downloaded as a {\tt{.zip}} file from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}.
@@ -382,6 +371,107 @@ If you are only interested in replicating the analysis, you can download the {\b
 
 @ 
 
+
+%%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
+
+\begin{table}[ht]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched dataset)}
+    \label{OutputNL}
+    \vspace{0.25cm}
+    \begin{center}
+    {\footnotesize
+<< NLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+
+    library(apsrtable)
+    
+    # Model names & Coefficient Names -- Use A for all non-mathced models
+    ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "B8")
+    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate") 
+
+    # Table of non-matched models with ls
+    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, 
+              digits = 1, order = , 
+              Sweave = TRUE, 
+              stars = "default", 
+              model.names = ModelNamesA, 
+              coef.names = CoefNamesA
+              )
+
+@
+    }
+    \end{center}
+\end{table}
+
+%%%%%%% Table of ElectionPeriod matched data with OLS parametric model %%%%%%%%
+
+\begin{table}[ht]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
+    \label{OutputNL}
+    \vspace{0.25cm}
+    \begin{center}
+    {\footnotesize
+<< ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+
+    library(apsrtable)
+    
+    # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
+    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8")
+    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate") 
+
+    # Table of non-matched models with ls
+    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, 
+              digits = 1, 
+              order = , 
+              Sweave = TRUE, 
+              stars = "default", 
+              model.names = ModelNamesB, 
+              coef.names = CoefNamesB,
+              notes = list(se.note, 
+                           stars.note, 
+                           "The recession variable is ommitted because there was no variation in the matched data set.",
+                           "The reason that there was no variation is because there was never a recession during an",
+                           "election period in our data set."
+                           )
+              )
+
+@
+    }
+    \end{center}
+\end{table}
+
+%%%%%%% Table of pres_party matched data with OLS parametric model %%%%%%%%
+
+\begin{table}[ht]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
+    \label{OutputNL}
+    \vspace{0.25cm}
+    \begin{center}
+    {\footnotesize
+<< PLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+
+    library(apsrtable)
+    
+    # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
+    ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8")
+    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate") 
+
+    # Table of non-matched models with ls
+    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, 
+              digits = 1, 
+              order = , 
+              Sweave = TRUE, 
+              stars = "default", 
+              model.names = ModelNamesC, 
+              coef.names = CoefNamesC
+              )
+
+@
+    }
+    \end{center}
+\end{table}
+
+
+\clearpage
 
 \bibliographystyle{apsr}
 \bibliography{GreenBook.bib}

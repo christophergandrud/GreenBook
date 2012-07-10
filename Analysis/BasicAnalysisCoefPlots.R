@@ -1,34 +1,8 @@
 ####################
 # Greenbook MatchIt Analyses Coef Plots Compare
 # Christopher Gandrud
-# 7 July 2012
+# 10 July 2012
 ####################
-
-#### Presidential Party Models ####
-
-#### Non-matched (NP) ####
-
-# Least Squares
-
-NPL1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
-
-
-# Normal Bayes
-
-NPB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "normal.bayes", data = cpi.data)
-
-#### Matched (MP) ####
-
-# Least Squares
-
-MPL1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
-
-
-# Normal Bayes
-
-MPB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP, model = "normal.bayes", data = cpi.Mdf.party)
-
-################################ Plots ############################################
 
 #### Figures for ls Results Catapilar Plot ####
 # .cat for catapilar graph
@@ -36,34 +10,34 @@ MPB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election
 
 ### LS 
 # Extract and melt quantiles for marginal posterior distributions (not matched data set)
-NPL1.cat <- confint(NPL1)
-NPL1.cat.sum <- as.data.frame(NPL1.cat)
-NPL1.cat.sum$var <- rownames(NPL1.cat.sum)
+NL6.cat <- confint(NL6)
+NL6.cat.sum <- as.data.frame(NL6.cat)
+NL6.cat.sum$var <- rownames(NL6.cat.sum)
 
-NPL1.lower.molten <- melt(NPL1.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
-NPL1.lower.molten <- NPL1.lower.molten[, -2]
+NL6.lower.molten <- melt(NL6.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
+NL6.lower.molten <- NL6.lower.molten[, -2]
 
-NPL1.upper.molten <- melt(NPL1.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
-NPL1.upper.molten <- NPL1.upper.molten[, -2]
+NL6.upper.molten <- melt(NL6.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
+NL6.upper.molten <- NL6.upper.molten[, -2]
 
-NPL1.molten <- merge(NPL1.lower.molten, NPL1.upper.molten)
-NPL1.molten$match <- "Not Matched"
+NL6.molten <- merge(NL6.lower.molten, NL6.upper.molten)
+NL6.molten$match <- "Not Matched"
 
 # Extract and melt quantiles for marginal posterior distributions (matched data set)
-MPL1.cat <- confint(MPL1)
-MPL1.cat.sum <- as.data.frame(MPL1.cat)
-MPL1.cat.sum$var <- rownames(MPL1.cat.sum)
+PL6.cat <- confint(PL6)
+PL6.cat.sum <- as.data.frame(PL6.cat)
+PL6.cat.sum$var <- rownames(PL6.cat.sum)
 
-MPL1.lower.molten <- melt(MPL1.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
-MPL1.lower.molten <- MPL1.lower.molten[, -2]
+PL6.lower.molten <- melt(PL6.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
+PL6.lower.molten <- PL6.lower.molten[, -2]
 
-MPL1.upper.molten <- melt(MPL1.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
-MPL1.upper.molten <- MPL1.upper.molten[, -2]
+PL6.upper.molten <- melt(PL6.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
+PL6.upper.molten <- PL6.upper.molten[, -2]
 
-MPL1.molten <- merge(MPL1.lower.molten, MPL1.upper.molten)
-MPL1.molten$match <- "Matched"
+PL6.molten <- merge(PL6.lower.molten, PL6.upper.molten)
+PL6.molten$match <- "Matched"
 
-estimates.ls <- rbind(NPL1.molten, MPL1.molten)
+estimates.ls <- rbind(NL6.molten, PL6.molten)
 estimates.ls$method <- "OLS"
 
 
@@ -74,34 +48,34 @@ estimates.ls$method <- "OLS"
 
 ### Normal Bayes Models 
 # Extract and melt quantiles for marginal posterior distributions (not matched data set)
-NPB1.cat <- summary(NPB1)
-NPB1.cat.sum <- as.data.frame(NPB1.cat$summary)
-NPB1.cat.sum$var <- rownames(NPB1.cat.sum)
+NB1.cat <- summary(NB1)
+NB1.cat.sum <- as.data.frame(NB1.cat$summary)
+NB1.cat.sum$var <- rownames(NB1.cat.sum)
 
-NPB1.lower.molten <- melt(NPB1.cat.sum, id = c("var"), measure.vars = c("2.5%"), value.name = "lower")
-NPB1.lower.molten <- NPB1.lower.molten[, -2]
+NB1.lower.molten <- melt(NB1.cat.sum, id = c("var"), measure.vars = c("2.5%"), value.name = "lower")
+NB1.lower.molten <- NB1.lower.molten[, -2]
 
-NPB1.upper.molten <- melt(NPB1.cat.sum, id = c("var"), measure.vars = c("97.5%"), value.name = "upper")
-NPB1.upper.molten <- NPB1.upper.molten[, -2]
+NB1.upper.molten <- melt(NB1.cat.sum, id = c("var"), measure.vars = c("97.5%"), value.name = "upper")
+NB1.upper.molten <- NB1.upper.molten[, -2]
 
-NPB1.molten <- merge(NPB1.lower.molten, NPB1.upper.molten)
-NPB1.molten$match <- "Not Matched"
+NB1.molten <- merge(NB1.lower.molten, NB1.upper.molten)
+NB1.molten$match <- "Not Matched"
 
 # Extract and melt quantiles for marginal posterior distributions (matched data set)
-MPB1.cat <- summary(MPB1)
-MPB1.cat.sum <- as.data.frame(MPB1.cat$summary)
-MPB1.cat.sum$var <- rownames(MPB1.cat.sum)
+PB1.cat <- summary(PB1)
+PB1.cat.sum <- as.data.frame(PB1.cat$summary)
+PB1.cat.sum$var <- rownames(PB1.cat.sum)
 
-MPB1.lower.molten <- melt(MPB1.cat.sum, id = c("var"), measure.vars = c("2.5%"), value.name = "lower")
-MPB1.lower.molten <- MPB1.lower.molten[, -2]
+PB1.lower.molten <- melt(PB1.cat.sum, id = c("var"), measure.vars = c("2.5%"), value.name = "lower")
+PB1.lower.molten <- PB1.lower.molten[, -2]
 
-MPB1.upper.molten <- melt(MPB1.cat.sum, id = c("var"), measure.vars = c("97.5%"), value.name = "upper")
-MPB1.upper.molten <- MPB1.upper.molten[, -2]
+PB1.upper.molten <- melt(PB1.cat.sum, id = c("var"), measure.vars = c("97.5%"), value.name = "upper")
+PB1.upper.molten <- PB1.upper.molten[, -2]
 
-MPB1.molten <- merge(MPB1.lower.molten, MPB1.upper.molten)
-MPB1.molten$match <- "Matched"
+PB1.molten <- merge(PB1.lower.molten, PB1.upper.molten)
+PB1.molten$match <- "Matched"
 
-estimates.b <- rbind(NPB1.molten, MPB1.molten)
+estimates.b <- rbind(NB1.molten, PB1.molten)
 estimates.b$method <- "Normal Bayes"
 
 estimates <- rbind(estimates.ls, estimates.b)
