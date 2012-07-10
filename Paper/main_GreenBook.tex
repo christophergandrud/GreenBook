@@ -641,26 +641,28 @@ Our second treatment variable--presidential party identification--had a strong p
 
 These analyses provide strong evidence that Federal Reserve staff overestimate the effect Democratic presidents have on inflation compared to Republican presidents.
 
-The estimated effect holds when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure, expenditure that may be higher under Democratic presidents.
-
 \begin{figure}[t]
     \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies}
     \label{ExpectValueParty}
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/ExpectValueParty} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.7\linewidth]{figure/ExpectValueParty} 
 \end{knitrout}
 
-    \begin{singlespace}
-        {\scriptsize{From a normal Bayesian linear regression with data matched by presidential party identification. Used 1000 simulations per fitted value.}}
-    \end{singlespace}
     \end{center}
+    \begin{singlespace}
+        {\scriptsize{From a normal Bayesian linear regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputBL}. The figures show 1000 simulations per fitted value. \\ The full line connects the two groups' means.}}
+    \end{singlespace}
 \end{figure}
+
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast error for democratic and republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C6 from Table \ref{OutputBL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. On we expect that on average the Fed overestimates inflation by 14 percent. This compares to an average inflation error of -19 during Republican presidencies.
+
+The estimated effect holds when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure, expenditure that may be higher under Democratic presidents.
 
 \paragraph{Government Expenditure}
 
-Nonetheless, it seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a consistently positive and significant coefficient for the government expenditure variable, even when controlling for president's party ID. Maybe Federal Reserve staff, as monetarily conservative actors, generally overestimate the effect of government expenditure on inflation.
+Nonetheless, it seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a consistently positive and significant coefficient for the government expenditure variable, even when controlling for president's party ID. Maybe Federal Reserve staff, as monetarily conservative actors, generally overestimate the effect of government expenditure on inflation.  
 
 \paragraph{Partisan Control of Congress}
 
