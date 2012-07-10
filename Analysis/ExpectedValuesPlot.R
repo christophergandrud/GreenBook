@@ -36,6 +36,6 @@ ModelPartyPlot <- ggplot(data = ModelParty.ev, aes(variable, value)) +
                           scale_color_manual(values = partisan.colors, guide = FALSE) + # partisan.colors defined in the main .Rnw file
                           geom_hline(aes(intercept= 0), linetype = "dotted") +
                           xlab("") + ylab("Expected Standardized Forecast Error\n") +
-                          theme_bw(base_size = 15)
+                          theme_bw(base_size = 11)
 
 print(ModelPartyPlot)
