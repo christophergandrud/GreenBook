@@ -366,7 +366,7 @@ COMPLETE
     \end{center}
 \end{figure}
 
-A three-way interaction between presidential party ID, the proportion of the Senate that was Democratic, and the proportion of the House that was Democratic. A Democratic president presumably be most able to achieve policy outcomes close to their ideal point if all houses of Congress were Democratically controlled. The interaction, however, was not statistically significant. This may be because there is no interaction or because we simply do not have enough information in the data to be able to observe one \citep[see][]{Brambor2006}. It would therefore be highly inappropriate to draw conclusions either way.
+There may be a three-way interaction between presidential party ID, the proportion of the Senate that was Democratic, and the proportion of the House that was Democratic. A Democratic president presumably would be most able to achieve policy outcomes close to their ideal point if all houses of Congress were Democratically controlled. The interaction, however, was not statistically significant. This may be because there is no interaction or because we simply do not have enough information in the data to be able to observe one \citep[see][]{Brambor2006}. It would therefore be highly inappropriate to draw conclusions either way.
 
 
 \section*{Discussion: Do Fed Forecasts Have a Partisan Bias?}
