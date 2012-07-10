@@ -54,9 +54,9 @@ NL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession 
 
 NL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
-NL7 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL7 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + DebtGDP + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
-NL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
 ###### Matched based with the ElectionPeriod as the treatment variable (E) ######
 
@@ -74,9 +74,9 @@ EL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + DebtGDP + 
 
 EL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
-EL7 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
+EL7 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + time_to_election + senate_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
-EL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
+EL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + time_to_election + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
 ###### Matched based with the pres_party as the treatment variable (P) ######
 
@@ -94,9 +94,9 @@ PL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession 
 
 PL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
 
-PL7 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
+PL7 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + DebtGDP + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
 
-PL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
+PL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
 
 ##### Normal Bayes #####
 
@@ -105,7 +105,6 @@ PL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep 
 NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "normal.bayes", data = cpi.data)
 
 #### Matched (MP) ####
-
 
 # Normal Bayes
 

@@ -211,7 +211,7 @@ This summary examination of inflation forecast errors suggests that there might 
     \end{center}
     \begin{singlespace}
         {\scriptsize{Note: An error of 0 indicates that inflation was perfectly forecasted. \\
-            The grey shaded box indicates minimal error.
+            The grey shaded box indicates minimal error, i.e. $+/- 0.1$.
         }}
     \end{singlespace}
 \end{figure}
@@ -271,25 +271,27 @@ All models used inflation forecast error data--as defined earlier--from the star
 
 \section{Results}
 
-In this section we present results from multiple regression model specifications with both matched and unmatched data sets. We graphically present the key results in this section. Traditional coefficient estimate tables are given in the Appendix.
+In this section we present results from multiple regression model specifications with both matched and unmatched data sets. We graphically present the key results in this section. Coefficient estimate tables for the non-Bayesian linear models are given in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, and \ref{OutputBL}).
 
-In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see, for example Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models with the unmatched data set compared to both matched data sets.
+In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see, for example Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
 
 \paragraph{Presidential Elections}
 
-We found did not find any evidence that Federal Reserve staff inflation forecast errors were associated with election timing. This was true in parametric models using both unmatched data and matched data where the election period variable as the treatment. The estimates of the relationship between the quarters until election variable and forecast errors in the presidential party identification models\footnote{This variable was obviously omitted from the models with the election period variable because they are highly correlated.} also did not provide any evidence that inflation errors are related to election timing. 
+We did not find any evidence that Federal Reserve staff inflation forecast errors were associated with election timing. This was true in parametric models using both unmatched data and matched data where the election period variable is the treatment. Estimates of the relationship between the quarters until election variable and forecast errors\footnote{This variable was obviously omitted from the models with the election period variable because they are highly correlated.} also did not provide any evidence that inflation errors are related to election timing. 
 
 Data limitations make it difficult to fully examine the extension of Clark and Arel-Bundock's \citeyearpar{Clark2011} election gaming theory for Federal Reserves staff. We only have three Democratic presidential terms in our data, only two of which ended in the incumbent running for reelection. Nonetheless, we attempted to examine this hypothesis with an interaction of the president's party ID variable and both the election dummy and quarters to election variables. In all cases the president's party ID variable was robust whereas the election variables and the interaction term were very statistically insignificant.
 
-In this limited data set Fed Staff do not appear to be over estimating inflation when a Democratic president is running for reelection in order to influence the FOMC to raise interest rates and lower the president's chances of winning. 
+In this limited data set Fed Staff do not appear to be over estimating inflation when a Democratic president is running for reelection in an attempt to influence the FOMC to raise interest rates and lower the president's chances of winning. 
 
-These findings have clear implications for how we understand the potential causes of Green Book partisan inflation forecast biases as well as FOMC interest rate decisions around elections. Federal Reserve staff do not seem to be engaged in a signalling game with the aim of influencing elections. Given both our findings and Clark and Arel-Bundock's results, it seems that FOMC members not their staff are driving the increases in the Fed Funds Rate around elections when Democrats are in power. 
+These findings have clear implications for how we understand the potential causes of Green Book partisan inflation forecast biases as well as FOMC interest rate decisions around elections. Federal Reserve staff do not seem to be engaged in a signalling game with the aim of influencing elections. Given both our findings and Clark and Arel-Bundock's results, it seems that FOMC members, not their staff, are driving the increases in the Fed Funds Rate around elections when Democrats are in power. 
 
 \paragraph{Presidential Party Identification}
 
-Our second treatment variable--{\bf{presidential party identification}}--had a strong positive association with Federal Reserve staff inflation forecast errors in all model specifications. This finding is what we would expect if Federal Reserve staff have a general presidential partisan bias. The 95\% confidence band actually moves somewhat further away from 0--i.e. no relationship--when using matched data.  
+Our second treatment variable--presidential party identification--had a strong positive association with Federal Reserve staff inflation forecast errors across all model specifications. This finding is what we would expect if Federal Reserve staff have a general presidential partisan bias. The 95\% confidence band around the coefficient estimate actually moves somewhat further away from 0--i.e. no relationship--when using matched data (see Figure \ref{CoefComparePlots}).  
 
-It is important to note that this effect holds when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure, expenditure that may be higher under Democratic presidents.
+These analyses provide strong evidence that Federal Reserve staff overestimate the effect Democratic presidents have on inflation compared to Republican presidents.
+
+The estimated effect holds when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure, expenditure that may be higher under Democratic presidents.
 
 
 <<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
@@ -297,7 +299,6 @@ It is important to note that this effect holds when we control for actual govern
     
     # Run main analysis source code
     #AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
-
     #source_url(AnalysisURL)
 
     # Local
@@ -311,20 +312,24 @@ It is important to note that this effect holds when we control for actual govern
 
 <<CoefComparePlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
 
-    source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
+    #source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
 
     # Create plots
-    # CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
-    #source_url(CoefPlotsURL)
+     CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
+    source_url(CoefPlotsURL)
 
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Intercept values are not shown to maintain an appropriate scale for comparing covariate estimates.}}
+        {\scriptsize{Intercept values are not shown to maintain a reasonable scale for comparing covariate estimates.}}
     \end{singlespace}
 \end{figure}
 
-Nonetheless, it seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a positive coefficient for the {\bf{government expenditure variable}}, even when controlling for president's party ID. This might suggest that Federal Reserve staff, as monetarily conservative actors, generally overestimate the effect of government expenditure on inflation.
+\paragraph{Government Expenditure}
+
+Nonetheless, it seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a consistently positive and significant coefficient for the government expenditure variable, even when controlling for president's party ID. Maybe Federal Reserve staff, as monetarily conservative actors, generally overestimate the effect of government expenditure on inflation.
+
+\paragraph{Partisan Control of Congress}
 
 Might Federal Reserve staff be taking into consideration not only the president's party identification, but also the party identification of Congress? Federal Reserve staff with rational partisan expectations would presumably expect that a Democratic president would be able to gain policy choices closer to their ideal point when they face fewer veto players with divergent preferences, mainly Republican controlled chambers of Congress. If a Democratic president had chambers of Congress controlled by Democrats, presumably Federal Reserve staff would expect even higher inflation. To examine this possibility we tested models with interactions between president party identification and the partisan composition of the House and Senate.
 
@@ -360,18 +365,6 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
 
 This paper can be entirely replicated. All data, analysis source code, and markup files can be downloaded as a {\tt{.zip}} file from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}.
 
-If you are only interested in replicating the analysis, you can download the {\bf{R}} workspace image created while compiling this PDF file. This {\tt{.RData}} file can be downloaded at: {\url{https://github.com/christophergandrud/GreenBook/raw/master/Data/GreenBookWorkspaceImage.RData}}. You can load this file directly into {\bf{R}} with the {\tt{load}} command.
-
-<<SaveImage, echo=FALSE, warning=FALSE, message=FALSE>>=
-
-    # Save workspace image.
-    # Note: if you are replicating this data set you might not want to run this step, or you might want to change the working directory to something that fits your computer.
-
-    # save.image(file = "/git_repositories/GreenBook/Data/GreenBookWorkspaceImage.RData", safe = FALSE, compress = "bzip2")
-
-@ 
-
-
 %%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
 
 \begin{table}[ht]
@@ -406,7 +399,7 @@ If you are only interested in replicating the analysis, you can download the {\b
 
 \begin{table}[ht]
     \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
-    \label{OutputNL}
+    \label{OutputEL}
     \vspace{0.25cm}
     \begin{center}
     {\footnotesize
@@ -443,7 +436,7 @@ If you are only interested in replicating the analysis, you can download the {\b
 
 \begin{table}[ht]
     \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
-    \label{OutputNL}
+    \label{OutputBL}
     \vspace{0.25cm}
     \begin{center}
     {\footnotesize
