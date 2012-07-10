@@ -80,7 +80,7 @@ EL7 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + time_to_electio
 
 EL8 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + time_to_election + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
-EL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + time_to_election + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
+EL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
 ###### Matched based with the pres_party as the treatment variable (P) ######
 

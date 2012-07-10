@@ -395,11 +395,11 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     library(apsrtable)
     
     # Model names & Coefficient Names -- Use A for all non-mathced models
-    ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "B8")
-    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate") 
+    ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9")
+    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, 
+    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9,
               digits = 1, order = , 
               Sweave = TRUE, 
               stars = "default", 
@@ -425,11 +425,11 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     library(apsrtable)
     
     # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
-    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8")
-    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate") 
+    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9")
+    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, 
+    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9,
               digits = 1, 
               order = , 
               Sweave = TRUE, 
@@ -462,11 +462,11 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     library(apsrtable)
     
     # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
-    ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8")
-    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate") 
+    ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9")
+    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, 
+    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9,
               digits = 1, 
               order = , 
               Sweave = TRUE, 
