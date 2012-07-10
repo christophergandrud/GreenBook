@@ -63,7 +63,7 @@ NL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + 
 ###### Matched based with the ElectionPeriod as the treatment variable (E) ######
 
 # Least Squares
-cpi.Mdf.party
+
 EL1 <- zelig(error.prop.deflator.q2 ~ DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
 EL2 <- zelig(error.prop.deflator.q2 ~ time_to_election + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)

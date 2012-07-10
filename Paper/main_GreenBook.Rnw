@@ -431,7 +431,6 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     # Table of non-matched models with ls
     apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9,
               digits = 1, 
-              order = , 
               Sweave = TRUE, 
               stars = "default", 
               model.names = ModelNamesB, 
@@ -468,7 +467,6 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     # Table of non-matched models with ls
     apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9,
               digits = 1, 
-              order = , 
               Sweave = TRUE, 
               stars = "default", 
               model.names = ModelNamesC, 
