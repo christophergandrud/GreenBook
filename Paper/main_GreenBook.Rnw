@@ -78,7 +78,6 @@ Federal Reserve staff create ``Green Book" forecasts\footnote{Green Book data ca
 <<BaseInflation, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
     
     library(RCurl)
-    library(foreign)
     library(reshape2)
     library(ggplot2)
     
@@ -108,6 +107,10 @@ Federal Reserve staff create ``Green Book" forecasts\footnote{Green Book data ca
                         xlab("") + ylab("Inflation") +
                         scale_color_manual(values = absolute.colors, name = "") +
                         scale_linetype(name = "") + 
+                        geom_vline(aes(xintercept = 1996), linetype = "dotted", colour = "grey50") +
+                        annotate("text", x = 2001, y = 8.5, label = "FRB/Global", colour = "grey50") +
+                        geom_vline(aes(xintercept = 1975), linetype = "dotted", colour = "grey50") +
+                        annotate("text", x = 1978, y = 1.5, label = "SEM", colour = "grey50") +
                         theme_bw() +
                         opts(axis.title.x = theme_text(size = 12, vjust = 0))
 
@@ -117,7 +120,9 @@ Federal Reserve staff create ``Green Book" forecasts\footnote{Green Book data ca
     
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Forecasts were made two quarters beforehand.}}
+        {\scriptsize{Forecasts were made two quarters beforehand. \\
+                     The grey dotted lines indicate the {\emph{approximate}} years that the Simultaneous Equation Models (SEM) and Federal Reserve Board Global (FRB/Global) forecasting models were fully implemented.  
+                      }}
     \end{singlespace}
 \end{figure}
 
@@ -181,7 +186,12 @@ This summary examination of inflation forecast errors suggests that there might 
     #### Clean up data and create forecast error variable
     cpi.data$pres_party_name <- factor(cpi.data$pres_party, label = c("Rep", "Dem"))
     cpi.data$error.prop.deflator.q2 <-  (cpi.data$GB_CPI_QTR2 - cpi.data$deflator)/cpi.data$deflator
-    
+
+    ## Create FRB/Global Model Variable 
+    cpi.data$GlobalModel[cpi.data$Quarter > 1995.4] <- "1"
+    cpi.data$GlobalModel[cpi.data$Quarter < 1996.1] <- "0"
+    cpi.data$GlobalModel <- as.factor(cpi.data$GlobalModel)    
+
     #### Partisan colours
     partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
     
@@ -334,7 +344,7 @@ source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{From a normal Bayesian linear regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputBL}. The figures show 1000 simulations per fitted value. \\ The full line connects the two groups' means.}}
+        {\scriptsize{From a normal Bayesian linear regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputBL}. The figures show 1000 simulations per fitted value. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
@@ -395,11 +405,11 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     library(apsrtable)
     
     # Model names & Coefficient Names -- Use A for all non-mathced models
-    ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9")
-    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
+    ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10")
+    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9,
+    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, N10,
               digits = 1, order = , 
               Sweave = TRUE, 
               stars = "default", 
@@ -425,11 +435,11 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     library(apsrtable)
     
     # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
-    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9")
-    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
+    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10")
+    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9,
+    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, E10,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
@@ -461,11 +471,11 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     library(apsrtable)
     
     # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
-    ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9")
-    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
+    ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10")
+    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9,
+    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9, P10,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
