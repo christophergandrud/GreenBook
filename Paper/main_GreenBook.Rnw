@@ -267,6 +267,8 @@ To further examine whether or not Federal Reserve staff were taking into conside
 
 The United States president does not set the level of government expenditure alone. Instead, the president is constrained by the two houses of Congress. To examine whether or not Federal Reserve staff are taking into consideration the partisan composition of Congress as well as the president's party identification, we include variables of {\bf{Democratic legislators as a proportion of Republican legislators}} in the House of Representatives and the Senate. Data on the number of legislators with Republican and Democratic party IDs was found at infoplease.\footnote{See {\url{http://www.infoplease.com/ipa/A0774721.html}}. Accessed May 2012.} If the Presidency and the Senate and/or the House is controlled by Democrats we would expect Federal Reserve staff with partisan inflation forecast biases to expect even more increases in government spending. This would lead them to further overestimate inflation. We consider this possible interaction in a number of models.
 
+If biases are largely the result of misspecified economic forecasting models we would expect errors to decrease overtime as the models improved. In particular, we would expect this fall in errors to occur specifically around 1996 when the Federal Reserve Board's new Global behavioral equation model was introduced. To examine this we include a {\bf{FRB/Global Model}} dummy variable. It equals one for all quarters from and including the first quarter of 1996. It is zero otherwise.
+
 To examine if Federal Reserve inflation forecaster errors are affected by levels of government expenditure, which may be correlated with the president's party, we included the percentage of {\bf{current government expenditure to GDP}} and {\bf{government debt to GDP}}. We include {\bf{GDP output gaps}}. This is simply potential GDP as a percentage of real GDP. Finally, we include a dummy variable for whether or not the United States was in {\bf{recession}}. All of these variables are from the FRED database at the St. Louis Federal Reserve\footnote{See: {\url{http://research.stlouisfed.org/fred2/}}. Accessed June 2012.} and are in nominal terms.
 
 \subsection{Models}
@@ -409,7 +411,7 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, N10,
+    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, NL10,
               digits = 1, order = , 
               Sweave = TRUE, 
               stars = "default", 
@@ -439,7 +441,7 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, E10,
+    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
@@ -475,7 +477,7 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9, P10,
+    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9, PL10,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 

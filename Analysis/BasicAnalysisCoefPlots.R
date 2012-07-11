@@ -1,7 +1,7 @@
 ####################
 # Greenbook MatchIt Analyses Coef Plots Compare
 # Christopher Gandrud
-# 10 July 2012
+# 11 July 2012
 ####################
 
 #### Figures for ls Results Catapilar Plot ####
@@ -10,34 +10,34 @@
 
 ### LS 
 # Extract and melt quantiles for marginal posterior distributions (not matched data set)
-NL6.cat <- confint(NL6)
-NL6.cat.sum <- as.data.frame(NL6.cat)
-NL6.cat.sum$var <- rownames(NL6.cat.sum)
+NL7.cat <- confint(NL7)
+NL7.cat.sum <- as.data.frame(NL7.cat)
+NL7.cat.sum$var <- rownames(NL7.cat.sum)
 
-NL6.lower.molten <- melt(NL6.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
-NL6.lower.molten <- NL6.lower.molten[, -2]
+NL7.lower.molten <- melt(NL7.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
+NL7.lower.molten <- NL7.lower.molten[, -2]
 
-NL6.upper.molten <- melt(NL6.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
-NL6.upper.molten <- NL6.upper.molten[, -2]
+NL7.upper.molten <- melt(NL7.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
+NL7.upper.molten <- NL7.upper.molten[, -2]
 
-NL6.molten <- merge(NL6.lower.molten, NL6.upper.molten)
-NL6.molten$match <- "Not Matched"
+NL7.molten <- merge(NL7.lower.molten, NL7.upper.molten)
+NL7.molten$match <- "Not Matched"
 
 # Extract and melt quantiles for marginal posterior distributions (matched data set)
-PL6.cat <- confint(PL6)
-PL6.cat.sum <- as.data.frame(PL6.cat)
-PL6.cat.sum$var <- rownames(PL6.cat.sum)
+PL7.cat <- confint(PL7)
+PL7.cat.sum <- as.data.frame(PL7.cat)
+PL7.cat.sum$var <- rownames(PL7.cat.sum)
 
-PL6.lower.molten <- melt(PL6.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
-PL6.lower.molten <- PL6.lower.molten[, -2]
+PL7.lower.molten <- melt(PL7.cat.sum, id = c("var"), measure.vars = c("2.5 %"), value.name = "lower")
+PL7.lower.molten <- PL7.lower.molten[, -2]
 
-PL6.upper.molten <- melt(PL6.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
-PL6.upper.molten <- PL6.upper.molten[, -2]
+PL7.upper.molten <- melt(PL7.cat.sum, id = c("var"), measure.vars = c("97.5 %"), value.name = "upper")
+PL7.upper.molten <- PL7.upper.molten[, -2]
 
-PL6.molten <- merge(PL6.lower.molten, PL6.upper.molten)
-PL6.molten$match <- "Matched"
+PL7.molten <- merge(PL7.lower.molten, PL7.upper.molten)
+PL7.molten$match <- "Matched"
 
-estimates.ls <- rbind(NL6.molten, PL6.molten)
+estimates.ls <- rbind(NL7.molten, PL7.molten)
 estimates.ls$method <- "OLS"
 
 
@@ -88,13 +88,13 @@ estimates <- subset(estimates, var != c("sigma2"))
 ##### Create comparison plot
 
 cols <- c("#67A380", "#696969")
-name.break <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "senate_dem_rep")
-labels.break <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Potential GDP (%GDP)", "Prop. Senate Dem.")
+name.break <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "FRB/GlobalModel", "senate_dem_rep")
+labels.break <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Potential GDP (%GDP)", "GlobalModel", "Prop. Senate Dem.")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = match)) +
                       facet_grid(~ method) + 
                       geom_linerange(size = 3, alpha = 0.6) +
-                      scale_x_discrete(breaks = name.break, labels = labels.break) +
+                      #scale_x_discrete(breaks = name.break, labels = labels.break) +
                       scale_color_manual(values = cols, name = "") +                            
                       geom_hline(aes(intercept= 0), linetype = "dotted") +
                       ylab("\nCoefficient Estimate") + xlab("") +

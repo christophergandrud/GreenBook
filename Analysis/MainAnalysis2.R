@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 10 July 2012
+# 11 July 2012
 ###############
 
 
@@ -114,10 +114,10 @@ PL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep +
 
 # Normal Bayes
 
-NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "normal.bayes", data = cpi.data)
+NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "normal.bayes", data = cpi.data)
 
 #### Matched (MP) ####
 
 # Normal Bayes
 
-PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP, model = "normal.bayes", data = cpi.Mdf.party)
+PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party)
