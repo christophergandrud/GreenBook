@@ -88,13 +88,13 @@ estimates <- subset(estimates, var != c("sigma2"))
 ##### Create comparison plot
 
 cols <- c("#67A380", "#696969")
-name.break <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "FRB/GlobalModel", "senate_dem_rep")
-labels.break <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Potential GDP (%GDP)", "GlobalModel", "Prop. Senate Dem.")
+name.break <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "GlobalModel1", "senate_dem_rep")
+labels.break <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Potential GDP (%GDP)", "Global Model", "Prop. Senate Dem.")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = match)) +
                       facet_grid(~ method) + 
                       geom_linerange(size = 3, alpha = 0.6) +
-                      #scale_x_discrete(breaks = name.break, labels = labels.break) +
+                      scale_x_discrete(breaks = name.break, labels = labels.break) +
                       scale_color_manual(values = cols, name = "") +                            
                       geom_hline(aes(intercept= 0), linetype = "dotted") +
                       ylab("\nCoefficient Estimate") + xlab("") +

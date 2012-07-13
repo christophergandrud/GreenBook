@@ -89,7 +89,7 @@ Federal Reserve staff create ``Green Book" forecasts\footnote{Green Book data ca
     cpi.data <- read.csv(textConnection(cpi.data))
 
     ## Other data loading options
-    #cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/GB_FRED_cpi.dta") # Load data locally from Christopher's computer
+    #cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi.csv") # Load data locally from Christopher's computer
     # cpi.data <- read.dta("http://dl.dropbox.com/u/12581470/code/Replicability_code/GreenBook/GB_FRED_cpi.dta") # Load data from Dropbox 
     
     ### Melt data, i.e. reshape
@@ -190,7 +190,7 @@ This summary examination of inflation forecast errors suggests that there might 
     ## Create FRB/Global Model Variable 
     cpi.data$GlobalModel[cpi.data$Quarter > 1995.4] <- "1"
     cpi.data$GlobalModel[cpi.data$Quarter < 1996.1] <- "0"
-    cpi.data$GlobalModel <- as.factor(cpi.data$GlobalModel)    
+    cpi.data$GlobalModel <- factor(cpi.data$GlobalModel, labels = c("Before 1996", "After 1996"))    
 
     #### Partisan colours
     partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
@@ -285,7 +285,7 @@ All models used inflation forecast error data--as defined earlier--from the star
 
 In this section we present results from multiple regression model specifications with both matched and unmatched data sets. We graphically present the key results in this section. Coefficient estimate tables for the non-Bayesian linear models are given in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, and \ref{OutputBL}).
 
-In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see, for example Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
+In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
 
 <<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
     library(devtools)
@@ -318,9 +318,14 @@ In general there is very little difference in the coefficients estimated using O
     \end{singlespace}
 \end{figure}
 
+\paragraph{FRB Global Forecasting Model}
+
+%% Check with Cassie if this Terminology is correct %%
+The introduction of the FRB/Global behavioral equation forecasting model does not seem to have begun an era of significantly lower inflation forecasting error. In fact, across all of our matching and parametric model specifications, forecasts made after the introduction of this approach are not significantly different than those made before it. 
+
 \paragraph{Presidential Elections}
 
-We did not find any evidence that Federal Reserve staff inflation forecast errors were associated with election timing. This was true in parametric models using both unmatched data and matched data where the election period variable is the treatment. Estimates of the relationship between the quarters until election variable and forecast errors\footnote{This variable was obviously omitted from the models with the election period variable because they are highly correlated.} also did not provide any evidence that inflation errors are related to election timing. 
+We also did not find any evidence that Federal Reserve staff inflation forecast errors were associated with election timing. This was true in parametric models using both unmatched data and matched data where the election period variable is the treatment. Estimates of the relationship between the quarters until election variable and forecast errors\footnote{This variable was obviously omitted from the models with the election period variable because they are highly correlated.} also did not provide any evidence that inflation errors are related to election timing. 
 
 Data limitations make it difficult to fully examine the extension of Clark and Arel-Bundock's \citeyearpar{Clark2011} election gaming theory for Federal Reserves staff. We only have three Democratic presidential terms in our data, only two of which ended in the incumbent running for reelection. Nonetheless, we attempted to examine this hypothesis with an interaction of the president's party ID variable and both the election dummy and quarters to election variables. In all cases the president's party ID variable was robust whereas the election variables and the interaction term were very statistically insignificant.
 

@@ -19,10 +19,10 @@ cpi.complete <- cpi.complete[vars]
 #### Matching Model ####
 
 # Elections
-cpi.matched.election <- matchit(ElectionPeriod ~ recession + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP, data = cpi.complete, method = "genetic")
+cpi.matched.election <- matchit(ElectionPeriod ~ recession + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel, data = cpi.complete, method = "genetic")
 
 # Party 
-cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP, data = cpi.complete, method = "genetic")
+cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel, data = cpi.complete, method = "genetic")
 
 # Diagnostics for Covariate Balance
 # summary(cpi.matched.election)
