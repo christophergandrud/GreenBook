@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 11 July 2012
+# 18 July 2012
 ###############
 
 
@@ -62,6 +62,8 @@ NL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep 
 
 NL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
+NL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.data)
+
 ###### Matched based with the ElectionPeriod as the treatment variable (E) ######
 
 # Least Squares
@@ -86,6 +88,8 @@ EL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep 
 
 EL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
+EL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.Mdf.election)
+
 ###### Matched based with the pres_party as the treatment variable (P) ######
 
 # Least Squares
@@ -109,6 +113,8 @@ PL8 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + Deb
 PL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
 
 PL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.party)
+
+PL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.Mdf.party)
 
 ##### Normal Bayes #####
 

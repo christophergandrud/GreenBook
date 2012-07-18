@@ -1,7 +1,7 @@
 ################
 # President*Congress Interaction Graphs
 # Christopher Gandrud
-# Updated 7 July 2012 
+# Updated 18 July 2012 
 ################
 
 #### Models ####
