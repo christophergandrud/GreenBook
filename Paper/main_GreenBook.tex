@@ -35,358 +35,14 @@
 \newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
 \newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
 
-\usepackage{color}%
- 
-\newsavebox{\hlnormalsizeboxclosebrace}%
-\newsavebox{\hlnormalsizeboxopenbrace}%
-\newsavebox{\hlnormalsizeboxbackslash}%
-\newsavebox{\hlnormalsizeboxlessthan}%
-\newsavebox{\hlnormalsizeboxgreaterthan}%
-\newsavebox{\hlnormalsizeboxdollar}%
-\newsavebox{\hlnormalsizeboxunderscore}%
-\newsavebox{\hlnormalsizeboxand}%
-\newsavebox{\hlnormalsizeboxhash}%
-\newsavebox{\hlnormalsizeboxat}%
-\newsavebox{\hlnormalsizeboxpercent}% 
-\newsavebox{\hlnormalsizeboxhat}%
-\newsavebox{\hlnormalsizeboxsinglequote}%
-\newsavebox{\hlnormalsizeboxbacktick}%
-
-\setbox\hlnormalsizeboxopenbrace=\hbox{\begin{normalsize}\verb.{.\end{normalsize}}%
-\setbox\hlnormalsizeboxclosebrace=\hbox{\begin{normalsize}\verb.}.\end{normalsize}}%
-\setbox\hlnormalsizeboxlessthan=\hbox{\begin{normalsize}\verb.<.\end{normalsize}}%
-\setbox\hlnormalsizeboxdollar=\hbox{\begin{normalsize}\verb.$.\end{normalsize}}%
-\setbox\hlnormalsizeboxunderscore=\hbox{\begin{normalsize}\verb._.\end{normalsize}}%
-\setbox\hlnormalsizeboxand=\hbox{\begin{normalsize}\verb.&.\end{normalsize}}%
-\setbox\hlnormalsizeboxhash=\hbox{\begin{normalsize}\verb.#.\end{normalsize}}%
-\setbox\hlnormalsizeboxat=\hbox{\begin{normalsize}\verb.@.\end{normalsize}}%
-\setbox\hlnormalsizeboxbackslash=\hbox{\begin{normalsize}\verb.\.\end{normalsize}}%
-\setbox\hlnormalsizeboxgreaterthan=\hbox{\begin{normalsize}\verb.>.\end{normalsize}}%
-\setbox\hlnormalsizeboxpercent=\hbox{\begin{normalsize}\verb.%.\end{normalsize}}%
-\setbox\hlnormalsizeboxhat=\hbox{\begin{normalsize}\verb.^.\end{normalsize}}%
-\setbox\hlnormalsizeboxsinglequote=\hbox{\begin{normalsize}\verb.'.\end{normalsize}}%
-\setbox\hlnormalsizeboxbacktick=\hbox{\begin{normalsize}\verb.`.\end{normalsize}}%
-\setbox\hlnormalsizeboxhat=\hbox{\begin{normalsize}\verb.^.\end{normalsize}}%
-
-
-
-\newsavebox{\hltinyboxclosebrace}%
-\newsavebox{\hltinyboxopenbrace}%
-\newsavebox{\hltinyboxbackslash}%
-\newsavebox{\hltinyboxlessthan}%
-\newsavebox{\hltinyboxgreaterthan}%
-\newsavebox{\hltinyboxdollar}%
-\newsavebox{\hltinyboxunderscore}%
-\newsavebox{\hltinyboxand}%
-\newsavebox{\hltinyboxhash}%
-\newsavebox{\hltinyboxat}%
-\newsavebox{\hltinyboxpercent}% 
-\newsavebox{\hltinyboxhat}%
-\newsavebox{\hltinyboxsinglequote}%
-\newsavebox{\hltinyboxbacktick}%
-
-\setbox\hltinyboxopenbrace=\hbox{\begin{tiny}\verb.{.\end{tiny}}%
-\setbox\hltinyboxclosebrace=\hbox{\begin{tiny}\verb.}.\end{tiny}}%
-\setbox\hltinyboxlessthan=\hbox{\begin{tiny}\verb.<.\end{tiny}}%
-\setbox\hltinyboxdollar=\hbox{\begin{tiny}\verb.$.\end{tiny}}%
-\setbox\hltinyboxunderscore=\hbox{\begin{tiny}\verb._.\end{tiny}}%
-\setbox\hltinyboxand=\hbox{\begin{tiny}\verb.&.\end{tiny}}%
-\setbox\hltinyboxhash=\hbox{\begin{tiny}\verb.#.\end{tiny}}%
-\setbox\hltinyboxat=\hbox{\begin{tiny}\verb.@.\end{tiny}}%
-\setbox\hltinyboxbackslash=\hbox{\begin{tiny}\verb.\.\end{tiny}}%
-\setbox\hltinyboxgreaterthan=\hbox{\begin{tiny}\verb.>.\end{tiny}}%
-\setbox\hltinyboxpercent=\hbox{\begin{tiny}\verb.%.\end{tiny}}%
-\setbox\hltinyboxhat=\hbox{\begin{tiny}\verb.^.\end{tiny}}%
-\setbox\hltinyboxsinglequote=\hbox{\begin{tiny}\verb.'.\end{tiny}}%
-\setbox\hltinyboxbacktick=\hbox{\begin{tiny}\verb.`.\end{tiny}}%
-\setbox\hltinyboxhat=\hbox{\begin{tiny}\verb.^.\end{tiny}}%
-
-
-
-\newsavebox{\hlscriptsizeboxclosebrace}%
-\newsavebox{\hlscriptsizeboxopenbrace}%
-\newsavebox{\hlscriptsizeboxbackslash}%
-\newsavebox{\hlscriptsizeboxlessthan}%
-\newsavebox{\hlscriptsizeboxgreaterthan}%
-\newsavebox{\hlscriptsizeboxdollar}%
-\newsavebox{\hlscriptsizeboxunderscore}%
-\newsavebox{\hlscriptsizeboxand}%
-\newsavebox{\hlscriptsizeboxhash}%
-\newsavebox{\hlscriptsizeboxat}%
-\newsavebox{\hlscriptsizeboxpercent}% 
-\newsavebox{\hlscriptsizeboxhat}%
-\newsavebox{\hlscriptsizeboxsinglequote}%
-\newsavebox{\hlscriptsizeboxbacktick}%
-
-\setbox\hlscriptsizeboxopenbrace=\hbox{\begin{scriptsize}\verb.{.\end{scriptsize}}%
-\setbox\hlscriptsizeboxclosebrace=\hbox{\begin{scriptsize}\verb.}.\end{scriptsize}}%
-\setbox\hlscriptsizeboxlessthan=\hbox{\begin{scriptsize}\verb.<.\end{scriptsize}}%
-\setbox\hlscriptsizeboxdollar=\hbox{\begin{scriptsize}\verb.$.\end{scriptsize}}%
-\setbox\hlscriptsizeboxunderscore=\hbox{\begin{scriptsize}\verb._.\end{scriptsize}}%
-\setbox\hlscriptsizeboxand=\hbox{\begin{scriptsize}\verb.&.\end{scriptsize}}%
-\setbox\hlscriptsizeboxhash=\hbox{\begin{scriptsize}\verb.#.\end{scriptsize}}%
-\setbox\hlscriptsizeboxat=\hbox{\begin{scriptsize}\verb.@.\end{scriptsize}}%
-\setbox\hlscriptsizeboxbackslash=\hbox{\begin{scriptsize}\verb.\.\end{scriptsize}}%
-\setbox\hlscriptsizeboxgreaterthan=\hbox{\begin{scriptsize}\verb.>.\end{scriptsize}}%
-\setbox\hlscriptsizeboxpercent=\hbox{\begin{scriptsize}\verb.%.\end{scriptsize}}%
-\setbox\hlscriptsizeboxhat=\hbox{\begin{scriptsize}\verb.^.\end{scriptsize}}%
-\setbox\hlscriptsizeboxsinglequote=\hbox{\begin{scriptsize}\verb.'.\end{scriptsize}}%
-\setbox\hlscriptsizeboxbacktick=\hbox{\begin{scriptsize}\verb.`.\end{scriptsize}}%
-\setbox\hlscriptsizeboxhat=\hbox{\begin{scriptsize}\verb.^.\end{scriptsize}}%
-
-
-
-\newsavebox{\hlfootnotesizeboxclosebrace}%
-\newsavebox{\hlfootnotesizeboxopenbrace}%
-\newsavebox{\hlfootnotesizeboxbackslash}%
-\newsavebox{\hlfootnotesizeboxlessthan}%
-\newsavebox{\hlfootnotesizeboxgreaterthan}%
-\newsavebox{\hlfootnotesizeboxdollar}%
-\newsavebox{\hlfootnotesizeboxunderscore}%
-\newsavebox{\hlfootnotesizeboxand}%
-\newsavebox{\hlfootnotesizeboxhash}%
-\newsavebox{\hlfootnotesizeboxat}%
-\newsavebox{\hlfootnotesizeboxpercent}% 
-\newsavebox{\hlfootnotesizeboxhat}%
-\newsavebox{\hlfootnotesizeboxsinglequote}%
-\newsavebox{\hlfootnotesizeboxbacktick}%
-
-\setbox\hlfootnotesizeboxopenbrace=\hbox{\begin{footnotesize}\verb.{.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxclosebrace=\hbox{\begin{footnotesize}\verb.}.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxlessthan=\hbox{\begin{footnotesize}\verb.<.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxdollar=\hbox{\begin{footnotesize}\verb.$.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxunderscore=\hbox{\begin{footnotesize}\verb._.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxand=\hbox{\begin{footnotesize}\verb.&.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxhash=\hbox{\begin{footnotesize}\verb.#.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxat=\hbox{\begin{footnotesize}\verb.@.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxbackslash=\hbox{\begin{footnotesize}\verb.\.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxgreaterthan=\hbox{\begin{footnotesize}\verb.>.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxpercent=\hbox{\begin{footnotesize}\verb.%.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxhat=\hbox{\begin{footnotesize}\verb.^.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxsinglequote=\hbox{\begin{footnotesize}\verb.'.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxbacktick=\hbox{\begin{footnotesize}\verb.`.\end{footnotesize}}%
-\setbox\hlfootnotesizeboxhat=\hbox{\begin{footnotesize}\verb.^.\end{footnotesize}}%
-
-
-
-\newsavebox{\hlsmallboxclosebrace}%
-\newsavebox{\hlsmallboxopenbrace}%
-\newsavebox{\hlsmallboxbackslash}%
-\newsavebox{\hlsmallboxlessthan}%
-\newsavebox{\hlsmallboxgreaterthan}%
-\newsavebox{\hlsmallboxdollar}%
-\newsavebox{\hlsmallboxunderscore}%
-\newsavebox{\hlsmallboxand}%
-\newsavebox{\hlsmallboxhash}%
-\newsavebox{\hlsmallboxat}%
-\newsavebox{\hlsmallboxpercent}% 
-\newsavebox{\hlsmallboxhat}%
-\newsavebox{\hlsmallboxsinglequote}%
-\newsavebox{\hlsmallboxbacktick}%
-
-\setbox\hlsmallboxopenbrace=\hbox{\begin{small}\verb.{.\end{small}}%
-\setbox\hlsmallboxclosebrace=\hbox{\begin{small}\verb.}.\end{small}}%
-\setbox\hlsmallboxlessthan=\hbox{\begin{small}\verb.<.\end{small}}%
-\setbox\hlsmallboxdollar=\hbox{\begin{small}\verb.$.\end{small}}%
-\setbox\hlsmallboxunderscore=\hbox{\begin{small}\verb._.\end{small}}%
-\setbox\hlsmallboxand=\hbox{\begin{small}\verb.&.\end{small}}%
-\setbox\hlsmallboxhash=\hbox{\begin{small}\verb.#.\end{small}}%
-\setbox\hlsmallboxat=\hbox{\begin{small}\verb.@.\end{small}}%
-\setbox\hlsmallboxbackslash=\hbox{\begin{small}\verb.\.\end{small}}%
-\setbox\hlsmallboxgreaterthan=\hbox{\begin{small}\verb.>.\end{small}}%
-\setbox\hlsmallboxpercent=\hbox{\begin{small}\verb.%.\end{small}}%
-\setbox\hlsmallboxhat=\hbox{\begin{small}\verb.^.\end{small}}%
-\setbox\hlsmallboxsinglequote=\hbox{\begin{small}\verb.'.\end{small}}%
-\setbox\hlsmallboxbacktick=\hbox{\begin{small}\verb.`.\end{small}}%
-\setbox\hlsmallboxhat=\hbox{\begin{small}\verb.^.\end{small}}%
-
-
-
-\newsavebox{\hllargeboxclosebrace}%
-\newsavebox{\hllargeboxopenbrace}%
-\newsavebox{\hllargeboxbackslash}%
-\newsavebox{\hllargeboxlessthan}%
-\newsavebox{\hllargeboxgreaterthan}%
-\newsavebox{\hllargeboxdollar}%
-\newsavebox{\hllargeboxunderscore}%
-\newsavebox{\hllargeboxand}%
-\newsavebox{\hllargeboxhash}%
-\newsavebox{\hllargeboxat}%
-\newsavebox{\hllargeboxpercent}% 
-\newsavebox{\hllargeboxhat}%
-\newsavebox{\hllargeboxsinglequote}%
-\newsavebox{\hllargeboxbacktick}%
-
-\setbox\hllargeboxopenbrace=\hbox{\begin{large}\verb.{.\end{large}}%
-\setbox\hllargeboxclosebrace=\hbox{\begin{large}\verb.}.\end{large}}%
-\setbox\hllargeboxlessthan=\hbox{\begin{large}\verb.<.\end{large}}%
-\setbox\hllargeboxdollar=\hbox{\begin{large}\verb.$.\end{large}}%
-\setbox\hllargeboxunderscore=\hbox{\begin{large}\verb._.\end{large}}%
-\setbox\hllargeboxand=\hbox{\begin{large}\verb.&.\end{large}}%
-\setbox\hllargeboxhash=\hbox{\begin{large}\verb.#.\end{large}}%
-\setbox\hllargeboxat=\hbox{\begin{large}\verb.@.\end{large}}%
-\setbox\hllargeboxbackslash=\hbox{\begin{large}\verb.\.\end{large}}%
-\setbox\hllargeboxgreaterthan=\hbox{\begin{large}\verb.>.\end{large}}%
-\setbox\hllargeboxpercent=\hbox{\begin{large}\verb.%.\end{large}}%
-\setbox\hllargeboxhat=\hbox{\begin{large}\verb.^.\end{large}}%
-\setbox\hllargeboxsinglequote=\hbox{\begin{large}\verb.'.\end{large}}%
-\setbox\hllargeboxbacktick=\hbox{\begin{large}\verb.`.\end{large}}%
-\setbox\hllargeboxhat=\hbox{\begin{large}\verb.^.\end{large}}%
-
-
-
-\newsavebox{\hlLargeboxclosebrace}%
-\newsavebox{\hlLargeboxopenbrace}%
-\newsavebox{\hlLargeboxbackslash}%
-\newsavebox{\hlLargeboxlessthan}%
-\newsavebox{\hlLargeboxgreaterthan}%
-\newsavebox{\hlLargeboxdollar}%
-\newsavebox{\hlLargeboxunderscore}%
-\newsavebox{\hlLargeboxand}%
-\newsavebox{\hlLargeboxhash}%
-\newsavebox{\hlLargeboxat}%
-\newsavebox{\hlLargeboxpercent}% 
-\newsavebox{\hlLargeboxhat}%
-\newsavebox{\hlLargeboxsinglequote}%
-\newsavebox{\hlLargeboxbacktick}%
-
-\setbox\hlLargeboxopenbrace=\hbox{\begin{Large}\verb.{.\end{Large}}%
-\setbox\hlLargeboxclosebrace=\hbox{\begin{Large}\verb.}.\end{Large}}%
-\setbox\hlLargeboxlessthan=\hbox{\begin{Large}\verb.<.\end{Large}}%
-\setbox\hlLargeboxdollar=\hbox{\begin{Large}\verb.$.\end{Large}}%
-\setbox\hlLargeboxunderscore=\hbox{\begin{Large}\verb._.\end{Large}}%
-\setbox\hlLargeboxand=\hbox{\begin{Large}\verb.&.\end{Large}}%
-\setbox\hlLargeboxhash=\hbox{\begin{Large}\verb.#.\end{Large}}%
-\setbox\hlLargeboxat=\hbox{\begin{Large}\verb.@.\end{Large}}%
-\setbox\hlLargeboxbackslash=\hbox{\begin{Large}\verb.\.\end{Large}}%
-\setbox\hlLargeboxgreaterthan=\hbox{\begin{Large}\verb.>.\end{Large}}%
-\setbox\hlLargeboxpercent=\hbox{\begin{Large}\verb.%.\end{Large}}%
-\setbox\hlLargeboxhat=\hbox{\begin{Large}\verb.^.\end{Large}}%
-\setbox\hlLargeboxsinglequote=\hbox{\begin{Large}\verb.'.\end{Large}}%
-\setbox\hlLargeboxbacktick=\hbox{\begin{Large}\verb.`.\end{Large}}%
-\setbox\hlLargeboxhat=\hbox{\begin{Large}\verb.^.\end{Large}}%
-
-
-
-\newsavebox{\hlLARGEboxclosebrace}%
-\newsavebox{\hlLARGEboxopenbrace}%
-\newsavebox{\hlLARGEboxbackslash}%
-\newsavebox{\hlLARGEboxlessthan}%
-\newsavebox{\hlLARGEboxgreaterthan}%
-\newsavebox{\hlLARGEboxdollar}%
-\newsavebox{\hlLARGEboxunderscore}%
-\newsavebox{\hlLARGEboxand}%
-\newsavebox{\hlLARGEboxhash}%
-\newsavebox{\hlLARGEboxat}%
-\newsavebox{\hlLARGEboxpercent}% 
-\newsavebox{\hlLARGEboxhat}%
-\newsavebox{\hlLARGEboxsinglequote}%
-\newsavebox{\hlLARGEboxbacktick}%
-
-\setbox\hlLARGEboxopenbrace=\hbox{\begin{LARGE}\verb.{.\end{LARGE}}%
-\setbox\hlLARGEboxclosebrace=\hbox{\begin{LARGE}\verb.}.\end{LARGE}}%
-\setbox\hlLARGEboxlessthan=\hbox{\begin{LARGE}\verb.<.\end{LARGE}}%
-\setbox\hlLARGEboxdollar=\hbox{\begin{LARGE}\verb.$.\end{LARGE}}%
-\setbox\hlLARGEboxunderscore=\hbox{\begin{LARGE}\verb._.\end{LARGE}}%
-\setbox\hlLARGEboxand=\hbox{\begin{LARGE}\verb.&.\end{LARGE}}%
-\setbox\hlLARGEboxhash=\hbox{\begin{LARGE}\verb.#.\end{LARGE}}%
-\setbox\hlLARGEboxat=\hbox{\begin{LARGE}\verb.@.\end{LARGE}}%
-\setbox\hlLARGEboxbackslash=\hbox{\begin{LARGE}\verb.\.\end{LARGE}}%
-\setbox\hlLARGEboxgreaterthan=\hbox{\begin{LARGE}\verb.>.\end{LARGE}}%
-\setbox\hlLARGEboxpercent=\hbox{\begin{LARGE}\verb.%.\end{LARGE}}%
-\setbox\hlLARGEboxhat=\hbox{\begin{LARGE}\verb.^.\end{LARGE}}%
-\setbox\hlLARGEboxsinglequote=\hbox{\begin{LARGE}\verb.'.\end{LARGE}}%
-\setbox\hlLARGEboxbacktick=\hbox{\begin{LARGE}\verb.`.\end{LARGE}}%
-\setbox\hlLARGEboxhat=\hbox{\begin{LARGE}\verb.^.\end{LARGE}}%
-
-
-
-\newsavebox{\hlhugeboxclosebrace}%
-\newsavebox{\hlhugeboxopenbrace}%
-\newsavebox{\hlhugeboxbackslash}%
-\newsavebox{\hlhugeboxlessthan}%
-\newsavebox{\hlhugeboxgreaterthan}%
-\newsavebox{\hlhugeboxdollar}%
-\newsavebox{\hlhugeboxunderscore}%
-\newsavebox{\hlhugeboxand}%
-\newsavebox{\hlhugeboxhash}%
-\newsavebox{\hlhugeboxat}%
-\newsavebox{\hlhugeboxpercent}% 
-\newsavebox{\hlhugeboxhat}%
-\newsavebox{\hlhugeboxsinglequote}%
-\newsavebox{\hlhugeboxbacktick}%
-
-\setbox\hlhugeboxopenbrace=\hbox{\begin{huge}\verb.{.\end{huge}}%
-\setbox\hlhugeboxclosebrace=\hbox{\begin{huge}\verb.}.\end{huge}}%
-\setbox\hlhugeboxlessthan=\hbox{\begin{huge}\verb.<.\end{huge}}%
-\setbox\hlhugeboxdollar=\hbox{\begin{huge}\verb.$.\end{huge}}%
-\setbox\hlhugeboxunderscore=\hbox{\begin{huge}\verb._.\end{huge}}%
-\setbox\hlhugeboxand=\hbox{\begin{huge}\verb.&.\end{huge}}%
-\setbox\hlhugeboxhash=\hbox{\begin{huge}\verb.#.\end{huge}}%
-\setbox\hlhugeboxat=\hbox{\begin{huge}\verb.@.\end{huge}}%
-\setbox\hlhugeboxbackslash=\hbox{\begin{huge}\verb.\.\end{huge}}%
-\setbox\hlhugeboxgreaterthan=\hbox{\begin{huge}\verb.>.\end{huge}}%
-\setbox\hlhugeboxpercent=\hbox{\begin{huge}\verb.%.\end{huge}}%
-\setbox\hlhugeboxhat=\hbox{\begin{huge}\verb.^.\end{huge}}%
-\setbox\hlhugeboxsinglequote=\hbox{\begin{huge}\verb.'.\end{huge}}%
-\setbox\hlhugeboxbacktick=\hbox{\begin{huge}\verb.`.\end{huge}}%
-\setbox\hlhugeboxhat=\hbox{\begin{huge}\verb.^.\end{huge}}%
-
-
-
-\newsavebox{\hlHugeboxclosebrace}%
-\newsavebox{\hlHugeboxopenbrace}%
-\newsavebox{\hlHugeboxbackslash}%
-\newsavebox{\hlHugeboxlessthan}%
-\newsavebox{\hlHugeboxgreaterthan}%
-\newsavebox{\hlHugeboxdollar}%
-\newsavebox{\hlHugeboxunderscore}%
-\newsavebox{\hlHugeboxand}%
-\newsavebox{\hlHugeboxhash}%
-\newsavebox{\hlHugeboxat}%
-\newsavebox{\hlHugeboxpercent}% 
-\newsavebox{\hlHugeboxhat}%
-\newsavebox{\hlHugeboxsinglequote}%
-\newsavebox{\hlHugeboxbacktick}%
-
-\setbox\hlHugeboxopenbrace=\hbox{\begin{Huge}\verb.{.\end{Huge}}%
-\setbox\hlHugeboxclosebrace=\hbox{\begin{Huge}\verb.}.\end{Huge}}%
-\setbox\hlHugeboxlessthan=\hbox{\begin{Huge}\verb.<.\end{Huge}}%
-\setbox\hlHugeboxdollar=\hbox{\begin{Huge}\verb.$.\end{Huge}}%
-\setbox\hlHugeboxunderscore=\hbox{\begin{Huge}\verb._.\end{Huge}}%
-\setbox\hlHugeboxand=\hbox{\begin{Huge}\verb.&.\end{Huge}}%
-\setbox\hlHugeboxhash=\hbox{\begin{Huge}\verb.#.\end{Huge}}%
-\setbox\hlHugeboxat=\hbox{\begin{Huge}\verb.@.\end{Huge}}%
-\setbox\hlHugeboxbackslash=\hbox{\begin{Huge}\verb.\.\end{Huge}}%
-\setbox\hlHugeboxgreaterthan=\hbox{\begin{Huge}\verb.>.\end{Huge}}%
-\setbox\hlHugeboxpercent=\hbox{\begin{Huge}\verb.%.\end{Huge}}%
-\setbox\hlHugeboxhat=\hbox{\begin{Huge}\verb.^.\end{Huge}}%
-\setbox\hlHugeboxsinglequote=\hbox{\begin{Huge}\verb.'.\end{Huge}}%
-\setbox\hlHugeboxbacktick=\hbox{\begin{Huge}\verb.`.\end{Huge}}%
-\setbox\hlHugeboxhat=\hbox{\begin{Huge}\verb.^.\end{Huge}}%
- 
-
-\def\urltilda{\kern -.15em\lower .7ex\hbox{\~{}}\kern .04em}%
-
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.16,0.16,1}{#1}}
-\newcommand{\hlesc}[1]{\textcolor[rgb]{1,0,1}{#1}}
-\newcommand{\hlstr}[1]{\textcolor[rgb]{1,0,0}{#1}}
-\newcommand{\hldstr}[1]{\textcolor[rgb]{0.51,0.51,0}{#1}}
-\newcommand{\hlslc}[1]{\textcolor[rgb]{0.51,0.51,0.51}{\it{#1}}}
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.51,0.51,0.51}{\it{#1}}}
-\newcommand{\hldir}[1]{\textcolor[rgb]{0,0.51,0}{#1}}
-\newcommand{\hlsym}[1]{\textcolor[rgb]{0,0,0}{#1}}
-% \newcommand{\hlline}[1]{\textcolor[rgb]{0.33,0.33,0.33}{#1}}
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0,0,0}{\bf{#1}}}
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.51,0,0}{#1}}
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0,0,0}{\bf{#1}}}
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0,0,0.51}{#1}}
-
-
 \usepackage{framed}
 \makeatletter
 \newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
  \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
  \colorbox{shadecolor}{##1}\hskip-\fboxsep
      % There is no \\@totalrightmargin, so:
@@ -394,12 +50,17 @@
  \MakeFramed {\advance\hsize-\width
    \@totalleftmargin\z@ \linewidth\hsize
    \@setminipage}}%
- {\par\unskip\endMakeFramed}
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
 \makeatother
 
 \definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
+\usepackage{alltt}
 \usepackage{fullpage}
 \usepackage[authoryear]{natbib}
 \usepackage{setspace}
@@ -470,24 +131,7 @@ Federal Reserve staff create ``Green Book" forecasts\footnote{Green Book data ca
     \begin{center}
     
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## Error: Could not resolve host: raw.github.com; nodename nor servname
-## provided, or not known
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.abs' not found
-
-## Error: object 'cpi.abs' not found
-
-## Error: object 'cpi.abs' not found
-
-## Error: object 'absInflation' not found
-\end{verbatim}
-\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/BaseInflation} 
 \end{knitrout}
 
     
@@ -555,25 +199,7 @@ This summary examination of inflation forecast errors suggests that there might 
     \begin{center}
     
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'cpi.data' not found
-
-## Error: object 'errors.time' not found
-\end{verbatim}
-\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/PartisanError} 
 \end{knitrout}
 
     
@@ -646,13 +272,7 @@ In this section we present results from multiple regression model specifications
 
 In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## Error: object 'cpi.data' not found
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
+
 
 
 \begin{figure}[t]
@@ -661,12 +281,7 @@ In general there is very little difference in the coefficients estimated using O
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## Error: Could not resolve host: raw.github.com; nodename nor servname
-## provided, or not known
-\end{verbatim}
-\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/CoefComparePlots} 
 \end{knitrout}
 
     \end{center}
@@ -702,12 +317,7 @@ These analyses provide strong evidence that Federal Reserve staff overestimate t
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## Error: Could not resolve host: raw.github.com; nodename nor servname
-## provided, or not known
-\end{verbatim}
-\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.7\linewidth]{figure/ExpectValueParty} 
 \end{knitrout}
 
     \end{center}
@@ -716,19 +326,7 @@ These analyses provide strong evidence that Federal Reserve staff overestimate t
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big this bias might be we simulated expected standardized forecast error for democratic and republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C6 from Table \ref{OutputBL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. On we expect that on average the Fed overestimates inflation by \begin{verbatim}
-
-Error in mean(ModelParty.ev$value[ModelParty.ev$variable == "Dem"] * 100) : 
-  object 'ModelParty.ev' not found
-
-\end{verbatim}
- percent. This compares to an average inflation error of \begin{verbatim}
-
-Error in mean(ModelParty.ev$value[ModelParty.ev$variable == "Rep"] * 100) : 
-  object 'ModelParty.ev' not found
-
-\end{verbatim}
- percent during Republican presidencies. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast error for democratic and republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C6 from Table \ref{OutputBL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. On we expect that on average the Fed overestimates inflation by 13 percent. This compares to an average inflation error of -21 percent during Republican presidencies. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
 
 The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure that Democrats may be initiating.
 
@@ -748,11 +346,7 @@ COMPLETE
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## Error: object 'cpi.Mdf.party' not found
-\end{verbatim}
-\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/InterPlots} 
 \end{knitrout}
 
 
@@ -783,11 +377,51 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     \vspace{0.25cm}
     \begin{center}
     {\footnotesize
-\begin{kframe}
-\begin{verbatim}
-## Error: object 'NL1' not found
-\end{verbatim}
-\end{kframe}
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ A1 } & \multicolumn{ 1 }{ c }{ A2 } & \multicolumn{ 1 }{ c }{ A3 } & \multicolumn{ 1 }{ c }{ A4 } & \multicolumn{ 1 }{ c }{ A5 } & \multicolumn{ 1 }{ c }{ A6 } & \multicolumn{ 1 }{ c }{ A7 } & \multicolumn{ 1 }{ c }{ A8 } & \multicolumn{ 1 }{ c }{ A9 } & \multicolumn{ 1 }{ c }{ A10 } \\ \hline
+ %                    & A1             & A2             & A3             & A4             & A5             & A6             & A7             & A8             & A9             & A10           \\ 
+Intercept            & 3.2 ^{**}      & 3.4 ^{**}      & 3.2 ^{**}      & 3.3 ^{***}     & 3.6 ^{***}     & 3.8 ^{***}     & 3.7 ^{***}     & 3.6 ^{***}     & 3.2 ^{***}     & 1.3           \\ 
+                     & (1.1)          & (1.1)          & (1.1)          & (0.9)          & (0.9)          & (0.9)          & (0.9)          & (0.9)          & (0.9)          & (1.2)         \\ 
+Recession            & -0.0           & 0.0            & -0.0           & 0.1            & 0.1            & 0.1            & 0.1            & 0.1 ^*         & 0.1 ^\dagger  & 0.1           \\ 
+                     & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.0)          & (0.0)          & (0.0)         \\ 
+Debt/GDP             & 0.0            & 0.0            & 0.0            & -0.0           & -0.0           & 0.0            & 0.0            & -0.0           & -0.0           & 0.0           \\ 
+                     & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)         \\ 
+Expenditure/GDP      & 0.1 ^{***}     & 0.1 ^{***}     & 0.1 ^{***}     & 0.2 ^{***}     & 0.2 ^{***}     & 0.1 ^{***}     & 0.1 ^{**}      & 0.1 ^{***}     & 0.1 ^{***}     & 0.1 ^{**}     \\ 
+                     & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)         \\ 
+Output Gap           & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}    & -0.1 ^{***}   \\ 
+                     & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)         \\ 
+Qtr. to Election     &                & -0.0           &                &                & -0.0           & -0.0           & -0.0           & 0.0            & 0.0            & 0.0           \\ 
+                     &                & (0.0)          &                &                & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)         \\ 
+Election Period      &                &                & 0.0            &                &                &                &                &                &                &               \\ 
+                     &                &                & (0.1)          &                &                &                &                &                &                &               \\ 
+Pres. Party ID       &                &                &                & 0.3 ^{***}     & 0.3 ^{***}     & 0.3 ^{***}     & 0.3 ^{***}     & 0.9 ^{***}     & 1.1 ^{***}     & 2.4 ^{***}    \\ 
+                     &                &                &                & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.1)          & (0.2)          & (0.7)         \\ 
+Senate Dem/Rep       &                &                &                &                &                & -0.2           & -0.3           & -0.2           & -0.0           & 0.9 ^*        \\ 
+                     &                &                &                &                &                & (0.1)          & (0.2)          & (0.1)          & (0.1)          & (0.3)         \\ 
+House Dem/Rep        &                &                &                &                &                & 0.2            & 0.2            & 0.4 ^{***}     & 0.3 ^{**}      & 1.3 ^{***}    \\ 
+                     &                &                &                &                &                & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.3)         \\ 
+FRB/GlobalModel      &                &                &                &                &                &                & -0.1           &                &                &               \\ 
+                     &                &                &                &                &                &                & (0.1)          &                &                &               \\ 
+Pres Party ID*House  &                &                &                &                &                &                &                & -0.5 ^{***}    &                & -1.8 ^*       \\ 
+                     &                &                &                &                &                &                &                & (0.1)          &                & (0.8)         \\ 
+Pres Party ID*Senate &                &                &                &                &                &                &                &                & -0.7 ^{***}    & -1.1          \\ 
+                     &                &                &                &                &                &                &                &                & (0.1)          & (0.7)         \\ 
+House*Senate         &                &                &                &                &                &                &                &                &                & -0.7 ^{**}    \\ 
+                     &                &                &                &                &                &                &                &                &                & (0.2)         \\ 
+Pres*House*Senate    &                &                &                &                &                &                &                &                &                & 0.9 ^*        \\ 
+                     &                &                &                &                &                &                &                &                &                & (0.4)          \\
+ $N$                  & 148            & 148            & 148            & 148            & 148            & 148            & 148            & 148            & 148            & 148           \\ 
+$R^2$                & 0.3            & 0.3            & 0.3            & 0.5            & 0.5            & 0.5            & 0.5            & 0.6            & 0.6            & 0.6           \\ 
+adj. $R^2$           & 0.3            & 0.3            & 0.2            & 0.5            & 0.5            & 0.5            & 0.5            & 0.6            & 0.5            & 0.6           \\ 
+Resid. sd            & 0.2            & 0.2            & 0.2            & 0.2            & 0.2            & 0.2            & 0.2            & 0.2            & 0.2            & 0.2            \\ \hline
+ \multicolumn{11}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{11}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
 
     }
     \end{center}
@@ -801,11 +435,50 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     \vspace{0.25cm}
     \begin{center}
     {\footnotesize
-\begin{kframe}
-\begin{verbatim}
-## Error: object 'EL1' not found
-\end{verbatim}
-\end{kframe}
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ B1 } & \multicolumn{ 1 }{ c }{ B2 } & \multicolumn{ 1 }{ c }{ B3 } & \multicolumn{ 1 }{ c }{ B4 } & \multicolumn{ 1 }{ c }{ B5 } & \multicolumn{ 1 }{ c }{ B6 } & \multicolumn{ 1 }{ c }{ B7 } & \multicolumn{ 1 }{ c }{ B8 } & \multicolumn{ 1 }{ c }{ B9 } & \multicolumn{ 1 }{ c }{ B10 } \\ \hline
+ %                    & B1              & B2              & B3              & B4              & B5              & B6              & B7              & B8              & B9              & B10            \\ 
+Intercept            & -1.0            & -0.8            & -1.0            & 1.3             & 1.5             & 4.0             & 3.1             & 2.6             & 1.5             & 1.6            \\ 
+                     & (4.0)           & (4.1)           & (4.0)           & (3.2)           & (3.2)           & (3.6)           & (5.0)           & (2.7)           & (3.0)           & (4.4)          \\ 
+Debt/GDP             & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & 0.0             & 0.0             & -0.0            & -0.0            & 0.0            \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Expenditure/GDP      & 0.1 ^*          & 0.2 ^*          & 0.1 ^*          & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^*          & 0.2             & 0.3 ^{***}      & 0.3 ^{***}      & -0.0           \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Output Gap           & -0.0            & -0.0            & -0.0            & -0.1            & -0.1            & -0.1 ^\dagger  & -0.1            & -0.1 ^*         & -0.1 ^*         & -0.1           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election     &                 & 0.0             &                 &                 & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & 0.0            \\ 
+                     &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Election Period      &                 &                 & 0.1             &                 &                 &                 &                 &                 &                 &                \\ 
+                     &                 &                 & (0.1)           &                 &                 &                 &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.4 ^{***}      & 0.4 ^{***}      & 0.5 ^{***}      & 0.5 ^{***}      & 1.5 ^{***}      & 1.9 ^{***}      & 0.1            \\ 
+                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.3)           & (0.4)           & (0.7)          \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & 0.1             & 0.0             & 0.4             & 0.5             & 1.2            \\ 
+                     &                 &                 &                 &                 &                 & (0.4)           & (0.4)           & (0.3)           & (0.3)           & (1.1)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & 0.4             & 0.3             & 0.2             & -0.0            & 2.5 ^*         \\ 
+                     &                 &                 &                 &                 &                 & (0.4)           & (0.4)           & (0.3)           & (0.3)           & (1.0)          \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & -0.1            &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.4)           &                 &                 &                \\ 
+Pres Party ID*House  &                 &                 &                 &                 &                 &                 &                 & -0.9 ^{***}     &                 & -3.6 ^{**}     \\ 
+                     &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 & (1.0)          \\ 
+Pres Party ID*Senate &                 &                 &                 &                 &                 &                 &                 &                 & -1.3 ^{**}      & 4.5 ^*         \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.4)           & (1.7)          \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 & -1.0           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.7)           \\
+ $N$                  & 30              & 30              & 30              & 30              & 30              & 30              & 30              & 30              & 30              & 30             \\ 
+$R^2$                & 0.2             & 0.3             & 0.3             & 0.6             & 0.6             & 0.6             & 0.6             & 0.8             & 0.8             & 0.9            \\ 
+adj. $R^2$           & 0.2             & 0.1             & 0.1             & 0.5             & 0.5             & 0.5             & 0.5             & 0.7             & 0.7             & 0.8            \\ 
+Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.1             \\ \hline
+ \multicolumn{11}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{11}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}}\\
+\multicolumn{11}{l}{\footnotesize{The recession variable is ommitted because there was no variation in the matched data set.}}\\
+\multicolumn{11}{l}{\footnotesize{The reason that there was no variation is because there was never a recession during an}}\\
+\multicolumn{11}{l}{\footnotesize{election period in our data set.}} 
+\end{tabular} 
+
+
 
     }
     \end{center}
@@ -819,11 +492,51 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     \vspace{0.25cm}
     \begin{center}
     {\footnotesize
-\begin{kframe}
-\begin{verbatim}
-## Error: object 'PL1' not found
-\end{verbatim}
-\end{kframe}
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ C1 } & \multicolumn{ 1 }{ c }{ C2 } & \multicolumn{ 1 }{ c }{ C3 } & \multicolumn{ 1 }{ c }{ C4 } & \multicolumn{ 1 }{ c }{ C5 } & \multicolumn{ 1 }{ c }{ C6 } & \multicolumn{ 1 }{ c }{ C7 } & \multicolumn{ 1 }{ c }{ C8 } & \multicolumn{ 1 }{ c }{ C9 } & \multicolumn{ 1 }{ c }{ C10 } \\ \hline
+ %                    & C1              & C2              & C3              & C4              & C5              & C6              & C7              & C8              & C9              & C10            \\ 
+Intercept            & 2.4             & 2.4             & 2.6             & 1.1             & 1.1             & -0.8            & -0.8            & 0.4             & 0.1             & -2.7           \\ 
+                     & (2.7)           & (2.8)           & (2.8)           & (2.2)           & (2.2)           & (2.4)           & (2.4)           & (2.0)           & (2.0)           & (2.4)          \\ 
+Recession            & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.0            \\ 
+                     & (0.2)           & (0.2)           & (0.2)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Debt/GDP             & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & -0.0            & -0.0            & -0.0            & -0.0            & -0.0           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Expenditure/GDP      & 0.1 ^*          & 0.1 ^*          & 0.1 ^*          & 0.1 ^*          & 0.1 ^*          & 0.1 ^\dagger   & 0.1             & 0.1 ^*          & 0.1 ^{**}       & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.1)          \\ 
+Output Gap           & -0.0            & -0.0            & -0.1            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election     &                 & -0.0            &                 &                 & -0.0            & -0.0            & -0.0            & 0.0             & 0.0             & 0.0            \\ 
+                     &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Election Period      &                 &                 & -0.1            &                 &                 &                 &                 &                 &                 &                \\ 
+                     &                 &                 & (0.1)           &                 &                 &                 &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 1.2 ^{***}      & 1.4 ^{***}      & 2.7 ^{**}      \\ 
+                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.2)           & (0.2)           & (0.9)          \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.8 ^*         & -0.8 ^\dagger  & -0.4            & -0.1            & 0.6            \\ 
+                     &                 &                 &                 &                 &                 & (0.4)           & (0.4)           & (0.3)           & (0.3)           & (0.7)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & 0.4             & 0.4             & 0.6 ^*          & 0.4 ^\dagger   & 2.1 ^{**}      \\ 
+                     &                 &                 &                 &                 &                 & (0.3)           & (0.3)           & (0.2)           & (0.2)           & (0.7)          \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & -0.0            &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                \\ 
+Pres Party ID*House  &                 &                 &                 &                 &                 &                 &                 & -0.7 ^{***}     &                 & -2.7 ^*        \\ 
+                     &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 & (1.1)          \\ 
+Pres Party ID*Senate &                 &                 &                 &                 &                 &                 &                 &                 & -0.9 ^{***}     & -0.6           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           & (1.2)          \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 & -1.0 ^*        \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.4)          \\ 
+Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 & 1.2 ^*         \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.6)           \\
+ $N$                  & 70              & 70              & 70              & 70              & 70              & 70              & 70              & 70              & 70              & 70             \\ 
+$R^2$                & 0.1             & 0.1             & 0.1             & 0.4             & 0.4             & 0.5             & 0.5             & 0.6             & 0.6             & 0.7            \\ 
+adj. $R^2$           & 0.1             & 0.0             & 0.1             & 0.4             & 0.4             & 0.4             & 0.4             & 0.6             & 0.6             & 0.6            \\ 
+Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             \\ \hline
+ \multicolumn{11}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{11}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
 
     }
     \end{center}
