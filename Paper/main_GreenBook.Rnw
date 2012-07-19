@@ -380,7 +380,7 @@ The interactions were generally statistically significant. To make substantive s
     \label{InteractionPlots}
     \begin{center}
 
-<<InterPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=5, out.width='0.95\\linewidth'>>=
+<<InterPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=4, out.width='0.8\\linewidth'>>=
 
     InterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresCongressInteractions.R?login=christophergandrud&token=44bbeb1d649a3fd6e6d69ac4d842c3ed"
     source_url(InterURL)
