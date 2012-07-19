@@ -4,8 +4,6 @@
 # Updated 19 July 2012 
 ################
 
-#### House ####
-
 # Create range of values to simulate expected values across
 pres_party.r <- c(0, 1)
 house_dem_rep.r <- seq(0.87, 2.04, by = .01)
@@ -15,8 +13,8 @@ PL10SetDem <- setx(PL10, pres_party = pres_party.r, house_dem_rep = 1.3, senate_
 PL10SetRep <- setx(PL10, pres_party = pres_party.r, house_dem_rep = 0.9, senate_dem_rep = 0.9)
 
 # Simulate expected values.
-PL10SimDem <- sim(PL10, x = PL10.SetDem)
-PL10SimRep <- sim(PL10, x = PL10.SetRep)
+PL10SimDem <- sim(PL10, x = PL10SetDem)
+PL10SimRep <- sim(PL10, x = PL10SetRep)
 
 # Extract expected values from simulations (Dem)
 PL10SimDem.ev <- PL10SimDem$qi
@@ -35,13 +33,13 @@ PL10SimRep.ev <- melt(PL10SimRep.ev, measure = 1:2)
 PL10SimRep.ev$variable <- as.numeric(gsub("X", "", PL10SimRep.ev$variable))
 
 # Replace nonsense numbers with simulation names
-PL10SimDem.ev$variable[PL10SimDem.ev$variable == 17] <- "Republican President"
-PL10SimDem.ev$variable[PL10SimDem.ev$variable == 22] <- "Democratic President"
+PL10SimDem.ev$variable[PL10SimDem.ev$variable == 25] <- "Republican President"
+PL10SimDem.ev$variable[PL10SimDem.ev$variable == 26] <- "Democratic President"
 PL10SimDem.ev$variable <- factor(PL10SimDem.ev$variable)
 PL10SimDem.ev$Congress <- "Dem. Congress"
 
-PL10SimRep.ev$variable[PL10SimRep.ev$variable == 17] <- "Republican President"
-PL10SimRep.ev$variable[PL10SimRep.ev$variable == 22] <- "Democratic President"
+PL10SimRep.ev$variable[PL10SimRep.ev$variable == 25] <- "Republican President"
+PL10SimRep.ev$variable[PL10SimRep.ev$variable == 26] <- "Democratic President"
 PL10SimRep.ev$variable <- factor(PL10SimRep.ev$variable)
 PL10SimRep.ev$Congress <- "Rep. Congress"
 

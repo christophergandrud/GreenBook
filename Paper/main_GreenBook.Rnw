@@ -291,11 +291,11 @@ In general there is very little difference in the coefficients estimated using O
     library(devtools)
     
     # Run main analysis source code
-    #AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
-    #source_url(AnalysisURL)
+    AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
+    source_url(AnalysisURL)
 
     # Local
-    source("/git_repositories/GreenBook/Analysis/MainAnalysis2.R")
+    # source("/git_repositories/GreenBook/Analysis/MainAnalysis2.R")
 @
 
 \begin{figure}[t]
@@ -305,7 +305,7 @@ In general there is very little difference in the coefficients estimated using O
 
 <<CoefComparePlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
 
-    #source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
+    # source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
 
     # Create plots
      CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
@@ -382,7 +382,8 @@ The interactions were generally statistically significant. To make substantive s
 
 <<InterPlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=5, out.width='0.95\\linewidth'>>=
 
-    source("/git_repositories/GreenBook/Analysis/interactionTest.R")
+    InterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresCongressInteractions.R?login=christophergandrud&token=44bbeb1d649a3fd6e6d69ac4d842c3ed"
+    source_url(InterURL)
     
 @
 
