@@ -95,7 +95,7 @@ est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, 
                       facet_grid(~ method) + 
                       geom_linerange(size = 3, alpha = 0.6) +
                       scale_x_discrete(breaks = name.break, labels = labels.break) +
-                      scale_y_continuous(breaks = c(-1.5, -0.5, 0.0, 0.5, 1.0), labels = c(-1.5, -0.5, 0, 0.5, 1))
+                      scale_y_continuous(breaks = c(-1, 0.0, 1.0), labels = c("-1", "0", "1")) +
                       scale_color_manual(values = cols, name = "") +                            
                       geom_hline(aes(intercept= 0), linetype = "dotted") +
                       ylab("\nCoefficient Estimate") + xlab("") +

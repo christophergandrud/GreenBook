@@ -281,7 +281,8 @@ In general there is very little difference in the coefficients estimated using O
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/CoefComparePlots} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{flushleft}\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: non-numeric argument to binary operator}\end{flushleft}\end{kframe}
 \end{knitrout}
 
     \end{center}
@@ -553,7 +554,7 @@ Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Thu Jul 19 14:27:14 2012
+% Thu Jul 19 14:51:44 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -588,7 +589,7 @@ Intercept & 3.71 & 0.95 & 1.87 & 3.71 & 5.59 \\
 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Thu Jul 19 14:27:14 2012
+% Thu Jul 19 14:51:44 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}
@@ -596,17 +597,18 @@ Intercept & 3.71 & 0.95 & 1.87 & 3.71 & 5.59 \\
 {\footnotesize
 \begin{tabular}{lccccc}
   \hline
- & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
   \hline
-(Intercept) & -0.91 & 2.31 & -5.38 & -0.92 & 3.74 \\ 
-  pres\_party & 0.34 & 0.06 & 0.23 & 0.34 & 0.45 \\ 
-  recession & 0.08 & 0.13 & -0.17 & 0.08 & 0.33 \\ 
-  time\_to\_election & -0.00 & 0.01 & -0.01 & -0.00 & 0.01 \\ 
-  senate\_dem\_rep & -0.77 & 0.39 & -1.55 & -0.77 & -0.01 \\ 
-  house\_dem\_rep & 0.44 & 0.24 & -0.03 & 0.44 & 0.92 \\ 
-  ExpenditureGDP & 0.10 & 0.05 & 0.01 & 0.10 & 0.19 \\ 
-  PotentialGDP & -0.01 & 0.03 & -0.07 & -0.01 & 0.05 \\ 
-  GlobalModelAfter 1996 & -0.01 & 0.12 & -0.24 & -0.01 & 0.22 \\ 
+Intercept & -0.84 & 2.44 & -5.58 & -0.85 & 4.00 \\ 
+  Pres. Party ID & 0.34 & 0.06 & 0.22 & 0.34 & 0.46 \\ 
+  Recession & 0.08 & 0.13 & -0.17 & 0.08 & 0.33 \\ 
+  Qtr. to Election & -0.00 & 0.01 & -0.01 & -0.00 & 0.01 \\ 
+  Senate Dem/Rep & -0.76 & 0.41 & -1.56 & -0.77 & 0.04 \\ 
+  House Dem/Rep & 0.42 & 0.29 & -0.15 & 0.42 & 0.98 \\ 
+  Debt/GDP & -0.00 & 0.01 & -0.01 & -0.00 & 0.01 \\ 
+  Expenditure/GDP & 0.10 & 0.07 & -0.03 & 0.10 & 0.24 \\ 
+  Output Gap & -0.01 & 0.03 & -0.08 & -0.01 & 0.05 \\ 
+  Global Model & -0.01 & 0.12 & -0.24 & -0.01 & 0.23 \\ 
   sigma2 & 0.05 & 0.01 & 0.03 & 0.05 & 0.07 \\ 
    \hline
 \end{tabular}
