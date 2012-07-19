@@ -540,7 +540,7 @@ PB1Summary <- rename(PB1Summary, c(X97.5. = "97.5%"))
 
 PB1Summary <- cbind(Variables, PB1Summary)
 
-print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable", label = "OutputPB", align = c("l", "l", "c", "c", "c", "c", "c")), caption.placement=getOption("xtable.caption.placement", "top"), size=getOption("xtable.size", "footnotesize"), include.rownames = FALSE)
+print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable", label = "OutputPB", align = c("l", "l", "c", "c", "c", "c", "c")), caption.placement=getOption("xtable.caption.placement", "top"), size=getOption("xtable.size", "small"), include.rownames = FALSE)
 @
 
 %%%%%%% References %%%%%%%%%%%%
