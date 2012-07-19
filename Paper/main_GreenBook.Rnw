@@ -283,7 +283,7 @@ All models used inflation forecast error data--as defined earlier--from the star
 
 \section{Results}
 
-In this section we present results from multiple regression model specifications with both matched and unmatched data sets. We graphically present the key results in this section. Coefficient estimate tables for the non-Bayesian linear models are given in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, and \ref{OutputBL}).
+In this section we present results from multiple regression model specifications with both matched and unmatched data sets. We graphically present the key results in this section. Coefficient estimate tables for the models are given in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}).
 
 In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
 
@@ -351,7 +351,7 @@ source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{From a normal Bayesian linear regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputBL}. The figures show 1000 simulations per fitted value. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{From a normal Bayesian linear regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputPL}. The figures show 1000 simulations per fitted value. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
@@ -389,7 +389,7 @@ The interactions were generally statistically significant. To make substantive s
     \end{center}
 \end{figure}
 
-There may be a three-way interaction between presidential party ID, the proportion of the Senate that was Democratic, and the proportion of the House that was Democratic. A Democratic president presumably would be most able to achieve policy outcomes close to their ideal point if all houses of Congress were Democratically controlled. The interaction, however, was not statistically significant. This may be because there is no interaction or because we simply do not have enough information in the data to be able to observe one \citep[see][]{Brambor2006}. It would therefore be highly inappropriate to draw conclusions either way.
+
 
 
 \section*{Discussion: Do Fed Forecasts Have a Partisan Bias?}
@@ -446,8 +446,6 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     \begin{center}
     {\footnotesize
 << ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-
-    library(apsrtable)
     
     # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
     ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11")
@@ -477,13 +475,11 @@ This paper can be entirely replicated. All data, analysis source code, and marku
 
 \begin{table}[ht]
     \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
-    \label{OutputBL}
+    \label{OutputPL}
     \vspace{0.25cm}
     \begin{center}
     {\footnotesize
 << PLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-
-    library(apsrtable)
     
     # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
     ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11")
@@ -503,6 +499,51 @@ This paper can be entirely replicated. All data, analysis source code, and marku
     \end{center}
 \end{table}
 
+%%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
+<< NBTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+# Load packages
+library(reshape)
+library(xtable)
+
+# Get the model summary
+NB1Summary <- summary(NB1)
+NB1Summary <- data.frame(NB1Summary$summary)
+
+# Clean up variable names
+library(reshape)
+
+NB1Summary <- rename(NB1Summary, c(X2.5. = "2.5%"))
+NB1Summary <- rename(NB1Summary, c(X50. = "50%"))
+NB1Summary <- rename(NB1Summary, c(X97.5. = "97.5%"))
+
+# Clean up Covariate Labels
+Variables <- c("Intercept", "Pres. Party ID", "Recession", "Qtr. to Election", "Senate Dem/Rep", "House Dem/Rep", "Debt/GDP",  "Expenditure/GDP", "Output Gap", "Global Model", "sigma2")
+
+NB1Summary <- cbind(Variables, NB1Summary)
+
+print.xtable(xtable(NB1Summary, caption = "Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)", label = "OutputNB", align = c("l", "l", "c", "c", "c", "c", "c")), caption.placement=getOption("xtable.caption.placement", "top"), size=getOption("xtable.size", "small"), include.rownames = FALSE)
+@
+
+
+%%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
+
+<< PBTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+# Get the model summary
+PB1Summary <- summary(PB1)
+PB1Summary <- data.frame(PB1Summary$summary)
+
+# Clean up variable names
+
+PB1Summary <- rename(PB1Summary, c(X2.5. = "2.5%"))
+PB1Summary <- rename(PB1Summary, c(X50. = "50%"))
+PB1Summary <- rename(PB1Summary, c(X97.5. = "97.5%"))
+
+PB1Summary <- cbind(Variables, PB1Summary)
+
+print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable", label = "OutputPB", align = c("l", "c", "c", "c", "c", "c")), caption.placement=getOption("xtable.caption.placement", "top"), size=getOption("xtable.size", "footnotesize"), include.rownames = FALSE)
+@
+
+%%%%%%% References %%%%%%%%%%%%
 
 \clearpage
 

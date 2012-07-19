@@ -116,14 +116,14 @@ PL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep +
 
 PL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.Mdf.party)
 
-##### Normal Bayes #####
+##### Normal Bayes, Not Matched (NB) #####
 
 # Normal Bayes
 
 NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "normal.bayes", data = cpi.data)
 
-#### Matched (MP) ####
+#### Normal Bayes, Matched (MP) ####
 
 # Normal Bayes
 
-PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party)
+PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party)
