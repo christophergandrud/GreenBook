@@ -19,27 +19,19 @@ PL10SimRep <- sim(PL10, x = PL10SetRep)
 # Extract expected values from simulations (Dem)
 PL10SimDem.ev <- PL10SimDem$qi
 PL10SimDem.ev <-data.frame(PL10SimDem.ev$ev)
+names(PL10SimDem.ev) <- c("Republican President", "Democratic President")
 PL10SimDem.ev <- melt(PL10SimDem.ev, measure = 1:2)
-
-# Remove 'X' from variable
-PL10SimDem.ev$variable <- as.numeric(gsub("X", "", PL10SimDem.ev$variable))
 
 # Extract expected values from simulations (Rep)
 PL10SimRep.ev <- PL10SimRep$qi
 PL10SimRep.ev <-data.frame(PL10SimRep.ev$ev)
+names(PL10SimRep.ev) <- c("Republican President", "Democratic President")
 PL10SimRep.ev <- melt(PL10SimRep.ev, measure = 1:2)
 
-# Remove 'X' from variable
-PL10SimRep.ev$variable <- as.numeric(gsub("X", "", PL10SimRep.ev$variable))
-
-# Replace nonsense numbers with simulation names
-PL10SimDem.ev$variable[PL10SimDem.ev$variable == 25] <- "Republican President"
-PL10SimDem.ev$variable[PL10SimDem.ev$variable == 26] <- "Democratic President"
+# Final clean up
 PL10SimDem.ev$variable <- factor(PL10SimDem.ev$variable)
 PL10SimDem.ev$Congress <- "Dem. Congress"
 
-PL10SimRep.ev$variable[PL10SimRep.ev$variable == 25] <- "Republican President"
-PL10SimRep.ev$variable[PL10SimRep.ev$variable == 26] <- "Democratic President"
 PL10SimRep.ev$variable <- factor(PL10SimRep.ev$variable)
 PL10SimRep.ev$Congress <- "Rep. Congress"
 
