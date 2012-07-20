@@ -85,7 +85,7 @@ Federal Reserve staff create ``Green Book" forecasts\footnote{Green Book data ca
     ### Load data
 
     # Load data from GitHub
-    url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi.csv?login=christophergandrud&token=0f00c334700dda57eb08fdd1b3c1d17b"
+    url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi.csv"
     cpi.data <- getURL(url)
     cpi.data <- read.csv(textConnection(cpi.data))
 
@@ -292,7 +292,7 @@ In general there is very little difference in the coefficients estimated using O
     library(devtools)
     
     # Run main analysis source code
-    AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R?login=christophergandrud&token=357e2fc2fd554620c2f91d1ab5868fda"
+    AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
     source_url(AnalysisURL)
 
     # Local
@@ -309,7 +309,7 @@ In general there is very little difference in the coefficients estimated using O
     # source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
 
     # Create plots
-     CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R?login=christophergandrud&token=73557469821bb9725a06d78be0856aaf"
+     CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R"
     source_url(CoefPlotsURL)
 
 @
@@ -347,7 +347,8 @@ These analyses provide strong evidence that Federal Reserve staff overestimate t
 
 <<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=4, out.width='0.7\\linewidth'>>=
 
-source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ExpectedValuesPlot.R?login=christophergandrud&token=aaed13e7b37de3dfe2fd5efd28f4d3b6")
+URL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ExpectedValuesPlot.R"
+source_url(URL)
 
 @
     \end{center}
@@ -356,7 +357,7 @@ source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big this bias might be we simulated expected standardized forecast error for democratic and republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C6 from Table \ref{OutputBL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. On we expect that on average the Fed overestimates inflation by \Sexpr{format(mean(ModelParty.ev$value[ModelParty.ev$variable == "Dem"]*100), digits = 2)} percent. This compares to an average inflation error of \Sexpr{format(mean(ModelParty.ev$value[ModelParty.ev$variable == "Rep"]*100), digits = 2)} percent during Republican presidencies. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast error for democratic and republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C6 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. On we expect that on average the Fed overestimates inflation by \Sexpr{format(mean(ModelParty.ev$value[ModelParty.ev$variable == "Dem"]*100), digits = 2)} percent. This compares to an average inflation error of \Sexpr{format(mean(ModelParty.ev$value[ModelParty.ev$variable == "Rep"]*100), digits = 2)} percent during Republican presidencies. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
 
 The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to higher government expenditure that Democrats may be initiating.
 
@@ -366,20 +367,17 @@ Nonetheless, it seems that Federal Reserve staff may also overestimate the effec
 
 \paragraph{Partisan Control of Congress}
 
-Might Federal Reserve staff be taking into consideration not only the president's party identification, but also the partisan composition of Congress? There are at least three possible ways that Congressional party identification may effect forecast errors. 
+Might Federal Reserve staff be taking into consideration not only the president's party identification, but also the partisan composition of congress? There are at least three possible ways that congressional party identification may effect forecast errors. 
 
-The first is a simple circumstance where Federal Reserve staff with rational partisan expectations paid attention to the partisan control of a chamber of Congress {\emph{independent of}} the president's party identification.  For example, Fed staff could predict higher spending if Democrats control one of the houses of Congress even if they do not control the other house or the presidency compared to a situation where all parts of the executive and legislature were controlled by Republicans. This might lead to higher inflation error. We find no evidence for this across all of our datasets and parametric model specifications. 
+The first is a simple circumstance where Federal Reserve staff with rational partisan expectations paid attention to the partisan control of a chamber of Congress {\emph{independent of}} the president's party identification.  For example, Fed staff could predict higher spending if Democrats control one of the houses of congress even if they do not control the other house or the presidency compared to a situation where all parts of the executive and legislature were controlled by Republicans. This might lead to higher inflation error. We find no evidence for this across all of our datasets and parametric model specifications. 
 
 Though they make different predictions, both of the latter two ways that partisan control of Congress may affect inflation forecasts are through interactions with presidential party identification.
 
-The first interaction theory is that Federal Reserve staff with simple rational partisan expectations would presumably expect that a Democratic president would be able to get policies closer to their ideal point when there is a Congress with similar ideal preferences. If a Democratic president had chambers of Congress controlled by Democrats, presumably Federal Reserve staff would expect even higher fiscal expenditures and therefore even higher inflation. Conversely, Republican presidents with a Republican-controlled Congress may be even better at cutting spending, leading to lower inflation.
+The first interaction theory is that Federal Reserve staff with simple rational partisan expectations would presumably expect that a Democratic president would be able to get policies closer to their ideal point when there is a congress with similar ideal preferences. If a Democratic president had chambers of congress controlled by Democrats, presumably Federal Reserve staff would expect even higher fiscal expenditures and therefore even higher inflation. Conversely, Republican presidents with a Republican-controlled congress may be even better at cutting spending, leading to lower inflation.
 
 The second interaction hypothesis is that more nuanced and based on largely on Krause's \citeyearpar{Krause2000} work on the effect of partisan divisions and fiscal expenditures in the United Statues. Rather than seeing increasing deficits as a the result of partisan fragmentation, rather than similarity. He argued that there is a pro-deficit bias when there are divisions in the partisan control of the chambers of congress and presidency. Higher political conflict, he argues, ``results in equilibrium fiscal outcomes that favor greater spending and/or a willingness to lower taxes since politicians will exhibit a greater proclivity in providing voters with program benefits and to delay its payment" \citep[][542]{Krause2000}. Note that he is talking about deficits rather than expenditure--the latter, but not the former of which we find some evidence that Fed Staff use to overestimate inflation. Nonetheless, fragmentation, could push up not only deficits but also expenditure as politicians use both expenditure as well as tax cuts to appeal to voters. \textbf{This is weak}
 
-To examine these two possibilities we created parametric models with two-way and three-way interactions between presidential and congressional party identification.
-
-The interactions were generally statistically significant. To make substantive sense of these estimates we use simulations, as above, to find expected inflation forecast errors at various levels of the Presidential and Congressional party identification.  
-
+%%%%%%% President/Congress Interaction Plot %%%%%%%%
 \begin{figure}[t]
     \caption{Simulated Interactions between President Party ID and Congressional Party Control}
     \label{InterPlot}
@@ -387,17 +385,22 @@ The interactions were generally statistically significant. To make substantive s
 
 <<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=4, out.width='0.8\\linewidth'>>=
 
-    InterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresCongressInteractions.R?login=christophergandrud&token=44bbeb1d649a3fd6e6d69ac4d842c3ed"
+    InterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresCongressInteractions.R"
     source_url(InterURL)
     
 @
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{From an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C10 from Table \ref{OutputPL}. \\ The figures show 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for `Democratically controlled' congresses and 0.8 for `Republican controlled' congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+        {\scriptsize{From an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C10 from Table \ref{OutputPL}. The figure show 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
     \end{singlespace}
 \end{figure}
 
+To examine these two possibilities we created parametric models with two-way and three-way interactions between presidential and congressional party identification. All of the partisan interactions were generally statistically significant. To make substantive sense of these estimated interactions we use simulations, as above, to find expected inflation forecast errors at various levels of the presidential and congressional party identification. To highlight the findings, Figure \ref{InterPlot} shows the results of simulations where the levels of partisan convergence and divergence are at their most extreme: one party control of all bodies compared to different parties controlling the presidency and both houses of congress.\footnote{Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses.} 
+
+The first thing we should notice in Figure \ref{InterPlot} is how presidential partisan identification still seems to be driving the direction of the inflation forecast error: inflation is underestimated during Republican presidencies and overestimated during Democratic ones regardless of partisan control in congress. The estimated effect of congressional control is in the magnitude of the over or under estimates. In particular, inflation is very underestimated for Republican presidencies with Republican congresses. There may be an expectation among Fed Staff that these governments will cut expenditure much more than they actually do. This finding fits with the simple interaction hypothesis. Looking to the Democratic president side we have more mixed findings. Forecast error is slightly higher on average with Democratic presidencies and Republican congresses compared to when both are controlled by Democrats. This finding fits with a story where Fed Staff believe spending will be higher with a divided government. However the difference between the two means is small\footnote{There is a \Sexpr{format(mean(PL10Bound$value[PL10Bound$variable == "Democratic President" & PL10Bound$Congress == "Rep. Congress"] * 100) - mean(PL10Bound$value[PL10Bound$variable == "Democratic President" & PL10Bound$Congress == "Dem. Congress"] * 100), digits = 2)} percentage point difference between the two.} and there is considerable overlap in the two groups of simulation results.
+
+Despite some evidence for an interaction between congressional and presidential party identification, it is not clear at this time how these results can be consistently explained across Democratic and Republican presidencies. 
 
 \section*{Discussion: Do Fed Forecasts Have a Partisan Bias?}
 
@@ -411,8 +414,6 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
 \subsection*{Replication}
 
 This paper can be entirely replicated. All data, analysis source code, and markup files can be downloaded as a {\tt{.zip}} file from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}. 
-
-{\bf{Please Note:}} This link is not currently active because we are still using a private repository to host the paper. The public repository will be available soon.
 
 %%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
 
