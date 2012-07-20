@@ -19,15 +19,9 @@ ModelParty.sim <- sim(PB1, x = ModelParty)
 # Extract expected values from simulations
 ModelParty.ev <- ModelParty.sim$qi
 ModelParty.ev <-data.frame(ModelParty.ev$ev)
+names(ModelParty.ev) <- c("Rep", "Dem")
 ModelParty.ev <- melt(ModelParty.ev, measure = 1:2)
-
-# Remove 'X' from variable
-ModelParty.ev$variable <- as.numeric(gsub("X", "", ModelParty.ev$variable))
-
-# Clean up variable 
-ModelParty.ev$variable[ModelParty.ev$variable == 16] <- 0
-ModelParty.ev$variable[ModelParty.ev$variable == 17] <- 1
-ModelParty.ev$variable <- factor(ModelParty.ev$variable, labels = c("Rep", "Dem")) 
+ModelParty.ev$variable <- factor(ModelParty.ev$variable) 
 
 # Plot
 

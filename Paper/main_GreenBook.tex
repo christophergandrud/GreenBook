@@ -87,6 +87,7 @@
 \begin{document}
 
 
+
 \maketitle
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -322,7 +323,7 @@ These analyses provide strong evidence that Federal Reserve staff overestimate t
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{From a normal Bayesian linear regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputPL}. The figures show 1000 simulations per fitted value. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{From an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputPL}. \\ The figures show 1000 simulations per fitted value. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
@@ -336,7 +337,17 @@ Nonetheless, it seems that Federal Reserve staff may also overestimate the effec
 
 \paragraph{Partisan Control of Congress}
 
-Might Federal Reserve staff be taking into consideration not only the president's party identification, but also the partisan composition of Congress? Federal Reserve staff with rational partisan expectations would presumably expect that a Democratic president would be able to get policies closer to their ideal point when there is a Congress with similar ideal preferences. If a Democratic president had chambers of Congress controlled by Democrats, presumably Federal Reserve staff would expect even higher inflation. To examine this possibility we examined models with the following interactions:
+Might Federal Reserve staff be taking into consideration not only the president's party identification, but also the partisan composition of Congress? There are at least three possible ways that Congressional party identification may effect forecast errors. 
+
+The first is a simple circumstance where Federal Reserve staff with rational partisan expectations paid attention to the partisan control of a chamber of Congress {\emph{independent of}} the president's party identification.  For example, Fed staff could predict higher spending if Democrats control one of the houses of Congress even if they do not control the other house or the presidency compared to a situation where all parts of the executive and legislature were controlled by Republicans. This might lead to higher inflation error. We find no evidence for this across all of our datasets and parametric model specifications. This is not very surprising. Though veto players in the budget process, the each house of Congress is not individually able to significantly increase or decrease spending. \textbf{GET CITE, Maybe Ask Mark}
+
+Though they make different predictions, both of the latter two ways that partisan control of Congress may affect inflation forecasts are through interactions with presidential party identification.
+
+The first interaction theory is that Federal Reserve staff with simple rational partisan expectations would presumably expect that a Democratic president would be able to get policies closer to their ideal point when there is a Congress with similar ideal preferences. If a Democratic president had chambers of Congress controlled by Democrats, presumably Federal Reserve staff would expect even higher fiscal expenditures and therefore even higher inflation. Conversely, Republican presidents with a Republican-controlled Congress may be even better at cutting spending, leading to lower inflation.
+
+The second interaction hypothesis is that more nuanced and based on largely on Krause's \citeyearpar{Krause2000} work on the effect of partisan divisions and fiscal expenditures in the United Statues. Rather than seeing increasing deficits as a the result of partisan fragmentation, rather than similarity. 
+
+To examine these two possibilities we created parametric models with the following interactions:
 
 \begin{itemize}
     \item President party ID*House party ID
@@ -344,22 +355,23 @@ Might Federal Reserve staff be taking into consideration not only the president'
     \item President party ID*House party ID*Senate party ID     
 \end{itemize}
 
-The interactions were generally statistically significant. To make substantive sense of these estimates we used simulations, as above, to find expected inflation forecast errors at various levels of the Presidential and Congressional party ID variables.
+The interactions were generally statistically significant. To make substantive sense of these estimates we use simulations, as above, to find expected inflation forecast errors at various levels of the Presidential and Congressional party identification.  
 
 \begin{figure}[t]
-    \caption{Simulated Interactions between President Party ID and Congressional Chamber Party Composition}
-    \label{InteractionPlots}
+    \caption{Simulated Interactions between President Party ID and Congressional Party Control}
+    \label{InterPlot}
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/InterPlots} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/InterPlot} 
 \end{knitrout}
 
 
     \end{center}
+    \begin{singlespace}
+        {\scriptsize{From an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C10 from Table \ref{OutputPL}. \\ The figures show 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for `Democratically controlled' congresses and 0.8 for `Republican controlled' congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+    \end{singlespace}
 \end{figure}
-
-
 
 
 \section*{Discussion: Do Fed Forecasts Have a Partisan Bias?}
@@ -553,7 +565,7 @@ Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Thu Jul 19 17:22:33 2012
+% Fri Jul 20 10:37:52 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -588,7 +600,7 @@ Intercept & 3.71 & 0.95 & 1.87 & 3.71 & 5.59 \\
 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Thu Jul 19 17:22:33 2012
+% Fri Jul 20 10:37:57 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}

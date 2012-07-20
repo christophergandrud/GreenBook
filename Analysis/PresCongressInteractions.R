@@ -9,8 +9,8 @@ pres_party.r <- c(0, 1)
 house_dem_rep.r <- seq(0.87, 2.04, by = .01)
 
 # Set fitted values 
-PL10SetDem <- setx(PL10, pres_party = pres_party.r, house_dem_rep = 1.3, senate_dem_rep = 1.2)
-PL10SetRep <- setx(PL10, pres_party = pres_party.r, house_dem_rep = 0.9, senate_dem_rep = 0.9)
+PL10SetDem <- setx(PL10, pres_party = pres_party.r, house_dem_rep = 1.2, senate_dem_rep = 1.2)
+PL10SetRep <- setx(PL10, pres_party = pres_party.r, house_dem_rep = 0.8, senate_dem_rep = 0.8)
 
 # Simulate expected values.
 PL10SimDem <- sim(PL10, x = PL10SetDem)
@@ -51,7 +51,7 @@ PartyInteractionPlot <- ggplot(data = PL10Bound, aes(variable, value)) +
                                   xlab("") + ylab("Expected Standardized Forecast Error\n") +
                                   scale_color_manual(values = partisan.congress.colours, name = "") +
                                   guides(colour = guide_legend(override.aes = list(alpha = 1))) +
-                                  theme_bw()
+                                  theme_bw(base_size = 11)
                                   
 print(PartyInteractionPlot)
 
