@@ -139,8 +139,6 @@ We calculate {\bf{forecast error}} $E$ as the difference between the Green Book 
 %
 We put the error in terms of actual inflation to control for the fact that mean actual inflation varies considerably across different periods (see Figure \ref{absolute}). 
 
-\subsection{Forecasting \& Monetary Policymaking}
-
 %% Complete Subsection %%
 
 \subsection{Our Current Understanding of Fed Inflation Forecasting}
@@ -163,7 +161,6 @@ The Federal Reserve Board Global (FRB/Global) model's development began in 1993 
 The innovations in how the Federal Reserve Board generates estimates of future economic performance (including changes to how they incorporated the effects of expected Fed interest rate policies has XYZ implications for forecast errors. Most notably, the move to rational expectations ought to shrink errors relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. Thus, we may expect that forecast errors' absolute magnitude will be smaller after 1996 than in the earlier era.
 
 %Random thought: what if the models assume that voters have partisan expectations and behave according to those partisan characteristics. Then when the partisans fail to do so or when voters react to these as they should (by not reacting) this results in over or under-shooting inflation by the Fed, particularly under the early model?
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section 2: Partisan Biases in Fed Inflation Forecasts? %%%%%%%%%%%%%%%%%%%%
 \section{Partisan Biases in Fed Inflation Forecasts?}
