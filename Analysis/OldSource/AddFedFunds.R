@@ -8,28 +8,30 @@
 library(reshape)
 
 # Load data
-PastFunds <- read.csv("/Users/christophergandrud/Desktop/FRED_Raw_June_2012/FRED_FedFunds.csv")
+PresentFunds <- read.csv("/Users/christophergandrud/Desktop/FRED_Raw_June_2012/FRED_FedFunds.csv")
 
-# Standardise Quarter Variable
-
-PastFunds$Quarter <- gsub("-01-01", ".1", x = PastFunds$Quarter)
-PastFunds$Quarter <- gsub("-04-01", ".2", x = PastFunds$Quarter)
-PastFunds$Quarter <- gsub("-07-01", ".3", x = PastFunds$Quarter)
-PastFunds$Quarter <- gsub("-10-01", ".4", x = PastFunds$Quarter)
+# Standardise Quarter Variabl
+PresentFunds$Quarter <- gsub("-01-01", ".1", x = PresentFunds$Quarter)
+PresentFunds$Quarter <- gsub("-04-01", ".2", x = PresentFunds$Quarter)
+PresentFunds$Quarter <- gsub("-07-01", ".3", x = PresentFunds$Quarter)
+PresentFunds$Quarter <- gsub("-10-01", ".4", x = PresentFunds$Quarter)
 
 # Create Change variable
 # Quarter0 - Quarter-2
-FutureFunds <- data.frame(PastFunds[-1:-2, 2])
-  FutureFunds <- rename(FutureFunds, c(PastFunds..1..2..2. = "Future"))
+PastFunds <- data.frame(PresentFunds[-231:-232, 2])
+  PastFunds <- rename(PastFunds, c(PresentFunds..231..232..2. = "Past"))
 nothing <- data.frame(c(0, 0))
-  nothing <- rename(nothing, c(c.0..0. = "Future")) 
-FutureFunds <- rbind(FutureFunds, nothing)
+  nothing <- rename(nothing, c(c.0..0. = "Past")) 
+PastFunds <- rbind(nothing, PastFunds)
 
-Funds <- cbind(PastFunds, FutureFunds)
+Funds <- cbind(PresentFunds, PastFunds)
 
-Funds$FedFunds2qChange <- Funds$Future - Funds$FedFunds
+Funds$FedFunds2qChange <- Funds$FedFunds - Funds$Past
 
 Funds <- Funds[, c("Quarter", "FedFunds", "FedFunds2qChange")]
+
+# Remove first two quarters for missing data
+Funds <- Funds[-1:-2, ]
 
 # merge with cpi.data
 cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi.csv")
