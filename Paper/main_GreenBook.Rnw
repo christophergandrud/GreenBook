@@ -383,7 +383,7 @@ The second interaction hypothesis is that more nuanced and based on largely on K
 
 %%%%%%% President/Congress Interaction Plot %%%%%%%%
 \begin{figure}[t]
-    \caption{Simulated Interactions between President Party ID and Congressional Party Control}
+    \caption{Simulated Interactions between President Party ID and Congressional Party Controls}
     \label{InterPlot}
     \begin{center}
 
