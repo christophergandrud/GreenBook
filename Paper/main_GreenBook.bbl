@@ -1,0 +1,71 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Bartels}{1985}{Bartels1985}
+Bartels, Andrew~H. 1985.
+\newblock ``{Volker's Revolution at the Fed}.'' {\em Challenge} 28(4):35--42.
+
+\harvarditem{Br{\"u}ck \harvardand\ Stephan}{2006}{Bruck2006}
+Br{\"u}ck, Tilman \harvardand\ Andreas Stephan. 2006.
+\newblock ``{Do Eurozone Countries Cheat with their Budget Deficit
+  Forecasts?}'' {\em Kyklos} 59(1):3--15.
+
+\harvarditem{Clark \harvardand\ Arel-Bundock}{2011}{Clark2011}
+Clark, William \harvardand\ Vincent Arel-Bundock. 2011.
+\newblock ``The Fed May be Politically Independent, But it is Not Politically
+  Indifferent.''.
+
+\harvarditem{Cochran \harvardand\ Rubin}{1973}{Cochran1973}
+Cochran, William~G \harvardand\ Donald~B Rubin. 1973.
+\newblock ``{Controlling Bias in Observational Studies: A Review}.'' {\em
+  Sankhy{\=a}: The Indian Journal of Statistics} 35(4):417--446.
+
+\harvarditem{Diamond \harvardand\ Sekhon}{2012}{Diamond2012}
+Diamond, Alexis \harvardand\ Jasjeet~S Sekhon. 2012.
+\newblock ``{Genetic Matching for Estimating Causal Effects: A General
+  Multivariate Matching Method for Achieving Balance in Observational
+  Studies}.''.
+
+\harvarditem{Goodrich \harvardand\ Lu}{2007}{Goodrich2007}
+Goodrich, Ben \harvardand\ Ying Lu. 2007.
+\newblock {\em normal.bayes: Bayesian Normal Linear Regression}.
+\newline\harvardurl{\url{http://gking.harvard.edu/zelig}}
+
+\harvarditem[Ho et~al.]{Ho, Imai, King \harvardand\ Stuart}{2007}{Ho2007}
+Ho, Daniel~E, Kosuke Imai, Gary King \harvardand\ Elizabeth~A Stuart. 2007.
+\newblock ``{Matching as Nonparametric Preprocessing for Reducing Model
+  Dependence in Parametric Causal Inference}.'' {\em Political Analysis}
+  15:199--236.
+
+\harvarditem[Ho et~al.]{Ho, Imai, King \harvardand\ Stuart}{2011}{matchit2011}
+Ho, Daniel~E., Kosuke Imai, Gary King \harvardand\ Elizabeth~A. Stuart. 2011.
+\newblock ``{MatchIt}: Nonparametric Preprocessing for Parametric Causal
+  Inference.'' {\em Journal of Statistical Software} 42(8):1--28.
+\newline\harvardurl{\url{http://www.jstatsoft.org/v42/i08/}}
+
+\harvarditem[Imai, King \harvardand\ Lau]{Imai, King \harvardand\
+  Lau}{2008}{Imai2008}
+Imai, Kosuke, Gary King \harvardand\ Olivia Lau. 2008.
+\newblock ``{Toward A Common Framework for Statistical Analysis and
+  Development}.'' {\em Journal of Computational and Graphical Statistics}
+  17(4):1--22.
+
+\harvarditem[Imai, King \harvardand\ Lau]{Imai, King \harvardand\
+  Lau}{2012}{Zelig2012}
+Imai, Kosuke, Gary King \harvardand\ Olivia Lau. 2012.
+\newblock {\em Zelig: Everyone's Statistical Software}.
+\newblock R package version 3.5.5.
+\newline\harvardurl{\url{http://CRAN.R-project.org/package=Zelig}}
+
+\harvarditem{Krause}{2000}{Krause2000}
+Krause, George~A. 2000.
+\newblock ``{Partisan and Ideological Sources of Fiscal Deficits in the United
+  States}.'' {\em American Journal of Political Science} 44(3):541--559.
+
+\harvarditem{Xie}{2012}{knitr2012}
+Xie, Yihui. 2012.
+\newblock {\em knitr: A general-purpose package for dynamic report generation
+  in R}.
+\newblock R package version 0.7.
+\newline\harvardurl{\url{http://CRAN.R-project.org/package=knitr}}
+
+\end{thebibliography}
