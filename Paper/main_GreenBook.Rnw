@@ -301,7 +301,7 @@ In this section we present results from multiple regression model specifications
 
 In general there is very little difference in the coefficients estimated using OLS and Bayesian linear regression (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
 
-<<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide', cache=TRUE>>=
+<<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
     library(devtools)
     
     # Run main analysis source code
@@ -318,7 +318,6 @@ In general there is very little difference in the coefficients estimated using O
     \begin{center}
 
 <<CoefComparePlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
-
     # source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
 
     # Create plots
