@@ -88,8 +88,8 @@ estimates <- subset(estimates, var != c("sigma2"))
 ##### Create comparison plot
 
 cols <- c("#67A380", "#696969")
-name.break <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "GlobalModelAfter 1996", "senate_dem_rep")
-labels.break <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Potential GDP (%GDP)", "Global Model", "Prop. Senate Dem.")
+name.break <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "GlobalModelAfter 1996", "senate_dem_rep")
+labels.break <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Potential GDP (%GDP)", "Discount Rate Change", "Global Model", "Prop. Senate Dem.")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = match)) +
                       facet_grid(~ method) + 
