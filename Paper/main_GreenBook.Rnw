@@ -1015,7 +1015,7 @@ This paper can be entirely replicated from data, analysis source code, and marku
     CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Greenspan", "Martin", "Miller", "Volcker", "FRB/GlobalModel", "Pres Party ID*House", "Pres Party ID*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, NL10, NL11, N12,
+    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12,
               digits = 1, order = , 
               Sweave = TRUE, 
               stars = "default", 
