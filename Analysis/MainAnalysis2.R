@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 18 July 2012
+# 27 July 2012
 ###############
 
 
@@ -9,10 +9,20 @@ library(MatchIt)
 library(Zelig)
 library(stats)
 
+# Add Fed Chair variable
+cpi.data$Chair[cpi.data$Quarter > 1987.3] <-  "Greenspan"
+cpi.data$Chair[cpi.data$Quarter <= 1987.3] <- "Volcker"
+cpi.data$Chair[cpi.data$Quarter <= 1979.3] <- "Miller"
+cpi.data$Chair[cpi.data$Quarter <= 1978.1] <- "Burns"
+cpi.data$Chair[cpi.data$Quarter <= 1970.1] <- "Martin"
 
 # Subset for complete (nonmissing) values
 # matchit requires data sets to have no missing values
-vars <- c("ElectionPeriod", "pres_party", "error.prop.deflator.q2", "time_to_election", "recession", "senate_dem_rep", "house_dem_rep", "DebtGDP", "ExpenditureGDP", "PotentialGDP", "GlobalModel")  
+vars <- c("Quarter", "ElectionPeriod", "pres_party", "error.prop.deflator.q2", "time_to_election",
+          "recession", "senate_dem_rep", "house_dem_rep", "DebtGDP", "ExpenditureGDP",
+          "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange", "DiscountRate",
+          "DiscountRate2qChange"
+          )  
 cpi.complete <- cpi.data[complete.cases(cpi.data[vars]),]
 cpi.complete <- cpi.complete[vars]
 
