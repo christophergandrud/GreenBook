@@ -21,7 +21,7 @@ cpi.data$Chair[cpi.data$Quarter <= 1970.1] <- "Martin"
 vars <- c("Quarter", "ElectionPeriod", "pres_party", "error.prop.deflator.q2", "time_to_election",
           "recession", "senate_dem_rep", "house_dem_rep", "DebtGDP", "ExpenditureGDP",
           "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange", "DiscountRate",
-          "DiscountRate2qChange"
+          "DiscountRate2qChange", "Chair"
           )  
 cpi.complete <- cpi.data[complete.cases(cpi.data[vars]),]
 cpi.complete <- cpi.complete[vars]
@@ -29,10 +29,10 @@ cpi.complete <- cpi.complete[vars]
 #### Matching Model ####
 
 # Elections
-cpi.matched.election <- matchit(ElectionPeriod ~ recession + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel, data = cpi.complete, method = "genetic")
+cpi.matched.election <- matchit(ElectionPeriod ~ recession + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange, data = cpi.complete, method = "genetic", pop.size = 161)
 
 # Party 
-cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel, data = cpi.complete, method = "genetic")
+cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange, data = cpi.complete, method = "genetic", pop.size = 161)
 
 # Diagnostics for Covariate Balance
 # summary(cpi.matched.election)
@@ -49,28 +49,27 @@ cpi.Mdf.party <- match.data(cpi.matched.party)
 ################### Parametric Models ################
 
 ###### Non-matched (N) ######
-
 # Least Squares
 
-NL1 <- zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL1 <- zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
-NL2 <- zelig(error.prop.deflator.q2 ~ time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL2 <- zelig(error.prop.deflator.q2 ~ time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
 NL3 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
 
-NL4 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL4 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
-NL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
-NL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
-NL7 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "ls", data = cpi.data)
+NL7 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.data)
 
-NL8 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + DebtGDP + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL8 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + DebtGDP + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
-NL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL9 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
-NL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.data)
+NL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data)
 
 NL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.data)
 
@@ -78,7 +77,7 @@ NL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, 
 
 # Least Squares
 
-EL1 <- zelig(error.prop.deflator.q2 ~ DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
+EL1 <- zelig(error.prop.deflator.q2 ~ DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.Mdf.election)
 
 EL2 <- zelig(error.prop.deflator.q2 ~ time_to_election + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.election)
 
@@ -127,13 +126,7 @@ PL10 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep +
 PL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.Mdf.party)
 
 ##### Normal Bayes, Not Matched (NB) #####
-
-# Normal Bayes
-
 NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "normal.bayes", data = cpi.data)
 
 #### Normal Bayes, Matched (MP) ####
-
-# Normal Bayes
-
 PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party)

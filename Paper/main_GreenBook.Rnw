@@ -416,7 +416,7 @@ MAYBE TALK ABOUT HOW IT IS STRANGE THAT ACTORS WITH ``RATIONAL" PARTISAN EXPECTA
 
 \subsection*{Replication}
 
-This paper can be entirely replicated. All data, analysis source code, and markup files can be downloaded as a {\tt{.zip}} file from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}. 
+This paper can be entirely replicated from data, analysis source code, and markup files available as a {\tt{.zip}} file downloadable from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}. 
 
 %%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
 

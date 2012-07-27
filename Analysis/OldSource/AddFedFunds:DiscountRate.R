@@ -28,9 +28,11 @@ PastFunds <- rbind(nothing, PastFunds)
 
 Funds <- cbind(PresentFunds, PastFunds)
 
-Funds$FedFunds2qChange <- Funds$FedFunds - Funds$Past
+# Create relative change variable
+Funds$FedFunds2qChange <- (Funds$FedFunds - Funds$Past)/Funds$FedFunds
 
 Funds <- Funds[, c("Quarter", "FedFunds", "FedFunds2qChange")]
+Funds$FedFunds2qChange <- round(Funds$FedFunds2qChange, digits = 2)
 
 # Remove first two quarters for missing data
 Funds <- Funds[-1:-2, ]
@@ -39,9 +41,6 @@ Funds <- Funds[-1:-2, ]
 cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi.csv")
 
 cpi.data <- merge(cpi.data, Funds)
-
-write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi.csv", sep = ",")
-
 
 ##### Discount/Primary Rate #####
 # Data is from the FRED system at the Federal Reserve Bank of St. Louis: http://research.stlouisfed.org/fred2/
@@ -86,7 +85,9 @@ PastRate <- rbind(nothing, PastRate)
 
 Rate <- cbind(discountRate, PastRate)
 
-Rate$DiscountRate2qChange <- Rate$DiscountRate - Rate$Past
+#Create relative change variable
+Rate$DiscountRate2qChange <- (Rate$DiscountRate - Rate$Past)/Rate$DiscountRate
+
 Rate$DiscountRate2qChange <- round(Rate$DiscountRate2qChange, digits = 2)
 Rate$DiscountRate <- round(Rate$DiscountRate, digits = 2)
 
@@ -97,8 +98,6 @@ Rate <- Rate[, c("Quarter", "DiscountRate", "DiscountRate2qChange")]
 Rate <- Rate[-1:-2, ]
 
 # merge with cpi.data
-cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi.csv")
-
 cpi.data <- merge(cpi.data, Rate)
 
 write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi.csv", sep = ",")
