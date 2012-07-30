@@ -46,6 +46,8 @@ Recent work argues that the Federal Reserve is not politically indifferent \cite
 
 The preference arguments assume that a conservative central banker will prefer the election of politicians who hold more similar inflationary preferences (those with a stronger preference for low inflation). In this US, this would lead to an assumption that the Federal Reserve would implement policies that supported the electoral prospects of Republican incumbents and harm the electoral prospects of Democratic incumbents \cite{Clark2011,Hakes1988,Tootell1996}.
 
+The rational partisan expectations literature assumes that central bankers do not have an innate preference for one party over another, but instead expect Democrats and Republicans to behave differently in office. It is these behavioral expectations that would lead to different monetary policy outcomes under Democratic and Republican presidencies with the former engaging in more expansionary and inflationary policies than the latter. In order to stave off a rise in inflation under a Democratic presidency the Fed would tighten monetary policy (raise interest rates or reduce the money supply); because Republicans expected to prefer low inflation, they will pursue low inflation policies and so the FOMC can accommodate the President's policies without fear of stoking inflation. This argument is again based on the assumed preferences of partisans, but does not require the FOMC to be politically biased as the former does. 
+
 \end{abstract}
 
 \begin{description}
