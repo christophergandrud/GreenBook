@@ -1,0 +1,117 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Bartels}{1985}{Bartels1985}
+Bartels, Andrew~H. 1985.
+\newblock ``{Volker's Revolution at the Fed}.'' {\em Challenge} 28(4):35--42.
+
+\harvarditem{Br{\"u}ck \harvardand\ Stephan}{2006}{Bruck2006}
+Br{\"u}ck, Tilman \harvardand\ Andreas Stephan. 2006.
+\newblock ``{Do Eurozone Countries Cheat with their Budget Deficit
+  Forecasts?}'' {\em Kyklos} 59(1):3--15.
+
+\harvarditem{Capistr\'{a}n}{N.d.}{Capistran2006}
+Capistr\'{a}n, Carlos. N.d.
+\newblock ``Bias in Federal Reserve Inflation Forecasts: Is the Federal Reserve
+  Irrational or Just Cautious?'' {\em Banco de M\'{e}xico Working Papers No.
+  2006-14}. Forthcoming.
+
+\harvarditem{Clark \harvardand\ Arel-Bundock}{2011}{Clark2011}
+Clark, William \harvardand\ Vincent Arel-Bundock. 2011.
+\newblock ``The Fed May be Politically Independent, But it is Not Politically
+  Indifferent.''.
+
+\harvarditem{Cochran \harvardand\ Rubin}{1973}{Cochran1973}
+Cochran, William~G \harvardand\ Donald~B Rubin. 1973.
+\newblock ``{Controlling Bias in Observational Studies: A Review}.'' {\em
+  Sankhy{\=a}: The Indian Journal of Statistics} 35(4):417--446.
+
+\harvarditem{Diamond \harvardand\ Sekhon}{2012}{Diamond2012}
+Diamond, Alexis \harvardand\ Jasjeet~S Sekhon. 2012.
+\newblock ``{Genetic Matching for Estimating Causal Effects: A General
+  Multivariate Matching Method for Achieving Balance in Observational
+  Studies}.''.
+
+\harvarditem{Drake}{1993}{Drake1993}
+Drake, Christiana. 1993.
+\newblock ``{Effects of Misspecification of the Propensity Score on Estimates
+  of Treatment Effect}.'' {\em Biometrics} 49(4):1231--1236.
+
+\harvarditem{Goodrich \harvardand\ Lu}{2007}{Goodrich2007}
+Goodrich, Ben \harvardand\ Ying Lu. 2007.
+\newblock {\em normal.bayes: Bayesian Normal Linear Regression}.
+\newline\harvardurl{\url{http://gking.harvard.edu/zelig}}
+
+\harvarditem{Hakes}{1988}{Hakes1988}
+Hakes, David~R. 1988.
+\newblock ``Monetary policy and presidential elections: A nonpartisan cycle.''
+  {\em Public Choice} 57:175--182.
+
+\harvarditem{HIbbs}{1994}{Hibbs1994}
+HIbbs, Douglas~A. 1994.
+\newblock ``The partisan model of macroeconomic cycles: More theory and
+  evidence for the United States.'' {\em Economics and Politics} 6:1--23.
+
+\harvarditem[Ho et~al.]{Ho, Imai, King \harvardand\ Stuart}{2007}{Ho2007}
+Ho, Daniel~E, Kosuke Imai, Gary King \harvardand\ Elizabeth~A Stuart. 2007.
+\newblock ``{Matching as Nonparametric Preprocessing for Reducing Model
+  Dependence in Parametric Causal Inference}.'' {\em Political Analysis}
+  15:199--236.
+
+\harvarditem[Ho et~al.]{Ho, Imai, King \harvardand\ Stuart}{2011}{matchit2011}
+Ho, Daniel~E., Kosuke Imai, Gary King \harvardand\ Elizabeth~A. Stuart. 2011.
+\newblock ``{MatchIt}: Nonparametric Preprocessing for Parametric Causal
+  Inference.'' {\em Journal of Statistical Software} 42(8):1--28.
+\newline\harvardurl{\url{http://www.jstatsoft.org/v42/i08/}}
+
+\harvarditem[Imai, King \harvardand\ Lau]{Imai, King \harvardand\
+  Lau}{2008}{Imai2008}
+Imai, Kosuke, Gary King \harvardand\ Olivia Lau. 2008.
+\newblock ``{Toward A Common Framework for Statistical Analysis and
+  Development}.'' {\em Journal of Computational and Graphical Statistics}
+  17(4):1--22.
+
+\harvarditem[Imai, King \harvardand\ Lau]{Imai, King \harvardand\
+  Lau}{2012}{Zelig2012}
+Imai, Kosuke, Gary King \harvardand\ Olivia Lau. 2012.
+\newblock {\em Zelig: Everyone's Statistical Software}.
+\newblock R package version 3.5.5.
+\newline\harvardurl{\url{http://CRAN.R-project.org/package=Zelig}}
+
+\harvarditem{Karamouzis \harvardand\ Lombra}{1989}{Karamouzis1989}
+Karamouzis, Nicholas \harvardand\ Raymond Lombra. 1989.
+\newblock ``Federal Reserve Policymaking: An Overview of the Policy Process.''
+  {\em Carnegie-Rochester Conference Series on Public Policy} 30:7--62.
+
+\harvarditem{Krause}{2000}{Krause2000}
+Krause, George~A. 2000.
+\newblock ``{Partisan and Ideological Sources of Fiscal Deficits in the United
+  States}.'' {\em American Journal of Political Science} 44(3):541--559.
+
+\harvarditem{Romer \harvardand\ Romer}{N.d.}{Romer2000}
+Romer, Christina~D. \harvardand\ David~H. Romer. N.d.
+\newblock ``Federal Reserve Information and the Behavior of Interest Rates.''
+  {\em American Economic Review}. Forthcoming.
+
+\harvarditem{Sieg}{1997}{Sieg1997}
+Sieg, Gernot. 1997.
+\newblock ``A model of partisan central banks and opportunistic political
+  business cycles.'' {\em European Journal of Political Economy} 13:503--516.
+
+\harvarditem{Taylor}{1997}{Taylor1997}
+Taylor, John~B. 1997.
+\newblock ``Econometric models and the monetary policy process: A comment.''
+  {\em Carnegie-Rochester Conference Series on Public Policy} 47:39--42.
+
+\harvarditem{Tootell}{1996}{Tootell1996}
+Tootell, Geoffrey M.~B. 1996.
+\newblock ``Appointment Procedures and FOMC Voting Behavior.'' {\em Southern
+  Economic Journal} 63:191--204.
+
+\harvarditem{Xie}{2012}{knitr2012}
+Xie, Yihui. 2012.
+\newblock {\em knitr: A general-purpose package for dynamic report generation
+  in R}.
+\newblock R package version 0.7.
+\newline\harvardurl{\url{http://CRAN.R-project.org/package=knitr}}
+
+\end{thebibliography}
