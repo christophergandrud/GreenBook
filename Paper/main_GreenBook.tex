@@ -144,7 +144,7 @@ New models of the American economy's near-term trajectory replaced the MPS in 19
 
 The Federal Reserve Board Global (FRB/Global) model's development began in 1993 and had replaced the MCM by 1996. The FRB/Global model links the behavioral equations of FRB/US with approximately 200 behavioral equations representing the other 11 regions of the model. Anticipated values of future variables directly influence interest and exchange rates, components of aggregate demand, wages and prices.
 
-\subsection{Forecast Accuracy}
+\subsection{Forecast Accuracy}\label{ForecastAcc}
 
 How accurate are these forecasts? We measure accuracy as the forecast error,  calculating {\bf{forecast error}} $E$ as the difference between the Green Book inflation forecast $F$ for a given quarter $q$ and actual inflation $I$ as a proportion of actual inflation
 %
@@ -222,13 +222,84 @@ Before digging into the partisan explanations of forecast errors, which would la
 %Random thought: what if the models assume that voters have partisan expectations and behave according to those partisan characteristics. Then when the partisans fail to do so or when voters react to these as they should (by not reacting) this results in over or under-shooting inflation by the Fed, particularly under the early model?
 
 \subsection{Partisan Biases \& Accuracy}
+
 There is an extensive literature looking for partisan effects in monetary policy, but no studies examining the impact of presidential partisanship in predictions of inflation. Studies looking for evidence of partisan preferences manifesting themselves in the monetary policies chosen by the FOMC. There are two essential reasons that partisan effects would be found in policy: either a preference for one party over another by members of the FOMC or an expectation that the parties will engage in systematically different policies that will influence inflation, and so the Fed supports more preferred policies and attempts to inhibit less preferred ones. 
 
 The preference arguments assume that a conservative central banker will prefer the election of politicians who hold more similar inflationary preferences (those with a stronger preference for low inflation). In this US, this would lead to an assumption that the Federal Reserve would implement policies that supported the electoral prospects of Republican incumbents and harm the electoral prospects of Democratic incumbents \citep{Clark2011,Hakes1988,Sieg1997,Tootell1996}.
 
 The rational partisan expectations literature assumes that central bankers do not have an innate preference for one party over another, but instead expect Democrats and Republicans to behave differently in office \cite{Hibbs1994}. It is these behavioral expectations that would lead to different monetary policy outcomes under Democratic and Republican presidencies with the former engaging in more expansionary and inflationary policies than the latter. In order to stave off a rise in inflation under a Democratic presidency the Fed would tighten monetary policy (raise interest rates or reduce the money supply); because Republicans expected to prefer low inflation, they will pursue low inflation policies and so the FOMC can accommodate the President's policies without fear of stoking inflation. This argument is again based on the assumed preferences of partisans, but does not require the FOMC to be politically biased as the former does. 
 
-Arguments similar to those in the literature on partisan monetary cycles can similarly predict differences in inflation forecasts. We present three theoretical arguments about how inflation expectations would differ by the President's party: the partisan preference theory, the monetary expectations theory, and the partisan heuristics theory. Of the three, we find the partisan heuristics theory to be both most consistent with the data and the most reasonable.
+Arguments similar to those in the literature on partisan monetary cycles can similarly predict differences in inflation forecasts. We present three theoretical arguments about how inflation expectations would differ by the President's party: the partisan preference theory, the monetary expectations theory, and the partisan heuristics theory (see Figure \ref{ExpectGraphs} for an illustration of the theories inflation error predictions). Of the three, we find the partisan heuristics theory to be both most consistent with the data and the most reasonable.
+
+
+
+
+\begin{figure}
+  \caption{Stylized Inflation Error Predictions}
+  \label{ExpectGraphs}
+  \begin{center}
+
+    \vspace{0.25cm}
+
+    \tikzstyle{bagMain} = [text width = 5cm]
+    \tikzstyle{bagDem} = [text = blue]
+    \tikzstyle{bagRep} = [text = red]
+
+\begin{tikzpicture}
+
+  %%%% Partisan Preferences
+  \node (PP) at (-7, 5) [bagMain]{{\bf{Partisan Preferences}}};
+  \node (E) at (-10.5, 3.25) [bagMain, rotate=90]{Forecast Error};
+  \node (T) at (-7.5, -0.5) [bagMain]{Duration of Pres. Term};
+  
+  \draw (-10, 0) -- (-6, 0);
+  \draw (-10, 0) -- (-10, 4);
+  
+  \draw[color=red, opacity=0.5] (-9.5, 2) -- (-7.5, 2); 
+  \draw[color=blue, opacity=0.5] (-9.5, 2) -- (-7.5, 2); 
+
+  \draw[color=red, opacity=0.5] (-7.5, 2) -- (-6.5, 1); 
+  \draw[color=blue, opacity=0.5] (-7.5, 2) -- (-6.5, 3); 
+
+  \node (R1) at (-6.5, 0.5) [bagRep]{Rep.};
+  \node (D1) at (-6.5, 3.5) [bagDem]{Dem.};
+
+  
+  %%%% Monetary Expectations
+  \node (PP) at (-2, 5) [bagMain]{{\bf{Monetary Expectations}}};
+  
+  \draw (-5, 0) -- (-1, 0);
+  \draw (-5, 0) -- (-5, 4);
+  
+  \draw[color=red, opacity=0.5] (-4.5, 2) -- (-2.5, 2); 
+  \draw[color=blue, opacity=0.5] (-4.5, 2) -- (-2.5, 2); 
+
+  \draw[color=blue, opacity=0.5] (-2.5, 2) -- (-1.5, 1); 
+  \draw[color=red, opacity=0.5] (-2.5, 2) -- (-1.5, 3); 
+
+  \node (D2) at (-1.5, 0.5) [bagDem]{Dem.};
+  \node (R2) at (-1.5, 3.5) [bagRep]{Rep.};
+  
+  
+  %%%% Partisan Heuristics
+  
+  \node (PP) at (3, 5) [bagMain]{{\bf{Partisan Heuristics}}};
+  
+  \draw (0, 0) -- (4, 0);
+  \draw (0, 0) -- (0, 4);
+  
+  \draw[color=blue, opacity=0.5] (0.5, 3) -- (4, 3); 
+  \draw[color=red, opacity=0.5] (0.5, 1) -- (4, 1); 
+
+  \node (D3) at (3.5, 3.5) [bagDem]{Dem.};
+  \node (R3) at (3.5, 0.5) [bagRep]{Rep.};
+
+  \end{tikzpicture}
+  \end{center}
+\end{figure}
+
+
+
 
 The {\bf{partisan preference theory}} is similar to the partisan preference model of monetary policy described above. This theory assumes that Fed staff have a preference for more inflation averse politicians to control the executive and so produce inflation forecasts that would justify the implementation of easy monetary policy under Republican administrations and tight money under Democratic administrations, particularly as presidential elections approach. The FOMC, choosing policy based on these forecasts would then implement monetary policies to optimize its utility function, which would not need to depend upon presidential partisanship. This implies that inflation realized inflation would be higher than forecast during Republican presidencies and lower than forecast for Democratic presidencies. These effects would be particularly pronounced in the quarters running-up to elections as the Fed staff attempts to help its favored political party. Further, accounting for actual changes in monetary policy ought to increase the magnitude of partisan effects. This is because predictions of inflation during Republican presidencies, for example, will be lower than what the staff actually expects. If looser monetary policy is implemented in response to these low inflation forecasts than would have been chosen under the staff's true inflationary expectations, inflation will actually be higher than the staff's original ``true" forecast.
 
@@ -272,9 +343,9 @@ where $T_{q}$ is the treatment for quarter $q$ and $X$ is a vector of covariates
 
 \subsection{Variables}
 
-In Section 1 we discussed our dependent variable--inflation forecast errors. We are interested in seeing how US presidents' partisan identity and the existence of an upcoming presidential election affect these errors. So, we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when they are a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or the quarter before.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$ and $q_{e-1}$ election quarters.}
+In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identity and/or the existence of an upcoming presidential election affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when they are a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or the quarter before.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$ and $q_{e-1}$ election quarters.}
 
-To further examine whether or not Federal Reserve staff were taking into consideration an electoral business cycle, we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections were coded as 0. 
+To further examine whether or not Federal Reserve staff were taking into consideration an electoral business cycle either due to a partisan preference or , we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections were coded as 0. 
 
 The United States president does not set the level of government expenditure--one of the main non-monetary policy causes of inflation--by themselves. Instead, the president is constrained by the two houses of Congress. To examine whether or not Federal Reserve staff are taking into consideration the partisan composition of Congress as well as the president's party identification, we include variables of {\bf{Democratic legislators as a proportion of Republican legislators}} in the House of Representatives and the Senate. Data on the number of legislators with Republican and Democratic party IDs was found at infoplease.\footnote{See {\url{http://www.infoplease.com/ipa/A0774721.html}}. Accessed May 2012.} 
 
@@ -292,7 +363,7 @@ Green Book forecasts are based on the assumption that monetary policy will not c
 
 To examine if Federal Reserve inflation forecaster errors are affected by actual levels of government expenditure we included the percentage of {\bf{current government expenditure to GDP}} and {\bf{government debt to GDP}}. 
 
-To examine how broader economic factors may be related to forecast errors we include variables of {\bf{GDP output gaps}} and {\bf{recessions}}. The former is simply potential GDP as a percentage of real GDP. The latter is a dummy variable for whether or not the United States was in a recession. All of these variables are from the FRED database (Accessed June 2012) and are in nominal terms. 
+To examine how broader economic factors may be related to forecast errors we include variables of {\bf{GDP output gaps}} and {\bf{recessions}}. The former is simply potential GDP as a percentage of real GDP. The latter is a dummy variable for whether or not the United States was in a recession. All of these variables are from the FRED database\footnote{Accessed June 2012.} and are in nominal terms. 
 
 Finally, we include a variable for the sitting Federal Reserve Board Chair.\footnote{Chairs for the years in our analysis are William McChesney Martin, Jr., Arthur Burns, G. William Miller, Paul Volcker, and Alan Greenspan.}
 
@@ -599,7 +670,7 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Tue Jul 31 13:48:25 2012
+% Tue Jul 31 15:38:11 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -635,7 +706,7 @@ Intercept & 4.60 & 1.00 & 2.66 & 4.59 & 6.57 \\
 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Tue Jul 31 13:48:25 2012
+% Tue Jul 31 15:38:11 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}
