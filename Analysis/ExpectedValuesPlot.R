@@ -1,8 +1,8 @@
 ################
 # Comparative Expected Values of Inflation Error with Democratic and Republican Presidents 
-# using results from matched data where pres_party is the treatment variable and normal.bayes is the parametric model (PB1 from MainAnalysis2.R)
+# using results from matched data where pres_party is the treatment variable and ls is the parametric model (PL8 from MainAnalysis2.R)
 # Christopher Gandrud
-# Updated 10 July 2012
+# Updated 31 July 2012
 ################
 
 # requires Zelig, reshape2, ggplot2
@@ -11,10 +11,10 @@
 pres_party.r <- c(0, 1)
 
 # Set fitted values, all variables other than pres_party set to their means
-ModelParty <- setx(PB1, pres_party = pres_party.r)
+ModelParty <- setx(PL8, pres_party = pres_party.r)
 
 # Simulate quantities of interest
-ModelParty.sim <- sim(PB1, x = ModelParty)
+ModelParty.sim <- sim(PL8, x = ModelParty)
 
 # Extract expected values from simulations
 ModelParty.ev <- ModelParty.sim$qi

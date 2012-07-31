@@ -11,38 +11,38 @@ library(reshape)
 
 ### LS 
 # Extract and melt quantiles for marginal posterior distributions (not matched data set)
-NL7.cat <- confint(NL7)
-NL7.cat.sum <- as.data.frame(NL7.cat)
-NL7.cat.sum$var <- rownames(NL7.cat.sum)
+NL8.cat <- confint(NL8)
+NL8.cat.sum <- as.data.frame(NL8.cat)
+NL8.cat.sum$var <- rownames(NL8.cat.sum)
 
-NL7.lower.molten <- melt(NL7.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
-NL7.lower.molten <- rename(NL7.lower.molten, c(value = "lower"))
-NL7.lower.molten <- NL7.lower.molten[, -2]
+NL8.lower.molten <- melt(NL8.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
+NL8.lower.molten <- rename(NL8.lower.molten, c(value = "lower"))
+NL8.lower.molten <- NL8.lower.molten[, -2]
 
-NL7.upper.molten <- melt(NL7.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
-NL7.upper.molten <- rename(NL7.upper.molten, c(value = "upper"))
-NL7.upper.molten <- NL7.upper.molten[, -2]
+NL8.upper.molten <- melt(NL8.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
+NL8.upper.molten <- rename(NL8.upper.molten, c(value = "upper"))
+NL8.upper.molten <- NL8.upper.molten[, -2]
 
-NL7.molten <- merge(NL7.lower.molten, NL7.upper.molten)
-NL7.molten$match <- "Not Matched"
+NL8.molten <- merge(NL8.lower.molten, NL8.upper.molten)
+NL8.molten$match <- "Not Matched"
 
 # Extract and melt quantiles for marginal posterior distributions (matched data set)
-PL7.cat <- confint(PL7)
-PL7.cat.sum <- as.data.frame(PL7.cat)
-PL7.cat.sum$var <- rownames(PL7.cat.sum)
+PL8.cat <- confint(PL8)
+PL8.cat.sum <- as.data.frame(PL8.cat)
+PL8.cat.sum$var <- rownames(PL8.cat.sum)
 
-PL7.lower.molten <- melt(PL7.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
-PL7.lower.molten <- rename(PL7.lower.molten, c(value = "lower"))
-PL7.lower.molten <- PL7.lower.molten[, -2]
+PL8.lower.molten <- melt(PL8.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
+PL8.lower.molten <- rename(PL8.lower.molten, c(value = "lower"))
+PL8.lower.molten <- PL8.lower.molten[, -2]
 
-PL7.upper.molten <- melt(PL7.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
-PL7.upper.molten <- rename(PL7.upper.molten, c(value = "upper"))
-PL7.upper.molten <- PL7.upper.molten[, -2]
+PL8.upper.molten <- melt(PL8.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
+PL8.upper.molten <- rename(PL8.upper.molten, c(value = "upper"))
+PL8.upper.molten <- PL8.upper.molten[, -2]
 
-PL7.molten <- merge(PL7.lower.molten, PL7.upper.molten)
-PL7.molten$match <- "Matched"
+PL8.molten <- merge(PL8.lower.molten, PL8.upper.molten)
+PL8.molten$match <- "Matched"
 
-estimates.ls <- rbind(NL7.molten, PL7.molten)
+estimates.ls <- rbind(NL8.molten, PL8.molten)
 estimates.ls$method <- "OLS"
 
 

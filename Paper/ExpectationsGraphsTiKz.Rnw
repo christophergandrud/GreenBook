@@ -3,7 +3,7 @@ set_parent('main_GreenBook.Rnw')
 @
 
 \begin{figure}
-  \caption{Stylized Inflation Error Predictions}
+  \caption{Stylized Inflation Forecast Error Predictions}
   \label{ExpectGraphs}
   \begin{center}
 
