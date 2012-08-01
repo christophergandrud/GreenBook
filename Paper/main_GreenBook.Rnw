@@ -376,7 +376,7 @@ What are the monetary policy and electoral implications of Federal Reserve staff
 
 \subsection*{Replication}
 
-This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely replicated from data, analysis source code, and markup files available as a {\tt{.zip}} file downloadable from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook/zipball/master}}. 
+This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely replicated from data, analysis source code, and markup files available as a {\tt{.zip}} file downloadable from our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}. 
 
 %%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
 

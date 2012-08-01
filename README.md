@@ -31,5 +31,5 @@ Finally, 'knit' the main paper file `main_GreenBook.Rnw` in this folder.
 
 The **R** source code for the analyses, tables, and empirical graphs are in this repository's *Analysis* folder. 
 
-> They must be run in the sequence in which they appear in the paper.
+> Note: these source code files must be run in the sequence in which they appear in the paper.
 
