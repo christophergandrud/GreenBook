@@ -1,7 +1,7 @@
 ####################
 # Greenbook MatchIt Analyses Coef Plots Compare
 # Christopher Gandrud
-# 27 July 2012
+# 1 August 2012
 ####################
 
 #### Figures for ls Results Catapilar Plot ####
@@ -98,7 +98,7 @@ estimates <- subset(estimates, var != c("sigma2"))
 
 cols <- c("#67A380", "#696969")
 breaks <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "GlobalModelAfter 1996", "senate_dem_rep")
-break.labels <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Potential GDP (%GDP)", "Discount Rate Change", "Global Model", "Prop. Senate Dem.")
+break.labels <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Global Model", "Prop. Senate Dem.")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = match)) +
                       facet_grid(~ method) + 
