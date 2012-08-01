@@ -43,6 +43,7 @@
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 \noindent\emph{Draft version. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Hertie Fiscal Governance Centre for support.} \\[0.2cm]
+
 Recent work argues that policy-makers at the Federal Reserve are not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred presidents. This model excludes an essential aspect of monetary policy decision-making: expectations about future inflation. We use the Fed's Green Book forecasts to test whether presidents' partisan identification shapes the estimates of future economic performance that influence FOMC policies. We find that Federal Reserve staff probably do not bias their forecasts to influence Fed governors around elections. However, they do systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. This suggests that while not electorally motivated, Fed staff have a partisan bias when making inflation forecasts.
 
 \end{abstract}
@@ -53,7 +54,7 @@ Recent work argues that policy-makers at the Federal Reserve are not politically
 
 \vspace{0.3cm}
 
-Recent work argues that the Federal Reserve is not politically indifferent \cite{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly to ensure the (re)election of ideologically preferred administrations. This bias is assumed by Clark and Arel-Bundock to arise from a Board of Governors that prefer rightist presidents to leftist ones and so set interest rates to help Republican incumbents and hinder Democratic ones. 
+Recent work argues that the Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly to ensure the (re)election of ideologically preferred administrations. This bias is assumed by Clark and Arel-Bundock to arise from a Board of Governors that prefer rightist presidents to leftist ones and so set interest rates to help Republican incumbents and hinder Democratic ones. 
 
 However, the Board of Governors makes monetary policy based on information provided to them by Federal Reserve staff about the future of the economy. If Fed staff expect higher inflation under Democrats than Republicans, these beliefs would be incorporated into the forecasts used by the Board of Governors to make policies. Thus partisan bias on the part of the Board of Governors is not necessary to produce the partisan cycles in interest rates observed by \cite{Clark2011}. 
 
@@ -113,7 +114,9 @@ We have 161 forecast quarters in our data set, spanning the first Green Book's p
     
 <<BaseInflation, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
     library(devtools)
-    git_source("")
+    
+    ActualForeURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ActualVsForecastGraph.R"
+    source_url(ActualForeURL)
 @
     
     \end{center}
@@ -129,9 +132,9 @@ We have 161 forecast quarters in our data set, spanning the first Green Book's p
 
 As stated above, ideally forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. Looking only at forecast errors and the United States president's partisan identity, is it plausible that there is a partisan bias to Green Book inflation forecasts? Figure \ref{errors_over_time} plots forecast errors across our sample. We've shaded out errors made between $+/- 10$ percent of actual inflation. These could be considered relatively minimal errors. 
 
-The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though it is important to note that over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
+The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
 
-This summary examination of inflation forecast errors suggests that there might be partisan biases. Before jumping into a further empirical investigation of these errors, we discuss why we might expect the Fed to experience partisan bias.
+This summary examination of inflation forecast errors suggests that there might be a partisan bias. What might explain this?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%   Green Book Error Across Time
 \begin{figure}[t]
@@ -140,7 +143,10 @@ This summary examination of inflation forecast errors suggests that there might 
     \begin{center}
     
 <<PartisanError, warning=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    git_source("")
+    
+    # Run graph source code
+    PartisanErrorURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ErrorPresPartyGraph.R"
+    source_url(PartisanErrorURL)
 @
     
     \end{center}
@@ -152,8 +158,6 @@ This summary examination of inflation forecast errors suggests that there might 
 \end{figure}
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section 2: Possible Explanations of Fed Inflation Forecast (In)accuracy %%%%%%%%%
 \section{Possible Explanations of Fed Inflation Forecast (In)accuracy}
 
@@ -161,7 +165,7 @@ In this section we try to understand trends in Fed inflation forecast errors by 
 
 \subsection{Econometric Models \& Accuracy}
 
-Before digging into the partisan explanations of forecast errors, which would largely be the result of Federal reserve staff judgement, it is worth hypothesizing that perhaps forecast (in)accuracy is the result more the product of the econometric models. Presumably, the move to rational expectations ought to improve forecast accuracy relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. None of these over- or under-estimates, however, ought to have been linked to the party of the president. We would, however, expect that forecast errors' absolute magnitude will be smaller after 1996 than in the earlier era.
+Before digging into the partisan explanations of forecast errors, which would largely be the result of Federal Reserve staff judgement, it is worth hypothesizing that perhaps forecast (in)accuracy is the result of systematic errors in the the econometric models. Presumably, the move to rational expectations ought to improve forecast accuracy relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. None of these over or underestimates, however, ought to have been linked to the party of the president. We would, however, expect that the direction of forecast errors' may change after 1996 than in the earlier era. Ideally, systematic errors would go away as the models improved.\footnote{The magnitude of the errors may also change as the models improve. However, in this paper we are primarily concerned with patterns in the direction of the errors, i.e. whether or not there are systematic over or underestimations.}
 
 %Random thought: what if the models assume that voters have partisan expectations and behave according to those partisan characteristics. Then when the partisans fail to do so or when voters react to these as they should (by not reacting) this results in over or under-shooting inflation by the Fed, particularly under the early model?
 
@@ -253,7 +257,6 @@ In this section we present results from a number of parametric model specificati
 We graphically present the key results in this section. Coefficient estimate tables for the models are given in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using OLS and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
 
 <<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
-    library(devtools)
     
     # Run main analysis source code
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"

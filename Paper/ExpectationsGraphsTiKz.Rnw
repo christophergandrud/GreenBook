@@ -17,8 +17,8 @@ set_parent('main_GreenBook.Rnw')
 
   %%%% Partisan Preferences
   \node (PP) at (-7, 5) [bagMain]{{\bf{Partisan Preferences}}};
-  \node (E) at (-10.5, 3.25) [bagMain, rotate=90]{Forecast Error};
-  \node (T) at (-7.5, -0.5) [bagMain]{Duration of Pres. Term};
+  \node (E) at (-10.5, 3.25) [bagMain, rotate=90]{{\emph{Forecast Error}}};
+  \node (T) at (-7.3, -0.5) [bagMain]{{\emph{Duration of Pres. Term}}};
   
   \draw (-10, 0) -- (-6, 0);
   \draw (-10, 0) -- (-10, 4);

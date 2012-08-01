@@ -4,6 +4,8 @@
 # 1 August 2012
 ####################
 
+library(ggplot2)
+
 # Clean up data and create forecast error variable
 cpi.data$pres_party_name <- factor(cpi.data$pres_party, label = c("Rep", "Dem"))
 cpi.data$error.prop.deflator.q2 <-  (cpi.data$GB_CPI_QTR2 - cpi.data$deflator)/cpi.data$deflator
@@ -34,14 +36,15 @@ rect.time <- data.frame(xmin = 1968, xmax = 2006, ymin = -0.1, ymax = 0.1)
 partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
 errors.time <- ggplot(cpi.data, aes(x = Quarter, y = error.prop.deflator.q2)) +
-  geom_point(aes(color = pres_party_name)) +
-  stat_smooth(method = "lm", aes(group = presTerm, color = pres_party_name, fill = pres_party_name)) +
-  geom_rect(data = rect.time, aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax), color = "grey20", alpha = 0.5, inherit.aes = FALSE) +
-  scale_color_manual(values = partisan.colors, name = "") +
-  scale_fill_manual(values = partisan.colors, name = "") +
-  xlab("") + ylab("Standardized Forecast Error") + 
-  scale_x_continuous(limits=c(1968, 2006)) +
-  theme_bw() +
-  opts(axis.title.x = theme_text(size = 12, vjust = 0)) + 
-  opts(axis.title.y = theme_text(angle = 90, size = 12, vjust = 0.3))
+                      geom_point(aes(color = pres_party_name)) +
+                      stat_smooth(method = "lm", aes(group = presTerm, color = pres_party_name, fill = pres_party_name)) +
+                      geom_rect(data = rect.time, aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax), color = "grey20", alpha = 0.5, linetype = 0, inherit.aes = FALSE) +
+                      scale_color_manual(values = partisan.colors, name = "") +
+                      scale_fill_manual(values = partisan.colors, name = "") +
+                      xlab("") + ylab("Standardized Forecast Error") + 
+                      scale_x_continuous(limits=c(1968, 2006)) +
+                      theme_bw() +
+                      opts(axis.title.x = theme_text(size = 12, vjust = 0)) + 
+                      opts(axis.title.y = theme_text(angle = 90, size = 12, vjust = 0.3))
+
 print(errors.time) 

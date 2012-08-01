@@ -4,4 +4,13 @@
 # 1 August 2012
 ####################
 
-install.packages("ggplot2", "devtools", "MatchIt", "reshape", "reshape2")
+install.packages("knitr", 
+                 "ggplot2", 
+                 "devtools", 
+                 "MatchIt", 
+                 "reshape", 
+                 "reshape2", 
+                 "RCurl", 
+                 "xtable", 
+                 "apsrtable"
+                 )
