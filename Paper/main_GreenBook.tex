@@ -97,13 +97,13 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-\noindent\emph{Very Early draft version. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Hertie Fiscal Governance Centre for support.} \\[0.2cm]
-Recent work argues that the Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred presidents. This model excludes an essential aspect of monetary policy decision-making: expectations about future inflation. We use the Fed's Green Book forecasts to test whether presidents' partisan identification shapes the estimates of future economic performance that influence FOMC policies. We find that Federal Reserve staff probably do not bias their forecasts to influence Fed governors around elections. However, they do systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. This suggests that while not electorally motivated, Fed staff have a partisan bias when making inflation forecasts.
+\noindent\emph{Draft version. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Hertie Fiscal Governance Centre for support.} \\[0.2cm]
+Recent work argues that policy-makers at the Federal Reserve are not politically indifferent \cite{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred presidents. This model excludes an essential aspect of monetary policy decision-making: expectations about future inflation. We use the Fed's Green Book forecasts to test whether presidents' partisan identification shapes the estimates of future economic performance that influence FOMC policies. We find that Federal Reserve staff probably do not bias their forecasts to influence Fed governors around elections. However, they do systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. This suggests that while not electorally motivated, Fed staff have a partisan bias when making inflation forecasts.
 
 \end{abstract}
 
 \begin{description}
-  \item [{\textbf{Keywords:}}] forecast bias, Federal Reserve, rational partisan cycle,
+  \item [{\textbf{Keywords:}}] forecast bias, Federal Reserve, rational partisan cycle, heuristics, interest rate
 \end{description}
 
 \vspace{0.3cm}
@@ -217,7 +217,7 @@ In this section we try to understand trends in Fed inflation forecast errors by 
 
 \subsection{Econometric Models \& Accuracy}
 
-Before digging into the partisan explanations of forecast errors, which would largely be the result of Federal reserve staff judgement, it is worth hypothesising that perhaps forecast (in)accuracy is the result more the product of the econometric models. Presumably, the move to rational expectations ought to improve forecast accuracy relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. None of these over- or under-estimates, however, ought to have been linked to the party of the president. We would, however, expect that forecast errors' absolute magnitude will be smaller after 1996 than in the earlier era.
+Before digging into the partisan explanations of forecast errors, which would largely be the result of Federal reserve staff judgement, it is worth hypothesizing that perhaps forecast (in)accuracy is the result more the product of the econometric models. Presumably, the move to rational expectations ought to improve forecast accuracy relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. None of these over- or under-estimates, however, ought to have been linked to the party of the president. We would, however, expect that forecast errors' absolute magnitude will be smaller after 1996 than in the earlier era.
 
 %Random thought: what if the models assume that voters have partisan expectations and behave according to those partisan characteristics. Then when the partisans fail to do so or when voters react to these as they should (by not reacting) this results in over or under-shooting inflation by the Fed, particularly under the early model?
 
@@ -307,7 +307,7 @@ The {\bf{monetary expectations theory}} is based on a belief held by Federal Res
 
 If the FOMC anticipated these compensatory biases in staff forecasts, then the FOMC would discount the Green Book estimates and continue to implement inflationary policies during Republican administrations and contradictory policies during Democratic ones. This would result in approximately correct inflation forecasts for both Republicans and Democrats.
 
-Finally, the {\bf{partisan heuristics theory}} proposes that Fed staffers incorporate a simple heuristic \citep[see][]{tverskykahneman1974, kahneman2003} about the policy behaviors of the parties and the effects these different policies will have on the economy. Heuristics, generally, are intitions that reduce the complexity associated with making predictions. Though they can be useful ``sometimes they lead to severe and systematic errors" \citep[][1124]{tverskykahneman1974}. In this theory, economists at the Fed have an intuition that Democrats and Republicans behave differently in government and so formulate inflationary expectations with this in mind. If this intuition does not accurately correspond to how presidents actually act, or how their policies affect inflation, forecasts would be systematically biased: overestimates for Democratic presidents, underestimates for Republicans. 
+Finally, the {\bf{partisan heuristics theory}} proposes that Fed staffers incorporate a simple heuristic \citep[see][]{tverskykahneman1974, kahneman2003} about the policy behaviors of the parties and the effects these different policies will have on the economy. Heuristics, generally, are intuitions that reduce the complexity associated with making predictions. Though they can be useful ``sometimes they lead to severe and systematic errors" \citep[][1124]{tverskykahneman1974}. In this theory, economists at the Fed have an intuition that Democrats and Republicans behave differently in government and so formulate inflationary expectations with this in mind. If this intuition does not accurately correspond to how presidents actually act, or how their policies affect inflation, forecasts would be systematically biased: overestimates for Democratic presidents, underestimates for Republicans. 
 
 This model does not require those formulating forecasts be conscious of their bias, but simply for it to work its way subtly into forecasts, particularly in the subjective aspect of the ``consensus forecast" put forth in the Green Book. Further, because this bias would not need to be conscious, they might never notice this unintentional but systematic bias (as mistakes could occur for any number of economic reasons that they have been trained to consider) and so never correct it in future estimates.
 
@@ -361,7 +361,7 @@ The second interaction possibility is based largely on Krause's \citeyearpar{Kra
 
 If biases are largely the result of systematically biased economic forecasting models we would expect errors to change overtime as the models changed.In particular, we would expect this fall in errors to occur around 1996 when the Federal Reserve Board's new Global Behavioral Equation Model was introduced. To examine this we include a {\bf{FRB/Global Model}} dummy variable. It equals one for all quarters from and including the first quarter of 1996. It is zero otherwise.
 
-Green Book forecasts are based on the assumption that monetary policy will not change between when the prediction is made and the time period it is predicting. Forecast errors may occur if monetary policy changes. Maybe this produces a negative relationship between forecast errors and monetary policy decisions. If the FOMC raises interest rates then inflation may decline, causing the original forecast to have been too high and vice versa. To control for monetary policy changes we include a variable of {\bf{relative changes to the discount rate}} from the quarter the Green Book prediction was made to the quarter it is predicting.\footnote{We averaged the discount rate over each quarter. Then we used the average discount rates $D$ in each quarter $q$ to create the variable $\Delta D$ using the simple formula: $\Delta D = \frac{D - D_{q-2}}{D}$. Note that the Federal Reserve changed how it used the discount rate and referred it at the beginning of 2003. To address this issue we primarily used data on the United States' discount rate recorded by the International Monetary Fund through this time period. Their data only goes back to the fourth quarter of 1982. So, before that we use the discount rate. Both of these variables are found in the FRED database at the St. Louis Federal Reserve (see: {\url{http://research.stlouied.org/fred2/}} (accessed July 2012). } The discount rate is one of the Federal Reserve's main tools for influencing the interest rate, especially the Fed funds rate.\footnote{A similar {\bf{relative changes in the Fed funds rate}} variable was included in some preliminary analyses. However, it did not change the results substantially and was estimated to have a similar effect on errors as the discount rate variable.}
+Green Book forecasts are based on the assumption that monetary policy will not change between when the prediction is made and the time period it is predicting. Forecast errors may occur if monetary policy changes. Maybe this produces a negative relationship between forecast errors and monetary policy decisions. If the FOMC raises interest rates then inflation may decline, causing the original forecast to have been too high and vice versa. To control for monetary policy changes we include a variable of {\bf{relative changes to the discount rate}} from the quarter the Green Book prediction was made to the quarter it is predicting.\footnote{We averaged the discount rate over each quarter. Then we used the average discount rates $D$ in each quarter $q$ to create the variable $\Delta D$ using the simple formula: $\Delta D = \frac{D - D_{q-2}}{D}$. Note that the Federal Reserve changed how it used the discount rate and referred it at the beginning of 2003. To address this issue we primarily used data on the United States' discount rate recorded by the International Monetary Fund through this time period. Their data only goes back to the fourth quarter of 1982. So, before that we use the discount rate. Both of these variables are found in the FRED database at the St. Louis Federal Reserve (accessed July 2012). } The discount rate is one of the Federal Reserve's main tools for influencing the interest rate, especially the Fed funds rate.\footnote{A similar {\bf{relative changes in the Fed funds rate}} variable was included in some preliminary analyses. However, it did not change the results substantially and was estimated to have a similar effect on errors as the discount rate variable.}
 
 To examine if Federal Reserve inflation forecaster errors are affected by actual levels of government expenditure we included the percentage of {\bf{current government expenditure to GDP}} and {\bf{government debt to GDP}}. 
 
@@ -467,13 +467,13 @@ As expected, relative changes to the discount rate were often found to be negati
 
 \section*{Discussion: Do Fed Forecasts Have a Partisan Bias?}
 
-Do Fed forecasts have a partisan bias? According to the evidence found in our paper: yes they do. Federal Reserve staff seem to have systematically and over at least a 35 year period from 1970 through 2005 over estimated inflation during Democratic presidencies and underestimated it during Republican ones. This finding was robust across numerous model specifications and controling for a variety of economic, bureacratic and other political factors. 
+Do Fed forecasts have a partisan bias? According to the evidence found in our paper: yes they do. Federal Reserve staff seem to have systematically overestimated inflation during Democratic presidencies and underestimated it during Republican ones for at least a 35 year period between 1970 and 2005. This finding was robust across numerous model specifications where a variety of economic, bureaucratic and other political factors were controlled for. 
 
-Interestingly, we found no relationship between inflation forecast errors and elections either independent of presidential party identification or in interaction with it. This suggests that any relationship between monetary policy decisions and US presidential election timing is neither the result of partisan preferences that Fed staff members may have nor beliefs that Fed staff have about the FOMC's preferences. 
+Interestingly, in light of recent research on FOMC policy-making, we found no relationship between inflation forecast errors and elections either independent of presidential party identification or in interaction with it. This suggests that any relationship between monetary policy decisions and US presidential election timing is neither the result of partisan preferences that Fed staff members may have, nor beliefs that Fed staff may hold about the FOMC's presidential election preferences. 
 
-Given their consistency across presidential terms, it appears that Fed staff members' partisan inflation forecast biases may be the result of a partisan heuristic. Like heuristics generally, this may help Fed staffers simplify very complex phenomenon, but can also lead to systematic prediction errors. These errors may not have been noticed by staffers because, so far, few if any people either inside or outside of the Fed have been looking for them. 
+Given the consistency across presidential terms, it appears that Fed staff members' partisan inflation forecast bias may be the result of a partisan heuristic. Like heuristics generally, the partisan bias may help Fed staffers simplify very complex phenomenon, while also to systematic prediction errors. These errors may not have been noticed by staffers because, so far, few if any people either inside or outside of the Fed have been looking for them. 
 
-What is the monetary policy and partisan significance of Federal Reserve staff partisan biases? Our research so far is not really able to tell, but points in a clear direction to find out. It may be that higher inflation forecasts during Democratic presidencies spurs the FOMC to raise interest rates and dampen the money supply generally. The opposite would be the case during Republican presidencies. If this is the case, the economy would be inadvertently stimulated during Republican presidencies and depressed during Democratic ones, with clear electoral implications. This is a very important issue in need of further investigation.
+What are the monetary policy and electoral implications of Federal Reserve staff partisan bias? Our research so far is not able to tell. It does motivate future research and point this research in a clear direction to find out. It may be that higher inflation forecasts during Democratic presidencies spur the FOMC to raise interest rates and dampen the money supply generally. The opposite could happen during Republican presidencies. If this is the case, the economy would be inadvertently stimulated during Republican presidencies and depressed during Democratic ones, with clear electoral implications. This is a very important issue that needs further investigation.
 
 \clearpage
 \section*{Appendix}
@@ -485,7 +485,7 @@ This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely 
 %%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
 
 \begin{table}[ht]
-    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched dataset)}
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
     \label{OutputNL}
     \vspace{0.25cm}
     \begin{center}
@@ -680,7 +680,7 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Tue Jul 31 17:48:23 2012
+% Wed Aug  1 09:41:34 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -716,7 +716,7 @@ Intercept & 4.60 & 1.00 & 2.66 & 4.59 & 6.57 \\
 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Tue Jul 31 17:48:23 2012
+% Wed Aug  1 09:41:35 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}

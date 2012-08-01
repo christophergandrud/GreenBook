@@ -96,7 +96,7 @@ estimates <- subset(estimates, var != c("sigma2"))
 
 ##### Create comparison plot
 
-cols <- c("#67A380", "#696969")
+cols <- c("#B35B40", "#696969")
 breaks <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "GlobalModelAfter 1996", "senate_dem_rep")
 break.labels <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Global Model", "Prop. Senate Dem.")
 
