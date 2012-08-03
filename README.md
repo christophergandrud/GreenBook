@@ -14,6 +14,7 @@ To reproduce the paper first install the necessary R packages:
 
     install.packages("knitr", 
                     "ggplot2", 
+                    "gridExtra",
                     "devtools", 
                     "MatchIt", 
                     "reshape", 

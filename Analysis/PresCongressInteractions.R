@@ -18,13 +18,13 @@ PL11SimRep <- sim(PL11, x = PL11SetRep)
 # Extract expected values from simulations (Dem)
 PL11SimDem.ev <- PL11SimDem$qi
 PL11SimDem.ev <-data.frame(PL11SimDem.ev$ev)
-names(PL11SimDem.ev) <- c("Republican President", "Democratic President")
+names(PL11SimDem.ev) <- c("Rep. Pres.", "Dem. Pres.")
 PL11SimDem.ev <- melt(PL11SimDem.ev, measure = 1:2)
 
 # Extract expected values from simulations (Rep)
 PL11SimRep.ev <- PL11SimRep$qi
 PL11SimRep.ev <-data.frame(PL11SimRep.ev$ev)
-names(PL11SimRep.ev) <- c("Republican President", "Democratic President")
+names(PL11SimRep.ev) <- c("Rep. Pres.", "Dem. Pres.")
 PL11SimRep.ev <- melt(PL11SimRep.ev, measure = 1:2)
 
 # Final clean up
@@ -47,8 +47,7 @@ PartyInteractionPlot <- ggplot(data = PL11Bound, aes(variable, value)) +
                                   stat_summary(fun.y = mean, geom = "line", aes(group = Congress), colour = "grey70") +
                                   geom_point(shape = 21, aes(color = Congress), alpha = I(0.05), size = 7) +
                                   scale_y_continuous(limits = c(-1, 0.75)) +
-                                  scale_x_discrete(limits = c("Republican President", "Democratic President")) +
-                                  xlab("") + ylab("Expected Standardized Forecast Error\n") +
+                                  xlab("") + ylab("") +
                                   scale_color_manual(values = partisan.congress.colours, name = "Congress") +
                                   guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                   theme_bw(base_size = 11)

@@ -308,7 +308,7 @@ source_url(URL)
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{From an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C8 from Table \ref{OutputPL}. \\ The figures show 1000 simulations per fitted value. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{From an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C7 from Table \ref{OutputPL}. \\ The figures show 1000 simulations per fitted value. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
@@ -337,15 +337,25 @@ Might Federal Reserve staff be taking into consideration not only the president'
     \begin{center}
 
 <<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=4, out.width='0.8\\linewidth'>>=
+    # Load required packages
+    library(gridExtra)
 
-    InterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresCongressInteractions.R"
-    source_url(InterURL)
-    
+    # Pres*Election Interaction
+    ElectInterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresElectionInteract.R"
+    source_url(ElectInterURL)
+
+    # Pres*Congress Interaction
+    CongInterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresCongressInteractions.R"
+    source_url(CongInterURL)
+
+    # Combine graphs
+    InterCombine <- grid.arrange(ElectionInteractionPlot, PartyInteractionPlot, ncol = 2)
+    print(InterCombine)
 @
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{From an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C11 from Table \ref{OutputPL}. The figure show 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+        {\scriptsize{From an OLS regression with data matched by presidential party identification. Expected errors in the leftside graph are from Model A8 in Table \ref{OutputNL} and the rightside estimates are from Model C11 from Table \ref{OutputPL}. The figure show 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
     \end{singlespace}
 \end{figure}
 
@@ -398,7 +408,7 @@ This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely 
     
     # Model names & Coefficient Names -- Use A for all non-mathced models
     ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13")
-    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Qtr. to Election", "Election Period", "Pres. Party ID", "Pres*Election Period", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres*Election Period", "FRB/GlobalModel", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
@@ -426,7 +436,7 @@ This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely 
     
     # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
     ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
-    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Qtr. to Election", "Election Period", "Pres. Party ID", "Pres*Election Period", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "Pres*Election Period", "FRB/GlobalModel", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
@@ -460,7 +470,7 @@ This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely 
     
     # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
     ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12")
-    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Qtr. to Election", "Election Period", "Pres. Party ID","Pres*Election Period", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep","Pres*Election Period", "FRB/GlobalModel", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9, PL10, PL11, PL12,

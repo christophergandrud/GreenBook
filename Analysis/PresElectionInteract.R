@@ -18,13 +18,13 @@ NL8SimNonElection <- sim(NL8, x = NL8SetNonElection)
 # Extract expected values from simulations (Election)
 NL8SimElection.ev <- NL8SimElection$qi
 NL8SimElection.ev <-data.frame(NL8SimElection.ev$ev)
-names(NL8SimElection.ev) <- c("Republican President", "Democratic President")
+names(NL8SimElection.ev) <- c("Rep. Pres.", "Dem. Pres.")
 NL8SimElection.ev <- melt(NL8SimElection.ev, measure = 1:2)
 
 # Extract expected values from simulations (NonElection)
 NL8SimNonElection.ev <- NL8SimNonElection$qi
 NL8SimNonElection.ev <-data.frame(NL8SimNonElection.ev$ev)
-names(NL8SimNonElection.ev) <- c("Republican President", "Democratic President")
+names(NL8SimNonElection.ev) <- c("Rep. Pres.", "Dem. Pres.")
 NL8SimNonElection.ev <- melt(NL8SimNonElection.ev, measure = 1:2)
 
 # Final clean up
@@ -42,15 +42,14 @@ NL8Bound <- rbind(NL8SimNonElection.ev, NL8SimElection.ev)
 # Partisan colours
 election.colours = c("No" = "#B35B40", "Yes" = "#696969")
 
-PartyInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value)) +
+ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value)) +
                                 geom_hline(aes(intercept= 0), linetype = "dotted") +
                                 stat_summary(fun.y = mean, geom = "line", aes(group = Congress), colour = "grey70") +
                                 geom_point(shape = 21, aes(color = Congress), alpha = I(0.07), size = 7) +
                                 scale_y_continuous(limits = c(-1, 0.75)) +
-                                scale_x_discrete(limits = c("Republican President", "Democratic President")) +
                                 xlab("") + ylab("Expected Standardized Forecast Error\n") +
                                 scale_color_manual(values = election.colours, name = "Election Period") +
                                 guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                 theme_bw(base_size = 11)
 
-print(PartyInteractionPlot)
+print(ElectionInteractionPlot)
