@@ -48,6 +48,6 @@ ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value)) +
                                 geom_point(shape = 21, aes(color = Congress), alpha = I(0.07), size = 7) +
                                 scale_y_continuous(limits = c(-1, 0.75)) +
                                 xlab("") + ylab("Expected Standardized Forecast Error\n") +
-                                scale_color_manual(values = election.colours, name = "Election Period") +
+                                scale_color_manual(values = election.colours, name = "Election") +
                                 guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                 theme_bw(base_size = 11)

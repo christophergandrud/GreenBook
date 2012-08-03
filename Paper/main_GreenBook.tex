@@ -425,7 +425,7 @@ The estimated effects hold even when we control for actual government expenditur
 
 So far we have only examined results that suggest Fed staff have a partisan bias in their inflation forecasts. Do they also take into consideration election timing as the partisan preference and monetary expectations theories predict? We did not find any evidence that inflation forecast errors were associated with elections either independent of presidential party ID or in interaction with it. This was true in parametric models using both unmatched data and matched data where the election period variable is the treatment. Estimates of the relationship between the quarters until election variable and forecast errors\footnote{This variable was obviously omitted from the models with the election period variable because they are highly correlated.} also did not provide any evidence that inflation errors are related to elections. 
 
-Data limitations make it difficult to fully examine the extension of Clark and Arel-Bundock's \citeyearpar{Clark2011} election gaming approach to Federal Reserves staff.\footnote{We only have three Democratic presidential terms in our data, only two of which ended in the incumbent running for reelection.} Nonetheless, we attempted to examine this hypothesis with an interaction between the president's party ID variable and the election dummy. The president's party ID variable was robust whereas the election variables and the interaction term were very statistically insignificant. \todo{This last sentence may need to be rewritten. It sounds like we are saying that the individual interaction terms were insignificant. What matters is the marginal effects, particularly for the continuous measure of time to election}
+Data limitations make it difficult to fully examine the extension of Clark and Arel-Bundock's \citeyearpar{Clark2011} election gaming approach to Federal Reserves staff.\footnote{We only have three Democratic presidential terms in our data, only two of which ended in the incumbent running for reelection.} Nonetheless, we attempted to examine this hypothesis with an interaction between the president's party ID variable and the election dummy. The president's party ID variable was robust whereas the election variables and the interaction term were very statistically insignificant. This is reflected in the leftside graph in Figure \ref{InterPlot}. \todo{This last sentence may need to be rewritten. It sounds like we are saying that the individual interaction terms were insignificant. What matters is the marginal effects, particularly for the continuous measure of time to election}
 
 In this limited data set Fed Staff do not appear to be over estimating inflation when a Democratic president is running for reelection in an attempt to influence the FOMC to raise interest rates and lower the president's chances of winning. These findings have clear implications for how we understand the potential causes of Green Book partisan inflation forecast biases as well as FOMC interest rate decisions around elections. It seems that FOMC members, not their staff, are driving the increases in the Fed Funds Rate around elections when Democrats are in power that Clark and Arel-Bundock observed. 
 
@@ -442,7 +442,7 @@ Might Federal Reserve staff be taking into consideration not only the president'
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/InterPlot1} \includegraphics[width=0.8\linewidth]{figure/InterPlot2} \includegraphics[width=0.8\linewidth]{figure/InterPlot3} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.9\linewidth]{figure/InterPlot} 
 \end{knitrout}
 
 
@@ -565,8 +565,56 @@ Resid. sd            & 0.2            & 0.2            & 0.2            & 0.2   
     \vspace{0.25cm}
     \begin{center}
     {\footnotesize
-\begin{kframe}
-\begin{flushleft}\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'EL8' not found}\end{flushleft}\end{kframe}
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ B1 } & \multicolumn{ 1 }{ c }{ B2 } & \multicolumn{ 1 }{ c }{ B3 } & \multicolumn{ 1 }{ c }{ B4 } & \multicolumn{ 1 }{ c }{ B5 } & \multicolumn{ 1 }{ c }{ B6 } & \multicolumn{ 1 }{ c }{ B7 } & \multicolumn{ 1 }{ c }{ B8 } & \multicolumn{ 1 }{ c }{ B9 } & \multicolumn{ 1 }{ c }{ B10 } & \multicolumn{ 1 }{ c }{ B11 } & \multicolumn{ 1 }{ c }{ B12 } \\ \hline
+ %                    & B1              & B2              & B3              & B4              & B5              & B6              & B7              & B8              & B9              & B10             & B11             & B12            \\ 
+Intercept            & 1.7             & 2.2             & 1.6             & 1.7             & 2.0             & 2.5             & 1.9             & 1.0             & 0.3             & -0.6            & 1.5             & -2.2 ^{**}     \\ 
+                     & (2.8)           & (2.8)           & (2.8)           & (2.4)           & (2.5)           & (2.9)           & (4.0)           & (4.0)           & (2.4)           & (2.6)           & (4.7)           & (0.6)          \\ 
+Debt/GDP             & 0.0             & 0.0             & 0.0             & -0.0            & -0.0            & 0.0             & 0.0             & 0.0             & -0.0 ^\dagger  & -0.0 ^*         & 0.0             &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Expenditure/GDP      & 0.1 ^*          & 0.1 ^*          & 0.1 ^*          & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^*          & 0.1             & 0.1             & 0.3 ^{***}      & 0.3 ^{***}      & 0.1             &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
+Output Gap           & -0.0            & -0.0            & -0.0            & -0.1 ^\dagger  & -0.1 ^\dagger  & -0.1            & -0.0            & -0.0            & -0.1 ^\dagger  & -0.1            & -0.0            &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Discount Rate Change & -0.7 ^{**}      & -0.7 ^*         & -0.7 ^{**}      & -0.5 ^*         & -0.5 ^\dagger  & -0.4            & -0.4            & -0.4            & -0.2            & -0.1            & -0.2            &                \\ 
+                     & (0.3)           & (0.3)           & (0.2)           & (0.2)           & (0.2)           & (0.3)           & (0.4)           & (0.4)           & (0.2)           & (0.2)           & (0.3)           &                \\ 
+Qtr. to Election     &                 & -0.0            &                 &                 & -0.0            & -0.0            & -0.0            &                 & -0.0            & -0.0            & -0.0            &                \\ 
+                     &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Election Period      &                 &                 & 0.1             &                 &                 &                 &                 & 0.1             &                 &                 &                 &                \\ 
+                     &                 &                 & (0.1)           &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.3 ^{**}       & 0.3 ^{**}       & 0.3 ^*          & 0.3 ^*          & 0.4 ^*          & 1.3 ^{***}      & 1.7 ^{***}      & 20.9            & 25.0           \\ 
+                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.2)           & (0.3)           & (0.5)           & (23.8)          & (17.7)         \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.1            & -0.1            & -0.1            & 0.3             & 0.5 ^\dagger   & 0.4             & 0.9            \\ 
+                     &                 &                 &                 &                 &                 & (0.3)           & (0.4)           & (0.4)           & (0.3)           & (0.3)           & (0.8)           & (0.6)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & 0.2             & 0.2             & 0.1             & -0.2            & -0.4            & 1.0             & 1.8 ^{***}     \\ 
+                     &                 &                 &                 &                 &                 & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.8)           & (0.4)          \\ 
+Pres*Election Period &                 &                 &                 &                 &                 &                 & -0.1            & -0.1            &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.3)           & (0.4)           &                 &                 &                 &                \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 &                 &                 & -0.2            &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
+Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 & -0.8 ^{**}      &                 & -21.8           & -26.3          \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 & (23.4)          & (16.7)         \\ 
+Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 & -1.3 ^{**}      & -14.3           & -17.0          \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.4)           & (19.2)          & (14.7)         \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.4            & -0.9 ^{**}     \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.5)           & (0.3)          \\ 
+Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 15.2            & 18.2           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (17.9)          & (13.0)          \\
+ $N$                  & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32             \\ 
+$R^2$                & 0.5             & 0.5             & 0.5             & 0.6             & 0.6             & 0.6             & 0.6             & 0.7             & 0.8             & 0.8             & 0.8             & 0.7            \\ 
+adj. $R^2$           & 0.4             & 0.4             & 0.4             & 0.6             & 0.5             & 0.5             & 0.5             & 0.5             & 0.7             & 0.7             & 0.7             & 0.7            \\ 
+Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.1             & 0.2             & 0.2             & 0.2             \\ \hline
+ \multicolumn{13}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{13}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}}\\
+\multicolumn{13}{l}{\footnotesize{The recession variable is ommitted because there was no variation in the matched data set.}}\\
+\multicolumn{13}{l}{\footnotesize{The reason that there was no variation is because there was never a recession during an}}\\
+\multicolumn{13}{l}{\footnotesize{election period in our data set.}} 
+\end{tabular} 
+
+
 
     }
     \end{center}
@@ -637,7 +685,7 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Fri Aug  3 14:03:24 2012
+% Fri Aug  3 14:14:30 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -673,7 +721,7 @@ Intercept & 4.60 & 1.00 & 2.66 & 4.59 & 6.57 \\
 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Fri Aug  3 14:03:25 2012
+% Fri Aug  3 14:14:31 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}
