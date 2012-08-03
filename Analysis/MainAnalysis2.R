@@ -92,7 +92,7 @@ EL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + senate_dem
 
 EL7 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.Mdf.election, cite = FALSE)
 
-EL7 <- zelig(error.prop.deflator.q2 ~ pres_party*ElectionPeriod + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.Mdf.election, cite = FALSE)
+EL8 <- zelig(error.prop.deflator.q2 ~ pres_party*ElectionPeriod + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.Mdf.election, cite = FALSE)
 
 EL9 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + time_to_election + senate_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.Mdf.election, cite = FALSE)
 

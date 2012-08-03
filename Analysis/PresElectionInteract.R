@@ -51,5 +51,3 @@ ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value)) +
                                 scale_color_manual(values = election.colours, name = "Election Period") +
                                 guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                 theme_bw(base_size = 11)
-
-print(ElectionInteractionPlot)

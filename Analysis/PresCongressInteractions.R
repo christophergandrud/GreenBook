@@ -51,7 +51,3 @@ PartyInteractionPlot <- ggplot(data = PL11Bound, aes(variable, value)) +
                                   scale_color_manual(values = partisan.congress.colours, name = "Congress") +
                                   guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                   theme_bw(base_size = 11)
-                                  
-print(PartyInteractionPlot)
-
-
