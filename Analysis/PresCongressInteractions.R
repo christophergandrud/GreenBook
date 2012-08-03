@@ -1,12 +1,11 @@
 ################
-# President*Congress Interaction Graphs
+# President*Congress Interaction Graph
 # Christopher Gandrud
 # Updated 31 July 2012 
 ################
 
 # Create range of values to simulate expected values across
 pres_party.r <- c(0, 1)
-house_dem_rep.r <- seq(0.87, 2.04, by = .01)
 
 # Set fitted values 
 PL11SetDem <- setx(PL11, pres_party = pres_party.r, house_dem_rep = 1.2, senate_dem_rep = 1.2)
@@ -30,10 +29,10 @@ PL11SimRep.ev <- melt(PL11SimRep.ev, measure = 1:2)
 
 # Final clean up
 PL11SimDem.ev$variable <- factor(PL11SimDem.ev$variable)
-PL11SimDem.ev$Congress <- "Dem. Congress"
+PL11SimDem.ev$Congress <- "Dem."
 
 PL11SimRep.ev$variable <- factor(PL11SimRep.ev$variable)
-PL11SimRep.ev$Congress <- "Rep. Congress"
+PL11SimRep.ev$Congress <- "Rep."
 
 # Append both sets of simulation results
 PL11Bound <- rbind(PL11SimRep.ev, PL11SimDem.ev)
@@ -41,15 +40,16 @@ PL11Bound <- rbind(PL11SimRep.ev, PL11SimDem.ev)
 #### Create plots ####
 
 # Partisan colours
-partisan.congress.colours = c("Rep. Congress" = "#C42B00", "Dem. Congress" = "#2259B3")
+partisan.congress.colours = c("Rep." = "#C42B00", "Dem." = "#2259B3")
 
 PartyInteractionPlot <- ggplot(data = PL11Bound, aes(variable, value)) +
                                   geom_hline(aes(intercept= 0), linetype = "dotted") +
                                   stat_summary(fun.y = mean, geom = "line", aes(group = Congress), colour = "grey70") +
                                   geom_point(shape = 21, aes(color = Congress), alpha = I(0.05), size = 7) +
+                                  scale_y_continuous(limits = c(-1, 0.75)) +
                                   scale_x_discrete(limits = c("Republican President", "Democratic President")) +
                                   xlab("") + ylab("Expected Standardized Forecast Error\n") +
-                                  scale_color_manual(values = partisan.congress.colours, name = "") +
+                                  scale_color_manual(values = partisan.congress.colours, name = "Congress") +
                                   guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                   theme_bw(base_size = 11)
                                   
