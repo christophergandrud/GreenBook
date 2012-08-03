@@ -48,6 +48,6 @@ PartyInteractionPlot <- ggplot(data = PL11Bound, aes(variable, value)) +
                                   geom_point(shape = 21, aes(color = Congress), alpha = I(0.05), size = 7) +
                                   scale_y_continuous(limits = c(-1, 0.75)) +
                                   xlab("") + ylab("") +
-                                  scale_color_manual(values = partisan.congress.colours, name = "Congress") +
+                                  scale_color_manual(values = partisan.congress.colours, name = "Control\nof\nCongress") +
                                   guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                   theme_bw(base_size = 11)
