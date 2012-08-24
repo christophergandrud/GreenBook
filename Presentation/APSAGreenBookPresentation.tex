@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%
+% Does Presidential Partisanship Affect Fed Inflation Forecasts?
+% Christopher Gandrud & Micheal O'Keeffe
+% Updated 24 August 2012 for APSA 2012 Conference
+%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+\usetheme{MichiganYonsei}
+\setbeamercovered{transparent}
+\usepackage{color}
+\usepackage{hyperref}
+  \hypersetup{
+		colorlinks=true
+		linkcolor=black
+		}
+\usepackage{graphics}
+\usepackage{booktabs}
+\newcommand{\comment}[1]{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title Slide %%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Partisan Inflation Forecast Errors]{Does Presidential Partisanship Affect Fed Inflation Forecasts?}
+\author[]{
+    \href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud} \and         \href{mailto:{cgrafstr@umich.edu}}{ Cassandra Grafstr\"{o}m}
+}
+\date[APSA Annual Conference]{31 August 2012}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Motivation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivation}
+\frame{
+    \frametitle{Motivation}
+        \begin{itemize}
+            \item<1-> Clark \& Arel-Bundock (2011) found that policymakers at the US Federal Reserve are not politically indifferent.
+            \item<2-> NEED TO COMPLETE
+        \end{itemize}
+}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Describing Forecast Errors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Describing Forecast Errors}
+\frame{
+  \frametitle{Forecast Errors}
+  Our {\bf{dependent variable}}: \\[0.5cm]
+\[
+    E_{q} = \frac{F_{q} - I_{q}}{I_{q}}
+\]
+  \begin{itemize}
+    \item<2-> $F_{q} = $ inflation forecast for quarter $q$. (We use forecasts made {\emph{two quarters}} prior).
+    \item<3-> $I_{q} = $ actual inflation in quarter $q$.
+    \item<4-> $E_{q} = $ the standardized inflation forecast error for quarter $q$.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Forecast Errors}
+  \begin{center}
+    {\LARGE{Ideally, the mean forecast error is 0.}}
+  \end{center}
+}
+
+\frame[plain]{
+  \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/partisanError.pdf}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% What might explain forecast errors? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{What Might Explain Forecast Errors?}
+\frame{
+  \frametitle{Traditional understanding of Fed forecasting}
+  FILL IN 
+}
+
+\frame[plain]{
+  \includegraphics[scale=0.4]{ExpectationsGraph.pdf}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Empirical Tests %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Empirical Tests}
+\frame{
+  \frametitle{Empirical Analysis Overview}
+    \begin{center}
+      {\LARGE{Followed Ho et al. (2010) to issolate the relationship between presidential partisanship/elections and the other controls.}} \\[0.5cm]
+    \end{center}
+    \begin{enumerate}
+      \item<2-> Created {\bf{matched}} data sets. 
+        One where {\emph{presidential party ID}} was the `treatment'
+        Another where {\emph{election period}} was the `treatment
+      \item<3-> Used the matched data sets in numerous {\bf{parametric models}} with standardized inflation forecast errors as the continuous dependent variable. 
+    \end{enumerate}
+}
+
+\frame[plain]{
+  \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/CoefComparePlots.pdf}
+}
+
+\frame[plain]{
+  \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf}
+}
+
+\frame[plain]{
+  \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/InterPlot.pdf}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Conclusions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions}
+\frame{
+    \frametitle{Conclusions}
+    {\LARGE{Does presidential partisanship affect Fed inflation forecasts? \\[1cm]
+        \begin{center}
+            Probably.
+        \end{center}
+        }
+    }
+}
+
+\frame{
+  \frametitle{Conclusions}
+  {\LARGE{How?}} \\[0.5cm]
+  \begin{itemize}
+    \item<1-> Fed staff appear to have a {\bf{partisan heuristic}} that leads to a {\bf{systematic bias}} in their inflation forecasts.
+    \item<2-> FILL IN    
+  \end{itemize}
+}
+
+
+
+\end{document}

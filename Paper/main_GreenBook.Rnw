@@ -328,7 +328,7 @@ Might Federal Reserve staff be taking into consideration not only the president'
 
 %%%%%%% President/Congress Interaction Plot %%%%%%%%
 \begin{figure}[t]
-    \caption{Simulated Expected Inflation Forecast Error with Interactions Between President Party ID Election Period, as well as President Party ID and Congressional Party Control}
+    \caption{Simulated Expected Inflation Forecast Error with Interactions Between President Party ID and Election Period, as well as President Party ID and Congressional Party Control}
     \label{InterPlot}
     \begin{center}
 
