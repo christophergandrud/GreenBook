@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%
 % Does Presidential Partisanship Affect Fed Inflation Forecasts?
-% Christopher Gandrud & Micheal O'Keeffe
+% Christopher Gandrud & Cassandra Grafström
 % Updated 24 August 2012 for APSA 2012 Conference
 %%%%%%%%%%%%%%%%%%%%%%
 
@@ -37,6 +37,7 @@
 \section{Motivation}
 \frame{
     \frametitle{Motivation}
+    {\LARGE{Why should we care about presidential partisan inflation forecast bias?}} \\[0.5cm]
         \begin{itemize}
             \item<1-> Clark \& Arel-Bundock (2011) find policymakers at Federal Reserve are not politically indifferent.
             \item<2-> Could be information they receive is biased.
@@ -48,13 +49,20 @@
 
 \section{Describing Forecast Errors}
 \frame{
+    \frametitle{Forecast Accuracy}
+        \begin{center}
+            {\LARGE{How accurate are Fed inflation forecasts?}}
+        \end{center}
+}
+
+\frame{
   \frametitle{Forecast Errors}
   Our {\bf{dependent variable}}: \\[0.5cm]
 \[
     E_{q} = \frac{F_{q} - I_{q}}{I_{q}}
 \]
   \begin{itemize}
-    \item<2-> $F_{q} = $ inflation forecast for quarter $q$. (We use forecasts made {\emph{two quarters}} prior).
+    \item<2-> $F_{q} = $ Green Book inflation forecast for quarter $q$. (We use forecasts made {\emph{two quarters}} prior).
     \item<3-> $I_{q} = $ actual inflation in quarter $q$.
     \item<4-> $E_{q} = $ the standardized inflation forecast error for quarter $q$.
   \end{itemize}
@@ -63,10 +71,14 @@
 \frame{
   \frametitle{Forecast Errors}
   \begin{center}
-    {\LARGE{Ideally, the mean forecast error is 0.}}
+    {\LARGE{Ideally, the mean forecast error is 0.}} \\[0.5cm]
 
 	{\large{Consistent errors $\rightarrow$ ``wrong" policies.}}
   \end{center}
+}
+
+\frame[plain]{
+    \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/BaseInflation.pdf}
 }
 
 \frame[plain]{
@@ -75,8 +87,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% What might explain forecast errors? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \section{What Might Explain Forecast Errors?}
+\frame{
+    \frametitle{Possible explanations}
+        \begin{center}
+            {\LARGE{What might explain forecast errors?}}
+        \end{center}
+}
+
 \frame{
   \frametitle{Traditional understanding of Fed forecasting}
 \begin{itemize}
@@ -110,25 +128,43 @@
 \frame{
   \frametitle{Empirical Analysis Overview}
     \begin{center}
-      {\LARGE{Followed Ho et al. (2010) to issolate the relationship between presidential partisanship/elections and the other controls.}} \\[0.5cm]
+      {\LARGE{Followed Ho et al. (2010) to isolate the relationship between presidential partisanship/elections and the other controls.}} \\[0.5cm]
     \end{center}
     \begin{enumerate}
-      \item<2-> Created {\bf{matched}} data sets. 
-        One where {\emph{presidential party ID}} was the `treatment'
-        Another where {\emph{election period}} was the `treatment
-      \item<3-> Used the matched data sets in numerous {\bf{parametric models}} with standardized inflation forecast errors as the continuous dependent variable. 
+      \item<2-> Created two data sets {\bf{matched}} based on:
+        \begin{itemize}
+            \item<2-> {\emph{presidential party ID}}
+            \item<2-> {\emph{election period}}
+        \end{itemize}
+      \item<3-> Used the these in numerous {\bf{parametric models}} with standardized inflation forecast errors as the continuous dependent variable. 
     \end{enumerate}
 }
 
+\frame{
+    \frametitle{}
+        \begin{center}
+            {\LARGE{Results?}}
+        \end{center}
+}
+
 \frame[plain]{
+  \begin{center}
+    {\LARGE{Main Results}}
+  \end{center}
   \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/CoefComparePlots.pdf}
 }
 
 \frame[plain]{
+  \begin{center}
+    {\LARGE{Simulated Errors}}
+  \end{center}
   \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf}
 }
 
 \frame[plain]{
+  \begin{center}
+    {\LARGE{Interactions}}
+  \end{center}
   \includegraphics[scale=0.65]{/git_repositories/GreenBook/Paper/figure/InterPlot.pdf}
 }
 
@@ -137,7 +173,7 @@
 \section{Conclusions}
 \frame{
     \frametitle{Conclusions}
-    {\LARGE{Does presidential partisanship affect Fed inflation forecasts? \\[1cm]
+    {\LARGE{Does presidential partisanship affect Fed staff inflation forecasts? \\[1cm]
         \begin{center}
             Probably.
         \end{center}
@@ -149,8 +185,22 @@
   \frametitle{Conclusions}
   {\LARGE{How?}} \\[0.5cm]
   \begin{itemize}
-    \item<1-> Fed staff appear to have a {\bf{partisan heuristic}} that leads to a {\bf{systematic bias}} in their inflation forecasts.
-    \item<2-> FILL IN    
+    \item<1-> Fed staff {\bf{don't}} seem to have an election-based bias. 
+        \begin{itemize}
+            \item<2-> They don't seem to be trying to influence election outcomes or compensate for FOMC actions.
+        \end{itemize}
+         \\[0.3cm]
+    \item<3-> Fed staff {\bf{do}} appear to have a {\bf{partisan heuristic}} that leads to a {\bf{systematic bias}} in their inflation forecasts across presidential terms.
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Conclusions}
+  {\LARGE{Possible political implications?}} \\[0.5cm]
+  \begin{itemize}
+    \item<1-> Overly high inflation forecasts during {\bf{Democratic}} presidencies could cause the FOMC to set interest rates {\bf{`too high'}}. This could hurt Democrats' re-election chances.
+    \item<2-> Overly low forecasts during {\bf{Republican}} presidencies could cause the FOMC to set interest rates {\bf{`too low'}}. This could help Republicans' re-election chances. \\[0.3cm]
+    \item<3-> But of course, {\bf{more research is needed}}.
   \end{itemize}
 }
 
