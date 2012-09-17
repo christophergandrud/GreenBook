@@ -12,6 +12,7 @@ The paper can be entirely reproduced using the `knitr` package in **R** (we used
 
 To reproduce the paper first install the necessary R packages:
 
+```{r}
     install.packages("knitr", 
                     "ggplot2", 
                     "gridExtra",
@@ -23,7 +24,8 @@ To reproduce the paper first install the necessary R packages:
                     "xtable", 
                     "apsrtable"
                     )
-                    
+```
+              
 Then download the *Paper* folder from this repository.
 
 Finally, 'knit' the main paper file `main_GreenBook.Rnw` in this folder.
