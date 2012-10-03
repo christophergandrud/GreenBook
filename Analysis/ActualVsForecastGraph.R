@@ -1,7 +1,7 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph
 # Christopher Gandrud
-# 1 August 2012
+# 3 October 2012
 ####################
 
 library(RCurl)
@@ -31,14 +31,13 @@ absolute.colors <- c("Forecast" = "#B35B40", "Actual" = "#000000")
 
 ### Create line graph
 absInflation <- qplot(Quarter, value, geom = "line", data = cpi.abs, color = variable, linetype = variable) +
-  xlab("") + ylab("Inflation") +
+  xlab("") + ylab("Inflation\n") +
   scale_color_manual(values = absolute.colors, name = "") +
   scale_linetype(name = "") + 
   geom_vline(aes(xintercept = 1996), linetype = "dotted", colour = "grey50") +
   annotate("text", x = 2001, y = 8.5, label = "FRB/Global", colour = "grey50") +
   geom_vline(aes(xintercept = 1975), linetype = "dotted", colour = "grey50") +
   annotate("text", x = 1978, y = 1.5, label = "SEM", colour = "grey50") +
-  theme_bw() +
-  opts(axis.title.x = theme_text(size = 12, vjust = 0))
+  theme_bw(base_size = 12)
 
 print(absInflation)
