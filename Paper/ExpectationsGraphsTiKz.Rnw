@@ -2,8 +2,8 @@
 set_parent('main_GreenBook.Rnw')
 @
 
-    % Define colors for figure
-    %% See: http://colorbrewer2.org/
+% Define colors for figure
+%% See: http://colorbrewer2.org/
 \definecolor{DEM}{HTML}{2259B3}
 \definecolor{REP}{HTML}{C42B00}
 
