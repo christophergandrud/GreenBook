@@ -10,6 +10,7 @@
 \usepackage[authoryear]{natbib}
 \usepackage{setspace}
     \doublespacing
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -22,6 +23,7 @@
 \usepackage{booktabs}
 \usepackage{url}
 \usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
 \usepackage{todonotes}
 \usepackage[utf8]{inputenc} 
 
@@ -42,7 +44,7 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-\noindent\emph{Draft version. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for support.} \\[0.2cm]
+\noindent\emph{Draft version prepared for the APSA Annual Confernce 2012. \\ Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for support.} \\[0.2cm]
 
 Recent work argues that policy-makers at the United States Federal Reserve are not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred presidents. This model excludes an essential aspect of monetary policy decision-making: expectations about future inflation. We use the Fed's Green Book forecasts to test whether presidents' partisan identification shapes the estimates of future economic performance that influence FOMC policies. We find that Federal Reserve staff probably {\emph{do not}} bias their forecasts to influence Fed governors around elections. However, they {\emph{do}} systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. This suggests that while not electorally motivated, Fed staff have a partisan bias when making inflation forecasts.
 
