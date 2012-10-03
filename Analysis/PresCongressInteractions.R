@@ -8,41 +8,41 @@
 pres_party.r <- c(0, 1)
 
 # Set fitted values 
-PL11SetDem <- setx(PL11, pres_party = pres_party.r, house_dem_rep = 1.2, senate_dem_rep = 1.2)
-PL11SetRep <- setx(PL11, pres_party = pres_party.r, house_dem_rep = 0.8, senate_dem_rep = 0.8)
+NL11SetDem <- setx(NL11, pres_party = pres_party.r, house_dem_rep = 1.2, senate_dem_rep = 1.2)
+NL11SetRep <- setx(NL11, pres_party = pres_party.r, house_dem_rep = 0.8, senate_dem_rep = 0.8)
 
 # Simulate expected values.
-PL11SimDem <- sim(PL11, x = PL11SetDem)
-PL11SimRep <- sim(PL11, x = PL11SetRep)
+NL11SimDem <- sim(NL11, x = NL11SetDem)
+NL11SimRep <- sim(NL11, x = NL11SetRep)
 
 # Extract expected values from simulations (Dem)
-PL11SimDem.ev <- PL11SimDem$qi
-PL11SimDem.ev <-data.frame(PL11SimDem.ev$ev)
-names(PL11SimDem.ev) <- c("Rep. Pres.", "Dem. Pres.")
-PL11SimDem.ev <- melt(PL11SimDem.ev, measure = 1:2)
+NL11SimDem.ev <- NL11SimDem$qi
+NL11SimDem.ev <-data.frame(NL11SimDem.ev$ev)
+names(NL11SimDem.ev) <- c("Rep. Pres.", "Dem. Pres.")
+NL11SimDem.ev <- melt(NL11SimDem.ev, measure = 1:2)
 
 # Extract expected values from simulations (Rep)
-PL11SimRep.ev <- PL11SimRep$qi
-PL11SimRep.ev <-data.frame(PL11SimRep.ev$ev)
-names(PL11SimRep.ev) <- c("Rep. Pres.", "Dem. Pres.")
-PL11SimRep.ev <- melt(PL11SimRep.ev, measure = 1:2)
+NL11SimRep.ev <- NL11SimRep$qi
+NL11SimRep.ev <-data.frame(NL11SimRep.ev$ev)
+names(NL11SimRep.ev) <- c("Rep. Pres.", "Dem. Pres.")
+NL11SimRep.ev <- melt(NL11SimRep.ev, measure = 1:2)
 
 # Final clean up
-PL11SimDem.ev$variable <- factor(PL11SimDem.ev$variable)
-PL11SimDem.ev$Congress <- "Dem."
+NL11SimDem.ev$variable <- factor(NL11SimDem.ev$variable)
+NL11SimDem.ev$Congress <- "Dem."
 
-PL11SimRep.ev$variable <- factor(PL11SimRep.ev$variable)
-PL11SimRep.ev$Congress <- "Rep."
+NL11SimRep.ev$variable <- factor(NL11SimRep.ev$variable)
+NL11SimRep.ev$Congress <- "Rep."
 
 # Append both sets of simulation results
-PL11Bound <- rbind(PL11SimRep.ev, PL11SimDem.ev)
+NL11Bound <- rbind(NL11SimRep.ev, NL11SimDem.ev)
 
 #### Create plots ####
 
 # Partisan colours
 partisan.congress.colours = c("Rep." = "#C42B00", "Dem." = "#2259B3")
 
-PartyInteractionPlot <- ggplot(data = PL11Bound, aes(variable, value)) +
+PartyInteractionPlot <- ggplot(data = NL11Bound, aes(variable, value)) +
                                   geom_hline(aes(intercept= 0), linetype = "dotted") +
                                   stat_summary(fun.y = mean, geom = "line", aes(group = Congress), colour = "grey70") +
                                   geom_point(shape = 21, aes(color = Congress), alpha = I(0.05), size = 7) +
