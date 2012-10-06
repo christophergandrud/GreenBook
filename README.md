@@ -8,7 +8,7 @@ These files comprise the working paper ''Does Partisanship Affect Fed Inflation 
 
 ### Reproduce the paper
 
-The paper can be entirely reproduced using the `knitr` package in **R** (we used `knitr` version 0.7 and **R** version 2.15.1). The `knitr` package is by [Yihui Xie](http://yihui.name/). 
+The paper can be entirely reproduced using the `knitr` package in **R** (we used `knitr` version 0.8 and **R** version 2.15.1). The `knitr` package is by [Yihui Xie](http://yihui.name/). 
 
 To reproduce the paper first install the necessary R packages:
 
