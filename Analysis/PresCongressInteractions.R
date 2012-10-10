@@ -1,7 +1,7 @@
 ################
 # President*Congress Interaction Graph
 # Christopher Gandrud
-# Updated 31 July 2012 
+# Updated 10 October 2012 
 ################
 
 # Create range of values to simulate expected values across
@@ -37,12 +37,21 @@ NL11SimRep.ev$Congress <- "Rep."
 # Append both sets of simulation results
 NL11Bound <- rbind(NL11SimRep.ev, NL11SimDem.ev)
 
-#### Create plots ####
+# Remove values outside of the 2.5% and 97.5% quantiles
+# Find 2.5% and 97.5% quantiles for HRCC
+NL11BoundPer <- ddply(NL11Bound, .(variable, Congress), transform, Lower = value < quantile(value, c(0.025)))
 
+NL11BoundPer <- ddply(NL11BoundPer, .(variable, Congress), transform, Upper = value > quantile(value, c(0.975)))
+
+# Remove variables outside of the middle 95%
+NL11BoundPer <- subset(NL11BoundPer, Lower == FALSE & Upper == FALSE)
+
+
+#### Create plot ####
 # Partisan colours
 partisan.congress.colours = c("Rep." = "#C42B00", "Dem." = "#2259B3")
 
-PartyInteractionPlot <- ggplot(data = NL11Bound, aes(variable, value)) +
+PartyInteractionPlot <- ggplot(data = NL11BoundPer, aes(variable, value)) +
                                   geom_hline(aes(intercept= 0), linetype = "dotted") +
                                   stat_summary(fun.y = mean, geom = "line", aes(group = Congress), colour = "grey70") +
                                   geom_point(shape = 21, aes(color = Congress), alpha = I(0.05), size = 7) +
