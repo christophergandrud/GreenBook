@@ -354,7 +354,7 @@ Might Federal Reserve staff be taking into consideration not only the president'
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{From an OLS regression with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure show 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+        {\scriptsize{Simulated from OLS regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
     \end{singlespace}
 \end{figure}
 
