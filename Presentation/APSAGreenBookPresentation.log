@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  27 AUG 2012 11:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  10 OCT 2012 18:22
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **APSAGreenBookPresentation.tex
 (./APSAGreenBookPresentation.tex
@@ -728,6 +727,18 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count156
 \@thisrulewidth=\dimen194
 )
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \today
+           
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 (./APSAGreenBookPresentation.aux)
 \openout1 = `APSAGreenBookPresentation.aux'.
 
@@ -879,7 +890,7 @@ Overfull \hbox (12.99042pt too wide) in paragraph at lines 31--31
 [][]  
  []
 
-./APSAGreenBookPresentation.tex:31: Undefined control sequence.
+! Undefined control sequence.
 <argument> \titlevsep 
                       
 l.31 \frame{\titlepage}
@@ -890,7 +901,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./APSAGreenBookPresentation.tex:31: Missing number, treated as zero.
+! Missing number, treated as zero.
 <to be read again> 
                    \ignorespaces 
 l.31 \frame{\titlepage}
@@ -899,7 +910,7 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./APSAGreenBookPresentation.tex:31: Illegal unit of measure (pt inserted).
+! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \ignorespaces 
 l.31 \frame{\titlepage}
@@ -910,6 +921,9 @@ I'll assume that you meant to say pt, for printer's points.
 To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
+
+
+Overfull \vbox (13.36874pt too high) has occurred while \output is active []
 
 
 Overfull \hbox (3.63992pt too wide) has occurred while \output is active
@@ -1155,7 +1169,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-./APSAGreenBookPresentation.tex:186: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1176,7 +1190,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-./APSAGreenBookPresentation.tex:186: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1197,7 +1211,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-./APSAGreenBookPresentation.tex:186: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1218,7 +1232,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-./APSAGreenBookPresentation.tex:204: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1239,7 +1253,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-./APSAGreenBookPresentation.tex:204: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1260,7 +1274,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-./APSAGreenBookPresentation.tex:204: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1281,7 +1295,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-./APSAGreenBookPresentation.tex:204: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1326,10 +1340,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
  ) 
 Here is how much of TeX's memory you used:
- 15687 strings out of 493633
- 295203 string characters out of 3143377
- 363124 words of memory out of 3000000
- 18526 multiletter control sequences out of 15000+200000
+ 15691 strings out of 493633
+ 295258 string characters out of 3143377
+ 363129 words of memory out of 3000000
+ 18530 multiletter control sequences out of 15000+200000
  15102 words of font info for 56 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,439b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1346,7 +1360,7 @@ al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
 local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on APSAGreenBookPresentation.pdf (34 pages, 835006 bytes).
+Output written on APSAGreenBookPresentation.pdf (34 pages, 801170 bytes).
 PDF statistics:
  403 PDF objects out of 1000 (max. 8388607)
  327 compressed objects within 4 object streams

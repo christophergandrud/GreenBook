@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main_GreenBook.aux
+The style file: apsr.bst
+Database file #1: GreenBook.bib.bib
+Warning--entry type for "Diamond2012" isn't style-file defined
+--line 175 of file GreenBook.bib.bib
+Warning--empty note in Clark2011
+Warning--can't use both author and editor fields in Goodrich2007
+Warning--empty publisher in Goodrich2007
+Warning--empty chapter and pages in Goodrich2007
+You've used 34 entries,
+            2874 wiz_defined-function locations,
+            873 strings with 9891 characters,
+and the built_in function-call counts, 122311 in all, are:
+= -- 19878
+> -- 1422
+< -- 0
++ -- 9159
+- -- 514
+* -- 10310
+:= -- 24869
+add.period$ -- 135
+call.type$ -- 34
+change.case$ -- 442
+chr.to.int$ -- 34
+cite$ -- 38
+duplicate$ -- 499
+empty$ -- 1117
+format.name$ -- 555
+if$ -- 21895
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 32
+newline$ -- 146
+num.names$ -- 381
+pop$ -- 119
+preamble$ -- 1
+purify$ -- 510
+quote$ -- 0
+skip$ -- 424
+stack$ -- 0
+substring$ -- 27854
+swap$ -- 63
+text.length$ -- 476
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 132
+warning$ -- 4
+while$ -- 800
+width$ -- 0
+write$ -- 463
+(There were 5 warnings)
