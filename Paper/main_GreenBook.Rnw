@@ -255,7 +255,7 @@ Finally, we include a variable for the sitting Federal Reserve Board Chair.\foot
 
 \section{Results}
 
-In this section we present results from a number of parametric model specifications. We primarily use quantile-quantile plots \citep{Ho2007} to diagnose whether or not the covariates in the matched data sets were balanced (not shown).\footnote{A number of measures of covariate balance for our data sets can be recreated by running the original matching models in the source code file: {\url{https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R}}}  We are unable to achieve covariate balance for the Congressional interaction terms.\footnote{The presidential party ID and election period interaction does balance.} It is unlikely that we could achieve covariate balance on these interactions given our relatively small sample size. Because of this, we only discuss Congressional interaction term estimates from the non-matched data sets.
+In this section we present results from a number of parametric model specifications. We primarily diagnose the matching models with distributions of propensity score--the probability of a quarter being in the ``treated" group given its covariates--as well as quantile-quantile plots \citep{Ho2007} to diagnose whether or not the covariates in the matched data sets were balanced. Please see figures \ref{ElectPropensityScores} and \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created from by running the original matching models in main analysis source code file.\footnote{The file is available at: \url{https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R}.}  We are unable to achieve covariate balance for the Congressional interaction terms.\footnote{The presidential party ID and election period interaction does balance.} It is unlikely that we could achieve covariate balance on these interactions given our relatively small sample size. Because of this, we only discuss Congressional interaction term estimates from the non-matched data sets.
 
 Almost all other parametric model specifications\footnote{Tables \ref{OutputEL} and \ref{OutputPL} do show interaction estimates from matched data sets for comparison with the non-matched results in Table \ref{OutputNL}.}} are run with both the matched and unmatched data sets.\footnote{The Federal Reserve chair variable was not included in the matching models because some chairs in the pre-Volcker/Greenspan era were in office for very few quarters, making it difficult to match them.} In all of the Bayesian regressions we use the {\tt{Zelig}} default 1,000 MCMC burn-in iterations and 10,000 iterations after burn-in. We use the Heidelberger-Welch diagnostic to examine whether or not the Markov Chains converged to their stationary distributions.
 
@@ -286,7 +286,7 @@ We graphically present the key results in this section. Coefficient estimate tab
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Intercept values are not shown to maintain a reasonable scale for comparing covariate estimates.}}
+        {\scriptsize{Intercept values are not shown to maintain a reasonable scale for comparing covariate estimates. Please see the full estimates tables in the Appendix.}}
     \end{singlespace}
 \end{figure}
 
@@ -354,7 +354,7 @@ Might Federal Reserve staff be taking into consideration not only the president'
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from OLS regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+        {\scriptsize{Simulated from OLS regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
     \end{singlespace}
 \end{figure}
 
@@ -528,6 +528,33 @@ PB1Summary <- cbind(Variables, PB1Summary)
 
 print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable", label = "OutputPB", align = c("l", "l", "c", "c", "c", "c", "c")), caption.placement=getOption("xtable.caption.placement", "top"), size=getOption("xtable.size", "small"), include.rownames = FALSE)
 @
+
+
+%%%%%%% Matching Diagnostic Plots %%%%%%
+%%%%% Elections %%%%%%%
+\begin{figure}[h]
+  \caption{Matched on Election Period}
+  \label{ElectPropensityScores}
+<<ElectPropensity, echo=FALSE, fig.height=4>>=
+plot(cpi.matched.election, type = "jitter", interactive = FALSE)
+@
+    \begin{singlespace}
+        {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are election quarters or the quarter before. ``Control Units" are from all other quarters. The more similar the distribution of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+    \end{singlespace}
+\end{figure}
+
+%%%%% Presidential Party ID %%%%%%
+\begin{figure}[h]
+  \caption{Matched on Presidential Party Identification}
+  \label{PresPropensityScores}
+<<PresPropensity, echo=FALSE, fig.height=4>>=
+plot(cpi.matched.party, type = "jitter", interactive = FALSE)
+@
+  \begin{singlespace}
+      {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are quarters when the president was a Democrat. ``Control Units" are quarters when with a Republican president. The more similar the distributions of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+  \end{singlespace}
+\end{figure}
+
 
 %%%%%%% References %%%%%%%%%%%%
 
