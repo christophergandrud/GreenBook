@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.10pt}
 \beamer@sectionintoc {2}{Motivation}{3}{0}{1}
-\beamer@sectionintoc {3}{Describing Forecast Errors}{6}{0}{2}
-\beamer@sectionintoc {4}{What Might Explain Forecast Errors?}{14}{0}{3}
-\beamer@sectionintoc {5}{Empirical Tests}{20}{0}{4}
-\beamer@sectionintoc {6}{Conclusions}{27}{0}{5}
+\beamer@sectionintoc {3}{Describing Forecast Errors}{7}{0}{2}
+\beamer@sectionintoc {4}{What Might Explain Forecast Errors?}{15}{0}{3}
+\beamer@sectionintoc {5}{Empirical Tests}{21}{0}{4}
+\beamer@sectionintoc {6}{Conclusions}{28}{0}{5}
