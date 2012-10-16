@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 3 August 2012
+# 15 October 2012
 ###############
 
 library(devtools)
