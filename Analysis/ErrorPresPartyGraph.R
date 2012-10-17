@@ -6,9 +6,16 @@
 
 library(ggplot2)
 
-# Clean up data and create forecast error variable
+# Create presidential party factor variable
 cpi.data$pres_party_name <- factor(cpi.data$pres_party, label = c("Rep", "Dem"))
+
+# Create standardized forecast error variable
+cpi.data$error.prop.deflator.q0 <-  (cpi.data$GB_CPI_QTR0 - cpi.data$deflator)/cpi.data$deflator
+cpi.data$error.prop.deflator.q1 <-  (cpi.data$GB_CPI_QTR1 - cpi.data$deflator)/cpi.data$deflator
 cpi.data$error.prop.deflator.q2 <-  (cpi.data$GB_CPI_QTR2 - cpi.data$deflator)/cpi.data$deflator
+cpi.data$error.prop.deflator.q3 <-  (cpi.data$GB_CPI_QTR3 - cpi.data$deflator)/cpi.data$deflator
+cpi.data$error.prop.deflator.q4 <-  (cpi.data$GB_CPI_QTR4 - cpi.data$deflator)/cpi.data$deflator
+cpi.data$error.prop.deflator.q5 <-  (cpi.data$GB_CPI_QTR5 - cpi.data$deflator)/cpi.data$deflator
 
 # Create FRB/Global Model Variable 
 cpi.data$GlobalModel[cpi.data$Quarter > 1995.4] <- "1"
