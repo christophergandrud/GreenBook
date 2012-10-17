@@ -2,7 +2,7 @@
 # Comparative Expected Values of Inflation Error with Democratic and Republican Presidents 
 # using results from matched data where pres_party is the treatment variable and ls is the parametric model (PL7 from MainAnalysis2.R)
 # Christopher Gandrud
-# Updated 10 October 2012
+# Updated 17 October 2012
 ################
 
 # requires Zelig, reshape2, ggplot2
@@ -37,9 +37,9 @@ PartyBreak <- c("Rep", "Dem")
 NamePartyBreak <- c("Republican President", "Democratic President")
 
 ModelPartyPlot <- ggplot(data = ModelParty.evPer, aes(variable, value)) +
-                          geom_hline(aes(intercept= 0), linetype = "dotted") +
+                          geom_hline(aes(intercept = 0), linetype = "dotted") +
                           stat_summary(fun.y = mean, geom = "line", aes(group = 1), colour = "grey70") +
-                          geom_point(shape = 21, aes(color = variable), alpha = I(0.05), size = 7) +
+                          geom_point(shape = 21, aes(color = variable), alpha = I(0.05), size = 3) +
                           scale_color_manual(values = partisan.colors, guide = FALSE) + # partisan.colors defined in the main .Rnw file
                           scale_x_discrete(breaks = PartyBreak, labels = NamePartyBreak) +
                           xlab("") + ylab("Expected Standardized Forecast Error\n") +

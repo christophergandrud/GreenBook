@@ -307,7 +307,7 @@ source_url(URL)
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputPL}. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C7 from Table \ref{OutputPL}. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
