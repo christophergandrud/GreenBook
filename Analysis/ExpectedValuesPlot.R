@@ -39,10 +39,10 @@ NamePartyBreak <- c("Republican President", "Democratic President")
 ModelPartyPlot <- ggplot(data = ModelParty.evPer, aes(variable, value)) +
                           geom_hline(aes(intercept = 0), linetype = "dotted") +
                           stat_summary(fun.y = mean, geom = "line", aes(group = 1), colour = "grey70") +
-                          geom_point(shape = 21, aes(color = variable), alpha = I(0.05), size = 3) +
+                          geom_point(aes(color = variable), alpha = I(0.05), size = 3) +
                           scale_color_manual(values = partisan.colors, guide = FALSE) + # partisan.colors defined in the main .Rnw file
                           scale_x_discrete(breaks = PartyBreak, labels = NamePartyBreak) +
                           xlab("") + ylab("Expected Standardized Forecast Error\n") +
-                          theme_bw(base_size = 11)
+                          theme_bw(base_size = 15)
 
 print(ModelPartyPlot)

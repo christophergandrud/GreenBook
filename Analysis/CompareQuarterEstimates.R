@@ -236,7 +236,7 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25), labels = c(-0.5, -0.25, 0, 0.25)) +
                           xlab("\n Quarters before current quarter when forecast was made") +
                           ylab("Expected Standardized Forecast Error \n") +
-                          theme_bw(base_size = 13)
+                          theme_bw(base_size = 15)
     
 
 print(ModelPartyPlotAll)
