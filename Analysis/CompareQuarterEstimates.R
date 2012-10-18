@@ -4,8 +4,8 @@
 # 18 October 2012
 ###############
 
-# Load libraries
-library(devtools)
+## Load libraries
+# library(devtools)
 # library(MatchIt)
 # library(Zelig)
 # library(plyr)
@@ -236,7 +236,7 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           xlab("\n How many quarters old the forecast is.") +
                           ylab("Expected Standardized Forecast Error \n") +
                           guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +
-                          theme_bw(base_size = 15)
+                          theme_bw(base_size = 12)
     
 
 print(ModelPartyPlotAll)

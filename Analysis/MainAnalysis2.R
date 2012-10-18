@@ -4,10 +4,11 @@
 # 15 October 2012
 ###############
 
-library(devtools)
-library(MatchIt)
-library(Zelig)
-library(stats)
+## Load libraries
+# library(devtools)
+# library(MatchIt)
+# library(Zelig)
+# library(stats)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
 ## source_url("http://bit.ly/NXdCpk") 

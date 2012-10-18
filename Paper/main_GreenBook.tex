@@ -417,11 +417,15 @@ Our main finding is that presidential party identification had a strong positive
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C6 from Table \ref{OutputPL}. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C7 from Table \ref{OutputPL}. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. We expect that on average the Fed overestimates inflation by 13 percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately -20 percent. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. We expect that on average the Fed overestimates inflation by 
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in mean(ModelParty.ev\$value[ModelParty.ev\$variable == "Dem"] * 100) : \\  object 'ModelParty.ev' not found}} percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately 
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in mean(ModelParty.ev\$value[ModelParty.ev\$variable == "Rep"] * 100) : \\  object 'ModelParty.ev' not found}} percent. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
 
 The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate.
 
@@ -687,7 +691,7 @@ Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Thu Oct 11 10:15:21 2012
+% Thu Oct 18 09:40:15 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -723,7 +727,7 @@ Intercept & 4.60 & 1.00 & 2.66 & 4.59 & 6.57 \\
 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Thu Oct 11 10:15:22 2012
+% Thu Oct 18 09:40:16 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}

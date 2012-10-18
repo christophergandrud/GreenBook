@@ -18,9 +18,11 @@ To reproduce the paper first install the necessary R packages:
                     "gridExtra",
                     "devtools", 
                     "MatchIt", 
+                    "plyr",
                     "reshape", 
                     "reshape2", 
-                    "RCurl", 
+                    "RCurl",
+                    "stats", 
                     "xtable", 
                     "apsrtable"
                     )

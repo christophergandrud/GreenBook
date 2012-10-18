@@ -55,6 +55,23 @@ Recent work argues that policy-makers at the United States Federal Reserve are n
 
 \vspace{0.3cm}
 
+<<LoadLibraries, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE>>=
+# Load required libraries for all code chunks
+install.packages("knitr", 
+                           "ggplot2", 
+                            "gridExtra",
+                            "devtools", 
+                            "MatchIt", 
+                            "plyr",
+                            "reshape", 
+                            "reshape2", 
+                            "RCurl",
+                            "stats", 
+                            "xtable", 
+                            "apsrtable"
+                            )
+@
+
 Recent work argues that the United States Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly to ensure the (re)election of ideologically preferred administrations. This bias is assumed by Clark and Arel-Bundock to arise from a Board of Governors that prefer rightist presidents to leftist ones and so set interest rates to help Republican incumbents and hinder sitting Democratic presidents. 
 
 %%% Cassie: OK, just putting this here, even though its perhaps not a ``to do." So Bill and Vince find that interest rates change over the course of a presidency with r increasing over the course of a Democratic presidency and decreasing during a Republican one. Since we find no electoral effects, how do our findings tie to theirs?
@@ -108,8 +125,7 @@ We put the error in terms of actual inflation to control for the fact that mean 
 
 If the forecasts are unbiased then the mean error of the forecasts would be indistinguishable from zero. While the Federal Reserve's internal forecasts meet this requirement over the full history of Green Book forecasts \citep{Romer2000}, such an amalgamation disguises long periods of over- or under-predicting inflation, as noted in \cite{Capistran2006} and illustrated in Figure \ref{absolute}. Within economics the Fed's forecasts have been examined for evidence of rationality. These studies have rarely incorporated political preferences of the Fed because Federal Reserve staffers are assumed to be politically independent.
 
-We have 161 forecast quarters in our data set, spanning the first Green Book's production in June 1964 through the end of 2005. Forecasts correspond to the FOMC meeting closest to the middle of the quarter and are made up to five quarters in advance. Actual inflation corresponding to each of these quarters\footnote{Inflation was calculated by comparing quarters year-on-year. The exact inflation measure that the Federal Reserve was forecasting changed a number of times, so the measure of actual inflation used to created the forecast error variable changes accordingly. The GNP deflator indicator is used from the beginning of our sample through the end of 1991. From the first quarter of 1992 through the first quarter of 1996 actual inflation is measured with the GDP deflator.  From the second quarter of 1996 we use the chain-weighted GDP price index. } was found using data from the Federal Reserve's FRED website.\footnote{See \url{http://research.stlouisfed.org/fred2/}. Accessed December 2011.} Absolute actual inflation for each quarter and inflation forecasts made two quarters before are compared in Figure \ref{absolute}. In general we use forecasts made two quarters before.\footnote{Using these two quarter forecasts constricts our observations to 150 since, apart from the first quarter of 1968, two quarter forecasts are not included in the Green Book data before the fourth quarter of 1968.} 
-
+We have 161 forecast quarters in our data set, spanning the first Green Book's production in June 1964 through the end of 2005. Forecasts correspond to the FOMC meeting closest to the middle of the quarter and are made up to five quarters in advance. Actual inflation corresponding to each of these quarters\footnote{Inflation was calculated by comparing quarters year-on-year. The exact inflation measure that the Federal Reserve was forecasting changed a number of times, so the measure of actual inflation used to created the forecast error variable changes accordingly. The GNP deflator indicator is used from the beginning of our sample through the end of 1991. From the first quarter of 1992 through the first quarter of 1996 actual inflation is measured with the GDP deflator.  From the second quarter of 1996 we use the chain-weighted GDP price index. } was found using data from the Federal Reserve's FRED website.\footnote{See \url{http://research.stlouisfed.org/fred2/}. Accessed December 2011.} Absolute actual inflation for each quarter and inflation forecasts made two quarters before are compared in Figure \ref{absolute}. In general we use focus on results from forecasts made two quarters before.\footnote{Using these two quarter forecasts constricts our observations to 150 since, apart from the first quarter of 1968, two quarter forecasts are not included in the Green Book data before the fourth quarter of 1968.} We do examine errors made by forecasters in the current quarter and all quarters up to five quarters before. These are all of the types of inflation forecasts made available in the Green Book. Figure \ref{ExpectValueParty} shows results for possible presidential partisanship bias using all of these forecasts. In general, the results are the same regardless of the forecast used. However, for simplicity, the majority of results we show are from models examining forecasts made two quarters beforehand.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%  Raw Green Book estimate vs. actual graph
 \begin{figure}[t]
@@ -299,19 +315,19 @@ Our main finding is that presidential party identification had a strong positive
     \label{ExpectValueParty}
     \begin{center}
 
-<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.width=6, fig.height=4, out.width='0.7\\linewidth'>>=
+<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.7\\linewidth'>>=
 
-URL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ExpectedValuesPlot.R"
+URL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/CompareQuarterEstimates.R"
 source_url(URL)
 
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C7 from Table \ref{OutputPL}. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C7 from Table \ref{OutputPL}. \\ The matching methods only include complete cases. Due two missing values early in the observation period we ran a different matching model for forecasts made three to five quarters beforehand. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal Bayesian linear regression model matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. We expect that on average the Fed overestimates inflation by \Sexpr{format(mean(ModelParty.ev$value[ModelParty.ev$variable == "Dem"]*100), digits = 2)} percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately \Sexpr{format(mean(ModelParty.ev$value[ModelParty.ev$variable == "Rep"]*100), digits = 2)} percent. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal linear regression model matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by \Sexpr{format(mean(ModelParty.evPer2$value[ModelParty.evPer2$variable == "Dem"]*100), digits = 2)} percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately \Sexpr{format(mean(ModelParty.evPer2$value[ModelParty.evPer2$variable == "Rep"]*100), digits = 2)} percent. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
 
 The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate.
 
