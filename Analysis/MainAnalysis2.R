@@ -6,9 +6,10 @@
 
 ## Load libraries
 # library(devtools)
-# library(MatchIt)
-# library(Zelig)
-# library(stats)
+ library(MatchIt)
+ library(Zelig)
+ library(stats)
+ library(plyr)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
 ## source_url("http://bit.ly/NXdCpk") 

@@ -1,0 +1,15 @@
+reshape
+plyr
+ggplot2
+reshape2
+RCurl
+bitops
+devtools
+knitr
+stats
+graphics
+grDevices
+utils
+datasets
+methods
+base

@@ -55,23 +55,6 @@ Recent work argues that policy-makers at the United States Federal Reserve are n
 
 \vspace{0.3cm}
 
-<<LoadLibraries, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE>>=
-# Load required libraries for all code chunks
-install.packages("knitr", 
-                           "ggplot2", 
-                            "gridExtra",
-                            "devtools", 
-                            "MatchIt", 
-                            "plyr",
-                            "reshape", 
-                            "reshape2", 
-                            "RCurl",
-                            "stats", 
-                            "xtable", 
-                            "apsrtable"
-                            )
-@
-
 Recent work argues that the United States Federal Reserve is not politically indifferent \citep{Clark2011}. The Fed tends to choose looser monetary policies during Republican administrations, possibly to ensure the (re)election of ideologically preferred administrations. This bias is assumed by Clark and Arel-Bundock to arise from a Board of Governors that prefer rightist presidents to leftist ones and so set interest rates to help Republican incumbents and hinder sitting Democratic presidents. 
 
 %%% Cassie: OK, just putting this here, even though its perhaps not a ``to do." So Bill and Vince find that interest rates change over the course of a presidency with r increasing over the course of a Democratic presidency and decreasing during a Republican one. Since we find no electoral effects, how do our findings tie to theirs?
