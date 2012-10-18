@@ -1,14 +1,14 @@
 ###############
 # Graph of simulated errors across all quarter estimates for model PL7 (C7 in the manuscript table)
 # Christopher Gandrud 
-# 17 October 2012
+# 18 October 2012
 ###############
 
 # Load libraries
 library(devtools)
-library(MatchIt)
-library(Zelig)
-library(plyr)
+# library(MatchIt)
+# library(Zelig)
+# library(plyr)
 
 # To run as a stand alone file. First, run the following files from the paper:
 ## source_url("http://bit.ly/NXdCpk") 
@@ -230,12 +230,12 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           stat_summary(fun.y = mean, geom = "line", aes(group = variable), colour = "grey70") +
                           #facet_grid(~ variable) +
                           geom_point(aes(colour = variable), alpha = I(0.05), size = 3) +
-                          scale_color_manual(values = partisan.colors, 
-                                             guide = FALSE) + # partisan.colors defined in the main .Rnw file
+                          scale_color_manual(values = partisan.colors, name = "") + # partisan.colors defined in the main .Rnw file
                           scale_x_reverse() +
                           scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25), labels = c(-0.5, -0.25, 0, 0.25)) +
-                          xlab("\n Quarters before current quarter when forecast was made") +
+                          xlab("\n How many quarters old the forecast is.") +
                           ylab("Expected Standardized Forecast Error \n") +
+                          guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +
                           theme_bw(base_size = 15)
     
 
