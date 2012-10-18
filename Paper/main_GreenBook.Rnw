@@ -112,7 +112,7 @@ We have 161 forecast quarters in our data set, spanning the first Green Book's p
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%  Raw Green Book estimate vs. actual graph
 \begin{figure}[t]
-    \caption{Green Book Inflation Forecasts and Actual Quarterly Inflation}
+    \caption{Green Book Inflation Forecasts Made 2 Qtr. Beforehand and Actual Quarterly Inflation}
     \label{absolute}
     \begin{center}
     
@@ -142,7 +142,7 @@ This summary examination of inflation forecast errors suggests that there might 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%   Green Book Error Across Time
 \begin{figure}[t]
-    \caption{Inflation Forecast Errors (1969 - 2005)}
+    \caption{Errors in Inflation Forecasts Made 2 Qtr. Beforehand (1969 - 2005)}
     \label{errors_over_time}
     \begin{center}
     
@@ -294,7 +294,7 @@ We graphically present the key results in this section. Coefficient estimate tab
 Our main finding is that presidential party identification had a strong positive association with Federal Reserve staff inflation forecast errors across all model specifications. Inflation forecasts are higher during Democratic presidencies than Republican ones. This finding is what we would expect if Federal Reserve staff have a presidential partisan heuristic and is very robust. For instance, the 95\% confidence band around the coefficient estimate moves somewhat further away from 0--i.e. no relationship--when using matched data (see Figure \ref{CoefComparePlots}).  
 
 \begin{figure}[t]
-    \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies}
+    \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies (all forecasts)}
     \label{ExpectValueParty}
     \begin{center}
 
@@ -330,7 +330,7 @@ Might Federal Reserve staff be taking into consideration not only the president'
 
 %%%%%%% President/Congress Interaction Plot %%%%%%%%
 \begin{figure}[t]
-    \caption{Simulated Expected Inflation Forecast Error with Interactions Between President Party ID and Election Period, as well as President Party ID and Congressional Party Control (Non-matched Data)}
+    \caption{Simulated Expected Inflation Forecast Error with Interactions Between President Party ID and Election Period, as well as President Party ID and Congressional Party Control (Non-matched data, Qtr. 2 forecasts)}
     \label{InterPlot}
     \begin{center}
 
