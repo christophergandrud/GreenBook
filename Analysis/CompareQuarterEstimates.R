@@ -1,7 +1,7 @@
 ###############
 # Graph of simulated errors across all quarter estimates for model PL7 (C7 in the manuscript table)
 # Christopher Gandrud 
-# 18 October 2012
+# 19 October 2012
 ###############
 
 ## Load libraries
@@ -12,7 +12,6 @@
 
 # To run as a stand alone file. First, run the following files from the paper:
 ## source_url("http://bit.ly/NXdCpk") 
-## source_url("http://bit.ly/Nehu34")
 
 #### Run two matching models ####
 # One model is for estimates made 0 through 2 quarters before a given quarter. There is full data for these estimates.

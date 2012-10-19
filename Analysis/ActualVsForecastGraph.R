@@ -1,7 +1,7 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph
 # Christopher Gandrud
-# 3 October 2012
+# 19 October 2012
 ####################
 
 library(RCurl)
@@ -14,6 +14,8 @@ library(ggplot2)
 url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi.csv"
 cpi.data <- getURL(url)
 cpi.data <- read.csv(textConnection(cpi.data))
+
+##### Create DV, Other Cleaning ########
 
 # Create presidential party factor variable
 cpi.data$pres_party_name <- factor(cpi.data$pres_party, label = c("Rep", "Dem"))
@@ -48,6 +50,7 @@ cpi.data$president <- as.factor(cpi.data$presTerm)
 #cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi.csv") # Load data locally from Christopher's computer
 # cpi.data <- read.dta("http://dl.dropbox.com/u/12581470/code/Replicability_code/GreenBook/GB_FRED_cpi.dta") # Load data from Dropbox 
 
+##### Create Plot #######
 ### Melt data, i.e. reshape
 cpi.abs <- melt(cpi.data, id = "Quarter", measure = c("GB_CPI_QTR2", "deflator"))
 

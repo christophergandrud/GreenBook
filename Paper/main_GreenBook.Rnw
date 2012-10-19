@@ -138,6 +138,8 @@ Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Br
 
 The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
 
+The mean forecast error across Republican presidencies was \Sexpr{}
+
 This summary examination of inflation forecast errors suggests that there might be a partisan bias. What might explain this?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%   Green Book Error Across Time

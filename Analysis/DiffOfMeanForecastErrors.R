@@ -6,7 +6,7 @@
 
 ## This code creates a confidence interval of for the difference of mean forecast error in Democratic and Republican presidencies.
 
-# library(devtools)
+#library(devtools)
 library(plotrix)
 
 # To run as a stand alone file. First, run the following file from the paper:
@@ -18,9 +18,14 @@ RepSubset <- subset(cpi.data$error.prop.deflator.q2,
 DemSubset <- subset(cpi.data$error.prop.deflator.q2,
                     cpi.data$pres_party == 1)
 
-# Visually examine distributions
-#RepHist <- hist(RepSubset)
-#DemHist <- hist(DemSubset)
+# Test for normality
+# qqnorm(RepSubset); qqplot(RepSubset, lty = 2)
+# qqnorm(DemSubset); qqplot(DemSubset, lty = 2)
+
+# T-test that the subset means are differrent from 0
+TRep <- t.test(RepSubset, conf.level = 0.99)
+TDem <- t.test(DemSubset, conf.level = 0.99)
+
 
 # Find means for each subsample
 RepMean <- mean(RepSubset)

@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 15 October 2012
+# 19 October 2012
 ###############
 
 ## Load libraries
@@ -9,11 +9,10 @@
  library(MatchIt)
  library(Zelig)
  library(stats)
- library(plyr)
+# library(plyr)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
 ## source_url("http://bit.ly/NXdCpk") 
-## source_url("http://bit.ly/Nehu34")
 
 # Subset for complete (nonmissing) values
 # matchit requires data sets to have no missing values
