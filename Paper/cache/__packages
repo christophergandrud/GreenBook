@@ -1,14 +1,15 @@
 reshape
+plyr
 MCMCpack
 coda
 lattice
 Matching
 rgenoud
-plyr
 Zelig
 boot
 MatchIt
 MASS
+plotrix
 ggplot2
 reshape2
 RCurl
