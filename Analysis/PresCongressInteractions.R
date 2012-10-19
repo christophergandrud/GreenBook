@@ -53,10 +53,14 @@ partisan.congress.colours = c("Rep." = "#C42B00", "Dem." = "#2259B3")
 
 PartyInteractionPlot <- ggplot(data = NL11BoundPer, aes(variable, value)) +
                                   geom_hline(aes(intercept= 0), linetype = "dotted") +
-                                  stat_summary(fun.y = mean, geom = "line", aes(group = Congress), colour = "grey70") +
-                                  geom_point(shape = 21, aes(color = Congress), alpha = I(0.05), size = 7) +
-                                  scale_y_continuous(limits = c(-1, 0.75)) +
+                                  stat_summary(fun.y = mean, geom = "line", 
+                                               aes(group = Congress), colour = "grey70") +
+                                  geom_point(aes(color = Congress), alpha = I(0.01), size = 3) +
                                   xlab("") + ylab("") +
-                                  scale_color_manual(values = partisan.congress.colours, name = "Control\nof\nCongress") +
+                                  scale_color_manual(values = partisan.congress.colours, 
+                                                     name = "Control\nof\nCongress") +
+                                  scale_y_continuous(limits = c(-0.75, 0.75), 
+                                                     breaks = c(-0.5, 0, 0.5),
+                                                     labels = c(-0.5, 0, 0.5)) +
                                   guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                   theme_bw(base_size = 11)

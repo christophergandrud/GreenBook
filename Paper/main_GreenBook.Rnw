@@ -134,13 +134,13 @@ We have 161 forecast quarters in our data set, spanning the first Green Book's p
 
 \subsection{Are There Partisan Forecast Errors?}
 
-Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This was not the case. The mean forecast error across Republican presidencies was \Sexpr{round(RepMean, digit = 2)} and \Sexpry{round(DemMean, digit = 2)}.\footnote(These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0 and each other at the 99\% confidence level.}
-
-Figure \ref{errors_over_time} plots forecast errors across our sample. We've shaded out errors made between $+/- 10$ percent of actual inflation. These could be considered relatively minimal errors. The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
-
 <<DifferenceOfMeans, echo=FALSE, message=FALSE, warning=FALSE>>=
-  source_github("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiffOfMeanForecastErrors.R")
+  source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiffOfMeanForecastErrors.R")
 @
+
+Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This was not the case. From 1969 through 2005 the mean standardized forecast error was \Sexpr{round(mean(cpi.data$error.prop.deflator.q2), digit = 2)}; forecasts were off by about \Sexpr{round(mean(cpi.data$error.prop.deflator.q2), digit = 2) *100} percent. However, the mean standardized forecast error across Republican presidencies was \Sexpr{round(RepMean, digit = 2)} and \Sexpr{round(DemMean, digit = 2)} across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0 and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
+
+Figure \ref{errors_over_time} plots forecast errors across our sample. The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
 
 This summary examination of inflation forecast errors suggests that there might be a partisan bias. What might explain this?
 
@@ -150,7 +150,7 @@ This summary examination of inflation forecast errors suggests that there might 
     \label{errors_over_time}
     \begin{center}
     
-<<PartisanError, warning=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
+<<PartisanError, warning=FALSE, message=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
     
     # Run graph source code
     PartisanErrorURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ErrorPresPartyGraph.R"
@@ -159,9 +159,7 @@ This summary examination of inflation forecast errors suggests that there might 
     
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Note: An error of 0 indicates that inflation was perfectly predicted. \\
-            The grey shaded box indicates minimal error, i.e. $+/- 0.1$.
-        }}
+        {\scriptsize{Note: An error of 0 indicates that inflation was perfectly predicted.}}
     \end{singlespace}
 \end{figure}
 
@@ -303,10 +301,7 @@ Our main finding is that presidential party identification had a strong positive
     \begin{center}
 
 <<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.7\\linewidth'>>=
-
-URL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/CompareQuarterEstimates.R"
-source_url(URL)
-
+source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/CompareQuarterEstimates.R")
 @
     \end{center}
     \begin{singlespace}
@@ -314,7 +309,7 @@ source_url(URL)
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{1000 simulations were run on a normal linear regression model matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by \Sexpr{format(mean(ModelParty.evPer2$value[ModelParty.evPer2$variable == "Dem"]*100), digits = 2)} percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately \Sexpr{format(mean(ModelParty.evPer2$value[ModelParty.evPer2$variable == "Rep"]*100), digits = 2)} percent. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by \Sexpr{format(mean(ModelParty.evPer2$value[ModelParty.evPer2$variable == "Dem"]*100), digits = 2)} percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately \Sexpr{format(mean(ModelParty.evPer2$value[ModelParty.evPer2$variable == "Rep"]*100), digits = 2)} percent. Clearly, at least between 1970 and 2005, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
 
 The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate.
 

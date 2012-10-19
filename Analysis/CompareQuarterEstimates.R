@@ -148,6 +148,9 @@ ModelParty.evPer2 <- ddply(ModelParty.evPer2, .(variable), transform, Upper = va
 # Remove variables outside of the middle 95%
 ModelParty.evPer2 <- subset(ModelParty.evPer2, Lower == FALSE & Upper == FALSE)
 
+## Save estimates to be used in the in-text equations
+write.csv(ModelParty.evPer2, "cache/SimQrt2.csv")
+
 ## Quarter 3 ##
 # Set fitted values, all variables other than pres_party set to their means
 ModelParty3 <- setx(PL.35.3, pres_party = pres_party.r)
@@ -229,9 +232,11 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           stat_summary(fun.y = mean, geom = "line", aes(group = variable), colour = "grey70") +
                           #facet_grid(~ variable) +
                           geom_point(aes(colour = variable), alpha = I(0.05), size = 3) +
-                          scale_color_manual(values = partisan.colors, name = "") + # partisan.colors defined in the main .Rnw file
+                          scale_color_manual(values = partisan.colors, 
+                                             name = "") + # partisan.colors defined in the main .Rnw file
                           scale_x_reverse() +
-                          scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25), labels = c(-0.5, -0.25, 0, 0.25)) +
+                          scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25), 
+                                             labels = c(-0.5, -0.25, 0, 0.25)) +
                           xlab("\n How many quarters old the forecast is.") +
                           ylab("Expected Standardized Forecast Error \n") +
                           guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +

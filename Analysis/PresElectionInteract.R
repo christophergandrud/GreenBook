@@ -1,7 +1,7 @@
 ################
 # President*Election Interaction Graph
 # Christopher Gandrud
-# Updated 10 October 2012 
+# Updated 19 October 2012 
 ################
 
 # Create range of values to simulate expected values across
@@ -53,9 +53,12 @@ election.colours = c("No" = "#B35B40", "Yes" = "#696969")
 
 ElectionInteractionPlot <- ggplot(data = NL8BoundPer, aes(variable, value)) +
                                 geom_hline(aes(intercept= 0), linetype = "dotted") +
-                                stat_summary(fun.y = mean, geom = "line", aes(group = Election), colour = "grey70") +
-                                geom_point(shape = 21, aes(color = Election), alpha = I(0.07), size = 7) +
-                                scale_y_continuous(limits = c(-1, 0.75)) +
+                                stat_summary(fun.y = mean, geom = "line", 
+                                             aes(group = Election), colour = "grey70") +
+                                geom_point(aes(color = Election), alpha = I(0.01), size = 3) +
+                                scale_y_continuous(limits = c(-0.75, 0.75), 
+                                                   breaks = c(-0.5, 0, 0.5),
+                                                   labels = c(-0.5, 0, 0.5)) +
                                 xlab("") + ylab("Expected Standardized Forecast Error\n") +
                                 scale_color_manual(values = election.colours, name = "Election\nPeriod") +
                                 guides(colour = guide_legend(override.aes = list(alpha = 1))) +
