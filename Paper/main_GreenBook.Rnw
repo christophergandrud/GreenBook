@@ -134,11 +134,13 @@ We have 161 forecast quarters in our data set, spanning the first Green Book's p
 
 \subsection{Are There Partisan Forecast Errors?}
 
-Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. Looking only at forecast errors and the United States president's partisan identity, is it plausible that there is a partisan bias to Green Book inflation forecasts? Figure \ref{errors_over_time} plots forecast errors across our sample. We've shaded out errors made between $+/- 10$ percent of actual inflation. These could be considered relatively minimal errors. 
+Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This was not the case. The mean forecast error across Republican presidencies was \Sexpr{round(RepMean, digit = 2)} and \Sexpry{round(DemMean, digit = 2)}.\footnote(These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0 and each other at the 99\% confidence level.}
 
-The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
+Figure \ref{errors_over_time} plots forecast errors across our sample. We've shaded out errors made between $+/- 10$ percent of actual inflation. These could be considered relatively minimal errors. The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
 
-The mean forecast error across Republican presidencies was \Sexpr{}
+<<DifferenceOfMeans, echo=FALSE, message=FALSE, warning=FALSE>>=
+  source_github("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiffOfMeanForecastErrors.R")
+@
 
 This summary examination of inflation forecast errors suggests that there might be a partisan bias. What might explain this?
 
