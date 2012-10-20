@@ -6,6 +6,7 @@
 
 
 # library(ggplot2)
+# library(devtools)
 
 # To run as a stand alone file. First, run the following file from the paper:
 ## source_url("http://bit.ly/NXdCpk") 
@@ -16,7 +17,8 @@
 partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
 errors.time <- ggplot(cpi.data, aes(x = Quarter, y = error.prop.deflator.q2)) +
-                      geom_hline(yintercept = 0, linetype = "dashed", size = 1, alpha = I(0.5)) +
+                      geom_hline(yintercept = 0, size = 1,
+                                 alpha = I(0.5)) +
                       geom_point(aes(color = pres_party_name)) +
                       stat_smooth(method = "lm", aes(group = presTerm, color = pres_party_name, fill = pres_party_name)) +
                       scale_color_manual(values = partisan.colors, name = "") +
