@@ -237,7 +237,7 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           scale_x_reverse() +
                           scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25), 
                                              labels = c(-0.5, -0.25, 0, 0.25)) +
-                          xlab("\n Forecast Age in Quarters") +
+                          xlab("\n Age of Forecast in Quarters") +
                           ylab("Expected Standardized Forecast Error \n") +
                           guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +
                           theme_bw(base_size = 12)
