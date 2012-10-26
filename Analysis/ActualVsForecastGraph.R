@@ -69,6 +69,9 @@ absInflation <- qplot(Quarter, value, geom = "line", data = cpi.abs, color = var
   xlab("") + ylab("Inflation\n") +
   scale_color_manual(values = absolute.colors, name = "") +
   scale_linetype(name = "") + 
+  scale_x_continuous(limits = c(1968, 2007),
+                     breaks = c(1970, 1980, 1990, 2000, 2007), 
+                     labels = c(1970, 1980, 1990, 2000, 2007)) +
   geom_vline(aes(xintercept = 1996), linetype = "dotted", colour = "grey50") +
   annotate("text", x = 2001, y = 8.5, label = "FRB/Global", colour = "grey50") +
   geom_vline(aes(xintercept = 1975), linetype = "dotted", colour = "grey50") +

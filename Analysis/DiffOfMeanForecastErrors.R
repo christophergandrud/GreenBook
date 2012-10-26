@@ -28,8 +28,8 @@ TDem <- t.test(DemSubset, conf.level = 0.99)
 
 
 # Find means for each subsample
-RepMean <- mean(RepSubset)
-DemMean <- mean(DemSubset)
+RepMean <- mean(RepSubset, na.rm = TRUE)
+DemMean <- mean(DemSubset, na.rm = TRUE)
 
 # Find the mean difference
 MeanDiff <- DemMean - RepMean
