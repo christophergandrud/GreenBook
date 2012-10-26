@@ -205,6 +205,7 @@ use "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/cpi_estima
 	gen PresParty = 1 if pres_party == 0
 	replace PresParty = 0 if pres_party == 1
 	drop pres_party
+	rename PresParty pres_party
 
 * Elections
 	merge m:m Quarter using "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/pres_elections_quarter.dta"
