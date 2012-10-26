@@ -227,7 +227,7 @@ use "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/cpi_estima
 		drop id
 
 
-saveold "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi2006.dta", replace
+saveold "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta", replace
 
 ** Manufacturing Output (% change from same quarter in previous year) from FRED
 

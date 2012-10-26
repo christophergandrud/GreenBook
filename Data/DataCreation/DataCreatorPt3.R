@@ -38,7 +38,7 @@ Funds$FedFunds2qChange <- round(Funds$FedFunds2qChange, digits = 2)
 Funds <- Funds[-1:-2, ]
 
 # merge with cpi.data
-cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi2006.csv")
+cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv")
 
 cpi.data <- merge(cpi.data, Funds)
 
