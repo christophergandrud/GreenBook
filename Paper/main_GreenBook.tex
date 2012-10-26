@@ -5,7 +5,62 @@
 
 % !Rnw weave = knitr
 
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{article}\usepackage{graphicx, color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
+\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
+\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
+\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
+\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
+\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
+\newcommand{\hlslot}[1]{\textit{#1}}%
+\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 \usepackage{fullpage}
 \usepackage[authoryear]{natbib}
 \usepackage{setspace}
@@ -135,32 +190,631 @@ We have 165 forecast quarters in our data set, spanning the first Green Book's p
 
 
 
+Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This was not the case. From 1969 through 2006 the mean standardized forecast error was -0.03, i.e. forecasts were off by about -3 percent. However, the mean  forecast error across Republican presidencies was -11 percent and 13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0 and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
+
+Figure \ref{errors_over_time} plots forecast errors across our sample. The first thing to note is that inflation was almost never underestimated during the three Democratic presidential terms in our sample. Also, the largest overestimates were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Though over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was much lower than before, as we can see in Figure \ref{absolute}.
+
+This summary examination of inflation forecast errors suggests that there might be a partisan bias. What might explain this?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Green Book Error Across Time
+\begin{figure}[t]
+    \caption{Errors in Inflation Forecasts Made 2 Qtr. Beforehand (1969 - 2006)}
+    \label{errors_over_time}
+    \begin{center}
+    
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/PartisanError} 
+\end{knitrout}
+
+    
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Note: An error of 0 indicates that inflation was perfectly predicted.}}
+    \end{singlespace}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section 2: Possible Explanations of Fed Inflation Forecast (In)accuracy %%%%%%%%%
+\section{Possible Explanations of Fed Inflation Forecast (In)accuracy}
+
+In this section we try to understand trends in Fed inflation forecast errors by discussing theories from the the political economy literature that provide possible explanations of why forecasts seem to have a partisan bias. 
+
+\subsection{Econometric Models \& Accuracy}
+
+Before digging into the partisan explanations of forecast errors, which would largely be the result of Federal Reserve staff judgement, it is worth hypothesizing that perhaps forecast (in)accuracy is the result of systematic errors in the the econometric models. Presumably, the move to rational expectations ought to improve forecast accuracy relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in the earlier models that would lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. None of these over or underestimates, however, ought to have been linked to the party of the president. We would, however, expect that the direction of forecast errors' may change after 1996 than in the earlier era.\footnote{The magnitude of the errors may also change as the models improve. However, in this paper we are primarily concerned with patterns in the direction of the errors, i.e. whether or not there are systematic over or underestimates.}
+
+%Random thought: what if the models assume that voters have partisan expectations and behave according to those partisan characteristics. Then when the partisans fail to do so or when voters react to these as they should (by not reacting) this results in over or under-shooting inflation by the Fed, particularly under the early model?
+
+\subsection{Partisan Biases \& Accuracy}
+
+There is an extensive literature looking for partisan effects in monetary policy, but no studies examining the impact of presidential partisanship in predictions of inflation. Studies have looked for evidence of partisan preferences manifesting themselves in the monetary policies chosen by the FOMC. There are two essential reasons that partisan effects would be found in policy: either a preference for one party over another by members of the FOMC or an expectation that the parties will engage in systematically different policies that will influence inflation, and so the Fed supports more preferred policies and attempts to inhibit less preferred ones. 
+
+The preference arguments assume that a conservative central banker will prefer the election of politicians who hold more similar inflationary preferences (those with a stronger preference for low inflation). In this US, this would lead to an assumption that the Federal Reserve would implement policies that supported the electoral prospects of Republican incumbents and harm the electoral prospects of Democratic incumbents \citep{Clark2011,Hakes1988,Sieg1997,Tootell1996}.
+
+The rational partisan expectations literature assumes that central bankers do not have an innate preference for one party over another, but instead expect Democrats and Republicans to behave differently in office \citep{Alesina1991,Hibbs1994}. It is these behavioral expectations that would lead to different monetary policy outcomes under Democratic and Republican presidencies with the former engaging in more expansionary and inflationary policies than the latter. In order to stave off a rise in inflation under a Democratic presidency the Fed would tighten monetary policy (raise interest rates or reduce the money supply); because Republicans expected to prefer low inflation, they will pursue low inflation policies and so the FOMC can accommodate the President's policies without fear of stoking inflation. This argument is again based on the assumed preferences of partisans, but does not require the FOMC to be politically biased as the former does. 
+
+Arguments similar to those in the literature on partisan monetary cycles can similarly predict differences in inflation forecasts. We present three theoretical arguments about how inflation expectations would differ by the President's party: the partisan preference theory, the monetary expectations theory, and the partisan heuristics theory (see Figure \ref{ExpectGraphs} for an illustration of the theories' inflation error predictions). Of the three, we find the partisan heuristics theory to be both most consistent with the data and the most reasonable.
+
+
+
+
+% Define colors for figure
+%% See: http://colorbrewer2.org/
+\definecolor{DEM}{HTML}{2259B3}
+\definecolor{REP}{HTML}{C42B00}
+
+\begin{figure}
+  \caption{Stylized Inflation Forecast Error Predictions}
+  \label{ExpectGraphs}
+  \begin{center}
+
+    \vspace{0.25cm}
+
+    \tikzstyle{bagMain} = [text width = 5cm]
+    \tikzstyle{bagDem} = [text = DEM]
+    \tikzstyle{bagRep} = [text = REP]
+
+\begin{tikzpicture}
+
+  %%%% Partisan Preferences
+  \node (PP) at (-7, 5) [bagMain]{{\bf{Partisan Preferences}}};
+  \node (E) at (-10.5, 3.25) [bagMain, rotate=90]{{\emph{Forecast Error}}};
+  \node (T) at (-7.3, -0.5) [bagMain]{{\emph{Duration of Pres. Term}}};
+  
+  \draw (-10, 0) -- (-6, 0);
+  \draw (-10, 0) -- (-10, 4);
+  
+  \draw[color=REP, opacity=0.5] (-9.5, 2) -- (-7.5, 2); 
+  \draw[color=DEM, opacity=0.5] (-9.5, 2) -- (-7.5, 2); 
+
+  \draw[color=REP, opacity=0.5] (-7.5, 2) -- (-6.5, 1); 
+  \draw[color=DEM, opacity=0.5] (-7.5, 2) -- (-6.5, 3); 
+
+  \node (R1) at (-6.5, 0.5) [bagRep]{Rep.};
+  \node (D1) at (-6.5, 3.5) [bagDem]{Dem.};
+
+  
+  %%%% Monetary Expectations
+  \node (PP) at (-2, 5) [bagMain]{{\bf{Monetary Expectations}}};
+  
+  \draw (-5, 0) -- (-1, 0);
+  \draw (-5, 0) -- (-5, 4);
+  
+  \draw[color=REP, opacity=0.5] (-4.5, 2) -- (-2.5, 2); 
+  \draw[color=DEM, opacity=0.5] (-4.5, 2) -- (-2.5, 2); 
+
+  \draw[color=DEM, opacity=0.5] (-2.5, 2) -- (-1.5, 1); 
+  \draw[color=REP, opacity=0.5] (-2.5, 2) -- (-1.5, 3); 
+
+  \node (D2) at (-1.5, 0.5) [bagDem]{Dem.};
+  \node (R2) at (-1.5, 3.5) [bagRep]{Rep.};
+  
+  
+  %%%% Partisan Heuristics
+  
+  \node (PP) at (3, 5) [bagMain]{{\bf{Partisan Heuristics}}};
+  
+  \draw (0, 0) -- (4, 0);
+  \draw (0, 0) -- (0, 4);
+  
+  \draw[color=DEM, opacity=0.5] (0.5, 3) -- (4, 3); 
+  \draw[color=REP, opacity=0.5] (0.5, 1) -- (4, 1); 
+
+  \node (D3) at (3.5, 3.5) [bagDem]{Dem.};
+  \node (R3) at (3.5, 0.5) [bagRep]{Rep.};
+
+  \end{tikzpicture}
+  \end{center}
+\end{figure}
+
+
+
+
+The {\bf{partisan preference theory}} is similar to the partisan preference model of monetary policy described above. This theory assumes that Fed staff have a preference for more inflation averse politicians to control the executive and so produce inflation forecasts that would justify the implementation of easy monetary policy under Republican administrations and tight money under Democratic administrations, particularly as presidential elections approach. The FOMC, choosing policy based on these forecasts would then implement monetary policies to optimize its utility function, which would not need to depend upon presidential partisanship. This implies that inflation realized inflation would be higher than forecast during Republican presidencies and lower than forecast for Democratic presidencies. These effects would be particularly pronounced in the quarters running-up to elections as the Fed staff attempts to help its favored political party \citep{Beck1987,Grier1987}. Further, accounting for actual changes in monetary policy ought to increase the magnitude of partisan effects. This is because predictions of inflation during Republican presidencies, for example, will be lower than what the staff actually expects. If looser monetary policy is implemented in response to these low inflation forecasts than would have been chosen under the staff's true inflationary expectations, inflation will actually be higher than the staff's original ``true" forecast.
+
+The {\bf{monetary expectations theory}} is based on a belief held by Federal Reserve economists that the members of the FOMC will engage in partisan monetary policy by lowering interest rates under conservative administrations and increasing them under liberal presidents. In this formulation, the Fed staff has no preference for one party over another, but knows that the FOMC does and so formulates estimates in order to counter the FOMC's policies \citep{Clark2011}. If Fed economists believe that the Open Market Committee will choose higher interest rates during Democratic presidencies and vice versa for Republicans, then, assuming they are interested in the implementation of optimal monetary policies, they would produce forecasts that are higher than expected during Republican administrations and the lower for Democrats (the opposite of what was expected in the partisan preference theory above). If the FOMC fails to note the compensation made by the Fed staff, then we would expect that after accounting for policies implemented inflation forecasts would be higher than or equal to realized inflation during Republican terms and lower than or equal forecast under Democratic administrations. %Christopher: I'm not entirely sure about this. I am certain that it would be higher than the ideal inflation rate, but lower than it would have been had they given their real estimates.
+
+If the FOMC anticipated these compensatory biases in staff forecasts, then the FOMC would discount the Green Book estimates and continue to implement inflationary policies during Republican administrations and contradictory policies during Democratic ones. This would result in approximately correct inflation forecasts for both Republicans and Democrats since the forecasts would be biased in the direction of the FOMC's partisan bias rather than a ``true" no-policy-change forecast.
+ 
+Finally, the {\bf{partisan heuristics theory}} proposes that Fed staffers incorporate a simple heuristic \citep[see][]{kahneman1973, tverskykahneman1974, kahneman2003} about the policy behaviors of the parties and the effects these different policies will have on the economy. Heuristics, generally, are intuitions that reduce the complexity associated with making predictions. Though they can be useful ``sometimes they lead to severe and systematic errors" \citep[][1124]{tverskykahneman1974}. In this theory, economists at the Fed have an intuition that Democrats and Republicans behave differently in government and so formulate inflationary expectations with this in mind. If this intuition does not accurately correspond to how presidents actually act, or how their policies affect inflation, forecasts would be systematically biased: overestimates for Democratic presidents, underestimates for Republicans. There is evidence that Democratic and Republican presidents do not, in fact, differ significantly in their overall levels of spending \citep{Bartels2008}, so any expectation that they would pursue policies that would differentially affect inflation would be questionable.
+
+This model does not require that forecasters be conscious of their bias, but simply for it to work its way subtly into forecasts, particularly in the subjective aspect of the ``consensus forecast" put forth in the Green Book. Further, because this bias would not need to be conscious, they might never notice this unintentional but systematic error (as mistakes could occur for any number of economic reasons that they have been trained to consider) and so never correct it in future estimates.
+
+
+%%%%%%%%%%%%%%%%%% Section 3: Research Methods %%%%%%%%%%%%%%%%%%
+
+\section{Research Methods}
+
+In order to test for the three potential types of partisan bias described above we use non-matched and matched data sets with a number of parametric models \citep[see][]{Ho2007} to assess whether or not there is a partisan biases in Green Book forecasts. This section discusses the choice of methods and variables. The following section discusses our results.
+
+\subsection{Matching \& Models}
+
+We are interested in disentangling the effects of presidential party ID and elections from the many background factors, such as economic shocks and FOMC policy changes, that might create inflation forecast errors. As such, we consider presidential partisan identification and elections to be `treatments' factors that may impact inflation forecast errors. Democratic presidencies are considered to be treatments. Republican presidencies are `controls'. The quarter when a presidential election is held and the quarter before it are considered treatments and all other quarters are controls. Of course, given that we are working with observational data, other variables that have an impact on forecast errors may have different distributions across the treatment and control groups \citep{Cochran1973, Diamond2012}. This makes it difficult to identify the relationships between presidential party ID, elections and errors from all of the confounding background variables.
+
+To address this issue we follow the advice of \cite{Ho2007} to pre-process our data with matching to create data sets where the distributions of confounding variables are more even across treatment and control groups. We then run our parametric analyses with the matched data sets. To do this we used the {\tt{R}} package {\tt{MatchIt}} \citep{matchit2011} to create two matched data sets where the non-treatment covariates in the control groups closely matched those in the treatment groups. Doing this helps us isolate the effects of the `treatments' from that of the background covariates. 
+
+Formally, each unit $i$ in the data set is `assigned' to either the treatment group ($t_{i} = 1$) or the control group ($t_{i} = 0$). $y_{i}(1)$ is the potential outcome--in our case the inflation forecast error--for unit $i$ of being in the treatment group, regardless of whether or not it was observed to be in this group. $y_{i}(0)$ is the potential outcome if $i$ was not in the treatment group, regardless of its observed assignment. It is impossible to observe both $y_{i}(1)$ and $y_{i}(0)$ at the same time. Instead we observe one version of $y_{i}=t_{i}y_{i}(1)-(1-t_{i})y_i(0)$. For each $i$ there is a fixed vector of exogenous confounders $X_{i}$. Ideally $t_{i}$ and $X_{i}$ are independent. However, this is not necessarily the case. The point of matching is to reduce or eliminate the relationship between $t_{i}$  and $X_{i}$ by selecting, dropping, and/or duplicating data. Ideally this process matches one treated unit with one controlled unit that has the same values of $X_{i}$, i.e. the distribution of covariates is the same in the treated and control groups \citep{matchit2011}. This is known as ``covariate balance" \cite[1]{Diamond2012}. Using matching to balance a data set ``break[s] the link between the treatment variables and the pre-treatment controls", effectively replicating the conditions of a randomized experiment with observational data \cite[][2--3]{matchit2011}. 
+
+Balance is usually achieved in matching through propensity scores: the probabilities that unit were assigned the treatment given the covariates. The propensity score model is generally unknown \citep{Drake1993}. To find the propensity score model we use Diamond and Sekhon's \citeyearpar{Diamond2012} genetic matching method (GenMatch).\footnote{The method is implemented with {\tt{MatchIt}} The original source code for the exact matching models can be found at {\url{https://github.com/christophergandrud/GreenBook/blob/master/Analysis/MainAnalysis2.R}}.} GenMatch is a multivariate method that uses an evolutionary search algorithm to automate the search for the propensity score model that creates maximum balance. This gets rid of the ``challenging" process of ``manually and iteratively checking the propensity score" to determine covariate balance \citep[][2]{Diamond2012}. 
+
+
+\subsection{Parametric Models}
+
+Once we had created our matched data sets we used two types of parametric models to examine the effects of our treatment variables on the continuous inflation forecast error variable. The first was ordinary least squares linear regression (i.e. OLS).\footnote{In {\tt{Zelig}} this is the {\tt{ls}} model.} The other type was Bayesian normal linear regression\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.} which is particularly useful for our limited sample as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}. Please see the {\tt{Zelig}} manual for details about Bayesian normal linear regression \citep{Goodrich2007}.  See also \cite{Imai2008} for a discussion of how to combine non-parametric matching and parametric analysis in one research process. Because we used non-parametric matching methods, not only do we better isolate the treatments' effects from those of the background variables, but we also reduce our estimated causal effects' dependence on the type of model we choose \cite[200--201]{Ho2007}.
+
+The generic parametric model we used is given by
+%
+\begin{equation}
+    E_{q} = \alpha + \beta T_{q} + \beta X_{q} + \epsilon,
+\end{equation}
+%
+where $T_{q}$ is the treatment for quarter $q$ and $X$ is a vector of covariates. 
+
+\subsection{Variables}
+
+In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identity and/or the existence of an upcoming presidential election affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when they are a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or the quarter before.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$ and $q_{e-1}$ election quarters.}
+
+To further examine whether or not Federal Reserve staff were taking into consideration an electoral business cycle either due to a partisan preference or the nearness of an election, we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections were coded as 0. 
+
+The partisan preference and monetary expectations theories both posit that president's party ID and elections have an interactive relationship with forecast errors. To examine this possibility we include an interaction between the president party ID and election period variables in the analyses.
+
+The United States president does not set the level of government expenditure--one of the main non-monetary policy causes of inflation--by themselves. Instead, the president is constrained by the two houses of Congress. To examine whether or not Federal Reserve staff are taking into consideration the partisan composition of Congress as well as the president's party identification, we include a variable of {\bf{Democratic legislators as a proportion of Republican legislators}} in the House of Representatives as well as a similar variable for the partisan composition of the Senate. Data on the number of legislators with Republican and Democratic party IDs was found at infoplease.\footnote{See {\url{http://www.infoplease.com/ipa/A0774721.html}}. Accessed May 2012.} 
+
+There are at least three possible ways that Congressional party identification may affect forecast errors. The first is simply the possibility that Federal Reserve staff with rational partisan expectations pay attention to the partisan control of a chamber of Congress {\emph{independent of}} the president's party identification.  For example, Fed staff could predict higher spending if Democrats control one of the houses of Congress even if they do not control the other house or the presidency compared to a situation where all parts of the executive and legislature were controlled by Republicans. This might lead to higher inflation error.
+
+Though they make different predictions, the other two ways that the partisan composition of Congress may affect forecast errors is through an interaction with the president's party ID. The first interaction theory is that Federal Reserve staff with simple rational partisan expectations would presumably expect that a Democratic president would be able to get policies closer to their ideal point when there is a Congress with similar preferences. If a Democratic president had chambers of Congress controlled by Democrats, presumably Federal Reserve staff would expect even higher fiscal expenditures and therefore even higher inflation. Conversely, Republican presidents with a Republican-controlled Congress may be even better at cutting spending, leading to even lower inflation.
+
+The second interaction possibility is based largely on Krause's \citeyearpar{Krause2000} work about the affect of partisan divisions on fiscal deficits in the United States. He finds partisan fragmentation can play a role in increasing Federal deficits. Higher political conflict, he argues, ``results in equilibrium fiscal outcomes that favor greater spending and/or a willingness to lower taxes since politicians will exhibit a greater proclivity in providing voters with program benefits and to delay its payment" \citep[][542]{Krause2000}. Because of this pro-deficit bias Federal Reserve staff may anticipate higher government borrowing when the presidency and houses of Congress are controlled by different parties. 
+
+If biases are largely the result of systematically biased economic forecasting models we would expect errors to change overtime as the models changed. In particular, we would expect this fall in errors to occur around 1996 when the Federal Reserve Board's new Global Behavioral Equation Model was introduced. To examine this we include a {\bf{FRB/Global Model}} dummy variable. It equals one for all quarters from and including the first quarter of 1996. It is zero otherwise.
+
+Green Book forecasts are based on the assumption that monetary policy will not change between when the prediction is made and the time period it is predicting. Forecast errors may occur if monetary policy changes. If this is the case monetary policy changes would produce a negative relationship with forecast errors. If the FOMC raises interest rates then inflation may decline, causing the original forecast to have been too high and vice versa. To control for monetary policy changes we include a variable of {\bf{standardized changes to the discount rate}} from the quarter the Green Book prediction was made to the quarter it is predicting.\footnote{We averaged the discount rate over each quarter. Then we used the average discount rates $D$ in each quarter $q$ to create the variable $\Delta D_{q}$ using the simple formula: $\Delta D_{q} = \frac{D_{q} - D_{q-2}}{D_{q}}$. Note that the Federal Reserve changed how it used the discount rate and referred it at the beginning of 2003. To address this issue we primarily used data on the United States' discount rate recorded by the International Monetary Fund through this time period. Their data only goes back to the fourth quarter of 1982. So, before that we use the discount rate. Both of these variables are found in the FRED database at the St. Louis Federal Reserve (accessed July 2012). } The discount rate is one of the Federal Reserve's main tools for influencing the interest rate, especially the Fed funds rate.\footnote{A similar {\bf{relative changes in the Fed funds rate}} variable was included in some preliminary analyses. However, it did not change the results substantially and was estimated to have a similar effect on errors as the discount rate variable.}
+
+To examine if Federal Reserve inflation forecast errors are affected by actual levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}} and {\bf{government debt to GDP}}. 
+
+To examine how broader economic factors may be related to forecast errors we include variables of {\bf{GDP output gaps}} and {\bf{recessions}}. The former is simply potential GDP as a percentage of real GDP. The latter is a dummy variable for whether or not the United States was in a recession. All of these variables are from the FRED database\footnote{Accessed June 2012.} and are in nominal terms. 
+
+Finally, we include a variable for the sitting Federal Reserve Board Chair.\footnote{Chairs for the years in our analysis are William McChesney Martin, Jr., Arthur Burns, G. William Miller, Paul Volcker, and Alan Greenspan.}
+
+\section{Results}
+
+In this section we present results from a number of parametric model specifications. We primarily diagnose the matching models with distributions of propensity score--the probability of a quarter being in the ``treated" group given its covariates--as well as quantile-quantile plots \citep{Ho2007} to diagnose whether or not the covariates in the matched data sets were balanced. Please see figures \ref{ElectPropensityScores} and \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created from by running the original matching models in main analysis source code file.\footnote{The file is available at: \url{https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R}.}  We are unable to achieve covariate balance for the Congressional interaction terms.\footnote{The presidential party ID and election period interaction does balance.} It is unlikely that we could achieve covariate balance on these interactions given our relatively small sample size. Because of this, we only discuss Congressional interaction term estimates from the non-matched data sets.
+
+Almost all other parametric model specifications\footnote{Tables \ref{OutputEL} and \ref{OutputPL} do show interaction estimates from matched data sets for comparison with the non-matched results in Table \ref{OutputNL}.}} are run with both the matched and unmatched data sets.\footnote{The Federal Reserve chair variable was not included in the matching models because some chairs in the pre-Volcker/Greenspan era were in office for very few quarters, making it difficult to match them.} In all of the Bayesian regressions we use the {\tt{Zelig}} default 1,000 MCMC burn-in iterations and 10,000 iterations after burn-in. We use the Heidelberger-Welch diagnostic to examine whether or not the Markov Chains converged to their stationary distributions.
+
+We graphically present the key results in this section. Coefficient estimate tables for the models are given in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using OLS and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant'\footnote{At the standard 0.05 significance level.} in models from the unmatched data set compared to estimates from both matched data sets.
+
+
+
+
+\begin{figure}[t]
+    \caption{95\% Confidence Bands for Coefficients from a Variety of Matching and Parametric Model Specifications}
+    \label{CoefComparePlots}
+    \begin{center}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/CoefComparePlots} 
+\end{knitrout}
+
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Intercept values are not shown to maintain a reasonable scale for comparing covariate estimates. Please see the full estimates tables in the Appendix.}}
+    \end{singlespace}
+\end{figure}
+
+\paragraph{Presidential Party Identification}
+
+Our main finding is that presidential party identification had a strong positive association with Federal Reserve staff inflation forecast errors across all model specifications. Inflation forecasts are higher during Democratic presidencies than Republican ones. This finding is what we would expect if Federal Reserve staff have a presidential partisan heuristic and is very robust. For instance, the 95\% confidence band around the coefficient estimate moves somewhat further away from 0--i.e. no relationship--when using matched data (see Figure \ref{CoefComparePlots}).  
+
+\begin{figure}[t]
+    \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies (all forecasts)}
+    \label{ExpectValueParty}
+    \begin{center}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.7\linewidth]{figure/ExpectValueParty} 
+\end{knitrout}
+
+
+
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C7 from Table \ref{OutputPL}. \\ The matching methods only include complete cases. Due two missing values early in the observation period we ran a different matching model for forecasts made three to five quarters beforehand. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+    \end{singlespace}
+\end{figure}
+
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 13 percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately -19 percent. Clearly, at least between the 1970s and 2006, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
+
+The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate.
+
+\paragraph{Presidential Elections}
+
+Do Federal Reserve staff also take into consideration election timing as the partisan preference and monetary expectations theories predict? We do not find any evidence that inflation forecast errors were associated with elections either independent of presidential party ID or in interaction with it. This is true in parametric models using both unmatched and matched data where the election period variable is the treatment. Estimates of the relationship between the quarters until election variable and forecast errors\footnote{This variable is obviously omitted from the models with the election period variable because they are highly correlated.} also does not provide any evidence that inflation errors are related to elections. 
+
+Data limitations make it difficult to fully examine the extension of Clark and Arel-Bundock's \citeyearpar{Clark2011} election gaming approach to Federal Reserves staff.\footnote{We only have three Democratic presidential terms in our data, only two of which ended in the incumbent running for reelection.} Nonetheless, we attempt to examine this hypothesis with an interaction between the president's party ID variable and the election dummy. The president's party ID variable is robust whereas the election variables and the interaction term are very statistically insignificant. This is reflected in the left-side graph in Figure \ref{InterPlot}.\footnote{This plot shows simulations from unmatched data. The results from models with matched data are virtually identical.} It shows that we expect very little, if any, difference in the forecast errors during election and non-election periods for both Republican and Democratic incumbent presidents. 
+
+In this limited data set Fed Staff do not appear to be over estimating inflation when a Democratic president is running for reelection in an attempt to influence the FOMC to raise interest rates and lower the president's chances of winning. These findings have clear implications for how we understand the potential causes of Green Book partisan inflation forecast biases as well as FOMC interest rate decisions around elections. It seems that FOMC members, not their staff, are driving the increases in the Fed Funds Rate around elections when Democrats are in power that Clark and Arel-Bundock observed. 
+
+Interestingly, staff also do not seem to compensate for FOMC partisan biases in an attempt to moderate FOMC-driven partisan electoral business cycles. Thus, we find no evidence in favor of the {\bf{monetary expectations theory}} nor for the electorally dependent aspect of the {\bf{partisan theory}} discussed above.
+
+\paragraph{Partisan Control of Congress}
+
+Might Federal Reserve staff be taking into consideration not only the president's party identification, but also the partisan composition of Congress?  Across all of our data sets and parametric model specifications we find no evidence that the partisan composition of congressional chambers independent of the president's party ID is related to inflation forecast errors. 
+
+%%%%%%% President/Congress Interaction Plot %%%%%%%%
+\begin{figure}[t]
+    \caption{Simulated Expected Inflation Forecast Error with Interactions Between President Party ID and Election Period, as well as President Party ID and Congressional Party Control (Non-matched data, Qtr. 2 forecasts)}
+    \label{InterPlot}
+    \begin{center}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/InterPlot} 
+\end{knitrout}
+
+
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Simulated from OLS regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+    \end{singlespace}
+\end{figure}
+
+We create parametric models using non-matched data with two-way and three-way interactions between presidential and congressional party identification to examine the two other ways we identified that presidential and congressional partisan ID might be related to forecast errors. All of the partisan interactions are generally statistically significant. To make substantive sense of these estimated interactions we use simulations, as above, to find expected inflation forecast errors at various levels of the presidential and congressional party identification. To highlight the findings, Figure \ref{InterPlot} shows simulation results from non-matched data with highly contrasting fitted variable values: one party control of all bodies compared to a situation where different parties control the presidency and both houses of Congress.\footnote{Both the House and Senate Democratic/Republican variables are set at 1.2 for Democratic congresses and 0.8 for Republican congresses.} 
+
+The first thing we should notice in Figure \ref{InterPlot} is how presidential partisan identification still seems to be driving the direction of the inflation forecast error: inflation is underestimated during Republican presidencies and overestimated during Democratic ones, regardless of partisan control in Congress. The estimated substantive effect of congressional control on forecast errors is in the magnitude of the over or under estimates. In particular, inflation is very underestimated for Republican presidencies with Republican congresses. There may be an expectation among Fed Staff that these governments will cut expenditure much more than they actually do. Forecast error is slightly higher on average with Democratic presidencies and Republican congresses compared to when both are controlled by Democrats. This finding fits with a story where Fed Staff believe spending will be higher with a divided government. However the difference between the two means is relatively small\footnote{There is a 16 percentage point difference between the two.} and there is considerable overlap in the two groups of simulation results.
+
+Despite some evidence for an interaction between congressional and presidential party identification, it is not clear at this time how these results can be consistently explained across Democratic and Republican presidencies. We should also reiterate the fact that these interactions are estimated using non-matched data, because we are not able to achieve covariate balance for the interactions terms.
+
+\paragraph{Government Expenditure}
+
+It seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a consistently positive and significant coefficient for the government expenditure variable, even when controlling for president's party ID. Perhaps this is because Fed staff not only have a presidential partisan heuristic, but also a similar government expenditure heuristic where expenditure is believed to have a larger impact on inflation than it really does.
+
+\paragraph{FRB Global Forecasting Model}
+
+The introduction of the FRB/Global behavioral equation forecasting model does not seem to have begun a new era of inflation forecasting error. In fact, across all of our matching and parametric model specifications, forecasts made after the introduction of this approach are not significantly different than those made before it. 
+
+\paragraph{Changes to the Discount Rate}
+
+As expected, relative changes to the discount rate are often found to be negatively associated with inflation forecast errors. Increasing the discount rate could result in lower inflation than expected and vice versa. Controlling for FOMC policy does not change the estimated relationship between presidential party ID and errors. Also, the results are not robust across all of the models. 
+
+\paragraph{Orthogonal Dependent Variable Diagnostic}
+
+As a final diagnostic we ran our analyses with a dependant variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID are being driven by time period specific effects that are common to all Federal Reserve staff forecasts. The variable we examined was {\bf{standardized unemployment rate forecast errors}}. The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Green Book. The actual unemployment rate was found using the Federal Reserve's FRED database.\footnote{We focused on 2 quarter forecasts.}
+
+Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors was the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiagnosticTests/OrthogonalUnemploymentError.R}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment}. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's inflation forecasting errors.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Green Book Error Across Time
+\begin{figure}[t]
+    \caption{Errors in Employment Forecasts Made 2 Qtr. Beforehand (1969 - 2006)}
+    \label{Unemployment}
+    \begin{center}
+    
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/PartisanErrorUnemploy} 
+\end{knitrout}
+
+    
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Note: An error of 0 indicates that inflation was perfectly predicted.}}
+    \end{singlespace}
+\end{figure}
+
+\section*{Discussion: Is there a partisan bias?}
+
+Do Fed forecasts have a partisan bias? According to the evidence from our research: yes they do. Federal Reserve staff seem to have systematically overestimated inflation during Democratic presidencies and underestimated it during Republican ones for at least a 35 year period between 1970 and the end of 2006. This finding was robust across numerous model specifications where a variety of economic, bureaucratic and other political factors were controlled for. 
+
+Interestingly, in light of recent research on FOMC policy-making, we found no relationship between inflation forecast errors and elections either independent of presidential party identification or in interaction with it. This suggests that any relationship between monetary policy decisions and US presidential election timing is neither the result of partisan preferences that Fed staff members may have, nor beliefs that Fed staff may hold about the FOMC's presidential election preferences. 
+
+Given the consistency of the bias across presidential terms, it appears that Fed staff members' partisan inflation forecast bias may be the result of a partisan heuristic. Like heuristics generally, the partisan bias may help Fed staffers simplify very complex phenomenon, while also leading to systematic prediction errors. These errors may not have been noticed by staffers because, so far, few if any people either inside or outside of the Fed have been looking for them. 
+
+What are the monetary policy and electoral implications of Federal Reserve staff partisan bias? Our research so far is not able to tell. It does motivate future research and point in a clear direction. It may be that higher inflation forecasts during Democratic presidencies spur the FOMC to raise interest rates and dampen the money supply generally. The opposite could happen during Republican presidencies. If this is the case, the economy would be inadvertently stimulated during Republican presidencies and depressed during Democratic ones, with clear electoral implications. The economic voting literature has repeatedly found that poor economic performance results in less electoral support for incumbent presidents \citep[e.g.][]{Bloom1975}. Thus, if these partisan biases in inflation forecasts are leading to more restrictive monetary policy during Democratic presidencies and more expansive monetary policy during Republican presidencies, the economic voting mechanism may run afoul of important normative concerns about democratic accountability. Determining the extent to which these biases are shaping monetary policy is therefore an important next step in understanding the linkage between Fed inflation forecasts and larger questions of democracy. This is a very important issue that needs further investigation.
+
+\clearpage
+\section*{Appendix}
+
+\subsection*{Replication}
+
+This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely replicated from data, analysis source code, and markup files available on our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}. 
+
+%%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
+
+\begin{table}[ht]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
+    \label{OutputNL}
+    \vspace{0.25cm}
+    \begin{center}
+    {\tiny
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ A1 } & \multicolumn{ 1 }{ c }{ A2 } & \multicolumn{ 1 }{ c }{ A3 } & \multicolumn{ 1 }{ c }{ A4 } & \multicolumn{ 1 }{ c }{ A5 } & \multicolumn{ 1 }{ c }{ A6 } & \multicolumn{ 1 }{ c }{ A7 } & \multicolumn{ 1 }{ c }{ A8 } & \multicolumn{ 1 }{ c }{ A9 } & \multicolumn{ 1 }{ c }{ A10 } & \multicolumn{ 1 }{ c }{ A11 } & \multicolumn{ 1 }{ c }{ A12 } & \multicolumn{ 1 }{ c }{ A13 } \\ \hline
+ %                    & A1              & A2              & A3              & A4              & A5              & A6              & A7              & A8              & A9              & A10             & A11             & A12             & A13            \\ 
+Intercept            & 3.1 ^{**}       & 3.4 ^{**}       & 3.1 ^{**}       & 4.1 ^{***}      & 4.4 ^{***}      & 4.5 ^{***}      & 4.5 ^{***}      & 4.2 ^{***}      & 4.5 ^{***}      & 4.3 ^{***}      & 3.9 ^{***}      & 2.4 ^*          & -1.9 ^{***}    \\ 
+                     & (1.2)           & (1.2)           & (1.2)           & (0.9)           & (1.0)           & (1.0)           & (1.0)           & (1.0)           & (1.0)           & (0.9)           & (0.9)           & (1.2)           & (0.3)          \\ 
+Recession            & -0.0            & -0.0            & -0.0            & 0.0             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1 ^\dagger   & 0.1             & 0.1             &                \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Debt/GDP             & 0.0             & 0.0             & 0.0             & -0.0 ^*         & -0.0 ^*         & -0.0            & 0.0             & 0.0             & -0.0            & -0.0            & -0.0            & 0.0             &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Expenditure/GDP      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.1 ^{**}       & 0.2 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Output Gap           & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Discount Rate Change & -0.1            & -0.1            & -0.1            & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^{**}      & -0.2 ^{**}      & -0.2 ^*         &                \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
+Qtr. to Election     &                 & -0.0            &                 &                 & -0.0            & -0.0            & -0.0            &                 & -0.0            & 0.0             & 0.0             & 0.0             &                \\ 
+                     &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Election Period      &                 &                 & 0.0             &                 &                 &                 &                 & 0.0             &                 &                 &                 &                 &                \\ 
+                     &                 &                 & (0.1)           &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.9 ^{***}      & 1.1 ^{***}      & 2.1 ^{***}      & 2.4 ^{***}     \\ 
+                     &                 &                 &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.6)           & (0.7)          \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.1            & -0.3 ^\dagger  & -0.3            &                 & -0.1            & -0.0            & 0.6 ^*          & 1.0 ^{**}      \\ 
+                     &                 &                 &                 &                 &                 & (0.1)           & (0.2)           & (0.2)           &                 & (0.1)           & (0.1)           & (0.3)           & (0.3)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & 0.1             & 0.2             & 0.2             &                 & 0.4 ^{**}       & 0.3 ^*          & 1.2 ^{***}      & 1.6 ^{***}     \\ 
+                     &                 &                 &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           &                 & (0.1)           & (0.1)           & (0.3)           & (0.2)          \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & -0.1            & -0.1            &                 &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.1)           & (0.1)           &                 &                 &                 &                 &                \\ 
+Pres*Election Period &                 &                 &                 &                 &                 &                 &                 & -0.1            &                 &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                 &                \\ 
+Greenspan            &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Martin               &                 &                 &                 &                 &                 &                 &                 &                 & 0.1             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Miller               &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
+Volcker              &                 &                 &                 &                 &                 &                 &                 &                 & 0.1             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
+Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.5 ^{***}     &                 & -1.7 ^*         & -2.5 ^{**}     \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 & (0.8)           & (0.8)          \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.7 ^{***}     & -0.7            & -0.5           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           & (0.7)           & (0.6)          \\ 
+Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.6 ^{**}      & -0.9 ^{***}    \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           & (0.2)          \\ 
+Intercept            &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.8 ^\dagger   & 1.1 ^*         \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.4)           & (0.5)           \\
+ $N$                  & 150             & 150             & 150             & 150             & 150             & 150             & 150             & 150             & 150             & 150             & 150             & 150             & 150            \\ 
+$R^2$                & 0.2             & 0.2             & 0.2             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.6             & 0.6             & 0.6             & 0.5            \\ 
+adj. $R^2$           & 0.2             & 0.2             & 0.2             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.6             & 0.6             & 0.6             & 0.5            \\ 
+Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             \\ \hline
+ \multicolumn{14}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{14}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
+
+    }
+    \end{center}
+\end{table}
+
+%%%%%%% Table of ElectionPeriod matched data with OLS parametric model %%%%%%%%
+
+\begin{table}[ht]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
+    \label{OutputEL}
+    \vspace{0.25cm}
+    \begin{center}
+    {\footnotesize
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ B1 } & \multicolumn{ 1 }{ c }{ B2 } & \multicolumn{ 1 }{ c }{ B3 } & \multicolumn{ 1 }{ c }{ B4 } & \multicolumn{ 1 }{ c }{ B5 } & \multicolumn{ 1 }{ c }{ B6 } & \multicolumn{ 1 }{ c }{ B7 } & \multicolumn{ 1 }{ c }{ B8 } & \multicolumn{ 1 }{ c }{ B9 } & \multicolumn{ 1 }{ c }{ B10 } & \multicolumn{ 1 }{ c }{ B11 } & \multicolumn{ 1 }{ c }{ B12 } \\ \hline
+ %                    & B1              & B2              & B3              & B4              & B5              & B6              & B7              & B8              & B9              & B10             & B11             & B12            \\ 
+Intercept            & 1.0             & 1.2             & 0.9             & 1.0             & 1.2             & 1.3             & -0.2            & -0.7            & -1.1            & -2.1            & -1.0            & -2.3 ^{***}    \\ 
+                     & (2.5)           & (2.5)           & (2.5)           & (2.2)           & (2.2)           & (2.7)           & (3.5)           & (3.5)           & (2.3)           & (2.5)           & (4.3)           & (0.5)          \\ 
+Debt/GDP             & 0.0             & 0.0             & 0.0             & -0.0            & -0.0            & 0.0             & 0.0             & 0.0             & -0.0 ^\dagger  & -0.0 ^\dagger  & 0.0             &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Expenditure/GDP      & 0.1 ^*          & 0.1 ^*          & 0.1 ^*          & 0.1 ^{**}       & 0.1 ^{**}       & 0.1 ^\dagger   & 0.1             & 0.1             & 0.2 ^{***}      & 0.3 ^{***}      & 0.1             &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
+Output Gap           & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Discount Rate Change & -0.8 ^{**}      & -0.7 ^{**}      & -0.8 ^{**}      & -0.5 ^*         & -0.5 ^*         & -0.5 ^\dagger  & -0.4            & -0.4            & -0.2            & -0.2            & -0.2            &                \\ 
+                     & (0.2)           & (0.3)           & (0.2)           & (0.2)           & (0.2)           & (0.3)           & (0.3)           & (0.3)           & (0.2)           & (0.3)           & (0.3)           &                \\ 
+Qtr. to Election     &                 & -0.0            &                 &                 & -0.0            & -0.0            & -0.0            &                 & -0.0            & -0.0            & -0.0            &                \\ 
+                     &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Election Period      &                 &                 & 0.1             &                 &                 &                 &                 & 0.1             &                 &                 &                 &                \\ 
+                     &                 &                 & (0.1)           &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.3 ^{**}       & 0.2 ^*          & 0.2 ^*          & 0.3 ^*          & 0.4 ^\dagger   & 1.3 ^{***}      & 1.6 ^{**}       & 17.9            & 25.1           \\ 
+                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.2)           & (0.3)           & (0.5)           & (22.6)          & (16.4)         \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.1            & -0.3            & -0.2            & 0.2             & 0.4             & 0.7             & 1.0 ^\dagger  \\ 
+                     &                 &                 &                 &                 &                 & (0.3)           & (0.3)           & (0.4)           & (0.2)           & (0.3)           & (0.8)           & (0.5)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & 0.2             & 0.1             & 0.1             & -0.2            & -0.4            & 1.4 ^\dagger   & 1.9 ^{***}     \\ 
+                     &                 &                 &                 &                 &                 & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.8)           & (0.3)          \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & -0.2            & -0.2            &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.3)           & (0.3)           &                 &                 &                 &                \\ 
+Pres*Election Period &                 &                 &                 &                 &                 &                 &                 & -0.1            &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
+Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 & -0.8 ^{**}      &                 & -19.0           & -26.3          \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 & (22.4)          & (15.5)         \\ 
+Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 & -1.3 ^{**}      & -11.8           & -17.1          \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.4)           & (18.3)          & (13.6)         \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.7            & -1.0 ^{**}     \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.4)           & (0.3)          \\ 
+Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 12.9            & 18.2           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (17.1)          & (12.1)          \\
+ $N$                  & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32              & 32             \\ 
+$R^2$                & 0.5             & 0.5             & 0.5             & 0.6             & 0.6             & 0.6             & 0.6             & 0.6             & 0.8             & 0.7             & 0.8             & 0.8            \\ 
+adj. $R^2$           & 0.4             & 0.4             & 0.4             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.7             & 0.6             & 0.7             & 0.7            \\ 
+Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.1             & 0.2             & 0.1             & 0.1             \\ \hline
+ \multicolumn{13}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{13}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}}\\
+\multicolumn{13}{l}{\footnotesize{The recession variable is ommitted because there was no variation in the matched data set.}}\\
+\multicolumn{13}{l}{\footnotesize{The reason that there was no variation is because there was never a recession during an}}\\
+\multicolumn{13}{l}{\footnotesize{election period in our data set.}} 
+\end{tabular} 
+
+
+
+    }
+    \end{center}
+\end{table}
+
+%%%%%%% Table of pres_party matched data with OLS parametric model %%%%%%%%
+
+\begin{table}[ht]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
+    \label{OutputPL}
+    \vspace{0.25cm}
+    \begin{center}
+    {\footnotesize
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ C1 } & \multicolumn{ 1 }{ c }{ C2 } & \multicolumn{ 1 }{ c }{ C3 } & \multicolumn{ 1 }{ c }{ C4 } & \multicolumn{ 1 }{ c }{ C5 } & \multicolumn{ 1 }{ c }{ C6 } & \multicolumn{ 1 }{ c }{ C7 } & \multicolumn{ 1 }{ c }{ C8 } & \multicolumn{ 1 }{ c }{ C9 } & \multicolumn{ 1 }{ c }{ C10 } & \multicolumn{ 1 }{ c }{ C11 } & \multicolumn{ 1 }{ c }{ C12 } \\ \hline
+ %                    & C1              & C2              & C3              & C4              & C5              & C6              & C7              & C8              & C9              & C10             & C11             & C12            \\ 
+Intercept            & 5.3 ^\dagger   & 5.2 ^\dagger   & 5.4 ^\dagger   & 5.5 ^*          & 5.4 ^*          & 4.3             & 4.3             & 4.5             & 4.9 ^*          & 4.4 ^\dagger   & 5.9 ^\dagger   & -2.0 ^{**}     \\ 
+                     & (3.0)           & (3.0)           & (3.0)           & (2.4)           & (2.4)           & (2.7)           & (2.8)           & (2.7)           & (2.4)           & (2.4)           & (3.3)           & (0.7)          \\ 
+Recession            & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.2             & 0.2             & 0.2             &                \\ 
+                     & (0.2)           & (0.2)           & (0.2)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
+Debt/GDP             & 0.0             & 0.0             & 0.0             & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0 ^*         & -0.0 ^\dagger  & -0.0 ^*         &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Expenditure/GDP      & 0.1 ^*          & 0.1 ^\dagger   & 0.1 ^*          & 0.1 ^{**}       & 0.1 ^{**}       & 0.2 ^{**}       & 0.2 ^{**}       & 0.2 ^{**}       & 0.2 ^{***}      & 0.2 ^{***}      & 0.1             &                \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.1)           &                \\ 
+Output Gap           & -0.1 ^*         & -0.1 ^\dagger  & -0.1 ^*         & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^*         & -0.1 ^*         & -0.1 ^*         & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^*         &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Discount Rate Change & -0.3            & -0.4            & -0.3            & -0.6 ^*         & -0.6 ^*         & -0.5 ^\dagger  & -0.5 ^\dagger  & -0.5 ^\dagger  & -0.3            & -0.3            & -0.4            &                \\ 
+                     & (0.3)           & (0.3)           & (0.3)           & (0.2)           & (0.2)           & (0.3)           & (0.3)           & (0.3)           & (0.2)           & (0.2)           & (0.2)           &                \\ 
+Qtr. to Election     &                 & 0.0             &                 &                 & 0.0             & 0.0             & 0.0             &                 & 0.0 ^*          & 0.0 ^\dagger   & 0.0 ^*          &                \\ 
+                     &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Election Period      &                 &                 & 0.1             &                 &                 &                 &                 & -0.1            &                 &                 &                 &                \\ 
+                     &                 &                 & (0.1)           &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.4 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.4 ^{***}      & 0.4 ^{***}      & 1.1 ^{***}      & 1.2 ^{***}      & 0.9             & 2.5 ^{**}      \\ 
+                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.2)           & (0.2)           & (1.0)           & (0.9)          \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.2            & -0.2            & -0.2            & -0.1            & 0.1             & -0.7            & 0.4            \\ 
+                     &                 &                 &                 &                 &                 & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (0.8)           & (0.8)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & -0.1            & -0.1            & -0.0            & 0.2             & 0.1             & 0.8             & 2.3 ^{***}     \\ 
+                     &                 &                 &                 &                 &                 & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.8)           & (0.6)          \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & 0.0             & 0.0             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.1)           & (0.1)           &                 &                 &                 &                \\ 
+Pres*Election Period &                 &                 &                 &                 &                 &                 &                 &                 & -0.6 ^{***}     &                 & -2.5 ^*         & -3.1 ^{**}     \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 & (1.1)           & (1.0)          \\ 
+Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.8 ^{***}     & 2.2             & 0.1            \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           & (1.5)           & (0.9)          \\ 
+Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.1            & -1.0 ^*        \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.5)           & (0.4)          \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             & 1.2 ^*         \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.6)           & (0.6)           \\
+ $N$                  & 64              & 64              & 64              & 64              & 64              & 64              & 64              & 64              & 64              & 64              & 64              & 64             \\ 
+$R^2$                & 0.1             & 0.1             & 0.1             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.6             & 0.6             & 0.7             & 0.6            \\ 
+adj. $R^2$           & 0.1             & 0.1             & 0.1             & 0.4             & 0.4             & 0.4             & 0.4             & 0.4             & 0.6             & 0.5             & 0.6             & 0.5            \\ 
+Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             \\ \hline
+ \multicolumn{13}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{13}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
+
+    }
+    \end{center}
+\end{table}
+
+%%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
+
+% latex table generated in R 2.15.1 by xtable 1.7-0 package
+% Fri Oct 26 17:43:36 2012
+\begin{table}[ht]
+\begin{center}
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
+\label{OutputNB}
+{\small
+\begin{tabular}{lccccc}
+  \hline
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+  \hline
+Intercept & 4.49 & 0.99 & 2.56 & 4.49 & 6.46 \\ 
+  Pres. Party ID & 0.30 & 0.04 & 0.22 & 0.30 & 0.38 \\ 
+  Recession & 0.07 & 0.05 & -0.04 & 0.07 & 0.17 \\ 
+  Qtr. to Election & -0.00 & 0.00 & -0.01 & -0.00 & 0.00 \\ 
+  Senate Dem/Rep & -0.26 & 0.15 & -0.56 & -0.26 & 0.05 \\ 
+  House Dem/Rep & 0.16 & 0.13 & -0.09 & 0.16 & 0.41 \\ 
+  Debt/GDP & 0.00 & 0.00 & -0.01 & 0.00 & 0.01 \\ 
+  Expenditure/GDP & 0.12 & 0.04 & 0.05 & 0.12 & 0.19 \\ 
+  Output Gap & -0.07 & 0.01 & -0.10 & -0.07 & -0.04 \\ 
+  Discount Rate Change & -0.27 & 0.09 & -0.44 & -0.27 & -0.10 \\ 
+  Global Model & -0.10 & 0.08 & -0.27 & -0.10 & 0.06 \\ 
+  sigma2 & 0.04 & 0.00 & 0.03 & 0.03 & 0.04 \\ 
+   \hline
+\end{tabular}
+}
+\end{center}
+\end{table}
 
 
 
 
 
+%%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
+
+
+% latex table generated in R 2.15.1 by xtable 1.7-0 package
+% Fri Oct 26 17:43:37 2012
+\begin{table}[ht]
+\begin{center}
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}
+\label{OutputPB}
+{\small
+\begin{tabular}{lccccc}
+  \hline
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+  \hline
+Intercept & 4.32 & 2.86 & -1.28 & 4.32 & 9.90 \\ 
+  Pres. Party ID & 0.37 & 0.07 & 0.24 & 0.37 & 0.50 \\ 
+  Recession & 0.14 & 0.14 & -0.13 & 0.14 & 0.40 \\ 
+  Qtr. to Election & 0.01 & 0.01 & -0.01 & 0.01 & 0.02 \\ 
+  Senate Dem/Rep & -0.18 & 0.46 & -1.06 & -0.18 & 0.73 \\ 
+  House Dem/Rep & -0.06 & 0.34 & -0.74 & -0.06 & 0.60 \\ 
+  Debt/GDP & -0.01 & 0.01 & -0.02 & -0.01 & 0.00 \\ 
+  Expenditure/GDP & 0.16 & 0.06 & 0.04 & 0.16 & 0.29 \\ 
+  Output Gap & -0.07 & 0.04 & -0.15 & -0.07 & -0.00 \\ 
+  Discount Rate Change & -0.48 & 0.29 & -1.03 & -0.48 & 0.09 \\ 
+  Global Model & 0.03 & 0.12 & -0.21 & 0.02 & 0.26 \\ 
+  sigma2 & 0.04 & 0.01 & 0.03 & 0.04 & 0.06 \\ 
+   \hline
+\end{tabular}
+}
+\end{center}
+\end{table}
 
 
 
 
 
+%%%%%%% Matching Diagnostic Plots %%%%%%
+%%%%% Elections %%%%%%%
+\begin{figure}[h]
+  \caption{Matched on Election Period}
+  \label{ElectPropensityScores}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=\maxwidth]{figure/ElectPropensity} 
+\end{knitrout}
+
+    \begin{singlespace}
+        {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are election quarters or the quarter before. ``Control Units" are from all other quarters. The more similar the distribution of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+    \end{singlespace}
+\end{figure}
+
+%%%%% Presidential Party ID %%%%%%
+\begin{figure}[h]
+  \caption{Matched on Presidential Party Identification}
+  \label{PresPropensityScores}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=\maxwidth]{figure/PresPropensity} 
+\end{knitrout}
+
+  \begin{singlespace}
+      {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are quarters when the president was a Democrat. ``Control Units" are quarters when with a Republican president. The more similar the distributions of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+  \end{singlespace}
+\end{figure}
 
 
+%%%%%%% References %%%%%%%%%%%%
 
+\clearpage
 
+\bibliographystyle{apsr}
+\bibliography{GreenBook.bib}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\end{document}
