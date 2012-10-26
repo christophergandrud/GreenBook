@@ -1,7 +1,7 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph
 # Christopher Gandrud
-# 19 October 2012
+# 26 October 2012
 ####################
 
 library(RCurl)
@@ -11,7 +11,7 @@ library(ggplot2)
 ### Load data
 
 # Load data from GitHub
-url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi.csv"
+url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi_2006.csv"
 cpi.data <- getURL(url)
 cpi.data <- read.csv(textConnection(cpi.data))
 
@@ -35,6 +35,7 @@ cpi.data$GlobalModel <- factor(cpi.data$GlobalModel, labels = c("Before 1996", "
 
 # Create Fed Chair variable
 cpi.data$Chair[cpi.data$Quarter > 1987.3] <-  "Greenspan"
+cpi.data$Chair[cpi.data$Quarter > 2005.4] <-  "Bernanke"
 cpi.data$Chair[cpi.data$Quarter <= 1987.3] <- "Volcker"
 cpi.data$Chair[cpi.data$Quarter <= 1979.3] <- "Miller"
 cpi.data$Chair[cpi.data$Quarter <= 1978.1] <- "Burns"
