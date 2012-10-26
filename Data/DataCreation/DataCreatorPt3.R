@@ -100,5 +100,5 @@ Rate <- Rate[-1:-2, ]
 # merge with cpi.data
 cpi.data <- merge(cpi.data, Rate)
 
-write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi2006.csv", sep = ",")
+write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", sep = ",")
 
