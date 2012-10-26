@@ -1,7 +1,7 @@
 ####################
 # Greenbook Inflation Forecast Error by President Party Over Time
 # Christopher Gandrud
-# 19 October 2012
+# 26 October 2012
 ####################
 
 
@@ -24,7 +24,7 @@ errors.time <- ggplot(cpi.data, aes(x = Quarter, y = error.prop.deflator.q2)) +
                       scale_color_manual(values = partisan.colors, name = "") +
                       scale_fill_manual(values = partisan.colors, name = "") +
                       xlab("") + ylab("Standardized Forecast Error\n") + 
-                      scale_x_continuous(limits = c(1968, 2006)) +
+                      scale_x_continuous(limits = c(1968, 2007)) +
                       scale_y_continuous(breaks = c(-0.5, 0, 0.5), labels = c(-0.5, 0, 0.5)) +
                       theme_bw(base_size = 12)
 
