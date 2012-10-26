@@ -12,7 +12,7 @@
 
 
 //////// CPI Data ////////////
-/*
+
 ** Data from http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm
 ** Accessed 26 October 2012
 
@@ -192,19 +192,26 @@ use "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/cpi_estima
 	
 	
 ***********************************************
-**** Partisan composition of Congress. Base data from http://www.infoplease.com/ipa/A0774721.html
-*** Transform to be in terms of Democrats/Republicans
+**** Presidential Party & Election Variables
 
-
-	merge m:m Quarter using "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/pres_elections_quarter.dta"
+* President
+	merge m:m Quarter using "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/PresidentBase.dta"
 	drop if _merge != 3
 	drop _merge
 	duplicates drop Quarter, force
 	sort Quarter
 	
-	label variable pres_election "Quarter with US presidential election"
-	label variable time_to_election "Quarters until the next presidential election quarter"
-	label variable pres_part "President's party, 0 = Dem., 1 = Rep."
+	* Reverse Rep and Dem
+	gen PresParty = 1 if pres_party == 0
+	replace PresParty = 0 if pres_party == 1
+	drop pres_party
+
+* Elections
+	merge m:m Quarter using "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/pres_elections_quarter.dta"
+	drop if _merge != 3
+	drop _merge
+	duplicates drop Quarter, force
+	sort Quarter
 	
 	saveold "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta", replace
 	

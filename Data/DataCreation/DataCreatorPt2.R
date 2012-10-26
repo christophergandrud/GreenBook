@@ -116,3 +116,5 @@ merge m:m Quarter using "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/F
 drop if _merge == 2
 drop _merge
 save, replace
+
+outsheet using "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", comma replace
