@@ -10,13 +10,13 @@ library(reshape)
 setwd("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012")
 
 # Data downloaded from FRED, some clean up by hand
-# Series included: GDP, GFDEBTN, FGEXPND, NGDPPOT
+# Series included: GDP, GFDEBTN, FGEXPND, NGDPPOT, UNRATE
 
 gdp <- read.csv("FRED_gdp.csv")
 GovDebt<- read.csv("FRED_GovDebt.csv")
 GovExpenditure <- read.csv("FRED_govExpenditure.csv")
 Potential <- read.csv("FRED_Potential.csv")
-Unemployment <- read.csv("FRED_Unemploy.csv")
+Unemployment <- read.csv("FRED_Unemploy.csv") # Civilian Unemployment Rate
 GBUnemployment <- read.csv("GB_Unemployment.csv")
 
 # Standardise Quarter
