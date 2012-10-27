@@ -73,9 +73,9 @@ Estat <- as.vector(Cor$estimate)
 Pstat <- as.vector(Cor$p.value)
 
 # Graph the relationship
-CorData <- data.frame(cpi.dataU$error.unemploy.q2, cpi.data$error.prop.deflator.q2)
+CorData <- data.frame(cpi.dataU$error.unemploy.q2, cpi.dataU$error.prop.deflator.q2)
 
-ErrorOrthogScatter <- ggplot(data = cordata, aes(X1, X2)) + 
+ErrorOrthogScatter <- ggplot(data = CorData, aes(X1, X2)) + 
                               geom_smooth() +
                               geom_point() + 
                               xlab("\n Unemployment Rate Forecast Errors") +
