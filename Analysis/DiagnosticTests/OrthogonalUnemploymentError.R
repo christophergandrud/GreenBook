@@ -27,6 +27,9 @@ cpi.dataU$error.unemploy.q3 <-  (cpi.dataU$GB_Unemp3 - cpi.dataU$UNRATE)/cpi.dat
 cpi.dataU$error.unemploy.q4 <-  (cpi.dataU$GB_Unemp4 - cpi.dataU$UNRATE)/cpi.dataU$UNRATE
 cpi.dataU$error.unemploy.q5 <-  (cpi.dataU$GB_Unemp5 - cpi.dataU$UNRATE)/cpi.dataU$UNRATE
 
+cpi.dataU$error.prop.deflator.q2 <-  (cpi.dataU$GB_CPI_QTR2 - cpi.dataU$deflator)/cpi.dataU$deflator
+
+
 # Create FRB/Global Model Variable 
 cpi.dataU$GlobalModel[cpi.dataU$Quarter > 1995.4] <- "1"
 cpi.dataU$GlobalModel[cpi.dataU$Quarter < 1996.1] <- "0"
@@ -66,16 +69,14 @@ errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2))
 
 #### Correlation Between Forecast Error and Unemployment Error ####
 
-Cor <- cor.test(cpi.dataU$error.unemploy.q2, cpi.data$error.prop.deflator.q2)
+Cor <- cor.test(cpi.dataU$error.unemploy.q2, cpi.dataU$error.prop.deflator.q2)
 
 Estat <- as.vector(Cor$estimate)
 
 Pstat <- as.vector(Cor$p.value)
 
 # Graph the relationship
-CorData <- data.frame(cpi.dataU$error.unemploy.q2, cpi.dataU$error.prop.deflator.q2)
-
-ErrorOrthogScatter <- ggplot(data = CorData, aes(X1, X2)) + 
+ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, error.prop.deflator.q2)) + 
                               geom_smooth() +
                               geom_point() + 
                               xlab("\n Unemployment Rate Forecast Errors") +
