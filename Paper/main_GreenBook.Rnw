@@ -583,11 +583,11 @@ plot(cpi.matched.party, type = "jitter", interactive = FALSE)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%   Green Book Unemployment Forecast Error Across Time
 \begin{figure}[t]
-    \caption{}
+    \caption{Diagnostics of Unemployment Rate Forecast Error as Orthogonal to Inflation Rate Forecast Errors}
     \label{Unemployment}
     \begin{center}
     
-<<GraphPartisanErrorUnemploy, warning=FALSE, message=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
+<<GraphPartisanErrorUnemploy, warning=FALSE, message=FALSE, error=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.9\\linewidth'>>=
   # Print unemployment error orthogonal graphs
     OrthogCombine <- grid.arrange(errors.employ.time, ErrorOrthogScatter, ncol = 2)
     print(OrthogCombine)
