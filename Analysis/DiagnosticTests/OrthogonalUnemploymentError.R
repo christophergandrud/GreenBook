@@ -57,13 +57,34 @@ errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2))
   scale_color_manual(values = partisan.colors, name = "") +
   scale_fill_manual(values = partisan.colors, name = "") +
   xlab("") + ylab("Standardized Unemployment\n Forecast Error\n") + 
+  ggtitle("Errors in Employment Forecasts \n Made 2 Qtr. Beforehand (1969 - 2006)") +
   scale_x_continuous(limits = c(1968, 2007),
                      breaks = c(1970, 1980, 1990, 2000, 2007), 
                      labels = c(1970, 1980, 1990, 2000, 2007)) +
   scale_y_continuous(breaks = c(-0.1, 0, 0.1, 0.2, 0.3), labels = c(-0.1, 0, 0.1, 0.2, 0.3)) +
   theme_bw(base_size = 12)
 
-print(errors.employ.time) 
+#### Correlation Between Forecast Error and Unemployment Error ####
+
+Cor <- cor.test(cpi.dataU$error.unemploy.q2, cpi.data$error.prop.deflator.q2)
+
+Estat <- as.vector(Cor$estimate)
+
+Pstat <- as.vector(Cor$p.value)
+
+# Graph the relationship
+CorData <- data.frame(cpi.dataU$error.unemploy.q2, cpi.data$error.prop.deflator.q2)
+
+ErrorOrthogScatter <- ggplot(data = cordata, aes(X1, X2)) + 
+                              geom_smooth() +
+                              geom_point() + 
+                              xlab("\n Unemployment Rate Forecast Errors") +
+                              ylab("Inflation Forecast Errors") +
+                              ggtitle("Scatterplot of Unemployment and\n Inflation Forecast Errors (1969 - 2006)\n") +
+                              theme_bw(base_size = 12)
+
+                              
+
 
 #### Match Data and Run Comparison Analysis ####
 
