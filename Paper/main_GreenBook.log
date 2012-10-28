@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  28 OCT 2012 14:01
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  28 OCT 2012 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1064,7 +1064,7 @@ File: figure/ExpectValueParty.pdf Graphic file (type pdf)
 
 <use figure/ExpectValueParty.pdf>
 Package pdftex.def Info: figure/ExpectValueParty.pdf used on input line 414.
-(pdftex.def)             Requested size: 339.72592pt x 226.49602pt.
+(pdftex.def)             Requested size: 335.19873pt x 223.47447pt.
  [16 <./figure/CoefComparePlots.pdf>] [17 <./figure/ExpectValueParty.pdf>]
 
 Package xcolor Warning: Incompatible color definition on input line 450.
@@ -3653,7 +3653,7 @@ ype1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt8.pfb>
-Output written on main_GreenBook.pdf (29 pages, 1327845 bytes).
+Output written on main_GreenBook.pdf (29 pages, 1327852 bytes).
 PDF statistics:
  695 PDF objects out of 1000 (max. 8388607)
  613 compressed objects within 7 object streams
