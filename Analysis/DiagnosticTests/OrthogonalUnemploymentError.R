@@ -79,7 +79,7 @@ Pstat <- as.vector(Cor$p.value)
 ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, error.prop.deflator.q2)) + 
                               geom_smooth() +
                               geom_point() + 
-                              xlab("\n Unemployment Rate Forecast Errors") +
+                              xlab("\n Unemployment Forecast Errors") +
                               ylab("Inflation Forecast Errors") +
                               ggtitle("Scatterplot of Unemployment and\n Inflation Forecast Errors\n") +
                               theme_bw(base_size = 12)

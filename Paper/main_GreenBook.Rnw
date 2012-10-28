@@ -580,7 +580,7 @@ plot(cpi.matched.party, type = "jitter", interactive = FALSE)
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Note: Errors of 0 indicates that inflation was perfectly predicted.}}
+        {\scriptsize{Note: Errors of 0 indicates that inflation/the unemployment rate was perfectly predicted.}}
     \end{singlespace}
 \end{figure}
 
