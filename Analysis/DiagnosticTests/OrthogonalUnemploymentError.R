@@ -59,7 +59,7 @@ errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2))
   stat_smooth(method = "lm", aes(group = presTerm, color = pres_party_name, fill = pres_party_name)) +
   scale_color_manual(values = partisan.colors, name = "") +
   scale_fill_manual(values = partisan.colors, name = "") +
-  xlab("") + ylab("Standardized Unemployment\n Forecast Error\n") + 
+  xlab("") + ylab("Unemployment Forecast Error\n") + 
   ggtitle("Errors in Employment Forecasts \n Made 2 Qtr. Beforehand\n") +
   scale_x_continuous(limits = c(1968, 2007),
                      breaks = c(1970, 1980, 1990, 2000, 2007), 

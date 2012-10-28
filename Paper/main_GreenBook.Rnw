@@ -299,7 +299,7 @@ Our main finding is that presidential party identification had a strong positive
     \label{ExpectValueParty}
     \begin{center}
 
-<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.7\\linewidth'>>=
+<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.75\\linewidth'>>=
 source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/CompareQuarterEstimates.R")
 @
 <<LoadQrt2Estimates, echo=FALSE, message=FALSE, error=FALSE>>=
@@ -386,7 +386,7 @@ As expected, relative changes to the discount rate are often found to be negativ
 
 As a final diagnostic we ran our analyses with a dependant variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are not strongly correlated with inflation forecast errors.The Pearson correlation coefficitent for forecasts made two quarters beforehand is \Sexpr{round(Estat, digit = 2)} with a p-value of \Sexpr{round(Pstat, digit = 2)}. It is not clear why Federal Reserve staff would have systematically different unemployment forecast errors when there is a Republican president and a Democratic president.} The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Green Book. The actual unemployment rate was found using the Federal Reserve's FRED database.\footnote{We focused on 2 quarter forecasts.}
 
-Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors was the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiagnosticTests/OrthogonalUnemploymentError.R}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's inflation forecasting errors.
+Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors was the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's inflation forecasting errors.
 
 \section*{Discussion: Is there a partisan bias?}
 
@@ -573,7 +573,7 @@ plot(cpi.matched.party, type = "jitter", interactive = FALSE)
     \label{Unemployment}
     \begin{center}
     
-<<GraphPartisanErrorUnemploy, warning=FALSE, message=FALSE, error=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.9\\linewidth'>>=
+<<GraphPartisanErrorUnemploy, warning=FALSE, message=FALSE, error=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.95\\linewidth'>>=
   # Print unemployment error orthogonal graphs
     grid.arrange(errors.employ.time, ErrorOrthogScatter, ncol = 2)
 @

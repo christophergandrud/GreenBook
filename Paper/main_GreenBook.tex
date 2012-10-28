@@ -411,7 +411,7 @@ Our main finding is that presidential party identification had a strong positive
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.7\linewidth]{figure/ExpectValueParty} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.75\linewidth]{figure/ExpectValueParty} 
 \end{knitrout}
 
 
@@ -422,7 +422,7 @@ Our main finding is that presidential party identification had a strong positive
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 13 percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately -19 percent. Clearly, at least between the 1970s and 2006, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
+To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 11 percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately -22 percent. Clearly, at least between the 1970s and 2006, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
 
 The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate.
 
@@ -482,7 +482,7 @@ As expected, relative changes to the discount rate are often found to be negativ
 
 As a final diagnostic we ran our analyses with a dependant variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are not strongly correlated with inflation forecast errors.The Pearson correlation coefficitent for forecasts made two quarters beforehand is -0.15 with a p-value of 0.06. It is not clear why Federal Reserve staff would have systematically different unemployment forecast errors when there is a Republican president and a Democratic president.} The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Green Book. The actual unemployment rate was found using the Federal Reserve's FRED database.\footnote{We focused on 2 quarter forecasts.}
 
-Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors was the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiagnosticTests/OrthogonalUnemploymentError.R}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's inflation forecasting errors.
+Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors was the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's inflation forecasting errors.
 
 \section*{Discussion: Is there a partisan bias?}
 
@@ -699,7 +699,7 @@ Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Sun Oct 28 13:34:51 2012
+% Sun Oct 28 14:01:14 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -735,7 +735,7 @@ Intercept & 4.49 & 0.99 & 2.56 & 4.49 & 6.46 \\
 
 
 % latex table generated in R 2.15.1 by xtable 1.7-0 package
-% Sun Oct 28 13:34:52 2012
+% Sun Oct 28 14:01:14 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}
@@ -796,15 +796,12 @@ Intercept & 4.32 & 2.86 & -1.28 & 4.32 & 9.90 \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%   Green Book Unemployment Forecast Error Across Time
 \begin{figure}[t]
-    \caption{Diagnostics of Unemployment Rate Forecast Error as Orthogonal to Inflation Rate Forecast Errors}
+    \caption{Diagnostics of Unemployment Rate Forecast Error as Orthogonal to Inflation Rate Forecast Errors for years 1969 - 2006}
     \label{Unemployment}
     \begin{center}
     
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.9\linewidth]{figure/GraphPartisanErrorUnemploy} \begin{kframe}\begin{verbatim}
-## NULL
-\end{verbatim}
-\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/GraphPartisanErrorUnemploy} 
 \end{knitrout}
 
 
