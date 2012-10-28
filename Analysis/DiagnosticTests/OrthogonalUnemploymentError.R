@@ -60,7 +60,7 @@ errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2))
   scale_color_manual(values = partisan.colors, name = "") +
   scale_fill_manual(values = partisan.colors, name = "") +
   xlab("") + ylab("Standardized Unemployment\n Forecast Error\n") + 
-  ggtitle("Errors in Employment Forecasts \n Made 2 Qtr. Beforehand (1969 - 2006)") +
+  ggtitle("Errors in Employment Forecasts \n Made 2 Qtr. Beforehand\n") +
   scale_x_continuous(limits = c(1968, 2007),
                      breaks = c(1970, 1980, 1990, 2000, 2007), 
                      labels = c(1970, 1980, 1990, 2000, 2007)) +
@@ -81,7 +81,7 @@ ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, error.prop
                               geom_point() + 
                               xlab("\n Unemployment Rate Forecast Errors") +
                               ylab("Inflation Forecast Errors") +
-                              ggtitle("Scatterplot of Unemployment and\n Inflation Forecast Errors (1969 - 2006)\n") +
+                              ggtitle("Scatterplot of Unemployment and\n Inflation Forecast Errors\n") +
                               theme_bw(base_size = 12)
 
                               
