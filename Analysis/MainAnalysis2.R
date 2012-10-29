@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 19 October 2012
+# 29 October 2012
 ###############
 
 ## Load libraries
@@ -24,6 +24,10 @@ vars <- c("Quarter", "ElectionPeriod", "pres_party", "error.prop.deflator.q2",
           )  
 cpi.complete <- cpi.data[complete.cases(cpi.data[vars]),]
 cpi.complete <- cpi.complete[vars]
+
+# Remove quarters when president party ID would be unknown for 2 quarter forecasting (time_to_election = 15, 14)
+
+cpi.complete <- subset(cpi.complete, (time_to_election %in% c(14, 15)))
 
 #### Matching Model ####
 

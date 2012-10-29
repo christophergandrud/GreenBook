@@ -1,12 +1,12 @@
 ###############
 # Difference of Mean Forecast Error
 # Christopher Gandrud 
-# 19 October 2012
+# 29 October 2012
 ###############
 
 ## This code creates a confidence interval of for the difference of mean forecast error in Democratic and Republican presidencies.
 
-#library(devtools)
+# library(devtools)
 library(plotrix)
 
 # To run as a stand alone file. First, run the following file from the paper:
