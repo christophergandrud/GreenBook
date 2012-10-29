@@ -27,7 +27,7 @@ cpi.complete <- cpi.complete[vars]
 
 # Remove quarters when president party ID would be unknown for 2 quarter forecasting (time_to_election = 15, 14)
 
-cpi.complete <- subset(cpi.complete, (time_to_election %in% c(14, 15)))
+cpi.complete <- subset(cpi.complete, !(time_to_election %in% c(14, 15)))
 
 #### Matching Model ####
 

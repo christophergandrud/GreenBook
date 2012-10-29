@@ -297,7 +297,7 @@ We graphically present the key results in this section. Coefficient estimate tab
 Our main finding is that presidential party identification had a strong positive association with Federal Reserve staff inflation forecast errors across all model specifications. Inflation forecasts are higher during Democratic presidencies than Republican ones. This finding is what we would expect if Federal Reserve staff have a presidential partisan heuristic and is very robust. For instance, the 95\% confidence band around the coefficient estimate moves somewhat further away from 0--i.e. no relationship--when using matched data (see Figure \ref{CoefComparePlots}).  
 
 \begin{figure}[t]
-    \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies (all forecasts)}
+    \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies}
     \label{ExpectValueParty}
     \begin{center}
 
