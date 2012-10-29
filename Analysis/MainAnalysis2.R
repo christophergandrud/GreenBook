@@ -29,6 +29,8 @@ cpi.complete <- cpi.complete[vars]
 
 cpi.complete <- subset(cpi.complete, !(time_to_election %in% c(14, 15)))
 
+cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
+
 #### Matching Model ####
 
 # Elections, No interactions
@@ -63,31 +65,31 @@ cpi.Mdf.party <- match.data(cpi.matched.party)
 ###### Non-matched (N) ######
 # Least Squares
 
-NL1 <- zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL1 <- zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL2 <- zelig(error.prop.deflator.q2 ~ time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL2 <- zelig(error.prop.deflator.q2 ~ time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL3 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL3 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL4 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL4 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL7 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.data, cite = FALSE)
+NL7 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL8 <- zelig(error.prop.deflator.q2 ~ pres_party*ElectionPeriod + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.data, cite = FALSE)
+NL8 <- zelig(error.prop.deflator.q2 ~ pres_party*ElectionPeriod + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL9 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + DebtGDP + time_to_election + Chair + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL9 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + DebtGDP + time_to_election + Chair + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL10 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + DebtGDP + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL10 <- zelig(error.prop.deflator.q2 ~ pres_party*house_dem_rep + recession + DebtGDP + time_to_election + senate_dem_rep + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep + house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL12 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data, cite = FALSE)
+NL12 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep + recession + DebtGDP + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange, model = "ls", data = cpi.data2, cite = FALSE)
 
-NL13 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.data, cite = FALSE)
+NL13 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.data2, cite = FALSE)
 
 ###### Matched based with the ElectionPeriod as the treatment variable (E) ######
 
