@@ -5,11 +5,11 @@
 ################
 
 # Create range of values to simulate expected values across
-election_time <- 0:10
+election_time <- (0:10)^2
 
 # Set fitted values 
-NL8SetElectionDem <- setx(NL8, pres_party = 1, time_to_election = election_time)
-NL8SetElectionRep <- setx(NL8, pres_party = 0, time_to_election = election_time)
+NL8SetElectionDem <- setx(NL8, pres_party = 1, elect2 = election_time)
+NL8SetElectionRep <- setx(NL8, pres_party = 0, elect2 = election_time)
 
 # Simulate expected values.
 NL8SimElectionDem <- sim(NL8, x = NL8SetElectionDem)
@@ -59,7 +59,8 @@ ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value), group) 
                                              aes(group = Party), colour = "grey70") +
                                 geom_point(aes(color = Party), alpha = I(0.01), size = 3) +
                                 scale_x_reverse(breaks = c(10, 8, 6, 4, 2, 0)) +
-                                xlab("") + ylab("Expected Standardized Forecast Error\n") +
+                                xlab("\nQuarters to Election") + 
+                                ylab("Expected Standardized Forecast Error\n") +
                                 scale_color_manual(values = partisan.colors) +
                                 guides(colour = guide_legend(title = NULL, override.aes = list(alpha = 1))) +
                                 theme_bw(base_size = 11)
