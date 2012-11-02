@@ -62,8 +62,8 @@ errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2))
   xlab("") + ylab("Unemployment Forecast Error\n") + 
   ggtitle("Errors in Employment Forecasts \n Made 2 Qtr. Beforehand\n") +
   scale_x_continuous(limits = c(1968, 2007),
-                     breaks = c(1970, 1980, 1990, 2000, 2007), 
-                     labels = c(1970, 1980, 1990, 2000, 2007)) +
+                     breaks = c(1970, 1980, 1990, 2000), 
+                     labels = c(1970, 1980, 1990, 2000)) +
   scale_y_continuous(breaks = c(-0.1, 0, 0.1, 0.2, 0.3), labels = c(-0.1, 0, 0.1, 0.2, 0.3)) +
   theme_bw(base_size = 12)
 
