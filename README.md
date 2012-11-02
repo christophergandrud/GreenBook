@@ -24,7 +24,8 @@ To reproduce the paper first install the necessary R packages:
                     "RCurl",
                     "stats", 
                     "xtable", 
-                    "apsrtable"
+                    "apsrtable",
+                    "Zelig"
                     )
 ```
               
