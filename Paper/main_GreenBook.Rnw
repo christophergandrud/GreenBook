@@ -297,14 +297,15 @@ We graphically present the key results in this section. Coefficient estimate tab
 
 \paragraph{Presidential Party Identification}
 
-Our main finding is that presidential party identification had a strong positive association with Federal Reserve staff inflation forecast errors across all model specifications. Inflation forecasts are higher during Democratic presidencies than Republican ones. This finding is what we would expect if Federal Reserve staff have a presidential partisan heuristic and is very robust across virtually all model specification using both matched and unmatched data.\footnote{The only models where the statistical significance of the variable drops below the 0.05 significance threshold is in when it is interacted with both the House and Senate party variables using matched data. The matched data sets include relatively few observations, so these results may largely be because we are including more covariates in the model then the data has information to be able to draw meaningful conclusions  \citep{Brambor2006}.} 
+Our main finding is that presidential party identification had a strong positive association with Federal Reserve staff inflation forecast errors. Inflation forecasts are estimated to be higher during Democratic presidencies than Republican ones even when we control for numerous other economic and political variables. This finding is what we would expect if Federal Reserve staff have a presidential partisan heuristic and is very robust across virtually all model specification using both matched and unmatched data.\footnote{The only models where the statistical significance of the variable drops below the 0.05 significance threshold is when it is interacted with both the House and Senate party variables using matched data. The matched data sets include relatively fewer observations, so these results may largely be because we are including more covariates in the models than the data has information to be able to draw meaningful conclusions for \citep{Brambor2006}.} Notably, the estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate, but either have a partisan preference or are using partisan heuristics.
+
 
 \begin{figure}[t]
     \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies}
     \label{ExpectValueParty}
     \begin{center}
 
-<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.76\\linewidth'>>=
+<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.75\\linewidth'>>=
 source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/CompareQuarterEstimates.R")
 @
 <<LoadQrt2Estimates, echo=FALSE, message=FALSE, error=FALSE>>=
@@ -316,13 +317,11 @@ Sim2 <- read.csv("/git_repositories/GreenBook/Paper/cache/SimQrt2.csv")
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big this bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding all other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by \Sexpr{format(mean(Sim2$value[Sim2$variable == "Dem"]*100), digits = 2)} percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately \Sexpr{format(mean(Sim2$value[Sim2$variable == "Rep"]*100), digits = 2)} percent. 
+To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by \Sexpr{format(mean(Sim2$value[Sim2$variable == "Dem"]*100), digits = 2)} percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately \Sexpr{format(mean(Sim2$value[Sim2$variable == "Rep"]*100), digits = 2)} percent. 
 
-There is some variation in predicted error magnitude depending on how many quarters ago the forecasts were made.
+There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies. The distribution of the middle 95 percent of simulations for forecasts made three to five quarters beforehand occasionally overlap or come close to over lapping. This may largely be the result of the fact that we have far fewer observations for these estimates--due to missing data and dropping quarters with unknown presidents--which leads to much higher variance.
 
 Clearly, at least between the 1970s and 2006, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
-
-The estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate.
 
 \paragraph{Presidential Elections}
 
