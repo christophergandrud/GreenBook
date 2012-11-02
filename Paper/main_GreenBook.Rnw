@@ -312,7 +312,7 @@ Sim2 <- read.csv("/git_repositories/GreenBook/Paper/cache/SimQrt2.csv")
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are the same as those in Model C7 from Table \ref{OutputPL}. \\ The matching methods only include complete cases. Due two missing values early in the observation period we ran a different matching model for forecasts made three to five quarters beforehand. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are generally the same as those in Model C7 from Table \ref{OutputPL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ The matching methods only include complete cases. Due to missing values early in the observation period we ran a different matching model for forecasts made three to five quarters beforehand. \\ Each model excludes every quarter when the forecasters would not have known who the president was. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 

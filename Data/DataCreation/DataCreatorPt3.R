@@ -142,7 +142,7 @@ Rate3$DiscountRate <- round(Rate3$DiscountRate, digits = 2)
 
 Rate3 <- Rate3[, c("Quarter", "DiscountRate3qChange")]
 
-# Remove first two quarters for missing data
+# Remove first three quarters for missing data
 Rate3 <- Rate3[-1:-3, ]
 
 # merge with cpi.data
@@ -190,7 +190,7 @@ Rate5$DiscountRate <- round(Rate5$DiscountRate, digits = 2)
 
 Rate5 <- Rate5[, c("Quarter", "DiscountRate5qChange")]
 
-# Remove first two quarters for missing data
+# Remove first five quarters for missing data
 Rate5 <- Rate5[-1:-5, ]
 
 # merge with cpi.data
