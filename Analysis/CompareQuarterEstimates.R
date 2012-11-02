@@ -41,7 +41,7 @@ CPIEstimates35 <- CPIEstimates35[vars]
 
 ## Matching Models ##
 # Party, Only pres*ElectionPeriod Interaction Quarters 0 to 2
-CPIMatchedParty02 <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate + DiscountRate1qChange + DiscountRate2qChange + pres_party*ElectionPeriod, data = CPIEstimates02, method = "genetic", pop.size = 161)
+CPIMatchedParty02 <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate1qChange + DiscountRate2qChange + pres_party*ElectionPeriod, data = CPIEstimates02, method = "genetic", pop.size = 161)
 
 # Remove quarters when the president's party was unknown 3 quarters in advance
 CPIEstimates35 <- subset(CPIEstimates35 , !(time_to_election %in% c(13, 14, 15)))
