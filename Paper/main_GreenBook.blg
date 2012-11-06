@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main_GreenBook.aux
+The style file: apsr.bst
+Database file #1: GreenBook.bib.bib
+Repeated entry---line 142 of file GreenBook.bib.bib
+ : @article{Brambor2006
+ :                     ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "Diamond2012" isn't style-file defined
+--line 187 of file GreenBook.bib.bib
+Warning--I didn't find a database entry for "Gamber2009"
+Warning--I didn't find a database entry for "Alvarez1998"
+Warning--I didn't find a database entry for "LewisBeck1988"
+Warning--I didn't find a database entry for "Powell1993"
+Warning--can't use both author and editor fields in Goodrich2007
+Warning--empty publisher in Goodrich2007
+Warning--empty chapter and pages in Goodrich2007
+You've used 36 entries,
+            2874 wiz_defined-function locations,
+            893 strings with 10367 characters,
+and the built_in function-call counts, 133114 in all, are:
+= -- 21667
+> -- 1562
+< -- 0
++ -- 10018
+- -- 562
+* -- 11249
+:= -- 27008
+add.period$ -- 144
+call.type$ -- 36
+change.case$ -- 468
+chr.to.int$ -- 36
+cite$ -- 39
+duplicate$ -- 532
+empty$ -- 1184
+format.name$ -- 603
+if$ -- 23842
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 35
+newline$ -- 155
+num.names$ -- 407
+pop$ -- 125
+preamble$ -- 1
+purify$ -- 540
+quote$ -- 0
+skip$ -- 454
+stack$ -- 0
+substring$ -- 30384
+swap$ -- 68
+text.length$ -- 504
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 140
+warning$ -- 3
+while$ -- 849
+width$ -- 0
+write$ -- 494
+(There was 1 error message)

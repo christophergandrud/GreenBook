@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  28 OCT 2012 10:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  6 NOV 2012 09:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1340,7 +1340,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
  ) 
 Here is how much of TeX's memory you used:
  15712 strings out of 493633
- 295507 string characters out of 3143377
+ 295509 string characters out of 3143377
  363090 words of memory out of 3000000
  18546 multiletter control sequences out of 15000+200000
  17870 words of font info for 68 fonts, out of 3000000 for 9000
@@ -1360,7 +1360,7 @@ al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local
 /texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/l
 ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on APSAGreenBookPresentation.pdf (36 pages, 1218155 bytes).
+Output written on APSAGreenBookPresentation.pdf (36 pages, 1957962 bytes).
 PDF statistics:
  424 PDF objects out of 1000 (max. 8388607)
  345 compressed objects within 4 object streams
