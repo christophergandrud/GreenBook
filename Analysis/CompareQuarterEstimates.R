@@ -1,7 +1,7 @@
 ###############
 # Graph of simulated errors across all quarter estimates for model PL7 (C7 in the manuscript table)
 # Christopher Gandrud 
-# 2 November 2012
+# 10 November 2012
 ###############
 
 ## Load libraries
@@ -25,7 +25,7 @@ vars <- c("Quarter", "ElectionPeriod", "pres_party", "error.prop.deflator.q0",
           "recession", "senate_dem_rep", "house_dem_rep", "DebtGDP", "ExpenditureGDP",
           "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange",
           "DiscountRate1qChange", "DiscountRate2qChange", "Chair"
-)  
+  )  
 CPIEstimates02 <- cpi.data[complete.cases(cpi.data[vars]),]
 CPIEstimates02 <- CPIEstimates02[vars]
 
@@ -229,21 +229,42 @@ ModelParty.evPer5 <- subset(ModelParty.evPer5, Lower == FALSE & Upper == FALSE)
 ModelPartyAll <- rbind(ModelParty.evPer0, ModelParty.evPer1, 
                        ModelParty.evPer2, ModelParty.evPer3, ModelParty.evPer4, ModelParty.evPer5)
 
-# Plot expected values
+# Create objects recording the number of observations used in each model.
+O0 <- nrow(CPIMdfParty02)
+O1 <- nrow(subset(CPIMdfParty02, time_to_election != 15))
+O2 <- nrow(subset(CPIMdfParty02, !(time_to_election %in% c(15, 14))))
+O3 <- nrow(CPIMdfParty35)
+O4 <- nrow(subset(CPIMdfParty35 , !(time_to_election %in% c(15, 14, 13, 12))))
+O5 <- nrow(subset(CPIMdfParty35 , !(time_to_election %in% c(15, 14, 13, 12, 11))))
+
+#### Plot expected values ####
+# Partisan colours, initially run in ErrorPresPartyGraph.R
+# partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
+
 ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           geom_hline(aes(intercept= 0), linetype = "dotted") +
                           stat_summary(fun.y = mean, geom = "line", aes(group = variable), colour = "grey70") +
-                          #facet_grid(~ variable) +
                           geom_point(aes(colour = variable), alpha = I(0.05), size = 3) +
                           scale_color_manual(values = partisan.colors, 
-                                             name = "") + # partisan.colors defined in the main .Rnw file
+                                             name = "") +
                           scale_x_reverse() +
                           scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25), 
                                              labels = c(-0.5, -0.25, 0, 0.25)) +
                           xlab("\n Age of Forecast in Quarters") +
                           ylab("Expected Standardized Forecast Error \n") +
+                          annotate(geom = "text", x = 4.8, y = 0.34, parse = TRUE, 
+                                   label = "italic(n==39)", family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 4, y = 0.34, parse = TRUE, 
+                                   label = "43", family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 3, y = 0.34, parse = TRUE, 
+                                   label = "46", family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 2, y = 0.34, parse = TRUE, 
+                                   label = "60", family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 1, y = 0.34, parse = TRUE, 
+                                   label = "63", family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 0, y = 0.34, parse = TRUE, 
+                                   label = "66", family = "Cambria", size = 4) +
                           guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +
-                          theme_bw(base_size = 12)
-    
+                          theme_bw(base_size = 12)    
 
 print(ModelPartyPlotAll)
