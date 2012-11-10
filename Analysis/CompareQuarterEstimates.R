@@ -248,22 +248,22 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           scale_color_manual(values = partisan.colors, 
                                              name = "") +
                           scale_x_reverse() +
-                          scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25), 
-                                             labels = c(-0.5, -0.25, 0, 0.25)) +
+                          scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25, 0.34), 
+                                             labels = c(-0.5, -0.25, 0, 0.25, "N =")) +
                           xlab("\n Age of Forecast in Quarters") +
                           ylab("Expected Standardized Forecast Error \n") +
-                          annotate(geom = "text", x = 4.8, y = 0.34, parse = TRUE, 
-                                   label = "italic(n==39)", family = "Cambria", size = 4) +
-                          annotate(geom = "text", x = 4, y = 0.34, parse = TRUE, 
-                                   label = "43", family = "Cambria", size = 4) +
-                          annotate(geom = "text", x = 3, y = 0.34, parse = TRUE, 
-                                   label = "46", family = "Cambria", size = 4) +
-                          annotate(geom = "text", x = 2, y = 0.34, parse = TRUE, 
-                                   label = "60", family = "Cambria", size = 4) +
-                          annotate(geom = "text", x = 1, y = 0.34, parse = TRUE, 
-                                   label = "63", family = "Cambria", size = 4) +
-                          annotate(geom = "text", x = 0, y = 0.34, parse = TRUE, 
-                                   label = "66", family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 5, y = 0.34,
+                                   label = O5, family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 4, y = 0.34,
+                                   label = O4, family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 3, y = 0.34, 
+                                   label = O3, family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 2, y = 0.34, 
+                                   label = O2, family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 1, y = 0.34, 
+                                   label = O1, family = "Cambria", size = 4) +
+                          annotate(geom = "text", x = 0, y = 0.34, 
+                                   label = O0, family = "Cambria", size = 4) +
                           guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +
                           theme_bw(base_size = 12)    
 
