@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  10 NOV 2012 12:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  11 NOV 2012 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,7 +1072,7 @@ LaTeX Warning: Reference `PLTables' on page 17 undefined on input line 431.
 
 Package xcolor Warning: Incompatible color definition on input line 458.
 
-<figure/InterPlot.pdf, id=468, 505.89pt x 289.08pt>
+<figure/InterPlot.pdf, id=466, 505.89pt x 289.08pt>
 File: figure/InterPlot.pdf Graphic file (type pdf)
  <use figure/InterPlot.pdf>
 Package pdftex.def Info: figure/InterPlot.pdf used on input line 458.
@@ -3516,7 +3516,7 @@ $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6)$
 
 Package xcolor Warning: Incompatible color definition on input line 790.
 
-<figure/ElectPropensity.pdf, id=541, 505.89pt x 289.08pt>
+<figure/ElectPropensity.pdf, id=539, 505.89pt x 289.08pt>
 File: figure/ElectPropensity.pdf Graphic file (type pdf)
 
 <use figure/ElectPropensity.pdf>
@@ -3529,7 +3529,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package xcolor Warning: Incompatible color definition on input line 803.
 
-<figure/PresPropensity.pdf, id=544, 505.89pt x 289.08pt>
+<figure/PresPropensity.pdf, id=542, 505.89pt x 289.08pt>
 File: figure/PresPropensity.pdf Graphic file (type pdf)
 
 <use figure/PresPropensity.pdf>
@@ -3542,7 +3542,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package xcolor Warning: Incompatible color definition on input line 818.
 
-<figure/GraphPartisanErrorUnemploy.pdf, id=547, 505.89pt x 289.08pt>
+<figure/GraphPartisanErrorUnemploy.pdf, id=545, 505.89pt x 289.08pt>
 File: figure/GraphPartisanErrorUnemploy.pdf Graphic file (type pdf)
 
 <use figure/GraphPartisanErrorUnemploy.pdf>
@@ -3605,7 +3605,7 @@ ype1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt8.pfb>
-Output written on main_GreenBook.pdf (31 pages, 2074204 bytes).
+Output written on main_GreenBook.pdf (31 pages, 2073807 bytes).
 PDF statistics:
  739 PDF objects out of 1000 (max. 8388607)
  655 compressed objects within 7 object streams
