@@ -305,7 +305,7 @@ Our main finding is that presidential party identification had a strong positive
     \label{ExpectValueParty}
     \begin{center}
 
-<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.74\\linewidth'>>=
+<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.76\\linewidth'>>=
 source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/CompareQuarterEstimates.R")
 @
 <<LoadQrt2Estimates, echo=FALSE, message=FALSE, error=FALSE>>=

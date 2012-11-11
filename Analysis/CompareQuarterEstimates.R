@@ -241,10 +241,6 @@ O5 <- nrow(subset(CPIMdfParty35 , !(time_to_election %in% c(15, 14, 13, 12, 11))
 # Partisan colours, initially run in ErrorPresPartyGraph.R
 # partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
-# Load Cambria font
-library(extrafont)
-loadfonts()
-
 # Create plot
 ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           geom_hline(aes(intercept= 0), linetype = "dotted") +
@@ -258,17 +254,17 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           xlab("\n Age of Forecast in Quarters") +
                           ylab("Expected Standardized Forecast Error \n") +
                           annotate(geom = "text", x = 5, y = 0.34,
-                                   label = O5, family = "Cambria", size = 4) +
+                                   label = O5, size = 4) +
                           annotate(geom = "text", x = 4, y = 0.34,
-                                   label = O4, family = "Cambria", size = 4) +
+                                   label = O4, size = 4) +
                           annotate(geom = "text", x = 3, y = 0.34, 
-                                   label = O3, family = "Cambria", size = 4) +
+                                   label = O3, size = 4) +
                           annotate(geom = "text", x = 2, y = 0.34, 
-                                   label = O2, family = "Cambria", size = 4) +
+                                   label = O2, size = 4) +
                           annotate(geom = "text", x = 1, y = 0.34, 
-                                   label = O1, family = "Cambria", size = 4) +
+                                   label = O1, size = 4) +
                           annotate(geom = "text", x = 0, y = 0.34, 
-                                   label = O0, family = "Cambria", size = 4) +
+                                   label = O0, size = 4) +
                           guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +
                           theme_bw(base_size = 12)    
 
