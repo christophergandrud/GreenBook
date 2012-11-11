@@ -1,7 +1,7 @@
 ###############
 # Graph of simulated errors across all quarter estimates for model PL7 (C7 in the manuscript table)
 # Christopher Gandrud 
-# 10 November 2012
+# 11 November 2012
 ###############
 
 ## Load libraries
@@ -241,6 +241,11 @@ O5 <- nrow(subset(CPIMdfParty35 , !(time_to_election %in% c(15, 14, 13, 12, 11))
 # Partisan colours, initially run in ErrorPresPartyGraph.R
 # partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
+# Load Cambria font
+library(extrafont)
+loadfonts()
+
+# Create plot
 ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                           geom_hline(aes(intercept= 0), linetype = "dotted") +
                           stat_summary(fun.y = mean, geom = "line", aes(group = variable), colour = "grey70") +
