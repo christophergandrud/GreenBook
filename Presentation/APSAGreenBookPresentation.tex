@@ -233,7 +233,7 @@
 	\frametitle{Propensity matching}
 		\begin{center}
 {\Large{Propensity Score Matching by Election Quarter}}
-\includegraphics{/git_repositories/GreenBook/Paper/figure/ElectPropensity.pdf}
+\includegraphics[scale=0.6]{/git_repositories/GreenBook/Paper/figure/ElectPropensity.pdf}
 		\end{center}
 }
 
@@ -241,52 +241,85 @@
 	\frametitle{Propensity matching}
 		\begin{center}
 {\Large{Propensity Score Matching by Presidential Party ID}}
-\includegraphics{/git_repositories/GreenBook/Paper/figure/PresPropensity.pdf}
+\includegraphics[scale=0.6]{/git_repositories/GreenBook/Paper/figure/PresPropensity.pdf}
 		\end{center}
 }
 
 
 
-\frame{
-	\frametitle{OLS Regressions}
-			\begin{center}		
+\frame[plain]{
 		{\Large{OLS Regressions with Non-Matched Data}}
-\includegraphics[scale=0.60]{/git_repositories/GreenBook/Paper/figure/Table1.pdf}
-			\end{center}
+\includegraphics[scale=0.45]{/git_repositories/GreenBook/Paper/figure/Table1.pdf}
 }
 
 
-\frame{
-	\frametitle{OLS Regressions}
-		\begin{center}
+\frame[plain]{
 {\Large{OLS Regressions with Election Matched Data}}
-\includegraphics[scale=0.60]{/git_repositories/GreenBook/Paper/figure/Table2.pdf}
-		\end{center}
+\includegraphics[scale=0.45]{/git_repositories/GreenBook/Paper/figure/Table2.pdf}
 }
 
 
-\frame{
-	\frametitle{OLS Regressions}
-		\begin{center}
-{\LARGE{OLS Regressions with Presidential Party ID Matched Data}}
-\includegraphics[scale=0.60]{/git_repositories/GreenBook/Paper/figure/Table3.pdf}		
-		\end{center}
+\frame[plain]{
+{\Large{OLS Regressions with Election Matched Data}}
+\includegraphics[scale=0.45]{/git_repositories/GreenBook/Paper/figure/Table3.pdf}
 }
 
 
-\frame{
-	\frametitle{Bayesian Regressions}
-		\begin{center}
-{\Large{Bayesian Normal Linear Regression Estimation of Coefficient Effects for Non-Matched Data}}
-\includegraphics{git_repositories/GreenBook/Paper/figure/Table4.pdf}
-		\end{center}
+\frame[plain]{
+\begin{table}[ht]
+\begin{center}
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
+\label{OutputNB}
+{\small
+\begin{tabular}{lccccc}
+  \hline
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+  \hline
+Intercept & 4.49 & 0.99 & 2.56 & 4.49 & 6.46 \\ 
+  Pres. Party ID & 0.30 & 0.04 & 0.22 & 0.30 & 0.38 \\ 
+  Recession & 0.07 & 0.05 & -0.04 & 0.07 & 0.17 \\ 
+  Qtr. to Election & -0.00 & 0.00 & -0.01 & -0.00 & 0.00 \\ 
+  Senate Dem/Rep & -0.26 & 0.15 & -0.56 & -0.26 & 0.05 \\ 
+  House Dem/Rep & 0.16 & 0.13 & -0.09 & 0.16 & 0.41 \\ 
+  Debt/GDP & 0.00 & 0.00 & -0.01 & 0.00 & 0.01 \\ 
+  Expenditure/GDP & 0.12 & 0.04 & 0.05 & 0.12 & 0.19 \\ 
+  Output Gap & -0.07 & 0.01 & -0.10 & -0.07 & -0.04 \\ 
+  Discount Rate Change & -0.27 & 0.09 & -0.44 & -0.27 & -0.10 \\ 
+  Global Model & -0.10 & 0.08 & -0.27 & -0.10 & 0.06 \\ 
+  sigma2 & 0.04 & 0.00 & 0.03 & 0.03 & 0.04 \\ 
+   \hline
+\end{tabular}
+}
+\end{center}
+\end{table}
 }
 
-\frame{
-	\frametitle{Bayesian Regressions}
-		\begin{center}
-{\Large{Bayesian Normal Linear Regression estimation of Coefficient Effects for Matched Data}}
-\includegraphics{git_repositories/GreenBook/Paper/figure/Table5.pdf}
-		\end{center}
+\frame[plain]{
+\begin{table}[ht]
+\begin{center}
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}
+\label{OutputPB}
+{\small
+\begin{tabular}{lccccc}
+  \hline
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+  \hline
+Intercept & 4.60 & 3.74 & -2.70 & 4.59 & 11.90 \\ 
+  Pres. Party ID & 0.34 & 0.08 & 0.19 & 0.34 & 0.49 \\ 
+  Recession & 0.13 & 0.16 & -0.19 & 0.13 & 0.45 \\ 
+  Qtr. to Election & 0.01 & 0.01 & -0.01 & 0.01 & 0.03 \\ 
+  Senate Dem/Rep & -0.33 & 0.32 & -0.96 & -0.34 & 0.31 \\ 
+  House Dem/Rep & 0.13 & 0.27 & -0.40 & 0.13 & 0.66 \\ 
+  Debt/GDP & -0.00 & 0.01 & -0.02 & -0.00 & 0.01 \\ 
+  Expenditure/GDP & 0.20 & 0.08 & 0.05 & 0.20 & 0.35 \\ 
+  Output Gap & -0.08 & 0.05 & -0.18 & -0.08 & 0.01 \\ 
+  Discount Rate Change & -0.46 & 0.34 & -1.12 & -0.46 & 0.20 \\ 
+  Global Model & 0.02 & 0.15 & -0.27 & 0.02 & 0.31 \\ 
+  sigma2 & 0.05 & 0.01 & 0.03 & 0.05 & 0.08 \\ 
+   \hline
+\end{tabular}
+}
+\end{center}
+\end{table}
 }
 \end{document}
