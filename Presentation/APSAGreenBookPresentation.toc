@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.20pt}
+\beamer@endinputifotherversion {3.10pt}
 \beamer@sectionintoc {2}{Motivation}{3}{0}{1}
 \beamer@sectionintoc {3}{Describing Forecast Errors}{8}{0}{2}
 \beamer@sectionintoc {4}{What Might Explain Forecast Errors?}{21}{0}{3}
