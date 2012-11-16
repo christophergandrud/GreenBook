@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  15 NOV 2012 08:41
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  16 NOV 2012 10:51
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **APSAGreenBookPresentation.tex
 (./APSAGreenBookPresentation.tex
@@ -727,7 +728,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count156
 \@thisrulewidth=\dimen194
 )
-(./APSAGreenBookPresentation.aux)
+No file APSAGreenBookPresentation.aux.
 \openout1 = `APSAGreenBookPresentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -744,7 +745,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -822,8 +822,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 29.
 LaTeX Info: Redefining \pageref on input line 29.
 LaTeX Info: Redefining \nameref on input line 29.
-
-(./APSAGreenBookPresentation.out) (./APSAGreenBookPresentation.out)
 \@outlinefile=\write5
 \openout5 = `APSAGreenBookPresentation.out'.
 
@@ -862,25 +860,25 @@ Overfull \hbox (3.63992pt too wide) in paragraph at lines 29--29
 [][]  
  []
 
-<Michigan-logo.png, id=32, 220.825pt x 219.82124pt>
+<Michigan-logo.png, id=12, 220.825pt x 219.82124pt>
 File: Michigan-logo.png Graphic file (type png)
  <use Michigan-logo.png>
 Package pdftex.def Info: Michigan-logo.png used on input line 31.
 (pdftex.def)             Requested size: 71.13188pt x 70.8071pt.
 
-<Hertie-logo.png, id=34, 401.5pt x 291.0875pt>
+<Hertie-logo.png, id=14, 401.5pt x 291.0875pt>
 File: Hertie-logo.png Graphic file (type png)
  <use Hertie-logo.png>
 Package pdftex.def Info: Hertie-logo.png used on input line 31.
 (pdftex.def)             Requested size: 85.35826pt x 61.88525pt.
 
-<Yonsei-logo.png, id=35, 255.8358pt x 246.6816pt>
+<Yonsei-logo.png, id=15, 255.8358pt x 246.6816pt>
 File: Yonsei-logo.png Graphic file (type png)
  <use Yonsei-logo.png>
 Package pdftex.def Info: Yonsei-logo.png used on input line 31.
 (pdftex.def)             Requested size: 71.13188pt x 68.58481pt.
 
-! Undefined control sequence.
+./APSAGreenBookPresentation.tex:31: Undefined control sequence.
 <argument> \titlevsep 
                       
 l.31 \frame{\titlepage}
@@ -891,7 +889,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Missing number, treated as zero.
+./APSAGreenBookPresentation.tex:31: Missing number, treated as zero.
 <to be read again> 
                    \ignorespaces 
 l.31 \frame{\titlepage}
@@ -900,7 +898,7 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-! Illegal unit of measure (pt inserted).
+./APSAGreenBookPresentation.tex:31: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \ignorespaces 
 l.31 \frame{\titlepage}
@@ -980,7 +978,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [8
 
 ]
-</git_repositories/GreenBook/Paper/figure/BaseInflation.pdf, id=118, 505.89pt x
+</git_repositories/GreenBook/Paper/figure/BaseInflation.pdf, id=100, 505.89pt x
  289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/BaseInflation.pdf Graphic file (
 type pdf)
@@ -1066,7 +1064,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [19
 
 ]
-</git_repositories/GreenBook/Paper/figure/partisanError.pdf, id=206, 505.89pt x
+</git_repositories/GreenBook/Paper/figure/partisanError.pdf, id=188, 505.89pt x
  289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/partisanError.pdf Graphic file (
 type pdf)
@@ -1088,7 +1086,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 [21
 
-] <ExpectationsGraph.pdf, id=226, 767.86874pt x 306.14375pt>
+] <ExpectationsGraph.pdf, id=209, 767.86874pt x 306.14375pt>
 File: ExpectationsGraph.pdf Graphic file (type pdf)
 
 <use ExpectationsGraph.pdf>
@@ -1125,7 +1123,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [26
 
 ]
-</git_repositories/GreenBook/Paper/figure/CoefComparePlots.pdf, id=271, 505.89p
+</git_repositories/GreenBook/Paper/figure/CoefComparePlots.pdf, id=255, 505.89p
 t x 289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/CoefComparePlots.pdf Graphic fil
 e (type pdf)
@@ -1142,7 +1140,7 @@ Overfull \hbox (21.53471pt too wide) in paragraph at lines 161--161
 [27
 
  </git_repositories/GreenBook/Paper/figure/CoefComparePlots.pdf>]
-</git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf, id=285, 433.62p
+</git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf, id=268, 433.62p
 t x 289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf Graphic fil
 e (type pdf)
@@ -1154,7 +1152,7 @@ rty.pdf used on input line 168.
  [28
 
  </git_repositories/GreenBook/Paper/figure/ExpectValueParty.pdf>]
-</git_repositories/GreenBook/Paper/figure/InterPlot.pdf, id=298, 505.89pt x 289
+</git_repositories/GreenBook/Paper/figure/InterPlot.pdf, id=282, 505.89pt x 289
 .08pt>
 File: /git_repositories/GreenBook/Paper/figure/InterPlot.pdf Graphic file (type
  pdf)
@@ -1170,8 +1168,8 @@ Overfull \hbox (21.53471pt too wide) in paragraph at lines 175--175
 [29
 
  </git_repositories/GreenBook/Paper/figure/InterPlot.pdf>]
-</git_repositories/GreenBook/Paper/figure/GraphPartisanErrorUnemploy.pdf, id=31
-2, 505.89pt x 289.08pt>
+</git_repositories/GreenBook/Paper/figure/GraphPartisanErrorUnemploy.pdf, id=29
+6, 505.89pt x 289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/GraphPartisanErrorUnemploy.pdf G
 raphic file (type pdf)
 
@@ -1191,7 +1189,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-! LaTeX Error: There's no line here to end.
+./APSAGreenBookPresentation.tex:211: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1212,7 +1210,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-! LaTeX Error: There's no line here to end.
+./APSAGreenBookPresentation.tex:211: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1233,7 +1231,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-! LaTeX Error: There's no line here to end.
+./APSAGreenBookPresentation.tex:211: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1254,7 +1252,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-! LaTeX Error: There's no line here to end.
+./APSAGreenBookPresentation.tex:229: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1275,7 +1273,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-! LaTeX Error: There's no line here to end.
+./APSAGreenBookPresentation.tex:229: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1296,7 +1294,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-! LaTeX Error: There's no line here to end.
+./APSAGreenBookPresentation.tex:229: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1317,7 +1315,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 
 ]
 
-! LaTeX Error: There's no line here to end.
+./APSAGreenBookPresentation.tex:229: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1344,7 +1342,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [39
 
 ]
-</git_repositories/GreenBook/Paper/figure/ElectPropensity.pdf, id=390, 505.89pt
+</git_repositories/GreenBook/Paper/figure/ElectPropensity.pdf, id=375, 505.89pt
  x 289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/ElectPropensity.pdf Graphic file
  (type pdf)
@@ -1361,7 +1359,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [40
 
  </git_repositories/GreenBook/Paper/figure/ElectPropensity.pdf>]
-</git_repositories/GreenBook/Paper/figure/PresPropensity.pdf, id=405, 505.89pt 
+</git_repositories/GreenBook/Paper/figure/PresPropensity.pdf, id=389, 505.89pt 
 x 289.08pt>
 File: /git_repositories/GreenBook/Paper/figure/PresPropensity.pdf Graphic file 
 (type pdf)
@@ -1377,7 +1375,7 @@ Overfull \hbox (3.63992pt too wide) has occurred while \output is active
 [41
 
  </git_repositories/GreenBook/Paper/figure/PresPropensity.pdf>]
-</git_repositories/GreenBook/Paper/figure/Table1.pdf, id=419, 794.97pt x 614.29
+</git_repositories/GreenBook/Paper/figure/Table1.pdf, id=404, 794.97pt x 614.29
 5pt>
 File: /git_repositories/GreenBook/Paper/figure/Table1.pdf Graphic file (type pd
 f)
@@ -1397,7 +1395,7 @@ Overfull \vbox (30.29295pt too high) detected at line 258
 [42
 
  </git_repositories/GreenBook/Paper/figure/Table1.pdf>]
-</git_repositories/GreenBook/Paper/figure/Table2.pdf, id=487, 794.97pt x 614.29
+</git_repositories/GreenBook/Paper/figure/Table2.pdf, id=472, 794.97pt x 614.29
 5pt>
 File: /git_repositories/GreenBook/Paper/figure/Table2.pdf Graphic file (type pd
 f)
@@ -1417,7 +1415,7 @@ Overfull \vbox (30.29295pt too high) detected at line 264
 [43
 
  </git_repositories/GreenBook/Paper/figure/Table2.pdf>]
-</git_repositories/GreenBook/Paper/figure/Table3.pdf, id=568, 794.97pt x 614.29
+</git_repositories/GreenBook/Paper/figure/Table3.pdf, id=553, 794.97pt x 614.29
 5pt>
 File: /git_repositories/GreenBook/Paper/figure/Table3.pdf Graphic file (type pd
 f)
@@ -1456,21 +1454,30 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
 (./APSAGreenBookPresentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
-Package rerunfilecheck Info: File `APSAGreenBookPresentation.out' has not chang
-ed.
-(rerunfilecheck)             Checksum: 616CF690D907C0EE7A8E3983CE969071;272.
 
+
+Package rerunfilecheck Warning: File `APSAGreenBookPresentation.out' has change
+d.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `APSAGreenBookPresentation.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  616CF690D907C0EE7A8E3983CE969071;272.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
  ) 
 Here is how much of TeX's memory you used:
- 15804 strings out of 493633
- 298000 string characters out of 3143377
- 366273 words of memory out of 3000000
- 18615 multiletter control sequences out of 15000+200000
+ 15792 strings out of 493633
+ 297758 string characters out of 3143377
+ 366009 words of memory out of 3000000
+ 18609 multiletter control sequences out of 15000+200000
  17870 words of font info for 68 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,16n,60p,439b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1498,10 +1505,10 @@ dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2011/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on APSAGreenBookPresentation.pdf (46 pages, 2470564 bytes).
+Output written on APSAGreenBookPresentation.pdf (46 pages, 2469960 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
+ 681 PDF objects out of 1000 (max. 8388607)
+ 552 compressed objects within 6 object streams
  89 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
