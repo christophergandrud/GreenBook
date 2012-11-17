@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  17 NOV 2012 13:31
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  17 NOV 2012 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1049,7 +1049,7 @@ File: figure/CoefComparePlots.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/CoefComparePlots.pdf used on input line 410.
 (pdftex.def)             Requested size: 430.31812pt x 245.9pt.
  [16]
-<figure/QuarterCompareSaved.pdf, id=427, 597.23125pt x 420.57124pt>
+<figure/QuarterCompareSaved.pdf, id=428, 597.23125pt x 420.57124pt>
 File: figure/QuarterCompareSaved.pdf Graphic file (type pdf)
 
 <use figure/QuarterCompareSaved.pdf>
@@ -3773,7 +3773,7 @@ ype1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt8.pfb>
-Output written on main_GreenBook.pdf (32 pages, 2093950 bytes).
+Output written on main_GreenBook.pdf (32 pages, 2095310 bytes).
 PDF statistics:
  746 PDF objects out of 1000 (max. 8388607)
  661 compressed objects within 7 object streams
