@@ -252,7 +252,7 @@ Green Book forecasts are based on the assumption that monetary policy will not c
 
 To examine if Federal Reserve inflation forecast errors are affected by actual levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}} and {\bf{government debt to GDP}}. 
 
-To examine how broader economic factors may be related to forecast errors we include variables of the {\bf{unemployment rate}}, {\bf{GDP output gaps}} and {\bf{recessions}}. The latter two variables are in nominal terms. GDP output gaps are simply potential GDP as a percentage of real GDP. The latter is a dummy variable for whether or not the United States was in a recession. All of these variables are from the FRED database.\footnote{Accessed June and October 2012.} 
+To examine how broader economic factors may be related to forecast errors we include variables of the {\bf{GDP output gaps}}, {\bf{unemployment rate}} and {\bf{recessions}}. The GDP output gaps is the potential GDP as a percentage of real GDP. It is in nominal terms The recession variable is a dummy for whether or not the United States was in a recession. All three of these variables are from the FRED database.\footnote{Accessed June and October 2012.} 
 
 Finally, we include a variable for the sitting {\bf{Federal Reserve Board Chair}}.\footnote{Chairs for the years in our analysis are William McChesney Martin, Jr., Arthur Burns, G. William Miller, Paul Volcker, Alan Greenspan, and Ben Bernanke.}
 
@@ -269,7 +269,7 @@ We graphically present the key results in this section. Coefficient estimate tab
 <<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
     
     # Run main analysis source code
-    # AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
+    AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
     source_url(AnalysisURL)
 
     # Local

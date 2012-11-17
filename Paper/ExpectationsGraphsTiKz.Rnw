@@ -17,6 +17,16 @@ set_parent('main_GreenBook.Rnw')
     \tikzstyle{bagMain} = [text width = 5cm]
     \tikzstyle{bagDem} = [text = DEM]
     \tikzstyle{bagRep} = [text = REP]
+    
+    \tikzstyle{DemLine} = [draw, 
+                          color=DEM,
+                          opacity=0.9,
+                          line width=1.5mm]
+
+    \tikzstyle{RepLine} = [draw, 
+                          color=REP,
+                          opacity=0.9,
+                          line width=1.5mm]
 
 \begin{tikzpicture}
 
@@ -28,11 +38,11 @@ set_parent('main_GreenBook.Rnw')
   \draw (-10, 0) -- (-6, 0);
   \draw (-10, 0) -- (-10, 4);
   
-  \draw[color=REP, opacity=0.5] (-9.5, 2) -- (-7.5, 2); 
-  \draw[color=DEM, opacity=0.5] (-9.5, 2) -- (-7.5, 2); 
+  \draw[RepLine] (-9.5, 1.9) -- (-7.5, 1.9); 
+  \draw[DemLine] (-9.5, 2.1) -- (-7.5, 2.1); 
 
-  \draw[color=REP, opacity=0.5] (-7.5, 2) -- (-6.5, 1); 
-  \draw[color=DEM, opacity=0.5] (-7.5, 2) -- (-6.5, 3); 
+  \draw[RepLine] (-7.52, 1.9) -- (-6.5, 1); 
+  \draw[DemLine] (-7.52, 2.1) -- (-6.5, 3); 
 
   \node (R1) at (-6.5, 0.5) [bagRep]{Rep.};
   \node (D1) at (-6.5, 3.5) [bagDem]{Dem.};
@@ -44,11 +54,11 @@ set_parent('main_GreenBook.Rnw')
   \draw (-5, 0) -- (-1, 0);
   \draw (-5, 0) -- (-5, 4);
   
-  \draw[color=REP, opacity=0.5] (-4.5, 2) -- (-2.5, 2); 
-  \draw[color=DEM, opacity=0.5] (-4.5, 2) -- (-2.5, 2); 
+  \draw[RepLine] (-4.5, 2.1) -- (-2.5, 2.1); 
+  \draw[DemLine] (-4.5, 1.9) -- (-2.5, 1.9); 
 
-  \draw[color=DEM, opacity=0.5] (-2.5, 2) -- (-1.5, 1); 
-  \draw[color=REP, opacity=0.5] (-2.5, 2) -- (-1.5, 3); 
+  \draw[DemLine] (-2.52, 1.9) -- (-1.5, 1); 
+  \draw[RepLine] (-2.52, 2.1) -- (-1.5, 3); 
 
   \node (D2) at (-1.5, 0.5) [bagDem]{Dem.};
   \node (R2) at (-1.5, 3.5) [bagRep]{Rep.};
@@ -61,8 +71,8 @@ set_parent('main_GreenBook.Rnw')
   \draw (0, 0) -- (4, 0);
   \draw (0, 0) -- (0, 4);
   
-  \draw[color=DEM, opacity=0.5] (0.5, 3) -- (4, 3); 
-  \draw[color=REP, opacity=0.5] (0.5, 1) -- (4, 1); 
+  \draw[DemLine] (0.5, 3) -- (4, 3); 
+  \draw[RepLine] (0.5, 1) -- (4, 1); 
 
   \node (D3) at (3.5, 3.5) [bagDem]{Dem.};
   \node (R3) at (3.5, 0.5) [bagRep]{Rep.};
