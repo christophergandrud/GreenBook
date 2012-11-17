@@ -1,7 +1,7 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph
 # Christopher Gandrud
-# 26 October 2012
+# 17 November 2012
 ####################
 
 library(RCurl)
@@ -45,7 +45,7 @@ cpi.data$Chair <- factor(cpi.data$Chair)
 ## Remove 2 quarters from Johnson presidency
 cpi.data <- subset(cpi.data, president != "Johnson")
 
-cpi.data$president <- as.factor(cpi.data$presTerm)
+cpi.data$presTerm <- as.factor(cpi.data$presTerm)
 
 ## Other data loading options
 #cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi.csv") # Load data locally from Christopher's computer
@@ -58,8 +58,6 @@ cpi.abs <- melt(cpi.data, id = "Quarter", measure = c("GB_CPI_QTR2", "deflator")
 ### Rename variables
 cpi.abs$variable <- gsub("GB_CPI_QTR2", "Forecast", cpi.abs$variable)
 cpi.abs$variable <- gsub("deflator", "Actual", cpi.abs$variable)
-
-
 
 ### Colours
 absolute.colors <- c("Forecast" = "#B35B40", "Actual" = "#000000")

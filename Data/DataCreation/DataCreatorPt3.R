@@ -197,8 +197,5 @@ Rate5 <- Rate5[-1:-5, ]
 # merge with cpi.data
 cpi.data <- merge(cpi.data, Rate5)
 
-# Remove wayward numbers in the president variable
-cpi.data$president <- str_replace_all(cpi.data$president, "[0-9]", "")
-
 write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", sep = ",")
 
