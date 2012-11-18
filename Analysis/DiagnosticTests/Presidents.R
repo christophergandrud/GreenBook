@@ -30,8 +30,6 @@ cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 
 cpi.data2$elect2 <- (cpi.data2$time_to_election)^2
 
-cpi.data2$elect2 <- factor(cpi.data2$president)
-
 #### Run regressions dropping each president ####
 # Remove spaces in president's names
 cpi.data2$president <- str_replace_all(cpi.data2$president, " ", "")
