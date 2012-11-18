@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
+% 18 November 2012
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -440,9 +441,9 @@ Our main finding is that presidential party identification had a strong positive
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 15 percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately -27 percent. These estimates indicate that partisan biases are on average a fairly large contributor to the overall magnitude of inflation errors. This is clearly reflected in the large increase in the linear models' adjusted $R^{2}$ when president partisan ID is included.\footnote{Compare the differences between the third and fourth models in tables \ref{NLTables}, \ref{ELTables}, and \ref{PLTables}.} 
+To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 15 percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately -27 percent. These estimates indicate that partisan biases are on average a fairly large contributor to the overall magnitude of inflation errors. This is clearly reflected in the large increase in the linear models' adjusted $R^{2}$ when president partisan ID is included.\footnote{Compare the differences between the third and fourth models in tables \ref{OutputNL}, \ref{OutputEL}, and \ref{OutputPL}.} 
 
-There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies. The distribution of the middle 95 percent of simulations for forecasts made three to five quarters beforehand occasionally overlap or come close to overlapping. This may largely be the result of the fact that we have far fewer observations for these estimates--due to missing data and dropping quarters with unknown presidents--which leads to much higher variance.
+There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies.\footnote{As a diagnostic we reran the model used in Figure \ref{CoefComparePlots} by step-wise removing observations from each presidency. The results did not change except for when we removed Bill Clinton's presidency. This is not surprising, since his presidency makes up two thirds of all the observed Democratic presidency quarters.}.  The distribution of the middle 95 percent of simulations for forecasts made three to five quarters beforehand occasionally overlap or come close to overlapping. This may largely be the result of the fact that we have far fewer observations for these estimates--due to missing data and dropping quarters with unknown presidents--which leads to much higher variance.
 
 Clearly, at least between the 1970s and 2006, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and even more overly optimistic about Republican presidents' effect. 
 
@@ -733,7 +734,7 @@ Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Sat Nov 17 16:21:09 2012
+% Sun Nov 18 16:31:43 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -770,10 +771,10 @@ Intercept & 0.94 & 1.86 & -2.68 & 0.95 & 4.63 \\
 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Sat Nov 17 16:21:09 2012
+% Sun Nov 18 16:31:44 2012
 \begin{table}[ht]
 \begin{center}
-\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable}
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
 \label{OutputPB}
 {\small
 \begin{tabular}{lccccc}
