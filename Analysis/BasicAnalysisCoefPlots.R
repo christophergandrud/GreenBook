@@ -97,7 +97,7 @@ estimates <- subset(estimates, var != c("sigma2"))
 ##### Create comparison plot
 
 cols <- c("#B35B40", "#696969")
-breaks <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelAfter 1996")
+breaks <- c("pres_party", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelAfter 1996")
 break.labels <- c("Dem. President", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = match)) +

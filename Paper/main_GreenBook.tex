@@ -410,7 +410,10 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.95\linewidth]{figure/CoefComparePlots} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: Breaks and labels have unequal lengths}}\end{kframe}
 \end{knitrout}
 
     \end{center}
@@ -421,7 +424,7 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
 
 \paragraph{Presidential Party Identification}
 
-Our main finding is that presidential party identification had a strong positive association with Federal Reserve staff inflation forecast errors. Inflation forecast errors are estimated to be higher during Democratic presidencies than Republican ones even when we control for numerous other economic and political variables. This finding is what we would expect if Federal Reserve staff have a presidential partisan heuristic and is very robust across virtually all model specification using both matched and unmatched data.\footnote{The only models where the statistical significance of the variable drops below the 0.05 significance threshold is when it is interacted with both the House and Senate party variables using matched data. The matched data sets include relatively fewer observations, so these results may largely be because we are including more covariates in the models than the data has information to be able to draw meaningful conclusions for \citep{Brambor2006}.} Notably, the estimated effects hold even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate, but either have a partisan preference or are using partisan heuristics.
+Our main finding is that presidential party identification had a strong positive association with Federal Reserve staff inflation forecast errors. Inflation forecast errors are estimated to be higher during Democratic presidencies than Republican ones even when we control for numerous other economic and political variables. This finding is very robust across virtually all model specification using both matched and unmatched data. Notably, the estimated effect holds even when we control for actual government expenditure. This suggests that Federal Reserve staff are not simply responding to different levels of government spending that Democratic and Republican presidents may tend to initiate, but either have a partisan preference or are using partisan heuristics. We can further narrow down the likely causes of the bias by looking at an interaction between estimated presidential party ID and election timing. The presidential party ID effect remains constant across presidential terms, even as the election nears. This finding is what we would expect if Federal Reserve staff have a presidential partisan heuristic.
 
 
 \begin{figure}[t]
@@ -440,11 +443,11 @@ Our main finding is that presidential party identification had a strong positive
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an OLS regression with non-matched data. Variables included are generally the same as those in Model N7 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{Simulated from an OLS regression with non-matched data. Variables included are generally the same as those in Model A5 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means. Results from these simulations can be found in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty} shows results from parametric models using non-matched data. Results using data matched by presidential party ID are generally similar though the variance is much larger. This is likely because the sample size was much smaller. For more details see: \url{http://bit.ly/U6edHt}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies.\footnote{As a diagnostic we reran the model used in Figure \ref{CoefComparePlots} by step-wise removing observations from each presidency. The results did not change except for when we removed Bill Clinton's presidency. This is not surprising, since his presidency makes up two thirds of all the observed Democratic presidency quarters.}  For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 17 percent during Democratic presidencies. We expect the average inflation error during Republican presidencies is approximately -11 percent. These estimates indicate that partisan biases are on average a fairly large contributor to the overall magnitude of inflation errors. This is clearly reflected in the large increase in the linear models' adjusted $R^{2}$ when president partisan ID is included.\footnote{Compare the differences between the third and fourth models in tables \ref{OutputNL} and \ref{OutputPL}.} 
+To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means. Results from these simulations can be found in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty} shows results from parametric models using non-matched data. Results using data matched by presidential party ID are generally similar though the variance is much larger. This is likely because the sample size in the matched data is about a half smaller. For more details see: \url{http://bit.ly/U6edHt}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies.\footnote{As a diagnostic we reran the model used in Figure \ref{CoefComparePlots} by step-wise removing observations from each presidency. The results did not change except for when we removed Bill Clinton's presidency. This is not surprising, since his presidency makes up two thirds of all the observed Democratic presidency quarters.}  For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 17 percent during Democratic presidencies. We expect the average inflation error during Republican presidencies is approximately -11 percent. These estimates indicate that partisan biases are on average a fairly large contributor to the overall magnitude of inflation errors. This is clearly reflected in the large increase in the linear models' adjusted $R^{2}$ when president partisan ID is included.\footnote{Compare the differences between the third and fourth models in tables \ref{OutputNL} and \ref{OutputPL}.} 
 
 Clearly, at least from the 1970s through 2006, Fed staff were overly pessimistic about Democratic presidents' effect on inflation and overly optimistic about Republican presidents' effect. 
 
@@ -700,75 +703,23 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 \end{table}
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
-
-% latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Mon Nov 19 16:12:47 2012
-\begin{table}[ht]
-\begin{center}
-\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
-\label{OutputNB}
-{\small
-\begin{tabular}{lccccc}
-  \hline
-Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
-  \hline
-Intercept & 0.94 & 1.86 & -2.68 & 0.95 & 4.63 \\ 
-  Pres. Party ID & 0.29 & 0.04 & 0.22 & 0.29 & 0.37 \\ 
-  Recession & 0.04 & 0.05 & -0.07 & 0.04 & 0.15 \\ 
-  Qtr. to Election & -0.00 & 0.00 & -0.01 & -0.00 & 0.00 \\ 
-  Senate Dem/Rep & -0.31 & 0.15 & -0.61 & -0.31 & -0.00 \\ 
-  House Dem/Rep & 0.28 & 0.14 & 0.02 & 0.28 & 0.55 \\ 
-  Debt/GDP & -0.00 & 0.00 & -0.01 & -0.00 & 0.00 \\ 
-  Expenditure/GDP & 0.16 & 0.04 & 0.08 & 0.16 & 0.24 \\ 
-  Output Gap & -0.04 & 0.02 & -0.08 & -0.04 & 0.00 \\ 
-  Discount Rate Change & -0.27 & 0.09 & -0.44 & -0.27 & -0.10 \\ 
-  Unemployment Rate & -0.10 & 0.04 & -0.18 & -0.10 & -0.01 \\ 
-  Global Model & -0.04 & 0.09 & -0.21 & -0.04 & 0.14 \\ 
-  sigma2 & 0.03 & 0.00 & 0.03 & 0.03 & 0.04 \\ 
-   \hline
-\end{tabular}
-}
-\end{center}
-\end{table}
+\begin{kframe}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: arguments imply differing number of rows: 13, 11}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: "align" must have length equal to 6 ( ncol(x) + 1 )}}\end{kframe}
 
 
 
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
-
-% latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Mon Nov 19 16:12:47 2012
-\begin{table}[ht]
-\begin{center}
-\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
-\label{OutputPB}
-{\small
-\begin{tabular}{lccccc}
-  \hline
-Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
-  \hline
-Intercept & -9.56 & 4.87 & -18.94 & -9.60 & 0.22 \\ 
-  Pres. Party ID & 0.26 & 0.07 & 0.13 & 0.26 & 0.40 \\ 
-  Recession & 0.13 & 0.16 & -0.18 & 0.13 & 0.44 \\ 
-  Qtr. to Election & -0.01 & 0.01 & -0.02 & -0.01 & 0.01 \\ 
-  Senate Dem/Rep & -1.08 & 0.49 & -2.05 & -1.07 & -0.12 \\ 
-  House Dem/Rep & 1.44 & 0.47 & 0.52 & 1.45 & 2.37 \\ 
-  Debt/GDP & 0.00 & 0.01 & -0.01 & 0.00 & 0.02 \\ 
-  Expenditure/GDP & 0.22 & 0.07 & 0.09 & 0.22 & 0.35 \\ 
-  Output Gap & 0.06 & 0.05 & -0.05 & 0.06 & 0.16 \\ 
-  Discount Rate Change & -0.61 & 0.28 & -1.16 & -0.62 & -0.07 \\ 
-  Unemployment Rate & -0.35 & 0.11 & -0.55 & -0.35 & -0.14 \\ 
-  Global Model & 0.15 & 0.13 & -0.10 & 0.15 & 0.40 \\ 
-  sigma2 & 0.04 & 0.01 & 0.02 & 0.04 & 0.06 \\ 
-   \hline
-\end{tabular}
-}
-\end{center}
-\end{table}
+\begin{kframe}
 
 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: arguments imply differing number of rows: 13, 11}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: "align" must have length equal to 6 ( ncol(x) + 1 )}}\end{kframe}
 
 
 
