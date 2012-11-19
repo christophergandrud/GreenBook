@@ -40,17 +40,17 @@ CPIEstimates35 <- cpi.data[complete.cases(cpi.data[vars]),]
 CPIEstimates35 <- CPIEstimates35[vars]
 
 #### Run Parametric OLS Models ####
-NL.02.0 <- zelig(error.prop.deflator.q0 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP  + UNRATE + GlobalModel, model = "ls", data = CPIEstimates02, cite = FALSE)
+NL.02.0 <- zelig(error.prop.deflator.q0 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP  + UNRATE + GlobalModel, model = "ls", data = CPIEstimates02, cite = FALSE)
 
-NL.02.1 <- zelig(error.prop.deflator.q1 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate1qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates02, time_to_election != 15), cite = FALSE)
+NL.02.1 <- zelig(error.prop.deflator.q1 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate1qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates02, time_to_election != 15), cite = FALSE)
 
-NL.02.2 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates02, !(time_to_election %in% c(15, 14))), cite = FALSE)
+NL.02.2 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates02, !(time_to_election %in% c(15, 14))), cite = FALSE)
 
-NL.35.3 <- zelig(error.prop.deflator.q3 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate3qChange + UNRATE + GlobalModel, model = "ls", data = CPIEstimates35, cite = FALSE)
+NL.35.3 <- zelig(error.prop.deflator.q3 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate3qChange + UNRATE + GlobalModel, model = "ls", data = CPIEstimates35, cite = FALSE)
 
-NL.35.4 <- zelig(error.prop.deflator.q4 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate4qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12))), cite = FALSE)
+NL.35.4 <- zelig(error.prop.deflator.q4 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate4qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12))), cite = FALSE)
 
-NL.35.5 <- zelig(error.prop.deflator.q5 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate5qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12, 11))), cite = FALSE)
+NL.35.5 <- zelig(error.prop.deflator.q5 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate5qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12, 11))), cite = FALSE)
 
 #### Simulate Expected Values & Melt ####
 # Ranges of fitted values 

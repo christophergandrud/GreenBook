@@ -8,8 +8,7 @@
 # library(devtools)
  library(MatchIt)
  library(Zelig)
- library(stats)
-# library(plyr)
+# library(stats)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
 ## source_url("http://bit.ly/NXdCpk") 
@@ -108,13 +107,9 @@ NL13 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, 
 # 
 # EL3 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "ls", data = cpi.Mdf.election, cite = FALSE)
 # 
-# EL3 <- zelig(error.prop.deflator.q2 ~ time_to_election, model = "ls", data = cpi.Mdf.election, cite = FALSE)
-# 
 # EL4 <- zelig(error.prop.deflator.q2 ~ pres_party + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "ls", data = cpi.Mdf.election, cite = FALSE)
 # 
 # EL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "ls", data = cpi.Mdf.election, cite = FALSE)
-# 
-# EL5 <- zelig(error.prop.deflator.q2 ~ pres_party, model = "ls", data = cpi.Mdf.election, cite = FALSE)
 # 
 # EL6 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "ls", data = cpi.Mdf.election, cite = FALSE)
 # 
@@ -159,7 +154,7 @@ PL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep +
 PL12 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "ls", data = cpi.Mdf.party, cite = FALSE)
 
 ##### Normal Bayes, Not Matched (NB) #####
-NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.data, cite = FALSE)
+NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.data, cite = FALSE)
 
 #### Normal Bayes, Matched (MP) ####
-PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party, cite = FALSE)
+PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party, cite = FALSE)

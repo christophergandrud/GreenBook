@@ -11,38 +11,38 @@ library(reshape)
 
 ### LS 
 # Extract and melt quantiles for marginal posterior distributions (not matched data set)
-NL7.cat <- confint(NL7)
-NL7.cat.sum <- as.data.frame(NL7.cat)
-NL7.cat.sum$var <- rownames(NL7.cat.sum)
+NL5.cat <- confint(NL5)
+NL5.cat.sum <- as.data.frame(NL5.cat)
+NL5.cat.sum$var <- rownames(NL5.cat.sum)
 
-NL7.lower.molten <- melt(NL7.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
-NL7.lower.molten <- rename(NL7.lower.molten, c(value = "lower"))
-NL7.lower.molten <- NL7.lower.molten[, -2]
+NL5.lower.molten <- melt(NL5.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
+NL5.lower.molten <- rename(NL5.lower.molten, c(value = "lower"))
+NL5.lower.molten <- NL5.lower.molten[, -2]
 
-NL7.upper.molten <- melt(NL7.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
-NL7.upper.molten <- rename(NL7.upper.molten, c(value = "upper"))
-NL7.upper.molten <- NL7.upper.molten[, -2]
+NL5.upper.molten <- melt(NL5.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
+NL5.upper.molten <- rename(NL5.upper.molten, c(value = "upper"))
+NL5.upper.molten <- NL5.upper.molten[, -2]
 
-NL7.molten <- merge(NL7.lower.molten, NL7.upper.molten)
-NL7.molten$match <- "Not Matched"
+NL5.molten <- merge(NL5.lower.molten, NL5.upper.molten)
+NL5.molten$match <- "Not Matched"
 
 # Extract and melt quantiles for marginal posterior distributions (matched data set)
-PL7.cat <- confint(PL7)
-PL7.cat.sum <- as.data.frame(PL7.cat)
-PL7.cat.sum$var <- rownames(PL7.cat.sum)
+PL5.cat <- confint(PL5)
+PL5.cat.sum <- as.data.frame(PL5.cat)
+PL5.cat.sum$var <- rownames(PL5.cat.sum)
 
-PL7.lower.molten <- melt(PL7.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
-PL7.lower.molten <- rename(PL7.lower.molten, c(value = "lower"))
-PL7.lower.molten <- PL7.lower.molten[, -2]
+PL5.lower.molten <- melt(PL5.cat.sum, id = c("var"), measure.vars = c("2.5 %"))
+PL5.lower.molten <- rename(PL5.lower.molten, c(value = "lower"))
+PL5.lower.molten <- PL5.lower.molten[, -2]
 
-PL7.upper.molten <- melt(PL7.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
-PL7.upper.molten <- rename(PL7.upper.molten, c(value = "upper"))
-PL7.upper.molten <- PL7.upper.molten[, -2]
+PL5.upper.molten <- melt(PL5.cat.sum, id = c("var"), measure.vars = c("97.5 %"))
+PL5.upper.molten <- rename(PL5.upper.molten, c(value = "upper"))
+PL5.upper.molten <- PL5.upper.molten[, -2]
 
-PL7.molten <- merge(PL7.lower.molten, PL7.upper.molten)
-PL7.molten$match <- "Matched"
+PL5.molten <- merge(PL5.lower.molten, PL5.upper.molten)
+PL5.molten$match <- "Matched"
 
-estimates.ls <- rbind(NL7.molten, PL7.molten)
+estimates.ls <- rbind(NL5.molten, PL5.molten)
 estimates.ls$method <- "OLS"
 
 
@@ -97,8 +97,8 @@ estimates <- subset(estimates, var != c("sigma2"))
 ##### Create comparison plot
 
 cols <- c("#B35B40", "#696969")
-breaks <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelAfter 1996", "senate_dem_rep")
-break.labels <- c("Dem. President", "Prop. House Dem.", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model", "Prop. Senate Dem.")
+breaks <- c("pres_party", "house_dem_rep", "ExpenditureGDP", "recession", "DebtGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelAfter 1996")
+break.labels <- c("Dem. President", "Gov. Expenditure (% GDP)", "Recession", "Gov. Debt (% GDP)", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = match)) +
                       facet_grid(~ method) + 
