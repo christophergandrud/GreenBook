@@ -447,13 +447,13 @@ This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely 
 
 %%%%%%% Table of ElectionPeriod matched data with OLS parametric model %%%%%%%%
 
-\begin{table}[ht]
-    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
-    \label{OutputEL}
-    \vspace{0.25cm}
-    \begin{center}
-    {\footnotesize
-<< ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+%\begin{table}[ht]
+%    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
+%    \label{OutputEL}
+%    \vspace{0.25cm}
+%    \begin{center}
+%    {\footnotesize
+% << ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
     # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
     ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
@@ -475,9 +475,9 @@ This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely 
               )
 
 @
-    }
-    \end{center}
-\end{table}
+%    }
+%    \end{center}
+%\end{table}
 
 %%%%%%% Table of pres_party matched data with OLS parametric model %%%%%%%%
 
@@ -554,16 +554,16 @@ print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Est
 
 %%%%%%% Matching Diagnostic Plots %%%%%%
 %%%%% Elections %%%%%%%
-\begin{figure}[h]
-  \caption{Matched on Election Period}
-  \label{ElectPropensityScores}
-<<ElectPropensity, echo=FALSE, fig.height=4>>=
-plot(cpi.matched.election, type = "jitter", interactive = FALSE)
-@
-    \begin{singlespace}
-        {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are election quarters or the quarter before. ``Control Units" are from all other quarters. The more similar the distribution of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
-    \end{singlespace}
-\end{figure}
+%\begin{figure}[h]
+%  \caption{Matched on Election Period}
+%  \label{ElectPropensityScores}
+% <<ElectPropensity, echo=FALSE, fig.height=4>>=
+% plot(cpi.matched.election, type = "jitter", interactive = FALSE)
+%@
+%    \begin{singlespace}
+%        {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are election quarters or the quarter before. ``Control Units" are from all other quarters. The more similar the distribution of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+%    \end{singlespace}
+%\end{figure}
 
 %%%%% Presidential Party ID %%%%%%
 \begin{figure}[h]
