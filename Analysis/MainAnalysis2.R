@@ -34,7 +34,7 @@ cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 #### Matching Model ####
 
 # Elections, No interactions
-cpi.matched.election <- matchit(ElectionPeriod ~ pres_party + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + UNRATE, data = cpi.complete, method = "genetic", pop.size = 161)
+# cpi.matched.election <- matchit(ElectionPeriod ~ pres_party + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + UNRATE, data = cpi.complete, method = "genetic", pop.size = 161)
 
 # Party, All Interactions
 # cpi.matched.party.all <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + UNRATE + GlobalModel + DiscountRate2qChange + pres_party*ElectionPeriod + pres_party*senate_dem_rep + pres_party*house_dem_rep + senate_dem_rep + house_dem_rep, data = cpi.complete, method = "genetic", pop.size = 161)
