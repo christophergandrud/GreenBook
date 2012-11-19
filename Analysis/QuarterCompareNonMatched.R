@@ -1,5 +1,6 @@
 ###############
-# Graph of simulated errors across all quarter estimates for model NL7 (A7 in the manuscript table). This is using non-matched data.
+# Graph of simulated errors across all quarter estimates for model NL7 (A7 in the manuscript table). 
+# Uses non-matched data.
 # Christopher Gandrud 
 # 19 November 2012
 ###############

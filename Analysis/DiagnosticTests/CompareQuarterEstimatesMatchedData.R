@@ -1,7 +1,8 @@
 ###############
-# Graph of simulated errors across all quarter estimates for model PL7 (C7 in the manuscript table)
+# Graph of simulated errors across all quarter estimates for model PL7 (C7 in the manuscript table).
+# Uses Matched Data
 # Christopher Gandrud 
-# 11 November 2012
+# 19 November 2012
 ###############
 
 ## Load libraries
