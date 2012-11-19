@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 18 November 2012
+% 19 November 2012
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -428,20 +428,21 @@ Our main finding is that presidential party identification had a strong positive
     \begin{center}
 
 %%% Code is only run when there are changes, since it is very computationally intensive.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.75\linewidth]{figure/ExpectValueParty} 
+\end{knitrout}
 
 
-
-\includegraphics[scale=0.7]{figure/QuarterCompareSaved.pdf}
 
 
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an OLS regression with data matched by presidential party identification. Variables included are generally the same as those in Model C7 from Table \ref{OutputPL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ The matching methods only include complete cases. Due to missing values early in the observation period we ran a different matching model for forecasts made three to five quarters beforehand. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{Simulated from an OLS regression with non-matched data. Variables included are generally the same as those in Model N7 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means.\footnote{We ran 1000 simulations on normal linear regression models matched by presidential party ID and including the same variables as those in Model C7 from Table \ref{OutputPL}.} Results from these simulations can be found in Figure \ref{ExpectValueParty}. For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 15 percent during Democratic presidencies. The average inflation error during Republican presidencies was approximately -27 percent. These estimates indicate that partisan biases are on average a fairly large contributor to the overall magnitude of inflation errors. This is clearly reflected in the large increase in the linear models' adjusted $R^{2}$ when president partisan ID is included.\footnote{Compare the differences between the third and fourth models in tables \ref{OutputNL}, \ref{OutputEL}, and \ref{OutputPL}.} 
+To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means. Results from these simulations can be found in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty} shows results from non-matched data. Results using data matched by presidential party ID are generally similar though the variance is much larger. This is likely because the sample size was much smaller. For more details see: \url{http://bit.ly/U6edHt}.} For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 17 percent during Democratic presidencies. We expect the average inflation error during Republican presidencies is approximately -11 percent. These estimates indicate that partisan biases are on average a fairly large contributor to the overall magnitude of inflation errors. This is clearly reflected in the large increase in the linear models' adjusted $R^{2}$ when president partisan ID is included.\footnote{Compare the differences between the third and fourth models in tables \ref{OutputNL}, \ref{OutputEL}, and \ref{OutputPL}.} 
 
 There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies.\footnote{As a diagnostic we reran the model used in Figure \ref{CoefComparePlots} by step-wise removing observations from each presidency. The results did not change except for when we removed Bill Clinton's presidency. This is not surprising, since his presidency makes up two thirds of all the observed Democratic presidency quarters.}.  The distribution of the middle 95 percent of simulations for forecasts made three to five quarters beforehand occasionally overlap or come close to overlapping. This may largely be the result of the fact that we have far fewer observations for these estimates--due to missing data and dropping quarters with unknown presidents--which leads to much higher variance.
 
@@ -734,7 +735,7 @@ Resid. sd            & 0.3             & 0.3             & 0.3             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Sun Nov 18 16:31:43 2012
+% Mon Nov 19 13:30:10 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -771,7 +772,7 @@ Intercept & 0.94 & 1.86 & -2.68 & 0.95 & 4.63 \\
 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Sun Nov 18 16:31:44 2012
+% Mon Nov 19 13:30:11 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}

@@ -230,17 +230,17 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
                      labels = c(-0.5, -0.25, 0, 0.25, "N =")) +
   xlab("\n Age of Forecast in Quarters") +
   ylab("Expected Standardized Forecast Error \n") +
-  annotate(geom = "text", x = 5, y = 0.34,
+  annotate(geom = "text", x = 5, y = 0.37,
            label = O5, size = 4) +
-  annotate(geom = "text", x = 4, y = 0.34,
+  annotate(geom = "text", x = 4, y = 0.37,
            label = O4, size = 4) +
-  annotate(geom = "text", x = 3, y = 0.34, 
+  annotate(geom = "text", x = 3, y = 0.37, 
            label = O3, size = 4) +
-  annotate(geom = "text", x = 2, y = 0.34, 
+  annotate(geom = "text", x = 2, y = 0.37, 
            label = O2, size = 4) +
-  annotate(geom = "text", x = 1, y = 0.34, 
+  annotate(geom = "text", x = 1, y = 0.37, 
            label = O1, size = 4) +
-  annotate(geom = "text", x = 0, y = 0.34, 
+  annotate(geom = "text", x = 0, y = 0.37, 
            label = O0, size = 4) +
   guides(colour = guide_legend(override.aes = list(alpha = 1), reverse = TRUE)) +
   theme_bw(base_size = 12)    

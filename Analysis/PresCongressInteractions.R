@@ -1,7 +1,7 @@
 ################
 # President*Congress Interaction Graph
 # Christopher Gandrud
-# Updated 10 October 2012 
+# Updated 19 November 2012 
 ################
 
 # Create range of values to simulate expected values across
