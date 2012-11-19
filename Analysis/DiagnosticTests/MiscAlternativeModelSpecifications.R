@@ -1,7 +1,7 @@
 ###############
 # GreenBook Misc. Alternative Model Specifications
 # Christopher Gandrud
-# 18 November 2012
+# 19 November 2012
 ###############
 
 ## Load libraries
@@ -64,6 +64,10 @@ A5 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod*EligibleReElect + pres_party
 
 summary(A5)
 
-A6 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod*EligibleReElect*pres_party + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel + UNRATE + error.deflator.q2, model = "ls", data = cpi.data2, cite = FALSE)
+A6 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod + EligibleReElect*pres_party + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel + UNRATE + error.deflator.q2, model = "ls", data = cpi.data2, cite = FALSE)
 
 summary(A6)
+
+A7 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod*EligibleReElect*pres_party + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel + UNRATE + error.deflator.q2, model = "ls", data = cpi.data2, cite = FALSE)
+
+summary(A7)
