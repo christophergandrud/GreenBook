@@ -56,14 +56,14 @@ cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + Electio
 # plot(cpi.matched.party, type = "jitter", interactive = FALSE)
 
 # Turn matched data into data.frame for analysis
-cpi.Mdf.election <- match.data(cpi.matched.election)
+# cpi.Mdf.election <- match.data(cpi.matched.election)
 
 cpi.Mdf.party <- match.data(cpi.matched.party)
 
 #### Create Time To Election Squared Variable ####
 cpi.data2$elect2 <- (cpi.data2$time_to_election)^2
 
-cpi.Mdf.election$elect2 <- (cpi.Mdf.election$time_to_election)^2
+# cpi.Mdf.election$elect2 <- (cpi.Mdf.election$time_to_election)^2
 
 cpi.Mdf.party$elect2 <- (cpi.Mdf.party$time_to_election)^2
 

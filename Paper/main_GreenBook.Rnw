@@ -259,15 +259,15 @@ Finally, we include a variable for the sitting {\bf{Federal Reserve Board Chair}
 
 \section{Results}
 
-In this section we present results from a number of parametric model specifications. We only have 18 election period `treatments' in our data set. So, unfortunately our data sets matched based on the election period only contained about 30 observations. because of this very small sample size, we do not show estimates from models using data matched on election period.
+In this section we present results from a number of parametric model specifications. We only have 18 election period `treatments' in our data set. So, unfortunately our data set matched based on the election period only contained about 30 observations. Because of this very small sample size, we do not show estimates from models using data matched on election period. \footnote{More information on the models can be found at \url{http://bit.ly/OFdA4u}.}
 
 We primarily diagnose the presidential party ID matching models with a propensity score distribution--the probability of a quarter being in the `treated' group given its covariates--as well as quantile-quantile plots \citep{Ho2007} to diagnose whether or not each covariate in the matched data sets is balanced. Please see figure \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created from by running the original matching models in our main analysis source code file.\footnote{The file is available at: \url{http://bit.ly/OFdA4u}.}  We are unable to achieve covariate balance for the Congressional interaction terms\footnote{The presidential party ID and election period interaction does balance.} and the Federal Reserve Chair variable.\footnote{Chairs in our data set in the pre-Volcker/Greenspan era as well as current Chair Ben Bernanke were in office for very few quarters, making it difficult to match them.} It is unlikely that we could achieve covariate balance on these interactions given our relatively small sample size. Because of this, we only discuss Congressional interaction term and Chair variable estimates from the non-matched data sets.
 
-Almost all other parametric model specifications\footnote{Tables \ref{OutputEL} and \ref{OutputPL} do show interaction estimates from matched data sets for comparison with the non-matched results in Table \ref{OutputNL}.} are run with both the matched and unmatched data sets. In all of the Bayesian regressions we use the {\tt{Zelig}} default 1,000 MCMC burn-in iterations and 10,000 iterations after burn-in. We use the Heidelberger-Welch diagnostic to examine whether or not the Markov Chains converged to their stationary distributions.
+Almost all other parametric model specifications\footnote{\ref{OutputPL} does show interaction estimates from matched data sets for comparison with the non-matched results in Table \ref{OutputNL}.} are run with both the matched and unmatched data sets. In all of the Bayesian regressions we use the {\tt{Zelig}} default 1,000 MCMC burn-in iterations and 10,000 iterations after burn-in. We use the Heidelberger-Welch diagnostic to examine whether or not the Markov Chains converged to their stationary distributions.
 
 We also remove quarters from the sample where forecasters would not have known who the president would be because the president had not yet been elected for that quarter. For models where the dependent variable is forecasts made two quarters beforehand this means removing the 2 quarters following each presidential election.\footnote{In this case 19 quarters were removed.} Results from these restricted data sets are fairly similar to those from the full data set.
 
-We graphically present the key results in this section. Coefficient estimate tables for the models are given in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using OLS and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant' at the standard 0.05 significance level in models using unmatched data compared to estimates from the matched data sets.
+We graphically present the key results in this section. Coefficient estimate tables for the models are given in the Appendix (see tables \ref{OutputNL} and \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using OLS and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant' at the standard 0.05 significance level in models using unmatched data compared to estimates from the matched data sets.
 
 <<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
     
@@ -276,7 +276,7 @@ We graphically present the key results in this section. Coefficient estimate tab
     source_url(AnalysisURL)
 
     # Local
-     #source("/git_repositories/GreenBook/Analysis/MainAnalysis2.R")
+     # source("/git_repositories/GreenBook/Analysis/MainAnalysis2.R")
 @
 
 \begin{figure}[t]
@@ -457,26 +457,26 @@ This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely 
 %    {\footnotesize
 % << ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
-    # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
-    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
-    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+%    # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
+%    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
+%    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
-    # Table of non-matched models with ls
-    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
-              digits = 1, 
-              Sweave = TRUE, 
-              stars = "default", 
-              model.names = ModelNamesB, 
-              coef.names = CoefNamesB,
-              notes = list(se.note, 
-                           stars.note, 
-                           "The recession variable is ommitted because there was no variation in the matched data set.",
-                           "The reason that there was no variation is because there was never a recession during an",
-                           "election period in our data set."
-                           )
-              )
-
-@
+%    # Table of non-matched models with ls
+%    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
+%              digits = 1, 
+%              Sweave = TRUE, 
+%              stars = "default", 
+%              model.names = ModelNamesB, 
+%              coef.names = CoefNamesB,
+%              notes = list(se.note, 
+%                           stars.note, 
+%                           "The recession variable is ommitted because there was no variation in the matched data set.",
+%                           "The reason that there was no variation is because there was never a recession during an",
+%                           "election period in our data set."
+%                           )
+%              )
+%
+%@
 %    }
 %    \end{center}
 %\end{table}
