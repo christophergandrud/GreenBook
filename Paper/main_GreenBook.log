@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  19 NOV 2012 18:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  21 NOV 2012 18:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1017,7 +1017,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--134
 
 Package xcolor Warning: Incompatible color definition on input line 177.
 
-<figure/BaseInflation.pdf, id=174, 505.89pt x 289.08pt>
+<figure/BaseInflation.pdf, id=180, 505.89pt x 289.08pt>
 File: figure/BaseInflation.pdf Graphic file (type pdf)
 
 <use figure/BaseInflation.pdf>
@@ -1027,930 +1027,935 @@ Package pdftex.def Info: figure/BaseInflation.pdf used on input line 177.
 
 Package xcolor Warning: Incompatible color definition on input line 208.
 
-<figure/PartisanError.pdf, id=199, 505.89pt x 289.08pt>
+<figure/PartisanError.pdf, id=204, 505.89pt x 289.08pt>
 File: figure/PartisanError.pdf Graphic file (type pdf)
 
 <use figure/PartisanError.pdf>
 Package pdftex.def Info: figure/PartisanError.pdf used on input line 208.
 (pdftex.def)             Requested size: 362.37569pt x 207.07439pt.
  [7] [8 <./figure/PartisanError.pdf>]
-Overfull \hbox (12.35863pt too wide) in paragraph at lines 321--322
+Overfull \hbox (12.35863pt too wide) in paragraph at lines 320--321
  [] 
  []
 
 [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (0.19849pt too wide) in paragraph at lines 398--399
+Overfull \hbox (0.19849pt too wide) in paragraph at lines 397--398
 []\OT1/cmr/m/n/10 We pri-mar-ily di-ag-nose the pres-i-den-tial party ID match-
 ing mod-els with a propen-sity score distribution--
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 413.
+Package xcolor Warning: Incompatible color definition on input line 412.
 
-<figure/CoefComparePlots.pdf, id=407, 505.89pt x 289.08pt>
+<figure/CoefComparePlots.pdf, id=412, 505.89pt x 289.08pt>
 File: figure/CoefComparePlots.pdf Graphic file (type pdf)
 
 <use figure/CoefComparePlots.pdf>
-Package pdftex.def Info: figure/CoefComparePlots.pdf used on input line 413.
+Package pdftex.def Info: figure/CoefComparePlots.pdf used on input line 412.
 (pdftex.def)             Requested size: 430.31812pt x 245.9pt.
  [16]
 
-Package xcolor Warning: Incompatible color definition on input line 434.
+Package xcolor Warning: Incompatible color definition on input line 433.
 
-<figure/ExpectValueParty.pdf, id=422, 433.62pt x 289.08pt>
+<figure/ExpectValueParty.pdf, id=427, 433.62pt x 289.08pt>
 File: figure/ExpectValueParty.pdf Graphic file (type pdf)
 
 <use figure/ExpectValueParty.pdf>
-Package pdftex.def Info: figure/ExpectValueParty.pdf used on input line 434.
+Package pdftex.def Info: figure/ExpectValueParty.pdf used on input line 433.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
  [17 <./figure/CoefComparePlots.pdf>] [18 <./figure/ExpectValueParty.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 470.
+Package xcolor Warning: Incompatible color definition on input line 469.
 
-<figure/InterPlot.pdf, id=470, 505.89pt x 289.08pt>
+<figure/InterPlot.pdf, id=476, 505.89pt x 289.08pt>
 File: figure/InterPlot.pdf Graphic file (type pdf)
  <use figure/InterPlot.pdf>
-Package pdftex.def Info: figure/InterPlot.pdf used on input line 470.
+Package pdftex.def Info: figure/InterPlot.pdf used on input line 469.
 (pdftex.def)             Requested size: 430.31812pt x 245.9pt.
 
 [19] [20 <./figure/InterPlot.pdf>] [21] [22] [23]
-Overfull \hbox (11.54176pt too wide) detected at line 541
+Overfull \hbox (11.54176pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 541
+Overfull \hbox (2.70836pt too wide) detected at line 540
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 540
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 540
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9)$ 
  []
 
 
 Overfull \hbox (2.70836pt too wide) detected at line 541
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 541
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 543
+Overfull \hbox (2.70836pt too wide) detected at line 542
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 544
+Overfull \hbox (4.18059pt too wide) detected at line 543
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 544
+Overfull \hbox (4.18059pt too wide) detected at line 543
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 545
+Overfull \hbox (2.70836pt too wide) detected at line 544
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 546
+Overfull \hbox (11.54176pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 546
+Overfull \hbox (7.86118pt too wide) detected at line 545
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 547
+Overfull \hbox (2.70836pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 548
+Overfull \hbox (4.18059pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 548
+Overfull \hbox (4.18059pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 548
+Overfull \hbox (4.18059pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 548
+Overfull \hbox (7.86118pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 548
+Overfull \hbox (7.86118pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 548
+Overfull \hbox (4.18059pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 548
+Overfull \hbox (7.86118pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 548
+Overfull \hbox (7.86118pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 548
+Overfull \hbox (7.86118pt too wide) detected at line 547
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 549
+Overfull \hbox (2.70836pt too wide) detected at line 548
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 550
+Overfull \hbox (7.86118pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 550
+Overfull \hbox (7.86118pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 550
+Overfull \hbox (7.86118pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 550
+Overfull \hbox (7.86118pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 550
+Overfull \hbox (7.86118pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 550
+Overfull \hbox (7.86118pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 550
+Overfull \hbox (7.86118pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 550
+Overfull \hbox (4.18059pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 550
+Overfull \hbox (4.18059pt too wide) detected at line 549
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 551
+Overfull \hbox (2.70836pt too wide) detected at line 550
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 552
+Overfull \hbox (4.18059pt too wide) detected at line 551
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 552
+Overfull \hbox (4.18059pt too wide) detected at line 551
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 552
+Overfull \hbox (4.18059pt too wide) detected at line 551
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 553
+Overfull \hbox (2.70836pt too wide) detected at line 552
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 554
+Overfull \hbox (4.18059pt too wide) detected at line 553
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (3.83336pt too wide) detected at line 554
+Overfull \hbox (3.83336pt too wide) detected at line 553
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 554
+Overfull \hbox (4.18059pt too wide) detected at line 553
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 555
+Overfull \hbox (2.70836pt too wide) detected at line 554
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 557
+Overfull \hbox (2.70836pt too wide) detected at line 556
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 558
+Overfull \hbox (11.54176pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 558
+Overfull \hbox (4.18059pt too wide) detected at line 557
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 6[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 559
+Overfull \hbox (7.86118pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 559
+Overfull \hbox (2.70836pt too wide) detected at line 558
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 7)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 560
+Overfull \hbox (2.70836pt too wide) detected at line 559
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8)$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 560
+Overfull \hbox (4.18059pt too wide) detected at line 559
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 560
+Overfull \hbox (4.18059pt too wide) detected at line 559
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
+ []
+
+
+Overfull \hbox (4.18059pt too wide) detected at line 559
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
  []
 
 
 Overfull \hbox (4.18059pt too wide) detected at line 560
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8[]$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 560
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 560
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 560
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 560
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 560
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 560
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 561
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3)$ 
+ []
+
+
+Overfull \hbox (4.18059pt too wide) detected at line 561
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
  []
 
 
 Overfull \hbox (4.18059pt too wide) detected at line 561
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8[]$ 
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 561
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
+Overfull \hbox (4.18059pt too wide) detected at line 561
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 561
+Overfull \hbox (11.54176pt too wide) detected at line 561
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5[]$ 
+ []
+
+
+Overfull \hbox (7.86118pt too wide) detected at line 561
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
+ []
+
+
+Overfull \hbox (11.54176pt too wide) detected at line 561
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
+ []
+
+
+Overfull \hbox (11.54176pt too wide) detected at line 562
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 6[]$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 562
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 561
+Overfull \hbox (2.70836pt too wide) detected at line 562
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 561
+Overfull \hbox (2.70836pt too wide) detected at line 562
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 562
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 561
+Overfull \hbox (2.70836pt too wide) detected at line 562
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 561
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4)$ 
  []
 
 
 Overfull \hbox (2.70836pt too wide) detected at line 562
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3)$ 
- []
-
-
-Overfull \hbox (4.18059pt too wide) detected at line 562
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
- []
-
-
-Overfull \hbox (4.18059pt too wide) detected at line 562
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
- []
-
-
-Overfull \hbox (4.18059pt too wide) detected at line 562
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
- []
-
-
-Overfull \hbox (11.54176pt too wide) detected at line 562
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5[]$ 
- []
-
-
-Overfull \hbox (7.86118pt too wide) detected at line 562
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
- []
-
-
-Overfull \hbox (11.54176pt too wide) detected at line 562
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1[]$ 
- []
-
-
-Overfull \hbox (11.54176pt too wide) detected at line 563
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 6[]$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 563
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 563
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 563
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 563
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 563
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
@@ -1960,122 +1965,122 @@ $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3)$
 
 
 Overfull \hbox (2.70836pt too wide) detected at line 564
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3)$ 
- []
-
-
-Overfull \hbox (2.70836pt too wide) detected at line 565
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 565
+Overfull \hbox (2.70836pt too wide) detected at line 564
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 567
+Overfull \hbox (2.70836pt too wide) detected at line 566
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 569
+Overfull \hbox (2.70836pt too wide) detected at line 568
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 571
+Overfull \hbox (2.70836pt too wide) detected at line 570
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (3.83336pt too wide) detected at line 572
+Overfull \hbox (3.83336pt too wide) detected at line 571
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 573
+Overfull \hbox (2.70836pt too wide) detected at line 572
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 575
+Overfull \hbox (2.70836pt too wide) detected at line 574
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 577
+Overfull \hbox (2.70836pt too wide) detected at line 576
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (3.83336pt too wide) detected at line 578
+Overfull \hbox (3.83336pt too wide) detected at line 577
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 3[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 579
+Overfull \hbox (2.70836pt too wide) detected at line 578
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 580
+Overfull \hbox (11.54176pt too wide) detected at line 579
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5[]$ 
  []
 
 
-Overfull \hbox (3.83336pt too wide) detected at line 580
+Overfull \hbox (3.83336pt too wide) detected at line 579
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 4[]$ 
  []
 
 
-Overfull \hbox (7.86118pt too wide) detected at line 581
+Overfull \hbox (7.86118pt too wide) detected at line 580
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 581
+Overfull \hbox (2.70836pt too wide) detected at line 580
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 581
+Overfull \hbox (2.70836pt too wide) detected at line 580
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 582
+Overfull \hbox (2.70836pt too wide) detected at line 581
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9)$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 582
+Overfull \hbox (11.54176pt too wide) detected at line 581
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 6[]$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 583
+Overfull \hbox (2.70836pt too wide) detected at line 582
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 1)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 583
+Overfull \hbox (2.70836pt too wide) detected at line 582
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8)$ 
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 584
+Overfull \hbox (2.70836pt too wide) detected at line 583
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 7)$ 
  []
 
 
-Overfull \hbox (4.18059pt too wide) detected at line 584
+Overfull \hbox (4.18059pt too wide) detected at line 583
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5[]$ 
  []
 
 
-Overfull \hbox (11.54176pt too wide) detected at line 585
+Overfull \hbox (11.54176pt too wide) detected at line 584
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 9[]$ 
+ []
+
+
+Overfull \hbox (2.70836pt too wide) detected at line 584
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
  []
 
 
@@ -2084,13 +2089,13 @@ $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 586
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 2)$ 
+Overfull \hbox (3.83336pt too wide) detected at line 586
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
  []
 
 
-Overfull \hbox (3.83336pt too wide) detected at line 587
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 0[]$ 
+Overfull \hbox (2.70836pt too wide) detected at line 586
+$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5)$ 
  []
 
 
@@ -2099,898 +2104,898 @@ $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5)$
  []
 
 
-Overfull \hbox (2.70836pt too wide) detected at line 588
-$\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 5)$ 
- []
-
-
-Overfull \hbox (3.94441pt too wide) detected at line 650
+Overfull \hbox (3.94441pt too wide) detected at line 649
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4[]$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 650
+Overfull \hbox (3.94441pt too wide) detected at line 649
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5[]$ 
+ []
+
+
+Overfull \hbox (4.33331pt too wide) detected at line 649
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
 Overfull \hbox (4.33331pt too wide) detected at line 650
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
- []
-
-
-Overfull \hbox (4.33331pt too wide) detected at line 651
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 9)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 9)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 9)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 8)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 651
+Overfull \hbox (3.3056pt too wide) detected at line 650
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 652
+Overfull \hbox (3.3056pt too wide) detected at line 651
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 8)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 653
+Overfull \hbox (3.3056pt too wide) detected at line 652
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 655
+Overfull \hbox (3.3056pt too wide) detected at line 654
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 656
+Overfull \hbox (4.33331pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 656
+Overfull \hbox (4.33331pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 656
+Overfull \hbox (4.33331pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 656
+Overfull \hbox (11.99994pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 656
+Overfull \hbox (11.99994pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 656
+Overfull \hbox (8.16663pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 656
+Overfull \hbox (8.16663pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 656
+Overfull \hbox (8.16663pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 656
+Overfull \hbox (11.99994pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 656
+Overfull \hbox (11.99994pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 656
+Overfull \hbox (4.33331pt too wide) detected at line 655
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 657
+Overfull \hbox (3.3056pt too wide) detected at line 656
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 658
+Overfull \hbox (3.94441pt too wide) detected at line 657
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 658
+Overfull \hbox (3.94441pt too wide) detected at line 657
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 659
+Overfull \hbox (3.3056pt too wide) detected at line 658
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 660
+Overfull \hbox (3.94441pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5[]$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 660
+Overfull \hbox (3.94441pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 660
+Overfull \hbox (8.16663pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 8[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 660
+Overfull \hbox (8.16663pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 8[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 660
+Overfull \hbox (4.33331pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 660
+Overfull \hbox (4.33331pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 660
+Overfull \hbox (4.33331pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6[]$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 660
+Overfull \hbox (3.94441pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4[]$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 660
+Overfull \hbox (3.94441pt too wide) detected at line 659
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 661
+Overfull \hbox (3.3056pt too wide) detected at line 660
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 662
+Overfull \hbox (8.16663pt too wide) detected at line 661
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 662
+Overfull \hbox (8.16663pt too wide) detected at line 661
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 662
+Overfull \hbox (11.99994pt too wide) detected at line 661
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 662
+Overfull \hbox (4.33331pt too wide) detected at line 661
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 662
+Overfull \hbox (4.33331pt too wide) detected at line 661
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 662
+Overfull \hbox (4.33331pt too wide) detected at line 661
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 663
+Overfull \hbox (3.3056pt too wide) detected at line 662
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 665
+Overfull \hbox (3.3056pt too wide) detected at line 664
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 665
+Overfull \hbox (3.3056pt too wide) detected at line 664
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 665
+Overfull \hbox (3.3056pt too wide) detected at line 664
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 665
+Overfull \hbox (3.3056pt too wide) detected at line 664
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 665
+Overfull \hbox (3.3056pt too wide) detected at line 664
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 665
+Overfull \hbox (3.3056pt too wide) detected at line 664
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 665
+Overfull \hbox (3.3056pt too wide) detected at line 664
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 667
+Overfull \hbox (3.3056pt too wide) detected at line 666
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 668
+Overfull \hbox (11.99994pt too wide) detected at line 667
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 668
+Overfull \hbox (11.99994pt too wide) detected at line 667
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 668
+Overfull \hbox (11.99994pt too wide) detected at line 667
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 668
+Overfull \hbox (11.99994pt too wide) detected at line 667
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 668
+Overfull \hbox (8.16663pt too wide) detected at line 667
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 668
+Overfull \hbox (11.99994pt too wide) detected at line 667
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 668
+Overfull \hbox (11.99994pt too wide) detected at line 667
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
+ []
+
+
+Overfull \hbox (4.33331pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4[]$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 668
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 669
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
+ []
+
+
+Overfull \hbox (4.33331pt too wide) detected at line 669
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
  []
 
 
 Overfull \hbox (4.33331pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4[]$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 669
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
- []
-
-
-Overfull \hbox (3.3056pt too wide) detected at line 670
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
- []
-
-
-Overfull \hbox (4.33331pt too wide) detected at line 670
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2[]$ 
- []
-
-
-Overfull \hbox (4.33331pt too wide) detected at line 670
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 670
+Overfull \hbox (4.33331pt too wide) detected at line 669
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 670
+Overfull \hbox (4.33331pt too wide) detected at line 669
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 9[]$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 670
+Overfull \hbox (3.94441pt too wide) detected at line 669
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 8[]$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 670
+Overfull \hbox (3.94441pt too wide) detected at line 669
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 671
+Overfull \hbox (3.3056pt too wide) detected at line 670
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 671
+Overfull \hbox (3.3056pt too wide) detected at line 670
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 671
+Overfull \hbox (3.3056pt too wide) detected at line 670
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 671
+Overfull \hbox (3.3056pt too wide) detected at line 670
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 671
+Overfull \hbox (3.3056pt too wide) detected at line 670
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 671
+Overfull \hbox (3.3056pt too wide) detected at line 670
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 9)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 672
+Overfull \hbox (3.3056pt too wide) detected at line 671
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 8)$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 672
+Overfull \hbox (8.16663pt too wide) detected at line 671
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 672
+Overfull \hbox (8.16663pt too wide) detected at line 671
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 672
+Overfull \hbox (8.16663pt too wide) detected at line 671
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 672
+Overfull \hbox (11.99994pt too wide) detected at line 671
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 672
+Overfull \hbox (8.16663pt too wide) detected at line 671
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3[]$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 673
+Overfull \hbox (11.99994pt too wide) detected at line 672
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 673
+Overfull \hbox (3.3056pt too wide) detected at line 672
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 673
+Overfull \hbox (3.3056pt too wide) detected at line 672
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 673
+Overfull \hbox (3.3056pt too wide) detected at line 672
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 673
+Overfull \hbox (3.3056pt too wide) detected at line 672
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 673
+Overfull \hbox (3.3056pt too wide) detected at line 672
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 673
+Overfull \hbox (3.3056pt too wide) detected at line 672
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 9)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 674
+Overfull \hbox (3.3056pt too wide) detected at line 673
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 675
+Overfull \hbox (3.3056pt too wide) detected at line 674
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 675
+Overfull \hbox (3.3056pt too wide) detected at line 674
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 677
+Overfull \hbox (3.3056pt too wide) detected at line 676
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 679
+Overfull \hbox (3.3056pt too wide) detected at line 678
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (11.99994pt too wide) detected at line 680
+Overfull \hbox (11.99994pt too wide) detected at line 679
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6[]$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 681
+Overfull \hbox (8.16663pt too wide) detected at line 680
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 681
+Overfull \hbox (3.3056pt too wide) detected at line 680
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 681
+Overfull \hbox (3.3056pt too wide) detected at line 680
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 682
+Overfull \hbox (3.3056pt too wide) detected at line 681
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1)$ 
  []
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 682
+Overfull \hbox (8.16663pt too wide) detected at line 681
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 8[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 683
+Overfull \hbox (3.3056pt too wide) detected at line 682
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 2)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 683
+Overfull \hbox (3.3056pt too wide) detected at line 682
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 4)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 684
+Overfull \hbox (3.3056pt too wide) detected at line 683
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0)$ 
  []
 
 
-Overfull \hbox (4.33331pt too wide) detected at line 685
+Overfull \hbox (4.33331pt too wide) detected at line 684
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 0[]$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 685
+Overfull \hbox (3.3056pt too wide) detected at line 684
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 6)$ 
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 686
+Overfull \hbox (3.3056pt too wide) detected at line 685
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$ 
  []
 
 
-Overfull \hbox (3.94441pt too wide) detected at line 687
+Overfull \hbox (3.94441pt too wide) detected at line 686
 $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 1[]$ 
+ []
+
+
+Overfull \hbox (3.3056pt too wide) detected at line 686
+$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7)$ 
  []
 
 
@@ -2999,37 +3004,32 @@ $\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7)$
  []
 
 
-Overfull \hbox (3.3056pt too wide) detected at line 688
-$\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 7)$ 
- []
-
-
-Overfull \hbox (0.8114pt too wide) in paragraph at lines 646--695
+Overfull \hbox (0.8114pt too wide) in paragraph at lines 645--694
  [] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 789.
+Package xcolor Warning: Incompatible color definition on input line 788.
 
-<figure/PresPropensity.pdf, id=542, 505.89pt x 289.08pt>
+<figure/PresPropensity.pdf, id=548, 505.89pt x 289.08pt>
 File: figure/PresPropensity.pdf Graphic file (type pdf)
 
 <use figure/PresPropensity.pdf>
-Package pdftex.def Info: figure/PresPropensity.pdf used on input line 789.
+Package pdftex.def Info: figure/PresPropensity.pdf used on input line 788.
 (pdftex.def)             Requested size: 452.9679pt x 258.84187pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package xcolor Warning: Incompatible color definition on input line 804.
+Package xcolor Warning: Incompatible color definition on input line 803.
 
-<figure/GraphPartisanErrorUnemploy.pdf, id=545, 505.89pt x 289.08pt>
+<figure/GraphPartisanErrorUnemploy.pdf, id=551, 505.89pt x 289.08pt>
 File: figure/GraphPartisanErrorUnemploy.pdf Graphic file (type pdf)
 
 <use figure/GraphPartisanErrorUnemploy.pdf>
 Package pdftex.def Info: figure/GraphPartisanErrorUnemploy.pdf used on input li
-ne 804.
+ne 803.
 (pdftex.def)             Requested size: 430.31812pt x 245.9pt.
  [24
 
@@ -3038,15 +3038,15 @@ ne 804.
 [28
 
 ] [29])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 822.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 821.
  [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 822.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 821.
  (./main_GreenBook.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 822.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 822.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 821.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 821.
 Package rerunfilecheck Info: File `main_GreenBook.out' has not changed.
-(rerunfilecheck)             Checksum: 215A801154675F590527440865351D8F;950.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 822.
+(rerunfilecheck)             Checksum: B72723CA57548A6BD4B921ECA7666E69;946.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 821.
  ) 
 Here is how much of TeX's memory you used:
  15434 strings out of 493633
@@ -3084,10 +3084,10 @@ ype1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt8.pfb>
-Output written on main_GreenBook.pdf (30 pages, 2057113 bytes).
+Output written on main_GreenBook.pdf (30 pages, 2056732 bytes).
 PDF statistics:
- 728 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
+ 734 PDF objects out of 1000 (max. 8388607)
+ 653 compressed objects within 7 object streams
  151 named destinations out of 1000 (max. 500000)
  152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
