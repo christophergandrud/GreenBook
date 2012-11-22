@@ -1,7 +1,7 @@
 ################
 # GreenBook: President Diagnostics
 # Christopher Gandrud
-# 17 November 2012
+# 22 November 2012
 ###############
 
 ## Load libraries
@@ -51,6 +51,28 @@ SubSetPres <- function(x){
 }
 
 lapply(PresNames, SubSetPres)
+
+#### Run regressions dropping each presidential term ####
+# Remove spaces in president term names
+cpi.data2$presTerm<- str_replace_all(cpi.data2$presTerm, " ", "")
+cpi.data2$elect2 <- factor(cpi.data2$presTerm)
+
+# Create funciton and run regressions
+PresTerms <- c("Nixon1", "Nixon2", "Ford1", "Carter1", "Regan1", "Regan2", "GHWBush1", "Clinton1", "Clinton2", "GWBush1", "GWBush2")
+
+SubSetPresTerms <- function(x){
+  SubData <- subset(cpi.data2, presTerm != x)
+  SData <- paste("S", x, sep = "")
+  assign(SData, summary(zelig(error.prop.deflator.q2 ~ pres_party + 
+                                time_to_election + recession + senate_dem_rep +
+                                house_dem_rep + DebtGDP + ExpenditureGDP + 
+                                PotentialGDP + DiscountRate2qChange + GlobalModel +
+                                UNRATE, model = "ls", data = SubData, 
+                              cite = FALSE)), 
+         env=.GlobalEnv)
+}
+
+lapply(PresTerms, SubSetPresTerms)
 
 #### President Dummy Variables ####
 MPresDummies <- zelig(error.prop.deflator.q2 ~ time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel + UNRATE + president, model = "ls", data = cpi.data2, cite = FALSE)

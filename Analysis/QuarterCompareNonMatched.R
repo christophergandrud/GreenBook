@@ -2,7 +2,7 @@
 # Graph of simulated errors across all quarter estimates for model NL7 (A7 in the manuscript table). 
 # Uses non-matched data.
 # Christopher Gandrud 
-# 19 November 2012
+# 22 November 2012
 ###############
 
 ## Load libraries
@@ -220,7 +220,8 @@ partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
 # Create plot
 ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
-  geom_hline(aes(intercept= 0), linetype = "dotted") +
+  geom_hline(yintercept = 0, size = 1,
+             alpha = I(0.5)) +
   stat_summary(fun.y = mean, geom = "line", aes(group = variable), colour = "grey70") +
   geom_point(aes(colour = variable), alpha = I(0.05), size = 3) +
   scale_color_manual(values = partisan.colors, 

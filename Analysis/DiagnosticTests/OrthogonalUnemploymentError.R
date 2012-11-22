@@ -1,10 +1,11 @@
 ###############
 # Run Models with an Orthoganal Variable (Unemployment Errors)
 # Christopher Gandrud 
-# 26 October 2012
+# 22 November 2012
 ###############
 
 # Load libraries
+# library(RCurl)
 # library(Zelig)
 # library(MatchIt)
 # library(ggplot2)
@@ -65,6 +66,8 @@ errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2))
                      breaks = c(1970, 1980, 1990, 2000), 
                      labels = c(1970, 1980, 1990, 2000)) +
   scale_y_continuous(breaks = c(-0.1, 0, 0.1, 0.2, 0.3), labels = c(-0.1, 0, 0.1, 0.2, 0.3)) +
+  guides(colour = guide_legend(reverse = TRUE), 
+         fill = guide_legend(reverse = TRUE)) +
   theme_bw(base_size = 12)
 
 #### Correlation Between Forecast Error and Unemployment Error ####

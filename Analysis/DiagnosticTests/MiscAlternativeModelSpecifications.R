@@ -1,7 +1,7 @@
 ###############
 # GreenBook Misc. Alternative Model Specifications
 # Christopher Gandrud
-# 19 November 2012
+# 22 November 2012
 ###############
 
 ## Load libraries

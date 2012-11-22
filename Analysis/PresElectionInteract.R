@@ -1,7 +1,7 @@
 ################
 # President*Election Interaction Graph
 # Christopher Gandrud
-# Updated 2 November 2012 
+# Updated 22 November 2012 
 ################
 
 # Create range of values to simulate expected values across
@@ -54,7 +54,8 @@ NL8Bound <- rbind(NL8SimElectionDem.ev, NL8SimElectionRep.ev)
 
 #### Create plots ####
 ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value), group) +
-                                geom_hline(aes(intercept= 0), linetype = "dotted") +
+                                  geom_hline(yintercept = 0, size = 1,
+                                              alpha = I(0.5)) +
                                 stat_summary(fun.y = mean, geom = "line", 
                                              aes(group = Party), colour = "grey70") +
                                 geom_point(aes(color = Party), alpha = I(0.01), size = 3) +

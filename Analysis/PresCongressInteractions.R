@@ -52,7 +52,8 @@ NL11BoundPer <- subset(NL11BoundPer, Lower == FALSE & Upper == FALSE)
 partisan.congress.colours = c("Rep." = "#C42B00", "Dem." = "#2259B3")
 
 PartyInteractionPlot <- ggplot(data = NL11BoundPer, aes(variable, value)) +
-                                  geom_hline(aes(intercept= 0), linetype = "dotted") +
+                                  geom_hline(yintercept = 0, size = 1,
+                                              alpha = I(0.5)) +
                                   stat_summary(fun.y = mean, geom = "line", 
                                                aes(group = Congress), colour = "grey70") +
                                   geom_point(aes(color = Congress), alpha = I(0.01), size = 3) +
