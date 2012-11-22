@@ -60,6 +60,8 @@ ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value), group) 
                                              aes(group = Party), colour = "grey70") +
                                 geom_point(aes(color = Party), alpha = I(0.01), size = 3) +
                                 scale_x_reverse(breaks = c(10, 8, 6, 4, 2, 0)) +
+                                scale_y_continuous(breaks = c(-0.2, 0, 0.2), 
+                                                   labels = c(-0.2, 0, 0.2)) +
                                 xlab("\nQuarters to Election") + 
                                 ylab("Expected Standardized Forecast Error\n") +
                                 scale_color_manual(values = partisan.colors) +

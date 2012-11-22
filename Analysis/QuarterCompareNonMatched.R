@@ -227,7 +227,7 @@ ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
   scale_color_manual(values = partisan.colors, 
                      name = "") +
   scale_x_reverse() +
-  scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25, 0.34), 
+  scale_y_continuous(breaks = c(-0.5, -0.25, 0, 0.25, 0.35), 
                      labels = c(-0.5, -0.25, 0, 0.25, "N =")) +
   xlab("\n Age of Forecast in Quarters") +
   ylab("Expected Standardized Forecast Error \n") +
