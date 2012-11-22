@@ -1,12 +1,67 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 21 November 2012
+% 23 November 2012
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
 
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{article}\usepackage{graphicx, color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
+\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
+\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
+\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
+\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
+\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
+\newcommand{\hlslot}[1]{\textit{#1}}%
+\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 \usepackage{fullpage}
 \usepackage[authoryear]{natbib}
 \usepackage{setspace}
@@ -134,15 +189,10 @@ We examine errors made by forecasters in the current quarter and all quarters up
 
 \subsection{Are There Partisan Forecast Errors?}
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{flushleft}\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: there is no package called 'plotrix'}\end{flushleft}\end{kframe}
-\end{knitrout}
 
 
-Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969 through 2006 the mean standardized forecast error was -0.03, i.e. forecasts were off by about -3 percent. The mean error is noticably different across Republican compared to Democratic presidencies. Across Republican presidencies it was \begin{flushleft}\ttfamily\noindent\bfseries\textcolor{errorcolor}{ \\ 
-Error in eval(expr, envir, enclos) : object 'RepMean' not found}\end{flushleft} percent and \begin{flushleft}\ttfamily\noindent\bfseries\textcolor{errorcolor}{ \\ 
-Error in eval(expr, envir, enclos) : object 'DemMean' not found}\end{flushleft} percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
+
+Forecasts should be unbiased in that they have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969 through 2006 the mean standardized forecast error was -0.03, i.e. forecasts were off by about -3 percent. The mean error is noticably different across Republican compared to Democratic presidencies. Across Republican presidencies it was -11 percent and 13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
 
 Figure \ref{errors_over_time} plots forecast errors across our sample separated by presidential term and party. The first thing to note is that inflation was rarely underestimated during the three Democratic presidential terms in our sample. The underestimates that were made were relatively small. Also, the largest overestimates we see were made during Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Nixon's, Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Over this period--often referred to as the Volcker Revolution \citep[see][]{Bartels1985}--inflation was suddenly much lower than before (see Figure \ref{absolute}). It may have taken awhile for predictions to adjust to this new lower level of inflation, particularly because the Fed's own models of the economy assumed that money had no real effects on the economy during this period (see above).
 
@@ -379,7 +429,6 @@ Our main finding is that Democratic party identification had a strong positive a
     \begin{center}
 
 %%% Code is only run when there are changes, since it is very computationally intensive.
-<<<<<<< HEAD
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\includegraphics[width=0.8\linewidth]{figure/ExpectValueParty} 
 \end{knitrout}
@@ -394,7 +443,7 @@ Our main finding is that Democratic party identification had a strong positive a
     \end{singlespace}
 \end{figure}
 
-To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means. Results from these simulations can be found in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty} shows results from parametric models using non-matched data. Results using data matched by presidential party ID are generally similar though the variance is much larger. This is likely because the sample size in the matched data is about half that of the non-matched data. For more details see: \url{http://bit.ly/U6edHt}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies.\footnote{As a diagnostic we reran the model used in Figure \ref{CoefComparePlots} by step-wise removing observations from each presidential term. The results did not change in a meaningful way.}
+To get a sense of approximately how big the presidential partisan ID bias might be we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means. Results from these simulations can be found in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty} shows results from parametric models using non-matched data. Results using data matched by presidential party ID are generally similar though the variance is much larger. This is likely because the sample size in the matched data is about half that of the non-matched data. For more details see: \url{http://bit.ly/U6edHt}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher in Democratic presidencies than Republican presidencies.\footnote{As a diagnostic we reran the model used in Figure \ref{CoefComparePlots} by step-wise removing observations from each presidential term. The results did not change in a meaningful way. This suggests our findings are not being driven by any one outlier presidential term.}
 
 For forecasts made two quarters in advance, we expect that on average the Fed overestimates inflation by 17 percent during Democratic presidencies. We expect the average inflation error during Republican presidencies is approximately -11 percent. These estimates indicate that partisan biases are on average a fairly large contributor to the overall magnitude of inflation errors. This is clearly reflected in the large increase in the linear models' adjusted $R^{2}$ when president partisan ID is included.\footnote{Compare the differences between the third and fourth models in tables \ref{OutputNL} and \ref{OutputPL}.} 
 
@@ -444,10 +493,10 @@ It seems that Federal Reserve staff may also overestimate the effect of governme
 \paragraph{FRB Global Forecasting Model}
 
 The introduction of the FRB/Global behavioral equation forecasting model does not seem to have begun a new era of reduced inflation forecasting error. Across all of our matching and parametric model specifications, forecasts made after the introduction of this approach are not significantly more accurate than those made before it. 
-=======
->>>>>>> cf49dd3b09bdd26ea1439a1eae855ca250287292
 
+\paragraph{Changes to the Discount Rate}
 
+As expected, relative changes to the discount rate are often found to be negatively associated with inflation forecast errors. Increasing the discount rate could result in lower inflation than expected and vice versa. Controlling for FOMC policy does not change the estimated relationship between presidential party ID and errors. It should be noted that the results are not robust across all of the models, especially when we use matched data. 
 
 \paragraph{Unemployment Rate}
 
@@ -456,16 +505,25 @@ Higher rates of unemployment tend to lead to a negative inflation error.
 
 
 
+\paragraph{Orthogonal Dependent Variable Diagnostic: Unemployment Forecast Errors}
 
+As a final diagnostic we ran our analyses with a dependant variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are not strongly correlated with inflation forecast errors.The Pearson correlation coefficient for forecasts made two quarters beforehand is -0.15 with a p-value of 0.06. It is not clear why Federal Reserve staff would have systematically different unemployment forecast errors when there is a Republican president and a Democratic president.} The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Green Book. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
 
+Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors were the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's \emph{inflation} forecasting errors.
 
+\section*{Discussion: Is there a partisan bias?}
 
+Do Fed forecasts have a partisan bias? According to the evidence from our research: yes they do. Federal Reserve staff seem to have systematically overestimated inflation during Democratic presidencies and underestimated it during Republican ones for at least a 35 year period between 1970 and the end of 2006. This finding was robust across numerous model specifications where a variety of economic, bureaucratic and other political factors were controlled for. 
 
+Interestingly, in light of recent research on FOMC policy-making, we found no relationship between inflation forecast errors and elections either independent of presidential party identification or in interaction with it. This suggests that any relationship between monetary policy decisions and US presidential election timing is neither the result of partisan preferences that Fed staff members may have, nor beliefs that Fed staff may hold about the FOMC's presidential election preferences. 
 
+Given the consistency of the bias across presidents' term, it appears that Fed staff members' partisan inflation forecast bias may be the result of a partisan heuristic. Like heuristics generally, the partisan bias may help Fed staffers simplify very complex phenomenon, while also leading to systematic prediction errors. These errors may not have been noticed by staffers because, so far, few if any people either inside or outside of the Fed have been looking for them. Thus, we do not fully explain the phenomenon uncovered by Clark and Arel-Bundock that motivated this research. We find that inflation forecasts are consistently underestimated when Republicans hold the White House and are consistently overestimated during Democratic administrations. We cannot explain why they find a positive linear relationship between time in office and the interest rate during Democratic presidencies (where interest rates start low and rise throughout the term) and the negative linear relation when Republicans are in office (where interest rates start high and fall as elections near). We therefore cannot yet rule out their theory that the FOMC is not politically indifferent.
 
+What has been the monetary policy and electoral impact of Federal Reserve staff partisan bias? Our research so far is not able definitely tell. It does motivate future research and point in a clear direction. It may be that higher inflation forecasts during Democratic presidencies spur the FOMC to raise interest rates and dampen the money supply generally. The opposite could happen during Republican presidencies. If this is the case, the economy would be inadvertently stimulated during Republican presidencies and depressed during Democratic ones, with clear electoral implications. The economic voting literature has repeatedly found that poor economic performance results in less electoral support for incumbent presidents \citep[e.g.][]{Alvarez1998, Bloom1975, LewisBeck1988, Powell1993}. Thus, if these partisan biases in inflation forecasts are leading to more restrictive monetary policy during Democratic presidencies and more expansive monetary policy during Republican presidencies, the economic voting mechanism may run afoul of important normative concerns about democratic accountability. Determining the extent to which these biases are shaping monetary policy is therefore an important next step in understanding the linkage between Fed inflation forecasts and larger questions of democracy. This is a very important issue that needs further investigation.
 
+\clearpage
+\section*{Appendix}
 
-<<<<<<< HEAD
 \subsection*{Replication}
 
 This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely replicated from data, analysis source code, and markup files available on our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}. 
@@ -649,7 +707,7 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Thu Nov 22 14:40:16 2012
+% Fri Nov 23 08:32:37 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -684,7 +742,7 @@ Intercept & 1.93 & 1.74 & -1.44 & 1.92 & 5.36 \\
 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Thu Nov 22 14:40:16 2012
+% Fri Nov 23 08:32:38 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
@@ -757,10 +815,13 @@ Intercept & 2.19 & 3.43 & -4.51 & 2.18 & 8.98 \\
         {\scriptsize{Note: Errors of 0 indicates that inflation/the unemployment rate was perfectly predicted.}}
     \end{singlespace}
 \end{figure}
-=======
->>>>>>> cf49dd3b09bdd26ea1439a1eae855ca250287292
 
 
+%%%%%%% References %%%%%%%%%%%%
 
+\clearpage
 
+\bibliographystyle{apsr}
+\bibliography{GreenBook.bib}
 
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  22 NOV 2012 14:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  23 NOV 2012 08:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1005,6 +1005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 134.
 
@@ -1013,27 +1014,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--134
 : / / www . phil . frb . org / research-[]and-[]data / real-[]time-[]center /
  []
 
-[2] [3] [4] [5]
+[3] [4] [5]
 
 Package xcolor Warning: Incompatible color definition on input line 177.
 
-<figure/BaseInflation.pdf, id=180, 505.89pt x 289.08pt>
+<figure/BaseInflation.pdf, id=171, 505.89pt x 289.08pt>
 File: figure/BaseInflation.pdf Graphic file (type pdf)
 
 <use figure/BaseInflation.pdf>
 Package pdftex.def Info: figure/BaseInflation.pdf used on input line 177.
 (pdftex.def)             Requested size: 362.37569pt x 207.07439pt.
- [6 <./figure/BaseInflation.pdf>]
+ [6]
 
 Package xcolor Warning: Incompatible color definition on input line 208.
 
-<figure/PartisanError.pdf, id=204, 505.89pt x 289.08pt>
+<figure/PartisanError.pdf, id=194, 505.89pt x 289.08pt>
 File: figure/PartisanError.pdf Graphic file (type pdf)
 
 <use figure/PartisanError.pdf>
 Package pdftex.def Info: figure/PartisanError.pdf used on input line 208.
 (pdftex.def)             Requested size: 362.37569pt x 207.07439pt.
- [7] [8 <./figure/PartisanError.pdf>]
+ [7 <./figure/BaseInflation.pdf>] [8 <./figure/PartisanError.pdf>]
 Overfull \hbox (12.35863pt too wide) in paragraph at lines 320--321
  [] 
  []
@@ -1047,7 +1048,7 @@ ing mod-els with a propen-sity score distribution--
 
 Package xcolor Warning: Incompatible color definition on input line 412.
 
-<figure/CoefComparePlots.pdf, id=412, 505.89pt x 289.08pt>
+<figure/CoefComparePlots.pdf, id=398, 505.89pt x 289.08pt>
 File: figure/CoefComparePlots.pdf Graphic file (type pdf)
 
 <use figure/CoefComparePlots.pdf>
@@ -1057,13 +1058,14 @@ Package pdftex.def Info: figure/CoefComparePlots.pdf used on input line 412.
 
 Package xcolor Warning: Incompatible color definition on input line 433.
 
-<figure/ExpectValueParty.pdf, id=429, 433.62pt x 289.08pt>
+<figure/ExpectValueParty.pdf, id=415, 433.62pt x 289.08pt>
 File: figure/ExpectValueParty.pdf Graphic file (type pdf)
 
 <use figure/ExpectValueParty.pdf>
 Package pdftex.def Info: figure/ExpectValueParty.pdf used on input line 433.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
- [17 <./figure/CoefComparePlots.pdf>] [18 <./figure/ExpectValueParty.pdf>]
+ [17 <./figure/CoefComparePlots.pdf>] [18 <./figure/ExpectValueParty.pdf>] [19]
+
 
 Package xcolor Warning: Incompatible color definition on input line 471.
 
@@ -1073,7 +1075,7 @@ File: figure/InterPlot.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/InterPlot.pdf used on input line 471.
 (pdftex.def)             Requested size: 430.31812pt x 245.9pt.
 
-[19] [20 <./figure/InterPlot.pdf>] [21] [22] [23]
+[20 <./figure/InterPlot.pdf>] [21] [22] [23]
 Overfull \hbox (11.54176pt too wide) detected at line 546
 $\OML/cmm/m/it/5 :\OT1/cmr/m/n/5 8[]$ 
  []
@@ -3011,7 +3013,7 @@ Overfull \hbox (0.8114pt too wide) in paragraph at lines 651--700
 
 Package xcolor Warning: Incompatible color definition on input line 794.
 
-<figure/PresPropensity.pdf, id=552, 505.89pt x 289.08pt>
+<figure/PresPropensity.pdf, id=544, 505.89pt x 289.08pt>
 File: figure/PresPropensity.pdf Graphic file (type pdf)
 
 <use figure/PresPropensity.pdf>
@@ -3024,7 +3026,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package xcolor Warning: Incompatible color definition on input line 809.
 
-<figure/GraphPartisanErrorUnemploy.pdf, id=555, 505.89pt x 289.08pt>
+<figure/GraphPartisanErrorUnemploy.pdf, id=547, 505.89pt x 289.08pt>
 File: figure/GraphPartisanErrorUnemploy.pdf Graphic file (type pdf)
 
 <use figure/GraphPartisanErrorUnemploy.pdf>
@@ -3084,10 +3086,10 @@ ype1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt8.pfb>
-Output written on main_GreenBook.pdf (30 pages, 2057194 bytes).
+Output written on main_GreenBook.pdf (30 pages, 2057477 bytes).
 PDF statistics:
- 738 PDF objects out of 1000 (max. 8388607)
- 657 compressed objects within 7 object streams
+ 730 PDF objects out of 1000 (max. 8388607)
+ 649 compressed objects within 7 object streams
  153 named destinations out of 1000 (max. 500000)
  152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
