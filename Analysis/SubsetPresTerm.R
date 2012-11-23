@@ -7,7 +7,7 @@
 # library(Zelig)
 
 # Create funciton and run regressions
-PresTerms <- c("Nixon1", "Nixon2", "Ford1", "Carter1", "Regan1", "Regan2", "GHWBush1", "Clinton1", "Clinton2", "GWBush1", "GWBush2")
+PresTerms <- c("Nixon1", "Nixon2", "Ford1", "Carter1", "Reagan1", "Reagan2", "GHWBush1", "Clinton1", "Clinton2", "GWBush1", "GWBush2")
 
 SubSetPresTerms <- function(x){
   SubData <- subset(cpi.data2, presTerm != x)

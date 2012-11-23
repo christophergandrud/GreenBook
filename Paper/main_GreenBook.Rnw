@@ -559,7 +559,7 @@ print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Est
 <<NLPresDropTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
     # Run subset models
-    source_url("")
+    source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SubsetPresTerm.R")
     
     # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
     ModelNamesP <- c("Nixon 1", "Nixon 2", "Ford", "Carter", "Reagan 1", "Reagan 2", "GHW Bush", "Clinton 1", "Clinton 2", "GW Bush 1", "GW Bush 2")
