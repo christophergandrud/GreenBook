@@ -386,10 +386,6 @@ The introduction of the FRB/Global behavioral equation forecasting model does no
 
 As expected, relative changes to the discount rate are often found to be negatively associated with inflation forecast errors. Increasing the discount rate could result in lower inflation than expected and vice versa. Controlling for FOMC policy does not change the estimated relationship between presidential party ID and errors. It should be noted that the results are not robust across all of the models, especially when we use matched data. 
 
-\paragraph{Unemployment Rate}
-
-Higher rates of unemployment tend to lead to a negative inflation error. 
-
 <<CreateOrthog, message=FALSE, error=FALSE, warning=FALSE, echo=FALSE>>=
     # Create unempoyment error variable and graph
     PartisanErrorUnemployURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiagnosticTests/OrthogonalUnemploymentError.R"
