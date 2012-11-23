@@ -562,11 +562,15 @@ print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Est
     source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SubsetPresTerm.R")
     
     # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
-    ModelNamesP <- c("Nixon 1", "Nixon 2", "Ford", "Carter", "Reagan 1", "Reagan 2", "GHW Bush", "Clinton 1", "Clinton 2", "GW Bush 1", "GW Bush 2")
-    CoefNamesP <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Pres. Party ID", "FRB/GlobalModel", "Qrt. Election2") 
+    ModelNamesP <- c("Nixon 1", "Nixon 2", "Ford", "Carter", "Reagan 1", "Reagan 2", 
+                     "GHW Bush", "Clinton 1", "Clinton 2", "GW Bush 1", "GW Bush 2")
+    CoefNamesP <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", 
+                    "Output Gap", "Discount Rate Change", "Unemployment Rate", 
+                    "Qtr. to Election", "Pres. Party ID", "FRB/GlobalModel", "Qrt. Election2") 
 
     # Table of non-matched models with ls
-    apsrtable(SNixon1, SNixon2, SFord1, SCarter1, SReagan1, SReagan2, SGHWBush1, SClinton1, SClinton2, SGWBush1, SGWBush2,
+    apsrtable(SNixon1, SNixon2, SFord1, SCarter1, SReagan1, SReagan2, 
+              SGHWBush1, SClinton1, SClinton2, SGWBush1, SGWBush2,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
