@@ -16,7 +16,7 @@ SubSetPresTerms <- function(x){
   SData <- paste("S", x, sep = "")
   assign(SData, zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP +
                         PotentialGDP + DiscountRate2qChange + UNRATE + time_to_election +
-                        pres_party, UNRATE, model = "ls", data = SubData, cite = FALSE), 
+                        pres_party + GlobalModel, model = "ls", data = SubData, cite = FALSE), 
          env=.GlobalEnv)
 }
 
