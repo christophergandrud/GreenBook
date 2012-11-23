@@ -5,6 +5,12 @@
 ##############
 
 # library(Zelig)
+library(stringr)
+
+#### Run regressions dropping each presidential term ####
+# Remove spaces in president term names
+cpi.data2$presTerm<- str_replace_all(cpi.data2$presTerm, " ", "")
+cpi.data2$elect2 <- factor(cpi.data2$presTerm)
 
 # Create funciton and run regressions
 PresTerms <- c("Nixon1", "Nixon2", "Ford1", "Carter1", "Reagan1", "Reagan2", 

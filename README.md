@@ -13,7 +13,8 @@ The paper can be entirely reproduced using the `knitr` package in **R** (we used
 To reproduce the paper first install the necessary R packages:
 
 ```{r}
-    install.packages("knitr", 
+    install.packages("apsrtable",
+                    "knitr", 
                     "ggplot2", 
                     "gridExtra",
                     "devtools", 
@@ -23,8 +24,8 @@ To reproduce the paper first install the necessary R packages:
                     "reshape2", 
                     "RCurl",
                     "stats", 
+                    "stringr",
                     "xtable", 
-                    "apsrtable",
                     "Zelig"
                     )
 ```

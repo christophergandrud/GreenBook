@@ -128,9 +128,9 @@ In this section we briefly describe what Green Book inflation forecasts and fore
 
 \subsection{Forecasting \& Forecasting Errors}
 
-Prior to every FOMC meeting Federal Reserve staff create a document called the ``Current Economic and Financial Conditions" or ``Green Book" that contains information on recent behavior and forecasts of various macroeconomic aggregates.\footnote{Green Book data can be found at {\url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}}. Accessed October 2012.} Federal Reserve staff make forecasts of various elements of the US and global economies so that the FOMC can make policies appropriate to fulfill the Fed's dual mandate of maintaining maximum employment and price stability. Green Book forecasts are currently available to the public for each quarter from the fourth quarter of 1965 through the end of 2006.\footnote{There is a five year lagged release schedule. Also, some forecasts are not available for the entire period.}  We focus on GNP/GDP price index forecasts in our study.\footnote{Note: GNP was used through 1991 (inclusive) and GDP was used from 1992 onward. Furthermore, the implicit deflator was used before the second quarter of 1996 and chain-weighted price index was used from the second quarter of 1996 on-wards.} We choose this indicator of Federal Reserve forecast accuracy both because there is a strong theoretical assumption that central bankers are more inflation averse than are politicians \citep{Cukierman1992,Mukherjee2008,Tillmann2008} and because this is the dominant measure of forecast errors used in the economic literature \citep[c.f.][]{Romer2000}. The FOMC uses these forecasts to determine the appropriate monetary policy to pursue. Higher inflationary expectations increase the likelihood of the FOMC tightening policy in order to slow inflation and an overheating economy; low inflationary expectations increase the likelihood of a loosening of monetary policy to bolster growth and employment, \emph{ceteris paribus}.
+Prior to every FOMC meeting Federal Reserve staff create a document called the ``Current Economic and Financial Conditions" or ``Green Book" that contains information on recent behavior and forecasts of various macroeconomic aggregates.\footnote{Green Book data can be found at {\url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}}. Accessed October 2012.} Federal Reserve staff make forecasts of various elements of the US and global economies so that the FOMC can make policies appropriate to fulfill the Fed's dual mandate of maintaining maximum employment and price stability. Green Book forecasts are currently available to the public for each quarter from the fourth quarter of 1965 through the end of 2006.\footnote{There is a five year lagged release schedule. Also, some forecasts are not available for the entire period.}  We focus on GNP/GDP price index forecasts in our study.\footnote{Note: GNP was used through 1991 (inclusive) and GDP was used from 1992 onward. Furthermore, the implicit deflator was used before the second quarter of 1996 and chain-weighted price index was used from the second quarter of 1996 on-wards.} We choose this indicator of Federal Reserve forecast accuracy both because there is a strong theoretical assumption that central bankers are more inflation averse than are politicians \citep{Cukierman1992,Mukherjee2008,Tillmann2008} and because this is the dominant measure of forecast errors used in the economic literature \citep[c.f.][]{Romer2000}. The FOMC uses these forecasts to determine the appropriate monetary policy to pursue. Higher inflationary expectations increase the likelihood of the FOMC tightening policy in order to slow inflation and an overheating economy; low inflationary expectations increase the likelihood of a loosening of monetary policy to bolster growth and employment, all else equal.
 
-It is important to note that finalized forecasts of macroeconomic aggregates are a combination of both econometric models and the professional opinions of forecasters about likely changes in the economy's trajectory not necessarily picked up in these models \citep{Karamouzis1989,Reifschneider1997}. The forecasts contained in the Green Book are the ``consensus" forecasts combining {\bf{both}} econometric models and judgemental forecasts assuming current monetary policies remain unchanged. These Green Book forecasts thus do not provide us with any information on what the econometric forecasts were prior to being integrated into the ``consensus" forecast presented to the FOMC. Below we briefly explain how the econometric aspects of the consensus forecasts have been modeled.
+It is important to note that finalized forecasts of macroeconomic aggregates are a combination of both econometric models and the professional opinions of forecasters about likely changes in the economy's trajectory not necessarily picked up in these models \citep{Karamouzis1989,Reifschneider1997}. The forecasts contained in the Green Book are the ``consensus" forecasts combining {\bf{both}} econometric models and judgemental forecasts assuming current monetary policies remain unchanged. Green Book forecasts thus do not provide us with any information on what the econometric forecasts were prior to being integrated into the ``consensus" forecast presented to the FOMC. Below we briefly explain how the econometric aspects of the consensus forecasts have been modeled.
 
 \subsection{Our Current Understanding of Fed Inflation Forecasting}
 
@@ -700,7 +700,7 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Nov 23 11:01:06 2012
+% Fri Nov 23 11:40:06 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -735,7 +735,7 @@ Intercept & 1.93 & 1.74 & -1.44 & 1.92 & 5.36 \\
 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Nov 23 11:01:07 2012
+% Fri Nov 23 11:40:07 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
@@ -764,6 +764,54 @@ Intercept & 2.19 & 3.43 & -4.51 & 2.18 & 8.98 \\
 
 
 
+
+%%%%%%% Table of non-matched data with OLS parametric model Dropping presidential terms %%%%%%%%
+
+\begin{table}[ht]
+    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error, Dropping Presidential Terms}
+    \label{OutputNLPresDrop}
+    \vspace{0.25cm}
+    \begin{center}
+    {\footnotesize
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ Nixon 1 } & \multicolumn{ 1 }{ c }{ Nixon 2 } & \multicolumn{ 1 }{ c }{ Ford } & \multicolumn{ 1 }{ c }{ Carter } & \multicolumn{ 1 }{ c }{ Reagan 1 } & \multicolumn{ 1 }{ c }{ Reagan 2 } & \multicolumn{ 1 }{ c }{ GHW Bush } & \multicolumn{ 1 }{ c }{ Clinton 1 } & \multicolumn{ 1 }{ c }{ Clinton 2 } & \multicolumn{ 1 }{ c }{ GW Bush 1 } & \multicolumn{ 1 }{ c }{ GW Bush 2 } \\ \hline
+ %                    & Nixon 1         & Nixon 2         & Ford            & Carter          & Reagan 1        & Reagan 2        & GHW Bush        & Clinton 1       & Clinton 2       & GW Bush 1       & GW Bush 2      \\ 
+Intercept            & 0.4             & 2.4             & 1.9             & 3.7 ^\dagger   & 2.4             & 2.0             & 2.4             & 2.8             & 3.1 ^\dagger   & 2.4             & 2.4            \\ 
+                     & (2.4)           & (2.0)           & (1.9)           & (2.2)           & (2.0)           & (2.0)           & (1.9)           & (2.1)           & (1.8)           & (1.9)           & (1.9)          \\ 
+Recession            & -0.0            & 0.0             & 0.0             & -0.0            & 0.1             & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Debt/GDP             & -0.0 ^*         & -0.0 ^\dagger  & -0.0 ^*         & -0.0 ^*         & -0.0 ^\dagger  & -0.0            & -0.0 ^\dagger  & 0.0             & -0.0            & -0.0 ^\dagger  & -0.0 ^\dagger \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Expenditure/GDP      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Output Gap           & -0.0            & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^*         & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{***}     & -0.1 ^{**}      & -0.1 ^{**}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Discount Rate Change & -0.3 ^{**}      & -0.3 ^{***}     & -0.3 ^{***}     & -0.3 ^{***}     & -0.3 ^{***}     & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^*         & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}     \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Unemployment Rate    & -0.1 ^\dagger  & -0.1            & -0.1 ^*         & -0.0            & -0.1            & -0.0            & -0.1            & -0.0            & -0.0            & -0.1            & -0.1           \\ 
+                     & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election     & 0.0             & -0.0            & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & -0.0            & 0.0             & 0.0            \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Pres. Party ID       & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+FRB/GlobalModel      & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & -0.0            & 0.0             & -0.2 ^*         & -0.1            & 0.0             & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           \\
+ $N$                  & 119             & 125             & 122             & 117             & 117             & 117             & 131             & 117             & 117             & 131             & 131            \\ 
+$R^2$                & 0.5             & 0.5             & 0.5             & 0.6             & 0.6             & 0.5             & 0.5             & 0.5             & 0.6             & 0.5             & 0.5            \\ 
+adj. $R^2$           & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5             & 0.5            \\ 
+Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             \\ \hline
+ \multicolumn{12}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{12}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
+
+    }
+    \end{center}
+\end{table}
 
 
 %%%%%%% Matching Diagnostic Plots %%%%%%

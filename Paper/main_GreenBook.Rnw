@@ -555,7 +555,7 @@ print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Est
     \label{OutputNLPresDrop}
     \vspace{0.25cm}
     \begin{center}
-    {\footnotesize
+    {\tiny
 <<NLPresDropTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
     # Run subset models
