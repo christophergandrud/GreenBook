@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 23 November 2012
+% 29 November 2012
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -347,7 +347,7 @@ Balance is usually achieved in matching through propensity scores: the probabili
 
 \subsection{Parametric Models}
 
-Once we created our matched data sets we used two types of parametric models to examine the effects of our treatment variables on the continuous inflation forecast error variable.\footnote{Parametric models are from the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} The first was ordinary least squares linear regression (i.e. OLS).\footnote{In {\tt{Zelig}} this is the {\tt{ls}} model.} The other type was Bayesian normal linear regression\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.} which is particularly useful for our limited sample as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}. Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.  See also \cite{Imai2008} for a discussion of how to combine non-parametric matching and parametric analysis in one research process. Because we used  matching methods, not only do we better isolate the treatments' effects from those of the background variables, but we also reduce our estimated causal effects' dependence on the type of model we choose \cite[200--201]{Ho2007}.
+Once we created our matched data sets we used two types of parametric models to examine the effects of our treatment variables on the continuous inflation forecast error variable.\footnote{Parametric models are from the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} The first was normal linear regression using maximum likelihood estimation of variance (i.e. Normal Linear).\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model.} The other type was Bayesian normal linear regression\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.} which is particularly useful for our limited sample as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}. Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.  See also \cite{Imai2008} for a discussion of how to combine non-parametric matching and parametric analysis in one research process. Because we used  matching methods, not only do we better isolate the treatments' effects from those of the background variables, but we also reduce our estimated causal effects' dependence on the type of model we choose \cite[200--201]{Ho2007}.
 
 The generic parametric model we used is given by
 %
@@ -383,7 +383,7 @@ Finally, we include a variable for the sitting {\bf{Federal Reserve Board Chair}
 
 \section{Results}
 
-In this section we graphically present results from a number of parametric model specifications and discuss our findings. Coefficient estimate tables can be found in the Appendix for most of the parametric model specifications (see tables \ref{OutputNL} and \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using OLS and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant' at the standard 0.05 significance level in models using unmatched data compared to estimates from the matched data sets. 
+In this section we graphically present results from a number of parametric model specifications and discuss our findings. Coefficient estimate tables can be found in the Appendix for most of the parametric model specifications (see tables \ref{OutputNL} and \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using normal linear and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually more variables were `statistically significant' at the standard 0.05 significance level in models using unmatched data compared to estimates from the matched data sets. 
 
 Before jumping into the detailed results, we discuss some of our alterations to the data set we made largely in response to diagnostic test results. 
 
@@ -434,7 +434,7 @@ Our main finding is that Democratic party identification had a strong positive a
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an OLS regression with non-matched data. Variables included are generally the same as those in Model A5 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
+        {\scriptsize{Simulated from an normal linear regression with non-matched data. Variables included are generally the same as those in Model A5 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. \\ The solid line connects the two groups' means.}}
     \end{singlespace}
 \end{figure}
 
@@ -471,7 +471,7 @@ Interestingly, staff also do not seem to compensate for FOMC partisan biases in 
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from OLS regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+        {\scriptsize{Simulated from normal linear regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
     \end{singlespace}
 \end{figure}
 
@@ -517,10 +517,10 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
 \clearpage
 \section*{Appendix}
 
-%%%%%%% Table of non-matched data with OLS parametric model %%%%%%%%
+%%%%%%% Table of non-matched data with normal linear parametric model %%%%%%%%
 
 \begin{table}[ht]
-    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
+    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
     \label{OutputNL}
     \vspace{0.25cm}
     \begin{center}
@@ -593,10 +593,10 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
     \end{center}
 \end{table}
 
-%%%%%%% Table of ElectionPeriod matched data with OLS parametric model %%%%%%%%
+%%%%%%% Table of ElectionPeriod matched data with Normal Linear parametric model %%%%%%%%
 
 %\begin{table}[ht]
-%    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
+%    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
 %    \label{OutputEL}
 %    \vspace{0.25cm}
 %    \begin{center}
@@ -627,10 +627,10 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 %    \end{center}
 %\end{table}
 
-%%%%%%% Table of pres_party matched data with OLS parametric model %%%%%%%%
+%%%%%%% Table of pres_party matched data with Normal Linear Regression parametric model %%%%%%%%
 
 \begin{table}[ht]
-    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
+    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
     \label{OutputPL}
     \vspace{0.25cm}
     \begin{center}
@@ -696,7 +696,7 @@ Resid. sd            & 0.2             & 0.2             & 0.2             & 0.2
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Nov 23 18:18:19 2012
+% Thu Nov 29 13:47:04 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -731,7 +731,7 @@ Intercept & 1.93 & 1.74 & -1.44 & 1.92 & 5.36 \\
 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Nov 23 18:18:20 2012
+% Thu Nov 29 13:47:04 2012
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
@@ -761,10 +761,10 @@ Intercept & 2.19 & 3.43 & -4.51 & 2.18 & 8.98 \\
 
 
 
-%%%%%%% Table of non-matched data with OLS parametric model Dropping presidential terms %%%%%%%%
+%%%%%%% Table of non-matched data with Normal Linear Regression parametric model Dropping presidential terms %%%%%%%%
 
 \begin{table}[ht]
-    \caption{OLS Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error, Dropping Presidential Terms}
+    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error, Dropping Presidential Terms}
     \label{OutputNLPresDrop}
     \vspace{0.25cm}
     \begin{center}
