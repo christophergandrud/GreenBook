@@ -1,7 +1,7 @@
 ####################
 # Greenbook MatchIt Analyses Coef Plots Compare
 # Christopher Gandrud
-# 3 August 2012
+# 29 November 2012
 ####################
 
 #### Figures for ls Results Catapilar Plot ####
@@ -43,7 +43,7 @@ PL5.molten <- merge(PL5.lower.molten, PL5.upper.molten)
 PL5.molten$match <- "Matched"
 
 estimates.ls <- rbind(NL5.molten, PL5.molten)
-estimates.ls$method <- "OLS"
+estimates.ls$method <- "Normal Linear"
 
 
 
