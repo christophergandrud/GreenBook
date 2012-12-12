@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 29 November 2012
+% 12 December 2012
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -27,6 +27,12 @@
 \usepackage{todonotes}
 \usepackage[utf8]{inputenc} 
 
+% Set knitr global options
+<<ParentGlobalOpts, echo=FALSE>>=
+    opts_chunk$set(concordance=TRUE)
+    opts_chunk$set(fig.align='center')
+@
+
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Does Presidential Partisanship Affect Fed Inflation Forecasts?}
 
@@ -37,8 +43,6 @@
                 {\emph{Hertie School of Governance \& University of Michigan}}\footnote{\href{mailto:cgrafstr@umich.edu}{cgrafstr@umich.edu}}}
 
 \begin{document}
-
-\SweaveOpts{concordance=TRUE}
 
 \maketitle
 
