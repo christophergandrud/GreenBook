@@ -10,7 +10,7 @@ library(Zelig)
 # library(plyr)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
-## source_url("http://bit.ly/NXdCpk") 
+## devtools::source_url("http://bit.ly/NXdCpk") 
 
 # Subset for complete (nonmissing) values
 # matchit requires data sets to have no missing values
@@ -32,14 +32,25 @@ cpi.data2$elect2 <- (cpi.data2$time_to_election)^2
 #### Model including absolute error ####
 cpi.data2$error.deflator.q2 <-  cpi.data2$GB_CPI_QTR2 - cpi.data2$deflator
 
-A1 <-zelig(error.prop.deflator.q2 ~ pres_party + 
+## Proportion error Response
+A1.1 <-zelig(error.prop.deflator.q2 ~ pres_party + 
                                     time_to_election + recession + senate_dem_rep +
                                     house_dem_rep + DebtGDP + ExpenditureGDP + 
                                     PotentialGDP + DiscountRate2qChange + GlobalModel +
-                                    UNRATE + error.deflator.q2,
+                                    UNRATE,
                                     model = "ls", data = cpi.data2, cite = FALSE)
 
-summary(A1) # No change in the main results.
+summary(A1.1) # No change in the main results.
+
+## Absolute error Response
+A1.2 <-zelig(error.deflator.q2 ~ pres_party + 
+               time_to_election + recession + senate_dem_rep +
+               house_dem_rep + DebtGDP + ExpenditureGDP + 
+               PotentialGDP + DiscountRate2qChange + GlobalModel +
+               UNRATE,
+             model = "ls", data = cpi.data2, cite = FALSE)
+
+summary(A1.2) # No change in the main results.
 
 #### Election * Incumbent ReElection Bid ####
 cpi.data2$EligibleReElect[cpi.data2$term == 1] <- 1
