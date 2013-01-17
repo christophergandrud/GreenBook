@@ -208,11 +208,11 @@ Tversky, Amos \harvardand\ Daniel Kahneman. 1974.
 \newblock ``Judgment under Uncertainty: Heuristics and Biases.'' {\em Science}
   185(4157):1124--1131.
 
-\harvarditem{Xie}{2012}{knitr2012}
-Xie, Yihui. 2012.
+\harvarditem{Xie}{2013}{knitr2013}
+Xie, Yihui. 2013.
 \newblock {\em knitr: A general-purpose package for dynamic report generation
   in R}.
-\newblock R package version 0.8.
+\newblock R package version 1.0.
 \newline\harvardurl{\url{http://CRAN.R-project.org/package=knitr}}
 
 \end{thebibliography}

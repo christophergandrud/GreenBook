@@ -1,7 +1,5 @@
 gridExtra
 grid
-reshape
-plyr
 MCMCpack
 coda
 lattice
@@ -13,6 +11,8 @@ zoo
 boot
 MatchIt
 MASS
+reshape
+plyr
 plotrix
 ggplot2
 reshape2

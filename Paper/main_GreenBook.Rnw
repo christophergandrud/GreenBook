@@ -267,7 +267,7 @@ We remove quarters from the sample where forecasters would not have known who th
 
 Almost all other parametric model specifications\footnote{\ref{OutputPL} does show interaction estimates from matched data sets for comparison with the non-matched results in Table \ref{OutputNL}.} are run with both the matched and unmatched data sets. In all of the Bayesian regressions we use the {\tt{Zelig}} default 1,000 MCMC burn-in iterations and 10,000 iterations after burn-in. We use the Heidelberger-Welch diagnostic to examine whether or not the Markov Chains converged to their stationary distributions.
 
-<<MainAnalysis, warning=FALSE, echo=FALSE, message=FALSE, results='hide'>>=
+<<MainAnalysis, include=FALSE, cache=TRUE>>=
     
     # Run main analysis source code
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
@@ -283,8 +283,8 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
     \begin{center}
 
 <<CoefComparePlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
-    # source("/git_repositories/GreenBook/Analysis/BasicAnalysisCoefPlots.R")
-
+    # Load model objects created by MainAnalysis2.R
+    load("ModelObjects.RData")
     # Create plots
      CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R"
     source_url(CoefPlotsURL)
@@ -307,7 +307,7 @@ Our main finding is that Democratic party identification had a strong positive a
     \begin{center}
 
 %%% Code is only run when there are changes, since it is very computationally intensive.
-<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.8\\linewidth'>>=
+<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.81\\linewidth'>>=
   source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/QuarterCompareNonMatched.R")
 @
 
@@ -347,7 +347,7 @@ Interestingly, staff also do not seem to compensate for FOMC partisan biases in 
     \label{InterPlot}
     \begin{center}
 
-<<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=7, fig.height=4, out.width='0.95\\linewidth'>>=
+<<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=7, fig.height=4, out.width='0.94\\linewidth'>>=
     # Load required packages
     library(gridExtra)
 
