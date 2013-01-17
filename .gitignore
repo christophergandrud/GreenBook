@@ -4,8 +4,8 @@
 *.aux
 *.bbl
 *.blg	
-figure/*
-cache/*
+Paper/figure/*
+Paper/cache/*
 .DS_Store
 *.gz
 *.log

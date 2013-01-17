@@ -1,7 +1,7 @@
 ##############
 # Green Book Subset Data By Presidential Term
 # Christopher Gandrud
-# 23 November 2012
+# 17 January 2013
 ##############
 
 # library(Zelig)
@@ -19,11 +19,11 @@ PresTerms <- c("Nixon1", "Nixon2", "Ford1", "Carter1", "Reagan1", "Reagan2",
 
 SubSetPresTerms <- function(x){
   SubData <- subset(cpi.data2, presTerm != x)
-  SData <- paste("S", x, sep = "")
-  assign(SData, zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP +
+  SData <- paste0("S", x)
+  assign(SData, Zelig::zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP +
                         PotentialGDP + DiscountRate2qChange + UNRATE + time_to_election +
                         pres_party + GlobalModel, model = "ls", data = SubData, cite = FALSE), 
-         env=.GlobalEnv)
+         envir = .GlobalEnv)
 }
 
 lapply(PresTerms, SubSetPresTerms)
