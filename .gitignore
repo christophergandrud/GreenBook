@@ -1,0 +1,6 @@
+# Ignore files from Git #
+#########################
+
+.DS_Store
+.swp
+.Rhistory
