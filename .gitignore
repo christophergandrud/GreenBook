@@ -1,6 +1,10 @@
 # Ignore files from Git #
 #########################
 
+*.aux
+cache/*
 .DS_Store
+*.log
 .swp
 .Rhistory
+*.RData
