@@ -5,6 +5,7 @@
 cache/*
 .DS_Store
 *.log
+*.out
 .swp
 .Rhistory
 *.RData
