@@ -159,7 +159,7 @@ NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election 
 PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party, cite = FALSE)
 
 #### Save variables model objects #####
-save(cpi.Mdf.party, cpi.data2, NL1, NL2, NL3, NL4,
+save(cpi.Mdf.party, cpi.matched.party, cpi.data2, NL1, NL2, NL3, NL4,
      NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
      PL1, PL2, PL3, PL4,	PL5, PL6, PL7, PL8, PL9, 
      PL10, PL11, PL12, NB1, PB1, file = "ModelObjects.RData")
