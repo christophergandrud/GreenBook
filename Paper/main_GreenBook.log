@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  17 JAN 2013 15:40
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.12.2)  17 JAN 2013 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -913,7 +913,7 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-No file main_GreenBook.aux.
+(./main_GreenBook.aux)
 \openout1 = `main_GreenBook.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -930,6 +930,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 98.
+
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
@@ -979,6 +980,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 98.
 LaTeX Info: Redefining \pageref on input line 98.
 LaTeX Info: Redefining \nameref on input line 98.
+
+(./main_GreenBook.out) (./main_GreenBook.out)
 \@outlinefile=\write4
 \openout4 = `main_GreenBook.out'.
 
@@ -995,30 +998,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 104.
 
-
-Package natbib Warning: Citation `knitr2013' on page 1 undefined on input line 
-105.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 104--106
 
  []
 
-
-Package natbib Warning: Citation `Clark2012' on page 1 undefined on input line 
-107.
-
-
-Package natbib Warning: Citation `Clark2012' on page 1 undefined on input line 
-117.
-
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package natbib Warning: Citation `Clark2012' on page 2 undefined on input line 
-119.
-
 [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 133.
@@ -1028,287 +1014,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--133
 : / / www . phil . frb . org / research-[]and-[]data / real-[]time-[]center /
  []
 
-
-Package natbib Warning: Citation `Cukierman1992' on page 3 undefined on input l
-ine 133.
-
-
-Package natbib Warning: Citation `Mukherjee2008' on page 3 undefined on input l
-ine 133.
-
-
-Package natbib Warning: Citation `Tillmann2008' on page 3 undefined on input li
-ne 133.
-
-
-Package natbib Warning: Citation `Romer2000' on page 3 undefined on input line 
-133.
-
-
-Package natbib Warning: Citation `Karamouzis1989' on page 3 undefined on input 
-line 135.
-
-
-Package natbib Warning: Citation `Reifschneider1997' on page 3 undefined on inp
-ut line 135.
-
-
-Package natbib Warning: Citation `Brayton1997' on page 3 undefined on input lin
-e 139.
-
-
-Package natbib Warning: Citation `Karamouzis1989' on page 3 undefined on input 
-line 139.
-
-
-Package natbib Warning: Citation `Reifschneider1997' on page 3 undefined on inp
-ut line 139.
-
-
-Package natbib Warning: Citation `Taylor1997' on page 3 undefined on input line
- 139.
-
-[3] [4]
-
-LaTeX Warning: Reference `absolute' on page 5 undefined on input line 161.
-
-[5]
-
-Package natbib Warning: Citation `Romer2000' on page 6 undefined on input line 
-163.
-
-
-Package natbib Warning: Citation `Capistran2006' on page 6 undefined on input l
-ine 163.
-
-
-LaTeX Warning: Reference `absolute' on page 6 undefined on input line 163.
-
-
-Package natbib Warning: Citation `Gamber2009' on page 6 undefined on input line
- 163.
-
-
-LaTeX Warning: Reference `absolute' on page 6 undefined on input line 165.
-
+[3] [4] [5]
 
 Package xcolor Warning: Incompatible color definition on input line 174.
 
-<figure/BaseInflation.pdf, id=82, 505.89pt x 289.08pt>
+<figure/BaseInflation.pdf, id=179, 505.89pt x 289.08pt>
 File: figure/BaseInflation.pdf Graphic file (type pdf)
 
 <use figure/BaseInflation.pdf>
 Package pdftex.def Info: figure/BaseInflation.pdf used on input line 176.
 (pdftex.def)             Requested size: 362.37569pt x 207.07439pt.
-
-
-Package natbib Warning: Citation `Bruck2006' on page 6 undefined on input line 
-199.
-
-
-LaTeX Warning: Reference `errors_over_time' on page 6 undefined on input line 2
-01.
-
-
-Package natbib Warning: Citation `Bartels1985' on page 6 undefined on input lin
-e 201.
-
-
-LaTeX Warning: Reference `absolute' on page 6 undefined on input line 201.
-
-[6]
+ [6]
 
 Package xcolor Warning: Incompatible color definition on input line 212.
 
-<figure/PartisanError.pdf, id=96, 505.89pt x 289.08pt>
+<figure/PartisanError.pdf, id=202, 505.89pt x 289.08pt>
 File: figure/PartisanError.pdf Graphic file (type pdf)
 
 <use figure/PartisanError.pdf>
 Package pdftex.def Info: figure/PartisanError.pdf used on input line 214.
 (pdftex.def)             Requested size: 362.37569pt x 207.07439pt.
- [7 <./figure/BaseInflation.pdf>]
-
-Package natbib Warning: Citation `Clark2012' on page 8 undefined on input line 
-247.
-
-
-Package natbib Warning: Citation `Hakes1988' on page 8 undefined on input line 
-247.
-
-
-Package natbib Warning: Citation `Sieg1997' on page 8 undefined on input line 2
-47.
-
-
-Package natbib Warning: Citation `Tootell1996' on page 8 undefined on input lin
-e 247.
-
-[8 <./figure/PartisanError.pdf>]
-
-Package natbib Warning: Citation `Alesina1991' on page 9 undefined on input lin
-e 249.
-
-
-Package natbib Warning: Citation `Hibbs1994' on page 9 undefined on input line 
-249.
-
-
-LaTeX Warning: Reference `ExpectGraphs' on page 9 undefined on input line 251.
-
-
+ [7 <./figure/BaseInflation.pdf>] [8 <./figure/PartisanError.pdf>]
 Overfull \hbox (12.35863pt too wide) in paragraph at lines 331--332
  [] 
  []
 
-
-Package natbib Warning: Citation `Beck1987' on page 9 undefined on input line 3
-38.
-
-
-Package natbib Warning: Citation `Grier1987' on page 9 undefined on input line 
-338.
-
-[9]
-
-Package natbib Warning: Citation `Clark2012' on page 10 undefined on input line
- 340.
-
-[10]
-
-Package natbib Warning: Citation `kahneman1973' on page 11 undefined on input l
-ine 342.
-
-
-Package natbib Warning: Citation `tverskykahneman1974' on page 11 undefined on 
-input line 342.
-
-
-Package natbib Warning: Citation `kahneman2003' on page 11 undefined on input l
-ine 342.
-
-
-Package natbib Warning: Citation `tverskykahneman1974' on page 11 undefined on 
-input line 342.
-
-
-Package natbib Warning: Citation `Bartels2008' on page 11 undefined on input li
-ne 342.
-
-
-Package natbib Warning: Citation `Ho2007' on page 11 undefined on input line 35
-1.
-
-
-Package natbib Warning: Citation `Cochran1973' on page 11 undefined on input li
-ne 355.
-
-
-Package natbib Warning: Citation `Diamond2012' on page 11 undefined on input li
-ne 355.
-
-[11]
-
-Package natbib Warning: Citation `Ho2007' on page 12 undefined on input line 35
-7.
-
-
-Package natbib Warning: Citation `matchit2011' on page 12 undefined on input li
-ne 357.
-
-
-Package natbib Warning: Citation `matchit2011' on page 12 undefined on input li
-ne 359.
-
-
-Package natbib Warning: Citation `Diamond2012' on page 12 undefined on input li
-ne 359.
-
-
-Package natbib Warning: Citation `matchit2011' on page 12 undefined on input li
-ne 359.
-
-
-Package natbib Warning: Citation `Drake1993' on page 12 undefined on input line
- 361.
-
-
-Package natbib Warning: Citation `Diamond2012' on page 12 undefined on input li
-ne 361.
-
-
-Package natbib Warning: Citation `Diamond2012' on page 12 undefined on input li
-ne 361.
-
-[12]
-
-Package natbib Warning: Citation `Zelig2012' on page 13 undefined on input line
- 366.
-
-
-Package natbib Warning: Citation `Zelig2012' on page 13 undefined on input line
- 366.
-
-
-Package natbib Warning: Citation `Goodrich2007' on page 13 undefined on input l
-ine 366.
-
-
-Package natbib Warning: Citation `Imai2008' on page 13 undefined on input line 
-366.
-
-
-Package natbib Warning: Citation `Ho2007' on page 13 undefined on input line 36
-6.
-
-
-LaTeX Warning: Reference `ForecastAcc' on page 13 undefined on input line 378.
-
-[13]
-
-Package natbib Warning: Citation `Krause2000' on page 14 undefined on input lin
-e 388.
-
-
-Package natbib Warning: Citation `Krause2000' on page 14 undefined on input lin
-e 388.
-
-[14]
-
-LaTeX Warning: Reference `OutputNL' on page 15 undefined on input line 402.
-
-
-LaTeX Warning: Reference `OutputPL' on page 15 undefined on input line 402.
-
+[9] [10] [11] [12] [13] [14]
 
 LaTeX Warning: Reference `OutputNB' on page 15 undefined on input line 402.
 
 
 LaTeX Warning: Reference `OutputPB' on page 15 undefined on input line 402.
 
-
-LaTeX Warning: Reference `CoefComparePlots' on page 15 undefined on input line 
-402.
-
 [15]
-
-Package natbib Warning: Citation `Ho2007' on page 16 undefined on input line 40
-8.
-
-
-LaTeX Warning: Reference `PresPropensityScores' on page 16 undefined on input l
-ine 408.
-
-
 Overfull \hbox (0.19849pt too wide) in paragraph at lines 408--409
 []\OT1/cmr/m/n/10 We pri-mar-ily di-ag-nose the pres-i-den-tial party ID match-
 ing mod-els with a propen-sity score distribution--
  []
-
-
-LaTeX Warning: Reference `OutputPL' on page 16 undefined on input line 412.
-
-
-LaTeX Warning: Reference `OutputNL' on page 16 undefined on input line 412.
 
 
 Package xcolor Warning: Incompatible color definition on input line 423.
@@ -1340,58 +1082,17 @@ l.426 ... invalid for atomic vectors}}\end{kframe}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Warning: Reference `CoefComparePlots' on page 16 undefined on input line 
-437.
-
-
-LaTeX Warning: Reference `InterPlot' on page 16 undefined on input line 437.
-
 [16]
 
 Package xcolor Warning: Incompatible color definition on input line 447.
 
-<figure/ExpectValueParty.pdf, id=217, 433.62pt x 289.08pt>
+<figure/ExpectValueParty.pdf, id=416, 433.62pt x 289.08pt>
 File: figure/ExpectValueParty.pdf Graphic file (type pdf)
 
 <use figure/ExpectValueParty.pdf>
 Package pdftex.def Info: figure/ExpectValueParty.pdf used on input line 449.
 (pdftex.def)             Requested size: 366.90288pt x 244.61198pt.
-
-
-LaTeX Warning: Reference `OutputNL' on page 17 undefined on input line 463.
-
-
-LaTeX Warning: Reference `ExpectValueParty' on page 17 undefined on input line 
-467.
-
-
-LaTeX Warning: Reference `ExpectValueParty' on page 17 undefined on input line 
-467.
-
-
-LaTeX Warning: Reference `OutputNL' on page 17 undefined on input line 469.
-
-
-LaTeX Warning: Reference `OutputPL' on page 17 undefined on input line 469.
-
-
-LaTeX Warning: Reference `OutputNLPresDrop' on page 17 undefined on input line 
-471.
-
-
-Package natbib Warning: Citation `Clark2012' on page 17 undefined on input line
- 477.
-
-[17]
-
-LaTeX Warning: Reference `ExpectGraphs' on page 18 undefined on input line 481.
-
-
-
-LaTeX Warning: Reference `InterPlot' on page 18 undefined on input line 481.
-
-[18 <./figure/ExpectValueParty.pdf>]
+ [17] [18 <./figure/ExpectValueParty.pdf>]
 
 Package xcolor Warning: Incompatible color definition on input line 494.
 
@@ -1419,46 +1120,7 @@ l.503 ...ct 'InterCombine' not found}}\end{kframe}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Warning: Reference `OutputNL' on page 19 undefined on input line 509.
-
-
-LaTeX Warning: Reference `OutputPL' on page 19 undefined on input line 509.
-
-
-LaTeX Warning: Reference `InterPlot' on page 19 undefined on input line 515.
-
-[19]
-
-LaTeX Warning: Reference `InterPlot' on page 20 undefined on input line 517.
-
-[20]
-
-LaTeX Warning: Reference `Unemployment' on page 21 undefined on input line 540.
-
-
-
-LaTeX Warning: Reference `errors_over_time' on page 21 undefined on input line 
-540.
-
-[21]
-
-Package natbib Warning: Citation `Alvarez1998' on page 22 undefined on input li
-ne 550.
-
-
-Package natbib Warning: Citation `Bloom1975' on page 22 undefined on input line
- 550.
-
-
-Package natbib Warning: Citation `LewisBeck1988' on page 22 undefined on input 
-line 550.
-
-
-Package natbib Warning: Citation `Powell1993' on page 22 undefined on input lin
-e 550.
-
-[22] [23]
+[19] [20] [21] [22] [23]
 
 Package xcolor Warning: Incompatible color definition on input line 563.
 
@@ -2463,13 +2125,9 @@ Package xcolor Warning: Incompatible color definition on input line 748.
 Package xcolor Warning: Incompatible color definition on input line 751.
 
 
-Package natbib Warning: Citation `Hollyer2012' on page 24 undefined on input li
-ne 755.
-
-
 Package xcolor Warning: Incompatible color definition on input line 766.
 
-<figure/GraphPartisanErrorUnemploy.pdf, id=290, 505.89pt x 289.08pt>
+<figure/GraphPartisanErrorUnemploy.pdf, id=519, 505.89pt x 289.08pt>
 File: figure/GraphPartisanErrorUnemploy.pdf Graphic file (type pdf)
 
 <use figure/GraphPartisanErrorUnemploy.pdf>
@@ -2481,42 +2139,20 @@ ne 768.
 ] [25 <./figure/GraphPartisanErrorUnemploy.pdf>] [26] (./main_GreenBook.bbl [27
 
 ] [28])
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 791.
-[29]
+ [29]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 791.
- (./main_GreenBook.aux
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+(./main_GreenBook.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 791.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 791.
+Package rerunfilecheck Info: File `main_GreenBook.out' has not changed.
+(rerunfilecheck)             Checksum: B72723CA57548A6BD4B921ECA7666E69;946.
 
-
-Package rerunfilecheck Warning: File `main_GreenBook.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main_GreenBook.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  B72723CA57548A6BD4B921ECA7666E69;946.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 791.
- ) 
-Here is how much of TeX's memory you used:
- 15420 strings out of 493633
- 274110 string characters out of 3143377
- 409398 words of memory out of 3000000
- 18262 multiletter control sequences out o
+Package atveryend Info: Empty hook `AtV
