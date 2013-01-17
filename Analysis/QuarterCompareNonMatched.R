@@ -2,16 +2,16 @@
 # Graph of simulated errors across all quarter estimates for model NL7 (A7 in the manuscript table). 
 # Uses non-matched data.
 # Christopher Gandrud 
-# 22 November 2012
+# 17 January 2013
 ###############
 
 ## Load libraries
-# library(devtools)
 library(Zelig)
 library(plyr)
+library(reshape2)
 
 # To run as a stand alone file. First, run the following files from the paper:
-## source_url("http://bit.ly/NXdCpk") 
+## devtools::source_url("http://bit.ly/NXdCpk") 
 
 #### Run two matching models ####
 # One model is for estimates made 0 through 2 quarters before a given quarter. There is full data for these estimates.
@@ -40,32 +40,32 @@ CPIEstimates35 <- cpi.data[complete.cases(cpi.data[vars]),]
 CPIEstimates35 <- CPIEstimates35[vars]
 
 #### Run Parametric OLS Models ####
-NL.02.0 <- zelig(error.prop.deflator.q0 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP  + UNRATE + GlobalModel, model = "ls", data = CPIEstimates02, cite = FALSE)
+NL.02.0 <- zelig(error.prop.deflator.q0 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP  + UNRATE + GlobalModel, model = "normal", data = CPIEstimates02, cite = FALSE)
 
-NL.02.1 <- zelig(error.prop.deflator.q1 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate1qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates02, time_to_election != 15), cite = FALSE)
+NL.02.1 <- zelig(error.prop.deflator.q1 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate1qChange + UNRATE + GlobalModel, model = "normal", data = subset(CPIEstimates02, time_to_election != 15), cite = FALSE)
 
-NL.02.2 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates02, !(time_to_election %in% c(15, 14))), cite = FALSE)
+NL.02.2 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal", data = subset(CPIEstimates02, !(time_to_election %in% c(15, 14))), cite = FALSE)
 
-NL.35.3 <- zelig(error.prop.deflator.q3 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate3qChange + UNRATE + GlobalModel, model = "ls", data = CPIEstimates35, cite = FALSE)
+NL.35.3 <- zelig(error.prop.deflator.q3 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate3qChange + UNRATE + GlobalModel, model = "normal", data = CPIEstimates35, cite = FALSE)
 
-NL.35.4 <- zelig(error.prop.deflator.q4 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate4qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12))), cite = FALSE)
+NL.35.4 <- zelig(error.prop.deflator.q4 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate4qChange + UNRATE + GlobalModel, model = "normal", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12))), cite = FALSE)
 
-NL.35.5 <- zelig(error.prop.deflator.q5 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate5qChange + UNRATE + GlobalModel, model = "ls", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12, 11))), cite = FALSE)
+NL.35.5 <- zelig(error.prop.deflator.q5 ~ pres_party + time_to_election + recession + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate5qChange + UNRATE + GlobalModel, model = "normal", data = subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12, 11))), cite = FALSE)
 
 #### Simulate Expected Values & Melt ####
-# Ranges of fitted values 
-pres_party.r <- c(0, 1)
-
-## Quarter 0 ##
+#### Quarter 0 ####
 # Set fitted values, all variables other than pres_party set to their means
-ModelParty0 <- setx(NL.02.0, pres_party = pres_party.r)
+ModelParty0R <- setx(NL.02.0, pres_party = 0)
+ModelParty0D <- setx(NL.02.0, pres_party = 1)
 
 # Simulate quantities of interest
-ModelParty.sim0 <- sim(NL.02.0, x = ModelParty0)
+ModelParty.sim0 <- Zelig::sim(NL.02.0, x = ModelParty0R, x1 = ModelParty0D)
 
 # Extract expected values from simulations
 ModelParty.ev0 <- ModelParty.sim0$qi
-ModelParty.ev0 <-data.frame(ModelParty.ev0$ev)
+ModelParty.ev0R <-data.frame(ModelParty.ev0$ev1)
+ModelParty.ev0D <-data.frame(ModelParty.ev0$ev2)
+ModelParty.ev0 <- cbind(ModelParty.ev0R, ModelParty.ev0D)
 names(ModelParty.ev0) <- c("Rep", "Dem")
 ModelParty.ev0 <- melt(ModelParty.ev0, measure = 1:2)
 ModelParty.ev0$variable <- factor(ModelParty.ev0$variable) 
@@ -80,16 +80,19 @@ ModelParty.evPer0 <- ddply(ModelParty.evPer0, .(variable), transform, Upper = va
 # Remove variables outside of the middle 95%
 ModelParty.evPer0 <- subset(ModelParty.evPer0, Lower == FALSE & Upper == FALSE)
 
-## Quarter 1 ##
+#### Quarter 1 ####
 # Set fitted values, all variables other than pres_party set to their means
-ModelParty1 <- setx(NL.02.1, pres_party = pres_party.r)
+ModelParty1R <- setx(NL.02.1, pres_party = 0)
+ModelParty1D <- setx(NL.02.1, pres_party = 1)
 
 # Simulate quantities of interest
-ModelParty.sim1 <- sim(NL.02.1, x = ModelParty1)
+ModelParty.sim1 <- Zelig::sim(NL.02.1, x = ModelParty1R, x1 = ModelParty1D)
 
 # Extract expected values from simulations
 ModelParty.ev1 <- ModelParty.sim1$qi
-ModelParty.ev1 <-data.frame(ModelParty.ev1$ev)
+ModelParty.ev1R <-data.frame(ModelParty.ev1$ev1)
+ModelParty.ev1D <-data.frame(ModelParty.ev1$ev2)
+ModelParty.ev1 <- cbind(ModelParty.ev1R, ModelParty.ev1D)
 names(ModelParty.ev1) <- c("Rep", "Dem")
 ModelParty.ev1 <- melt(ModelParty.ev1, measure = 1:2)
 ModelParty.ev1$variable <- factor(ModelParty.ev1$variable) 
@@ -104,16 +107,19 @@ ModelParty.evPer1 <- ddply(ModelParty.evPer1, .(variable), transform, Upper = va
 # Remove variables outside of the middle 95%
 ModelParty.evPer1 <- subset(ModelParty.evPer1, Lower == FALSE & Upper == FALSE)
 
-## Quarter 2 ##
+#### Quarter 2 ####
 # Set fitted values, all variables other than pres_party set to their means
-ModelParty2 <- setx(NL.02.2, pres_party = pres_party.r)
+ModelParty2R <- setx(NL.02.2, pres_party = 0)
+ModelParty2D <- setx(NL.02.2, pres_party = 1)
 
 # Simulate quantities of interest
-ModelParty.sim2 <- sim(NL.02.2, x = ModelParty2)
+ModelParty.sim2 <- Zelig::sim(NL.02.2, x = ModelParty2R, x1 = ModelParty2D)
 
 # Extract expected values from simulations
 ModelParty.ev2 <- ModelParty.sim2$qi
-ModelParty.ev2 <-data.frame(ModelParty.ev2$ev)
+ModelParty.ev2R <-data.frame(ModelParty.ev2$ev1)
+ModelParty.ev2D <-data.frame(ModelParty.ev2$ev2)
+ModelParty.ev2 <- cbind(ModelParty.ev2R, ModelParty.ev2D)
 names(ModelParty.ev2) <- c("Rep", "Dem")
 ModelParty.ev2 <- melt(ModelParty.ev2, measure = 1:2)
 ModelParty.ev2$variable <- factor(ModelParty.ev2$variable) 
@@ -131,16 +137,19 @@ ModelParty.evPer2 <- subset(ModelParty.evPer2, Lower == FALSE & Upper == FALSE)
 ## Save estimates to be used in the in-text equations
 write.csv(ModelParty.evPer2, "cache/SimQrt2.csv")
 
-## Quarter 3 ##
+#### Quarter 3 ####
 # Set fitted values, all variables other than pres_party set to their means
-ModelParty3 <- setx(NL.35.3, pres_party = pres_party.r)
+ModelParty3R <- setx(NL.35.3, pres_party = 0)
+ModelParty3D <- setx(NL.35.3, pres_party = 1)
 
 # Simulate quantities of interest
-ModelParty.sim3 <- sim(NL.35.3, x = ModelParty3)
+ModelParty.sim3 <- sim(NL.35.3, x = ModelParty3R, x1 = ModelParty3D)
 
 # Extract expected values from simulations
 ModelParty.ev3 <- ModelParty.sim3$qi
-ModelParty.ev3 <-data.frame(ModelParty.ev3$ev)
+ModelParty.ev3R <-data.frame(ModelParty.ev3$ev1)
+ModelParty.ev3D <-data.frame(ModelParty.ev3$ev2)
+ModelParty.ev3 <- cbind(ModelParty.ev3R, ModelParty.ev3D)
 names(ModelParty.ev3) <- c("Rep", "Dem")
 ModelParty.ev3 <- melt(ModelParty.ev3, measure = 1:2)
 ModelParty.ev3$variable <- factor(ModelParty.ev3$variable) 
@@ -155,16 +164,19 @@ ModelParty.evPer3 <- ddply(ModelParty.evPer3, .(variable), transform, Upper = va
 # Remove variables outside of the middle 95%
 ModelParty.evPer3 <- subset(ModelParty.evPer3, Lower == FALSE & Upper == FALSE)
 
-## Quarter 4 ##
+#### Quarter 4 ####
 # Set fitted values, all variables other than pres_party set to their means
-ModelParty4 <- setx(NL.35.4, pres_party = pres_party.r)
+ModelParty4R <- setx(NL.35.4, pres_party = 0)
+ModelParty4D <- setx(NL.35.4, pres_party = 1)
 
 # Simulate quantities of interest
-ModelParty.sim4 <- sim(NL.35.4, x = ModelParty4)
+ModelParty.sim4 <- sim(NL.35.4, x = ModelParty4R, x1 = ModelParty4D)
 
 # Extract expected values from simulations
 ModelParty.ev4 <- ModelParty.sim4$qi
-ModelParty.ev4 <-data.frame(ModelParty.ev4$ev)
+ModelParty.ev4R <-data.frame(ModelParty.ev4$ev1)
+ModelParty.ev4D <-data.frame(ModelParty.ev4$ev2)
+ModelParty.ev4 <- cbind(ModelParty.ev4R, ModelParty.ev4D)
 names(ModelParty.ev4) <- c("Rep", "Dem")
 ModelParty.ev4 <- melt(ModelParty.ev4, measure = 1:2)
 ModelParty.ev4$variable <- factor(ModelParty.ev4$variable) 
@@ -179,16 +191,19 @@ ModelParty.evPer4 <- ddply(ModelParty.evPer4, .(variable), transform, Upper = va
 # Remove variables outside of the middle 95%
 ModelParty.evPer4 <- subset(ModelParty.evPer4, Lower == FALSE & Upper == FALSE)
 
-## Quarter 5 ##
+#### Quarter 5 ####
 # Set fitted values, all variables other than pres_party set to their means
-ModelParty5 <- setx(NL.35.5, pres_party = pres_party.r)
+ModelParty5R <- setx(NL.35.5, pres_party = 0)
+ModelParty5D <- setx(NL.35.5, pres_party = 1)
 
 # Simulate quantities of interest
-ModelParty.sim5 <- sim(NL.35.5, x = ModelParty5)
+ModelParty.sim5 <- sim(NL.35.5, x = ModelParty5R, x1 = ModelParty5D)
 
 # Extract expected values from simulations
 ModelParty.ev5 <- ModelParty.sim5$qi
-ModelParty.ev5 <-data.frame(ModelParty.ev5$ev)
+ModelParty.ev5R <-data.frame(ModelParty.ev5$ev1)
+ModelParty.ev5D <-data.frame(ModelParty.ev5$ev2)
+ModelParty.ev5 <- cbind(ModelParty.ev5R, ModelParty.ev5D)
 names(ModelParty.ev5) <- c("Rep", "Dem")
 ModelParty.ev5 <- melt(ModelParty.ev5, measure = 1:2)
 ModelParty.ev5$variable <- factor(ModelParty.ev5$variable) 
@@ -219,10 +234,10 @@ O5 <- nrow(subset(CPIEstimates35 , !(time_to_election %in% c(15, 14, 13, 12, 11)
 partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
 # Create plot
-ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value)) +
+ModelPartyPlotAll <- ggplot(data = ModelPartyAll, aes(QrtEstimate, value), group = variable) +
   geom_hline(yintercept = 0, size = 1,
              alpha = I(0.5)) +
-  stat_summary(fun.y = mean, geom = "line", aes(group = variable), colour = "grey70") +
+  stat_summary(fun.y = mean, geom = "line", colour = "grey70") +
   geom_point(aes(colour = variable), alpha = I(0.05), size = 3) +
   scale_color_manual(values = partisan.colors, 
                      name = "") +

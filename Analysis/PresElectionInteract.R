@@ -1,58 +1,73 @@
 ################
 # President*Election Interaction Graph
 # Christopher Gandrud
-# Updated 22 November 2012 
+# Updated 17 January 2013
 ################
 
-# Create range of values to simulate expected values across
-election_time <- (0:10)^2
+# To run as a stand alone file. First, run the following files from earlier in the paper:
+## devtools::source_url("http://bit.ly/NXdCpk") 
+## devtools::source_url("http://bit.ly/OFdA4u")
 
-# Set fitted values 
-NL8SetElectionDem <- setx(NL8, pres_party = 1, elect2 = election_time)
-NL8SetElectionRep <- setx(NL8, pres_party = 0, elect2 = election_time)
+# Load library 
+library(plyr)
 
-# Simulate expected values.
-NL8SimElectionDem <- sim(NL8, x = NL8SetElectionDem)
-NL8SimElectionRep <- sim(NL8, x = NL8SetElectionRep)
+#### Simulate Expected Values
+SimExpect <- function(m){
+    if (p == 0){
+      name <- paste0("Rep", "Elect", i)
+    } else {
+      name <- paste0("Dem", "Elect", i)
+    }
+    TempSet <- setx(m, pres_party = p, elect2 = i)
+    TempSim <- sim(m, x = TempSet)
+    Temp.qi <- TempSim$qi
+    assign(name, data.frame(Temp.qi$ev1), envir = .GlobalEnv) 
+}
 
-# Extract expected values from simulations (Democratic President)
-NL8SimElectionDem.ev <- NL8SimElectionDem$qi
-NL8SimElectionDem.ev <-data.frame(NL8SimElectionDem.ev$ev)
-names(NL8SimElectionDem.ev) <- c("x0", "x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9", "x10")
-NL8SimElectionDem.ev <- melt(NL8SimElectionDem.ev, measure = 1:11)
-NL8SimElectionDem.ev$variable <- as.numeric(gsub("x", "", NL8SimElectionDem.ev$variable))
-NL8SimElectionDem.ev$Party <- "Dem"
+for (p in 0:1){
+  for (i in (0:10)^2){
+      SimExpect(m = NL8)
+  }
+}
 
-# Remove values outside of the 2.5% and 97.5% quantiles
-# Find 2.5% and 97.5% quantiles for HRCC
-NL8SimElectionDem.ev <- ddply(NL8SimElectionDem.ev, .(variable), transform, Lower = value < quantile(value, c(0.025)))
-
-NL8SimElectionDem.ev <- ddply(NL8SimElectionDem.ev, .(variable), transform, Upper = value > quantile(value, c(0.975)))
-
-# Remove variables outside of the middle 95%
-NL8SimElectionDem.ev <- subset(NL8SimElectionDem.ev, Lower == FALSE & Upper == FALSE)
-
-# Extract expected values from simulations (ElectionRep)
-NL8SimElectionRep.ev <- NL8SimElectionRep$qi
-NL8SimElectionRep.ev <-data.frame(NL8SimElectionRep.ev$ev)
-names(NL8SimElectionRep.ev) <- c("x0", "x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9", "x10")
-NL8SimElectionRep.ev <- melt(NL8SimElectionRep.ev, measure = 1:11)
-NL8SimElectionRep.ev$variable <- as.numeric(gsub("x", "", NL8SimElectionRep.ev$variable))
-NL8SimElectionRep.ev$Party <- "Rep"
+#### Expected values for Democratic presidencies ####
+DemElect.ev <- cbind(DemElect0, DemElect1, DemElect4, DemElect9, DemElect16, DemElect25, DemElect36, DemElect49, DemElect64, DemElect81, DemElect100)
+rm(DemElect0, DemElect1, DemElect4, DemElect9, DemElect16, DemElect25, DemElect36, DemElect49, DemElect64, DemElect81, DemElect100)
+names(DemElect.ev) <- c("x0", "x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9", "x10")
+DemElect.ev <- melt(DemElect.ev, measure = 1:11)
+DemElect.ev$variable <- as.numeric(gsub("x", "", DemElect.ev$variable))
+DemElect.ev$Party <- "Dem"
 
 # Remove values outside of the 2.5% and 97.5% quantiles
 # Find 2.5% and 97.5% quantiles for HRCC
-NL8SimElectionRep.ev <- ddply(NL8SimElectionRep.ev, .(variable), transform, Lower = value < quantile(value, c(0.025)))
+DemElect.ev <- ddply(DemElect.ev, .(variable), transform, Lower = value < quantile(value, c(0.025)))
 
-NL8SimElectionRep.ev <- ddply(NL8SimElectionRep.ev, .(variable), transform, Upper = value > quantile(value, c(0.975)))
+DemElect.ev <- ddply(DemElect.ev, .(variable), transform, Upper = value > quantile(value, c(0.975)))
 
 # Remove variables outside of the middle 95%
-NL8SimElectionRep.ev <- subset(NL8SimElectionRep.ev, Lower == FALSE & Upper == FALSE)
+DemElect.ev <- subset(DemElect.ev, Lower == FALSE & Upper == FALSE)
+
+#### Expected values for Republican presidencies ####
+RepElect.ev <- cbind(RepElect0, RepElect1, RepElect4, RepElect9, RepElect16, RepElect25, RepElect36, RepElect49, RepElect64, RepElect81, RepElect100)
+rm(RepElect0, RepElect1, RepElect4, RepElect9, RepElect16, RepElect25, RepElect36, RepElect49, RepElect64, RepElect81, RepElect100)
+names(RepElect.ev) <- c("x0", "x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9", "x10")
+RepElect.ev <- melt(RepElect.ev, measure = 1:11)
+RepElect.ev$variable <- as.numeric(gsub("x", "", RepElect.ev$variable))
+RepElect.ev$Party <- "Rep"
+
+# Remove values outside of the 2.5% and 97.5% quantiles
+# Find 2.5% and 97.5% quantiles for HRCC
+RepElect.ev <- ddply(RepElect.ev, .(variable), transform, Lower = value < quantile(value, c(0.025)))
+
+RepElect.ev <- ddply(RepElect.ev, .(variable), transform, Upper = value > quantile(value, c(0.975)))
+
+# Remove variables outside of the middle 95%
+RepElect.ev <- subset(RepElect.ev, Lower == FALSE & Upper == FALSE)
 
 # Append both sets of simulation results
-NL8Bound <- rbind(NL8SimElectionDem.ev, NL8SimElectionRep.ev)
+NL8Bound <- rbind(DemElect.ev, RepElect.ev)
 
-#### Create plots ####
+#### Create plot ####
 ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(variable, value), group) +
                                   geom_hline(yintercept = 0, size = 1,
                                               alpha = I(0.5)) +

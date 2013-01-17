@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 12 December 2012
+% 17 January 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -49,7 +49,7 @@
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 \noindent\emph{Working draft. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for support. Thank you also to Thomas Stark and seminar participants at the Hertie School of Governance, London School of Economics and Yonsei University. \\
-This paper was written using {\tt{knitr}} \citep{knitr2012}. It can be entirely replicated from data, analysis source code, and markup files available on our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}.} \\[0.2cm]
+This paper was written using {\tt{knitr}} \citep{knitr2013}. It can be entirely replicated from data, analysis source code, and markup files available on our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}.} \\[0.2cm]
 
 Recent work argues that policy-makers at the United States Federal Reserve are not politically indifferent \citep{Clark2012}. The Fed tends to choose looser monetary policies during Republican administrations, possibly in order to ensure the (re)election of ideologically preferred presidents. However, expectations about future inflation ought to be driving monetary policy. Are these findings really driven by different assumptions about the (inflationary) policies of the different parties? We use the Fed's Green Book forecasts to test whether presidents' partisan identification shapes the estimates of future economic performance that influence FOMC policies. We find that Federal Reserve staff probably {\emph{do not}} bias their forecasts to influence Fed governors around elections. However, they {\emph{do}} systematically overestimate inflation during the entire tenure of Democratic presidencies and underestimate inflation during Republican ones. This suggests that while not electorally motivated, Fed staff inflation forecasts have a presidential partisan bias.
 
@@ -105,7 +105,7 @@ How accurate are Fed staff forecasts? We measure accuracy by calculating {\bf{fo
     E_{q} = \frac{F_{q} - I_{q}}{I_{q}}
 \end{equation}
 %
-We put the error in terms of actual inflation to control for the fact that absolute inflation varies considerably across different periods (see Figure \ref{absolute}). A one percentage point difference between actual and forecasted inflation is a significantly larger mistake when absolute inflation is running at 3\% than when it is 13\%. 
+We choose to focus on proportional rather than absolute error\footnote{i.e. $F_{q} - I_{q}$} because it is substantly more meaningful for comparing errors across different time periods. As we saw in Figure \ref{absolute}, absolute inflation varies considerably across different periods. A one percentage point difference between actual and forecasted inflation is a significantly larger mistake when absolute inflation is running at 3 percent than when it is 13 percent. So, to be able to estimate meaningful effects on errors across time we need look at proportional rather than absolute error.\footnote{Note that the direction and significance of our main findings do not change when we use absolute rather than proportional errors in our models. The magnitude does change, but this is to be expected because the range of the absolute inflation errors is much larger than proportional errors.}
 
 If the forecasts are unbiased then the mean error of the forecasts would be indistinguishable from zero. While \cite{Romer2000} found that the Federal Reserve's internal forecasts  meet this requirement over the full history of Green Book forecasts, such an amalgamation disguises long periods of over- or under-predicting inflation, as noted in \cite{Capistran2006} and illustrated in Figure \ref{absolute}. Within economics the Fed's forecasts have been examined for evidence of rationality. These studies generally find that the Fed rationally incorporates information into its forecasts, outperforming private forecasts \cite[c.f.][]{Gamber2009}. These studies, however, have rarely incorporated political preferences of the Fed because Federal Reserve staffers are assumed to be politically independent.
 

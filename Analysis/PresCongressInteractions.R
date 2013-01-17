@@ -1,29 +1,36 @@
 ################
 # President*Congress Interaction Graph
 # Christopher Gandrud
-# Updated 19 November 2012 
+# Updated 17 January 2013
 ################
 
-# Create range of values to simulate expected values across
-pres_party.r <- c(0, 1)
+# To run as a stand alone file. First, run the following files from earlier in the paper:
+## devtools::source_url("http://bit.ly/NXdCpk") 
+## devtools::source_url("http://bit.ly/OFdA4u")
 
 # Set fitted values 
-NL11SetDem <- setx(NL11, pres_party = pres_party.r, house_dem_rep = 1.2, senate_dem_rep = 1.2)
-NL11SetRep <- setx(NL11, pres_party = pres_party.r, house_dem_rep = 0.8, senate_dem_rep = 0.8)
+NL11SetRDem <- setx(NL11, pres_party = 0, house_dem_rep = 1.2, senate_dem_rep = 1.2)
+NL11SetDDem <- setx(NL11, pres_party = 1, house_dem_rep = 1.2, senate_dem_rep = 1.2)
+NL11SetRRep <- setx(NL11, pres_party = 0, house_dem_rep = 0.8, senate_dem_rep = 0.8)
+NL11SetDRep <- setx(NL11, pres_party = 1, house_dem_rep = 0.8, senate_dem_rep = 0.8)
 
 # Simulate expected values.
-NL11SimDem <- sim(NL11, x = NL11SetDem)
-NL11SimRep <- sim(NL11, x = NL11SetRep)
+NL11SimDem <- Zelig::sim(NL11, x = NL11SetRDem, x1 = NL11SetDDem)
+NL11SimRep <- Zelig::sim(NL11, x = NL11SetRRep, x1 = NL11SetDRep)
 
 # Extract expected values from simulations (Dem)
-NL11SimDem.ev <- NL11SimDem$qi
-NL11SimDem.ev <-data.frame(NL11SimDem.ev$ev)
+NL11SimDem.qi <- NL11SimDem$qi
+NL11SimDem.evR <-data.frame(NL11SimDem.qi$ev1)
+NL11SimDem.evD <-data.frame(NL11SimDem.qi$ev2)
+NL11SimDem.ev <- cbind(NL11SimDem.evR, NL11SimDem.evD)
 names(NL11SimDem.ev) <- c("Rep. Pres.", "Dem. Pres.")
 NL11SimDem.ev <- melt(NL11SimDem.ev, measure = 1:2)
 
 # Extract expected values from simulations (Rep)
-NL11SimRep.ev <- NL11SimRep$qi
-NL11SimRep.ev <-data.frame(NL11SimRep.ev$ev)
+NL11SimRep.qi <- NL11SimRep$qi
+NL11SimRep.evR <-data.frame(NL11SimRep.qi$ev1)
+NL11SimRep.evD <-data.frame(NL11SimRep.qi$ev2)
+NL11SimRep.ev <- cbind(NL11SimRep.evR, NL11SimRep.evD)
 names(NL11SimRep.ev) <- c("Rep. Pres.", "Dem. Pres.")
 NL11SimRep.ev <- melt(NL11SimRep.ev, measure = 1:2)
 
