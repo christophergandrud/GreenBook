@@ -3,7 +3,8 @@
 
 *.aux
 *.bbl
-*.blg
+*.blg	
+figure/*
 cache/*
 .DS_Store
 *.gz

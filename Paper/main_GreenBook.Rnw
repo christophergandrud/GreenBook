@@ -121,7 +121,7 @@ We have 165 forecast quarters in our data set, spanning the fourth quarter of 19
     library(devtools)
     
     ActualForeURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ActualVsForecastGraph.R"
-    source_url(ActualForeURL)
+    devtools::source_url(ActualForeURL)
 @
     
     \end{center}
@@ -271,7 +271,7 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
     
     # Run main analysis source code
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
-    source_url(AnalysisURL)
+    devtools::source_url(AnalysisURL)
 
     # Local
      # source("/git_repositories/GreenBook/Analysis/MainAnalysis2.R")
@@ -284,10 +284,10 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
 
 <<CoefComparePlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
     # Load model objects created by MainAnalysis2.R
-    load("ModelObjects.RData")
+    load("/git_repositories/GreenBook/Paper/ModelObjects.RData")
     # Create plots
      CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots.R"
-    source_url(CoefPlotsURL)
+    devtools::source_url(CoefPlotsURL)
 
 @
     \end{center}
