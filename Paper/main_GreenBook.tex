@@ -537,7 +537,11 @@ As expected, relative changes to the discount rate are often found to be negativ
 
 \paragraph{Orthogonal Dependent Variable Diagnostic: Unemployment Forecast Errors}
 
-As a final diagnostic we ran our analyses with a dependant variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are not strongly correlated with inflation forecast errors.The Pearson correlation coefficient for forecasts made two quarters beforehand is -0.15 with a p-value of 0.06. It is not clear why Federal Reserve staff would have systematically different unemployment forecast errors when there is a Republican president and a Democratic president.} The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Green Book. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
+As a final diagnostic we ran our analyses with a dependant variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are not strongly correlated with inflation forecast errors.The Pearson correlation coefficient for forecasts made two quarters beforehand is 
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in eval(expr, envir, enclos) : object 'Estat' not found}} with a p-value of 
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in eval(expr, envir, enclos) : object 'Pstat' not found}}. It is not clear why Federal Reserve staff would have systematically different unemployment forecast errors when there is a Republican president and a Democratic president.} The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Green Book. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
 
 Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors were the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's \emph{inflation} forecasting errors.
 
@@ -628,7 +632,7 @@ $\log L$            & 31.1            & 34.1            & 34.1            & 61.1
     \end{center}
 \end{table}
 
-%%%%%%% Table of ElectionPeriod matched data with Normal Linear parametric model %%%%%%%%
+%%%%%%% Table of  matched data with Normal Linear parametric model %%%%%%%%
 
 %\begin{table}[ht]
 %    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
@@ -638,7 +642,7 @@ $\log L$            & 31.1            & 34.1            & 34.1            & 61.1
 %    {\footnotesize
 % << ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
-%    # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
+%    # Model names & Coefficient Names -- Use B for all  mathced models
 %    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
 %    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
@@ -728,7 +732,7 @@ $\log L$            & 21.7            & 25.1            & 24.7            & 37.1
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Jan 18 10:19:07 2013
+% Fri Jan 18 12:36:26 2013
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -761,7 +765,7 @@ Intercept & 1.93 & 1.74 & -1.44 & 1.92 & 5.36 \\
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Jan 18 10:19:07 2013
+% Fri Jan 18 12:36:26 2013
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
@@ -876,16 +880,7 @@ $\log L$            & 61.4            & 64.3            & 66.3            & 63.2
     \label{Unemployment}
     \begin{center}
     
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=0.95\linewidth]{figure/GraphPartisanErrorUnemploy} 
-
-}
-
-
-
-\end{knitrout}
 
 
     \end{center}

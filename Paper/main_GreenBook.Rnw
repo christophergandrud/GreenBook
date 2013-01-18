@@ -445,7 +445,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     \end{center}
 \end{table}
 
-%%%%%%% Table of ElectionPeriod matched data with Normal Linear parametric model %%%%%%%%
+%%%%%%% Table of  matched data with Normal Linear parametric model %%%%%%%%
 
 %\begin{table}[ht]
 %    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
@@ -455,7 +455,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
 %    {\footnotesize
 % << ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
-%    # Model names & Coefficient Names -- Use B for all ElectionPeriod mathced models
+%    # Model names & Coefficient Names -- Use B for all  mathced models
 %    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
 %    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
@@ -489,7 +489,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     {\footnotesize
 << PLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
-    # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
+    # Model names & Coefficient Names -- Use C for all  mathced models
     ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12")
     CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
@@ -561,7 +561,7 @@ print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Est
     # Run subset models
     devtools::source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SubsetPresTerm.R")
     
-    # Model names & Coefficient Names -- Use C for all ElectionPeriod mathced models
+    # Model names & Coefficient Names -- Use C for all  mathced models
     ModelNamesP <- c("Nixon 1", "Nixon 2", "Ford", "Carter", "Reagan 1", "Reagan 2", 
                      "GHW Bush", "Clinton 1", "Clinton 2", "GW Bush 1", "GW Bush 2")
     CoefNamesP <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", 
