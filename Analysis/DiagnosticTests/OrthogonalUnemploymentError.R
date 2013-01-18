@@ -34,7 +34,6 @@ cpi.dataU$error.prop.deflator.q2 <-  (cpi.dataU$GB_CPI_QTR2 - cpi.dataU$deflator
 # Create FRB/Global Model Variable 
 cpi.dataU$GlobalModel[cpi.dataU$Quarter > 1995.4] <- "After 1996"
 cpi.dataU$GlobalModel[cpi.dataU$Quarter < 1996.1] <- "Before 1996"
-cpi.dataU$GlobalModel <- factor(cpi.dataU$GlobalModel, labels = c("Before 1996", "After 1996"))  
 
 # Create Fed Chair variable
 cpi.dataU$Chair[cpi.dataU$Quarter > 1987.3] <-  "Greenspan"

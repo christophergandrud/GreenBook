@@ -231,7 +231,7 @@ where $T_{q}$ is the treatment for quarter $q$ and $X$ is a vector of covariates
 
 \subsection{Variables}
 
-In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identity and/or the existence of an upcoming presidential election affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when they are a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or in the following quarter.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$ and $q_{e-1}$ election quarters.}
+In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identity and/or the existence of an upcoming presidential election affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when they are a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or in the previous three quarter.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$, $q_{e-1}$, $q_{e-4}$, $q_{e-4}$  election quarters.}
 
 To further examine whether or not Federal Reserve staff were taking into consideration an electoral business cycle either due to a partisan preference or the nearness of an election, we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections are coded as 0. 
 
@@ -259,7 +259,7 @@ In this section we graphically present results from a number of parametric model
 
 Before jumping into the detailed results, we discuss some of our alterations to the data set we made largely in response to diagnostic test results. 
 
-We only have 18 election period `treatments' in our data set. So, unfortunately our data set matched by election period only contained about 30 observations. Because of this very small sample size, we do not show estimates from models using data matched on election period.\footnote{More information on the models can be found at \url{http://bit.ly/OFdA4u}.}
+We have 36 election period `treatments' in our data set. Our data set matched by election period only contained about 57 observations. Because of this small sample size, we do not show estimates from models using data matched on election period.\footnote{More information on the models can be found at \url{http://bit.ly/OFdA4u}.}
 
 We primarily diagnose the presidential party ID matching models with a propensity score distribution--the probability of a quarter being in the `treated' group given its covariates--as well as quantile-quantile plots to diagnose whether or not each covariate in the matched data sets is balanced \citep{Ho2007}.\footnote{Please see Figure \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created by running the original matching models in our main analysis source code file. The file is available at: \url{http://bit.ly/OFdA4u}.}  We are unable to achieve covariate balance for the Congressional interaction terms\footnote{The presidential party ID and election period interaction does balance.} and the Federal Reserve Chair variable. Chairs in our data set in the pre-Volcker/Greenspan era as well as current Chair Ben Bernanke were in office for very few quarters, making it difficult to match them. It is unlikely that  covariate balance could be achieved on these interactions given our relatively small sample size. Because of this, we only discuss Congressional interaction terms and Chair variable estimates from the non-matched data sets.}
 
@@ -269,7 +269,7 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
 
 <<MainAnalysis, include=FALSE, cache=TRUE>>=
     
-    # Run main analysis source code
+    # Run main analysis source code #
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
     devtools::source_url(AnalysisURL)
 
