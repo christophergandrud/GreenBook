@@ -7,6 +7,8 @@
 library(foreign)
 library(reshape)
 
+cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
+
 setwd("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012")
 
 # Data downloaded from FRED, some clean up by hand
@@ -91,6 +93,9 @@ vars <- c("Quarter", "DebtGDP", "ExpenditureGDP", "PotentialGDP", "UNRATE",
           "GB_Unemp5")
 data <- data[, vars]
 
+# Merge with cpi.data
+cpi.data <- merge(cpi.data, data, by = "Quarter", all = TRUE)
+
 # Save output
 
-write.dta(data, file = "JuneOct2012Data.dta")
+write.csv(cpi.data, file = "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")

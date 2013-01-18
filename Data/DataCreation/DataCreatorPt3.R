@@ -1,12 +1,15 @@
 ##############
 # Fed Funds Rate & Discount Rate Investigation on Partisan Bias
 # Christopher Gandrud
-# Updated 17 Januar 2013
+# Updated 17 January 2013
 ##############
 
 # Load packages
 library(reshape)
 library(stringr)
+
+## Load data from DataCreatorPt2.R
+cpi.data <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
 
 ###### Fed Funds Rate #####
 # Data is from the FRED system at the Federal Reserve Bank of St. Louis: http://research.stlouisfed.org/fred2/
@@ -39,8 +42,6 @@ Funds$FedFunds2qChange <- round(Funds$FedFunds2qChange, digits = 2)
 Funds <- Funds[-1:-2, ]
 
 # merge with cpi.data
-cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv")
-
 cpi.data <- merge(cpi.data, Funds)
 
 ##### Discount/Primary Rate #####
@@ -213,10 +214,13 @@ Deficit$Year <- gsub("01/01/", "", x = Deficit$Year)
 cpi.data$Year <- substr(cpi.data$Quarter, start = 1, stop = 4)
 
 # Merge by year
-cpi.data <- merge(cpi.data, Deficit)
+cpi.data <- merge(cpi.data, Deficit, all = TRUE)
 
 # Remove year variable
 cpi.data <- gdata::remove.vars(cpi.data, names = "Year")
+
+# Remove extra
+cpi.data <- subset(cpi.data, !is.na(Quarter))
 
 ### Write Data ####
 write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", sep = ",")

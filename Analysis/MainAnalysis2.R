@@ -16,7 +16,7 @@
 # matchit requires data sets to have no missing values
 vars <- c("Quarter", "ElectionPeriod", "pres_party", "error.prop.deflator.q2", 
           "time_to_election", "recession", "senate_dem_rep", 
-          "house_dem_rep", "DebtGDP", "ExpenditureGDP", "UNRATE",
+          "house_dem_rep", "DebtGDP", "DeficitGDP", "ExpenditureGDP", "UNRATE",
           "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange", "DiscountRate",
           "DiscountRate2qChange", "Chair"
           )  

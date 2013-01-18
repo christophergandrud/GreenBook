@@ -18,6 +18,8 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+[Previously saved workspace restored]
+
 > ############
 > # Greenbook Data Merge Mid-June & Updated for the 2006 Data in October 2012
 > # Christopher Gandrud
@@ -34,6 +36,8 @@ The following object(s) are masked from ‘package:plyr’:
 
     rename, round_any
 
+> 
+> cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
 > 
 > setwd("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012")
 > 
@@ -119,10 +123,13 @@ The following object(s) are masked from ‘package:plyr’:
 +           "GB_Unemp5")
 > data <- data[, vars]
 > 
+> # Merge with cpi.data
+> cpi.data <- merge(cpi.data, data, by = "Quarter", all = TRUE)
+> 
 > # Save output
 > 
-> write.dta(data, file = "JuneOct2012Data.dta")
+> write.csv(cpi.data, file = "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
 > 
 > proc.time()
    user  system elapsed 
-  0.583   0.064   2.678 
+  0.576   0.068   2.775 
