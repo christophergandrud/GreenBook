@@ -393,7 +393,7 @@ As expected, relative changes to the discount rate are often found to be negativ
 <<CreateOrthog, message=FALSE, error=FALSE, warning=FALSE, echo=FALSE>>=
     # Create unempoyment error variable and graph
     PartisanErrorUnemployURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiagnosticTests/OrthogonalUnemploymentError.R"
-    source_url(PartisanErrorUnemployURL)
+    devtools::source_url(PartisanErrorUnemployURL)
 @
 
 \paragraph{Orthogonal Dependent Variable Diagnostic: Unemployment Forecast Errors}

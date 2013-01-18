@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 19 November 2012
+# 18 January 2012
 ###############
 
 ## Load libraries
@@ -38,7 +38,7 @@ cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 # cpi.matched.party.all <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + UNRATE + GlobalModel + DiscountRate2qChange + pres_party*ElectionPeriod4 + pres_party*senate_dem_rep + pres_party*house_dem_rep + senate_dem_rep + house_dem_rep, data = cpi.complete, method = "genetic", pop.size = 161)
 
 # Party, Only pres*ElectionPeriod4 Interaction
-cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + UNRATE + pres_party*ElectionPeriod, data = cpi.complete, method = "genetic", pop.size = 161)
+cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + UNRATE + pres_party*ElectionPeriod4, data = cpi.complete, method = "genetic", pop.size = 161)
 
 #### Diagnostics for Covariate Balance ####
 # summary(cpi.matched.election)
