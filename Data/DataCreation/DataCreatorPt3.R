@@ -1,7 +1,7 @@
 ##############
 # Fed Funds Rate & Discount Rate Investigation on Partisan Bias
 # Christopher Gandrud
-# Updated 17 November 2012
+# Updated 17 Januar 2013
 ##############
 
 # Load packages
@@ -197,5 +197,27 @@ Rate5 <- Rate5[-1:-5, ]
 # merge with cpi.data
 cpi.data <- merge(cpi.data, Rate5)
 
+#### Add Deficit Data ####
+# From FRED: http://research.stlouisfed.org/fred2/graph/?id=FYFSGDA188S
+# Accessed 18 January 2013
+# Federal Surplus or Deficit [-] as Percent of Gross Domestic Product (FYFSGDA188S)
+# Annual
+
+# Load data
+Deficit <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012/FRED_DeficitGDP.csv")
+
+# Standardise Year Variable
+Deficit$Year <- gsub("01/01/", "", x = Deficit$Year)
+
+# Create cpi.data year variable
+cpi.data$Year <- substr(cpi.data$Quarter, start = 1, stop = 4)
+
+# Merge by year
+cpi.data <- merge(cpi.data, Deficit)
+
+# Remove year variable
+cpi.data <- gdata::remove.vars(cpi.data, names = "Year")
+
+### Write Data ####
 write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", sep = ",")
 
