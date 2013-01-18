@@ -257,10 +257,6 @@ Finally, we include a variable for the sitting {\bf{Federal Reserve Board Chair}
 
 In this section we graphically present results from a number of parametric model specifications and discuss our findings. Coefficient estimate tables can be found in the Appendix for most of the parametric model specifications (see tables \ref{OutputNL} and \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using normal linear and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually a few more variables--such as Output Gap--were `statistically significant' at the standard 0.05 significance level in models using unmatched data compared to estimates from the matched data sets. 
 
-Before jumping into the detailed results, we discuss some of our alterations to the data set we made largely in response to diagnostic test results. 
-
-We have 36 election period `treatments' in our data set. Our data set matched by election period only contained about 57 observations. Because of this small sample size, we do not show estimates from models using data matched on election period.\footnote{More information on the models can be found at \url{http://bit.ly/OFdA4u}.}
-
 We primarily diagnose the presidential party ID matching models with a propensity score distribution--the probability of a quarter being in the `treated' group given its covariates--as well as quantile-quantile plots to diagnose whether or not each covariate in the matched data sets is balanced \citep{Ho2007}.\footnote{Please see Figure \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created by running the original matching models in our main analysis source code file. The file is available at: \url{http://bit.ly/OFdA4u}.}  We are unable to achieve covariate balance for the Congressional interaction terms\footnote{The presidential party ID and election period interaction does balance.} and the Federal Reserve Chair variable. Chairs in our data set in the pre-Volcker/Greenspan era as well as current Chair Ben Bernanke were in office for very few quarters, making it difficult to match them. It is unlikely that  covariate balance could be achieved on these interactions given our relatively small sample size. Because of this, we only discuss Congressional interaction terms and Chair variable estimates from the non-matched data sets.}
 
 We remove quarters from the sample where forecasters would not have known who the president would be because the president had not yet been elected for that quarter. For models where the dependent variable is forecasts made two quarters beforehand this means removing the 2 quarters following each presidential election.\footnote{In this case 19 quarters are removed.} Results from these restricted data sets are fairly similar to those from the full data set.
@@ -586,16 +582,16 @@ print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Est
 
 %%%%%%% Matching Diagnostic Plots %%%%%%
 %%%%% Elections %%%%%%%
-%\begin{figure}[h]
-%  \caption{Matched on Election Period}
-%  \label{ElectPropensityScores}
-% <<ElectPropensity, echo=FALSE, fig.height=4>>=
-% plot(cpi.matched.election, type = "jitter", interactive = FALSE)
-%@
-%    \begin{singlespace}
-%        {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are election quarters or the quarter before. ``Control Units" are from all other quarters. The more similar the distribution of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
-%    \end{singlespace}
-%\end{figure}
+\begin{figure}[h]
+  \caption{Matched on Election Period}
+  \label{ElectPropensityScores}
+ <<ElectPropensity, echo=FALSE, fig.height=4>>=
+ plot(cpi.matched.election, type = "jitter", interactive = FALSE)
+@
+    \begin{singlespace}
+        {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are election quarters or the quarter before. ``Control Units" are from all other quarters. The more similar the distribution of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+    \end{singlespace}
+\end{figure}
 
 %%%%% Presidential Party ID %%%%%%
 \begin{figure}[h]
