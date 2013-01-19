@@ -219,7 +219,7 @@ Balance is usually achieved in matching through propensity scores: the probabili
 
 \subsection{Parametric Models}
 
-Once we created our matched data sets we used two types of parametric models to examine the effects of our treatment variables on the continuous inflation forecast error variable.\footnote{Parametric models are from the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} The first was normal linear regression using maximum likelihood estimation of variance (i.e. Normal Linear).\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model. We also used ordinary least squares (in \texttt{Zelig}, this is the \texttt{ls} model). The results were virtually identical.} The other type was Bayesian normal linear regression\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.}\footnote{Bayesian normal linear regression is particularly useful for our limited sample as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}. Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.  See also \cite{Imai2008} for a discussion of how to combine non-parametric matching and parametric analysis in one research process.} Because we used  matching methods, not only do we better isolate the treatments' effects from those of the background variables, but we also reduce our estimated causal effects' dependence on the type of model we choose \cite[200--201]{Ho2007}.
+Once we created our matched data sets we used two types of parametric models to examine the effects of our treatment variables on the continuous inflation forecast error variable.\footnote{Parametric models are from the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} The first was normal linear regression using maximum likelihood estimation of variance (i.e. Normal Linear).\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model. We also used ordinary least squares (in \texttt{Zelig}, this is the \texttt{ls} model). The results were virtually identical.} The other type was Bayesian normal linear regression\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model. Bayesian normal linear regression is particularly useful for our limited sample as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}. Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.  See also \cite{Imai2008} for a discussion of how to combine non-parametric matching and parametric analysis in one research process.} Because we used  matching methods, not only do we better isolate the treatments' effects from those of the background variables, but we also reduce our estimated causal effects' dependence on the type of model we choose \cite[200--201]{Ho2007}.
 
 The generic parametric model we used is given by
 %
@@ -247,9 +247,9 @@ However, if prediction errors are largely the result of systematically biased ec
 
 Green Book forecasts are based on the assumption that monetary policy will not change between when the prediction is made and the time period it is predicting. Forecast errors may occur if monetary policy changes. If this is the case monetary policy changes would have a negative relationship with forecast errors. When the FOMC raises interest rates inflation may decline, causing the original forecast to have been too high and vice versa. To control for monetary policy changes we include a variable of {\bf{standardized changes to the discount rate}} from the quarter the Green Book prediction was made to the quarter it is predicting.\footnote{We averaged the discount rate over each quarter. Then we used the average discount rate $D$ in each quarter $q$ to create the variable $\Delta D_{q}$ using the simple formula: $\Delta D_{q} = \frac{D_{q} - D_{q-2}}{D_{q}}$. Note that the Federal Reserve changed how it used the discount rate and referred it at the beginning of 2003. To address this issue we primarily used data on the United States' discount rate recorded by the International Monetary Fund. Their data only goes back to the fourth quarter of 1982. So, before that we use the Federal Reserve's measure of the discount rate. Both of these variables are found in the FRED database at the St. Louis Federal Reserve (accessed July 2012). } The discount rate is one of the Federal Reserve's main tools for influencing the interest rate, especially the Fed funds rate.\footnote{A similar {\bf{relative changes in the Fed funds rate}} variable was included in some preliminary analyses. However, it did not change the results substantially and was estimated to have a similar effect on errors as the discount rate variable.}
 
-To examine if Federal Reserve inflation forecast errors are affected by actual levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}} and {\bf{government debt to GDP}}. 
+To examine if Federal Reserve inflation forecast errors are affected by levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}}, {\bf{government debt to GDP}}, and \textbf{deficit to GDP}. Expenditure and debt are on a quarterly basis, while federal deficits are measured annually.\footnote{All three of these variables are from the FRED database, accessed October 2012 and January 2013.} 
 
-To examine how broader economic factors may be related to forecast errors we include variables of the {\bf{GDP output gap}}, {\bf{unemployment rate}} and {\bf{recession}}. The GDP output gap is the potential GDP as a percentage of real GDP. It is in nominal terms. The recession variable is a dummy for whether or not the United States was in a recession. All three of these variables are from the FRED database.\footnote{Accessed June and October 2012.} 
+To examine how broader economic factors may be related to forecast errors we include variables of the {\bf{GDP output gap}}, {\bf{unemployment rate}} and {\bf{recession}}. The GDP output gap is the potential GDP as a percentage of real GDP. It is in nominal terms. The recession variable is a dummy for whether or not the United States was in a recession.\footnote{All three of these variables are from the FRED database.Accessed June and October 2012.} 
 
 Finally, we include a variable for the sitting {\bf{Federal Reserve Board Chair}}.\footnote{Chairs for the years in our analysis are William McChesney Martin, Jr., Arthur Burns, G. William Miller, Paul Volcker, Alan Greenspan, and Ben Bernanke.}
 
@@ -362,7 +362,7 @@ Interestingly, staff also do not seem to compensate for FOMC partisan biases in 
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from normal linear regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the means of the congressional partisan control groups.}}
+        {\scriptsize{Simulated from normal linear regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses. \\ The solid line connects the group means.}}
     \end{singlespace}
 \end{figure}
 
@@ -443,37 +443,37 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
 
 %%%%%%% Table of  matched data with Normal Linear parametric model %%%%%%%%
 
-%\begin{table}[ht]
-%    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
-%    \label{OutputEL}
-%    \vspace{0.25cm}
-%    \begin{center}
-%    {\footnotesize
-% << ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by Election Period Variable)}
+    \label{OutputEL}
+    \vspace{0.25cm}
+    \begin{center}
+    {\footnotesize
+<< ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
-%    # Model names & Coefficient Names -- Use B for all  mathced models
-%    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
-%    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    # Model names & Coefficient Names -- Use B for all  mathced models
+    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
+    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
-%    # Table of non-matched models with ls
-%    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
-%              digits = 1, 
-%              Sweave = TRUE, 
-%              stars = "default", 
-%              model.names = ModelNamesB, 
-%              coef.names = CoefNamesB,
-%              notes = list(se.note, 
-%                           stars.note, 
-%                           "The recession variable is ommitted because there was no variation in the matched data set.",
-%                           "The reason that there was no variation is because there was never a recession during an",
-%                           "election period in our data set."
-%                           )
-%              )
-%
-%@
-%    }
-%    \end{center}
-%\end{table}
+    # Table of non-matched models with ls
+    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
+              digits = 1, 
+              Sweave = TRUE, 
+              stars = "default", 
+              model.names = ModelNamesB, 
+              coef.names = CoefNamesB,
+              notes = list(se.note, 
+                           stars.note, 
+                           "The recession variable is ommitted because there was almost no variation in the matched data set.",
+                           "The reason that there was no variation is because there were only two quarters with both a recession",
+                           "and an election period in our data set."
+                           )
+              )
+
+@
+    }
+    \end{center}
+\end{table}
 
 %%%%%%% Table of pres_party matched data with Normal Linear Regression parametric model %%%%%%%%
 

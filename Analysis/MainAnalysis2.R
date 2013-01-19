@@ -34,7 +34,7 @@ cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 # Elections, No interactions
 cpi.matched.election <- matchit(ElectionPeriod4 ~ pres_party + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + UNRATE, data = cpi.complete, method = "genetic", pop.size = 161)
 
-# Party, All Interactions
+# Matched by Party, All Interactions
 # cpi.matched.party.all <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + UNRATE + GlobalModel + DiscountRate2qChange + pres_party*ElectionPeriod4 + pres_party*senate_dem_rep + pres_party*house_dem_rep + senate_dem_rep + house_dem_rep, data = cpi.complete, method = "genetic", pop.size = 161)
 
 # Party, Only pres*ElectionPeriod4 Interaction
@@ -159,7 +159,8 @@ NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election 
 PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party, cite = FALSE)
 
 #### Save variables model objects #####
-save(cpi.Mdf.party, cpi.matched.party, cpi.data2, NL1, NL2, NL3, NL4,
+save(cpi.Mdf.party, cpi.Mdf.election, cpi.matched.election, cpi.matched.party, cpi.data2, NL1, NL2, NL3, NL4,
      NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
-     PL1, PL2, PL3, PL4,	PL5, PL6, PL7, PL8, PL9, 
-     PL10, PL11, PL12, NB1, PB1, file = "ModelObjects.RData")
+     EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, 
+     EL10, EL11, EL12, PL1, PL2, PL3, PL4,	PL5, PL6,
+     PL7, PL8, PL9, PL10, PL11, PL12, NB1, PB1, file = "ModelObjects.RData")
