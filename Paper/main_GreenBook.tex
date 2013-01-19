@@ -391,7 +391,7 @@ However, if prediction errors are largely the result of systematically biased ec
 
 Green Book forecasts are based on the assumption that monetary policy will not change between when the prediction is made and the time period it is predicting. Forecast errors may occur if monetary policy changes. If this is the case monetary policy changes would have a negative relationship with forecast errors. When the FOMC raises interest rates inflation may decline, causing the original forecast to have been too high and vice versa. To control for monetary policy changes we include a variable of {\bf{standardized changes to the discount rate}} from the quarter the Green Book prediction was made to the quarter it is predicting.\footnote{We averaged the discount rate over each quarter. Then we used the average discount rate $D$ in each quarter $q$ to create the variable $\Delta D_{q}$ using the simple formula: $\Delta D_{q} = \frac{D_{q} - D_{q-2}}{D_{q}}$. Note that the Federal Reserve changed how it used the discount rate and referred it at the beginning of 2003. To address this issue we primarily used data on the United States' discount rate recorded by the International Monetary Fund. Their data only goes back to the fourth quarter of 1982. So, before that we use the Federal Reserve's measure of the discount rate. Both of these variables are found in the FRED database at the St. Louis Federal Reserve (accessed July 2012). } The discount rate is one of the Federal Reserve's main tools for influencing the interest rate, especially the Fed funds rate.\footnote{A similar {\bf{relative changes in the Fed funds rate}} variable was included in some preliminary analyses. However, it did not change the results substantially and was estimated to have a similar effect on errors as the discount rate variable.}
 
-To examine if Federal Reserve inflation forecast errors are affected by levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}}, {\bf{government debt to GDP}}, and \textbf{deficit to GDP}. Expenditure and debt are on a quarterly basis, while federal deficits are measured annually.\footnote{All three of these variables are from the FRED database, accessed October 2012 and January 2013.} 
+To examine if Federal Reserve inflation forecast errors are affected by levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}}, {\bf{government debt to GDP}},\footnote{Results for debt to GDP are not shown because it was never statistically significant in any of the models} and \textbf{deficit to GDP}. Expenditure and debt are on a quarterly basis, while federal deficits are measured annually.\footnote{All three of these variables are from the FRED database, accessed October 2012 and January 2013.} 
 
 To examine how broader economic factors may be related to forecast errors we include variables of the {\bf{GDP output gap}}, {\bf{unemployment rate}} and {\bf{recession}}. The GDP output gap is the potential GDP as a percentage of real GDP. It is in nominal terms. The recession variable is a dummy for whether or not the United States was in a recession.\footnote{All three of these variables are from the FRED database.Accessed June and October 2012.} 
 
@@ -563,58 +563,58 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
 \hline 
   & \multicolumn{ 1 }{ c }{ A1 } & \multicolumn{ 1 }{ c }{ A2 } & \multicolumn{ 1 }{ c }{ A3 } & \multicolumn{ 1 }{ c }{ A4 } & \multicolumn{ 1 }{ c }{ A5 } & \multicolumn{ 1 }{ c }{ A6 } & \multicolumn{ 1 }{ c }{ A7 } & \multicolumn{ 1 }{ c }{ A8 } & \multicolumn{ 1 }{ c }{ A9 } & \multicolumn{ 1 }{ c }{ A10 } & \multicolumn{ 1 }{ c }{ A11 } & \multicolumn{ 1 }{ c }{ A12 } & \multicolumn{ 1 }{ c }{ A13 } \\ \hline
  %                    & A1              & A2              & A3              & A4              & A5              & A6              & A7              & A8              & A9              & A10             & A11             & A12             & A13            \\ 
-Intercept            & 1.9             & 1.9             & 2.0             & 2.3             & 2.3             & 0.4             & 0.4             & 0.3             & 1.3             & 2.5             & 2.0             & 2.6             & -1.8 ^{***}    \\ 
-                     & (2.3)           & (2.3)           & (2.3)           & (1.9)           & (1.9)           & (2.0)           & (2.1)           & (2.1)           & (2.2)           & (1.9)           & (1.9)           & (1.9)           & (0.4)          \\ 
-Recession            & -0.0            & -0.0            & -0.0            & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & -0.0            & 0.1             & 0.1             & 0.1             &                \\ 
+Intercept            & 3.9 ^*          & 3.8 ^*          & 4.1 ^*          & 4.6 ^{**}       & 4.6 ^{**}       & 0.7             & 0.8             & 0.6             & 1.9             & 2.9             & 2.4             & 2.6             & -1.8 ^{***}    \\ 
+                     & (1.9)           & (1.9)           & (1.9)           & (1.7)           & (1.7)           & (2.0)           & (2.0)           & (2.1)           & (2.1)           & (1.9)           & (1.9)           & (1.9)           & (0.4)          \\ 
+Recession            & -0.1            & -0.1            & -0.1            & 0.1             & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & 0.1 ^\dagger   & 0.1             & 0.1             &                \\ 
                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
-Debt/GDP             & -0.0            & -0.0            & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            &                \\ 
+Deficit/GDP          & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.0             & 0.0             & 0.0 ^*          & 0.0 ^*          & 0.0 ^\dagger   & 0.0             & -0.0            & -0.0            & -0.0            &                \\ 
                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Expenditure/GDP      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      &                \\ 
+Expenditure/GDP      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      &                \\ 
                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Output Gap           & -0.0 ^*         & -0.0 ^*         & -0.1 ^*         & -0.1 ^{**}      & -0.1 ^{**}      & -0.0            & -0.0            & -0.0            & -0.0 ^*         & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{**}      &                \\ 
+Output Gap           & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.0 ^\dagger  & -0.0 ^\dagger  & -0.0 ^\dagger  & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{**}      &                \\ 
                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Discount Rate Change & -0.1            & -0.1            & -0.1            & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^{**}      & -0.2 ^*         & -0.2 ^*         &                \\ 
+Discount Rate Change & -0.0            & -0.0            & -0.0            & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         &                \\ 
                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
-Unemployment Rate    & -0.1            & -0.1            & -0.1            & -0.1            & -0.1            & -0.1 ^*         & -0.1 ^*         & -0.1 ^*         & -0.1 ^\dagger  & -0.1            & -0.1            & -0.0            &                \\ 
+Unemployment Rate    & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.0             & 0.0             & -0.1            & -0.1            & -0.1            & -0.0            & -0.0            & -0.0            & -0.0            &                \\ 
                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Qtr. to Election     &                 & 0.0             &                 &                 & 0.0             & 0.0             & 0.0             &                 & 0.0             & 0.0 ^\dagger   & 0.0 ^\dagger   & 0.0 ^*          &                \\ 
+Qtr. to Election     &                 & 0.0             &                 &                 & 0.0             & 0.0             & 0.0             &                 & 0.0             & 0.0 ^*          & 0.0 ^*          & 0.0 ^*          &                \\ 
                      &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
 Election Period      &                 &                 & -0.0            &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
                      &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
-Pres. Party ID       &                 &                 &                 & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.9 ^{***}      & 1.0 ^{***}      & 1.5 ^*          & 2.1 ^{**}      \\ 
-                     &                 &                 &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.0)           & (0.1)           & (0.2)           & (0.7)           & (0.8)          \\ 
-Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.3 ^*         & -0.3 ^*         & -0.3 ^*         &                 & -0.2            & -0.1            & 0.4             & 0.8 ^*         \\ 
-                     &                 &                 &                 &                 &                 & (0.2)           & (0.2)           & (0.2)           &                 & (0.1)           & (0.1)           & (0.4)           & (0.4)          \\ 
-House Dem/Rep        &                 &                 &                 &                 &                 & 0.3 ^*          & 0.3 ^*          & 0.4 ^*          &                 & 0.5 ^{**}       & 0.4 ^{**}       & 1.1 ^{**}       & 1.6 ^{***}     \\ 
-                     &                 &                 &                 &                 &                 & (0.2)           & (0.2)           & (0.2)           &                 & (0.1)           & (0.1)           & (0.3)           & (0.3)          \\ 
+Pres. Party ID       &                 &                 &                 & 0.3 ^{***}      & 0.3 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.9 ^{***}      & 1.0 ^{***}      & 1.6 ^*          & 2.1 ^{**}      \\ 
+                     &                 &                 &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.2)           & (0.2)           & (0.7)           & (0.8)          \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.3 ^*         & -0.3 ^*         & -0.3 ^*         &                 & -0.2 ^\dagger  & -0.2            & 0.5             & 0.8 ^*         \\ 
+                     &                 &                 &                 &                 &                 & (0.1)           & (0.2)           & (0.2)           &                 & (0.1)           & (0.1)           & (0.4)           & (0.4)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & 0.4 ^{**}       & 0.4 ^{**}       & 0.4 ^{**}       &                 & 0.5 ^{***}      & 0.5 ^{***}      & 1.1 ^{***}      & 1.6 ^{***}     \\ 
+                     &                 &                 &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           &                 & (0.1)           & (0.1)           & (0.3)           & (0.3)          \\ 
 FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & 0.0             & 0.0             &                 &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 & (0.1)           & (0.1)           &                 &                 &                 &                 &                \\ 
 Qrt. Election2       &                 &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
 Pres*Qrt. Election2  &                 &                 &                 &                 &                 &                 &                 & -0.0            &                 &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
-Burns                &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             &                 &                 &                 &                \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
+Burns                &                 &                 &                 &                 &                 &                 &                 &                 & 0.3 ^{**}       &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
 Greenspan            &                 &                 &                 &                 &                 &                 &                 &                 & 0.2 ^\dagger   &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
-Martin               &                 &                 &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                \\ 
+Martin               &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Miller               &                 &                 &                 &                 &                 &                 &                 &                 & 0.3 ^\dagger   &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
-Miller               &                 &                 &                 &                 &                 &                 &                 &                 & 0.1             &                 &                 &                 &                \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
-Volcker              &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             &                 &                 &                 &                \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 &                 &                 &                \\ 
+Volcker              &                 &                 &                 &                 &                 &                 &                 &                 & 0.3 ^*          &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
 Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.5 ^{***}     &                 & -1.3            & -2.4 ^{**}     \\ 
                      &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 & (0.9)           & (0.9)          \\ 
-Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.6 ^{***}     & -0.1            & -0.1           \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           & (0.8)           & (0.7)          \\ 
-House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.5 ^\dagger  & -0.9 ^{***}    \\ 
+Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.7 ^{***}     & -0.2            & -0.1           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           & (0.9)           & (0.7)          \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.5 ^*         & -0.9 ^{***}    \\ 
                      &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           & (0.2)          \\ 
 Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.4             & 0.9 ^\dagger  \\ 
                      &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.5)           & (0.5)           \\
  $N$                  & 131             & 131             & 131             & 131             & 131             & 131             & 131             & 131             & 131             & 131             & 131             & 131             & 131            \\ 
-AIC                  & -5.7            & -3.8            & -3.9            & -57.0           & -55.0           & -56.7           & -54.7           & -52.8           & -51.2           & -79.9           & -76.9           & -79.0           & -45.3          \\ 
-BIC                  & 74.8            & 88.3            & 88.1            & 35.0            & 48.5            & 69.8            & 83.3            & 96.7            & 109.9           & 58.1            & 61.1            & 93.5            & 46.7           \\ 
-$\log L$            & 30.9            & 33.9            & 34.0            & 60.5            & 63.5            & 72.3            & 75.3            & 78.4            & 81.6            & 87.9            & 86.4            & 99.5            & 54.7            \\ \hline
+AIC                  & -26.9           & -25.0           & -25.4           & -52.5           & -50.6           & -59.5           & -57.9           & -56.1           & -51.4           & -78.0           & -74.9           & -79.0           & -45.3          \\ 
+BIC                  & 53.6            & 67.0            & 66.6            & 39.5            & 52.9            & 67.0            & 80.1            & 93.4            & 109.6           & 60.1            & 63.1            & 93.5            & 46.7           \\ 
+$\log L$            & 41.4            & 44.5            & 44.7            & 58.3            & 61.3            & 73.8            & 77.0            & 80.0            & 81.7            & 87.0            & 85.5            & 99.5            & 54.7            \\ \hline
  \multicolumn{14}{l}{\footnotesize{Standard errors in parentheses}}\\
 \multicolumn{14}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
 \end{tabular} 
@@ -636,52 +636,52 @@ $\log L$            & 30.9            & 33.9            & 34.0            & 60.5
 \begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
 \hline 
   & \multicolumn{ 1 }{ c }{ B1 } & \multicolumn{ 1 }{ c }{ B2 } & \multicolumn{ 1 }{ c }{ B3 } & \multicolumn{ 1 }{ c }{ B4 } & \multicolumn{ 1 }{ c }{ B5 } & \multicolumn{ 1 }{ c }{ B6 } & \multicolumn{ 1 }{ c }{ B7 } & \multicolumn{ 1 }{ c }{ B8 } & \multicolumn{ 1 }{ c }{ B9 } & \multicolumn{ 1 }{ c }{ B10 } & \multicolumn{ 1 }{ c }{ B11 } & \multicolumn{ 1 }{ c }{ B12 } \\ \hline
- %                    & B1              & B2              & B3              & B4              & B5              & B6              & B7              & B8              & B9              & B10             & B11             & B12            \\ 
-Intercept            & -5.6            & -5.2            & -5.1            & 1.1             & 1.6             & -0.8            & -0.4            & -1.0            & -1.4            & -2.1            & 3.5             & -2.6 ^{***}    \\ 
-                     & (4.6)           & (4.6)           & (4.7)           & (4.3)           & (4.3)           & (4.9)           & (4.9)           & (4.9)           & (4.4)           & (4.5)           & (4.4)           & (0.7)          \\ 
-Debt/GDP             & -0.0 ^\dagger  & -0.0 ^\dagger  & -0.0 ^\dagger  & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0 ^*         & -0.0 ^*         & 0.0             &                \\ 
-                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Expenditure/GDP      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{**}       & 0.2 ^{**}       & 0.2 ^{***}      & 0.3 ^{***}      & 0.0             &                \\ 
-                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.0)           & (0.1)           & (0.1)           &                \\ 
-Output Gap           & 0.0             & 0.0             & 0.0             & -0.0            & -0.1            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.1 ^\dagger  &                \\ 
-                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.1)           & (0.0)           &                \\ 
-Discount Rate Change & -0.2            & -0.2            & -0.2            & -0.2            & -0.2            & -0.2            & -0.3            & -0.3            & 0.0             & 0.1             & 0.3             &                \\ 
-                     & (0.3)           & (0.3)           & (0.3)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           &                \\ 
-Unemployment Rate    & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         & -0.1            & -0.0            & -0.1            & -0.1            & -0.1            & -0.1            & -0.1            & 0.1             &                \\ 
-                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
-Qtr. to Election     &                 & 0.0             &                 &                 & 0.0             & 0.0             & 0.0             &                 & 0.0 ^\dagger   & 0.0 ^\dagger   & 0.0 ^{***}      &                \\ 
-                     &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Election Period      &                 &                 & -0.1            &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
-                     &                 &                 & (0.1)           &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
-Pres. Party ID       &                 &                 &                 & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{**}       & 0.3 ^{**}       & 1.1 ^{***}      & 1.4 ^{***}      & 17.5 ^{***}     & 9.0 ^*         \\ 
-                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.3)           & (0.3)           & (4.4)           & (3.6)          \\ 
-Senate Dem/Rep       &                 &                 &                 &                 &                 & -0.3            & -0.2            & -0.2            & 0.1             & 0.2             & 1.9 ^\dagger   & 1.5 ^*         \\ 
-                     &                 &                 &                 &                 &                 & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (1.0)           & (0.7)          \\ 
-House Dem/Rep        &                 &                 &                 &                 &                 & 0.3             & 0.5             & 0.5             & 0.1             & -0.0            & 2.3 ^{**}       & 2.1 ^{***}     \\ 
-                     &                 &                 &                 &                 &                 & (0.3)           & (0.4)           & (0.4)           & (0.3)           & (0.3)           & (0.7)           & (0.4)          \\ 
-FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & -0.3            & -0.3            &                 &                 &                 &                \\ 
-                     &                 &                 &                 &                 &                 &                 & (0.2)           & (0.2)           &                 &                 &                 &                \\ 
-Qrt. Election2       &                 &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                \\ 
-                     &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                \\ 
-Pres*Qrt. Election2  &                 &                 &                 &                 &                 &                 &                 & -0.0            &                 &                 &                 &                \\ 
-                     &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                \\ 
-Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 & -0.6 ^{**}      &                 & -18.8 ^{***}    & -10.4 ^{**}    \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 & (4.9)           & (3.7)          \\ 
-Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.9 ^{**}      & -10.8 ^{**}     & -4.3           \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.3)           & (3.2)           & (2.8)          \\ 
-House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -1.3 ^*         & -1.3 ^{**}     \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.5)           & (0.4)          \\ 
-Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 12.5 ^{***}     & 6.2 ^*         \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (3.4)           & (2.7)           \\
- $N$                  & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57             \\ 
-AIC                  & 13.2            & 13.7            & 14.0            & -2.6            & -3.0            & -0.3            & -0.2            & 2.7             & -11.3           & -9.4            & -23.4           & -7.8           \\ 
-BIC                  & 62.2            & 70.9            & 71.2            & 54.6            & 62.4            & 81.4            & 89.7            & 100.8           & 78.6            & 80.5            & 91.0            & 57.5           \\ 
-$\log L$            & 17.4            & 21.2            & 21.0            & 29.3            & 33.5            & 40.2            & 44.1            & 46.6            & 49.7            & 48.7            & 67.7            & 35.9            \\ \hline
+ %                    & B1             & B2             & B3             & B4             & B5             & B6             & B7             & B8             & B9             & B10            & B11            & B12           \\ 
+Intercept            & -0.6           & -0.3           & -0.1           & 4.3            & 4.7            & 0.7            & 1.1            & 0.5            & 2.3            & 1.9            & 2.2            & -2.6 ^{**}    \\ 
+                     & (3.7)          & (3.7)          & (3.7)          & (4.2)          & (4.1)          & (4.9)          & (5.1)          & (5.2)          & (4.6)          & (4.7)          & (4.2)          & (0.8)         \\ 
+Deficit/GDP          & 0.1 ^{***}     & 0.1 ^{***}     & 0.1 ^{***}     & 0.0            & 0.1            & 0.0            & 0.0            & 0.0            & -0.0           & -0.0           & -0.0           &               \\ 
+                     & (0.0)          & (0.0)          & (0.0)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          &               \\ 
+Expenditure/GDP      & 0.3 ^{***}     & 0.3 ^{***}     & 0.3 ^{***}     & 0.2 ^{***}     & 0.2 ^{***}     & 0.2 ^{**}      & 0.2 ^{**}      & 0.2 ^{**}      & 0.1 ^*         & 0.1 ^*         & 0.1            &               \\ 
+                     & (0.0)          & (0.0)          & (0.0)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          &               \\ 
+Output Gap           & -0.1           & -0.1           & -0.1           & -0.1 ^*        & -0.1 ^*        & -0.0           & -0.1           & -0.0           & -0.1           & -0.1           & -0.1           &               \\ 
+                     & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.0)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.0)          &               \\ 
+Discount Rate Change & 0.2            & 0.2            & 0.2            & -0.1           & -0.1           & -0.1           & -0.1           & -0.1           & -0.1           & -0.0           & 0.2            &               \\ 
+                     & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          &               \\ 
+Unemployment Rate    & 0.1            & 0.1            & 0.1            & 0.1            & 0.1            & -0.0           & -0.0           & -0.1           & -0.0           & -0.0           & 0.1            &               \\ 
+                     & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          &               \\ 
+Qtr. to Election     &                & 0.0            &                &                & 0.0            & 0.0            & 0.0            &                & 0.0 ^\dagger  & 0.0 ^\dagger  & 0.0 ^{**}      &               \\ 
+                     &                & (0.0)          &                &                & (0.0)          & (0.0)          & (0.0)          &                & (0.0)          & (0.0)          & (0.0)          &               \\ 
+Election Period      &                &                & -0.1           &                &                &                &                &                &                &                &                &               \\ 
+                     &                &                & (0.1)          &                &                &                &                &                &                &                &                &               \\ 
+Pres. Party ID       &                &                &                & 0.3 ^*         & 0.3 ^*         & 0.3 ^*         & 0.3 ^*         & 0.3 ^*         & 1.2 ^{***}     & 1.3 ^{**}      & 14.2 ^{**}     & 9.1 ^*        \\ 
+                     &                &                &                & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.1)          & (0.3)          & (0.4)          & (4.1)          & (4.3)         \\ 
+Senate Dem/Rep       &                &                &                &                &                & -0.3           & -0.3           & -0.3           & -0.2           & -0.1           & 1.8            & 1.5 ^*        \\ 
+                     &                &                &                &                &                & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (0.3)          & (1.1)          & (0.7)         \\ 
+House Dem/Rep        &                &                &                &                &                & 0.4            & 0.5            & 0.5            & 0.5 ^*         & 0.4            & 1.8 ^{**}      & 2.0 ^{***}    \\ 
+                     &                &                &                &                &                & (0.3)          & (0.4)          & (0.4)          & (0.3)          & (0.3)          & (0.6)          & (0.4)         \\ 
+FRB/GlobalModel      &                &                &                &                &                &                & -0.1           & -0.1           &                &                &                &               \\ 
+                     &                &                &                &                &                &                & (0.2)          & (0.2)          &                &                &                &               \\ 
+Qrt. Election2       &                &                &                &                &                &                &                & 0.0            &                &                &                &               \\ 
+                     &                &                &                &                &                &                &                & (0.0)          &                &                &                &               \\ 
+Pres*Qrt. Election2  &                &                &                &                &                &                &                & -0.0           &                &                &                &               \\ 
+                     &                &                &                &                &                &                &                & (0.0)          &                &                &                &               \\ 
+Pres*House           &                &                &                &                &                &                &                &                & -0.6 ^{**}     &                & -14.4 ^{**}    & -10.2 ^*      \\ 
+                     &                &                &                &                &                &                &                &                & (0.2)          &                & (4.2)          & (4.4)         \\ 
+Pres*Senate          &                &                &                &                &                &                &                &                &                & -0.7 ^*        & -9.1 ^{**}     & -4.6          \\ 
+                     &                &                &                &                &                &                &                &                &                & (0.3)          & (3.3)          & (3.4)         \\ 
+House*Senate         &                &                &                &                &                &                &                &                &                &                & -1.2 ^*        & -1.2 ^{**}    \\ 
+                     &                &                &                &                &                &                &                &                &                &                & (0.6)          & (0.4)         \\ 
+Pres*House*Senate    &                &                &                &                &                &                &                &                &                &                & 9.7 ^{**}      & 6.2 ^\dagger \\ 
+                     &                &                &                &                &                &                &                &                &                &                & (3.0)          & (3.2)          \\
+ $N$                  & 56             & 56             & 56             & 56             & 56             & 56             & 56             & 56             & 56             & 56             & 56             & 56            \\ 
+AIC                  & 5.0            & 4.5            & 5.8            & 1.5            & 0.6            & 1.8            & 3.5            & 6.2            & -5.4           & -2.7           & -16.7          & -4.6          \\ 
+BIC                  & 53.6           & 61.2           & 62.5           & 58.2           & 65.4           & 82.8           & 92.6           & 103.4          & 83.7           & 86.4           & 96.7           & 60.2          \\ 
+$\log L$            & 21.5           & 25.8           & 25.1           & 27.3           & 31.7           & 39.1           & 42.2           & 44.9           & 46.7           & 45.3           & 64.3           & 34.3           \\ \hline
  \multicolumn{13}{l}{\footnotesize{Standard errors in parentheses}}\\
 \multicolumn{13}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}}\\
-\multicolumn{13}{l}{\footnotesize{The recession variable is ommitted because there was no variation in the matched data set.}}\\
-\multicolumn{13}{l}{\footnotesize{The reason that there was no variation is because there was never a recession during an}}\\
-\multicolumn{13}{l}{\footnotesize{election period in our data set.}} 
+\multicolumn{13}{l}{\footnotesize{The recession variable is ommitted because there was almost no variation in the matched data set.}}\\
+\multicolumn{13}{l}{\footnotesize{The reason that there was no variation is because there were only two quarters with both a recession}}\\
+\multicolumn{13}{l}{\footnotesize{and an election period in our data set.}} 
 \end{tabular} 
 
 
@@ -702,48 +702,48 @@ $\log L$            & 17.4            & 21.2            & 21.0            & 29.3
 \hline 
   & \multicolumn{ 1 }{ c }{ C1 } & \multicolumn{ 1 }{ c }{ C2 } & \multicolumn{ 1 }{ c }{ C3 } & \multicolumn{ 1 }{ c }{ C4 } & \multicolumn{ 1 }{ c }{ C5 } & \multicolumn{ 1 }{ c }{ C6 } & \multicolumn{ 1 }{ c }{ C7 } & \multicolumn{ 1 }{ c }{ C8 } & \multicolumn{ 1 }{ c }{ C9 } & \multicolumn{ 1 }{ c }{ C10 } & \multicolumn{ 1 }{ c }{ C11 } & \multicolumn{ 1 }{ c }{ C12 } \\ \hline
  %                    & C1              & C2              & C3              & C4              & C5              & C6              & C7              & C8              & C9              & C10             & C11             & C12            \\ 
-Intercept            & 2.2             & 2.2             & 2.0             & 3.4             & 3.4             & -5.3            & -5.9            & -6.5            & -6.4            & -6.4            & -3.0            & -0.7           \\ 
-                     & (4.2)           & (4.3)           & (4.2)           & (3.5)           & (3.5)           & (4.5)           & (4.4)           & (4.4)           & (4.4)           & (4.5)           & (5.1)           & (1.0)          \\ 
-Recession            & 0.2             & 0.2             & 0.3             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             & 0.2             &                \\ 
-                     & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           &                \\ 
-Debt/GDP             & 0.0             & 0.0             & 0.0             & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            & -0.0            &                \\ 
+Intercept            & 2.9             & 2.3             & 2.6             & 1.8             & 1.5             & -8.7 ^*         & -10.3 ^*        & -10.9 ^*        & -7.8 ^*         & -8.8 ^*         & -5.1            & -0.3           \\ 
+                     & (3.5)           & (3.5)           & (3.3)           & (3.3)           & (3.3)           & (3.9)           & (4.2)           & (4.2)           & (3.7)           & (3.7)           & (4.1)           & (0.9)          \\ 
+Recession            & 0.2             & 0.2             & 0.4 ^*          & 0.2             & 0.2             & 0.1             & 0.1             & 0.1             & 0.2             & 0.1             & 0.2             &                \\ 
+                     & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.2)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
+Deficit/GDP          & 0.1 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.0             & 0.1             & -0.0            & -0.0            & -0.0            & -0.1            & -0.1            & -0.0            &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           &                \\ 
+Expenditure/GDP      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^*          & 0.2 ^{**}       & 0.1 ^*          &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
+Output Gap           & -0.1 ^*         & -0.1 ^\dagger  & -0.1 ^*         & -0.1            & -0.1            & 0.1             & 0.1             & 0.1             & 0.1             & 0.1             & 0.0             &                \\ 
                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Expenditure/GDP      & 0.1             & 0.1             & 0.1             & 0.3 ^{**}       & 0.3 ^{**}       & 0.3 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.2 ^*          & 0.2 ^{**}       & 0.2             &                \\ 
-                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
-Output Gap           & -0.0            & -0.0            & -0.0            & -0.1 ^\dagger  & -0.1 ^\dagger  & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             & 0.0             &                \\ 
-                     & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
-Discount Rate Change & -0.3            & -0.3            & -0.4            & -0.6 ^*         & -0.6 ^*         & -0.5 ^\dagger  & -0.4            & -0.5 ^\dagger  & -0.3            & -0.3            & -0.5            &                \\ 
+Discount Rate Change & -0.3            & -0.3            & -0.4            & -0.5 ^\dagger  & -0.5 ^\dagger  & -0.5 ^\dagger  & -0.4            & -0.4            & -0.4            & -0.4            & -0.5 ^\dagger  &                \\ 
                      & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           &                \\ 
-Unemployment Rate    & 0.0             & 0.0             & 0.0             & -0.1 ^\dagger  & -0.1 ^\dagger  & -0.3 ^{**}      & -0.3 ^{**}      & -0.4 ^{**}      & -0.3 ^*         & -0.3 ^*         & -0.3 ^*         &                \\ 
+Unemployment Rate    & 0.1 ^*          & 0.1 ^*          & 0.2 ^{**}       & -0.0            & 0.0             & -0.3 ^{**}      & -0.4 ^{**}      & -0.4 ^{**}      & -0.4 ^{**}      & -0.4 ^{**}      & -0.3 ^*         &                \\ 
                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
-Qtr. to Election     &                 & 0.0             &                 &                 & 0.0             & -0.0            & 0.0             &                 & 0.0             & 0.0             & 0.0             &                \\ 
+Qtr. to Election     &                 & 0.0 ^\dagger   &                 &                 & 0.0             & -0.0            & -0.0            &                 & 0.0             & -0.0            & 0.0             &                \\ 
                      &                 & (0.0)           &                 &                 & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           &                \\ 
-Election Period      &                 &                 & -0.1            &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Election Period      &                 &                 & -0.2 ^{**}      &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
                      &                 &                 & (0.1)           &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
-Pres. Party ID       &                 &                 &                 & 0.4 ^{***}      & 0.4 ^{***}      & 0.4 ^{***}      & 0.4 ^{***}      & 0.3 ^\dagger   & 0.8 ^{**}       & 0.8 ^{**}       & -0.5            & 1.0            \\ 
-                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.3)           & (0.3)           & (1.4)           & (1.1)          \\ 
-Senate Dem/Rep       &                 &                 &                 &                 &                 & -1.0 ^*         & -0.8 ^\dagger  & -0.6            & -1.1 ^{**}      & -0.9 ^*         & -2.7 ^*         & -1.0           \\ 
-                     &                 &                 &                 &                 &                 & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (1.1)           & (0.9)          \\ 
-House Dem/Rep        &                 &                 &                 &                 &                 & 1.1 ^{**}       & 1.0 ^*          & 0.9 ^*          & 1.3 ^{**}       & 1.2 ^{**}       & 0.8             & 1.6 ^\dagger  \\ 
-                     &                 &                 &                 &                 &                 & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (1.3)           & (0.9)          \\ 
-FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & -0.2            & -0.2            &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.3 ^{**}       & 0.3 ^{**}       & 0.4 ^{***}      & 0.4 ^{***}      & 0.3 ^{**}       & 1.1 ^{***}      & 1.2 ^{**}       & -0.3            & 0.6            \\ 
+                     &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.3)           & (0.4)           & (1.1)           & (1.1)          \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 & -1.4 ^{***}     & -1.3 ^{**}      & -1.3 ^{**}      & -1.4 ^{***}     & -1.3 ^{**}      & -2.5 ^{**}      & -1.3           \\ 
+                     &                 &                 &                 &                 &                 & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (0.4)           & (0.9)           & (0.9)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 & 1.3 ^{***}      & 1.4 ^{***}      & 1.4 ^{***}      & 1.6 ^{***}      & 1.5 ^{***}      & 1.2 ^\dagger   & 1.1            \\ 
+                     &                 &                 &                 &                 &                 & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.3)           & (0.7)           & (0.8)          \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 &                 & -0.1            & -0.1            &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 & (0.1)           & (0.1)           &                 &                 &                 &                \\ 
 Qrt. Election2       &                 &                 &                 &                 &                 &                 &                 & -0.0            &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                \\ 
 Pres*Qrt. Election2  &                 &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                \\ 
                      &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                \\ 
-Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 & -0.4 ^\dagger  &                 & -1.0            & -2.5 ^\dagger \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 & (1.8)           & (1.2)          \\ 
-Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.4            & 3.0 ^\dagger   & 1.7            \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.3)           & (1.7)           & (1.1)          \\ 
-House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.8             & -0.3           \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.9)           & (0.7)          \\ 
-Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.8            & 0.3            \\ 
-                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (1.0)           & (0.9)           \\
- $N$                  & 55              & 55              & 55              & 55              & 55              & 55              & 55              & 55              & 55              & 55              & 55              & 55             \\ 
-AIC                  & 11.4            & 13.4            & 11.6            & -10.9           & -9.1            & -14.5           & -15.7           & -15.2           & -17.2           & -15.5           & -16.1           & -14.6          \\ 
-BIC                  & 67.6            & 77.6            & 75.8            & 53.3            & 63.1            & 73.9            & 80.6            & 89.2            & 79.2            & 80.8            & 104.3           & 49.6           \\ 
-$\log L$            & 22.3            & 25.3            & 26.2            & 37.5            & 40.6            & 51.2            & 55.9            & 59.6            & 56.6            & 55.8            & 68.1            & 39.3            \\ \hline
+Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 & -0.5 ^*         &                 & -1.1            & -2.0           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           &                 & (1.4)           & (1.2)          \\ 
+Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.7 ^*         & 2.6             & 2.0 ^\dagger  \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.3)           & (1.6)           & (1.1)          \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.6             & 0.1            \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.6)           & (0.7)          \\ 
+Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.6            & -0.0           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.8)           & (0.9)           \\
+ $N$                  & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57              & 57             \\ 
+AIC                  & 2.8             & 1.3             & -5.2            & -5.9            & -5.5            & -18.3           & -17.6           & -16.4           & -24.1           & -21.9           & -21.7           & -8.2           \\ 
+BIC                  & 60.0            & 66.7            & 60.2            & 59.5            & 68.1            & 71.6            & 80.5            & 89.9            & 73.9            & 76.1            & 100.9           & 57.1           \\ 
+$\log L$            & 26.6            & 31.3            & 34.6            & 34.9            & 38.7            & 53.2            & 56.8            & 60.2            & 60.1            & 59.0            & 70.9            & 36.1            \\ \hline
  \multicolumn{13}{l}{\footnotesize{Standard errors in parentheses}}\\
 \multicolumn{13}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
 \end{tabular} 
@@ -755,7 +755,7 @@ $\log L$            & 22.3            & 25.3            & 26.2            & 37.5
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Sat Jan 19 14:04:28 2013
+% Sat Jan 19 14:43:46 2013
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
@@ -765,17 +765,17 @@ $\log L$            & 22.3            & 25.3            & 26.2            & 37.5
   \hline
 Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
   \hline
-Intercept & 1.75 & 1.74 & -1.61 & 1.75 & 5.18 \\ 
-  Pres. Party ID & 0.32 & 0.04 & 0.24 & 0.32 & 0.39 \\ 
-  Recession & 0.03 & 0.05 & -0.08 & 0.03 & 0.13 \\ 
+Intercept & 3.40 & 1.57 & 0.37 & 3.40 & 6.50 \\ 
+  Pres. Party ID & 0.25 & 0.04 & 0.17 & 0.25 & 0.33 \\ 
+  Recession & 0.02 & 0.06 & -0.09 & 0.01 & 0.13 \\ 
   Qtr. to Election & -0.01 & 0.00 & -0.01 & -0.01 & 0.00 \\ 
-  Debt/GDP & -0.01 & 0.00 & -0.01 & -0.01 & -0.00 \\ 
-  Expenditure/GDP & 0.20 & 0.03 & 0.14 & 0.20 & 0.26 \\ 
-  Output Gap & -0.05 & 0.02 & -0.09 & -0.05 & -0.02 \\ 
-  Discount Rate Change & -0.29 & 0.09 & -0.45 & -0.29 & -0.12 \\ 
-  Unemployment Rate & -0.07 & 0.04 & -0.15 & -0.07 & 0.01 \\ 
-  Global Model & -0.01 & 0.06 & -0.13 & -0.01 & 0.11 \\ 
-  sigma2 & 0.04 & 0.00 & 0.03 & 0.03 & 0.04 \\ 
+  Deficit/GDP & 0.04 & 0.02 & 0.00 & 0.04 & 0.08 \\ 
+  Expenditure/GDP & 0.18 & 0.02 & 0.13 & 0.18 & 0.22 \\ 
+  Output Gap & -0.07 & 0.02 & -0.11 & -0.07 & -0.04 \\ 
+  Discount Rate Change & -0.22 & 0.09 & -0.39 & -0.22 & -0.05 \\ 
+  Unemployment Rate & 0.02 & 0.03 & -0.04 & 0.02 & 0.08 \\ 
+  Global Model & 0.11 & 0.04 & 0.03 & 0.11 & 0.20 \\ 
+  sigma2 & 0.04 & 0.00 & 0.03 & 0.04 & 0.04 \\ 
    \hline
 \end{tabular}
 }
@@ -788,7 +788,7 @@ Intercept & 1.75 & 1.74 & -1.61 & 1.75 & 5.18 \\
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Sat Jan 19 14:04:29 2013
+% Sat Jan 19 14:43:47 2013
 \begin{table}[ht]
 \begin{center}
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
@@ -798,17 +798,17 @@ Intercept & 1.75 & 1.74 & -1.61 & 1.75 & 5.18 \\
   \hline
 Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
   \hline
-Intercept & 0.22 & 3.58 & -6.81 & 0.21 & 7.31 \\ 
-  Pres. Party ID & 0.33 & 0.08 & 0.17 & 0.33 & 0.48 \\ 
-  Recession & 0.12 & 0.16 & -0.20 & 0.11 & 0.44 \\ 
-  Qtr. to Election & 0.00 & 0.01 & -0.01 & 0.00 & 0.02 \\ 
-  Debt/GDP & -0.01 & 0.01 & -0.02 & -0.01 & 0.00 \\ 
-  Expenditure/GDP & 0.22 & 0.08 & 0.06 & 0.22 & 0.37 \\ 
-  Output Gap & -0.04 & 0.04 & -0.12 & -0.04 & 0.04 \\ 
-  Discount Rate Change & -0.48 & 0.30 & -1.07 & -0.48 & 0.09 \\ 
-  Unemployment Rate & -0.08 & 0.07 & -0.22 & -0.08 & 0.06 \\ 
-  Global Model & -0.16 & 0.12 & -0.40 & -0.16 & 0.08 \\ 
-  sigma2 & 0.04 & 0.01 & 0.03 & 0.04 & 0.06 \\ 
+Intercept & 1.93 & 3.54 & -4.98 & 1.92 & 8.95 \\ 
+  Pres. Party ID & 0.20 & 0.10 & 0.01 & 0.20 & 0.40 \\ 
+  Recession & 0.17 & 0.17 & -0.16 & 0.16 & 0.50 \\ 
+  Qtr. to Election & 0.01 & 0.01 & -0.01 & 0.01 & 0.03 \\ 
+  Deficit/GDP & 0.08 & 0.05 & -0.02 & 0.09 & 0.18 \\ 
+  Expenditure/GDP & 0.21 & 0.06 & 0.10 & 0.21 & 0.32 \\ 
+  Output Gap & -0.07 & 0.04 & -0.15 & -0.07 & 0.02 \\ 
+  Discount Rate Change & -0.49 & 0.30 & -1.09 & -0.49 & 0.09 \\ 
+  Unemployment Rate & 0.09 & 0.08 & -0.07 & 0.09 & 0.25 \\ 
+  Global Model & -0.01 & 0.09 & -0.19 & -0.01 & 0.18 \\ 
+  sigma2 & 0.05 & 0.01 & 0.03 & 0.05 & 0.07 \\ 
    \hline
 \end{tabular}
 }
@@ -834,7 +834,7 @@ Intercept            & 0.1             & 2.3             & 1.8             & 3.6
                      & (2.5)           & (2.0)           & (1.9)           & (2.2)           & (2.0)           & (2.0)           & (2.1)           & (2.1)           & (1.8)           & (1.8)           & (1.9)          \\ 
 Recession            & -0.0            & 0.0             & 0.0             & -0.0            & 0.1             & 0.0             & -0.0            & 0.0             & 0.0             & 0.0             & 0.0            \\ 
                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
-Debt/GDP             & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0 ^{**}      & -0.0 ^\dagger  & -0.0            & -0.0 ^\dagger  & 0.0             & -0.0            & -0.0            & -0.0 ^*        \\ 
+Deficit/GDP          & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0 ^{**}      & -0.0 ^\dagger  & -0.0            & -0.0 ^\dagger  & 0.0             & -0.0            & -0.0            & -0.0 ^*        \\ 
                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
 Expenditure/GDP      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}     \\ 
                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 

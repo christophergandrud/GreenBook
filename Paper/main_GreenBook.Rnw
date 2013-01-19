@@ -231,7 +231,7 @@ where $T_{q}$ is the treatment for quarter $q$ and $X$ is a vector of covariates
 
 \subsection{Variables}
 
-In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identity and/or the existence of an upcoming presidential election affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when they are a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or in the previous three quarter.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$, $q_{e-1}$, $q_{e-4}$, $q_{e-4}$  election quarters.}
+In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identity and/or the existence of an upcoming presidential election affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when they are a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or in the previous three quarters.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$, $q_{e-1}$, $q_{e-2}$, and $q_{e-3}$  election quarters.}
 
 To further examine whether or not Federal Reserve staff were taking into consideration an electoral business cycle either due to a partisan preference or the nearness of an election, we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections are coded as 0. 
 
@@ -247,7 +247,7 @@ However, if prediction errors are largely the result of systematically biased ec
 
 Green Book forecasts are based on the assumption that monetary policy will not change between when the prediction is made and the time period it is predicting. Forecast errors may occur if monetary policy changes. If this is the case monetary policy changes would have a negative relationship with forecast errors. When the FOMC raises interest rates inflation may decline, causing the original forecast to have been too high and vice versa. To control for monetary policy changes we include a variable of {\bf{standardized changes to the discount rate}} from the quarter the Green Book prediction was made to the quarter it is predicting.\footnote{We averaged the discount rate over each quarter. Then we used the average discount rate $D$ in each quarter $q$ to create the variable $\Delta D_{q}$ using the simple formula: $\Delta D_{q} = \frac{D_{q} - D_{q-2}}{D_{q}}$. Note that the Federal Reserve changed how it used the discount rate and referred it at the beginning of 2003. To address this issue we primarily used data on the United States' discount rate recorded by the International Monetary Fund. Their data only goes back to the fourth quarter of 1982. So, before that we use the Federal Reserve's measure of the discount rate. Both of these variables are found in the FRED database at the St. Louis Federal Reserve (accessed July 2012). } The discount rate is one of the Federal Reserve's main tools for influencing the interest rate, especially the Fed funds rate.\footnote{A similar {\bf{relative changes in the Fed funds rate}} variable was included in some preliminary analyses. However, it did not change the results substantially and was estimated to have a similar effect on errors as the discount rate variable.}
 
-To examine if Federal Reserve inflation forecast errors are affected by levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}}, {\bf{government debt to GDP}}, and \textbf{deficit to GDP}. Expenditure and debt are on a quarterly basis, while federal deficits are measured annually.\footnote{All three of these variables are from the FRED database, accessed October 2012 and January 2013.} 
+To examine if Federal Reserve inflation forecast errors are affected by levels of government expenditure we include the percentage of {\bf{current government expenditure to GDP}}, {\bf{government debt to GDP}},\footnote{Results for debt to GDP are not shown because it was never statistically significant in any of the models} and \textbf{deficit to GDP}. Expenditure and debt are on a quarterly basis, while federal deficits are measured annually.\footnote{All three of these variables are from the FRED database, accessed October 2012 and January 2013.} 
 
 To examine how broader economic factors may be related to forecast errors we include variables of the {\bf{GDP output gap}}, {\bf{unemployment rate}} and {\bf{recession}}. The GDP output gap is the potential GDP as a percentage of real GDP. It is in nominal terms. The recession variable is a dummy for whether or not the United States was in a recession.\footnote{All three of these variables are from the FRED database.Accessed June and October 2012.} 
 
@@ -255,7 +255,7 @@ Finally, we include a variable for the sitting {\bf{Federal Reserve Board Chair}
 
 \section{Results}
 
-In this section we graphically present results from a number of parametric model specifications and discuss our findings. Coefficient estimate tables can be found in the Appendix for most of the parametric model specifications (see tables \ref{OutputNL} and \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using normal linear and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually a few more variables--such as Output Gap--were `statistically significant' at the standard 0.05 significance level in models using unmatched data compared to estimates from the matched data sets. 
+In this section we graphically present results from a number of parametric model specifications and discuss our findings. Coefficient estimate tables can be found in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general there is very little difference between the coefficients estimated using normal linear and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). Usually a few more variables--such as the output gap and discount rate change--were `statistically significant' at the standard 0.05 level in models using unmatched data compared to estimates from the matched data sets. 
 
 We primarily diagnose the presidential party ID matching models with a propensity score distribution--the probability of a quarter being in the `treated' group given its covariates--as well as quantile-quantile plots to diagnose whether or not each covariate in the matched data sets is balanced \citep{Ho2007}.\footnote{Please see Figure \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created by running the original matching models in our main analysis source code file. The file is available at: \url{http://bit.ly/OFdA4u}.}  We are unable to achieve covariate balance for the Congressional interaction terms\footnote{The presidential party ID and election period interaction does balance.} and the Federal Reserve Chair variable. Chairs in our data set in the pre-Volcker/Greenspan era as well as current Chair Ben Bernanke were in office for very few quarters, making it difficult to match them. It is unlikely that  covariate balance could be achieved on these interactions given our relatively small sample size. Because of this, we only discuss Congressional interaction terms and Chair variable estimates from the non-matched data sets.}
 
@@ -288,7 +288,7 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Intercept values are not shown to maintain a reasonable scale for comparing covariate estimates. Please see the full estimates tables in the Appendix.}}
+        {\scriptsize{Data matched by presidential party identification. Intercept values are not shown to maintain a reasonable scale for comparing covariate estimates. Please see the full estimates tables in the Appendix.}}
     \end{singlespace}
 \end{figure}
 
@@ -425,7 +425,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     
     # Model names & Coefficient Names -- Use A for all non-mathced models
     ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13")
-    CoefNamesA <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Burns", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesA <- c("Intercept", "Recession", "Deficit/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Burns", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
@@ -453,7 +453,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     
     # Model names & Coefficient Names -- Use B for all  mathced models
     ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
-    CoefNamesB <- c("Intercept", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesB <- c("Intercept", "Deficit/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
@@ -487,7 +487,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     
     # Model names & Coefficient Names -- Use C for all  mathced models
     ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12")
-    CoefNamesC <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesC <- c("Intercept", "Recession", "Deficit/GDP", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Election Period", "Pres. Party ID", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Qrt. Election2", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9, PL10, PL11, PL12,
@@ -519,7 +519,7 @@ NB1Summary <- rename(NB1Summary, c(X50. = "50%"))
 NB1Summary <- rename(NB1Summary, c(X97.5. = "97.5%"))
 
 # Clean up Covariate Labels
-Variables <- c("Intercept", "Pres. Party ID", "Recession", "Qtr. to Election", "Debt/GDP",  "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model", "sigma2")
+Variables <- c("Intercept", "Pres. Party ID", "Recession", "Qtr. to Election", "Deficit/GDP",  "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model", "sigma2")
 
 NB1Summary <- cbind(Variables, NB1Summary)
 
@@ -560,7 +560,7 @@ print.xtable(xtable(PB1Summary, caption = "Bayesian Normal Linear Regression Est
     # Model names & Coefficient Names -- Use C for all  mathced models
     ModelNamesP <- c("Nixon 1", "Nixon 2", "Ford", "Carter", "Reagan 1", "Reagan 2", 
                      "GHW Bush", "Clinton 1", "Clinton 2", "GW Bush 1", "GW Bush 2")
-    CoefNamesP <- c("Intercept", "Recession", "Debt/GDP", "Expenditure/GDP", 
+    CoefNamesP <- c("Intercept", "Recession", "Deficit/GDP", "Expenditure/GDP", 
                     "Output Gap", "Discount Rate Change", "Unemployment Rate", 
                     "Qtr. to Election", "Pres. Party ID", "FRB/GlobalModel") 
 
