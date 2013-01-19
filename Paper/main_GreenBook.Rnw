@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 17 January 2013
+% 18 January 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -265,7 +265,7 @@ Almost all other parametric model specifications\footnote{\ref{OutputPL} does sh
 
 <<MainAnalysis, include=FALSE, cache=TRUE>>=
     
-    # Run main analysis source code #
+    # Run main analysis source code
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
     devtools::source_url(AnalysisURL)
 
