@@ -76,9 +76,9 @@ estimates <- subset(estimates, var != c("sigma2"))
 ##### Create comparison plot ####
 cols <- c("#B35B40", "#696969")
 
-breaks <- c("pres_party", "ExpenditureGDP", "recession", "DeficitGDP", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelBefore 1996")
+breaks <- c("pres_party", "ExpenditureGDP", "recession", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelBefore 1996")
 
-break.labels <- c("Dem. President", "Gov. Expenditure (% GDP)", "Recession", "Gov. Deficit (% GDP)", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model")
+break.labels <- c("Dem. President", "Gov. Expenditure (% GDP)", "Recession", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = match)) +
   facet_grid(~ method) + 

@@ -1,7 +1,7 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph
 # Christopher Gandrud
-# 18 January 2013
+# 24 January 2013
 ####################
 
 library(RCurl)
@@ -38,8 +38,6 @@ absInflation <- qplot(Quarter, value, geom = "line", data = cpi.abs, color = var
                      labels = c(1970, 1980, 1990, 2000, 2007)) +
   geom_vline(aes(xintercept = 1996), linetype = "dotted", colour = "grey50") +
   annotate("text", x = 2001, y = 8.5, label = "FRB/Global", colour = "grey50") +
-  geom_vline(aes(xintercept = 1975), linetype = "dotted", colour = "grey50") +
-  annotate("text", x = 1978, y = 1.5, label = "SEM", colour = "grey50") +
   theme_bw(base_size = 12)
 
 print(absInflation)
