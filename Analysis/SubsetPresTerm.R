@@ -20,7 +20,7 @@ PresTerms <- c("Nixon1", "Nixon2", "Ford1", "Carter1", "Reagan1", "Reagan2",
 SubSetPresTerms <- function(x){
   assign("SubData", subset(cpi.data2, presTerm != x), envir = .GlobalEnv)
   SData <- paste0("S", x)
-  assign(SData, Zelig::zelig(error.prop.deflator.q2 ~ recession + DebtGDP + ExpenditureGDP +
+  assign(SData, Zelig::zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP +
                         PotentialGDP + DiscountRate2qChange + UNRATE + time_to_election +
                         pres_party + GlobalModel, model = "normal", data = SubData, cite = FALSE), 
          envir = .GlobalEnv)
