@@ -1,7 +1,7 @@
 ####################
 # Greenbook MatchIt Analyses Coef Plots Compare
 # Christopher Gandrud
-# 19 January 2013
+# 23 January 2013
 ####################
 
 #### Figures for Results Catapilar Plot ####

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 23 January 2013
+% 24 January 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -48,7 +48,7 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-\noindent\emph{Working draft. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for comments and support. Thank you also to Vincent Arel-Bundock, Tom Stark, and seminar participants at the Hertie School of Governance, London School of Economics and Yonsei University. \\
+\noindent\emph{Working draft. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for comments and support. Thank you also to Leonardo Baccini, Vincent Arel-Bundock, Tom Stark, and seminar participants at the Hertie School of Governance, London School of Economics and Yonsei University. \\
 This paper was written using {\tt{knitr}} \citep{knitr2013}. It can be entirely replicated from data, analysis source code, and markup files available on our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}.} \\[0.2cm]
 
 In the United States the Federal Open Market Committee (FOMC) makes monetary policy partially based on forecasts provided by Federal Reserve \emph{staff}. Are these forecasts affected in some way by the United States president's political party identification? The president's political party identification can serve as a cue for the types of policies likely to be pursued during his administration: Republicans being expected to pursue lower inflation policies and Democrats being expected to pursue lower unemployment, but more inflationary, policies. Evidence suggest, however, that the real differences in policies implemented by the two parties is quite minimal \citep{Bartels2008}. We use Fed staff's Greenbook forecasts to test whether expectations based on presidents' partisan identification incorrectly bias estimates of future inflation. We find that irrespective of actual policy and economic conditions Greenbook forecasts {\emph{do}} systematically overestimate inflation during the entire tenure of Democratic presidencies and underestimate inflation during Republican ones. This suggests that Fed staff inflation forecasts have a presidential partisan bias.
@@ -311,7 +311,7 @@ Sim2 <- read.csv("/git_repositories/GreenBook/Paper/cache/SimQrt2.csv")
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from an normal linear regression with non-matched data. Variables included are generally the same as those in Model A5 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type.}}
+        {\scriptsize{Simulated from an normal linear regression with non-matched data. Variables included are generally the same as those in Model A6 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type.}}
     \end{singlespace}
 \end{figure}
 
@@ -358,7 +358,7 @@ Interestingly, staff also do not seem to compensate for FOMC partisan biases in 
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from normal linear regressions with non-matched data. Expected errors in the left-side graph are from Model A8 in Table \ref{OutputNL} and the right-side estimates are from Model A11 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses.}}
+        {\scriptsize{Simulated from normal linear regressions with non-matched data. Expected errors in the left-side graph are from Model A9 in Table \ref{OutputNL} and the right-side estimates are from Model A12 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses.}}
     \end{singlespace}
 \end{figure}
 
@@ -375,7 +375,7 @@ Despite some evidence for an interaction between congressional and presidential 
 
 It seems that Federal Reserve staff may also overestimate the effect of government expenditure on inflation. This is indicated by a consistently positive and significant coefficient for the government expenditure variable, even when controlling for president's party ID. Perhaps this is because Fed staff not only have a presidential partisan heuristic, but also a similar government expenditure heuristic where expenditure is believed to have a larger impact on inflation than it really does. It is plausible that the mechanism for this could be either an informal heuristic that affects the judgmental part of the forecasts or an incorrect assumption built into the formal forecasting models.
 
-\paragraph{Deficits} We avoided including deficits and federal expenditures in the same models, because they are somewhat correlated. Deficits as a proportion of GDP had a negative relationship with inflation forecast errors. This is in the same direction as our finding for government expenditure, because a positive deficit to GDP value indicates a surplus, i.e. less spending relative to revenue. 
+\paragraph{Deficits} We avoided including deficits and federal expenditures in the same models, because they are somewhat correlated.\footnote{In models where they were both included (not shown, but available upon request) the deficit variable's estimated coefficient was very unstable and regularly switched sign.} Deficits as a proportion of GDP had a negative relationship with inflation forecast errors. This is in the same direction as our finding for government expenditure, because a positive deficit to GDP value indicates a surplus, i.e. less spending relative to revenue. Note that this estimate was not robust across all models.
 
 \paragraph{FRB Global Forecasting Model}
 
@@ -383,7 +383,7 @@ The introduction of the FRB/Global behavioral equation forecasting model does no
 
 \paragraph{Changes to the Discount Rate}
 
-As expected, relative changes to the discount rate are often found to be negatively associated with inflation forecast errors. Increasing the discount rate could result in lower inflation than expected and vice versa. Controlling for FOMC policy does not change the estimated relationship between presidential party ID and errors. It should be noted that the results are not robust across all of the models, especially when we use matched data. 
+As expected, relative changes to the discount rate are often found to be negatively associated with inflation forecast errors. Increasing the discount rate could result in lower inflation than expected and vice versa. Controlling for FOMC policy does not change the estimated relationship between presidential party ID and errors. It should be noted that the discount rate results are not robust across all of the models, especially when we use matched data. 
 
 <<CreateOrthog, message=FALSE, error=FALSE, warning=FALSE, echo=FALSE>>=
     # Create unempoyment error variable and graph
@@ -393,13 +393,15 @@ As expected, relative changes to the discount rate are often found to be negativ
 
 \paragraph{Orthogonal Dependent Variable Diagnostic: Unemployment Forecast Errors}
 
-As a final diagnostic we ran our analyses with a dependant variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are not strongly correlated with inflation forecast errors.The Pearson correlation coefficient for forecasts made two quarters beforehand is \Sexpr{round(Estat, digit = 2)} with a p-value of \Sexpr{round(Pstat, digit = 2)}. It is not clear why Federal Reserve staff would have systematically different unemployment forecast errors when there is a Republican president and a Democratic president.} The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Greenbook. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
+As a final diagnostic we ran our analyses with a dependent variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are not strongly correlated with inflation forecast errors. The Pearson correlation coefficient for forecasts made two quarters beforehand is \Sexpr{round(Estat, digit = 2)} with a p-value of \Sexpr{round(Pstat, digit = 2)}.} The variable captures the errors Fed staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Greenbook. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
 
 Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors were the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve staff's \emph{inflation} forecasting errors.
 
 \section*{Discussion: Is there a partisan bias?}
 
 Do Fed inflation forecasts have a partisan bias? According to the evidence from our research: yes they do. Federal Reserve staff seem to have systematically overestimated inflation during Democratic presidencies and underestimated it during Republican ones for at least a 35 year period between 1970 and the end of 2006. This finding is robust across numerous model specifications where a variety of economic, bureaucratic and other political factors were controlled for. 
+
+In the course of our research we also found that Fed staff tend to overestimate the inflationary effect of government spending and perhaps deficits independent of the partisanship bias. Conceptually, the bias nonetheless runs in the same direction as the presidential partisanship bias. More spending, which Democrats are often expected to prefer, seems to be anticipated to increase inflation more than it actually does.\footnote{Of course Fed staff could be incorrectly forecasting government expenditure and deficits. This could then somehow contribute to biased inflation forecasts. However, we do not have access to complete Fed estimates of government expenditure and deficits to test this possibility.} It is unlikely that Greenbook forecasting models explicitly incorporate the president's party identification, so we can be reasonably certain that the partisan bias enters as a heuristic in the judgmental side of the forecasting process. Predicted inflationary effects for government spending could very well be incorporated into the formal forecasting models. So, government expenditure bias that we found could be either the result of incorrect explicit model assumptions or heuristics.
 
 Interestingly, in light of recent research on FOMC policy-making, we found no relationship between inflation forecast errors and elections either independent of presidential party identification or in interaction with it. This suggests that any relationship between monetary policy decisions and US presidential election timing is neither the result of partisan preferences that Fed staff members may have, nor beliefs that Fed staff may hold about the FOMC's presidential election preferences. 
 
@@ -422,12 +424,12 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
 
     library(apsrtable)
     
-    # Model names & Coefficient Names -- Use A for all non-mathced models
-    ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13")
+    # Model names & Coefficient Names -- Use A for all non-matched models
+    ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14")
     CoefNamesA <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election",  "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*Qrt. Election2", "Burns", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(NL1, NL2, NL3, NL4, NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
+    apsrtable(NL1, NL2, NL3, NL4, NL4.1, NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
               digits = 1, order = , 
               Sweave = TRUE, 
               stars = "default", 
@@ -447,15 +449,15 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     \label{OutputEL}
     \vspace{0.25cm}
     \begin{center}
-    {\footnotesize
+    {\tiny
 << ELTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
-    # Model names & Coefficient Names -- Use B for all  mathced models
-    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12")
+    # Model names & Coefficient Names -- Use B for all  matched models
+    ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12", "B13")
     CoefNamesB <- c("Intercept", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(EL1, EL2, EL3, EL4, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
+    apsrtable(EL1, EL2, EL3, EL4, EL4.1, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
@@ -463,7 +465,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
               coef.names = CoefNamesB,
               notes = list(se.note, 
                            stars.note, 
-                           "The recession variable is ommitted because there was almost no variation in the matched data set.",
+                           "The recession variable is omitted because there was almost no variation in the matched data set.",
                            "The reason that there was no variation is because there were only two quarters with both a recession",
                            "and an election period in our data set."
                            )
@@ -481,15 +483,15 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     \label{OutputPL}
     \vspace{0.25cm}
     \begin{center}
-    {\footnotesize
+    {\tiny
 << PLTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     
-    # Model names & Coefficient Names -- Use C for all  mathced models
-    ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12")
+    # Model names & Coefficient Names -- Use C for all  matched models
+    ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "C13")
     CoefNamesC <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
-    apsrtable(PL1, PL2, PL3, PL4, PL5, PL6, PL7, PL8, PL9, PL10, PL11, PL12,
+    apsrtable(PL1, PL2, PL3, PL4, PL4.1, PL5, PL6, PL7, PL8, PL9, PL10, PL11, PL12,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 

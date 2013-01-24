@@ -102,7 +102,7 @@ NL13 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, 
 
 # Normal Linear
 
-EL1 <- zelig(error.prop.deflator.q2 ~ DeficitGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.Mdf.election, cite = FALSE)
+EL1 <- zelig(error.prop.deflator.q2 ~ ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.Mdf.election, cite = FALSE)
 
 EL2 <- zelig(error.prop.deflator.q2 ~ time_to_election + elect2 + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.Mdf.election, cite = FALSE)
 
@@ -110,7 +110,7 @@ EL3 <- zelig(error.prop.deflator.q2 ~ ElectionPeriod4 + ExpenditureGDP + Potenti
 
 EL4 <- zelig(error.prop.deflator.q2 ~ pres_party + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.Mdf.election, cite = FALSE)
 
-EL4.1 <- zelig(error.prop.deflator.q2 ~ pres_party + DebtGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.Mdf.election, cite = FALSE)
+EL4.1 <- zelig(error.prop.deflator.q2 ~ pres_party + DeficitGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.Mdf.election, cite = FALSE)
 
 EL5 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.Mdf.election, cite = FALSE)
 
@@ -167,6 +167,6 @@ PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election 
 #### Save variables model objects #####
 save(cpi.Mdf.party, cpi.Mdf.election, cpi.matched.election, cpi.matched.party, cpi.data2, NL1, NL2, NL3, NL4, NL4.1,
      NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
-     EL1, EL2, EL3, EL4, NL4.1,  EL5, EL6, EL7, EL8, EL9, 
+     EL1, EL2, EL3, EL4, EL4.1, EL5, EL6, EL7, EL8, EL9, 
      EL10, EL11, EL12, PL1, PL2, PL3, PL4, PL4.1,	PL5, PL6,
      PL7, PL8, PL9, PL10, PL11, PL12, NB1, PB1, file = "ModelObjects.RData")
