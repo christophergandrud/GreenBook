@@ -6,45 +6,45 @@ Database file #1: GreenBook.bib.bib
 Warning--can't use both author and editor fields in Goodrich2007
 Warning--empty publisher in Goodrich2007
 Warning--empty chapter and pages in Goodrich2007
-You've used 41 entries,
+You've used 42 entries,
             2874 wiz_defined-function locations,
-            921 strings with 11141 characters,
-and the built_in function-call counts, 149780 in all, are:
-= -- 24374
-> -- 1744
+            926 strings with 11299 characters,
+and the built_in function-call counts, 155337 in all, are:
+= -- 25280
+> -- 1833
 < -- 0
-+ -- 11238
-- -- 629
-* -- 12629
-:= -- 30419
-add.period$ -- 165
-call.type$ -- 41
-change.case$ -- 533
-chr.to.int$ -- 41
-cite$ -- 44
-duplicate$ -- 611
-empty$ -- 1360
-format.name$ -- 672
-if$ -- 26835
++ -- 11678
+- -- 659
+* -- 13119
+:= -- 31519
+add.period$ -- 169
+call.type$ -- 42
+change.case$ -- 546
+chr.to.int$ -- 42
+cite$ -- 45
+duplicate$ -- 626
+empty$ -- 1396
+format.name$ -- 702
+if$ -- 27834
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 177
-num.names$ -- 463
-pop$ -- 142
+missing$ -- 43
+newline$ -- 181
+num.names$ -- 477
+pop$ -- 144
 preamble$ -- 1
-purify$ -- 615
+purify$ -- 630
 quote$ -- 0
-skip$ -- 516
+skip$ -- 530
 stack$ -- 0
-substring$ -- 34142
-swap$ -- 77
-text.length$ -- 574
+substring$ -- 35433
+swap$ -- 79
+text.length$ -- 588
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 158
+type$ -- 162
 warning$ -- 3
-while$ -- 969
+while$ -- 995
 width$ -- 0
-write$ -- 561
+write$ -- 576
 (There were 3 warnings)
