@@ -116,8 +116,7 @@ Our dataset has 165 forecast quarters, spanning the fourth quarter of 1965 throu
     
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Forecasts were made two quarters beforehand. \\
-                     The vertical grey dotted line indicates when the Federal Reserve Board Global (FRB/Global) forecasting model was fully implemented.  
+        {\scriptsize{The vertical grey dotted line indicates when the Federal Reserve Board Global (FRB/Global) forecasting model was fully implemented.  
                       }}
     \end{singlespace}
 \end{figure}
@@ -196,7 +195,7 @@ This model does not require that forecasters be conscious of the heuristics they
 
 In order to test the three potential types of partisan bias described above we use non-matched and matched data sets with parametric models \citep[see][]{Ho2007} to assess whether and what types of partisan biases exist in Greenbook inflation forecasts. This section discusses the choice of methods and variables. In the following section we discuss our results.
 
-\subsection{Matching \& Models}
+\subsection{Matching}
 
 We are interested in disentangling the effects of presidential party ID and elections from many background factors, such as economic shocks and FOMC policy changes, that would create inflation forecast errors. As such, we consider presidential partisan identification and elections to be `treatments' that may impact inflation forecast errors. Democratic presidencies are considered to be treatments. Republican presidencies are `controls'.\footnote{The selection of `treatment' and `control' groups in this context is arbitrary.} Quarters when a presidential election is held and the quarter before it are considered treatments and all other quarters are controls. Of course, given that we are working with observational data, other variables that have an impact on forecast errors may have {\emph{different distributions}} across the treatment and control groups \citep{Cochran1973, Diamond2012}. This makes it difficult to identify the relationships between presidential party ID, elections and errors from all of the confounding background variables.
 
@@ -207,7 +206,7 @@ Balance is usually achieved in matching through propensity scores: the probabili
 
 \subsection{Parametric Models}
 
-Once we created our matched data sets we used two types of parametric models to examine the effects of our treatment variables on the continuous inflation forecast error variable.\footnote{Parametric models are estimated using the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} The first was normal linear regression using maximum likelihood estimation of variance (i.e. Normal Linear).\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model. We also used ordinary least squares (in \texttt{Zelig}, this is the \texttt{ls} model). The results were virtually identical.} The other type was Bayesian normal linear regression\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model. Bayesian normal linear regression is particularly useful for our limited sample as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}. Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.  See also \cite{Imai2008} for a discussion of how to combine non-parametric matching and parametric analysis in one research process.} Because we used  matching methods, not only do we better isolate the treatments' effects from those of the background variables, but we also reduce our estimated causal effects' dependence on the type of model we choose \cite[200--201]{Ho2007}.
+Once we created our matched data sets we used two types of parametric models to examine the effects of our treatment variables on the continuous inflation forecast error variable.\footnote{Parametric models are estimated using the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} The first was normal linear regression using maximum likelihood estimation of variance.\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model. We also used ordinary least squares (in \texttt{Zelig}, this is the \texttt{ls} model). The results were virtually identical.} The other type was Bayesian normal linear regression\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model. Bayesian normal linear regression is particularly useful for our limited sample as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}. Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.  See also \cite{Imai2008} for a discussion of how to combine non-parametric matching and parametric analysis in one research process.} Because we used  matching methods, not only do we better isolate the treatments' effects from those of the background variables, but we also reduce our estimated causal effects' dependence on the type of model we choose \cite[200--201]{Ho2007}.
 
 The generic parametric models we used is given by
 %
