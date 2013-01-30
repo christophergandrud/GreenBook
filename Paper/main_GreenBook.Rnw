@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 28 January 2013
+% 30 January 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -56,7 +56,7 @@ In the United States the Federal Open Market Committee makes monetary policy bas
 \end{abstract}
 
 \begin{description}
-  \item [{\textbf{Keywords:}}] forecast bias, Federal Reserve, rational partisan cycle, heuristics, interest rate, inflation, monetary policy
+  \item [{\textbf{Keywords:}}] forecast bias, Federal Reserve, rational partisan cycle, heuristics, inflation, monetary policy
 \end{description}
 
 \vspace{0.3cm}
@@ -392,7 +392,7 @@ In the course of our research we also found that Fed staff tend to overestimate 
 
 Interestingly, in light of recent research on FOMC policy-making, we found no relationship between inflation forecast errors and elections either independent of presidential party identification or in interaction with it. This suggests that any relationship between monetary policy decisions and US presidential election timing is neither the result of partisan preferences that Fed staff members may have, nor beliefs that Fed staff may hold about the FOMC's presidential election preferences. 
 
-Given the consistency of the bias across presidents' terms, it appears that Fed staff members' partisan inflation forecast bias may be the result of a partisan heuristic. Like heuristics generally, the partisan bias may help Fed staffers simplify very complex phenomenon, while also leading to systematic prediction errors. These errors may not have been noticed by staffers because, so far, few if anyone has been looking for them. We find that inflation forecasts are consistently underestimated when Republicans hold the White House and are consistently overestimated during Democratic administrations. We cannot explain why recent work by cite{Clark2012} find a positive linear relationship between time in office and the interest rate during Democratic presidencies (where interest rates start low and rise throughout the term) and the negative linear relation when Republicans are in office (where interest rates start high and fall as elections near).
+Given the consistency of the bias across presidents' terms, it appears that Fed staff members' partisan inflation forecast bias may be the result of a partisan heuristic. Like heuristics generally, the partisan bias may help Fed staffers simplify very complex phenomenon, while also leading to systematic prediction errors. These errors may not have been noticed by staffers because, so far, few if anyone has been looking for them. We find that inflation forecasts are consistently underestimated when Republicans hold the White House and are consistently overestimated during Democratic administrations. We cannot explain why recent work by \cite{Clark2012} finds a positive linear relationship between time in office and the interest rate during Democratic presidencies (where interest rates start low and rise throughout the term) and the negative linear relation when Republicans are in office (where interest rates start high and fall as elections near).
 
 What has been the monetary policy and electoral impact of Federal Reserve staff partisan bias? Our research so far cannot definitively answer this, but it does motivate future research and point in a clear direction. It may be that higher inflation forecasts during Democratic presidencies spur the FOMC to raise interest rates and dampen the money supply generally. The opposite could happen during Republican presidencies. If this is the case, the economy would be inadvertently stimulated during Republican presidencies and depressed during Democratic ones, with electoral implications. The economic voting literature has repeatedly found that poor economic performance results in less electoral support for incumbent presidents \citep[e.g.][]{Alvarez1998, Bloom1975, LewisBeck1988, Powell1993}. Thus, if these partisan biases in inflation forecasts are leading to more restrictive monetary policy during Democratic presidencies and more expansive monetary policy during Republican presidencies, the economic voting mechanism may run afoul of important normative concerns about democratic accountability. Determining the extent to which these biases are shaping monetary policy is therefore an important next step in understanding the linkage between Fed inflation forecasts and larger questions of democracy. This is a very important issue that needs further investigation.
 
