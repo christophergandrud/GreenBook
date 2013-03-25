@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 30 January 2013
+% 25 March 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -118,7 +118,7 @@ Monetary policy is an inherently forward looking enterprise. Beliefs about the e
 
 We provide evidence that Fed internal inflation forecasts consistently predict that inflation will be lower than it turns out to be under Republican presidencies and predict that inflation will be higher than it turns out to be under Democratic administrations. Even accounting for changes in monetary policy and a variety of other economic and political factors, Federal Reserve economists over-shoot inflation forecasts for Democrats and under-shoot for Republicans. We find evidence that the use of partisan heuristics by Fed staffers explain these predictive failures.
 
-In this paper we first provide a brief discussion of what inflation forecasts--specifically the so called ``Greenbook" forecasts--and forecast errors are, including their importance for monetary policy-making and our current understanding of how they are made. As we demonstrate in this first section, academic scholarship up until now has not examined possible partisan causes of inflation forecast errors. We then introduce the issue of partisan biases in inflation forecasts, expounding three different ways that presidential partisanship could affect Fed staff expectations, and posit how forecasting may be influenced by each of them. We test these theories with a series of regression models using both unmatched and matched data on Greenbook inflation forecast errors from the 1970s through 2006. Our findings suggest that even when controlling for a number of important economic and political factors, Greenbook forecasts show a distinct presidential partisan bias across presidential terms. In the conclusion we discuss the implications of these findings for monetary policy and election outcomes and future directions for research.
+In this paper we first provide a brief discussion of what inflation forecasts--specifically the so called ``Greenbook" forecasts--and forecast errors are, including their importance for monetary policy-making and our current understanding of how they are made. As we demonstrate in this first section, academic scholarship up until now has not examined possible partisan causes of inflation forecast errors. We then introduce three competing hypothesis about how partisan control of the presidency might lead to systematic bias in inflation forecasts by the Federal Reserve staff. We test these theories with a series of regression models using both unmatched and matched data on Greenbook inflation forecast errors from the 1970s through 2006. Our findings suggest that even when controlling for a number of important economic and political factors, Greenbook forecasts show a distinct presidential partisan bias across presidential terms. In the conclusion we discuss the implications of these findings for monetary policy and election outcomes and future directions for research.
 
 %%%%%%%%%%%%%% Section 1: Forecasting Inflation at the Fed %%%%%%%%%%%%%%%%%%%%%
 
@@ -128,9 +128,12 @@ In this section we briefly describe what Greenbook inflation forecasts and forec
 
 \subsection{Forecasting \& Forecasting Errors}
 
-Prior to every FOMC meeting Federal Reserve staff create a document called the ``Current Economic and Financial Conditions" or ``Greenbook" that contains information on recent behavior and forecasts of various macroeconomic aggregates.\footnote{Greenbook data can be found at {\url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}}. Accessed October 2012.} Federal Reserve staff make forecasts of various elements of the US and global economies so that the FOMC can make policies appropriate to fulfill the Fed's dual mandate of maintaining maximum employment and price stability. Greenbook forecasts are currently available to the public for each quarter from the fourth quarter of 1965 through the end of 2006.\footnote{There is a five year lagged release schedule. Also, some forecasts are not available for the entire period.}  We focus on GNP/GDP price index forecasts in our study. We choose this indicator of Federal Reserve forecast accuracy both because there is a strong theoretical assumption that central bankers are more inflation averse than politicians \citep[e.g.][]{Cukierman1992,Mukherjee2008,Tillmann2008} and because this is the dominant measure of forecast errors used in the economics literature \citep[c.f.][]{Romer2000}. The forecasts contained in the Greenbook provide predictions of economic performance if current monetary policy is maintained. The FOMC uses these forecasts to determine the appropriate monetary policy to pursue. Higher inflationary expectations increase the likelihood of the FOMC tightening policy in order to slow inflation and an overheating economy; low inflationary expectations increase the likelihood of a loosening of monetary policy to bolster growth and employment, all else equal.
+Prior to every FOMC meeting Federal Reserve staff create a document called the ``Current Economic and Financial Conditions" or ``Greenbook" that contains information on recent behavior and forecasts of various macroeconomic aggregates.\footnote{Greenbook data can be found at {\url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}}. Accessed October 2012.} Federal Reserve staff make forecasts of various elements of the US and global economies so that the FOMC can make policies appropriate to fulfill the Fed's dual mandate of maintaining maximum employment and price stability. As \cite{Svensson2005} notes, teh accuracy of forecasts is essential to the effectiveness of monetary policy. Greenbook forecasts are currently available to the public for each quarter from the fourth quarter of 1965 through the end of 2006.\footnote{There is a five year lagged release schedule. Also, some forecasts are not available for the entire period.}  We focus on GNP/GDP price index forecasts in our study. We choose this indicator of Federal Reserve forecast accuracy both because there is a strong theoretical assumption that central bankers are more inflation averse than politicians \citep[e.g.][]{Cukierman1992,Mukherjee2008,Tillmann2008} and because this is the dominant measure of forecast errors used in the economics literature \citep[c.f.][]{Romer2000}. The forecasts contained in the Greenbook provide predictions of economic performance if current monetary policy is maintained. The FOMC uses these forecasts to determine the appropriate monetary policy to pursue. Higher inflationary expectations increase the likelihood of the FOMC tightening policy in order to slow inflation and an overheating economy; low inflationary expectations increase the likelihood of a loosening of monetary policy to bolster growth and employment, all else equal.
 
-It is important to note that finalized forecasts of macroeconomic aggregates are ``consensus" forecasts combining \textbf{both} econometric models and the professional opinions of forecasters about likely changes in the economy's trajectory not necessarily picked up in these models \citep{Karamouzis1989,Reifschneider1997}. Greenbook forecasts thus do not provide us with any information on what the econometric forecasts were prior to being integrated into the ``consensus" forecast presented to the FOMC. Below we briefly describe how the econometric aspects of the consensus forecasts have been modeled.
+It is important to note that finalized forecasts of macroeconomic aggregates are ``consensus" forecasts combining \textbf{both} econometric models and the professional opinions of forecasters about likely changes in the economy's trajectory not necessarily picked up in these models \citep{Karamouzis1989,Reifschneider1997}. Greenbook forecasts thus do not provide us with any information on what the econometric forecasts were prior to being integrated into the ``consensus" forecast presented to the FOMC. 
+
+The study of Fed inflation forecasts has been almost exclusively contained within economics with the main concern being the rationality of forecasts \cite[e.g.][]{Capistran2006, Romer2000} and the performance of the Fed's forecasts relative to market forecasts \cite[e.g.][]{Faust2007, Gamber2009}. While some studies have examined the biases of particular periods \cite[e.g.][]{Capistran2006} or bank presidents \cite[e.g.][]{Havrilesky1995}, in our search none considered how the happenings of the partisan realm might affect not only monetary policy but expectations about the path of inflation. While the idea that politicians of different partisan stripes might behave differently in office and that their behavior might have different effects on future economic output and inflation is largely uncontroversial\footnote{See \cite{Bartels2008} for evidence on the similarities and differences of Democrats and Republicans in office.}, there have been no tests of whether or how these differences would affect inflation forecasts. In order to understand how beliefs about partisan differences might come into forecast errors below we briefly describe how the econometric aspects of the consensus forecasts have been modeled.
+
 
 \subsection{Our Current Understanding of Fed Inflation Forecasting}
 
@@ -140,86 +143,11 @@ New models of the American and world economies' near-term trajectories were intr
 
 It is important to reiterate that finalized forecasts of macroeconomic aggregates in both periods are a combination of both these econometric models and the professional opinions of forecasters about likely changes in the economy's trajectory not necessarily picked up in the models \citep{Karamouzis1989,Reifschneider1997,Taylor1997}.
 
-\subsection{Forecast Accuracy}\label{ForecastAcc}
-
-How accurate are Fed staff forecasts? We measure accuracy by calculating {\bf{forecast error}} $E$ as the difference between the Greenbook inflation forecast $F$ for a given quarter $q$ and actual inflation $I$ as a proportion of actual inflation:
-%
-\begin{equation}
-    E_{q} = \frac{F_{q} - I_{q}}{I_{q}}.
-\end{equation}
-%
-We choose to focus on proportional rather than absolute errors\footnote{Absolute errors are: $F_{q} - I_{q}$.} because it is substantively more meaningful for comparing errors across time periods. As shown in Figure \ref{absolute}, absolute inflation varies considerably across different periods. To be able to easily estimate meaningful effects on errors across time we need to look at proportional rather than absolute errors.\footnote{Note that the direction and significance of our main findings do not change when we use absolute rather than proportional errors in our estimation models (discussed below). The magnitude does change, but this is to be expected because the range of the absolute inflation errors is much larger than proportional errors. These results are available from the authors upon request.}
-
-If the forecasts are unbiased the mean error of the forecasts would be indistinguishable from zero. While \cite{Romer2000} found that the Fed's internal forecasts  meet this requirement over the full history of Greenbook forecasts, such an amalgamation disguises long periods of over- or under-predicting inflation, as noted in \cite{Capistran2006} and illustrated in Figure \ref{absolute}. Within economics the Fed's forecasts have been examined for evidence of rationality. These studies generally find that the Fed rationally incorporates information into its forecasts, outperforming private forecasts \cite[c.f.][]{Gamber2009}. These studies, however, have rarely incorporated Fed staff member' political preferences, because Federal Reserve staffers are assumed to be politically independent.
-
-Our dataset has 165 forecast quarters, spanning the fourth quarter of 1965 through the end of 2006. Greenbook forecasts correspond to those provided for the FOMC meeting closest to the middle of the quarter. We found actual inflation corresponding to each of these quarters\footnote{Inflation was calculated by comparing quarters year-on-year. The exact inflation measure that the Federal Reserve was forecasting changed a number of times, so the measure of actual inflation used to created the forecast error variable changes accordingly. The GNP deflator indicator is used from the beginning of our sample through the end of 1991. From the first quarter of 1992 through the first quarter of 1996 actual inflation is measured with the GDP deflator. From the second quarter of 1996 we use the chain-weighted GDP price index. For more details on how the forecasted quantity changed see the Greenbook data description file available at: \url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}. The Greenbook inflation forecast variable we used is called ``PGDPdot''.} using data from the Federal Reserve's FRED website.\footnote{See \url{http://research.stlouisfed.org/fred2/}. Accessed December 2011.} We examine errors made by forecasters in the current quarter and all quarters up to five quarters before.\footnote{The Greenbook contains very incomplete data for forecasts made over longer time spans.} The results are generally the same regardless of the forecast used, especially the presidential partisan findings (see Figure \ref{ExpectValueParty}). For simplicity, the majority of results we show and discuss in detail are from models with forecasts made two quarters beforehand.\footnote{Using these two quarter forecasts restricts our observations because they are rarely available before the 1970s.} Figure \ref{absolute} compares absolute actual inflation for each quarter and inflation forecasts made two quarters before.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%  Raw Greenbook estimate vs. actual graph
-\begin{figure}[t]
-    \caption{Greenbook Inflation Forecasts Made 2 Qtr. Beforehand and Actual Quarterly Inflation}
-    \label{absolute}
-    \begin{center}
-    
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=0.8\linewidth]{figure/BaseInflation} 
-
-}
-
-
-
-\end{knitrout}
-
-    
-    \end{center}
-    \begin{singlespace}
-        {\scriptsize{The vertical grey dotted line indicates when the Federal Reserve Board Global (FRB/Global) forecasting model was fully implemented.  
-                      }}
-    \end{singlespace}
-\end{figure}
-
-
-\subsection{Are There Partisan Forecast Errors?}
-
-
-
-
-Recall, unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2006 the mean standardized forecast error was -0.03, i.e. forecasters under-predicted inflation by about 3 percent. The mean error is noticably different across Republican compared to Democratic presidencies. Across Republican presidencies it was -11 percent and 13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
-
-Figure \ref{errors_over_time} plots forecast errors across our sample separated by presidential term and party. The first thing to note is that inflation was rarely underestimated during the three Democratic presidential terms in our sample. The underestimates that were made were relatively small. The largest overestimates we see were made during Bill Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Richard Nixon's, Gerald Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Over this period--often referred to as the Volcker Revolution \citep{Bartels1985}--inflation was suddenly much lower than before (see Figure \ref{absolute}). It may have taken awhile for predictions to adjust to this new lower level of inflation, particularly because the Fed's own models of the economy assumed that money had no real effects on the economy during this period, even while the FOMC was pursuing aggressive anti-inflation policies.
-
-This summary examination of inflation forecast errors suggests that there may be a partisan bias. What might explain this?
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%   Greenbook Error Across Time
-\begin{figure}[t]
-    \caption{Errors in Inflation Forecasts Made 2 Qtr. Beforehand (1969 - 2006)}
-    \label{errors_over_time}
-    \begin{center}
-    
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=0.8\linewidth]{figure/PartisanError} 
-
-}
-
-
-
-\end{knitrout}
-
-    
-    \end{center}
-    \begin{singlespace}
-        {\scriptsize{Note: An error of 0 indicates that inflation was perfectly predicted.}}
-    \end{singlespace}
-\end{figure}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section 2: Possible Explanations of Fed Inflation Forecast (In)accuracy %%%%%%%%%
 \section{Possible Explanations of Fed Inflation Forecast Inaccuracy}
 
-In this section we try to understand trends in Fed inflation forecast errors by discussing theories derived from the the political economy and political psychology literatures that provide possible explanations of why forecasts seem to have a partisan bias. 
+In this section we try to understand trends in Fed inflation forecast errors by discussing theories derived from the the political economy and political psychology literatures that provide possible explanations of why forecasts seem to have a partisan bias. We consider 
 
 \subsection{Econometric Models \& Accuracy}
 
@@ -331,6 +259,83 @@ What we call the {\bf{monetary expectations theory}} is based on an assumption o
 Finally, the {\bf{partisan heuristics theory}} proposes that Fed staffers incorporate a heuristic \citep[see][]{kahneman1973, tverskykahneman1974, kahneman2003} about the policy behaviors of presidents from different parties and the effects these different policies will have on the economy. Heuristics are intuitions that reduce the complexity associated with making predictions. Though they can be useful ``sometimes they lead to severe and systematic errors" \citep[][1124]{tverskykahneman1974}. In this theory, economists at the Fed have an intuition that Democrats and Republicans behave differently in government and so formulate inflationary expectations with this in mind. If this intuition does not accurately correspond to how presidents act, or how their policies impact inflation, forecasts will be systematically biased: overestimates for Democratic presidents, underestimates for Republicans. \cite{Bartels2008} finds evidence that Democratic and Republican presidents do not, in fact, differ significantly in their overall levels of spending, so any expectation that they would pursue policies that would differentially affect inflation in the medium-run would be inaccurate.\footnote{\cite{Bartels2008} does not discuss other policies that could affect inflation in the long run, such as changes to labor and financial market regulation. These policies too would be expected to differ by party, however their lags are likely to be quite long and out of the forecasted time frames used in this paper.} These biases should be constant {\emph{across presidential terms}}, in contrast to the partisan preference and monetary expectation theories, which both assume an intensification of biased behavior as elections approach.
 
 This model does not require that forecasters be conscious of the heuristics they're using, but simply for it to work its way subtly into forecasts, particularly in the subjective aspect of the ``consensus forecast" component of the Greenbook. Further, because this bias would not need to be conscious, the systematic error could easily go unnoticed (as mistakes could occur for any number of idiosyncratic or economic reasons). If the bias goes unnoticed, then it will not be corrected in future inflation predictions. This differs from the rational partisan expectations theory described above in the monetary policy outcome literature in two ways. First, because these beliefs are not updated to account for the lack of partisan differences in spending they are not ``rational". Second, and relatedly, this theory is based on psychological instead of game theoretic reasoning, which allows for the persistence of suboptimal strategies in a way that would be less likely in a rational choice model of this same process given the assumption that the goals of the actors are the same in the two models. 
+
+
+\subsection{Forecast Accuracy}\label{ForecastAcc}
+
+How accurate are Fed staff forecasts? We measure accuracy by calculating {\bf{forecast error}} $E$ as the difference between the Greenbook inflation forecast $F$ for a given quarter $q$ and actual inflation $I$ as a proportion of actual inflation:
+%
+\begin{equation}
+    E_{q} = \frac{F_{q} - I_{q}}{I_{q}}.
+\end{equation}
+%
+We choose to focus on proportional rather than absolute errors\footnote{Absolute errors are: $F_{q} - I_{q}$.} because it is substantively more meaningful for comparing errors across time periods. As shown in Figure \ref{absolute}, absolute inflation varies considerably across different periods. To be able to easily estimate meaningful effects on errors across time we need to look at proportional rather than absolute errors.\footnote{Note that the direction and significance of our main findings do not change when we use absolute rather than proportional errors in our estimation models (discussed below). The magnitude does change, but this is to be expected because the range of the absolute inflation errors is much larger than proportional errors. These results are available from the authors upon request.}
+
+If the forecasts are unbiased the mean error of the forecasts would be indistinguishable from zero. While \cite{Romer2000} found that the Fed's internal forecasts  meet this requirement over the full history of Greenbook forecasts, such an amalgamation disguises long periods of over- or under-predicting inflation, as noted in \cite{Capistran2006} and illustrated in Figure \ref{absolute}. Within economics the Fed's forecasts have been examined for evidence of rationality. These studies generally find that the Fed rationally incorporates information into its forecasts, outperforming private forecasts \cite[c.f.][]{Gamber2009}. These studies, however, have rarely incorporated Fed staff member' political preferences, because Federal Reserve staffers are assumed to be politically independent.
+
+Our dataset has 165 forecast quarters, spanning the fourth quarter of 1965 through the end of 2006. Greenbook forecasts correspond to those provided for the FOMC meeting closest to the middle of the quarter. We found actual inflation corresponding to each of these quarters\footnote{Inflation was calculated by comparing quarters year-on-year. The exact inflation measure that the Federal Reserve was forecasting changed a number of times, so the measure of actual inflation used to created the forecast error variable changes accordingly. The GNP deflator indicator is used from the beginning of our sample through the end of 1991. From the first quarter of 1992 through the first quarter of 1996 actual inflation is measured with the GDP deflator. From the second quarter of 1996 we use the chain-weighted GDP price index. For more details on how the forecasted quantity changed see the Greenbook data description file available at: \url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}. The Greenbook inflation forecast variable we used is called ``PGDPdot''.} using data from the Federal Reserve's FRED website.\footnote{See \url{http://research.stlouisfed.org/fred2/}. Accessed December 2011.} We examine errors made by forecasters in the current quarter and all quarters up to five quarters before.\footnote{The Greenbook contains very incomplete data for forecasts made over longer time spans.} The results are generally the same regardless of the forecast used, especially the presidential partisan findings (see Figure \ref{ExpectValueParty}). For simplicity, the majority of results we show and discuss in detail are from models with forecasts made two quarters beforehand.\footnote{Using these two quarter forecasts restricts our observations because they are rarely available before the 1970s.} Figure \ref{absolute} compares absolute actual inflation for each quarter and inflation forecasts made two quarters before.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%  Raw Greenbook estimate vs. actual graph
+\begin{figure}[t]
+    \caption{Greenbook Inflation Forecasts Made 2 Qtr. Beforehand and Actual Quarterly Inflation}
+    \label{absolute}
+    \begin{center}
+    
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/BaseInflation} 
+
+}
+
+
+
+\end{knitrout}
+
+    
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{The vertical grey dotted line indicates when the Federal Reserve Board Global (FRB/Global) forecasting model was fully implemented.  
+                      }}
+    \end{singlespace}
+\end{figure}
+
+
+\subsection{Are There Partisan Forecast Errors?}
+
+
+
+
+Recall, unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2006 the mean standardized forecast error was -0.03, i.e. forecasters under-predicted inflation by about 3 percent. The mean error is noticably different across Republican compared to Democratic presidencies. Across Republican presidencies it was -11 percent and 13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
+
+Figure \ref{errors_over_time} plots forecast errors across our sample separated by presidential term and party. The first thing to note is that inflation was rarely underestimated during the three Democratic presidential terms in our sample. The underestimates that were made were relatively small. The largest overestimates we see were made during Bill Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Richard Nixon's, Gerald Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Over this period--often referred to as the Volcker Revolution \citep{Bartels1985}--inflation was suddenly much lower than before (see Figure \ref{absolute}). It may have taken awhile for predictions to adjust to this new lower level of inflation, particularly because the Fed's own models of the economy assumed that money had no real effects on the economy during this period, even while the FOMC was pursuing aggressive anti-inflation policies.
+
+This summary examination of inflation forecast errors suggests that there may be a partisan bias. What might explain this?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Greenbook Error Across Time
+\begin{figure}[t]
+    \caption{Errors in Inflation Forecasts Made 2 Qtr. Beforehand (1969 - 2006)}
+    \label{errors_over_time}
+    \begin{center}
+    
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/PartisanError} 
+
+}
+
+
+
+\end{knitrout}
+
+    
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Note: An error of 0 indicates that inflation was perfectly predicted.}}
+    \end{singlespace}
+\end{figure}
+
 
 
 %%%%%%%%%%%%%%%%%% Section 3: Research Methods %%%%%%%%%%%%%%%%%%
@@ -742,11 +747,11 @@ $\log L$            & 17.1            & 23.5            & 20.9            & 33.1
 \end{table}
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
-% latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Wed Jan 30 10:29:41 2013
+% latex table generated in R 2.15.3 by xtable 1.7-1 package
+% Mon Mar 25 17:45:05 2013
 \begin{table}[ht]
-\begin{center}
-\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)}
+\centering
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)} 
 \label{OutputNB}
 {\small
 \begin{tabular}{lccccc}
@@ -766,7 +771,6 @@ Intercept & 3.41 & 1.57 & 0.31 & 3.43 & 6.56 \\
    \hline
 \end{tabular}
 }
-\end{center}
 \end{table}
 
 
@@ -774,11 +778,11 @@ Intercept & 3.41 & 1.57 & 0.31 & 3.43 & 6.56 \\
 
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
-% latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Wed Jan 30 10:29:42 2013
+% latex table generated in R 2.15.3 by xtable 1.7-1 package
+% Mon Mar 25 17:45:06 2013
 \begin{table}[ht]
-\begin{center}
-\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)}
+\centering
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 
 \label{OutputPB}
 {\small
 \begin{tabular}{lccccc}
@@ -798,7 +802,6 @@ Intercept & 3.11 & 3.65 & -3.94 & 3.09 & 10.49 \\
    \hline
 \end{tabular}
 }
-\end{center}
 \end{table}
 
 
