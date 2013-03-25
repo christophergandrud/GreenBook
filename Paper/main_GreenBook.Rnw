@@ -34,7 +34,7 @@
 @
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Does Presidential Partisanship Affect Fed Inflation Forecasts?}
+\title{Inflated Expectations: How government partisanship shapes bureaucrat's inflation expectations}
 
 \author{Christopher Gandrud \\
                 {\emph{Yonsei University}}\footnote{\href{mailto:gandrud@yonsei.ac.kr}{gandrud@yonsei.ac.kr}} \\
@@ -65,6 +65,7 @@ Monetary policy is an inherently forward looking enterprise. Beliefs about the e
 
 We provide evidence that Fed internal inflation forecasts consistently predict that inflation will be lower than it turns out to be under Republican presidencies and predict that inflation will be higher than it turns out to be under Democratic administrations. Even accounting for changes in monetary policy and a variety of other economic and political factors, Federal Reserve economists over-shoot inflation forecasts for Democrats and under-shoot for Republicans. We find evidence that the use of partisan heuristics by Fed staffers explain these predictive failures.
 
+%%%%%%%%% Update %%%%%%%%%%%
 In this paper we first provide a brief discussion of what inflation forecasts--specifically the so called ``Greenbook" forecasts--and forecast errors are, including their importance for monetary policy-making and our current understanding of how they are made. As we demonstrate in this first section, academic scholarship up until now has not examined possible partisan causes of inflation forecast errors. We then introduce three competing hypothesis about how partisan control of the presidency might lead to systematic bias in inflation forecasts by the Federal Reserve staff. We test these theories with a series of regression models using both unmatched and matched data on Greenbook inflation forecast errors from the 1970s through 2006. Our findings suggest that even when controlling for a number of important economic and political factors, Greenbook forecasts show a distinct presidential partisan bias across presidential terms. In the conclusion we discuss the implications of these findings for monetary policy and election outcomes and future directions for research.
 
 %%%%%%%%%%%%%% Section 1: Forecasting Inflation at the Fed %%%%%%%%%%%%%%%%%%%%%
@@ -125,8 +126,8 @@ Finally, the {\bf{partisan heuristics theory}} proposes that Fed staffers incorp
 
 This model does not require that forecasters be conscious of the heuristics they're using, but simply for it to work its way subtly into forecasts, particularly in the subjective aspect of the ``consensus forecast" component of the Greenbook. Further, because this bias would not need to be conscious, the systematic error could easily go unnoticed (as mistakes could occur for any number of idiosyncratic or economic reasons). If the bias goes unnoticed, then it will not be corrected in future inflation predictions. This differs from the rational partisan expectations theory described above in the monetary policy outcome literature in two ways. First, because these beliefs are not updated to account for the lack of partisan differences in spending they are not ``rational". Second, and relatedly, this theory is based on psychological instead of game theoretic reasoning, which allows for the persistence of suboptimal strategies in a way that would be less likely in a rational choice model of this same process given the assumption that the goals of the actors are the same in the two models. 
 
-
-\subsection{Forecast Accuracy}\label{ForecastAcc}
+%%%%%%%%%%%%%%%%%% Section: Forecast Accuracy %%%%%%%%%%%%%%%%%%
+\section{Forecast Accuracy at the US Federal Reserve}\label{ForecastAcc}
 
 How accurate are Fed staff forecasts? We measure accuracy by calculating {\bf{forecast error}} $E$ as the difference between the Greenbook inflation forecast $F$ for a given quarter $q$ and actual inflation $I$ as a proportion of actual inflation:
 %
@@ -194,7 +195,7 @@ This summary examination of inflation forecast errors suggests that there may be
 
 
 
-%%%%%%%%%%%%%%%%%% Section 3: Research Methods %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% Section 4: Research Methods %%%%%%%%%%%%%%%%%%
 
 \section{Research Methods}
 
