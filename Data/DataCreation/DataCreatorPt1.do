@@ -1,7 +1,7 @@
 **************************
 * Federal Reserve Green Book Estimates Compared to Actual Updated Fall 2012
 * Christopher Gandrud
-* Updated 26 October 2012
+* Updated 26 March 2013
 * Using Stata 12.1
 **************************
 
@@ -335,7 +335,7 @@ insheet using "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/retailFoodS
 		drop if _merge == 2
 		drop _merge
 		
-	saveold "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta", replace
+	saveold "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2007/GB_FRED_cpi.dta", replace
 
 
 

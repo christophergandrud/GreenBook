@@ -5,7 +5,7 @@
 ##############
 
 # Load Data
-cpi.data <- read.csv(file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv")
+cpi.data <- read.csv(file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv")
 
 ##### Create DV, Other Cleaning ########
 
@@ -45,4 +45,4 @@ cpi.data$ElectionPeriod4[cpi.data$time_to_election >= 4] <- 0
 cpi.data$ElectionPeriod4[cpi.data$time_to_election < 4] <- 1
 
 ### Write Data ####
-write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", sep = ",")
+write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",")

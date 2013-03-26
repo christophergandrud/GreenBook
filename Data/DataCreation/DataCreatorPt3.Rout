@@ -1,8 +1,8 @@
 
-R version 2.15.2 (2012-10-26) -- "Trick or Treat"
-Copyright (C) 2012 The R Foundation for Statistical Computing
+R version 2.15.3 (2013-03-01) -- "Security Blanket"
+Copyright (C) 2013 The R Foundation for Statistical Computing
 ISBN 3-900051-07-0
-Platform: i386-apple-darwin9.8.0/i386 (32-bit)
+Platform: x86_64-apple-darwin9.8.0/x86_64 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 > ##############
 > # Fed Funds Rate & Discount Rate Investigation on Partisan Bias
 > # Christopher Gandrud
-> # Updated 17 January 2013
+> # Updated 26 March 2013
 > ##############
 > 
 > # Load packages
@@ -39,7 +39,7 @@ The following object(s) are masked from ‘package:plyr’:
 > library(stringr)
 > 
 > ## Load data from DataCreatorPt2.R
-> cpi.data <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
+> cpi.data <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2007/GB_FRED_cpi.csv")
 > 
 > ###### Fed Funds Rate #####
 > # Data is from the FRED system at the Federal Reserve Bank of St. Louis: http://research.stlouisfed.org/fred2/
@@ -78,7 +78,7 @@ The following object(s) are masked from ‘package:plyr’:
 > # Data is from the FRED system at the Federal Reserve Bank of St. Louis: http://research.stlouisfed.org/fred2/
 > # The Discount Rate averaged over a quarter is used before 2003. We had intended to use the Primary Credit Rate from the beginning of 2003 (see: http://www.federalreserve.gov/boarddocs/press/bcreg/2002/200210312/default.htm
 > # However this is a relatively big discontenuity between the discount rate in Q4 2002 and the primary rate in Q1 2003
-> # So we use the IMF's reported US discountr rate (also found on FRED) from Q4 1982 and the Discount rate before that.
+> # So we use the IMF's reported US discount rate (also found on FRED) from Q4 1982 and the Discount rate before that.
 > # Load data
 > IMFDiscount <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012/FRED_IMFDiscountRate.csv")
 > OldDiscount <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012/FRED_DiscountRate.csv")
@@ -254,9 +254,9 @@ Removing variable 'Year'
 > cpi.data <- subset(cpi.data, !is.na(Quarter))
 > 
 > ### Write Data ####
-> write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", sep = ",")
+> write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",")
 > 
 > 
 > proc.time()
    user  system elapsed 
-  0.552   0.044   1.185 
+  0.685   0.054   1.204 

@@ -1,7 +1,7 @@
 ##############
 # Fed Funds Rate & Discount Rate Investigation on Partisan Bias
 # Christopher Gandrud
-# Updated 17 January 2013
+# Updated 26 March 2013
 ##############
 
 # Load packages
@@ -9,7 +9,7 @@ library(reshape)
 library(stringr)
 
 ## Load data from DataCreatorPt2.R
-cpi.data <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
+cpi.data <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2007/GB_FRED_cpi.csv")
 
 ###### Fed Funds Rate #####
 # Data is from the FRED system at the Federal Reserve Bank of St. Louis: http://research.stlouisfed.org/fred2/
@@ -48,7 +48,7 @@ cpi.data <- merge(cpi.data, Funds)
 # Data is from the FRED system at the Federal Reserve Bank of St. Louis: http://research.stlouisfed.org/fred2/
 # The Discount Rate averaged over a quarter is used before 2003. We had intended to use the Primary Credit Rate from the beginning of 2003 (see: http://www.federalreserve.gov/boarddocs/press/bcreg/2002/200210312/default.htm
 # However this is a relatively big discontenuity between the discount rate in Q4 2002 and the primary rate in Q1 2003
-# So we use the IMF's reported US discountr rate (also found on FRED) from Q4 1982 and the Discount rate before that.
+# So we use the IMF's reported US discount rate (also found on FRED) from Q4 1982 and the Discount rate before that.
 # Load data
 IMFDiscount <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012/FRED_IMFDiscountRate.csv")
 OldDiscount <- read.csv("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012/FRED_DiscountRate.csv")
@@ -223,5 +223,5 @@ cpi.data <- gdata::remove.vars(cpi.data, names = "Year")
 cpi.data <- subset(cpi.data, !is.na(Quarter))
 
 ### Write Data ####
-write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2006.csv", sep = ",")
+write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",")
 

@@ -1,13 +1,13 @@
 ############
-# Greenbook Data Merge Mid-June & Updated for the 2006 Data in October 2012
+# Greenbook Data Merge Mid-June & Updated for the 2006 Data in October 2012, and 2007 in March 2018
 # Christopher Gandrud
-# 26 October 2012
+# 26 March 2013
 ############
 
 library(foreign)
 library(reshape)
 
-cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
+cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2007/GB_FRED_cpi.dta")
 
 setwd("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012")
 
@@ -19,7 +19,7 @@ GovDebt<- read.csv("FRED_GovDebt.csv")
 GovExpenditure <- read.csv("FRED_govExpenditure.csv")
 Potential <- read.csv("FRED_Potential.csv")
 Unemployment <- read.csv("FRED_Unemploy.csv") # Civilian Unemployment Rate
-GBUnemployment <- read.csv("GB_Unemployment.csv")
+GBUnemployment <- read.csv("GB_Unemployment2007.csv")
 
 # Standardise Quarter
 
@@ -98,4 +98,4 @@ cpi.data <- merge(cpi.data, data, by = "Quarter", all = TRUE)
 
 # Save output
 
-write.csv(cpi.data, file = "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
+write.csv(cpi.data, file = "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2007/GB_FRED_cpi.csv")

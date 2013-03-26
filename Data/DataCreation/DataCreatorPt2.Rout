@@ -1,8 +1,8 @@
 
-R version 2.15.2 (2012-10-26) -- "Trick or Treat"
-Copyright (C) 2012 The R Foundation for Statistical Computing
+R version 2.15.3 (2013-03-01) -- "Security Blanket"
+Copyright (C) 2013 The R Foundation for Statistical Computing
 ISBN 3-900051-07-0
-Platform: i386-apple-darwin9.8.0/i386 (32-bit)
+Platform: x86_64-apple-darwin9.8.0/x86_64 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -21,9 +21,9 @@ Type 'q()' to quit R.
 [Previously saved workspace restored]
 
 > ############
-> # Greenbook Data Merge Mid-June & Updated for the 2006 Data in October 2012
+> # Greenbook Data Merge Mid-June & Updated for the 2006 Data in October 2012, and 2007 in March 2018
 > # Christopher Gandrud
-> # 26 October 2012
+> # 26 March 2013
 > ############
 > 
 > library(foreign)
@@ -37,7 +37,7 @@ The following object(s) are masked from ‘package:plyr’:
     rename, round_any
 
 > 
-> cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
+> cpi.data <- read.dta("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2007/GB_FRED_cpi.dta")
 > 
 > setwd("/Users/christophergandrud/Dropbox/GreenBook/Base_Data/FREDRawJuneOct2012")
 > 
@@ -49,7 +49,7 @@ The following object(s) are masked from ‘package:plyr’:
 > GovExpenditure <- read.csv("FRED_govExpenditure.csv")
 > Potential <- read.csv("FRED_Potential.csv")
 > Unemployment <- read.csv("FRED_Unemploy.csv") # Civilian Unemployment Rate
-> GBUnemployment <- read.csv("GB_Unemployment.csv")
+> GBUnemployment <- read.csv("GB_Unemployment2007.csv")
 > 
 > # Standardise Quarter
 > 
@@ -128,8 +128,8 @@ The following object(s) are masked from ‘package:plyr’:
 > 
 > # Save output
 > 
-> write.csv(cpi.data, file = "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2006/GB_FRED_cpi.dta")
+> write.csv(cpi.data, file = "/Users/christophergandrud/Dropbox/GreenBook/Base_Data/Update2007/GB_FRED_cpi.csv")
 > 
 > proc.time()
    user  system elapsed 
-  0.576   0.068   2.775 
+  0.623   0.078   5.796 
