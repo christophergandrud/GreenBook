@@ -1,7 +1,7 @@
 ################
 # President*Election Interaction Graph
 # Christopher Gandrud
-# Updated 18 January 2013
+# Updated 26 March 2013
 ################
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
@@ -20,9 +20,9 @@ SimExpectElect <- function(m){
   
   # Remove values outside of the 2.5% and 97.5% quantiles
   # Find 2.5% and 97.5% quantiles for HRCC
-  Temp.ev <- ddply(Temp.ev, .(Var2), transform, Lower = value < quantile(value, c(0.025)))
+  Temp.ev <- ddply(Temp.ev, .(X2), transform, Lower = value < quantile(value, c(0.025)))
   
-  Temp.ev <- ddply(Temp.ev, .(Var2), transform, Upper = value > quantile(value, c(0.975)))
+  Temp.ev <- ddply(Temp.ev, .(X2), transform, Upper = value > quantile(value, c(0.975)))
   
   # Remove variables outside of the middle 95%
   Temp.ev <- subset(Temp.ev, Lower == FALSE & Upper == FALSE)
@@ -48,7 +48,7 @@ for (p in 0:1){
 NL8Bound <- rbind(DemElect.ev, RepElect.ev)
 
 #### Create plot ####
-ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(Var2, value), group = Party) +
+ElectionInteractionPlot <- ggplot(data = NL8Bound, aes(X2, value), group = Party) +
   geom_hline(yintercept = 0, size = 1,
              alpha = I(0.5)) +
   stat_summary(fun.y = mean, geom = "line", 

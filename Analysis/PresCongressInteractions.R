@@ -67,8 +67,8 @@ PartyInteractionPlot <- ggplot(data = NL11BoundPer, aes(variable, value)) +
                                   xlab("") + ylab("") +
                                   scale_color_manual(values = partisan.congress.colours, 
                                                      name = "Control\nof\nCongress") +
-                                  scale_y_continuous(limits = c(-0.75, 0.75), 
-                                                     breaks = c(-0.5, 0, 0.5),
-                                                     labels = c(-0.5, 0, 0.5)) +
+                                  scale_y_continuous(limits = c(-0.5, 0.5), 
+                                                     breaks = c(-0.25, 0, 0.25),
+                                                     labels = c(-0.25, 0, 0.25)) +
                                   guides(colour = guide_legend(override.aes = list(alpha = 1))) +
                                   theme_bw(base_size = 11)
