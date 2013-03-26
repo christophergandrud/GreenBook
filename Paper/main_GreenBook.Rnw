@@ -307,7 +307,7 @@ Sim2 <- read.csv("/git_repositories/GreenBook/Paper/cache/SimQrt2.csv")
 @
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from a normal linear regression with non-matched data. Variables included are generally the same as those in Model A6 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. The grey lines connect the groups' mean value.}}
+        {\scriptsize{Simulated from a normal linear regression with non-matched data. Variables included are generally the same as those in Model A6 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. The grey lines connect the groups' means.}}
     \end{singlespace}
 \end{figure}
 
@@ -352,7 +352,7 @@ Fed staff do not appear to be over estimating inflation when a Democratic presid
 
     \end{center}
     \begin{singlespace}
-        {\scriptsize{Simulated from normal linear regressions with non-matched data. Expected errors in the left-side graph are from Model A9 in Table \ref{OutputNL} and the right-side estimates are from Model A12 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. The grey lines connect the groups' mean value.  \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses.}}
+        {\scriptsize{Simulated from normal linear regressions with non-matched data. Expected errors in the left-side graph are from Model A9 in Table \ref{OutputNL} and the right-side estimates are from Model A12 from Table \ref{OutputPL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. The grey lines connect the groups' means.  \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses.}}
     \end{singlespace}
 \end{figure}
 
