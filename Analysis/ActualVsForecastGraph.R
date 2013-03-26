@@ -1,7 +1,7 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph
 # Christopher Gandrud
-# 24 January 2013
+# 26 March 2013
 ####################
 
 library(RCurl)
@@ -9,7 +9,7 @@ library(reshape2)
 library(ggplot2)
 
 # Load data from GitHub
-url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi_2006.csv"
+url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi_2007.csv"
 cpi.data <- getURL(url)
 cpi.data <- read.csv(textConnection(cpi.data))
 
