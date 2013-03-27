@@ -48,10 +48,17 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-\noindent\emph{Working draft. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for comments and support. Thank you also to Leonardo Baccini, Vincent Arel-Bundock, Tom Stark, and seminar participants at the Hertie School of Governance, London School of Economics and Yonsei University. \\
+\noindent\emph{Working draft. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for comments and support. Thank you also to Leonardo Baccini, Vincent Arel-Bundock, Tom Stark, and seminar participants at the Hertie School of Governance, London School of Economics, and Yonsei University. \\
 This paper was written using {\tt{knitr}} \citep{knitr2013}. It can be entirely replicated from data, analysis source code, and markup files available on our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}.} \\[0.2cm]
 
-In the United States the Federal Open Market Committee makes monetary policy based on forecasts provided by Federal Reserve \emph{staff}. Are these forecasts affected by the United States president's political party identification? A president's party identification can serve as a cue for the types of policies likely to be pursued during their administration: Republicans are expected to pursue lower inflation policies and Democrats expected to pursue lower unemployment, but more inflationary, policies. Evidence suggests, however, that the real differences in policies implemented by the two parties is quite minimal \citep{Bartels2008}. We use Fed staff's Greenbook forecasts to test whether expectations based on presidents' partisan identification incorrectly bias estimates of future inflation. We find that irrespective of actual policy and economic conditions Greenbook forecasts {\emph{do}} systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. Our findings suggest that Fed staff inflation forecasts have a heuristic presidential partisan bias.
+In the United States the Federal Open Market Committee makes monetary policy based on forecasts provided by Federal Reserve \emph{staff}. Are these forecasts affected by the United States president's political party identification? 
+
+
+
+Governments' party identifications can serve as cues for the types of economic policies that they are likely to pursue during their tenure. Left-party governments are often expected to pursue policies that promote lower unemployment, but which may cause inflation. Right party governments are often expected to pursue lower inflation policies. To what extent do these expectations influence monetary party bureaucrat's inflation forecasts? This is an important question because if there is a mismatch between the economic policies that governing parties are \emph{expected} to implement and those that they \emph{actually} implement, but bureaucrats' expectations remain the same then they will create systematically biased inflation forecasts. This could lead to systematically biased monetary policies. There is evidence that at least in the United States the real differences in policies implemented by left-leaning Democratic and right-leaning Republican presidents is quite minimal \citep{Bartels2008}. 
+
+
+ We use Fed staff's Greenbook forecasts to test whether expectations based on presidents' partisan identification incorrectly bias estimates of future inflation. We find that irrespective of actual policy and economic conditions Greenbook forecasts {\emph{do}} systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. Our findings suggest that Fed staff inflation forecasts have a heuristic presidential partisan bias.
 
 \end{abstract}
 

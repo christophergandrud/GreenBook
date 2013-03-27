@@ -36,10 +36,10 @@ NL11SimRep.ev <- melt(NL11SimRep.ev, measure = 1:2)
 
 # Final clean up
 NL11SimDem.ev$variable <- factor(NL11SimDem.ev$variable)
-NL11SimDem.ev$Congress <- "Dem."
+NL11SimDem.ev$Congress <- "Dem"
 
 NL11SimRep.ev$variable <- factor(NL11SimRep.ev$variable)
-NL11SimRep.ev$Congress <- "Rep."
+NL11SimRep.ev$Congress <- "Rep"
 
 # Append both sets of simulation results
 NL11Bound <- rbind(NL11SimRep.ev, NL11SimDem.ev)
@@ -56,7 +56,7 @@ NL11BoundPer <- subset(NL11BoundPer, Lower == FALSE & Upper == FALSE)
 
 #### Create plot ####
 # Partisan colours
-partisan.congress.colours = c("Rep." = "#C42B00", "Dem." = "#2259B3")
+partisan.congress.colours = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
 PartyInteractionPlot <- ggplot(data = NL11BoundPer, aes(variable, value)) +
                                   geom_hline(yintercept = 0, size = 1,
