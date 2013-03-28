@@ -8,7 +8,7 @@ set_parent('main_GreenBook.Rnw')
 \definecolor{REP}{HTML}{C42B00}
 
 \begin{figure}
-  \caption{Stylized Inflation Forecast Error Predictions}
+  \caption{Stylized Partisan Inflation Forecast Error Predictions}
   \label{ExpectGraphs}
   \begin{center}
 
