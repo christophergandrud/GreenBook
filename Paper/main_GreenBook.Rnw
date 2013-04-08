@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
-% 28 March 2013
+% 8 April 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -247,7 +247,7 @@ We remove quarters from the sample where forecasters would not have known who th
 
 <<MainAnalysis, include=FALSE, cache=TRUE>>=
     
-    # Run main analysis source code #
+    ## Run main analysis source code #
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
     devtools::source_url(AnalysisURL)
 
@@ -409,7 +409,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     
     # Model names & Coefficient Names -- Use A for all non-matched models
     ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14")
-    CoefNamesA <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election",  "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*Qrt. Election2", "Burns", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesA <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election",  "Qrt. to Election2", "Election Period", "Pres. Party ID", "FRB/GlobalModel", "Deficit/GDP", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", "Pres*Qrt. Election2", "Burns", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(NL1, NL2, NL3, NL4, NL4.1, NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
@@ -437,7 +437,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     
     # Model names & Coefficient Names -- Use B for all  matched models
     ModelNamesB <- c("B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12", "B13")
-    CoefNamesB <- c("Intercept", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesB <- c("Intercept", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "FRB/GlobalModel",  "Senate Dem/Rep", "House Dem/Rep", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(EL1, EL2, EL3, EL4, EL4.1, EL5, EL6, EL7, EL8, EL9, EL10, EL11, EL12,
@@ -471,7 +471,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     
     # Model names & Coefficient Names -- Use C for all  matched models
     ModelNamesC <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "C13")
-    CoefNamesC <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "Senate Dem/Rep", "House Dem/Rep", "FRB/GlobalModel", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesC <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election", "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", "Pres*Qrt. Election2", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(PL1, PL2, PL3, PL4, PL4.1, PL5, PL6, PL7, PL8, PL9, PL10, PL11, PL12,

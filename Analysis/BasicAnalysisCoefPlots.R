@@ -1,13 +1,13 @@
 ####################
 # Greenbook MatchIt Analyses Coef Plots Compare
 # Christopher Gandrud
-# 23 January 2013
+# 8 April 2013
 ####################
 
 #### Figures for Results Catapilar Plot ####
 #### Create Function to find and melt coefficients ####
 CoefPlotPrep <- function(x){
-  require(ZeligBayesian)
+  #require(ZeligBayesian)
   
   y <- substr(deparse(substitute(x)), start = 1, stop = 1) 
   z <- substr(deparse(substitute(x)), start = 2, stop = 2)
