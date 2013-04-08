@@ -409,7 +409,7 @@ What has been the monetary policy and electoral impact of Federal Reserve staff 
     
     # Model names & Coefficient Names -- Use A for all non-matched models
     ModelNamesA <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14")
-    CoefNamesA <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election",  "Qrt. to Election2", "Election Period", "Pres. Party ID", "FRB/GlobalModel", "Deficit/GDP", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", "Pres*Qrt. Election2", "Burns", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
+    CoefNamesA <- c("Intercept", "Recession", "Expenditure/GDP", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Qtr. to Election",  "Qrt. to Election2", "Election Period", "Pres. Party ID", "Deficit/GDP", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", "Pres*Qrt. Election2", "Burns", "Greenspan", "Martin", "Miller", "Volcker", "Pres*House", "Pres*Senate", "House*Senate", "Pres*House*Senate") 
 
     # Table of non-matched models with ls
     apsrtable(NL1, NL2, NL3, NL4, NL4.1, NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,

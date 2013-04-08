@@ -5,8 +5,9 @@
 ###############
 
 ## Load libraries
- library(MatchIt)
- library(Zelig)
+library(MatchIt)
+library(Zelig)
+library(MCMCpack)
 # library(stats)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
@@ -94,7 +95,7 @@ NL10 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP
 
 NL11 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + time_to_election + pres_party*senate_dem_rep + house_dem_rep, model = "normal", data = cpi.data2, cite = FALSE)
 
-NL12 <- zelig(error.prop.deflator.q2 ~ recession + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party*senate_dem_rep*house_dem_rep, model = "normal", data = cpi.data2, cite = FALSE)
+NL12 <- zelig(error.prop.deflator.q2 ~ recession + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE pres_party*senate_dem_rep*house_dem_rep, model = "normal", data = cpi.data2, cite = FALSE)
 
 NL13 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "normal", data = cpi.data2, cite = FALSE)
 
