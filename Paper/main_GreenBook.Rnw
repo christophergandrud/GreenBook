@@ -362,7 +362,7 @@ It seems that Federal Reserve staff may also overestimate the effect of governme
 
 \paragraph{FRB Global Forecasting Model}
 
-The introduction of the FRB/Global behavioral equation forecasting model in 1996 does not seem to have begun a new era of reduced inflation forecasting error. Across all of our matching and parametric model specifications, forecasts made after the introduction of this approach are not significantly more accurate than those made before it. 
+The introduction of the FRB/Global behavioral equation forecasting model in 1996 does not seem to have begun a new era of reduced inflation forecasting error. In one non-matched model specification the estimate was statistical significance at the 10 percent level. However it was not robust in the other matched and parametric model specifications. This suggests that forecasts made after the introduction of this approach were not more accurate than those made before it. 
 
 \paragraph{Changes to the Discount Rate}
 
