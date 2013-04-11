@@ -7,7 +7,7 @@
 ## Load libraries
 library(MatchIt)
 library(Zelig)
-library(MCMCpack)
+
 # library(stats)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:

@@ -1,3 +1,10 @@
+gridExtra
+grid
+Matching
+rgenoud
+MatchIt
+reshape
+plyr
 ZeligBayesian
 MCMCpack
 coda
@@ -5,15 +12,8 @@ lattice
 Zelig
 sandwich
 zoo
-boot
-reshape
-plyr
-MatchIt
-Matching
 MASS
-rgenoud
-gridExtra
-grid
+boot
 plotrix
 ggplot2
 reshape2

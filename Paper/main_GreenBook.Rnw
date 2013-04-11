@@ -247,7 +247,7 @@ We remove quarters from the sample where forecasters would not have known who th
 
 <<MainAnalysis, include=FALSE, cache=TRUE>>=
     
-    ## Run main analysis source code #
+    ## Run main analysis source code 
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
     devtools::source_url(AnalysisURL)
 
