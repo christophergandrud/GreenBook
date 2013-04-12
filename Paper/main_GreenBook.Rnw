@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Do Elections Affect Fed Forecasts?
+% Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
 % 12 April 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%

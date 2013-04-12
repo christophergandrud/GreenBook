@@ -1,10 +1,10 @@
-# Does Partisanship Affect Fed Inflation Forecasts?
+# Inflated Expectations: How government partisanship shapes bureaucrat's inflation expectations
 
 ## Cassandra Grafström and Christopher Gandrud
 
 ---
 
-These files comprise the working paper ''Does Partisanship Affect Fed Inflation Forecasts?''
+These files comprise the working paper ''Inflated Expectations: How government partisanship shapes bureaucrat's inflation expectations''
 
 ### Reproduce the paper
 
