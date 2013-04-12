@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main_GreenBook.aux
+The style file: apsr.bst
+Database file #1: GreenBook.bib.bib
+Warning--can't use both author and editor fields in Goodrich2007
+Warning--empty publisher in Goodrich2007
+Warning--empty chapter and pages in Goodrich2007
+You've used 45 entries,
+            2874 wiz_defined-function locations,
+            949 strings with 11796 characters,
+and the built_in function-call counts, 169976 in all, are:
+= -- 27692
+> -- 2024
+< -- 0
++ -- 12829
+- -- 725
+* -- 14385
+:= -- 34433
+add.period$ -- 181
+call.type$ -- 45
+change.case$ -- 585
+chr.to.int$ -- 45
+cite$ -- 48
+duplicate$ -- 671
+empty$ -- 1496
+format.name$ -- 768
+if$ -- 30465
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 46
+newline$ -- 193
+num.names$ -- 515
+pop$ -- 152
+preamble$ -- 1
+purify$ -- 675
+quote$ -- 0
+skip$ -- 570
+stack$ -- 0
+substring$ -- 38847
+swap$ -- 85
+text.length$ -- 630
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 174
+warning$ -- 3
+while$ -- 1071
+width$ -- 0
+write$ -- 617
+(There were 3 warnings)

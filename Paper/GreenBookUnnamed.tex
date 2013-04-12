@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Inflated Expectations
+% Do Elections Affect Fed Forecasts?
 % Cassandra Grafström and Christopher Gandrud
 % 12 April 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,23 +88,12 @@
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Inflated Expectations: How government partisanship shapes bureaucrat's inflation expectations}
 
-\author{Christopher Gandrud \\
-                {\emph{Yonsei University}}\footnote{Lecturer. 208 Jeongui Hall, 1 Yonseidae-gil, Wonju Gangwon-do, 220-710, Republic of Korea. Email: \href{mailto:gandrud@yonsei.ac.kr}{gandrud@yonsei.ac.kr}} \\
-                and \\
-            Cassandra Grafstr\"{o}m \\
-                {\emph{Hertie School of Governance \& University of Michigan}}\footnote{Ph.D Candidate. 5700 Haven Hall, 505 S. State Street
-                Ann Arbor, MI 48109-1045. USA. Email: \href{mailto:cgrafstr@umich.edu}{cgrafstr@umich.edu}}}
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-
 \begin{document}
 
 \maketitle
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-\noindent\emph{Working draft. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for comments and support. Thank you also to Leonardo Baccini, Vincent Arel-Bundock, Cheryl Schonhardt-Bailey, Tom Stark, and seminar participants at the Hertie School of Governance, London School of Economics, and Yonsei University. \\
-This paper was written using {\tt{knitr}} \citep{knitr2013}. It can be entirely replicated from data, analysis source code, and markup files available on our GitHub page at: {\url{https://github.com/christophergandrud/GreenBook}}.} \\[0.2cm]
-
 
 A government's party identification can indicate the types of economic policies it is likely to pursue. Left-party governments are expected to pursue policies for lower unemployment, but which may cause inflation. Right-party governments are expected to pursue lower inflation policies. How do these expectations shape monetary policy bureaucrat's inflation forecasts? If there is a mismatch between the policies bureaucrat's \emph{expect} governments to implement and those that they \emph{actually} do, forecasts will be systematically biased. There is evidence that at least in the United States the differences in policies implemented by left-leaning Democratic and right-leaning Republican presidents is minimal \citep{Bartels2008}. Using Fed Staff's forecasts we test for presidential partisan biases. We find that irrespective of actual policy and economic conditions forecasters \emph{do} systematically overestimate inflation during Democratic presidencies and underestimate inflation during Republican ones. Our findings suggest that Fed Staff's inflation forecasts are shaped by heuristic presidential partisan biases.
 
@@ -300,7 +289,7 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
 
 
 
-Unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2007 the mean standardized forecast error was -0.04, i.e. forecasters under-predicted inflation by about 4 percent. The mean error is noticably different across Republican compared to Democratic presidencies. Across Republican presidencies it was -11 percent and 13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
+Unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2007 the mean standardized forecast error was -0.04, i.e. forecasters under-predicted inflation by about 4 percent. The mean error is noticably different across Republican compared to Democratic presidencies. Across Republican presidencies it was -11 percent and 13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see [ADDRESS WITHHELD FOR BLIND REVIEW].} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
 
 Figure \ref{errors_over_time} plots forecast errors across our sample separated by presidential term and party. The first thing to note is that inflation was rarely underestimated during the three Democratic presidential terms in our sample. The underestimates that were made were relatively small. The largest overestimates we see were made during Bill Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Richard Nixon's, Gerald Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term and George H.W. Bush's term. Over this period--often referred to as the Volcker Revolution \citep{Bartels1985}--inflation was suddenly much lower than before (see Figure \ref{absolute}). It may have taken awhile for forecasters to adjust to this new lower level of inflation, particularly because the Fed's own models of the economy assumed that money had no real effects on the economy during this period, even while the FOMC was pursuing aggressive anti-inflation policies.
 
@@ -344,7 +333,7 @@ We are interested in disentangling the effects of presidential party ID and elec
 
 To address this issue we follow Ho et al.'s \citeyearpar{Ho2007} to pre-process data with matching to create data sets where the distributions of confounding variables are more even across treatment and control groups. We then run parametric analyses with the matched data sets. We use the {\tt{R}} package {\tt{MatchIt}} \citep{matchit2011} to create two matched data sets where the non-treatment covariates in the control groups closely match those in the treatment groups. Doing this helps us isolate the effects of the `treatments' from that of the background covariates by producing a data set of control and treatment units with the same distribution of the covariates \citep{matchit2011}. This is known as ``covariate balance" \cite[1]{Diamond2012}. Using matching to balance a data set ``break[s] the link between the treatment variables and the pre-treatment controls", effectively replicating the conditions of a randomized experiment with observational data \cite[][2--3]{matchit2011}. 
 
-Balance is usually achieved in matching through propensity scores: the probabilities that units were assigned the treatment given their covariates. The propensity score model is generally unknown \citep{Drake1993}. To find the propensity score model we use Diamond and Sekhon's \citeyearpar{Diamond2012} genetic matching method (GenMatch).\footnote{The method is implemented with {\tt{MatchIt}}. The original source code for our exact matching models can be found at {\url{http://bit.ly/OFdA4u}}.} GenMatch is a multivariate method that uses an evolutionary search algorithm to automate the search for the propensity score model that creates maximum balance. This minimizes the difficulty of ``manually and iteratively checking the propensity score" to determine covariate balance \citep[][2]{Diamond2012}. 
+Balance is usually achieved in matching through propensity scores: the probabilities that units were assigned the treatment given their covariates. The propensity score model is generally unknown \citep{Drake1993}. To find the propensity score model we use Diamond and Sekhon's \citeyearpar{Diamond2012} genetic matching method (GenMatch).\footnote{The method is implemented with {\tt{MatchIt}}. The original source code for our exact matching models can be found at [ADDRESS WITHHELD FOR BLIND REVIEW].} GenMatch is a multivariate method that uses an evolutionary search algorithm to automate the search for the propensity score model that creates maximum balance. This minimizes the difficulty of ``manually and iteratively checking the propensity score" to determine covariate balance \citep[][2]{Diamond2012}. 
 
 
 \subsection{Parametric Models}
@@ -387,7 +376,7 @@ Finally, we include a variable for the sitting {\bf{Federal Reserve Board Chair}
 
 In this section we graphically present results from a number of parametric model specifications and discuss our findings. Full coefficient estimate tables can be found in the Appendix (see tables \ref{OutputNL}, \ref{OutputEL}, \ref{OutputPL}, \ref{OutputNB}, and \ref{OutputPB}). In general the standard errors are larger in models using matched data and there is little difference between the coefficients estimated using normal linear and Bayesian linear regression models (see Figure \ref{CoefComparePlots}). 
 
-We primarily diagnose the presidential party ID matching models with propensity score distributions--the probability of a quarter being in the `treated' group given its covariates--as well as quantile-quantile plots to diagnose whether or not each covariate in the matched data sets is balanced \citep{Ho2007}.\footnote{Please see figures \ref{ElectPropensityScores} and \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created by running the original matching models in our main analysis source code file. The file is available at: \url{http://bit.ly/OFdA4u}.}  We are unable to achieve covariate balance for the Congressional interaction terms\footnote{The presidential party ID and election period interaction does balance.} and the Federal Reserve Chair variable. Chairs in our data set in the pre-Volcker/Greenspan era as well as current Chair Ben Bernanke were in office for very few observed quarters, making it difficult to match them. Because of this, we only discuss Congressional interaction terms and Chair variable estimates from the non-matched data sets. Almost all other parametric model specifications\footnote{Figure \ref{OutputPL} shows interaction estimates from matched data sets for comparison with the non-matched results in Table \ref{OutputNL}. Note though that the interactions were not included in the matching models.} are run with both the matched and unmatched data sets.\footnote{In all of the Bayesian regressions we use the {\tt{Zelig}} default 1,000 MCMC burn-in iterations and 10,000 iterations after burn-in. We use the Heidelberger-Welch diagnostic to examine whether or not the Markov Chains converged to their stationary distributions.}
+We primarily diagnose the presidential party ID matching models with propensity score distributions--the probability of a quarter being in the `treated' group given its covariates--as well as quantile-quantile plots to diagnose whether or not each covariate in the matched data sets is balanced \citep{Ho2007}.\footnote{Please see figures \ref{ElectPropensityScores} and \ref{PresPropensityScores} for the propensity score distributions in our matched data sets. The quantile-quantile plots are not shown, but can easily be created by running the original matching models in our main analysis source code file. The file is available at: [ADDRESS WITHHELD FOR BLIND REVIEW].}  We are unable to achieve covariate balance for the Congressional interaction terms\footnote{The presidential party ID and election period interaction does balance.} and the Federal Reserve Chair variable. Chairs in our data set in the pre-Volcker/Greenspan era as well as current Chair Ben Bernanke were in office for very few observed quarters, making it difficult to match them. Because of this, we only discuss Congressional interaction terms and Chair variable estimates from the non-matched data sets. Almost all other parametric model specifications\footnote{Figure \ref{OutputPL} shows interaction estimates from matched data sets for comparison with the non-matched results in Table \ref{OutputNL}. Note though that the interactions were not included in the matching models.} are run with both the matched and unmatched data sets.\footnote{In all of the Bayesian regressions we use the {\tt{Zelig}} default 1,000 MCMC burn-in iterations and 10,000 iterations after burn-in. We use the Heidelberger-Welch diagnostic to examine whether or not the Markov Chains converged to their stationary distributions.}
 
 We remove quarters from the sample where forecasters would not have known who the president would be because the president had not yet been elected for that quarter. For models where the dependent variable is forecasts made two quarters beforehand this means removing the first two quarters of each presidential term.\footnote{In this case 19 quarters are removed.} Results from these restricted data sets are fairly similar to those from the full data set.
 
@@ -400,10 +389,14 @@ We remove quarters from the sample where forecasters would not have known who th
     \begin{center}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.95\linewidth]{figure/CoefComparePlots} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: \$ operator is invalid for atomic vectors}}\end{kframe}
+
 \end{knitrout}
 
     \end{center}
@@ -444,7 +437,7 @@ Our main finding is that Democratic party identification had a strong positive a
     \end{singlespace}
 \end{figure}
 
-Following \cite{King2000}, we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means, to get a sense of approximately how big the presidential partisan ID bias is. Results from these simulations are shown in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty} shows results from parametric models using non-matched data. Results using data matched by presidential party ID are generally similar though the variance is much larger. This is likely because the sample size in the matched data is smaller. For more details see: \url{http://bit.ly/U6edHt}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher than it really is in Democratic presidencies and lower in than it is in Republican presidencies.
+Following \cite{King2000}, we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means, to get a sense of approximately how big the presidential partisan ID bias is. Results from these simulations are shown in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty} shows results from parametric models using non-matched data. Results using data matched by presidential party ID are generally similar though the variance is much larger. This is likely because the sample size in the matched data is smaller. For more details see: [ADDRESS WITHHELD FOR BLIND REVIEW].} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher than it really is in Democratic presidencies and lower in than it is in Republican presidencies.
 
 For forecasts made two quarters in advance, we expect that the Fed overestimates inflation by 20 percent during Democratic presidencies, all else equal. We expect the average inflation error during Republican presidencies to be approximately -12 percent. Given that the first quantile of the inflation errors is -22 and the third is 13, \emph{these estimates indicate that partisan biases are on average a large contributor to the overall magnitude of inflation forecasting errors}. These results hold up even when we rerun the models on data where we dropped individual presidential terms (see Table \ref{OutputNLPresDrop}) and Fed chairman's terms.\footnote{These are available from the authors upon request.} This indicates that the results are not being driven by one outlier presidential or chairman term.
 
@@ -514,7 +507,7 @@ As expected, relative changes to the discount rate are often found to be negativ
 
 As a final diagnostic we estimated our analyses with a dependent variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve Staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are relatively weakly correlated with inflation forecast errors. The Pearson correlation coefficient for forecasts made two quarters beforehand is -0.15 with a p-value of 0.07.} The variable captures the errors Fed Staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Greenbook. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
 
-Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors were the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve Staff's \emph{inflation} forecasting errors.
+Most of the effects we found using inflation forecast errors disappeared or decreased dramatically in terms of statistical significance and magnitude when unemployment rate errors were the dependent variable.\footnote{The analyses can be fully recreated using source code available at: [ADDRESS WITHHELD FOR BLIND REVIEW].} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve Staff's \emph{inflation} forecasting errors.
 
 \section*{Discussion: Partisanship \& bureaucratic inflation forecasts}
 
@@ -741,43 +734,63 @@ $\log L$            & 18.8            & 25.5            & 22.4            & 31.7
 \end{table}
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
-\begin{kframe}
+% latex table generated in R 3.0.0 by xtable 1.7-1 package
+% Fri Apr 12 16:36:59 2013
+\begin{table}[ht]
+\centering
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)} 
+\label{OutputNB}
+{\small
+\begin{tabular}{lccccc}
+  \hline
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+  \hline
+Intercept & 3.62 & 1.56 & 0.54 & 3.63 & 6.73 \\ 
+  Pres. Party ID & 0.30 & 0.04 & 0.23 & 0.30 & 0.37 \\ 
+  Recession & 0.06 & 0.05 & -0.05 & 0.06 & 0.16 \\ 
+  Qtr. to Election & -0.00 & 0.00 & -0.01 & -0.00 & 0.00 \\ 
+  Expenditure/GDP & 0.15 & 0.02 & 0.11 & 0.15 & 0.18 \\ 
+  Output Gap & -0.07 & 0.02 & -0.10 & -0.07 & -0.03 \\ 
+  Discount Rate Change & -0.26 & 0.09 & -0.43 & -0.26 & -0.09 \\ 
+  Unemployment Rate & -0.01 & 0.03 & -0.06 & -0.01 & 0.05 \\ 
+  Global Model & 0.10 & 0.04 & 0.02 & 0.10 & 0.18 \\ 
+  sigma2 & 0.04 & 0.00 & 0.03 & 0.04 & 0.04 \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: \$ operator is invalid for atomic vectors}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'NB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'NB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'NB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'NB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'NB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'NB1Summary' not found}}\end{kframe}
 
 
 
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
-\begin{kframe}
+% latex table generated in R 3.0.0 by xtable 1.7-1 package
+% Fri Apr 12 16:37:00 2013
+\begin{table}[ht]
+\centering
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 
+\label{OutputPB}
+{\small
+\begin{tabular}{lccccc}
+  \hline
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+  \hline
+Intercept & 1.91 & 3.63 & -5.07 & 1.90 & 9.29 \\ 
+  Pres. Party ID & 0.31 & 0.07 & 0.17 & 0.31 & 0.45 \\ 
+  Recession & 0.13 & 0.17 & -0.20 & 0.13 & 0.46 \\ 
+  Qtr. to Election & 0.00 & 0.01 & -0.01 & 0.00 & 0.02 \\ 
+  Expenditure/GDP & 0.14 & 0.05 & 0.05 & 0.14 & 0.24 \\ 
+  Output Gap & -0.05 & 0.04 & -0.14 & -0.05 & 0.04 \\ 
+  Discount Rate Change & -0.54 & 0.29 & -1.10 & -0.54 & 0.03 \\ 
+  Unemployment Rate & 0.01 & 0.06 & -0.10 & 0.01 & 0.12 \\ 
+  Global Model & -0.08 & 0.10 & -0.27 & -0.08 & 0.10 \\ 
+  sigma2 & 0.05 & 0.01 & 0.03 & 0.05 & 0.07 \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: \$ operator is invalid for atomic vectors}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'PB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'PB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'PB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'PB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'PB1Summary' not found}}
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'PB1Summary' not found}}\end{kframe}
 
 
 %%%%%%% Table of non-matched data with Normal Linear Regression parametric model Dropping presidential terms %%%%%%%%
