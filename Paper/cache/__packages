@@ -3,6 +3,7 @@ bitops
 boot
 coda
 devtools
+digest
 ggplot2
 gridExtra
 knitr
