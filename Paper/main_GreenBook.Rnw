@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 12 April 2013
+% 19 May 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -34,7 +34,7 @@
 @
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Inflated Expectations: How government partisanship shapes bureaucrat's inflation expectations}
+\title{Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations}
 
 \author{Christopher Gandrud \\
                 {\emph{Yonsei University}}\footnote{Lecturer. 208 Jeongui Hall, 1 Yonseidae-gil, Wonju Gangwon-do, 220-710, Republic of Korea. Email: \href{mailto:gandrud@yonsei.ac.kr}{gandrud@yonsei.ac.kr}} \\
@@ -248,7 +248,7 @@ We remove quarters from the sample where forecasters would not have known who th
 
 <<MainAnalysis, include=FALSE, cache=TRUE>>=
     
-    ## Run main analysis source code #
+    ## Run main analysis source code ##
     AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
     devtools::source_url(AnalysisURL)
 
