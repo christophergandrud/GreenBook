@@ -37,7 +37,7 @@
 \title{Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}
 
 \author{Christopher Gandrud \\
-                {\emph{Hertie School of Governance}}\footnote{Research Associate. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}.} \\
+                {\emph{Hertie School of Governance}}\footnote{Research Associate. Friedrichstra{\ss}er 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{christopher.gandrud@gmail.com}. Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for comments and support. Thank you also to Leonardo Baccini, Vincent Arel-Bundock, Cheryl Schonhardt-Bailey, Tom Stark, and seminar participants at the Hertie School of Governance, London School of Economics, and Yonsei University. This paper was written using {\tt{knitr}} \citep{knitr2013}. It can be entirely replicated from data, analysis source code, and markup files available at: {\url{https://github.com/christophergandrud/GreenBook}}.} \\
                 and \\
             Cassandra Grafstr\"{o}m \\
                 {\emph{Hertie School of Governance \& University of Michigan}}\footnote{Ph.D Candidate. 5700 Haven Hall, 505 S. State Street
@@ -49,9 +49,6 @@
 
 %%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-\noindent\emph{Working draft. Comments welcome.}\footnote{Thank you to the Mark Hallerberg and the Fiscal Governance Centre at the Hertie School of Governance for comments and support. Thank you also to Leonardo Baccini, Vincent Arel-Bundock, Cheryl Schonhardt-Bailey, Tom Stark, and seminar participants at the Hertie School of Governance, London School of Economics, and Yonsei University. \\
-This paper was written using {\tt{knitr}} \citep{knitr2013}. It can be entirely replicated from data, analysis source code, and markup files available at: {\url{https://github.com/christophergandrud/GreenBook}}.} \\[0.2cm]
-
 
 Governments' party identifications can indicate the types of economic policies they are likely to pursue. A common rule of thumb is that left-party governments are expected to pursue policies for lower unemployment, but which may cause inflation. Right-party governments are expected to pursue lower inflation policies. How do these expectations shape the inflation forecasts of monetary policy bureaucrats? If there is a mismatch between the policies bureaucrats \emph{expect} governments to implement and those that they \emph{actually} do, forecasts will be systematically biased. Using US Federal Reserve Staff’s forecasts we test for executive partisan biases. We find that irrespective of actual policy and economic conditions forecasters systematically overestimate future inflation during left-party presidencies and underestimate future inflation during right-party ones. Our findings suggest that partisan heuristics play an important part in monetary policy bureaucrats' inflation expectations.
 
