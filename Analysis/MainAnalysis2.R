@@ -9,6 +9,7 @@ library(MatchIt)
 library(Zelig)
 
 # library(stats)
+# library(digest)
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
 ## devtools::source_url("http://bit.ly/NXdCpk") 
