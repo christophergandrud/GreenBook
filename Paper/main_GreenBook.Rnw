@@ -654,7 +654,21 @@ Second, perhaps oil price shocks, for example in the late 1970s, increased infla
     \begin{center}
 <<NLSup, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
 devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SupplementaryAnalyses.R')
+    # Model names & Coefficient Names
+    ModelNamesP <- c('S1', 'S2', 'S3', 'S4','S5', 'S6' )
+    CoefNamesP <- c("Intercept", "Recession", "Expenditure/GDP", 
+                    "Output Gap", "Discount Rate Change", "Unemployment Rate", 
+                    "Qtr. to Election", "Pres. Party ID", "FRB/GlobalModel") 
 
+    # Table of non-matched models with ls
+    apsrtable(SNixon1, SNixon2, SFord1, SCarter1, SReagan1, SReagan2, 
+              SGHWBush1, SClinton1, SClinton2, SGWBush1, SGWBush2,
+              digits = 1, 
+              Sweave = TRUE, 
+              stars = "default", 
+              model.names = ModelNamesP, 
+              coef.names = CoefNamesP
+              )
 @
     \end{center}
 \end{table}

@@ -40,19 +40,19 @@ cpi.data2 <- slide(cpi.data2, Var = "deflator", NewVar = "deflatorLag3", slideBy
 S1 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party*time_to_election + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep, model = "normal", data = cpi.data2, cite = FALSE)
 
 # Present inflation
-S2 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + senate_dem_rep + house_dem_rep + deflator, model = "normal", data = cpi.data2, cite = FALSE)
+S2 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + deflator, model = "normal", data = cpi.data2, cite = FALSE)
 
 # Inflation in the quarter before the forecast quarter
-S3 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + senate_dem_rep + house_dem_rep + deflatorLag3, model = "normal", data = cpi.data2, cite = FALSE)
+S3 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + deflatorLag3, model = "normal", data = cpi.data2, cite = FALSE)
 
 # Oil Shocks
-S4 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + senate_dem_rep + house_dem_rep + WTI_crude_price, model = "normal", data = cpi.data2, cite = FALSE)
+S4 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + WTI_crude_price, model = "normal", data = cpi.data2, cite = FALSE)
 
 # Number of interstate conflicts
-S5 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + senate_dem_rep + house_dem_rep + num_conflicts, model = "normal", data = cpi.data2, cite = FALSE)
+S5 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + num_conflicts, model = "normal", data = cpi.data2, cite = FALSE)
 
 # Productivity change
-S6 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + senate_dem_rep + house_dem_rep + productivity_change, model = "normal", data = cpi.data2, cite = FALSE)
+S6 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + productivity_change, model = "normal", data = cpi.data2, cite = FALSE)
 
 # Garbage can shocks
-S7 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + senate_dem_rep + house_dem_rep + WTI_crude_price + num_conflicts + productivity_change, model = "normal", data = cpi.data2, cite = FALSE)
+S7 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + WTI_crude_price + num_conflicts + productivity_change, model = "normal", data = cpi.data2, cite = FALSE)
