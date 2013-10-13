@@ -37,9 +37,9 @@ names(oil) <- c("Quarter", "WTI_crude_price")
 ## Data downloaded from PCR UU (http://www.pcr.uu.se/research/ucdp/datasets/onset_of_intrastate_armed_conflict/)
 conflict <- read.csv("~/Dropbox/GreenBook/Base_Data/OnsetOfInterStateConflict.csv", stringsAsFactors = FALSE)
 # Keep year and incidencev412, dummy for each country year that there was interstate conflict
-conflict <- conflict[, c(1, 3)]
-conflict <- ddply(conflict, "year", transform, num_conflicts = sum(incidencev412))
-conflict <- conflict[!duplicated(conflict[, c(1, 3)]), ]
+conflict <- conflict[, c('year', 'sumconfv412')]
+conflict <- ddply(conflict, "year", transform, num_conflicts = sum(sumconfv412))
+conflict <- conflict[!duplicated(conflict[, c(1, 2)]), ]
 conflict <- conflict[, c("year", "num_conflicts")]
 
 # Combine data sets

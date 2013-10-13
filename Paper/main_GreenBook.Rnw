@@ -629,7 +629,7 @@ plot(cpi.matched.party, type = "jitter", interactive = FALSE)
 
 \clearpage
 
-\section*{Supplementary Material for\\ Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}
+\section*{Supplementary Material for:\\ \emph{Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}}
 
 In this supplementary material we present further robustness checks to further test the strength of our main empirical findings. 
 
@@ -643,27 +643,27 @@ NEED TO DO
 
 \subsection*{Economic and Violent Conflict Shocks}
 
-Following helpful reviewer suggestions, we examined if economic or violent conflict shocks may impact inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility in two ways: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made. The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the results. 
+Following helpful reviewer suggestions, we examined if economic or violent conflict shocks may impact inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility in two ways: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made.\footnote{In Table \ref{SupTable1} this is referred to as `Lag 3 Abs. Inflation'.} The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the presidential partisan ID results. Absolute inflation in the quarter being forecasted for has a statistically significant negative relationship with errors. Referring back to Figure \ref{errors_over_time} in the main paper, this makes sense as periods of high inflation in the 1970s were actually times when the standardized forecast error was relatively small.
 
-Second, perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database\footnote{Accessed October 2013.} on the \textbf{change in the West Texas Crude price} from the quarter in the previous year. 
+Second, we consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database\footnote{Accessed October 2013.} on the \textbf{change in the West Texas Crude price} from the quarter in the previous year. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions and therefore inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the total number of interstate conflicts per year using data from the Uppsala Conflict Data Program/
 
 \begin{table}[ht]
     \caption{Normal Linear Regression Estimation with Additional Variables}
-    \label{SubTable1}
+    \label{SupTable1}
     \vspace{0.25cm}
     \begin{center}
-    {\small{
+    {\tiny{
 <<NLSup, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
 devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SupplementaryAnalyses.R')
     # Model names & Coefficient Names
-    ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6' )
+    ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6', 'S7')
     CoefNamesS <- c("Intercept", "Recession", "Expenditure/GDP", 
                     "Output Gap", "Discount Rate Change", "Unemployment Rate", "Pres. Party ID", 
                     "Qtr. to Election", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", 
-                    "Pres*Qrt. Election", "Oil Price Change", "Productivity Change", "No. Interstate Wars") 
+                    "Pres*Qrt. Election", "Abs Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", "Productivity Change", "No. Interstate Wars") 
 
     # Table of non-matched models with ls
-    apsrtable(S1, S2, S3, S4, S5, S6,
+    apsrtable(S1, S2, S3, S4, S5, S6, S7,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
