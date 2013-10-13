@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 12 October 2013
+% 13 October 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -75,6 +75,7 @@
 \usepackage{tikz}
 \usepackage{todonotes}
 \usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
 
 % Set knitr global options
 
@@ -751,7 +752,7 @@ $\log L$            & 18.3            & 25.0            & 21.8            & 31.6
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Sat Oct 12 18:42:24 2013
+% Sun Oct 13 14:50:56 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)} 
@@ -782,7 +783,7 @@ Intercept & 3.62 & 1.56 & 0.54 & 3.63 & 6.73 \\
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Sat Oct 12 18:42:25 2013
+% Sun Oct 13 14:50:56 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 
@@ -816,6 +817,7 @@ Intercept & 2.17 & 3.64 & -4.84 & 2.15 & 9.57 \\
     \label{OutputNLPresDrop}
     \vspace{0.25cm}
     \begin{center}
+    \scalebox{0.9}{
     {\tiny
  
 \begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
@@ -849,6 +851,7 @@ $\log L$            & 56.3            & 60.5            & 61.5            & 58.8
 \end{tabular} 
 
 
+    }
     }
     \end{center}
 \end{table}
@@ -931,6 +934,25 @@ $\log L$            & 56.3            & 60.5            & 61.5            & 58.8
 
 \section*{Supplementary Material for Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}
 
-INCLUDE SUPPLEMENTARY REGRESSIONS
+In this supplementary material we present further robustness checks to further test the strength of our main empirical findings. 
+
+\subsection*{President party ID and election timing linear interaction}
+
+In the body of the paper we present results from models with president party ID and the square of quarters to the election. The first model in table \ref{SupTable1} shows results with an interaction between president party ID and the non-squared linear version of election timing. The results are substantively equivalent to those with the squared version. 
+
+\subsection*{Mid-term election timing}
+
+NEED TO DO
+
+\subsection*{Economic and Violent Conflict Shocks}
+
+Following helpful reviewer suggestions, we examined if economic or violent conflict shocks may impact inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility in two ways: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made. The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the results. 
+
+Second, perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database\footnote{Accessed October 2013.} on the \textbf{change in the West Texas Crude price} from the quarter in the previous year. 
+
+
+
+
+
 
 \end{document}
