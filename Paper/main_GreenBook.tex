@@ -752,7 +752,7 @@ $\log L$            & 18.3            & 25.0            & 21.8            & 31.6
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Sun Oct 13 14:50:56 2013
+% Sun Oct 13 15:06:32 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (non-matched data set)} 
@@ -783,7 +783,7 @@ Intercept & 3.62 & 1.56 & 0.54 & 3.63 & 6.73 \\
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Sun Oct 13 14:50:56 2013
+% Sun Oct 13 15:06:32 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 
@@ -932,7 +932,7 @@ $\log L$            & 56.3            & 60.5            & 61.5            & 58.8
 
 \clearpage
 
-\section*{Supplementary Material for Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}
+\section*{Supplementary Material for\\ Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}
 
 In this supplementary material we present further robustness checks to further test the strength of our main empirical findings. 
 
@@ -950,7 +950,68 @@ Following helpful reviewer suggestions, we examined if economic or violent confl
 
 Second, perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database\footnote{Accessed October 2013.} on the \textbf{change in the West Texas Crude price} from the quarter in the previous year. 
 
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation with Additional Variables}
+    \label{SubTable1}
+    \vspace{0.25cm}
+    \begin{center}
 
+
+{\centering \includegraphics[width=\maxwidth]{figure/NLSup} 
+
+}
+
+
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ S1 } & \multicolumn{ 1 }{ c }{ S2 } & \multicolumn{ 1 }{ c }{ S3 } & \multicolumn{ 1 }{ c }{ S4 } & \multicolumn{ 1 }{ c }{ S5 } & \multicolumn{ 1 }{ c }{ S6 } \\ \hline
+ %                    & S1              & S2              & S3              & S4              & S5              & S6             \\ 
+Intercept            & 2.0             & 2.3             & 1.3             & 2.3             & 2.3             & 2.3            \\ 
+                     & (2.0)           & (1.9)           & (2.1)           & (1.9)           & (2.0)           & (2.0)          \\ 
+Recession            & 0.0             & 0.1 ^*          & 0.1             & 0.1             & 0.0             & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Expenditure/GDP      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{**}       & 0.1 ^{***}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Output Gap           & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0 ^*        \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Discount Rate Change & -0.3 ^{**}      & -0.2 ^\dagger  & -0.3 ^{**}      & -0.2 ^*         & -0.3 ^{**}      & -0.3 ^{**}     \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Unemployment Rate    & -0.1            & -0.0            & -0.1            & -0.1            & -0.0            & -0.1           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Pres. Party ID       & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}     \\ 
+                     & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election     & 0.0             & 0.0             & 0.0             & -0.0            & 0.0             & 0.0            \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+FRB/GlobalModel      & 0.1             & 0.1 ^*          & 0.1 ^\dagger   & 0.1             & 0.1 ^\dagger   & 0.1            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Senate Dem/Rep       & -0.3 ^*         & -0.3 ^*         & -0.4 ^*         & -0.3 ^*         & -0.3 ^*         & -0.4 ^*        \\ 
+                     & (0.2)           & (0.1)           & (0.2)           & (0.1)           & (0.2)           & (0.2)          \\ 
+House Dem/Rep        & 0.3 ^*          & 0.4 ^{**}       & 0.3 ^*          & 0.3 ^*          & 0.3 ^\dagger   & 0.3 ^*         \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Pres*Qrt. Election   & -0.0            &                 &                 &                 &                 &                \\ 
+                     & (0.0)           &                 &                 &                 &                 &                \\ 
+Oil Price Change     &                 & -0.0 ^{**}      &                 &                 &                 &                \\ 
+                     &                 & (0.0)           &                 &                 &                 &                \\ 
+Productivity Change  &                 &                 & -0.0            &                 &                 &                \\ 
+                     &                 &                 & (0.0)           &                 &                 &                \\ 
+No. Interstate Wars  &                 &                 &                 & -0.0 ^\dagger  &                 &                \\ 
+                     &                 &                 &                 & (0.0)           &                 &                \\ 
+Intercept            &                 &                 &                 &                 & 0.0             &                \\ 
+                     &                 &                 &                 &                 & (0.0)           &                \\ 
+Recession            &                 &                 &                 &                 &                 & -0.0           \\ 
+                     &                 &                 &                 &                 &                 & (0.0)           \\
+ $N$                  & 135             & 135             & 132             & 135             & 135             & 135            \\ 
+AIC                  & -55.3           & -64.8           & -52.2           & -59.0           & -55.9           & -55.5          \\ 
+BIC                  & 84.2            & 74.7            & 86.2            & 80.5            & 83.6            & 84.0           \\ 
+$\log L$            & 75.6            & 80.4            & 74.1            & 77.5            & 75.9            & 75.7            \\ \hline
+ \multicolumn{7}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{7}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
+    \end{center}
+\end{table}
 
 
 

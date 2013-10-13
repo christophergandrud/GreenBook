@@ -652,6 +652,7 @@ Second, perhaps oil price shocks, for example in the late 1970s, increased infla
     \label{SubTable1}
     \vspace{0.25cm}
     \begin{center}
+    {\small{
 <<NLSup, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
 devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SupplementaryAnalyses.R')
     # Model names & Coefficient Names
@@ -670,6 +671,7 @@ devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master
               coef.names = CoefNamesS
               )
 @
+    }}
     \end{center}
 \end{table}
 
