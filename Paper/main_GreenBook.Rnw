@@ -655,19 +655,19 @@ Second, perhaps oil price shocks, for example in the late 1970s, increased infla
 <<NLSup, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
 devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SupplementaryAnalyses.R')
     # Model names & Coefficient Names
-    ModelNamesP <- c('S1', 'S2', 'S3', 'S4','S5', 'S6' )
-    CoefNamesP <- c("Intercept", "Recession", "Expenditure/GDP", 
-                    "Output Gap", "Discount Rate Change", "Unemployment Rate", 
-                    "Qtr. to Election", "Pres. Party ID", "FRB/GlobalModel") 
+    ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6' )
+    CoefNamesS <- c("Intercept", "Recession", "Expenditure/GDP", 
+                    "Output Gap", "Discount Rate Change", "Unemployment Rate", "Pres. Party ID", 
+                    "Qtr. to Election", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", 
+                    "Pres*Qrt. Election", "Oil Price Change", "Productivity Change", "No. Interstate Wars") 
 
     # Table of non-matched models with ls
-    apsrtable(SNixon1, SNixon2, SFord1, SCarter1, SReagan1, SReagan2, 
-              SGHWBush1, SClinton1, SClinton2, SGWBush1, SGWBush2,
+    apsrtable(S1, S2, S3, S4, S5, S6,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
-              model.names = ModelNamesP, 
-              coef.names = CoefNamesP
+              model.names = ModelNamesS, 
+              coef.names = CoefNamesS
               )
 @
     \end{center}
