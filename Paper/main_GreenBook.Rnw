@@ -204,7 +204,7 @@ We use non-matched and matched data sets with parametric models \citep[see][]{Ho
 
 \subsection{Non-matched and Matched Data Sets}
 
-Our primary analysis uses standard multiple linear regressions models with inflation forecast errors as the dependent variable and the full data set. We are interested in disentangling the effects of presidential party ID and elections from many background factors, such as economic shocks and FOMC policy changes, that would create inflation forecast errors. As such, we use matching methods as a robustness check to further help determine the effects of two potential treatments that Fed Staffers are exposed to: a partisan treatment and an electoral treatment. In the first ``experiment" we consider presidential partisan identification and elections to be `treatments' that may impact inflation forecast errors. Democratic presidencies are considered to be treatments. Republican presidencies are `controls'.\footnote{The selection of `treatment' and `control' groups in this context is arbitrary.} In the second `experiment' quarters when a presidential election is held and the three quarters before it are considered treatments and all other quarters are controls (see below for a discussion). Of course, given that we are working with observational data, other variables that have an impact on forecast errors may have {\emph{different distributions}} across the treatment and control groups \citep{Cochran1973, Diamond2012}. This makes it difficult to identify the relationships between presidential party ID, elections and errors from all of the confounding background variables.
+Our primary analysis uses standard multiple linear regressions models with inflation forecast errors as the dependent variable and the full data set. We are interested in disentangling the effects of presidential party ID and elections from many background factors, such as economic shocks and FOMC policy changes, that would create inflation forecast errors. As such, we use matching methods as a robustness check to further help determine the effects of two potential treatments that Fed Staffers are exposed to: a partisan treatment and an electoral treatment. In the first `experiment' we consider presidential partisan identification and elections to be `treatments' that may impact inflation forecast errors. Democratic presidencies are considered to be treatments. Republican presidencies are `controls'.\footnote{The selection of `treatment' and `control' groups in this context is arbitrary.} In the second `experiment' quarters when a presidential election is held and the three quarters before it are considered treatments and all other quarters are controls (see below for a discussion). Of course, given that we are working with observational data, other variables that have an impact on forecast errors may have {\emph{different distributions}} across the treatment and control groups \citep{Cochran1973, Diamond2012}. This makes it difficult to identify the relationships between presidential party ID, elections and errors from all of the confounding background variables.
 
 To address this issue we follow Ho et al.'s \citeyearpar{Ho2007} suggestion to pre-process the data with matching to create data sets where the distributions of confounding variables are more even across treatment and control groups. We then run parametric analyses with the matched data sets. We use the {\tt{R}} package {\tt{MatchIt}} \citep{matchit2011} to create two matched data sets where the non-treatment covariates in the control groups closely match those in the treatment groups. Doing this helps us isolate the effects of the `treatments' from those of the background covariates by producing a data set of control and treatment units with the same distribution of the covariates \citep{matchit2011}. This is known as ``covariate balance" \cite[1]{Diamond2012}. Using matching to balance a data set ``break[s] the link between the treatment variables and the pre-treatment controls", effectively replicating the conditions of a randomized experiment with observational data \cite[][2--3]{matchit2011}. 
 
@@ -332,7 +332,7 @@ Fed Staff do not appear to be over-estimating inflation when a Democratic presid
     \label{InterPlot}
     \begin{center}
 
-<<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=7, fig.height=4, out.width='0.95\\linewidth'>>=
+<<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=7, fig.height=4, out.width='0.7\\linewidth'>>=
     # Load required packages ##
     library(gridExtra)
 
@@ -347,7 +347,7 @@ Fed Staff do not appear to be over-estimating inflation when a Democratic presid
     # Combine graphs
     #InterCombine <- grid.arrange(ElectionInteractionPlot, PartyInteractionPlot, ncol = 2)
     #print(InterCombine)
-    print(CongInterURL)
+    print(PartyInteractionPlot)
 @
 
     \end{center}
@@ -384,12 +384,6 @@ As expected, relative changes to the discount rate are often found to be negativ
     PartisanErrorUnemployURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiagnosticTests/OrthogonalUnemploymentError.R"
     devtools::source_url(PartisanErrorUnemployURL)
 @
-
-\paragraph{Orthogonal Dependent Variable Robustness Check: Unemployment Forecast Errors}
-
-As a final diagnostic we estimated our analyses with a dependent variable that is orthogonal to inflation forecast errors. This is a further way to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve Staff forecasts. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are relatively weakly correlated with inflation forecast errors. The Pearson correlation coefficient for forecasts made two quarters beforehand is \Sexpr{round(Estat, digit = 2)} with a p-value of \Sexpr{round(Pstat, digit = 2)}.} The variable captures the errors Fed Staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Greenbook. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
-
-Most of the effects we found using inflation forecast errors were not present or were dramatically smaller in terms of statistical significance and magnitude when unemployment rate errors were the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment} in the Appendix. Unlike in Figure \ref{errors_over_time}, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve Staff's \emph{inflation} forecasting errors, rather than the observed partisan effect being driven by an unobserved time period specific factor.
 
 \section*{Discussion: Partisanship \& bureaucratic inflation forecasts}
 
@@ -602,24 +596,6 @@ plot(cpi.matched.party, type = "jitter", interactive = FALSE)
   \end{singlespace}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%   Greenbook Unemployment Forecast Error Across Time
-\begin{figure}[t]
-    \caption{Diagnostics of Unemployment Rate Forecast Error as Orthogonal to Inflation Rate Forecast Errors (1969 - 2007)}
-    \label{Unemployment}
-    \begin{center}
-    
-<<GraphPartisanErrorUnemploy, warning=FALSE, error=FALSE, message=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.95\\linewidth'>>=
-  # Print unemployment error orthogonal graphs
-  library(gridExtra)
-  grid.arrange(errors.employ.time, ErrorOrthogScatter, ncol = 2)
-@
-
-    \end{center}
-    \begin{singlespace}
-        {\scriptsize{Note: Errors of 0 indicates that inflation/the unemployment rate was perfectly predicted.}}
-    \end{singlespace}
-\end{figure}
-
 
 %%%%%%% References %%%%%%%%%%%%
 
@@ -642,26 +618,54 @@ In the body of the paper we present results from models with president party ID 
 
 NEED TO DO
 
+\subsection*{Orthogonal Dependent Variable Robustness Check: Unemployment Forecast Errors}
+
+In a further attempt to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve Staff forecasts we estimated our analyses with a dependent variable that is orthogonal to inflation forecast errors. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are relatively weakly correlated with inflation forecast errors. The Pearson correlation coefficient for forecasts made two quarters beforehand is \Sexpr{round(Estat, digit = 2)} with a p-value of \Sexpr{round(Pstat, digit = 2)}.} The variable captures the errors Fed Staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Greenbook. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
+
+Most of the effects we found using inflation forecast errors were not present or were dramatically smaller in terms of statistical significance and magnitude when unemployment rate errors were the dependent variable.\footnote{The analyses can be fully recreated using source code available at: \url{http://bit.ly/S1nKyl}.} The lack of a relationship between presidential party ID and unemployment forecast errors is reflected in Figure \ref{Unemployment}. Unlike in Figure \ref{errors_over_time} from the main paper, it is very difficult to find any partisan pattern to the errors. This provides more evidence that the presidential partisan ID effect is a real contributor to Federal Reserve Staff's \emph{inflation} forecasting errors, rather than the observed partisan effect being driven by an unobserved time period specific factor.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Greenbook Unemployment Forecast Error Across Time
+\begin{figure}[t]
+    \caption{Diagnostics of Unemployment Rate Forecast Error as Orthogonal to Inflation Rate Forecast Errors (1969 - 2007)}
+    \label{Unemployment}
+    \begin{center}
+    
+<<GraphPartisanErrorUnemploy, warning=FALSE, error=FALSE, message=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.95\\linewidth'>>=
+  # Print unemployment error orthogonal graphs
+  library(gridExtra)
+  grid.arrange(errors.employ.time, ErrorOrthogScatter, ncol = 2)
+@
+
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Note: Errors of 0 indicates that inflation/the unemployment rate was perfectly predicted.}}
+    \end{singlespace}
+\end{figure}
+
 \subsection*{Economic and Violent Conflict Shocks}
 
-Following helpful reviewer suggestions, we examined if economic or violent conflict shocks may impact inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility in two ways: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made.\footnote{In Table \ref{SupTable1} this is referred to as `Lag 3 Abs. Inflation'.} The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the presidential partisan ID results. Absolute inflation in the quarter being forecasted for has a statistically significant negative relationship with errors. Referring back to Figure \ref{errors_over_time} in the main paper, this makes sense as periods of high inflation in the 1970s were actually times when the standardized forecast error was relatively small.
+Following helpful reviewer suggestions, we examined if economic or violent conflict shocks may impact inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility in two ways: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made.\footnote{In Table \ref{SupTable1} this is referred to as `Lag 3 Abs. Inflation'.} The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the presidential partisan ID results. Absolute inflation in the quarter being forecasted for has a statistically significant negative relationship with forecast errors. Referring back to Figure \ref{errors_over_time} in the main paper, this makes sense as periods of high inflation in the 1970s were actually times when the standardized forecast error was relatively small. This finding persists even if we use absolute inflation forecast errors (i.e. $F_{q} - I_{q}$) as can be seen in Model S10 in Table \ref{SubTable2}.
 
 Second, we consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database\footnote{Accessed October 2013.} on the \textbf{change in the West Texas Crude price} from the quarter in the previous year. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions and therefore inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the \textbf{total number of armed conflicts per year} using data from Uppsala Conflict Data Program/Peace Research Institute Oslo \citep{Harbom2012,Gleditsch2002}. 
 
+As we see in tables \ref{SupTable1} and \ref{SupTable2} the productivity changes and the number of armed conflicts were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was at the same time a period of relatively small inflation forecast errors. 
+
+Noticeably, the presidential partisan ID variable's effect does not change in magnitude, direction, or statistical significance when any of the shock variables are included.
+
 \begin{table}[ht]
-    \caption{Normal Linear Regression Estimation with Additional Variables}
+    \caption{Normal Linear Regression Estimation with Standardized Inflation Forecasting Errors as the Dependent Variable and Additional Independent Variables (non-matched data set)}
     \label{SupTable1}
     \vspace{0.25cm}
     \begin{center}
     {\tiny{
-<<NLSup, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+<<NLSup1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
 devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SupplementaryAnalyses.R')
     # Model names & Coefficient Names
     ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6', 'S7')
     CoefNamesS <- c("Intercept", "Recession", "Expenditure/GDP", 
                     "Output Gap", "Discount Rate Change", "Unemployment Rate", "Pres. Party ID", 
                     "Qtr. to Election", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", 
-                    "Pres*Qrt. Election", "Abs Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", "Productivity Change", "No. Interstate Wars") 
+                    "Pres*Qrt. Election", "Abs Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", "Productivity Change", "No. Armed Conflicts") 
 
     # Table of non-matched models with ls
     apsrtable(S1, S2, S3, S4, S5, S6, S7,
@@ -676,6 +680,29 @@ devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master
     \end{center}
 \end{table}
 
+
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation with Absolute Inflation Forecasting Errors as the Dependent Variable and Additional Independent Variables (non-matched data set)}
+    \label{SupTable2}
+    \vspace{0.25cm}
+    \begin{center}
+    {\tiny{
+<<NLSup2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    # Model names & Coefficient Names
+    ModelNamesS2 <- c('S8', 'S9', 'S10', 'S11','S12', 'S13', 'S14')
+
+    # Table of non-matched models with ls
+    apsrtable(S8, S9, S10, S11, S12, S13, S14,
+              digits = 1, 
+              Sweave = TRUE, 
+              stars = "default", 
+              model.names = ModelNamesS2, 
+              coef.names = CoefNamesS
+              )
+@
+    }}
+    \end{center}
+\end{table}
 
 
 
