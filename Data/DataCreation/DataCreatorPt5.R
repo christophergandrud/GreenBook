@@ -39,7 +39,7 @@ conflict <- read.csv("~/Dropbox/GreenBook/Base_Data/OnsetOfInterStateConflict.cs
 # Keep year and incidencev412, dummy for each country year that there was interstate conflict
 conflict <- conflict[, c('year', 'sumconfv412')]
 conflict <- ddply(conflict, "year", transform, num_conflicts = sum(sumconfv412))
-conflict <- conflict[!duplicated(conflict[, c(1, 2)]), ]
+conflict <- conflict[!duplicated(conflict[, c(1, 3)]), ]
 conflict <- conflict[, c("year", "num_conflicts")]
 
 # Combine data sets

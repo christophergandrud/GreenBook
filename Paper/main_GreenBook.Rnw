@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 13 October 2013
+% 14 October 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -11,7 +11,7 @@
 \usepackage[authoryear]{natbib}
 \usepackage{setspace}
     \doublespacing
-\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -645,7 +645,7 @@ NEED TO DO
 
 Following helpful reviewer suggestions, we examined if economic or violent conflict shocks may impact inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility in two ways: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made.\footnote{In Table \ref{SupTable1} this is referred to as `Lag 3 Abs. Inflation'.} The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the presidential partisan ID results. Absolute inflation in the quarter being forecasted for has a statistically significant negative relationship with errors. Referring back to Figure \ref{errors_over_time} in the main paper, this makes sense as periods of high inflation in the 1970s were actually times when the standardized forecast error was relatively small.
 
-Second, we consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database\footnote{Accessed October 2013.} on the \textbf{change in the West Texas Crude price} from the quarter in the previous year. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions and therefore inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the total number of interstate conflicts per year using data from the Uppsala Conflict Data Program/
+Second, we consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database\footnote{Accessed October 2013.} on the \textbf{change in the West Texas Crude price} from the quarter in the previous year. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions and therefore inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the \textbf{total number of armed conflicts per year} using data from Uppsala Conflict Data Program/Peace Research Institute Oslo \citep{Harbom2012,Gleditsch2002}. 
 
 \begin{table}[ht]
     \caption{Normal Linear Regression Estimation with Additional Variables}
