@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main_GreenBook.aux
+The style file: apsr.bst
+Database file #1: GreenBook.bib.bib
+You've used 52 entries,
+            2874 wiz_defined-function locations,
+            994 strings with 12849 characters,
+and the built_in function-call counts, 200980 in all, are:
+= -- 32869
+> -- 2274
+< -- 0
++ -- 15252
+- -- 818
+* -- 17053
+:= -- 40581
+add.period$ -- 211
+call.type$ -- 52
+change.case$ -- 676
+chr.to.int$ -- 52
+cite$ -- 52
+duplicate$ -- 768
+empty$ -- 1721
+format.name$ -- 877
+if$ -- 36032
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 51
+newline$ -- 221
+num.names$ -- 585
+pop$ -- 170
+preamble$ -- 1
+purify$ -- 780
+quote$ -- 0
+skip$ -- 667
+stack$ -- 0
+substring$ -- 46245
+swap$ -- 98
+text.length$ -- 728
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 204
+warning$ -- 0
+while$ -- 1226
+width$ -- 0
+write$ -- 711

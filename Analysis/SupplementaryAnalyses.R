@@ -62,7 +62,7 @@ S12 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + Disco
 S13 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + num_conflicts, model = "normal", data = cpi.data2S, cite = FALSE)
 
 # Productivity change
-S15 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + productivity_change, model = "normal", data = cpi.data2S, cite = FALSE)
+S14 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + productivity_change, model = "normal", data = cpi.data2S, cite = FALSE)
 
 # Garbage can shocks
 S15 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + WTI_crude_price + num_conflicts + productivity_change, model = "normal", data = cpi.data2S, cite = FALSE)
