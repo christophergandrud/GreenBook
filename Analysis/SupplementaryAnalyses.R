@@ -12,12 +12,32 @@ library(DataCombine)
 # To run as a stand alone file. First, run the following files from earlier in the paper:
 # devtools::source_url("http://bit.ly/NXdCpk") 
 
+# Create mid-term + presidential elections variable
+cpi.data$time_to_election_midterm <- cpi.data$time_to_election
+
+for (i in 1:nrow(cpi.data)){
+  if (cpi.data[i, "time_to_election_midterm"] > 7){
+    cpi.data[i, "time_to_election_midterm"]<- cpi.data[i, "time_to_election_midterm"] - 8
+  }else{
+    cpi.data[i, "time_to_election_midterm"]<- cpi.data[i, "time_to_election_midterm"]
+  }
+}
+
+# Subset for mid-term and presidential elections
+cpi.data2SMidterm <- subset(cpi.data, !(time_to_election_midterm %in% c(6, 7)))
+
+# Subset for presidential elections only
 cpi.data2S <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 
 # Create inflation lag variable
 cpi.data2S <- slide(cpi.data2S, Var = "deflator", NewVar = "deflatorLag3", slideBy = -3)
 
 ###### Models #####
+#### Midterms ####
+SM1 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election_midterm + GlobalModel + senate_dem_rep + house_dem_rep, model = "normal", data = cpi.data2SMidterm, cite = FALSE)
+
+SM2 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party*time_to_election_midterm + GlobalModel + senate_dem_rep + house_dem_rep, model = "normal", data = cpi.data2SMidterm, cite = FALSE)
+
 #### Standardised Infation Error ####
 # Pres. ID*Linear Time to Election
 S1 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party*time_to_election + GlobalModel + senate_dem_rep + house_dem_rep, model = "normal", data = cpi.data2S, cite = FALSE)
