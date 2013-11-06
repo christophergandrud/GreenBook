@@ -1,14 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 4 November 2013
+% 6 November 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
 
-<<<<<<< HEAD
-\documentclass[a4paper]{article}
-=======
 \documentclass[a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
@@ -59,7 +56,6 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
->>>>>>> 4cf36c00dd9f18593289513f8643c7a00ea750be
 \usepackage{fullpage}
 \usepackage[authoryear]{natbib}
 \usepackage{setspace}
@@ -94,6 +90,7 @@
             Cassandra Grafstr\"{o}m \\
                 {\emph{University of Michigan}}\footnote{Ph.D Candidate. 5700 Haven Hall, 505 S. State Street
                 Ann Arbor, MI 48109-1045. USA. Email: \href{mailto:cgrafstr@umich.edu}{cgrafstr@umich.edu}.}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
 \begin{document}
 
@@ -319,10 +316,14 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
     \begin{center}
     
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/BaseInflation} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: there is no package called 'reshape2'}}\end{kframe}
+
 \end{knitrout}
 
     
@@ -336,23 +337,10 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
 
 \subsection{Are There Partisan Forecast Errors?}
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: there is no package called 'plotrix'}}\end{kframe}
-\end{knitrout}
 
-
-Unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2007 the mean standardized forecast error was 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in mean(cpi.data\$error.prop.deflator.q2, na.rm = TRUE) : \\\ \ object 'cpi.data' not found}}, i.e. forecasters under-predicted inflation by about 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in mean(cpi.data\$error.prop.deflator.q2, na.rm = TRUE) : \\\ \ object 'cpi.data' not found}} percent. Our finding of relatively small average error over the entire 35 year period is in line with findings from previous studies. However, the mean errors are noticeably different across Republican compared to Democratic presidencies. Across Republican presidencies it was 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in eval(expr, envir, enclos) : object 'RepMean' not found}} percent and +
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in eval(expr, envir, enclos) : object 'DemMean' not found}} percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
+Unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2007 the mean standardized forecast error was -0.04, i.e. forecasters under-predicted inflation by about 4 percent. Our finding of relatively small average error over the entire 35 year period is in line with findings from previous studies. However, the mean errors are noticeably different across Republican compared to Democratic presidencies. Across Republican presidencies it was -11 percent and +13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
 
 Figure \ref{errors_over_time} plots forecast errors across our sample separated by presidential term and party. The first thing to note is that inflation was rarely underestimated during the three Democratic presidential terms in our sample. The underestimates that were made were relatively small. The largest overestimates we see were made during Bill Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Richard Nixon's, Gerald Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term, and George H.W. Bush's term. Over this period--often referred to as the Volcker Revolution \citep{Bartels1985}--inflation was suddenly much lower than before (see Figure \ref{absolute}). It may have taken awhile for forecasters to adjust to this new lower level of inflation, particularly because the Fed's own models of the economy assumed that money had no real effects on the economy during this period, even while the FOMC was pursuing aggressive anti-inflation policies.
 
@@ -365,10 +353,14 @@ This summary examination of inflation forecast errors suggests that there may be
     \begin{center}
     
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/PartisanError} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: there is no package called 'ggplot2'}}\end{kframe}
+
 \end{knitrout}
 
     
@@ -421,14 +413,6 @@ We remove quarters from the sample where forecasters would not have known who th
 
 
 
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
 \begin{figure}[t]
     \caption{95\% Confidence Bands for Coefficients from a Multiple Parametric Model Specifications}
     \label{CoefComparePlots}
@@ -611,7 +595,7 @@ $\log L$            & 26.1            & 32.2            & 29.1            & 55.3
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Mon Nov  4 18:47:58 2013
+% Wed Nov  6 09:45:17 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error} 
@@ -1111,7 +1095,7 @@ $\log L$            & 18.3            & 25.0            & 21.8            & 31.6
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Mon Nov  4 18:48:02 2013
+% Wed Nov  6 09:45:22 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 
@@ -1145,23 +1129,40 @@ Intercept & 2.17 & 3.64 & -4.84 & 2.15 & 9.57 \\
   \label{ElectPropensityScores}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
->>>>>>> 4cf36c00dd9f18593289513f8643c7a00ea750be
+
+{\centering \includegraphics[width=\maxwidth]{figure/ElectPropensity} 
+
+}
 
 
 
+\end{knitrout}
+
+    \begin{singlespace}
+        {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are election quarters or the quarter before. ``Control Units" are from all other quarters. The more similar the distribution of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+    \end{singlespace}
+\end{figure}
+
+%%%%% Presidential Party ID %%%%%%
+\begin{figure}[h]
+  \caption{Matched on Presidential Party Identification}
+  \label{PresPropensityScores}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/PresPropensity} 
+
+}
 
 
 
+\end{knitrout}
 
+  \begin{singlespace}
+      {\scriptsize{Pre- and Post-matching propensity scores, where the ``Treated Units" are quarters when the president was a Democrat. ``Control Units" are quarters when with a Republican president. The more similar the distributions of matched treated and control unit propensity scores, the more successful the matching model was \cite[17]{Hollyer2012}.}}
+  \end{singlespace}
+\end{figure}
 
-
-
-
-
-
-<<<<<<< HEAD
-
-=======
 \begin{figure}[t]
     \caption{95\% Confidence Bands for Coefficients from a Variety of Matching and Parametric Model Specifications}
     \label{CoefComparePlots2}
@@ -1171,15 +1172,11 @@ Intercept & 2.17 & 3.64 & -4.84 & 2.15 & 9.57 \\
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
 {\centering \includegraphics[width=0.95\linewidth]{figure/CoefComparePlotsMatched} 
->>>>>>> 4cf36c00dd9f18593289513f8643c7a00ea750be
+
+}
 
 
 
-
-<<<<<<< HEAD
-
-
-=======
 \end{knitrout}
 
     \end{center}
@@ -1193,5 +1190,5 @@ Intercept & 2.17 & 3.64 & -4.84 & 2.15 & 9.57 \\
 CASSIE CAN YOU FILL THIS IN? I THINK YOU CAN BASICALLY TAKE A LOT OF STUFF FROM WHAT YOU HAD WRITTEN BEFORE, BUT WE CUT FROM THE BODY OF THE TEXT.
 
 EMPHASISE THAT EACH SHIFT IS PRETTY SMALL, JUSTIFYING THE FOCUS ON THE BIG SHIFT TO FRB GLOBAL.
->>>>>>> 4cf36c00dd9f18593289513f8643c7a00ea750be
 
+\end{document}
