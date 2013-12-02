@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 25 November 2013
+% 3 December 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -650,7 +650,7 @@ Furthermore, if we compare the magnitude of the inflation and unemployment stand
 
 \subsection*{Matching to examine model dependence}
 
-To further examine if our results depend on model specification, rather than an underlying causal effect, we follow recommendations from \cite{Ho2007} to pre-process the data using matching. This data is then used in our parametric regression models to estimate the relationships between our potential causal variables and Fed Staff inflation forecast errors. Doing this allows us to more robustly determine the effects of two `treatments' that Fed Staffers are exposed to that we are interested in: a partisan treatment and an electoral treatment. 
+To further examine if our results depend on model specification, rather than an underlying causal effect, we follow recommendations from \cite{Ho2007} to pre-process the data using matching. This data is then used in our parametric regression models to estimate the relationships between our potential causal variables and Fed Staff inflation forecast errors. Doing this allows us to more robustly determine the causal effects of two `treatments' that Fed Staffers are exposed to that we are interested in: a partisan treatment and an electoral treatment. 
 
 Pre-analysis matching allows us to mimic the conditions of a randomized experiment. Imagine an ideal world where we could create a controlled experiment to examine the causal relationship between, for example, presidential partisan ID and inflation forecast errors. Following the Neyman-Rubin causal model \citep{Sekhon2008} estimating causal effects is a comparison between potential outcomes for a hypothetical unit \citep{Stuart2010}. In our study the `unit' is a quarter being forecasted for. The casual effect of presidential party ID on inflation errors is a comparison of the inflation error for the particular quarter when the president is a Democrat and a Republican. We could approach this comparison in an experiment by randomly assigning presidents to quarters. In the language of experimental design the `treatment' could be a Democratic president and the `control' a Republican president. Note: in our analysis the determinations of `treatment' and `control' groups is arbitrary. This allows us to have groups of quarters that are as similar as possible except for the president's party ID. 
 
