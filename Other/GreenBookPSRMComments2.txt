@@ -1,0 +1,112 @@
+Dear PSRM Editors and Reviewers
+
+Thank you for the opportunity to revise and resubmit our manuscript: "Inflated Expectations: How government partisanship shapes monetary policy bureaucrats’ inflation forecasts" as well as your very helpful suggestions.
+
+We have incorporated the reviewers' suggestions in the revised manuscript and provide brief discussions of each change below.
+
+It is important to note that in all of the alternative model specifications suggested by the reviewers, the key presidential party ID variable’s estimated coefficients remained substantively the same in terms of direction, magnitude, and statistical significance as before.
+
+Finally, full bibliographic details for citations in this note are available in the paper.
+
+Kind regards,
+Christopher Gandrud and Cassandra Grafström
+
+—————
+
+Shared Issues
+
+To be able to adequately address the reviewers' suggestions (primarily the suggestion to deepen the theory section) within the journal's space constraints we have added a Supplementary Materials section to the end of the paper. If published the Supplementary Materials section could be made available separately online. The Supplementary Materials section contains additional robustness checks.  These include additional variables that the reviewers’ suggested—past inflation, oil prices, productivity increases, wars, and so on. We have also moved a number of robustness checks from the original body of the text to the Supplementary Materials in order to allow for a more developed theoretical section in the paper’s main text. In particular, we moved the discussion and analysis of the models with matched data to the Supplementary Materials. We discuss changes to the matching model discussion suggested by reviewers later in this letter.
+
+# Develop Theoretical Argument for Presidential Partisan Heuristics
+
+Both reviewers felt that the original theoretical argument was underdeveloped. To address this concern we have significantly improved the discussion of our presidential partisan heuristics argument (see pages 5-8).
+
+- Our original discussion of Fed Staff forecasters’ motivation was unclear. To address this we explicitly start with the assumption that Fed Staff actually want to create a forecast that is as accurate as possible. This is plausible because they could both have a preference (because of professional socialisation, for example) and/or incentive (because of performance reviews and regular private academic analysis that could provoke FOMC or even Congressional scrutiny) to be accurate. Though we don’t have direct evidence for some of these mechanisms, multiple pieces of research have found that Greenbook inflation forecasts are generally more accurate than private sector forecasts or other government forecasts. 
+
+- We have also clarified in the discussion that the partisan heuristics theory does not assume that Fed Staff have a particular partisan or even an inflation preference. Instead it makes the argument that they incorrectly intuit the effect presidents from different partisan backgrounds have on inflation.
+
+- We expanded the theory by also discussing previous research on heuristics and related work on the use of rules of thumb among monetary policy makers and how presidential partisanship has been found to influence inflation expectations, even among high-information market actors. We then combine these two developed literatures to create our theory of how Fed Staff that want to create accurate forecasts, but face forecasting uncertainty could rely on heuristic intuitions that result in forecasting errors. 
+
+- In the original version of the paper (and in this version as well, see p. 8) we discuss why a heuristic may not be updated. Primarily, as the extensive literature on heuristics shows that they are not ‘conscious’ judgments.  As such, and as we document extensively as being a major motivation of the paper, they are not being explicitly examined and therefore have not been adequately updated. If they were being examined and updated, then they wouldn’t be pure heuristics, but would be rational expectations. The empirical consequence of them being regularly examined and updated is that presidential partisan errors would decrease or even disappear over time, something which we do not observe.    
+
+- Our alternative theories challenge the assumption that Fed Staff forecasts are not driven by partisan or inflation preferences and that they act on these preferences essentially in a game with FOMC policy makers (who also have partisan and/or inflation preferences). In the partisan preference theory they have both partisan and inflation preferences. In the monetary expectations theory they have a strong price stability preference, but not a partisan preference. We clarify this in the text. Deciding which approach is more plausible is then the focus of our empirical investigations. 
+
+A possibility we originally did not directly address in the paper’s text is that the FOMC either influences Greenbook forecasts to justify interest rate changes that aid their preferred candidate before elections or that the FOMC and Fed Staff have identical partisan preferences. These would all be observationally equivalent with the partisan preference theory in the absence of detailed case study work. However, we find no evidence that partisan errors actually change in the run up to elections. As such we do not feel that further case study work would be useful at this point. We added this discussion to Footnote 9.
+
+There is another possibility that we do not explicitly discuss in the text that one of the reviewers mentioned. The persistence of the heuristic over presidential terms may be due to a partisan preference rather than a heuristic. We feel this is implausible. Primarily because it is unlikely that Fed Staff (or FOMC members) would have a pure partisan preference, but totally disregard inflation. The main partisan preference story regarding central bankers (see Arel-Burdock and Clark’s, 2013) is that they prefer right-leaning governments largely because right-leaning governments are more concerned with price stability. In fact, even if they had a pure partisan preference, it would be electorally counterproductive to, for example, keep interest rates very low for an entire presidential term as it may cause inflation thus hurting the incumbent’s reelection chances. 
+
+The possibility that they have a Democratic presidential preference has not been discussed in the literature. Furthermore, the results wouldn’t support such as story. Creating information that would justify having high interest rates (the pattern of the bias that we found) seems like a counterproductive way to win elections, especially given what the electoral business cycle literature argues.
+
+We would be happy to develop our discussion of this in the paper if requested.
+
+- We have added some discussion of which policies are assumed to differ under the Republican and Democratic presidents. However, this discussion is relatively short because it is taken directly from the very extensive rational partisan expectations literature. Please see this literature cited in the paper for more information.
+
+- We have also expanded the discussion of how the Fed Staff relate to the FOMC. Primarily showing that Greenbook forecasts are presented before FOMC meetings and that the FOMC spends a considerable amount of time discussing them. As we talk about in more detail below, we added a discussion supporting the assumption that Greenbook forecasts are largely not just a reflection of FOMC preferences and beliefs as previous research has shown that they Greenbook and FOMC forecasts are substantively different (see Romer and Romer 2008).
+
+# Matched Data
+
+There appears to have been some confusion about why we presented results from parametric models with both data that was pre-processed using matching and non-preprocessed data. Following Ho et al. (2007) our intention was largely to use pre-processed matched data in parametric models as a robustness check to examine the possibility that our results from models with non-matched data were model dependent, rather than reflecting a real causal effect. In none of the models with matched data did the results substantively change (though the standard errors increased, likely as the result of a fall in the sample size) from models with non-matched data. This blusters our claim that incorrect expectations about the effects of presidential partisanship play an important role in causing inflation forecasting errors. 
+
+To help emphasise the matching-as-robustness check idea we have moved our discussion of this method and the results to the Supplementary Materials section. We have also expanded the discussion of the reasons for using matching to identify causal effects within the Neyman-Rubin framework (see Sekhon 2008).
+
+# Composition of Congress Discussion
+
+Reviewers 1 and 2 have conflicting advice on how to present the the composition of Congress discussion. One suggests moving it to the robustness checks. The other suggests moving it into the main theory section. Given this conflicting advice we have left the discussion in the Variables section. However, we would be pleased to move it to another section if a consensus is reached.
+
+——
+
+Reviewer Specific Comments:
+
+Reviewer 1:
+
+# Party ID*Linear Quarters to Election
+
+There is substantively no difference in the results for interactions between president party ID and the linear or polynomial version of the quarters to election variable. We have added a note on this in the text and include regression output in the Supplementary Material. 
+
+Also, following the reviewer's recommendation we have removed the left panel of Figure 6.
+
+# FOMC Models: 
+
+- We have added in the Supplementary Material a brief history of Fed Staff models over our observation period. The main finding in this history is that the models are altered overtime in significantly smaller ways than the shift to the FRB Global forecasting model. So it would be very difficult to develop a variable or variables that directly capture each small shift.  As such we focus on the major shift to the FRB Global model. [ACTUALLY DO]
+
+- There is a major empirical problem with separating out how much of the forecast error is model error and judgmental error. Only the consensus forecasts (model forecasts + judgmental adjustments) are made publicly available. So unfortunately it is currently impossible to directly observe model vs. judgmental sources of error. We have added a footnote (Footnote 3) describing this issue.
+
+- The reviewer brings up the question of whether or not Greenbook forecasts are independent of what Fed Governors want/think. This is a very good question. It is a question that we directly, though admittedly partially address with our two alternative hypotheses. These hypotheses examine the possibility that Fed Staff either have a preference for a particular party and that they are trying to influence FOMC members’ decisions or have been influenced by them (partisan preferences) or that they have a price stability preferences and anticipate that the FOMC will change their monetary policies around elections and thus adjust their forecasts to counter the impact of this (monetary expectations). We test for both of these possibilities and do not find any evidence to support them.  
+
+There are of course other possibilities. The most straightforward of which the reviewer mentions: the Staff, through discussions with FOMC members may align their forecasts with FOMC members’ expectations. We have added three paragraphs discussing this possibility (p. 11). Though it is difficult to empirically observe if and to what extent such discussions influence Greenbook forecasts, we have reason to believe that the influence largely runs from the Greenbook to FOMC members, rather than the other way around. The main reason for this is that, as Romer and Romer (2008) found, Greenbook and FOMC members’ forecasts (made after seeing the Greenbook) are not the same. FOMC members use the Greenbook as a reference point and then tend to make worse predictions than the Greenbook. 
+
+This point helps emphasise the importance of having highly accurate Greenbook forecasts and why studying inaccuracy is so important. FOMC members need very accurate reference points, so as their own expectations aren’t even worse, resulting in inappropriate and non-preferred monetary policies.   
+
+# Beliefs of Fed Staff that Presidents’ Policies Differ by Their Party ID
+
+We do not have direct evidence that Fed Staff believe that presidents of different political parties are different with respect to fiscal policy. However, to substantiate the plausibility of such a claim we included a discussion of research, largely motivated by the rational partisan expectations literature, that has shown that people with a variety of backgrounds, including market participants expect that inflation will be higher under Democrats than Republicans. 
+
+Furthermore, it’s important to reiterate that the heuristic theory is based not on the idea that Fed Staff are ‘conservative’, just that they incorrectly intuit the effect of presidents from different partisan backgrounds on inflation. As mentioned earlier, we have tried to clarify this point in the paper.
+
+# Mid-term Elections Robustness Check:
+
+In the Supplementary Materials we also examined a quarters to election variable that included mid-term as well as presidential elections. This variable was, like the presidential election variables, statistically insignificant. Its interaction with presidential party ID was also insignificant.
+
+# Shocks
+
+We examined a number of different shock indicators including absolute inflation level (both in the quarter being forecasted for as well as the quarter before the forecast was made), West Texas crude oil price changes, labor productivity changes, and the total number of armed conflicts per year.  We looked at models with both the standardised and absolute inflation forecasting error variable as the dependent variable. The presidential partisan ID finding did not change when we entered the shock variables. A write up of these variables and findings is in the Supplementary Materials.
+
+—
+
+Reviewer 2:
+
+- We removed the term 'forecast length'. Instead we now use 'forecast age' throughout and define this more clearly in the text (i.e. how many quarters before the forecasted quarter a prediction was made).
+
+- The Bayesian normal linear regression model was primarily a robustness check.  Imai, King, and Lau (2008) argue that it can produce more valid inferences for small sample sizes (our sample contains about 135 quarters). That being said, the results across the Bayesian and OLS regressions were substantively similar using both matched and non-matched data. This further increases our confidence in the robustness of our results. We have clarified this point in the text.
+
+- Importance of Greenbook forecasts: Throughout the paper, and especially in the first section (p. 3-4) we have tried to strengthen the case for why studying bureaucrats’ inflation forecasting errors is important. Adolph (2013) argues that Greenbook forecasts have a large effect on interest rate decisions. This is likely because there is a considerable delay from the time that interest rates are set to when inflation changes, so expectations are a very important part of monetary policymaking (Goodhardt 2001). As a result, considerable amount of time is spent in FOMC meetings discussing expectations, rather than desired policy outcomes (Romer and Romer 2008). Greenbook forecasts are given to the FOMC before these meetings in written form and are presented by the staff at the beginning of FOMC meetings. They directly frame the members’ discussions and therefore expectations and ultimately policy choices. Inaccuracies in Greenbook forecasts could influence FOMC members to make non-preferred interest rate decisions. 
+
+- Figure 5, why do the Republican forecasts get closer to zero as the lag decreases? First it is important to note that though the mean does get closer to 0, there is a fair amount of overlap in the confidence intervals. So we should be cautious about over interpreting this result. Second, to the extent that forecast errors during Republican presidencies do get closer to 0, this is what we would expect. It is easier to make accurate forecasts the closer in time that the predictions are made to the things they are predicting, i.e. current economic conditions are more closely related to conditions in the near past. It's notable that, though closer to 0 it is still estimated to be below zero, i.e. under-estimated. We would be happy to add a discussion of this to the paper if the review believes it is necessary.
+
+- Lack of a Partisan ID Effect with Unemployment Errors: the last sentence of this section was poorly worded. The idea of running the models with an orthogonal dependent variable as a robustness check was to examine if some unobserved time period specific factor--rather than partisan ID—that is creating forecast errors across a range of quantities. However, we did not find this to be the case. 
+
+We have added a discussion to the section positing why presidential partisanship is not associated with unemployment forecasting errors. In sum: (a) a heuristic only causes systematic errors when it does not correlate with the process behind the quantity being forecasted (e.g. Democratic and Republican presidents’ effect on unemployment may actually be different in the direction and magnitude anticipated by the heuristic). Alternatively, (b) the range of the magnitude of standardised forecasting errors is much larger for inflation than unemployment (see Figure 7). This suggests that forecasting inflation is much more difficult than unemployment. Possibly this is because employment is stickier than prices. As the heuristics literature suggests, in this situation presidential partisan heuristics would be relied on more when forecasting inflation than unemployment. The result could be systematic inflation forecasting errors. More work, outside the scope of this paper is needed to disentangle these possibilities. 
+
+- Unexplained terminology: we have removed the jargon ‘forecast rationality’ and ‘behavioural economics’. We now use more common sense descriptions of these concepts.
+
+- Justification for using inflation forecasts as the dependent variable: We have clarified the text such that the reason inflation forecast accuracy is the most relevant to study is not because central bankers are inflation averse, but that they are widely believed to be primarily concerned with price stability (e.g. Cukierman, Webb and Neyapti, 1992; Mukherjee and Singer, 2008; Tillmann, 2008). If this is true then inflation forecasts would be the most important forecast influencing policy decisions.
