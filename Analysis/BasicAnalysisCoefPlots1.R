@@ -72,7 +72,7 @@ estimates <- subset(estimates, var != c("(Intercept)"))
 estimates <- subset(estimates, var != c("sigma2"))
 
 ##### Create comparison plot ####
-cols <- c("#FFFF33", "#BF5B17")
+cols <- c("#FFFF33", "#3182BD")
 
 breaks <- c("pres_party", "ExpenditureGDP", "recession", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelBefore 1996")
 
