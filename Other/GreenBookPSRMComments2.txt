@@ -67,7 +67,7 @@ Also, following the reviewer's recommendation we have removed the left panel of 
 
 # FOMC Models: 
 
-- We have added in the Supplementary Material a brief history of Fed Staff models over our observation period. The main finding in this history is that the models are altered overtime in significantly smaller ways than the shift to the FRB Global forecasting model. So it would be very difficult to develop a variable or variables that directly capture each small shift.  As such we focus on the major shift to the FRB Global model. [ACTUALLY DO]
+- We have added at the end of the Supplementary Material a brief history of Fed Staff models over our observation period. The main finding in this history is that the models are altered overtime in significantly smaller ways than the shift to the FRB Global forecasting model. So it would be very difficult to develop a variable or variables that directly capture each small shift.  As such we focus on the major shift to the FRB Global model.
 
 - There is a major empirical problem with separating out how much of the forecast error is model error and judgmental error. Only the consensus forecasts (model forecasts + judgmental adjustments) are made publicly available. So unfortunately it is currently impossible to directly observe model vs. judgmental sources of error. We have added a footnote (Footnote 3) describing this issue.
 
