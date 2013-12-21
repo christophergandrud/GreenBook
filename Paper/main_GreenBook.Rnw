@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 19 December 2013
+% 20 December 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -236,7 +236,7 @@ This summary examination of inflation forecast errors suggests that there may be
 
 \section{Regression Models \& Variables}
 
-We used standard regression models to examine the effects of presidential party ID and elections on the continuous inflation forecast error variable.\footnote{Parametric models are estimated using the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} Our main model type was normal linear regression using maximum likelihood estimation of variance.\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model.} To examine if our estimates were dependent on this model type we also ran our analyses with ordinary least squares\footnote{In \texttt{Zelig}, this is the \texttt{ls} model). Because the results were virtually identical, we do not show them below. They are available upon request.} and Bayesian normal linear regression.\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.} Bayesian normal linear regression is particularly useful for our relatively small $n$ sample size as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}.\footnote{Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.} 
+We used standard regression models to examine the effects of presidential party ID and elections on the continuous inflation forecast error variable.\footnote{Parametric models are estimated using the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} Our main model type was normal linear regression using maximum likelihood estimation of variance.\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model.} To examine if our estimates were dependent on this model type we also ran our analyses with ordinary least squares\footnote{In \texttt{Zelig}, this is the \texttt{ls} model. Because the results were virtually identical, we do not show them below. They are available upon request.} and Bayesian normal linear regression.\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.} Bayesian normal linear regression is particularly useful for our relatively small $n$ sample size as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}.\footnote{Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.} 
 
 As we show below the estimates from all three model types were very similar in direction, magnitude, and statistical significance. They were almost always substantively identical, especially for our key presidential partisan ID variable. 
 
@@ -549,7 +549,7 @@ devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master
 
 \subsection*{President party ID and election timing linear interaction}
 
-In the body of the paper we presented results from models with president party ID and the square of quarters to the election. The first model in table \ref{SupTable1} shows results with an interaction between president party ID and the non-squared linear version of election timing. The results are substantively equivalent to those with the squared version. In both cases the interaction is not statistically significant.
+In the body of the paper we presented results from models with president party ID and the square of quarters to the election. The first model in Table \ref{SupTable1} shows results with an interaction between president party ID and the non-squared linear version of election timing. The results are substantively equivalent to those with the squared version. In both cases the interaction is not statistically significant.
 
 \subsection*{Economic and violent conflict shocks}
 
