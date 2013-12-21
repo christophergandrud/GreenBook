@@ -19,7 +19,9 @@ To be able to adequately address the reviewers' suggestions within the journal's
 
 ### Develop Theoretical Argument for Presidential Partisan Heuristics
 
-Both reviewers felt that the original theoretical argument was underdeveloped. To address this concern we have significantly improved the discussion of our presidential partisan heuristics argument (see pages 5-9). Specific suggestions included: 
+Both reviewers felt that the original theoretical argument was underdeveloped. To address this concern we have significantly improved the discussion of our presidential partisan heuristics argument (see pages 5-9). We have made significant improvements to the overall theory section (section 2) and we urge the reviewers to re-read this section. 
+
+Specific suggestions we responded to included: 
 
 #### R2: The starting point for a theory of bias in inflation forecasts should be a comprehensive and clear discussion of the incentives/preferences of staff (there is some ad-hoc discussion of that on p. 6). What do they aim for when forecasting inflation? Who is their principal? What happens when they are wrong? What makes them want to get it “right”?  What makes it likely that staff will not update?
 
@@ -122,7 +124,7 @@ To help emphasise the matching-as-robustness check reasoning we have moved our d
 
 #### “The authors make the assumption that forecasters tend to hold the view that Democratic and Republican administrations differ with respect to fiscal policy. Can the authors provide any evidence (e.g., cite a study) corroborating this assumption? There should be some studies that show that economists tend to be more “conservative” when it comes to fiscal policy.”
 
-- We do not have direct evidence that Fed Staff believe that presidents of different political parties are different with respect to fiscal policy. However, to substantiate the plausibility of such a claim we included a discussion of research, largely motivated by the rational partisan expectations literature, that has shown that people with a variety of backgrounds, including market participants, expect that inflation will be higher under Democrats than Republicans. We also provide general evidence from the public opinion literature that voters of both parties view Republican politicians as spending less. 
+- We do not have direct evidence that Fed Staff believe that presidents of different political parties are different with respect to fiscal policy. However, to substantiate the plausibility of such a claim we included a discussion of research, largely motivated by the rational partisan expectations literature, that has shown that people with a variety of backgrounds, including market participants, expect that inflation will be higher under Democrats than Republicans. We also provide general evidence from the public opinion literature that voters of both perceive this partisan difference (p.6-7). 
 
 
 - Furthermore, it’s important to reiterate that the heuristic theory is based not on the idea that Fed Staff are ‘conservative’, just that they incorrectly intuit the effect of presidents from different partisan backgrounds on inflation. As mentioned earlier, we have tried to clarify this point in the paper.
