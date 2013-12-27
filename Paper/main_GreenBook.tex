@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 23 December 2013
+% 26 December 2013
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -388,7 +388,7 @@ In Section \ref{ForecastAcc} we discussed our dependent variable--inflation fore
 
 To further examine whether or not Federal Reserve Staff were taking into consideration an electoral business cycle either due to a partisan preference or expected incumbent behavior near an election, we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections are coded as 0. 
 
-The partisan preference and monetary expectations theories both posit that president's party ID and elections have a non-linear interactive relationship with forecast errors. Both posit that forecast errors across parties will begin to diverge as elections approach. To examine this possibility we include an \textbf{interaction} between the president party ID variable and the square of the quarters until election variable in the analyses.\footnote{An interaction with the non-squared quarters until election variable is also included, following \citep{Brambor2006}. In alternative models we have excluded the interaction with the squared quarters until election variable and found similar null results. However, the use of the squared term is preferable here because these theories do not predict that inflation forecast errors will differ linearlly by party for across a presidential term, but only late in the term.}
+The partisan preference and monetary expectations theories both posit that president's party ID and elections have a non-linear interactive relationship with forecast errors. Both posit that forecast errors across parties will begin to diverge as elections approach. To examine this possibility we include an \textbf{interaction} between the president party ID variable and the square of the quarters until election variable in the analyses.\footnote{An interaction with the non-squared quarters until election variable is also included, following \citep{Brambor2006}. In alternative models we have excluded the interaction with the squared quarters until election variable and found similar null results. See the Supplementary Materials. However, the use of the squared term is preferable here because these theories do not predict that inflation forecast errors will differ linearlly by party for across a presidential term, but only late in the term.}
 
 United States presidents do not set the level of government expenditure--a major non-monetary policy source of inflation--by themselves. Instead, presidents are constrained by the two houses of Congress. To examine whether or not Federal Reserve Staff are taking into consideration the partisan composition of Congress as well as presidents' party identifications, we include a variable measuring {\bf{Democratic legislators as a proportion of Republican legislators}} in the House of Representatives and a similar variable for the composition of the Senate.\footnote{Data on the number of legislators with Republican and Democratic party IDs was found at infoplease. See {\url{http://www.infoplease.com/ipa/A0774721.html}}. Accessed May 2012.} 
 
@@ -595,7 +595,7 @@ $\log L$            & 26.1            & 32.2            & 29.1            & 55.3
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Mon Dec 23 11:43:20 2013
+% Thu Dec 26 13:52:59 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error} 
@@ -1094,7 +1094,7 @@ $\log L$            & 18.3            & 25.0            & 21.8            & 31.6
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Mon Dec 23 11:43:27 2013
+% Thu Dec 26 13:53:04 2013
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 
