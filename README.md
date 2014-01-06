@@ -31,9 +31,9 @@ To reproduce the paper first install the necessary R packages:
                     )
 ```
               
-Then download the *Paper* folder from this repository.
+Download this repository
 
-Finally, 'knit' the main paper file `main_GreenBook.Rnw` in this folder.
+Finally, 'knit' the main paper file `main_GreenBook.Rnw` in the *Paper* folder.
 
 ### Reproduce the analyses, tables and empirical graphs
 
