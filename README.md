@@ -8,7 +8,7 @@ These files comprise the working paper ''Inflated Expectations: How government p
 
 ### Reproduce the paper
 
-The paper can be entirely reproduced using the `knitr` package in **R** (we used `knitr` version 1.2 and **R** version 3.0.1). The `knitr` package is by [Yihui Xie](http://yihui.name/). 
+The paper can be entirely reproduced using the `knitr` package in **R** (we used `knitr` version 1.5 and **R** version 3.0.2). The `knitr` package is by [Yihui Xie](http://yihui.name/). 
 
 To reproduce the paper first install the necessary R packages:
 
@@ -20,6 +20,7 @@ To reproduce the paper first install the necessary R packages:
                     "devtools", 
                     "MatchIt", 
                     "plyr",
+                    "repmis",
                     "reshape", 
                     "reshape2", 
                     "RCurl",
