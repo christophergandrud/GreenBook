@@ -1,7 +1,7 @@
 ###############
 # Difference of Mean Forecast Error
 # Christopher Gandrud 
-# 29 October 2012
+# 6 January 2013
 ###############
 
 ## This code creates a confidence interval of for the difference of mean forecast error in Democratic and Republican presidencies.
