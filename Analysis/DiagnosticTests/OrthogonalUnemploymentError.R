@@ -1,17 +1,17 @@
 ###############
 # Run Models with an Orthoganal Variable (Unemployment Errors)
 # Christopher Gandrud 
-# 22 November 2012
+# 6 January 2014
 ###############
 
 # Load libraries
-# library(RCurl)
-# library(Zelig)
-# library(MatchIt)
-# library(ggplot2)
+library(RCurl)
+library(Zelig)
+library(MatchIt)
+library(ggplot2)
 
 # Load data from GitHub
-url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi_2006.csv"
+url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi_2007.csv"
 cpi.dataU <- getURL(url)
 cpi.dataU <- read.csv(textConnection(cpi.dataU))
 
@@ -86,7 +86,12 @@ ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, error.prop
                               ggtitle("Scatterplot of Unemployment and\n Inflation Forecast Errors\n") +
                               theme_bw(base_size = 12)
 
-                              
+################### Parametric Models (UnMatched) ################
+# Only partisanship
+PLU1 <- zelig(error.unemploy.q2 ~ pres_party, model = "ls", data = cpi.dataU, cite = FALSE)
+
+# Only relevant variables (i.e. excluding the inflation relevant variables DiscountRate2qChange)
+PLU2 <- zelig(error.unemploy.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "ls", data = cpi.dataU, cite = FALSE)                       
 
 
 #### Match Data and Run Comparison Analysis ####
@@ -116,8 +121,5 @@ ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, error.prop
 # Only partisanship
 #PLU1 <- zelig(error.unemploy.q2 ~ pres_party, model = "ls", data = cpi.Mdf.partyU, cite = FALSE)
 
-# Only relevant variables (i.e. excluding the inflation relevant variables DiscountRate2qChange and GlobalModel)
-#PLU2 <- zelig(error.unemploy.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP, model = "ls", data = cpi.Mdf.partyU, cite = FALSE)
-
-# All variables in model PL7
-#PLU3 <- zelig(error.prop.deflator.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + GlobalModel, model = "ls", data = cpi.Mdf.partyU, cite = FALSE)
+# Only relevant variables (i.e. excluding the inflation relevant variables DiscountRate2qChange)
+#PLU2 <- zelig(error.unemploy.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "ls", data = cpi.Mdf.partyU, cite = FALSE)
