@@ -120,7 +120,7 @@ CombQ$DemAppointPerc <- (1 - (CombQ$TotalRep/CombQ$Total)) * 100
 CombQ <- CombQ[!duplicated(CombQ$Quarter), ]
 CombQ <- CombQ[order(CombQ$Quarter), ]
 CombQ <- CombQ[, c('Quarter', 'DemAppointPerc')]
-CombQ <- slide(CombQ, Var = 'DemAppointPerc', NewVar = 'DemAppointPerc_Lag2', slideBy = -2)
+CombQ <- slide(CombQ, Var = 'DemAppointPerc', NewVar = 'DemAppointPerc_Lag3', slideBy = -3)
 
 # Merge into main data set
 cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv")

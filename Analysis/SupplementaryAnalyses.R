@@ -1,7 +1,7 @@
 ###############
 # Supplemental Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 13 October 2013
+# 12 March 2014
 ###############
 
 ## Load libraries
@@ -86,3 +86,6 @@ S14 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + Disco
 
 # Garbage can shocks
 S15 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel + senate_dem_rep + house_dem_rep + WTI_crude_price + num_conflicts + productivity_change, model = "normal", data = cpi.data2S, cite = FALSE)
+
+#### Further exploration of presidential partisan effects
+S16 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + GlobalModel + senate_dem_rep + house_dem_rep + , model = "normal", data = cpi.data2S, cite = FALSE)
