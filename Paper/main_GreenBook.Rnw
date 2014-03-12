@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 5 January 2014
+% 12 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -571,14 +571,16 @@ Notably, the presidential partisan ID variable's effect does not change in magni
     {\tiny{
 <<NLSup1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     # Model names & Coefficient Names
-    ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6', 'S7')
+    ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11', 'S12')
     CoefNamesS <- c("Intercept", "Recession", "Expenditure/GDP", 
                     "Output Gap", "Discount Rate Change", "Unemployment Rate", "Pres. Party ID", 
                     "Qtr. to Election", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", 
-                    "Pres*Qrt. Election", "Abs Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", "Productivity Change", "No. Armed Conflicts") 
+                    "Pres*Qrt. Election", "Abs. Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", 
+                    "Productivity Change", "No. Armed Conflicts", 'Pres*Abs. Infl.', 'Pres*Lag 3 Abs. Infl.',
+                    'Pres*Oil Price Change', 'Pres*Prod. Change', 'Pres*No. Armed Confl.') 
 
     # Table of non-matched models with ls
-    apsrtable(S1, S2, S3, S4, S5, S6, S7,
+    apsrtable(S1, S2, S2.2, S3, S3.2, S4, S4.2, S5, S5.2, S6, S6.2, S7,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 

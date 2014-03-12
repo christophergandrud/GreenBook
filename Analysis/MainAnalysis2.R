@@ -1,7 +1,7 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 12 April 2013
+# 12 March 2014
 ###############
 
 ## Load libraries
@@ -31,6 +31,7 @@ cpi.complete <- subset(cpi.complete, !(time_to_election %in% c(14, 15)))
 
 cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 
+# ------------------------------------------------------------------------------------ #
 #### Matching Model ####
 
 # Elections, No interactions
@@ -69,6 +70,7 @@ cpi.Mdf.party$elect2 <- (cpi.Mdf.party$time_to_election)^2
 
 ################### Parametric Models ################
 
+# ------------------------------------------------------------------------------------ #
 ###### Non-matched (N) ######
 # Normal Linear
 
@@ -100,6 +102,7 @@ NL12 <- zelig(error.prop.deflator.q2 ~ recession + time_to_election + Expenditur
 
 NL13 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "normal", data = cpi.data2, cite = FALSE)
 
+# ------------------------------------------------------------------------------------ #
 ###### Matched based on the ElectionPeriod4 as the treatment variable (E) ######
 
 # Normal Linear
@@ -130,6 +133,7 @@ EL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep +
 
 EL12 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "normal", data = cpi.Mdf.election, cite = FALSE)
 
+# ------------------------------------------------------------------------------------ #
 ###### Matched based with the pres_party as the treatment variable (P) ######
 
 # Least Squares
@@ -160,12 +164,15 @@ PL11 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep +
 
 PL12 <- zelig(error.prop.deflator.q2 ~ pres_party*senate_dem_rep*house_dem_rep, model = "normal", data = cpi.Mdf.party, cite = FALSE)
 
+# ------------------------------------------------------------------------------------ #
 ##### Normal Bayes, Not Matched (NB) #####
 NB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.data, cite = FALSE)
 
+# ------------------------------------------------------------------------------------ #
 #### Normal Bayes, Matched (MP) ####
 PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + GlobalModel, model = "normal.bayes", data = cpi.Mdf.party, cite = FALSE)
 
+# ------------------------------------------------------------------------------------ #
 #### Save variables model objects #####
 save(cpi.Mdf.party, cpi.Mdf.election, cpi.matched.election, cpi.matched.party, cpi.data2, NL1, NL2, NL3, NL4, NL4.1,
      NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
