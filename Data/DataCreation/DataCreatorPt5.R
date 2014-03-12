@@ -58,6 +58,8 @@ names(ConComb) <- c('year', 'num_conflicts')
 # Combine data sets
 cpi.data <- merge(cpi.data, product, all.x = TRUE)
 cpi.data <- merge(cpi.data, oil, all.x = TRUE)
-cpi.data <- merge(cpi.data, conflict, all.x = TRUE)
+cpi.data <- merge(cpi.data, ConComb, all.x = TRUE)
+
+cpi.data$num_conflicts[is.na(cpi.data$num_conflicts)] <- 0 # 0 conflicts if NA
 
 write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",", row.names = FALSE)

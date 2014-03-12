@@ -126,4 +126,8 @@ CombQ <- slide(CombQ, Var = 'DemAppointPerc', NewVar = 'DemAppointPerc_Lag3', sl
 cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv")
 cpi.data <- merge(cpi.data, CombQ, by = 'Quarter', all.x = TRUE)
 
+if ('X' %in% names(cpi.data)){
+    cpi.data <- VarDrop(cpi.data, 'X')
+}
+
 write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",", row.names = FALSE)
