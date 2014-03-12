@@ -9,12 +9,13 @@
 library(DataCombine)
 library(lubridate)
 library(stringr)
-library(plyr)
+library(foreign)
+library(dplyr)
 
 #### About raw data and load ####
 # Basic data from http://www.federalreserve.gov/aboutthefed/bios/board/boardmembership.htm
 # Table scraped using Komonolabs (https://www.kimonolabs.com/)
-MembRaw <- read.csv('~/Desktop/FedMembers.csv', 
+MembRaw <- read.csv('~/Dropbox/GreenBook/Base_Data/FedMembers.csv', 
                     stringsAsFactors = FALSE, na.strings = c('NA', ''))
 
 #### Clean members data ####
@@ -68,7 +69,7 @@ Comb$End <- mdy(Comb$X1)
 Sub <- subset(Comb, NameDistrict == 'Ben S. Bernanke' | NameDistrict == 'Janet L. Yellen')
 Sub$X2 <- gsub(' reappointed ', '', Sub$X2)
 Sub <- VarDrop(Sub, c('Start', 'X1', 'End'))
-Sub <- rename(Sub, c(X2 = 'Start'))
+Sub <- plyr::rename(Sub, c(X2 = 'Start'))
 Sub$End <- c('Feb 3 2014', 'Mar 1 2014')  # Most recent month start for Yellen
 Sub$Start <- mdy(Sub$Start)
 Sub$End <- mdy(Sub$End)
@@ -87,4 +88,42 @@ Comb$End <- quarter(Comb$End, with_year = TRUE)
 rmExcept('Comb')
 
 
-#### Merge with presidential party data ####
+#### Find president appointed data ####
+Pres <- read.dta('~/Dropbox/GreenBook/Base_Data/PresidentBase.dta')
+
+RelevantQuart <- data.frame(dum = rep(1, nrow(Pres)), Quarter = Pres$Quarter)
+Comb$dum <- 1
+
+CombQ <- merge(Comb, RelevantQuart, by = 'dum', all = TRUE)
+CombQ <- VarDrop(CombQ, 'dum')
+CombQ <- subset(CombQ, (Quarter <= End & Quarter >= Start))
+
+Appoint <- data.frame(Quarter = Pres$Quarter, pres_party = Pres$pres_party)
+CombStart <- data.frame(name = Comb$name, Quarter = Comb$Start)
+Appoint <- merge(CombStart, Appoint, by = 'Quarter', all.x = TRUE)
+Appoint <- DropNA(Appoint, 'pres_party')
+Appoint <- Appoint[!duplicated(Appoint$name), ]
+Appoint <- VarDrop(Appoint, 'Quarter')
+
+CombQ <- merge(CombQ, Appoint, by = 'name', all.x = TRUE)
+CombQ <- VarDrop(CombQ, c('Start', 'End'))
+CombQ <- DropNA(CombQ, 'pres_party')
+
+
+# Create proportion Democratically appointed
+CombQ$dum <- 1
+CombQ <- group_by(CombQ, Quarter)
+CombQ <- mutate(CombQ, Total = sum(dum))
+CombQ <- mutate(CombQ, TotalRep = sum(pres_party))
+
+CombQ$DemAppointPerc <- (1 - (CombQ$TotalRep/CombQ$Total)) * 100 
+CombQ <- CombQ[!duplicated(CombQ$Quarter), ]
+CombQ <- CombQ[order(CombQ$Quarter), ]
+CombQ <- CombQ[, c('Quarter', 'DemAppointPerc')]
+CombQ <- slide(CombQ, Var = 'DemAppointPerc', NewVar = 'DemAppointPerc_Lag2', slideBy = -2)
+
+# Merge into main data set
+cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv")
+cpi.data <- merge(cpi.data, CombQ, by = 'Quarter', all.x = TRUE)
+
+write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",", row.names = FALSE)

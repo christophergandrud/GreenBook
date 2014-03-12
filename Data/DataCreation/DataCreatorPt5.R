@@ -1,7 +1,7 @@
 ##############
-# Add PSRM R and R Suggested Variables
+# Add PSRM R and R Round 1 Suggested Variables
 # Christopher Gandrud
-# Updated 13 October 2013
+# Updated 12 March 2014
 ##############
 
 library(lubridate)
@@ -47,4 +47,4 @@ cpi.data <- merge(cpi.data, product, all.x = TRUE)
 cpi.data <- merge(cpi.data, oil, all.x = TRUE)
 cpi.data <- merge(cpi.data, conflict, all.x = TRUE)
 
-write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",")
+write.table(x = cpi.data, file = "/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv", sep = ",", row.names = FALSE)
