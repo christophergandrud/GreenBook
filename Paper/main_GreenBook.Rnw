@@ -572,20 +572,20 @@ Notably, the presidential partisan ID variable's effect does not change in magni
 <<NLSup1, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     # Model names & Coefficient Names
     ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11', 'S12')
-    CoefNamesS <- c("Intercept", "Recession", "Expenditure/GDP", 
+    CoefNamesS1 <- c("Intercept", "Recession", "Expenditure/GDP", 
                     "Output Gap", "Discount Rate Change", "Unemployment Rate", "FRB/GlobalModel", "Senate Dem/Rep", 
                     "House Dem/Rep", "Pres. Party ID", "Qtr. to Election", 
-                    "Pres*Qrt. Election", "Abs. Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", 
-                    "Productivity Change", "No. Armed Conflicts", 'Pres*Abs. Infl.', 'Pres*Lag 3 Abs. Infl.',
-                    'Pres*Oil Price Change', 'Pres*Prod. Change', 'Pres*No. Armed Confl.') 
+                    "Pres*Qrt. Election", "Abs. Inflation", 'Pres*Abs. Infl.', "Lag 3 Abs. Inflation", 
+                    'Pres*Lag 3 Abs. Infl.', "Oil Price Change", 'Pres*Oil Price Change', 
+                    "Productivity Change", 'Pres*Prod. Change', "No. Armed Conflicts", 'Pres*No. Armed Confl.') 
 
     # Table of non-matched models with ls
-    apsrtable(S1, S2, S2.2, S3, S3.2, S4, S4.2, S5, S5.2, S6, S6.2, S7,
+    apsrtable(S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
               model.names = ModelNamesS, 
-              coef.names = CoefNamesS
+              coef.names = CoefNamesS1
               )
 @
     }}
@@ -601,19 +601,54 @@ Notably, the presidential partisan ID variable's effect does not change in magni
     {\tiny{
 <<NLSup2, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
     # Model names & Coefficient Names
-    ModelNamesS2 <- c('S8', 'S9', 'S10', 'S11','S12', 'S13', 'S14', 'S15')
+    ModelNamesS2 <- c('S13', 'S14', 'S15', 'S16','S17', 'S18', 'S19', 'S20')
+    CoefNamesS2 <- c("Intercept", "Recession", "Expenditure/GDP", 
+                    "Output Gap", "Discount Rate Change", "Unemployment Rate", "Pres. Party ID", 
+                    "Qtr. to Election", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", 
+                    "Pres*Qrt. Election", "Abs Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", 
+                    "Productivity Change", "No. Armed Conflicts") 
 
     # Table of non-matched models with ls
-    apsrtable(S8, S9, S10, S11, S12, S13, S14, S15,
+    apsrtable(S13, S14, S15, S16, S17, S18, S19, S20,
               digits = 1, 
               Sweave = TRUE, 
               stars = "default", 
               model.names = ModelNamesS2, 
-              coef.names = CoefNamesS
+              coef.names = CoefNamesS2
               )
 @
     }}
     \end{center}
+\end{table}
+
+\subsection*{Partisan composition of the Federal Reserve Board}
+
+We also examined if the partisan composition of the Federal Reserve Board of Governors could influence inflation forecast errors. Perhaps a more Democratic Board would push to have lower inflation forecasts so as to justify lowering interest rates and vice versa for a more Republican Board. To examine this we added a variable capturing the \textbf{percentage of the Board appointed by a Democratic president} when the inflation forecasts were made.\footnote{Data on Board membership was taken from the Federal Reserve Board's website at: \url{http://www.federalreserve.gov/aboutthefed/bios/board/boardmembership.htm}. Accessed March 2014.} Results are shown in Table~\ref{BoardPartisan}. We also show results from a model interacting presidential party ID with Board partisan composition. In neither model does the presidential party ID effect change substantively and the partisan composition of the Board variable also does not change. 
+
+\begin{table}
+  \caption{}
+  \label{BoardPartisan}
+  \begin{center}
+    {\small{
+<<SupBoard, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
+    # Model names & Coefficient Names
+    ModelNamesSBP <- c('S21', 'S22')
+    CoefNamesSBP <- c("Intercept", "Recession", "Expenditure/GDP", 
+                    "Output Gap", "Discount Rate Change", "Unemployment Rate",  
+                    "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", "Pres. Party ID",
+                    'Partisan Comp. of Fed Board', 'Pres*Partisan Comp. of Fed Board') 
+
+    # Table of non-matched models with ls
+    apsrtable(S21, S22,
+              digits = 1, 
+              Sweave = TRUE, 
+              stars = "default", 
+              model.names = ModelNamesSBP, 
+              coef.names = CoefNamesSBP
+              )
+@
+    }}
+  \end{center}  
 \end{table}
 
 \subsection*{Orthogonal dependent variable robustness check: Unemployment forecast errors}
