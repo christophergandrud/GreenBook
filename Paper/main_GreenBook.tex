@@ -595,7 +595,7 @@ $\log L$            & 26.1            & 32.2            & 29.1            & 55.3
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 3.0.3 by xtable 1.7-3 package
-% Wed Mar 12 16:45:30 2014
+% Wed Mar 12 17:37:55 2014
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error} 
@@ -774,13 +774,17 @@ In the body of the paper we presented results from models with president party I
 
 We examined if economic or violent conflict shocks may impact inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility by including two absolute inflation variables in the models: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made.\footnote{In Table \ref{SupTable1} this is referred to as `Lag 3 Abs. Inflation'.} The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the presidential partisan ID results. Absolute inflation in the quarter being forecasted for has a statistically significant negative relationship with forecast errors. Referring back to figures \ref{absolute} and \ref{errors_over_time} in the main paper, this makes empirical sense as periods of high inflation in the 1970s were actually times when the standardized forecast error was relatively small. This finding persists even if we use absolute inflation forecast errors (i.e. $F_{q} - I_{q}$) as the dependent variable. This can be seen in Model S10 in Table \ref{SupTable2}.
 
-Second, we consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database on the \textbf{change in the West Texas Crude price}\footnote{The series ID is OILPRICE. Accessed October 2013.} from the quarter in the previous year to the quarter the inflation forecast was made for. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions that dampened inflation, changing inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the \textbf{total number of armed conflicts per year} using data from Uppsala Conflict Data Program/Peace Research Institute Oslo \citep{Harbom2012,Gleditsch2002}. 
+Second, we consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database on the \textbf{change in the West Texas Crude price}\footnote{The series ID is OILPRICE. Accessed October 2013.} from the quarter in the previous year to the quarter the inflation forecast was made for. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions that dampened inflation, changing inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the \textbf{total number of armed conflicts per year} that the United States participated in using data from Uppsala Conflict Data Program/Peace Research Institute Oslo \citep{Harbom2008,Themner2013}. 
 
-As we see in tables \ref{SupTable1} and \ref{SupTable2} the productivity changes and the number of armed conflicts were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was simultaneously a period of relatively small inflation forecast errors. 
+As we see in tables \ref{SupTable1} and \ref{SupTable2} productivity changes were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was simultaneously a period of relatively small inflation forecast errors. 
 
 This finding initially seems counter-intuitive. We might expect that inflation forecasting is easier when there is less inflation, lower oil price volatility, and so on. However, recent economic research has shown that inflation in the United States has became more difficult to forecast from the 1990s as the reduction in inflation variability has been largely due to a reduction in the `predictable component' of inflation \citep[see][]{Gamber2009}. 
 
-Notably, the presidential partisan ID variable's effect does not change in magnitude, direction, or statistical significance when any of the shock variables are included. It also doesn't change when we use our standardized measure or inflation forecasting errors or absolute errors.
+The number of armed conflicts that the US participated in was found to be significantly negatively associated with inflation forecast errors. This result is being driven by the fact that a period of inflation under estimates--primarily during George W. Bush's presidency--also was the period where the United States was engaged in the most armed conflicts as part of the so-called War on Terror. 
+
+In Table~\ref{SupTable1} we also included interactions between presidential party ID and the shock variables. Most of these interactions were statistically insignificant. [COMPETE DISCUSSION]
+
+Notably, the presidential partisan ID variable's effect largely does not change in magnitude, direction, or statistical significance when the shock variables are included. It also doesn't change when we use our standardized measure or inflation forecasting errors or absolute errors.
 
 \begin{table}[ht]
     \caption{Normal Linear Regression Estimation with Standardized 2 Qtr. Inflation Forecasting Error as the Dependent Variable and Additional Independent Variables (non-matched data set)}
@@ -793,44 +797,54 @@ Notably, the presidential partisan ID variable's effect does not change in magni
 \hline 
   & \multicolumn{ 1 }{ c }{ S1 } & \multicolumn{ 1 }{ c }{ S2 } & \multicolumn{ 1 }{ c }{ S3 } & \multicolumn{ 1 }{ c }{ S4 } & \multicolumn{ 1 }{ c }{ S5 } & \multicolumn{ 1 }{ c }{ S6 } & \multicolumn{ 1 }{ c }{ S7 } & \multicolumn{ 1 }{ c }{ S8 } & \multicolumn{ 1 }{ c }{ S9 } & \multicolumn{ 1 }{ c }{ S10 } & \multicolumn{ 1 }{ c }{ S11 } & \multicolumn{ 1 }{ c }{ S12 } \\ \hline
  %                     & S1              & S2              & S3              & S4              & S5              & S6              & S7              & S8              & S9              & S10             & S11             & S12            \\ 
-Intercept             & 2.0             & 2.3             & 1.4             & 2.2             & 2.3             & -0.4            & -0.2            & 3.1             & 3.0             & 3.3 ^\dagger   & 2.3             & 3.3 ^\dagger  \\ 
-                      & (2.0)           & (1.9)           & (2.1)           & (1.9)           & (2.0)           & (1.8)           & (1.9)           & (2.0)           & (2.0)           & (1.9)           & (2.1)           & (1.9)          \\ 
-Recession             & 0.0             & 0.1 ^*          & 0.1             & 0.1             & 0.0             & -0.0            & 0.0             & 0.1             & 0.0             & 0.1 ^*          & 0.1             & 0.1            \\ 
+Intercept             & 2.0             & 2.3             & 3.0             & 1.4             & 2.4             & 2.2             & 2.1             & 2.3             & 2.2             & -0.4            & -0.5            & -0.2           \\ 
+                      & (2.0)           & (1.9)           & (1.9)           & (2.1)           & (2.1)           & (1.9)           & (1.9)           & (2.0)           & (1.9)           & (1.8)           & (1.8)           & (1.9)          \\ 
+Recession             & 0.0             & 0.1 ^*          & 0.1 ^*          & 0.1             & 0.1             & 0.1             & 0.1             & 0.0             & 0.0             & -0.0            & -0.0            & 0.0            \\ 
                       & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
 Expenditure/GDP       & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}     \\ 
                       & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
-Output Gap            & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0 ^*        \\ 
+Output Gap            & -0.0 ^*         & -0.0 ^*         & -0.1 ^*         & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0            & -0.0           \\ 
                       & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
-Discount Rate Change  & -0.3 ^{**}      & -0.2 ^\dagger  & -0.3 ^{**}      & -0.2 ^*         & -0.3 ^{**}      & -0.1            & -0.1            & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^\dagger  & -0.3 ^{**}      & -0.2 ^*        \\ 
+Discount Rate Change  & -0.3 ^{**}      & -0.2 ^\dagger  & -0.2 ^*         & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^*         & -0.2 ^\dagger  & -0.3 ^{**}      & -0.3 ^{**}      & -0.1            & -0.1            & -0.1           \\ 
                       & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
-Unemployment Rate     & -0.1            & -0.0            & -0.1            & -0.1            & -0.1            & -0.1 ^{**}      & -0.1 ^{**}      & -0.1            & -0.1            & -0.0            & -0.1            & -0.1           \\ 
+Unemployment Rate     & -0.1            & -0.0            & -0.0            & -0.1            & -0.0            & -0.1            & -0.1            & -0.1            & -0.1            & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{**}     \\ 
                       & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
-FRB/GlobalModel       & 0.1             & 0.1 ^*          & 0.1 ^\dagger   & 0.1             & 0.1 ^\dagger   & 0.0             & 0.0             & 0.1 ^\dagger   & 0.1             & 0.1 ^*          & 0.1 ^\dagger   & 0.1            \\ 
+FRB/GlobalModel       & 0.1             & 0.1 ^*          & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.1             & 0.1             & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.0             & 0.0             & 0.0            \\ 
                       & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
-Senate Dem/Rep        & -0.3 ^*         & -0.3 ^*         & -0.4 ^*         & -0.3 ^*         & -0.4 ^*         & -0.5 ^{***}     & -0.5 ^{***}     & -0.4 ^*         & -0.3 ^*         & -0.3 ^*         & -0.4 ^*         & -0.3 ^*        \\ 
-                      & (0.2)           & (0.1)           & (0.2)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.2)           & (0.1)           & (0.2)           & (0.1)          \\ 
-House Dem/Rep         & 0.3 ^*          & 0.4 ^{**}       & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          & 0.4 ^{***}      & 0.4 ^{**}       & 0.3 ^*          & 0.3 ^*          & 0.4 ^{**}       & 0.3 ^*          & 0.3 ^*         \\ 
+Senate Dem/Rep        & -0.3 ^*         & -0.3 ^*         & -0.3 ^*         & -0.4 ^*         & -0.3 ^*         & -0.3 ^*         & -0.3 ^\dagger  & -0.4 ^*         & -0.3 ^*         & -0.5 ^{***}     & -0.5 ^{***}     & -0.5 ^{***}    \\ 
+                      & (0.2)           & (0.1)           & (0.1)           & (0.2)           & (0.1)           & (0.1)           & (0.2)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+House Dem/Rep         & 0.3 ^*          & 0.4 ^{**}       & 0.4 ^{**}       & 0.3 ^*          & 0.4 ^*          & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          & 0.4 ^{***}      & 0.4 ^{**}       & 0.4 ^{**}      \\ 
                       & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
-Pres. Party ID        & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.1 ^*          & 0.1 ^*          & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}     \\ 
-                      & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)          \\ 
-Qtr. to Election      & 0.0             & 0.0             &                 &                 &                 &                 & -0.0            & 0.0             & 0.0             & 0.0             & 0.0             & -0.0           \\ 
-                      & (0.0)           & (0.0)           &                 &                 &                 &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
-Pres*Qrt. Election    & -0.0            &                 &                 &                 &                 &                 &                 &                 & -0.0            &                 &                 &                \\ 
-                      & (0.0)           &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                \\ 
-Abs. Inflation        &                 & -0.0 ^{**}      &                 &                 &                 &                 &                 &                 &                 & -0.0 ^{**}      &                 &                \\ 
-                      &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                \\ 
-Pres*Abs. Infl.       &                 &                 & -0.0            &                 &                 &                 &                 &                 &                 &                 & -0.0            &                \\ 
-                      &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                \\ 
-Lag 3 Abs. Inflation  &                 &                 &                 & -0.0 ^\dagger  &                 &                 & -0.0            &                 &                 &                 &                 & -0.0 ^\dagger \\ 
-                      &                 &                 &                 & (0.0)           &                 &                 & (0.0)           &                 &                 &                 &                 & (0.0)          \\ 
-Pres*Lag 3 Abs. Infl. &                 &                 &                 &                 & -0.0            &                 & -0.0            &                 &                 &                 &                 &                \\ 
-                      &                 &                 &                 &                 & (0.0)           &                 & (0.0)           &                 &                 &                 &                 &                \\ 
-Oil Price Change      &                 &                 &                 &                 &                 & -0.1 ^{***}     & -0.1 ^{***}     &                 &                 &                 &                 &                \\ 
-                      &                 &                 &                 &                 &                 & (0.0)           & (0.0)           &                 &                 &                 &                 &                 \\
- $N$                   & 135             & 135             & 132             & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 132             & 135            \\ 
-AIC                   & -55.3           & -64.8           & -53.9           & -60.9           & -57.4           & -83.4           & -79.5           & -57.0           & -55.3           & -64.8           & -52.2           & -59.0          \\ 
-BIC                   & 84.2            & 74.7            & 72.9            & 66.9            & 70.4            & 44.5            & 83.1            & 70.8            & 84.2            & 74.7            & 86.2            & 80.5           \\ 
-$\log L$             & 75.6            & 80.4            & 71.0            & 74.4            & 72.7            & 85.7            & 95.8            & 72.5            & 75.6            & 80.4            & 74.1            & 77.5            \\ \hline
+Pres. Party ID        & 0.3 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.1 ^*          & 0.1 ^*          & 0.1 ^*         \\ 
+                      & (0.1)           & (0.0)           & (0.1)           & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election      & 0.0             & 0.0             &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.0           \\ 
+                      & (0.0)           & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.0)          \\ 
+Pres*Qrt. Election    & -0.0            &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                      & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Abs. Inflation        &                 & -0.0 ^{**}      & -0.0            &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                      &                 & (0.0)           & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Pres*Abs. Infl.       &                 &                 & -0.0 ^*         &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                      &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Lag 3 Abs. Inflation  &                 &                 &                 & -0.0            & -0.0            &                 &                 &                 &                 &                 &                 &                \\ 
+                      &                 &                 &                 & (0.0)           & (0.0)           &                 &                 &                 &                 &                 &                 &                \\ 
+Pres*Lag 3 Abs. Infl. &                 &                 &                 &                 & -0.0 ^*         &                 &                 &                 &                 &                 &                 &                \\ 
+                      &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                \\ 
+Oil Price Change      &                 &                 &                 &                 &                 & -0.0 ^\dagger  & -0.0 ^\dagger  &                 &                 &                 &                 & -0.0           \\ 
+                      &                 &                 &                 &                 &                 & (0.0)           & (0.0)           &                 &                 &                 &                 & (0.0)          \\ 
+Pres*Oil Price Change &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                 &                \\ 
+                      &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
+Productivity Change   &                 &                 &                 &                 &                 &                 &                 & -0.0            & -0.0            &                 &                 & -0.0           \\ 
+                      &                 &                 &                 &                 &                 &                 &                 & (0.0)           & (0.0)           &                 &                 & (0.0)          \\ 
+Pres*Prod. Change     &                 &                 &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                \\ 
+                      &                 &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                \\ 
+No. Armed Conflicts   &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}    \\ 
+                      &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.0)           & (0.0)           & (0.0)          \\ 
+Pres*No. Armed Confl. &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.1             &                \\ 
+                      &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 \\
+ $N$                   & 135             & 135             & 135             & 132             & 132             & 135             & 135             & 135             & 135             & 135             & 135             & 135            \\ 
+AIC                   & -55.3           & -64.8           & -69.4           & -53.9           & -58.5           & -60.9           & -59.0           & -57.4           & -58.0           & -83.4           & -81.9           & -79.5          \\ 
+BIC                   & 84.2            & 74.7            & 70.1            & 72.9            & 79.8            & 66.9            & 80.4            & 70.4            & 81.4            & 44.5            & 57.5            & 83.1           \\ 
+$\log L$             & 75.6            & 80.4            & 82.7            & 71.0            & 77.3            & 74.4            & 77.5            & 72.7            & 77.0            & 85.7            & 89.0            & 95.8            \\ \hline
  \multicolumn{13}{l}{\footnotesize{Standard errors in parentheses}}\\
 \multicolumn{13}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
 \end{tabular} 
@@ -847,10 +861,53 @@ $\log L$             & 75.6            & 80.4            & 71.0            & 74.
     \vspace{0.25cm}
     \begin{center}
     {\tiny{
-\begin{kframe}
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ S13 } & \multicolumn{ 1 }{ c }{ S14 } & \multicolumn{ 1 }{ c }{ S15 } & \multicolumn{ 1 }{ c }{ S16 } & \multicolumn{ 1 }{ c }{ S17 } & \multicolumn{ 1 }{ c }{ S18 } & \multicolumn{ 1 }{ c }{ S19 } & \multicolumn{ 1 }{ c }{ S20 } \\ \hline
+ %                    & S13             & S14             & S15             & S16             & S17             & S18             & S19             & S20            \\ 
+Intercept            & 3.1             & 3.0             & 3.3 ^\dagger   & 2.3             & 3.3 ^\dagger   & 3.3             & 0.5             & 0.8            \\ 
+                     & (2.0)           & (2.0)           & (1.9)           & (2.1)           & (1.9)           & (2.0)           & (1.8)           & (1.9)          \\ 
+Recession            & 0.1             & 0.0             & 0.1 ^*          & 0.1             & 0.1             & 0.0             & -0.0            & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Expenditure/GDP      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Output Gap           & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Discount Rate Change & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^\dagger  & -0.3 ^{**}      & -0.2 ^*         & -0.3 ^{**}      & -0.1            & -0.1           \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Unemployment Rate    & -0.1            & -0.1            & -0.0            & -0.1            & -0.1            & -0.1            & -0.1 ^{**}      & -0.1 ^{**}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Pres. Party ID       & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.1 ^*          & 0.1 ^*         \\ 
+                     & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election     & 0.0             & 0.0             & 0.0             & 0.0             & -0.0            & 0.0             & 0.0             & -0.0           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+FRB/GlobalModel      & 0.1 ^\dagger   & 0.1             & 0.1 ^*          & 0.1 ^\dagger   & 0.1             & 0.1             & 0.0             & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Senate Dem/Rep       & -0.4 ^*         & -0.3 ^*         & -0.3 ^*         & -0.4 ^*         & -0.3 ^*         & -0.4 ^*         & -0.5 ^{***}     & -0.5 ^{***}    \\ 
+                     & (0.1)           & (0.2)           & (0.1)           & (0.2)           & (0.1)           & (0.2)           & (0.1)           & (0.1)          \\ 
+House Dem/Rep        & 0.3 ^*          & 0.3 ^*          & 0.4 ^{**}       & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          & 0.4 ^{***}      & 0.4 ^{**}      \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Pres*Qrt. Election   &                 & -0.0            &                 &                 &                 &                 &                 &                \\ 
+                     &                 & (0.0)           &                 &                 &                 &                 &                 &                \\ 
+Abs Inflation        &                 &                 & -0.0 ^{**}      &                 &                 &                 &                 &                \\ 
+                     &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
+Lag 3 Abs. Inflation &                 &                 &                 & -0.0            &                 &                 &                 &                \\ 
+                     &                 &                 &                 & (0.0)           &                 &                 &                 &                \\ 
+Oil Price Change     &                 &                 &                 &                 & -0.0 ^\dagger  &                 &                 & -0.0           \\ 
+                     &                 &                 &                 &                 & (0.0)           &                 &                 & (0.0)          \\ 
+Productivity Change  &                 &                 &                 &                 &                 & -0.0            &                 & -0.0           \\ 
+                     &                 &                 &                 &                 &                 & (0.0)           &                 & (0.0)          \\ 
+No. Armed Conflicts  &                 &                 &                 &                 &                 &                 & -0.1 ^{***}     & -0.1 ^{***}    \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.0)           & (0.0)           \\
+ $N$                  & 135             & 135             & 135             & 132             & 135             & 135             & 135             & 135            \\ 
+AIC                  & -57.0           & -55.3           & -64.8           & -52.2           & -59.0           & -55.5           & -81.6           & -79.5          \\ 
+BIC                  & 70.8            & 84.2            & 74.7            & 86.2            & 80.5            & 84.0            & 57.9            & 83.1           \\ 
+$\log L$            & 72.5            & 75.6            & 80.4            & 74.1            & 77.5            & 75.7            & 88.8            & 95.8            \\ \hline
+ \multicolumn{9}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{9}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'S20' not found}}\end{kframe}
 
     }}
     \end{center}
@@ -858,17 +915,50 @@ $\log L$             & 75.6            & 80.4            & 71.0            & 74.
 
 \subsection*{Partisan composition of the Federal Reserve Board}
 
-We also examined if the partisan composition of the Federal Reserve Board of Governors could influence inflation forecast errors. Perhaps a more Democratic Board would push to have lower inflation forecasts so as to justify lowering interest rates and vice versa for a more Republican Board. To examine this we added a variable capturing the \textbf{percentage of the Board appointed by a Democratic president} when the inflation forecasts were made.\footnote{Data on Board membership was taken from the Federal Reserve Board's website at: \url{http://www.federalreserve.gov/aboutthefed/bios/board/boardmembership.htm}. Accessed March 2014.} Results are shown in Table~\ref{BoardPartisan}. We also show results from a model interacting presidential party ID with Board partisan composition. In neither model does the presidential party ID effect change substantively and the partisan composition of the Board variable also does not change. 
+We also examined if the partisan composition of the Federal Reserve Board of Governors could influence inflation forecast errors. Perhaps a more Democratic Board would push to have lower inflation forecasts so as to justify lowering interest rates and vice versa for a more Republican Board. To examine this we added a variable capturing the \textbf{percentage of the Board appointed by a Democratic president} when the inflation forecasts were made.\footnote{Data on Board membership was taken from the Federal Reserve Board's website at: \url{http://www.federalreserve.gov/aboutthefed/bios/board/boardmembership.htm}. Accessed March 2014.} Results are shown in Table~\ref{BoardPartisan}. We also show results from a model interacting presidential party ID with Board partisan composition. In the model without an interaction between the Board partisan composition variable and presidential party ID we do not estimate a statistically significant effect for Board composition. There is a very weak (both substatntively and statistically significantly) estimated interaction between presidential party ID and Board partisan composition. The interaction is positive such that inflation forecasts are even more higher when there are Democratic presidents with Boards that have more members appointed by Democratic presidents. However, it is important to reiterate that the estimated effect is very small.  
 
 \begin{table}
-  \caption{}
+  \caption{Normal Linear Regression Estimation with Standardized 2 Qtr. Inflation Forecasting Error as the Dependent Variable and Partisan Composition (\% Appointed by a Democratic President) added to the Independent Variables (non-matched data set)}
   \label{BoardPartisan}
   \begin{center}
-    {\small{
-\begin{kframe}
+    {\tiny{
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ S21 } & \multicolumn{ 1 }{ c }{ S22 } \\ \hline
+ %                                & S21            & S22           \\ 
+Intercept                        & 2.1            & 2.1           \\ 
+                                 & (1.9)          & (1.9)         \\ 
+Recession                        & 0.1            & 0.0           \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Expenditure/GDP                  & 0.2 ^{***}     & 0.2 ^{***}    \\ 
+                                 & (0.0)          & (0.0)         \\ 
+Output Gap                       & -0.1 ^*        & -0.1 ^*       \\ 
+                                 & (0.0)          & (0.0)         \\ 
+Discount Rate Change             & -0.3 ^{**}     & -0.3 ^{**}    \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Unemployment Rate                & -0.1           & -0.1          \\ 
+                                 & (0.0)          & (0.0)         \\ 
+FRB/GlobalModel                  & 0.0            & 0.1           \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Senate Dem/Rep                   & -0.2           & -0.2          \\ 
+                                 & (0.2)          & (0.2)         \\ 
+House Dem/Rep                    & 0.3 ^*         & 0.2 ^\dagger \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Pres. Party ID                   & 0.3 ^{***}     & 0.2 ^{***}    \\ 
+                                 & (0.0)          & (0.1)         \\ 
+Partisan Comp. of Fed Board      & 0.0            & 0.0           \\ 
+                                 & (0.0)          & (0.0)         \\ 
+Pres*Partisan Comp. of Fed Board &                & 0.0 ^\dagger \\ 
+                                 &                & (0.0)          \\
+ $N$                              & 135            & 135           \\ 
+AIC                              & -58.7          & -59.7         \\ 
+BIC                              & 69.1           & 79.8          \\ 
+$\log L$                        & 73.3           & 77.8           \\ \hline
+ \multicolumn{3}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{3}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'S21' not found}}\end{kframe}
 
     }}
   \end{center}  
@@ -1069,7 +1159,7 @@ $\log L$            & 18.3            & 25.0            & 21.8            & 31.6
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 3.0.3 by xtable 1.7-3 package
-% Wed Mar 12 16:45:36 2014
+% Wed Mar 12 17:38:01 2014
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 

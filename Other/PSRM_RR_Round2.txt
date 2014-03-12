@@ -9,7 +9,19 @@ Christopher and Cassie
 
 ## Reviewer 1
 
-1.
+We added the additional estimation models suggested by Reviewer 1 to the Supplementary Materials as well as incorportated the results in to the discussion. In particular we added variables for:
+
+- Percentage of the Federal Reserve Board appointed by a Democratic president.
+
+- Number of armed conflicts that the United States participated in per year.
+
+- Interactions between the shock variables and presidential partisan ID.
+
+In general, these additions did not substantively change the estimated presidential partisan ID effect. 
+
+We did estimate that the number of armed conflicts that the United States participated in is negatively associated with inflation forecasting errors. This is likely a 'War on Terror' correlation as the 2000s were both a time of many conflicts and inflation under-estimation
+
+Some of the interactions were statistically significant (partisan )
 
 2.
 
