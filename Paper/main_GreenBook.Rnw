@@ -573,8 +573,8 @@ Notably, the presidential partisan ID variable's effect does not change in magni
     # Model names & Coefficient Names
     ModelNamesS <- c('S1', 'S2', 'S3', 'S4','S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11', 'S12')
     CoefNamesS <- c("Intercept", "Recession", "Expenditure/GDP", 
-                    "Output Gap", "Discount Rate Change", "Unemployment Rate", "Pres. Party ID", 
-                    "Qtr. to Election", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", 
+                    "Output Gap", "Discount Rate Change", "Unemployment Rate", "FRB/GlobalModel", "Senate Dem/Rep", 
+                    "House Dem/Rep", "Pres. Party ID", "Qtr. to Election", 
                     "Pres*Qrt. Election", "Abs. Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", 
                     "Productivity Change", "No. Armed Conflicts", 'Pres*Abs. Infl.', 'Pres*Lag 3 Abs. Infl.',
                     'Pres*Oil Price Change', 'Pres*Prod. Change', 'Pres*No. Armed Confl.') 
