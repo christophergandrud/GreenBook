@@ -6,6 +6,7 @@
 
 library(lubridate)
 library(plyr)
+library(DataCombine)
 
 # Load main data
 cpi.data <- read.csv("/git_repositories/GreenBook/Data/GB_FRED_cpi_2007.csv")
@@ -35,12 +36,24 @@ names(oil) <- c("Quarter", "WTI_crude_price")
 
 # Number of armed conflicts
 ## Data downloaded from PCR UU (http://www.pcr.uu.se/research/ucdp/datasets/onset_of_intrastate_armed_conflict/)
-conflict <- read.csv("~/Dropbox/GreenBook/Base_Data/OnsetOfInterStateConflict.csv", stringsAsFactors = FALSE)
-# Keep year and incidencev412, dummy for each country year that there was interstate conflict
-conflict <- conflict[, c('year', 'sumconfv412')]
-conflict <- ddply(conflict, "year", transform, num_conflicts = sum(sumconfv412))
-conflict <- conflict[!duplicated(conflict[, c(1, 3)]), ]
-conflict <- conflict[, c("year", "num_conflicts")]
+conflict <- read.csv("~/Dropbox/GreenBook/Base_Data/DyadicInterstateConflict.csv", stringsAsFactors = FALSE)
+# Keep conflicts that the United States is involved 
+con1 <- grepl.sub(data = conflict, Var = 'SideA', patterns = 'United States')
+con2 <- grepl.sub(data = conflict, Var = 'SideA2nd', patterns = 'United States')
+con3 <- grepl.sub(data = conflict, Var = 'SideB', patterns = 'United States')
+con4 <- grepl.sub(data = conflict, Var = 'SideB2nd', patterns = 'United States')
+
+ConComb <- rbind(con1, con2, con3, con4)
+
+ConComb <- ConComb[order(ConComb$YEAR, ConComb$ConflictID), ]
+
+ConComb <- ConComb[, c('ConflictID', 'YEAR')]
+ConComb$dum <- 1
+
+ConComb <- ddply(ConComb, "YEAR", transform, num_conflicts = sum(dum))
+ConComb <- ConComb[!duplicated(ConComb[, 'YEAR']), ]
+ConComb <- ConComb[, c("YEAR", "num_conflicts")]
+names(ConComb) <- c('year', 'num_conflicts')
 
 # Combine data sets
 cpi.data <- merge(cpi.data, product, all.x = TRUE)
