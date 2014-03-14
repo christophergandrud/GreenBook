@@ -35,9 +35,9 @@ Download this repository
 
 Finally, 'knit' the main paper file `main_GreenBook.Rnw` in the *Paper* folder.
 
-### Reproduce the analyses, tables and empirical graphs
+### Reproduce the analyses, tables, and plots
 
-The **R** source code for the analyses, tables, and empirical graphs are in this repository's *Analysis* folder. 
+The **R** source code for the analyses, tables, and plots are in this repository's *Analysis* folder. 
 
 > Note: these source code files must be run in the sequence in which they appear in the paper. Start with the file called *ActualVsForecstGraph.R*. This will load the data set.
 
