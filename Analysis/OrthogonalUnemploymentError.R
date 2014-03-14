@@ -92,34 +92,3 @@ PLU1 <- zelig(error.unemploy.q2 ~ pres_party, model = "ls", data = cpi.dataU, ci
 
 # Only relevant variables (i.e. excluding the inflation relevant variables DiscountRate2qChange)
 PLU2 <- zelig(error.unemploy.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "ls", data = cpi.dataU, cite = FALSE)                       
-
-
-#### Match Data and Run Comparison Analysis ####
-
-# Subset for complete (nonmissing) values
-# matchit requires data sets to have no missing values
-#vars <- c("Quarter", "ElectionPeriod", "pres_party", "error.unemploy.q2", 
-#          "time_to_election", "recession", "senate_dem_rep", 
-#          "house_dem_rep", "DebtGDP", "ExpenditureGDP",
-#          "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange", 
-#          "DiscountRate", "DiscountRate2qChange", "Chair"
-#          )  
-#cpi.completeU <- cpi.dataU[complete.cases(cpi.dataU[vars]),]
-#cpi.completeU <- cpi.completeU[vars]
-
-# Party, Only pres*ElectionPeriod Interaction
-#cpi.matched.partyU <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + pres_party*ElectionPeriod, data = cpi.completeU, method = "genetic", pop.size = 161)
-
-# summary(cpi.matched.party, interactions = TRUE)
-# plot(cpi.matched.party, type = "QQ", interactive = FALSE)
-# plot(cpi.matched.party, type = "jitter", interactive = FALSE)
-
-# Turn matched data into data.frame for analysis
-#cpi.Mdf.partyU <- match.data(cpi.matched.party)
-
-################### Parametric Models ################
-# Only partisanship
-#PLU1 <- zelig(error.unemploy.q2 ~ pres_party, model = "ls", data = cpi.Mdf.partyU, cite = FALSE)
-
-# Only relevant variables (i.e. excluding the inflation relevant variables DiscountRate2qChange)
-#PLU2 <- zelig(error.unemploy.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "ls", data = cpi.Mdf.partyU, cite = FALSE)

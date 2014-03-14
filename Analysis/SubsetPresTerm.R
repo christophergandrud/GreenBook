@@ -4,7 +4,6 @@
 # 17 January 2013
 ##############
 
-# library(Zelig)
 library(stringr)
 
 #### Run regressions dropping each presidential term ####
