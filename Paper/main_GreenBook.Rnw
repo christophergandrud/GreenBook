@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 12 March 2014
+% 14 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -185,7 +185,6 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
     
 <<BaseInflation, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
     library(devtools)
-    library(digest)
     
     ActualForeURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ActualVsForecastGraph.R"
     devtools::source_url(ActualForeURL)
@@ -607,9 +606,10 @@ Notably, the presidential partisan ID variable's effect largely does not change 
     # Model names & Coefficient Names
     ModelNamesS2 <- c('S13', 'S14', 'S15', 'S16','S17', 'S18', 'S19', 'S20')
     CoefNamesS2 <- c("Intercept", "Recession", "Expenditure/GDP", 
-                    "Output Gap", "Discount Rate Change", "Unemployment Rate", "Pres. Party ID", 
-                    "Qtr. to Election", "FRB/GlobalModel", "Senate Dem/Rep", "House Dem/Rep", 
-                    "Pres*Qrt. Election", "Abs Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", 
+                    "Output Gap", "Discount Rate Change", "Unemployment Rate", 
+                    "Pres. Party ID", "Qtr. to Election", "FRB/GlobalModel", 
+                    "Senate Dem/Rep", "House Dem/Rep", "Pres*Qrt. Election", 
+                    "Abs Inflation", "Lag 3 Abs. Inflation", "Oil Price Change", 
                     "Productivity Change", "No. Armed Conflicts") 
 
     # Table of non-matched models with ls
@@ -659,7 +659,7 @@ We also examined if the partisan composition of the Federal Reserve Board of Gov
 
 <<CreateOrthog, message=FALSE, error=FALSE, warning=FALSE, echo=FALSE>>=
     # Create unempoyment error variable and graph
-    PartisanErrorUnemployURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiagnosticTests/OrthogonalUnemploymentError.R"
+    PartisanErrorUnemployURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/OrthogonalUnemploymentError.R"
     devtools::source_url(PartisanErrorUnemployURL)
 @
 

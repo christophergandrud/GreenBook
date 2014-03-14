@@ -1,16 +1,16 @@
-# Inflated Expectations: How government partisanship shapes bureaucrat's inflation expectations
+# Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations
 
-## Cassandra Grafström and Christopher Gandrud
+## Christopher Gandrud and Cassandra Grafström 
 
 ---
 
-These files comprise the working paper ''Inflated Expectations: How government partisanship shapes bureaucrat's inflation expectations''
+These files comprise the paper ''Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations''
 
 ### Reproduce the paper
 
-The paper can be entirely reproduced using the `knitr` package in **R** (we used `knitr` version 1.5 and **R** version 3.0.3). The `knitr` package is by [Yihui Xie](http://yihui.name/). 
+The paper can be entirely reproduced using the `knitr` package in **R** (we used `knitr` version 1.5 and **R** version 3.0.3). The `knitr` package is by [Yihui Xie](http://yihui.name/). You will also need to have a LaTeX distribution installed.
 
-To reproduce the paper first install the necessary R packages:
+To reproduce the analyses and plots in the paper first install the necessary R packages:
 
 ```{S}
     install.packages("apsrtable",
