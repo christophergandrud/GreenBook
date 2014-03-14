@@ -41,3 +41,5 @@ The **R** source code for the analyses, tables, and empirical graphs are in this
 
 > Note: these source code files must be run in the sequence in which they appear in the paper.
 
+The main data set we used in the paper is in the *Data* folder and is called *GB_FRED_cpi_2007.csv*.
+
