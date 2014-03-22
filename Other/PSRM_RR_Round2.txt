@@ -9,7 +9,9 @@ Christopher and Cassie
 
 ## Reviewer 1
 
-We added the additional estimation models suggested by Reviewer 1 to the Supplementary Materials as well as incorporated the results into the discussion. In particular we added variables for:
+We added the additional estimation models suggested by Reviewer 1 to the Supplementary Materials as well as incorporated the results into the paper's discussion. In particular we added variables for:
+
+---
 
 **Table 5**
 
@@ -19,27 +21,35 @@ We added the additional estimation models suggested by Reviewer 1 to the Supplem
 
 **Table 7**
 
-- Percentage of Federal Reserve Board Governors appointed by a Democratic president (Table 7).
+- Percentage of the Federal Reserve Board Governors appointed by a Democratic president.
 
-In general, these additions did not substantively change the estimated presidential partisan ID effect. The percentage of the Federal Reserve Board governors appointed by Democratic presidents variable produced a statistically insignificant estimate.
+---
+
+Overall these additions did not substantively change the estimated presidential partisan ID effect. 
+
+### Notes on the estimated individual effects of the added variables
+
+The absolute inflation level variables were estimated to have statistically significant negative interactions with presidential partisan ID. It is important to note that in general the magnitude of these interactions was quite small relative to the variables' scale. The finding makes empirical sense as the period of high absolute inflation with a Democratic president (Carter) was a time of low standardized forecast errors. However, we are reluctant to draw substantive conclusions beyond this from these results.
 
 We did estimate that the number of armed conflicts that the United States participated in is negatively associated with inflation forecasting errors. This is likely a 'War on Terror' correlation as the 2000s were both a time of many conflicts and inflation under-estimation. 
 
-The absolute inflation level variables were estimated to have statistically significant negative interactions with presidential partisan ID. It is important to note that in general the magnitude of these interactions was quite small. The finding makes empirical sense as the period of high absolute inflation with a Democratic president (Carter) was a time of low standardized forecast errors. However, we are reluctant to draw theoretical conclusions from these results.
+The percentage of the Federal Reserve Board governors appointed by Democratic presidents variable produced a statistically insignificant estimate by itself.
 
-The interaction term for presidential partisan ID and Reserve Board partisan composition was significant at the 10% level and positive, though very small. It's unclear what we should infer from this, but the lack of any evidence for a Board partisan composition effect by itself, and only weak evidence for an interaction with presidential partisan ID suggests that the Staff errors are primarily influenced by the presidency, not the 'partisan composition' of the Board, as Reviewer 1 is concerned about. 
+The interaction term for presidential partisan ID and Reserve Board partisan composition was significant at the 10% level and positive, though very small. It's unclear what we should infer from this, but the lack of any evidence for a Board partisan composition effect by itself, and only weak evidence for an interaction with presidential partisan ID suggests that the Staff errors are primarily influenced by the presidency, not the partisan composition of the Board, as Reviewer 1 is concerned about. 
 
 ## Reviewer 2
 
-1. The reviewer posits the possibility that it is the public who have a presidential partisan heuristic and not Fed Staff. The Fed Staff anticipate the public's heuristic in their forecasts. We do cite previous literature that suggests that actors in the public do have a presidential partisan heuristics. There may certainly be some sort of dynamic like this going on.
+1. The reviewer posits the possibility that it is the public who have a presidential partisan heuristic and not Fed Staff. The Fed Staff anticipate the public's heuristic in their forecasts. 
+
+We do cite previous literature that suggests that actors in the public do have presidential partisan heuristics when it comes to economic policy forecasting. There may certainly be some sort of dynamic like this going on.
 
 However, the empirical evidence we present in the paper suggests that at the least Fed Staff are making additional partisan errors. 
 
 If Fed Staff perfectly incorporated the effect on inflation of the public's partisan heuristics into their forecasts and did not hold additional incorrect partisan heuristics themselves, then we would expect to see no presidential partisan errors. However, this is not the case.  
 
-2. The reviewer also continues to wonder how Fed Staff both want to make accurate forecasts and don't seem to have corrected their forecasts. In the paper we address why this is issue directly. GET PAGES NUMBERS
+2. The reviewer also continues to wonder how Fed Staff both want to make accurate forecasts and don't seem to have corrected their forecasts. In the paper we address this issue directly (see pages 9, 27-28).
  
-More importantly, in a sense, we hope that by doing this research and publicising our findings we will prompt Fed forecasters to look out for partisan effects in their forecasts and correct for them (we also discuss this in the conclusion).  
+More importantly, in a sense, we hope that by doing this research and publicising our findings we will prompt Fed forecasters to look out for partisan effects in their future forecasts and correct for them (we also discuss this in the conclusion on pages 27-28).  
 
 We would be happy to add a discussion of these two issues to the body of the paper if you feel that it is necessary.
 

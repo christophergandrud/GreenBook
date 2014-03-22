@@ -3,9 +3,7 @@ bitops
 boot
 coda
 devtools
-digest
 ggplot2
-gridExtra
 knitr
 lattice
 MASS
@@ -15,10 +13,7 @@ MCMCpack
 plotrix
 plyr
 RCurl
-reshape
 reshape2
 rgenoud
 sandwich
 Zelig
-ZeligBayesian
-zoo
