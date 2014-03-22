@@ -5,8 +5,8 @@
 ################
 
 # To run as a stand alone file. First, run the following files from earlier in the paper:
-## devtools::source_url("http://bit.ly/NXdCpk") 
-## devtools::source_url("http://bit.ly/OFdA4u")
+## source('Analysis/Greenbook1.R') 
+## source('Analysis/Greenbook4.R') 
 
 # Set fitted values 
 NL11SetRDem <- setx(NL11, pres_party = 0, house_dem_rep = 1.2, senate_dem_rep = 1.2)

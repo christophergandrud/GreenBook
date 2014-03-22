@@ -5,7 +5,7 @@
 ####################
 
 # To run as a stand alone file. First, run the following file from the paper:
-## devtools::source_url("http://bit.ly/NXdCpk") 
+## source('Analysis/Greenbook1.R') 
 
 ## Create graph
 

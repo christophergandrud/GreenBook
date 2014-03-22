@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 14 March 2014
+% 22 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -85,7 +85,7 @@
 \title{Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}
 
 \author{Christopher Gandrud \\
-                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Fellow. Friedrichstra{\ss}e 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{gandrud@hertie-school.org}.} \\
+                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Fellow. Friedrichstra{\ss}e 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}.} \\
                 and \\
             Cassandra Grafstr\"{o}m \\
                 {\emph{University of Michigan}}\footnote{Ph.D Candidate. 5700 Haven Hall, 505 S. State Street
@@ -595,7 +595,7 @@ $\log L$            & 26.1            & 32.2            & 29.1            & 55.3
 
 %%%%%%% Table of pres_party matched data with Bayesian normal linear parametric 
 % latex table generated in R 3.0.3 by xtable 1.7-3 package
-% Fri Mar 14 17:48:44 2014
+% Sat Mar 22 17:48:11 2014
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error} 
@@ -778,7 +778,7 @@ We also interacted the absolute inflation variables with presidential party ID. 
 
 We consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database on the \textbf{change in the West Texas Crude price}\footnote{The series ID is OILPRICE. Accessed October 2013.} from the quarter in the previous year to the quarter the inflation forecast was made for. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions that dampened inflation, changing inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the \textbf{total number of armed conflicts per year that the United States participated in} using data from the Uppsala Conflict Data Program/Peace Research Institute Oslo \citep{Harbom2008,Themner2013}. 
 
-As we see in tables \ref{SupTable1} and \ref{SupTable2} that productivity changes were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was simultaneously a period of relatively small inflation forecast errors. The number of armed conflicts that the US participated in was found to be significantly negatively associated with inflation forecast errors. This result is being driven by the fact that a period of inflation under estimates--primarily during George W. Bush's presidency--also was the period where the United States engaged in the most armed conflicts as part of the so-called War on Terror. This evidence suggests that Fed staff do not overestimate the effect that price, oil, and armed conflict shocks have on inflation, though they may underestimate their effect.
+As we see in tables \ref{SupTable1} and \ref{SupTable2} that productivity changes were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was simultaneously a period of relatively small inflation forecast errors. The number of armed conflicts that the US participated in was found to be significantly negatively associated with inflation forecast errors. This result is being driven by the fact that a period of inflation under estimates--primarily during George W. Bush's presidency--also was the period where the United States engaged in the most armed conflicts as part of the so-called War on Terror. This evidence suggests that Fed staff do not overestimate the effect that price, oil, and armed conflict shocks have on inflation, though they may underestimate their effects.
 
 In Table~\ref{SupTable1} we also included interactions between presidential party ID and the oil price, productivity, and armed conflict shock variables. None of these interactions were estimated to be statistically significant. 
 
@@ -1157,7 +1157,7 @@ $\log L$            & 18.3            & 25.0            & 21.8            & 31.6
 %%%%%%% Table of pres_party matched data with Normal Bayesian linear parametric model %%%%%%%%
 
 % latex table generated in R 3.0.3 by xtable 1.7-3 package
-% Fri Mar 14 17:48:50 2014
+% Sat Mar 22 17:48:17 2014
 \begin{table}[ht]
 \centering
 \caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error (Matched by President's Party ID variable)} 

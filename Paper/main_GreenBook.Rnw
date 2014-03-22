@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 14 March 2014
+% 22 March 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -29,16 +29,20 @@
 \usepackage{graphicx}
 
 % Set knitr global options
-<<ParentGlobalOpts, echo=FALSE>>=
+<<ParentGlobalOpts, include=FALSE>>=
+    # Set root directory. Change if needed for replication.
+    opts_knit$set(root.dir = '/git_repositories/Greenbook/')
+    
     opts_chunk$set(concordance=TRUE)
     opts_chunk$set(fig.align='center')
+    library(devtools)
 @
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}
 
 \author{Christopher Gandrud \\
-                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Fellow. Friedrichstra{\ss}e 180. 10117 Berlin, Germany. Email: \href{mailto:christopher.gandrud@gmail.com}{gandrud@hertie-school.org}.} \\
+                {\emph{Hertie School of Governance}}\footnote{Post-doctoral Fellow. Friedrichstra{\ss}e 180. 10117 Berlin, Germany. Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}.} \\
                 and \\
             Cassandra Grafstr\"{o}m \\
                 {\emph{University of Michigan}}\footnote{Ph.D Candidate. 5700 Haven Hall, 505 S. State Street
@@ -184,10 +188,7 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
     \begin{center}
     
 <<BaseInflation, warning=FALSE, echo=FALSE, message=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    library(devtools)
-    
-    ActualForeURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ActualVsForecastGraph.R"
-    devtools::source_url(ActualForeURL)
+    source('Analysis/Greenbook1.R')
 @
     
     \end{center}
@@ -201,7 +202,7 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
 \subsection{Are There Partisan Forecast Errors?}
 
 <<DifferenceOfMeans, echo=FALSE, message=FALSE, warning=FALSE>>=
-  source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/DiffOfMeanForecastErrors.R")
+  source('Analysis/Greenbook2.R')
 @
 
 Unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2007 the mean standardized forecast error was \Sexpr{round(mean(cpi.data$error.prop.deflator.q2, na.rm = TRUE), digit = 2)}, i.e. forecasters under-predicted inflation by about \Sexpr{round(mean(cpi.data$error.prop.deflator.q2, na.rm = TRUE), digit = 2) * -100} percent. Our finding of relatively small average error over the entire 35 year period is in line with findings from previous studies. However, this low level of overall bias disguises substantial differences in the mean errors from Republican to Democratic presidencies. Across Republican presidencies the average error was \Sexpr{round(RepMean, digit = 2) * 100} percent. It was +\Sexpr{round(DemMean, digit = 2) * 100} percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
@@ -217,10 +218,7 @@ This summary examination of inflation forecast errors suggests that there may be
     \begin{center}
     
 <<PartisanError, warning=FALSE, message=FALSE, echo=FALSE, fig.width=7, fig.height=4, out.width='0.8\\linewidth'>>=
-    
-    # Run graph source code
-    PartisanErrorURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/ErrorPresPartyGraph.R"
-    source_url(PartisanErrorURL)
+    source('Analysis/Greenbook3.R')
 @
     
     \end{center}
@@ -270,13 +268,8 @@ In this section we present results from a number of regression model specificati
 We remove quarters from the sample where forecasters would not have known who the president would be because the president had not yet been elected for that quarter. For models where the dependent variable is forecasts made two quarters beforehand this means removing the first two quarters of each presidential term.\footnote{In this case 19 quarters are removed.} Results from these restricted data sets are fairly similar to those from the full data set.
 
 <<MainAnalysis, include=FALSE, cache=FALSE>>=
-    
-    ## Run main analysis source code ##
-    AnalysisURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/MainAnalysis2.R"
-    devtools::source_url(AnalysisURL)
-
-    # Local
-    # source("/git_repositories/GreenBook/Analysis/MainAnalysis2.R")
+    # Runs the main analyses discussed in this paper
+    source('Analysis/Greenbook4.R')
 @
 
 \begin{figure}[t]
@@ -286,11 +279,9 @@ We remove quarters from the sample where forecasters would not have known who th
 
 <<CoefComparePlots, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
     # Load model objects created by MainAnalysis2.R
-    load("/git_repositories/GreenBook/Paper/ModelObjects.RData")
+    load("Paper/ModelObjects.RData")
     # Create plots
-     CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots1.R"
-    devtools::source_url(CoefPlotsURL)
-
+    source('Analysis/Greenbook5.R')
 @
     \end{center}
     \begin{singlespace}
@@ -311,12 +302,12 @@ Our main finding is that Democratic party identification had a strong positive a
 %%% Code is only run when there are changes, since it is very computationally intensive.
 <<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.81\\linewidth'>>=
 # Expected value plot ##
-  source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/QuarterCompareNonMatched.R")
+  source('Analysis/Greenbook6.R')
 @
 
 
-<<LoadQrt2Estimates, echo=FALSE, message=FALSE, error=FALSE>>=
-Sim2 <- read.csv("/git_repositories/GreenBook/Paper/cache/SimQrt2.csv")
+<<LoadQrt2Estimates, include=FALSE>>=
+  Sim2 <- read.csv('Paper/cache/SimQrt2.csv')
 @
     \end{center}
     \begin{singlespace}
@@ -345,20 +336,8 @@ Fed Staff do not appear to be over-estimating inflation when a Democratic presid
     \begin{center}
 
 <<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=7, fig.height=4, out.width='0.7\\linewidth'>>=
-    # Load required packages ##
-    library(gridExtra)
-
-    # Pres*Election Interaction #
-    #ElectInterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresElectionInteract.R"
-    #source_url(ElectInterURL)
-
     # Pres*Congress Interaction #
-    CongInterURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/PresCongressInteractions.R"
-    source_url(CongInterURL)
-
-    # Combine graphs
-    #InterCombine <- grid.arrange(ElectionInteractionPlot, PartyInteractionPlot, ncol = 2)
-    #print(InterCombine)
+    source('Analysis/Greenbook7.R')
     print(PartyInteractionPlot)
 @
 
@@ -442,9 +421,8 @@ print.xtable(xtable(NB1Summary, caption = "Bayesian Normal Linear Regression Est
     \scalebox{0.9}{
     {\tiny
 <<NLPresDropTables, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-    
     # Run subset models
-    devtools::source_url("https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SubsetPresTerm.R")
+    source('Analysis/Greenbook8.R')
     
     # Model names & Coefficient Names -- Use C for all  mathced models
     ModelNamesP <- c("Nixon 1", "Nixon 2", "Ford", "Carter", "Reagan 1", "Reagan 2", 
@@ -525,7 +503,8 @@ To further check the robustness of the possible effect of elections on errors we
     \begin{center}
     {\small{
 <<SupMid, warning=FALSE, echo=FALSE, message=FALSE, results='asis'>>=
-devtools::source_url('https://raw.github.com/christophergandrud/GreenBook/master/Analysis/SupplementaryAnalyses.R')
+    source('Analysis/Greenbook9.R')
+
     # Model names & Coefficient Names
     ModelNamesSM <- c('SM1', 'SM2')
     CoefNamesSM <- c("Intercept", "Recession", "Expenditure/GDP", 
@@ -558,7 +537,7 @@ We also interacted the absolute inflation variables with presidential party ID. 
 
 We consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database on the \textbf{change in the West Texas Crude price}\footnote{The series ID is OILPRICE. Accessed October 2013.} from the quarter in the previous year to the quarter the inflation forecast was made for. Similarly, maybe labor productivity increases, especially in the 1990s created unexpected economic conditions that dampened inflation, changing inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the \textbf{total number of armed conflicts per year that the United States participated in} using data from the Uppsala Conflict Data Program/Peace Research Institute Oslo \citep{Harbom2008,Themner2013}. 
 
-As we see in tables \ref{SupTable1} and \ref{SupTable2} that productivity changes were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was simultaneously a period of relatively small inflation forecast errors. The number of armed conflicts that the US participated in was found to be significantly negatively associated with inflation forecast errors. This result is being driven by the fact that a period of inflation under estimates--primarily during George W. Bush's presidency--also was the period where the United States engaged in the most armed conflicts as part of the so-called War on Terror. This evidence suggests that Fed staff do not overestimate the effect that price, oil, and armed conflict shocks have on inflation, though they may underestimate their effect.
+As we see in tables \ref{SupTable1} and \ref{SupTable2} that productivity changes were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was simultaneously a period of relatively small inflation forecast errors. The number of armed conflicts that the US participated in was found to be significantly negatively associated with inflation forecast errors. This result is being driven by the fact that a period of inflation under estimates--primarily during George W. Bush's presidency--also was the period where the United States engaged in the most armed conflicts as part of the so-called War on Terror. This evidence suggests that Fed staff do not overestimate the effect that price, oil, and armed conflict shocks have on inflation, though they may underestimate their effects.
 
 In Table~\ref{SupTable1} we also included interactions between presidential party ID and the oil price, productivity, and armed conflict shock variables. None of these interactions were estimated to be statistically significant. 
 
@@ -657,8 +636,7 @@ We also examined if the partisan composition of the Federal Reserve Board of Gov
 
 <<CreateOrthog, message=FALSE, error=FALSE, warning=FALSE, echo=FALSE>>=
     # Create unempoyment error variable and graph
-    PartisanErrorUnemployURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/OrthogonalUnemploymentError.R"
-    devtools::source_url(PartisanErrorUnemployURL)
+    source('Analysis/Greenbook10.R')
 @
 
 In a further attempt to determine if the results, especially for presidential party ID, are being driven by unobserved time period specific effects that are common to all Federal Reserve Staff forecasts we estimated our analyses with a dependent variable that is orthogonal to inflation forecast errors. The orthogonal variable we examined was {\bf{standardized unemployment rate forecast errors}}.\footnote{Unemployment forecast errors are relatively weakly correlated with inflation forecast errors. The Pearson correlation coefficient for forecasts made two quarters beforehand is \Sexpr{round(Estat, digit = 2)} with a p-value of \Sexpr{round(Pstat, digit = 2)}.} The variable captures the errors Fed Staff make when forecasting the unemployment rate in the same way that the inflation forecast variable measures inflation forecast errors. Unemployment rate forecasts are also reported in the Greenbook. The actual unemployment rate was found using the Federal Reserve's FRED database, as before.\footnote{We focused on 2 quarter forecasts.}
@@ -819,12 +797,11 @@ plot(cpi.matched.party, type = "jitter", interactive = FALSE)
     \begin{center}
 
 <<CoefComparePlotsMatched, warning=FALSE, echo=FALSE, message=FALSE, results='hide', fig.height=4, out.width='0.95\\linewidth'>>=
-    # Load model objects created by MainAnalysis2.R
-    load("/git_repositories/GreenBook/Paper/ModelObjects.RData")
+    # Load model objects created earlier
+    load("Paper/ModelObjects.RData")
+    
     # Create plots
-     CoefPlotsURL <- "https://raw.github.com/christophergandrud/GreenBook/master/Analysis/BasicAnalysisCoefPlots2.R"
-    devtools::source_url(CoefPlotsURL)
-
+    source('Analysis/Greenbook11.R')
 @
     \end{center}
     \begin{singlespace}

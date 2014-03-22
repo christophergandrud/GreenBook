@@ -1,18 +1,15 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 12 March 2014
+# 22 March 2014
 ###############
 
 ## Load libraries
 library(MatchIt)
 library(Zelig)
 
-# library(stats)
-# library(digest)
-
 # To run as a stand alone file. First, run the following files from earlier in the paper:
-## devtools::source_url("http://bit.ly/NXdCpk") 
+## source('Analysis/Greenbook1.R') 
 
 # Subset for complete (nonmissing) values
 # matchit requires data sets to have no missing values
@@ -178,4 +175,4 @@ save(cpi.Mdf.party, cpi.Mdf.election, cpi.matched.election, cpi.matched.party, c
      NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
      EL1, EL2, EL3, EL4, EL4.1, EL5, EL6, EL7, EL8, EL9, 
      EL10, EL11, EL12, PL1, PL2, PL3, PL4, PL4.1,	PL5, PL6,
-     PL7, PL8, PL9, PL10, PL11, PL12, NB1, PB1, file = "ModelObjects.RData")
+     PL7, PL8, PL9, PL10, PL11, PL12, NB1, PB1, file = 'Paper/ModelObjects.RData')

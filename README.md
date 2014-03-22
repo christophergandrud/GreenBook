@@ -39,7 +39,7 @@ Finally, 'knit' the main paper file `main_GreenBook.Rnw` in the *Paper* folder.
 
 The **R** source code for the analyses, tables, and plots are in this repository's *Analysis* folder. 
 
-> Note: these source code files must be run in the sequence in which they appear in the paper. Start with the file called *ActualVsForecstGraph.R*. This will load the data set.
+> Note: these source code files must be run in the sequence in which they appear in the paper. Start with the file called *Greenbook1.R*. This will load the data set.
 
 The main data set we used in the paper is in the *Data* folder and is called *GB_FRED_cpi_2007.csv*.
 

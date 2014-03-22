@@ -6,11 +6,10 @@
 
 ## This code creates a confidence interval of for the difference of mean forecast error in Democratic and Republican presidencies.
 
-# library(devtools)
 library(plotrix)
 
 # To run as a stand alone file. First, run the following file from the paper:
-## source_url("http://bit.ly/NXdCpk") 
+## source('Analysis/Greenbook1.R') 
 
 # Subset errors by presidential party ID
 RepSubset <- subset(cpi.data$error.prop.deflator.q2,

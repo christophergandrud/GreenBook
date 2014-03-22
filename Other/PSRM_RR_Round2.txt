@@ -1,8 +1,6 @@
-Dear Vera
+Dear Vera,
 
 Thank you for the opportunity to revise our manuscript ''Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts''. We've made the changes suggested by the reviews and discuss these in more detail below. 
-
-For replication purposes, we currently store all of the files needed to recreate the paper's analyses at: [https://github.com/christophergandrud/GreenBook](https://github.com/christophergandrud/GreenBook). The replication instructions are in the README.md file. Please let us know if there are any modifications (hosting, organisation, etc.) to this set up that the Journal requires. 
 
 Best wishes,  
 Christopher and Cassie
@@ -11,7 +9,7 @@ Christopher and Cassie
 
 ## Reviewer 1
 
-We added the additional estimation models suggested by Reviewer 1 to the Supplementary Materials as well as incorportated the results in to the discussion. In particular we added variables for: [GET PAGE NUMBERS]
+We added the additional estimation models suggested by Reviewer 1 to the Supplementary Materials as well as incorporated the results into the discussion. In particular we added variables for:
 
 **Table 5**
 

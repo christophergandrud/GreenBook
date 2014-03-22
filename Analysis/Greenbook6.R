@@ -2,7 +2,7 @@
 # Graph of simulated errors across all quarter estimates for model NL7 (A7 in the manuscript table). 
 # Uses non-matched data.
 # Christopher Gandrud 
-# 26 March 2013
+# 22 March 2014
 ###############
 
 ## Load libraries
@@ -11,7 +11,7 @@ library(plyr)
 library(reshape2)
 
 # To run as a stand alone file. First, run the following files from the paper:
-## devtools::source_url("http://bit.ly/NXdCpk") 
+## source('Analysis/Greenbook1.R') 
 
 #### Run two matching models ####
 # One model is for estimates made 0 through 2 quarters before a given quarter. There is full data for these estimates.
@@ -135,7 +135,7 @@ ModelParty.evPer2 <- ddply(ModelParty.evPer2, .(variable), transform, Upper = va
 ModelParty.evPer2 <- subset(ModelParty.evPer2, Lower == FALSE & Upper == FALSE)
 
 ## Save estimates to be used in the in-text equations
-write.csv(ModelParty.evPer2, "cache/SimQrt2.csv")
+write.csv(ModelParty.evPer2, '/git_repositories/Greenbook/Paper/cache/SimQrt2.csv')
 
 #### Quarter 3 ####
 # Set fitted values, all variables other than pres_party set to their means
