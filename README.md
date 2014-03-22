@@ -39,7 +39,7 @@ Finally, 'knit' the main paper file `main_GreenBook.Rnw` in the *Paper* folder.
 
 The **R** source code for the analyses, tables, and plots are in this repository's *Analysis* folder. 
 
-1. these source code files must be run in the sequence in which they appear in the paper. Start with the file called *Greenbook1.R*. This will load the data set.
+1. The source code files must be run in the sequence in which they appear in the paper. Start with the file called *Greenbook1.R*. This will load the data set.
 
 2. Set the working directory to the *Greenbook* level. You will also need to manually change the file path in `write.csv(ModelParty.evPer2, '/git_repositories/Greenbook/Paper/cache/SimQrt2.csv')` in file *Analysis/Greenbook6.R*.
 
