@@ -1,6 +1,6 @@
-# Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations
+## Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations
 
-## Christopher Gandrud and Cassandra Grafström 
+**Christopher Gandrud and Cassandra Grafström**
 
 ---
 
