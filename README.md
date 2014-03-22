@@ -41,7 +41,7 @@ The **R** source code for the analyses, tables, and plots are in this repository
 
 > Note: these source code files must be run in the sequence in which they appear in the paper. Start with the file called *Greenbook1.R*. This will load the data set.
 
-Set the working directory to the *Greenbook* level. You will also need to manually changed `write.csv(ModelParty.evPer2, '/git_repositories/Greenbook/Paper/cache/SimQrt2.csv')` in file *Analysis/Greenbook6.R*.
+Set the working directory to the *Greenbook* level. You will also need to manually change the file path in `write.csv(ModelParty.evPer2, '/git_repositories/Greenbook/Paper/cache/SimQrt2.csv')` in file *Analysis/Greenbook6.R*.
 
 The main data set we used in the paper is in the *Data* folder and is called *GB_FRED_cpi_2007.csv*.
 
