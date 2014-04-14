@@ -1,14 +1,15 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
 # Christopher Gandrud 
-# 22 March 2014
+# 14 April 2014
 ###############
 
 ## Load libraries
 library(MatchIt)
 library(Zelig)
 
-# To run as a stand alone file. First, run the following files from earlier in the paper:
+# To run as a stand alone file. First, run the following files from earlier in 
+# the paper:
 ## source('Analysis/Greenbook1.R') 
 
 # Subset for complete (nonmissing) values
@@ -16,13 +17,14 @@ library(Zelig)
 vars <- c("Quarter", "ElectionPeriod4", "pres_party", "error.prop.deflator.q2", 
           "time_to_election", "recession", "senate_dem_rep", 
           "house_dem_rep", "DebtGDP", "DeficitGDP", "ExpenditureGDP", "UNRATE",
-          "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange", "DiscountRate",
-          "DiscountRate2qChange", "Chair"
+          "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange", 
+          "DiscountRate", "DiscountRate2qChange", "Chair"
           )  
 cpi.complete <- cpi.data[complete.cases(cpi.data[vars]),]
 cpi.complete <- cpi.complete[vars]
 
-# Remove quarters when president party ID would be unknown for 2 quarter forecasting (time_to_election = 15, 14)
+# Remove quarters when president party ID would be unknown for 2 quarter 
+# forecasting (time_to_election = 15, 14)
 
 cpi.complete <- subset(cpi.complete, !(time_to_election %in% c(14, 15)))
 
@@ -32,7 +34,11 @@ cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 #### Matching Model ####
 
 # Elections, No interactions
-cpi.matched.election <- matchit(ElectionPeriod4 ~ pres_party + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + UNRATE, data = cpi.complete, method = "genetic", pop.size = 161)
+cpi.matched.election <- matchit(ElectionPeriod4 ~ pres_party + senate_dem_rep +
+                                house_dem_rep + ExpenditureGDP + PotentialGDP +
+                                GlobalModel + DiscountRate2qChange + UNRATE, 
+                                data = cpi.complete, method = "genetic", 
+                                pop.size = 161)
 
 # Matched by Party, All Interactions
 # cpi.matched.party.all <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + UNRATE + GlobalModel + DiscountRate2qChange + pres_party*ElectionPeriod4 + pres_party*senate_dem_rep + pres_party*house_dem_rep + senate_dem_rep + house_dem_rep, data = cpi.complete, method = "genetic", pop.size = 161)
