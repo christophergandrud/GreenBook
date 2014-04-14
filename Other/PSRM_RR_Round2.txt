@@ -9,7 +9,15 @@ Christopher and Cassie
 
 ## Reviewer 1
 
-We added the additional estimation models suggested by Reviewer 1 to the Supplementary Materials as well as incorporated the results into the paper's discussion. In particular we added variables for:
+We added the additional estimation models suggested by Reviewer 1 to the Supplementary Materials. The requests were for:
+
+> "I would like to see more stringent econometric tests to discount the potential role of the BG. In particular, as additional robustness checks, it would be useful to control for the “partisan” composition of the [Board of Governors] for each FOMC meeting (or aggregated appropriately for each quarter). The authors could code a variable that counts the proportion of Board members who were nominated to their positions during a Democratic administration." 
+
+> "As additional robustness, it would be useful to see whether the exogenous shocks have differential effects on forecast errors across the party ID of the party (i.e., include shock x Party ID as additional controls)."
+
+> "Finally, rather than measuring the total number of wars, it would be more useful if the authors control for the number of foreign wars (both civil wars and between countries) the U.S. government is “intervening” in at any point in time. This variable can be constructed from the PRIO data."
+
+Taking these suggestions we added:
 
 ---
 
@@ -21,7 +29,7 @@ We added the additional estimation models suggested by Reviewer 1 to the Supplem
 
 **Table 7**
 
-- Percentage of the Federal Reserve Board Governors appointed by a Democratic president.
+- Percentage of the Federal Reserve Board Governors appointed by a Democratic president in a given quarter.
 
 ---
 
@@ -33,23 +41,31 @@ The absolute inflation level variables were estimated to have statistically sign
 
 We did estimate that the number of armed conflicts that the United States participated in is negatively associated with inflation forecasting errors. This is likely a 'War on Terror' correlation as the 2000s were both a time of many conflicts and inflation under-estimation. 
 
-The percentage of the Federal Reserve Board governors appointed by Democratic presidents variable produced a statistically insignificant estimate by itself.
+The percentage of the Federal Reserve Board Governors appointed by Democratic presidents variable produced a statistically insignificant estimate by itself.
 
 The interaction term for presidential partisan ID and Reserve Board partisan composition was significant at the 10% level and positive, though very small. It's unclear what we should infer from this, but the lack of any evidence for a Board partisan composition effect by itself, and only weak evidence for an interaction with presidential partisan ID suggests that the Staff errors are primarily influenced by the presidency, not the partisan composition of the Board, as Reviewer 1 is concerned about. 
 
+A quick note. The Reviewer mentions that the Board of Governors has rotating members from the branch presidents. This is not strictly true. It is the FOMC that has the rotating members. The Board of Governors is part of the FOMC, but separate from the branches and each member has voting priveleges at FOMC meetings. That being said we didn't include the rotating FOMC branch presidents because a) they have their own staff that also present them with forecasts and b) it turns out to be fairly difficult to find a comprehensive list of all of the branch presidents when they were rotated through the FOMC. Though fairly time consuming, it is certainly not impossible, however, and we would be happy to do it if necessary. 
+
 ## Reviewer 2
 
-1. The reviewer posits the possibility that it is the public who have a presidential partisan heuristic and not Fed Staff. The Fed Staff anticipate the public's heuristic in their forecasts. 
+> "Yet I have a hard time relinquishing the basic premise of rationality. I would feel much more comfortable with the conclusion and the paper would be stronger if the authors could do two things:
+> 
+> 1. It has not occurred to me on the first reading of the manuscript that the one explanation for the strong empirical results is that the Fed staff takes into account public’s inflation expectations and that these expectations are systematically higher for Democratic administrations (higher and systematically wrong). In this sense, the Fed is still rational, but the public is systematically wrong in its inflation expectations. This is a somewhat different explanation, but very consistent with what the authors write on p. 7. Question is – can this be eliminated as an explanation, or at least side-lined?"
+
+The Reviewer posits the possibility that it is the public who have a presidential partisan heuristic and not Fed Staff. The Fed Staff anticipate the public's heuristic in their forecasts. 
 
 We do cite previous literature that suggests that actors in the public do have presidential partisan heuristics when it comes to economic policy forecasting. There may certainly be some sort of dynamic like this going on.
 
-However, the empirical evidence we present in the paper suggests that at the least Fed Staff are making additional partisan errors. 
+However, the empirical evidence we present in the paper suggests that, at the least, Fed Staff are making additional partisan errors. 
 
 If Fed Staff perfectly incorporated the effect on inflation of the public's partisan heuristics into their forecasts and did not hold additional incorrect partisan heuristics themselves, then we would expect to see no presidential partisan errors. However, this is not the case.  
 
-2. The reviewer also continues to wonder how Fed Staff both want to make accurate forecasts and don't seem to have corrected their forecasts. In the paper we address this issue directly (see pages 9, 27-28).
+> "2. On solving issue 1 above: Psychological reasoning for Fed staff (p. 9) – I get it – but how does the staff now square this consistent under/over shooting of predictions for partisan governments with wanting to make the most accurate predictions possible (p. 5)?"
+
+The Reviewer also wonders how Fed Staff both want to make accurate forecasts and don't seem to have corrected their forecasts. In the paper we address this issue directly (see pages 9, 27-28).
  
-More importantly, in a sense, we hope that by doing this research and publicising our findings we will prompt Fed forecasters to look out for partisan effects in their future forecasts and correct for them (we also discuss this in the conclusion on pages 27-28).  
+More importantly, in a sense, we hope that by doing this research and publicising our findings we will prompt Fed forecasters to look out for partisan effects in their future forecasts and correct for them (we also discuss this in the conclusion on pages 27-28). To a large extent, this is the the intent of much of economic and political science research: find deviations from rational optimality so that they can be corrected for.  
 
 We would be happy to add a discussion of these two issues to the body of the paper if you feel that it is necessary.
 
