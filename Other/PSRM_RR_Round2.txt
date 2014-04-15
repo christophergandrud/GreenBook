@@ -1,6 +1,8 @@
-Dear Vera,
+Dear Vera Troeger,
 
-Thank you for the opportunity to revise our manuscript ''Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts''. We've made the changes suggested by the reviews and discuss these in more detail below. Please let us know if you require more information or have suggestions for other changes.
+Thank you for the opportunity to revise our manuscript ''Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts''. We've made the changes suggested by the reviews. These changes  are on pages 35-39 in the Supplemental Materials section and are discussed below in detail.
+
+Please let us know if you require more information or have suggestions for other changes.
 
 Best wishes,  
 Christopher and Cassie
@@ -37,7 +39,7 @@ Overall these additions did not substantively change the estimated presidential 
 
 ### Notes on the estimated individual effects of the added variables
 
-The absolute inflation level variables were estimated to have statistically significant negative interactions with presidential partisan ID. It is important to note that in general the magnitude of these interactions was quite small relative to the variables' scale. The finding makes empirical sense as the period of high absolute inflation with a Democratic president (Carter) was a time of low standardized forecast errors. However, we are reluctant to draw substantive conclusions beyond this from these results.
+The absolute inflation level variables were estimated to have statistically significant negative interactions with presidential partisan ID. It is important to note that in general the magnitude of these interactions was quite small relative to the variables' scale. The finding makes empirical sense as the period of high absolute inflation with a Democratic president (Carter) was a time of low standardised forecast errors. However, we are reluctant to draw substantive conclusions beyond this from these results.
 
 We did estimate that the number of armed conflicts that the United States participated in is negatively associated with inflation forecasting errors. This is likely a 'War on Terror' correlation as the 2000s were both a time of many conflicts and inflation under-estimation. 
 
@@ -45,7 +47,7 @@ The percentage of the Federal Reserve Board Governors appointed by Democratic pr
 
 The interaction term for presidential partisan ID and Reserve Board partisan composition was significant at the 10% level and positive, though very small. It's unclear what we should infer from this, but the lack of any evidence for a Board partisan composition effect by itself, and only weak evidence for an interaction with presidential partisan ID suggests that the Staff errors are primarily influenced by the presidency, not the partisan composition of the Board, as Reviewer 1 is concerned about. 
 
-A quick note. The Reviewer mentions that the Board of Governors has rotating members from the branch presidents. This is not strictly true. It is the FOMC that has the rotating members. The Board of Governors is part of the FOMC, but separate from the branches and each member has voting priveleges at FOMC meetings. That being said we didn't include the rotating FOMC branch presidents because a) they have their own staff that also present them with forecasts and b) it turns out to be fairly difficult to find a comprehensive list of all of the branch presidents when they were rotated through the FOMC. Though fairly time consuming, it is certainly not impossible, however, and we would be happy to do it if necessary. 
+A quick note. The Reviewer mentions that the Board of Governors has rotating members from the branch presidents. This is not strictly true. It is the FOMC that has the rotating members. The Board of Governors is part of the FOMC, but separate from the branches and each member has voting privileges at FOMC meetings. That being said we didn't include the rotating FOMC branch presidents because a) they have their own staff that also present them with forecasts and b) it turns out to be fairly difficult to find a comprehensive list of all of the branch presidents when they were rotated through the FOMC. Though fairly time consuming, it is certainly not impossible, however, and we would be happy to do it if necessary. 
 
 ## Reviewer 2
 
