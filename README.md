@@ -1,5 +1,4 @@
-## Inflated Expectations: How government partisanship shapes bureaucrats'
-inflation expectations
+## Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations
 
 **Christopher Gandrud and Cassandra Grafström**
 
@@ -17,14 +16,14 @@ To reproduce the analyses and plots in the paper first install the necessary
 R packages:
 
 ```{S}
-    install.packages("apsrtable", "knitr", "ggplot2", "gridExtra", "devtools",
-                    "MatchIt", "plyr", "repmis", "reshape", "reshape2",
-                    "stringr", "xtable", "Zelig")
+install.packages("apsrtable", "knitr", "ggplot2", "gridExtra", "devtools",
+                "MatchIt", "plyr", "repmis", "reshape", "reshape2",
+                "stringr", "xtable", "Zelig")
 ```
 
 Download this repository.
 
-Finally, 'knit' the main paper file `main_GreenBook.Rnw` in the *Paper* folder.
+Finally, 'knit' the main paper file **main_GreenBook.Rnw*** in the *Paper* folder.
 
 ### Reproduce the analyses, tables, and plots
 
