@@ -23,7 +23,7 @@ install.packages("apsrtable", "knitr", "ggplot2", "gridExtra", "devtools",
 
 Download this repository.
 
-Finally, 'knit' the main paper file **main_GreenBook.Rnw*** in the *Paper* folder.
+Finally, 'knit' the main paper file *main_GreenBook.Rnw* in the *Paper* folder.
 
 ### Reproduce the analyses, tables, and plots
 
