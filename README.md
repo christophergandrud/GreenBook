@@ -1,15 +1,36 @@
-## Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations
+# Inflated Expectations 
 
 **Christopher Gandrud and Cassandra Grafström**
 
-These files comprise the paper ''Inflated Expectations: How government
-partisanship shapes bureaucrats' inflation expectations''
+These files comprise the paper ''[Inflated Expectations: 
+How government
+partisanship shapes bureaucrats' inflation 
+expectations](http://ssrn.com/abstract=2125283)''.
 
-### Reproduce the paper
+## About
+
+Governments' party identifications can indicate the types of economic 
+policies they are likely to pursue. A common rule of thumb is that 
+left-party governments are expected to pursue policies for lower 
+unemployment, but which may cause inflation. Right-party governments 
+are expected to pursue lower inflation policies. How do these 
+expectations shape the inflation forecasts of monetary policy 
+bureaucrats? If there is a mismatch between the policies bureaucrats 
+*expect* governments to implement and those that they *actually* do, 
+forecasts will be systematically biased. Using US Federal Reserve 
+Staff’s forecasts we test for executive partisan biases. We find that 
+irrespective of actual policy and economic conditions forecasters 
+systematically overestimate future inflation during left-party presidencies 
+and underestimate future inflation during right-party ones. Our findings 
+suggest that partisan heuristics play an important part in monetary 
+policy bureaucrats' inflation expectations.
+
+
+## Reproduce the paper
 
 The paper can be entirely reproduced using the `knitr` package in **R**
-(we used `knitr` version 1.5 and **R** version 3.1.0). The `knitr` package
-is by [Yihui Xie](http://yihui.name/). You will also need to have a LaTeX
+(we used `knitr` version 1.5 and **R** version 3.1.0). You will also need 
+to have a LaTeX
 distribution installed.
 
 To reproduce the analyses and plots in the paper first install the necessary
