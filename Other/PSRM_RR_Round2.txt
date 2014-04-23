@@ -19,7 +19,7 @@ We added the additional estimation models suggested by Reviewer 1 to the Supplem
 
 > "Finally, rather than measuring the total number of wars, it would be more useful if the authors control for the number of foreign wars (both civil wars and between countries) the U.S. government is “intervening” in at any point in time. This variable can be constructed from the PRIO data."
 
-Taking these suggestions we added:
+Taking these valuable suggestions we added:
 
 ---
 
@@ -53,18 +53,20 @@ A quick note. The Reviewer mentions that the Board of Governors has rotating mem
 > 
 > 1. It has not occurred to me on the first reading of the manuscript that the one explanation for the strong empirical results is that the Fed staff takes into account public’s inflation expectations and that these expectations are systematically higher for Democratic administrations (higher and systematically wrong). In this sense, the Fed is still rational, but the public is systematically wrong in its inflation expectations. This is a somewhat different explanation, but very consistent with what the authors write on p. 7. Question is – can this be eliminated as an explanation, or at least side-lined?"
 
-The Reviewer posits the possibility that it is the public who have a presidential partisan heuristic and not the Fed Staff. The Fed Staff anticipate the public's heuristic in their forecasts. 
+The Reviewer posits the possibility that it is the public who have a presidential partisan heuristic and not the Fed Staff. Because beliefs about future inflation may, in fact, produce self-fulfilling prophecies, these partisan heuristics used by the public could drive inflation in one direction under Republican presidencies and another during Democratic ones. The Fed Staff then anticipate the public's heuristic in their forecasts. 
 
 We do cite previous literature that suggests that actors in the public do have presidential partisan heuristics when it comes to economic policy forecasting. There may certainly be some sort of dynamic like this going on.
 
-However, the empirical evidence we present in the paper suggests that, at the least, Fed Staff are making additional partisan errors. If Fed Staff perfectly incorporated the effect on inflation of the public's partisan heuristics into their forecasts and did not hold additional incorrect partisan heuristics themselves, then we would expect to see no presidential partisan errors. However, this is not the case as we document extensively in the text.  
+However, the empirical evidence we present in the paper suggests that, at the least, Fed Staff are making additional partisan errors. If Fed Staff perfectly incorporated the effect on inflation of the public's partisan heuristics into their forecasts and did not hold additional incorrect partisan heuristics themselves, then we would expect to see no presidential partisan errors. However, this is not the case as we document extensively in the text. As such, we have not added this discussion to the already lengthy manuscript but would happily do so if this addition would help clarify the argument for readers.
 
 > "2. On solving issue 1 above: Psychological reasoning for Fed staff (p. 9) – I get it – but how does the staff now square this consistent under/over shooting of predictions for partisan governments with wanting to make the most accurate predictions possible (p. 5)?"
 
-The Reviewer also wonders how Fed Staff both want to make accurate forecasts and don't seem to have corrected their forecasts. In the paper we address this issue directly (see pages 9, 27-28).
+The Reviewer also wonders how Fed Staff both want to make accurate forecasts and don't seem to have corrected their forecasts. In the paper we address this issue directly (see pages 9, 27-28): the inherent uncertainty surrounding predicting future inflation outcomes mean that Fed Staff may not have considered this particular factor in their errors. Without recognizing that a heuristic is producing costly errors, there is little reason for actors to search for new, costly information that would improve outcomes.
  
 More importantly, in a sense, we hope that by doing this research and publicising our findings we will prompt Fed forecasters to look out for partisan effects in their future forecasts and correct for them (we also discuss this in the conclusion on pages 27-28). To a large extent, this is the the intent of much of economic and political science research: find deviations from rational optimality so that they can be corrected for.  
 
 We would be happy to add a discussion of these two issues to the body of the paper if you feel that it is necessary.
 
-- We made the minor typo changes suggested by Reviewer 2.
+- We made the minor typo changes suggested by Reviewer 2 and appreciate his/her thorough reading.
+
+We believe we have addressed the concerns the reviewers raised and that the paper is much stronger for them.
