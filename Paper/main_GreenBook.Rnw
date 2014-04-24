@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 16 April 2014
+% 24 April 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -11,7 +11,6 @@
 \usepackage[authoryear]{natbib}
 \usepackage{setspace}
     \doublespacing
-%\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
