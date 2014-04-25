@@ -1,7 +1,7 @@
 ####################
-# Greenbook MatchIt Analyses Coef Plots Compare
+# Greenbook Main Coef Plots Compare
 # Christopher Gandrud
-# 19 October 2013
+# 25 April 2014
 ####################
 
 #### Figures for Results Catapilar Plot ####
@@ -72,14 +72,18 @@ estimates <- subset(estimates, var != c("(Intercept)"))
 estimates <- subset(estimates, var != c("sigma2"))
 
 ##### Create comparison plot ####
-cols <- c("#FFFF33", "#3182BD")
+cols <- c("#fc8d59", "#99d594")
 
-breaks <- c("pres_party", "ExpenditureGDP", "recession", "time_to_election", "PotentialGDP", "DiscountRate2qChange", "UNRATE", "GlobalModelBefore 1996")
+breaks <- c("pres_party", "ExpenditureGDP", "recession", "time_to_election", 
+            "PotentialGDP", "DiscountRate2qChange", "UNRATE", 
+            "GlobalModelBefore 1996")
 
-break.labels <- c("Dem. President", "Gov. Expenditure (% GDP)", "Recession", "Quarters Until Election", "Output Gap", "Discount Rate Change", "Unemployment Rate", "Global Model")
+break.labels <- c("Dem. President", "Gov. Expenditure (% GDP)", "Recession", 
+                  "Quarters Until Election", "Output Gap", 
+                  "Discount Rate Change", "Unemployment Rate", "Global Model")
 
 est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, ymax = upper, colour = method)) +
-  geom_linerange(size = 3, alpha = 0.6) +
+  geom_linerange(size = 3, alpha = 0.8) +
   scale_x_discrete(breaks = breaks, labels = break.labels) +
   #scale_y_continuous(breaks = c(-1, 0.0, 0.5), labels = c("-1", "0", "0.5")) +
   scale_color_manual(values = cols, name = "") +                            
@@ -89,5 +93,3 @@ est.plot <- ggplot(data = estimates, aes(x = reorder(var, lower), ymin = lower, 
   theme_bw(base_size = 11)
 
 print(est.plot)
-
-
