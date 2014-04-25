@@ -13,3 +13,5 @@ Paper/cache/*
 .swp
 .Rhistory
 *.RData
+
+GreenbookPSRM_R2.pdf
