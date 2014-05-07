@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 25 April 2014
+% 7 May 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -24,7 +24,7 @@
 \usepackage{url}
 \usepackage{tikz}
 \usepackage{todonotes}
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 
 % Set knitr global options
@@ -63,21 +63,21 @@ Monetary policy is an inherently forward looking enterprise. Beliefs about the e
 
 We provide strong evidence that Fed internal inflation forecasts--the forecasts on which monetary policy decisions are based \citep[130]{Adolph2013}--are heavily influenced by an inaccurate presidential partisan rule of thumb or `heuristic'. These forecasts consistently predict that inflation will be lower than it turns out to be under Republican presidencies by about 11 percent on average and that inflation will be higher than it turns out to be under Democratic administrations by about 13 percent. Even accounting for changes in monetary policy and a variety of other economic and political factors, Federal Reserve economists over-shoot inflation forecasts for Democrats and under-shoot for Republicans. We find that previous literature on how partisanship may affect monetary policy outcomes--primarily work done on partisan preferences \citep{Clark2012,Hakes1988,Sieg1997,Tootell1996} and rational monetary policy expectations \citep{Alesina1987,Alesina1991,Hibbs1994}--is not as useful as a partisan heuristic approach for explaining these predictive failures by Fed Staffers.
 
-In this paper we first briefly describe bureaucratic inflation forecasting at the US Federal Reserve, why it is important for monetary policy-making, and previous research on sources of bias in it. Since academic scholarship on partisanship and Fed forecasting has largely been non-existent we introduce the presidential partisan heuristic approach to explain prediction errors. We also derive major alternative hypotheses about how partisan control of the presidency might shape inflation forecasts by Federal Reserve Staff from the literature on partisanship and monetary policy-making. We then discuss how to measure inflation forecast errors. Using Fed Staff's ``Greenbook'' forecasts we demonstrate that there does appear to be a presidential partisan bias. To understand why these errors exist we test the theories of partisan bias with a series of regression models with data on inflation forecast errors from the 1970s through 2007.\footnote{This is the most complete data set currently available to the public.} Our findings suggest that even when controlling for a number of important economic and political factors, Greenbook forecasts show a distinct presidential partisan bias across presidential terms, not just in the run up to elections, as competing theories would suggest. Rather than being caused by Staff and/or monetary policy-makers' electoral preferences or partisan monetary policy expectations--we find strong evidence supporting our hypothesis that the bias is caused by an incorrect partisan heuristic Fed Staff hold about presidential administrations' likely effects on inflation. Our finding highlights the interaction between political and psychological aspects of how bureaucrats deal with uncertainty that have previously been ignored by researchers examining monetary policy bureaucracies. In the conclusion we discuss the implications of these findings for monetary policy, election outcomes, and future research directions. 
+In this paper we first briefly describe bureaucratic inflation forecasting at the US Federal Reserve, why it is important for monetary policy-making, and previous research on sources of bias in it. Since academic scholarship on partisanship and Fed forecasting has largely been non-existent we introduce the presidential partisan heuristic approach to explain prediction errors. We also derive major alternative hypotheses about how partisan control of the presidency might shape inflation forecasts by Federal Reserve Staff from the literature on partisanship and monetary policy-making. We then discuss how to measure inflation forecast errors. Using Fed Staff's ``Greenbook'' forecasts we demonstrate that there does appear to be a presidential partisan bias. To understand why these errors exist we test the theories of partisan bias with a series of regression models with data on inflation forecast errors from the 1970s through 2007.\footnote{This is the most complete data set currently available to the public.} Our findings suggest that even when controlling for a number of important economic and political factors, Greenbook forecasts show a distinct presidential partisan bias across presidential terms, not just in the run up to elections, as competing theories would suggest. Rather than being caused by Staff and/or monetary policy-makers' electoral preferences or partisan monetary policy expectations--we find strong evidence supporting our hypothesis that the bias is caused by an incorrect partisan heuristic Fed Staff hold about presidential administrations' likely effects on inflation. Our finding highlights the interaction between political and psychological aspects of how bureaucrats deal with uncertainty that have previously been ignored by researchers examining monetary policy bureaucracies. In the conclusion we discuss the implications of these findings for monetary policy, election outcomes, and future research directions.
 
 %%%%%%%%%%%%%% Section 1: Forecasting Inflation at the Fed %%%%%%%%%%%%%%%%%%%%%
 
 \section{Bureaucratic Inflation Forecasting in the United States}
 
-Inflation forecasting is crucial for enabling monetary policy-makers to maintain price stability. The primary instrument of monetary policy--interest rates--``only exert their full effect on \ldots inflation with some considerable delay'' \citep[59]{Goodhart2001}. The US Federal Reserve's Greenbook forecasts are an important component of how monetary policy-makers' predict future inflation in the United States. Prior to every Federal Open Markets Committee (FOMC) meeting Federal Reserve Staff\footnote{Specifically, economists at the Washington, D.C. Federal Reserve Board generate the estimates contained in the Greenbook. Regional banks also create their own sets of estimates for both their region and the country as a whole. Unfortunately, these estimates are not universally available from the regions.} create a document called the ``Current Economic and Financial Conditions''--affectionately called the Greenbook due to the color of its cover--that contains information on recent behavior and forecasts of various macroeconomic aggregates assuming no monetary policy change.\footnote{Greenbook data can be found at {\url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}} (accessed March 2013). Greenbook forecasts are currently available to the public for each quarter from the fourth quarter of 1965 through the end of 2007. There is a five year lagged release schedule. Also, some forecasts are not available for the entire period.} Federal Reserve Staff make forecasts of various elements of the US and global economies so that the FOMC can make policies appropriate to fulfill the Fed's dual mandate of maintaining maximum employment and price stability. 
+Inflation forecasting is crucial for enabling monetary policy-makers to maintain price stability. The primary instrument of monetary policy--interest rates--``only exert their full effect on \ldots inflation with some considerable delay'' \citep[59]{Goodhart2001}. The US Federal Reserve's Greenbook forecasts are an important component of how monetary policy-makers' predict future inflation in the United States. Prior to every Federal Open Markets Committee (FOMC) meeting Federal Reserve Staff\footnote{Specifically, economists at the Washington, D.C. Federal Reserve Board generate the estimates contained in the Greenbook. Regional banks also create their own sets of estimates for both their region and the country as a whole. Unfortunately, these estimates are not universally available from the regions.} create a document called the ``Current Economic and Financial Conditions''--affectionately called the Greenbook due to the color of its cover--that contains information on recent behavior and forecasts of various macroeconomic aggregates assuming no monetary policy change.\footnote{Greenbook data can be found at {\url{http://www.phil.frb.org/research-and-data/real-time-center/greenbook-data/philadelphia-data-set.cfm}} (accessed March 2013). Greenbook forecasts are currently available to the public for each quarter from the fourth quarter of 1965 through the end of 2007. There is a five year lagged release schedule. Also, some forecasts are not available for the entire period.} Federal Reserve Staff make forecasts of various elements of the US and global economies so that the FOMC can make policies appropriate to fulfill the Fed's dual mandate of maintaining maximum employment and price stability.
 
 As \cite{Svensson2005} notes, the accuracy of forecasts is essential to the effectiveness of monetary policy. The FOMC directly uses these forecasts to determine the appropriate monetary policy to pursue and they, ``have a large effect on the interest rate chosen by the Fed'' \citep[130]{Adolph2013}. Greenbook forecasts are given to FOMC members one week before each meeting. Staff also present the Greenbook forecasts during FOMC meetings. Expectations, directly influenced by Greenbook forecasts, play a very important part in FOMC decision-making. From FOMC minutes we know that members spend a considerable amount of time discussing prospective economic conditions. In fact, much of the FOMC meeting time is used to discuss what economic conditions are likely to be rather than the relative desirability of various outcomes \citep[230]{RomerRomer2008}. Greenbook forecasts directly frame these discussions. What members believe will happen in the future directly influences their policy choices. Higher inflationary expectations increase the likelihood of a member supporting raising interest rates in order to slow inflation and an overheating economy; low inflationary expectations increase the likelihood of a preference for lowering interest rates to bolster growth and employment, all else equal. Therefore, Greenbook inflation forecast accuracy is essential for FOMC members choosing optimal monetary policies.
 
 The study of Fed inflation forecasts and their accuracy has been almost exclusively contained within economics, with the main concern being the performance of the Fed's forecasts relative to market forecasts \cite[e.g.][]{Romer2000,Faust2007, Gamber2009}. While some studies in the economics literature have examined the biases of particular time periods \cite[e.g.][]{Capistran2006} or Fed presidents \cite[e.g.][]{Havrilesky1995}, in our search none considered how government partisanship affects expectations about future inflation at the Federal Reserve.
- 
-It is important to note that finalized Greenbook forecasts are ``consensus'' forecasts combining both econometric models {\emph{and}} the professional opinions of forecasters about likely changes in the economy's trajectory missed in these models \citep{Karamouzis1989,Reifschneider1997}. Preferences and/or beliefs about government partisanship, rather than just econometric models based on explicit assumptions, could therefore directly shape Greenbook forecasts.\footnote{Unfortunately, only consensus forecasts are released publicly. It is unfortunately impossible to separately observe the model and judgmental components of the consensus forecasts.} 
 
-The idea that politicians of different partisan stripes might behave differently in office and that their behavior might have different effects on future economic output and inflation is largely uncontroversial for political scientists.\footnote{See \cite{Franzese2002,Bartels2008} for evidence on the similarities and differences of Democrats and Republicans in office.} Scholars have long argued that left- and right-wing politicians pursue policies that have very different effects on inflation and unemployment. The working-class electoral base of left-wing parties leads them to pursue policies that increase employment, while right-wing parties' dependence on business-owners for political support leads them to pursue policies that reduce inflation \citep[e.g.][]{MacRae1977,Nordhaus1975,Schultz1995,Tufte1980}. However, political scientists have largely not explored whether or how these differences affect Federal Reserve inflation forecasts. The closest attempt made to explore partisan biases in Fed forecasts that we know of was done by \cite{Frendreis2000}. Using simple frequency tables and yearly data, they examined the accuracy of forecasts by the Congressional Budget Office (CBO), presidential administrations', and Federal Reserve Staff. Though they listed the accuracy of Fed inflation forecasts as measured by absolute mean error for the whole period 1979-1997,\footnote{They found that absolute mean errors were similar to the CBO's and less than administrations'.} they did not examine partisan biases or any other cause of inaccuracies in Fed forecasts. Their study of partisan biases was entirely confined to a comparison of CBO and administrations' forecasts. 
+It is important to note that finalized Greenbook forecasts are ``consensus'' forecasts combining both econometric models {\emph{and}} the professional opinions of forecasters about likely changes in the economy's trajectory missed in these models \citep{Karamouzis1989,Reifschneider1997}. Preferences and/or beliefs about government partisanship, rather than just econometric models based on explicit assumptions, could therefore directly shape Greenbook forecasts.\footnote{Unfortunately, only consensus forecasts are released publicly. It is unfortunately impossible to separately observe the model and judgmental components of the consensus forecasts.}
+
+The idea that politicians of different partisan stripes might behave differently in office and that their behavior might have different effects on future economic output and inflation is largely uncontroversial for political scientists.\footnote{See \cite{Franzese2002,Bartels2008} for evidence on the similarities and differences of Democrats and Republicans in office.} Scholars have long argued that left- and right-wing politicians pursue policies that have very different effects on inflation and unemployment. The working-class electoral base of left-wing parties leads them to pursue policies that increase employment, while right-wing parties' dependence on business-owners for political support leads them to pursue policies that reduce inflation \citep[e.g.][]{MacRae1977,Nordhaus1975,Schultz1995,Tufte1980}. However, political scientists have largely not explored whether or how these differences affect Federal Reserve inflation forecasts. The closest attempt made to explore partisan biases in Fed forecasts that we know of was done by \cite{Frendreis2000}. Using simple frequency tables and yearly data, they examined the accuracy of forecasts by the Congressional Budget Office (CBO), presidential administrations', and Federal Reserve Staff. Though they listed the accuracy of Fed inflation forecasts as measured by absolute mean error for the whole period 1979-1997,\footnote{They found that absolute mean errors were similar to the CBO's and less than administrations'.} they did not examine partisan biases or any other cause of inaccuracies in Fed forecasts. Their study of partisan biases was entirely confined to a comparison of CBO and administrations' forecasts.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Section 2: Possible Explanations of Fed Inflation Forecast (In)accuracy %%%%%%%%%
 \section{Possible Explanations of Fed Inflation Forecast Inaccuracy}
@@ -86,13 +86,13 @@ We begin the first significant investigation of possible partisan biases in Fed 
 
 \subsection{Presidential Partisan Heuristics}
 
-Previous research has shown that (a) central bankers use heuristics and similar judgmental `rules of thumb'--such as Okun's law and the Taylor Rule--to help them understand complex and uncertain economic conditions and (b) that people's economic expectations are shaped by the government's partisan orientation. To understand how presidential partisanship may impact inflation forecasting errors we propose combining these two insights into one coherent approach that we call {\bf{presidential partisan heuristics}}. Let's look at each part of this theory in turn.  
+Previous research has shown that (a) central bankers use heuristics and similar judgmental `rules of thumb'--such as Okun's law and the Taylor Rule--to help them understand complex and uncertain economic conditions and (b) that people's economic expectations are shaped by the government's partisan orientation. To understand how presidential partisanship may impact inflation forecasting errors we propose combining these two insights into one coherent approach that we call {\bf{presidential partisan heuristics}}. Let's look at each part of this theory in turn.
 
 \paragraph{Heuristics \& inflation expectations}
 
-We begin with the assumption that Fed Staff have an interest and/or incentive (e.g. because of professional socialization, performance reviews, and regular academic analyses that possibly could provoke FOMC or even Congressional scrutiny) to make the most accurate forecasts possible. This is a reasonable assumption given the numerous studies that have found Fed Staff forecasts to be more accurate than private sector and other government agency forecasts \cite[see][]{Frendreis2000,Romer2000,Gamber2009}.  
+We begin with the assumption that Fed Staff have an interest and/or incentive (e.g. because of professional socialization, performance reviews, and regular academic analyses that possibly could provoke FOMC or even Congressional scrutiny) to make the most accurate forecasts possible. This is a reasonable assumption given the numerous studies that have found Fed Staff forecasts to be more accurate than private sector and other government agency forecasts \cite[see][]{Frendreis2000,Romer2000,Gamber2009}.
 
-However, even if we assume that Fed Staff want to make very accurate predictions there is still considerable uncertainty about future inflation, the effects of monetary policy on inflation due to the complexity of economic relationships that produce inflation, and the difficulty of adequately observing these relationships \cite[see][22-24]{Schonhardt2013}. In fact, \cite{Gamber2009} find that though the overall level of inflation in the United States has decreased since the early 1980s, inflation has actually become more difficult to forecast. They argue that this is because the processes underlying inflation became more unpredictable during the period known as the `Great Moderation' from about the mid-1980s until 2008. Thus, even if Fed Staff want to accurately predict inflation, it is difficult for them to do so. This is precisely the type of situation where we would expect actors to supplement their forecasting models with heuristic judgments in an attempt to create better expectations. 
+However, even if we assume that Fed Staff want to make very accurate predictions there is still considerable uncertainty about future inflation, the effects of monetary policy on inflation due to the complexity of economic relationships that produce inflation, and the difficulty of adequately observing these relationships \cite[see][22-24]{Schonhardt2013}. In fact, \cite{Gamber2009} find that though the overall level of inflation in the United States has decreased since the early 1980s, inflation has actually become more difficult to forecast. They argue that this is because the processes underlying inflation became more unpredictable during the period known as the `Great Moderation' from about the mid-1980s until 2008. Thus, even if Fed Staff want to accurately predict inflation, it is difficult for them to do so. This is precisely the type of situation where we would expect actors to supplement their forecasting models with heuristic judgments in an attempt to create better expectations.
 
 Heuristics are intuitions that reduce the uncertainty associated with making predictions. Considerable psychological and economic research has shown across a wide range of settings, including among expert forecasters, that people reduce the complexity of predicting uncertain values by using simple heuristics \citep[see][]{kahneman1973,tverskykahneman1974,Tversky1983,Kahneman2002,kahneman2003}. For example, \cite{Gray2013} notes that there is uncertainty about whether or not an emerging market sovereign will service their debt. To overcome this uncertainty, she finds that foreign investors use international organization membership as a heuristic for whether or not a country is likely to pay them back. Countries that join organizations with reputable members are viewed as less risky and vice versa.
 
@@ -108,13 +108,13 @@ It is important to  note that these pieces of research have found evidence that 
 
 \paragraph{Presidential partisan heuristics \& inflation forecasting errors}
 
-Drawing on the findings that monetary policy-makers use rules of thumb and that presidents from different parties are widely believed to have different impacts on inflation we argue that Fed Staff forecasters are likely to incorporate heuristics about the expected effect of public policies on inflation based on the president's party identification. If these expectations do not accurately correspond to actual differences, then we will observe systematic forecasting errors across presidential terms.  
+Drawing on the findings that monetary policy-makers use rules of thumb and that presidents from different parties are widely believed to have different impacts on inflation we argue that Fed Staff forecasters are likely to incorporate heuristics about the expected effect of public policies on inflation based on the president's party identification. If these expectations do not accurately correspond to actual differences, then we will observe systematic forecasting errors across presidential terms.
 
-Why focus on \emph{presidents'} party identifications? Incorporating information about expected non-monetary policy actions is particularly difficult in the American context. There are many layers of government--national, state, city--making policies that can impact inflation. Even within the national government there are multiple branches often controlled by different parties that can influence policies. Given this complexity forecasters may intuitively use a heuristic based on the partisan identification of, arguably, the single most influential actor in this system--the president--as a way to simplify the complex relationships between politics and inflation. The research discussed in the previous section substantiates this focus by finding that members of the public's expectations are affected by the president's party identification. 
+Why focus on \emph{presidents'} party identifications? Incorporating information about expected non-monetary policy actions is particularly difficult in the American context. There are many layers of government--national, state, city--making policies that can impact inflation. Even within the national government there are multiple branches often controlled by different parties that can influence policies. Given this complexity forecasters may intuitively use a heuristic based on the partisan identification of, arguably, the single most influential actor in this system--the president--as a way to simplify the complex relationships between politics and inflation. The research discussed in the previous section substantiates this focus by finding that members of the public's expectations are affected by the president's party identification.
 
-Presidential partisanship could be used as a ``prototype heuristic'' to help forecasters predict inflation in light of uncertainty. Prototype heuristics are a general class of heuristic where people substitute the mean or exemplar attribute--prototype--of a category for what they are trying to determine. Prototypes have been found to impact judgments on problems as diverse as the pricing of goods, the effectiveness of painful medical procedures, and the prediction of floods by professional forecasters \cite[]{kahneman2003}. Presidents' partisan identifications are easily observable and available on an intuitive level--i.e. they don't require conscious thought to remember. The probable impact of expected public policies on inflation is conversely uncertain. Fed Staff could use prototypical information about presidential party ID, which is intuitive and readily available, as a substitute for more complete, but more difficult to obtain information about what public policy is likely to be and how it will impact inflation. 
+Presidential partisanship could be used as a ``prototype heuristic'' to help forecasters predict inflation in light of uncertainty. Prototype heuristics are a general class of heuristic where people substitute the mean or exemplar attribute--prototype--of a category for what they are trying to determine. Prototypes have been found to impact judgments on problems as diverse as the pricing of goods, the effectiveness of painful medical procedures, and the prediction of floods by professional forecasters \cite[]{kahneman2003}. Presidents' partisan identifications are easily observable and available on an intuitive level--i.e. they don't require conscious thought to remember. The probable impact of expected public policies on inflation is conversely uncertain. Fed Staff could use prototypical information about presidential party ID, which is intuitive and readily available, as a substitute for more complete, but more difficult to obtain information about what public policy is likely to be and how it will impact inflation.
 
-As discussed above, the prototypical Democratic president is believed to be less concerned with price stability than the prototypical Republican president. The prototypical Republican president therefore pursues policies that dampen inflation and vice versa for the prototypical Democrat. Forecasters using a presidential partisan prototype heuristic would predict inflation to be higher under a Democratic president and lower under a Republican, all else equal. 
+As discussed above, the prototypical Democratic president is believed to be less concerned with price stability than the prototypical Republican president. The prototypical Republican president therefore pursues policies that dampen inflation and vice versa for the prototypical Democrat. Forecasters using a presidential partisan prototype heuristic would predict inflation to be higher under a Democratic president and lower under a Republican, all else equal.
 
 Though heuristics can be useful, ``sometimes they lead to severe and systematic errors'' \citep[][1124]{tverskykahneman1974}. In our theory, economists at the Fed have an intuition that Democrats and Republicans behave differently in government and so formulate inflation expectations with this in mind. If this intuition does not accurately correspond to how presidents act, or how their policies impact inflation, forecasts will be systematically biased: overestimates for Democratic presidents, underestimates for Republicans. \cite{Bartels2008} finds evidence that Democratic and Republican presidents do not, in fact, have significantly different spending policies, so any expectation that they would pursue policies that would differentially affect inflation in the medium-run would likely be inaccurate.\footnote{\cite{Bartels2008} does not discuss other policies that could affect inflation in the long run, such as changes to labor and financial market regulation. These policies too would be expected to differ by party, however their lags are likely to be quite long and out of the forecasted time frames used in this paper. More specifically, \cite{Franzese2002} finds only moderate evidence for partisan monetary policy differences confined primarily to the period 1973-1982.} Biases about partisan effects on inflation should therefore be constant {\emph{throughout a president's term}}. As we will see in the next section, this prediction contrasts with the alternative arguments--partisan preference and monetary expectation theories. Both predict an intensification of biased forecasts as elections approach. Figure \ref{ExpectGraphs} shows the anticipated empirical patterns of inflation forecast errors over presidential terms by partisanship in the three theories we set out.
 
@@ -213,17 +213,17 @@ It is important to note that in contrast to typical rational partisan expectatio
 
 \subsection{Alternative partisan explanations}
 
-The usefulness of a theory is partially demonstrated by how well it explains outcomes relative to its major competitors. Though no previous studies have examined partisan biases in inflation forecasts, competing theories can be derived from studies that have looked for evidence of partisan preferences manifesting themselves in the FOMC's monetary policy outcomes. Two key strains in this literature consider partisan effects as either resulting from a preference for one party over another by members of the FOMC (not from inaccurate underlying assumptions about the behavior of partisans) or an expectation that, once in office, the parties will engage in systematically different policies that will influence inflation, leading the FOMC to support more preferred policies and attempt to inhibit less preferred ones. 
+The usefulness of a theory is partially demonstrated by how well it explains outcomes relative to its major competitors. Though no previous studies have examined partisan biases in inflation forecasts, competing theories can be derived from studies that have looked for evidence of partisan preferences manifesting themselves in the FOMC's monetary policy outcomes. Two key strains in this literature consider partisan effects as either resulting from a preference for one party over another by members of the FOMC (not from inaccurate underlying assumptions about the behavior of partisans) or an expectation that, once in office, the parties will engage in systematically different policies that will influence inflation, leading the FOMC to support more preferred policies and attempt to inhibit less preferred ones.
 
 The preference arguments about monetary policy-making assume that a conservative central banker\footnote{That central bank economists would be more conservative than the average citizen is both a fundamental assumption of the central bank independence literature \citep[e.g.][]{Goodman1991} and backed by empirical evidence \citep[e.g.,][]{Scott1975,Stigler1959}.} will prefer the election of politicians who hold more similar inflationary preferences (i.e., those with a stronger preference for low inflation) and enact policies to bolster their preferred candidate's prospects of being elected. In the US, this would mean that the FOMC would implement policies that supported the electoral prospects of Republican incumbents and harm the electoral prospects of Democratic incumbents \citep{Clark2012,Hakes1988,Sieg1997,Tootell1996}.
 
 Building on this approach, a {\bf{partisan preference theory}} of inflation forecast errors assumes that Fed Staff have a preference that more inflation averse politicians to control the executive and so produce inflation forecasts that would justify the implementation of easy monetary policy under Republican administrations and tight money under Democratic administrations, particularly as presidential elections approach. The FOMC, choosing policy based on these forecasts, would then implement monetary policies to optimize its utility function over low inflation and high employment, which would not need to depend upon presidential partisanship at the level of the FOMC.\footnote{It could be that the FOMC either is actually influencing Greenbook forecasts to justify interest rate changes that aid their preferred candidate before elections or that the FOMC and Fed Staff have identical partisan preferences. These would all be observationally equivalent in the absence of detailed case study work. However, as we discuss below, we find no evidence that partisan errors actually change in the run up to elections. As such we do not feel that further case study work on this issue would be useful at this point.} However, because Fed Staffers prefer low inflation to high, they would not necessarily want to produce too loose/tight monetary policy over an entire four year term. Instead, they would want to encourage an economic boost (contraction) near the end of a Republican (Democratic) presidency. This implies that realized average inflation would be higher than forecasted during Republican presidencies and lower than forecasted for Democratic presidencies. However, this relationship would be particularly pronounced in the {\emph{quarters running-up to elections}} as Fed Staff attempt to help their favored political party \citep{Beck1987,Grier1987}. Further, accounting for actual changes in monetary policy ought to increase the magnitude of partisan effects. This is because predictions of inflation during Republican presidencies, for example, will be lower than what the Staff actually expects. If looser monetary policy is implemented during electoral periods in response to these low inflation forecasts than would have been chosen under the Staff's true inflationary expectations, inflation will actually be higher than the Staff's true beliefs about inflation under no change in monetary policy.
 
-An alternative set of existing theories--the rational partisan expectations literature on monetary policy-making--assumes that central bankers do not have an innate preference for one party over another, but instead accurately expect Democrats and Republicans to behave differently in office \citep{Alesina1991,Hibbs1994}. It is these behavioral expectations that would lead to different monetary policies under Democratic and Republican presidencies, with the former expected to engage in more expansionary and inflationary policies than the latter. In order to stave off higher inflation under a Democrat, the Fed would tighten monetary policy; because Republicans are expected to prefer lower inflation, they will pursue policies in support of that goal and so the FOMC can accommodate Republican presidents' policies without fear of stoking inflation. This argument is again based on the assumed preferences of partisans, but does not require the FOMC to be politically biased as the former does. 
+An alternative set of existing theories--the rational partisan expectations literature on monetary policy-making--assumes that central bankers do not have an innate preference for one party over another, but instead accurately expect Democrats and Republicans to behave differently in office \citep{Alesina1991,Hibbs1994}. It is these behavioral expectations that would lead to different monetary policies under Democratic and Republican presidencies, with the former expected to engage in more expansionary and inflationary policies than the latter. In order to stave off higher inflation under a Democrat, the Fed would tighten monetary policy; because Republicans are expected to prefer lower inflation, they will pursue policies in support of that goal and so the FOMC can accommodate Republican presidents' policies without fear of stoking inflation. This argument is again based on the assumed preferences of partisans, but does not require the FOMC to be politically biased as the former does.
 
 Building on the rational partisan expectations literature, what we call the {\bf{monetary expectations theory}} is in some ways the reverse of partisan preferences theory described above: it is based on an assumption of partisan bias in the FOMC, but {\emph{not}} the Staff. The Staff are assumed to have only a price stability preference. Federal Reserve economists believe members of the FOMC will engage in partisan monetary policy by lowering interest rates under right-leaning administrations in the run up to elections, and increasing them under left-leaning presidents, as \cite{Clark2012} found. The monetary expectations theory assumes that the FOMC is doing this to manipulate election outcomes. In this formulation, the Fed Staff has no preference for one party over another, but knows that the FOMC does, and so formulates estimates aimed at countering the FOMC's policies. If Fed economists believe that the FOMC will choose systematically higher-than-called-for interest rates during Democratic presidencies and vice versa for Republicans, then--assuming they are interested in the implementation of optimal monetary policies--they would produce forecasts that are higher than expected during Republican administrations and lower for Democrats in order to produce more optimal policies; the {\emph{opposite of what is expected in the partisan preference theory}}. If the FOMC fails to note the compensation made by the Fed Staff, then we would expect that after accounting for implemented policies inflation forecasts would be higher than or equal to realized inflation during Republican terms and lower than or equal to forecasts under Democratic administrations.\footnote{This is illustrated in the center panel of Figure \ref{ExpectGraphs}.} If, however, the FOMC anticipated these compensatory biases in Staff forecasts, then the FOMC would discount the Greenbook estimates and continue to implement inflationary policies during Republican administrations and contractionary policies during Democratic ones. If the Staff likewise know that they are not being listened to they may randomize their errors, producing an uninformative signal \citep{Crawford1982}. This would result in approximately similar inflation forecast errors for both Republicans and Democrats. However, we largely did not observe this (see below). If the Fed Staff believes that the FOMC will engage in partisan pumping only when presidential elections are approaching, then we would expect no partisan differences in forecasts at the beginning of a presidency but increasing divergence as the term wanes.
 
-The monetary expectations theory models Fed Staff forecasts as partially a function of Staff interactions with the FOMC. What if Greenbook forecasts are even more directly influenced by FOMC members in that members' judgments are directly incorporated into the forecasts? This would have an important substantive implication. All of the partisan theories we have discussed have important policy implications to the extent that they effect FOMC inflation expectations and therefore their interest rate choices. What if this is backward? Why couldn't we assume that it is the FOMC members' partisan biases or preferences that are influencing staff forecasts? 
+The monetary expectations theory models Fed Staff forecasts as partially a function of Staff interactions with the FOMC. What if Greenbook forecasts are even more directly influenced by FOMC members in that members' judgments are directly incorporated into the forecasts? This would have an important substantive implication. All of the partisan theories we have discussed have important policy implications to the extent that they effect FOMC inflation expectations and therefore their interest rate choices. What if this is backward? Why couldn't we assume that it is the FOMC members' partisan biases or preferences that are influencing staff forecasts?
 
 It is very difficult to empirically determine if and to what extent informal discussions between Fed Staff and FOMC members influence Greenbook forecasts, because these discussions are not observable. However, the formal forecasting process as well as comparisons between Staff and FOMC members' forecasts suggests that the bulk of the influence runs from the Staff to the members, rather than the opposite direction.
 
@@ -231,18 +231,18 @@ Greenbook forecasts are presented to FOMC members before FOMC meetings, where ex
 
 \subsection{Forecasting model accuracy}
 
-Finally, before empirically digging into partisan explanations of forecast errors, which would largely be the result of Federal Reserve Staff judgment, it is worth examining the possibility that forecast inaccuracy is the result of \textbf{systematic errors in the Staff's predictive econometric models}. Federal Reserve Staff have primarily used two sets of econometric models during the period for which Greenbook data is available.\footnote{This discussion draws heavily on Brayton et al.'s \citeyear{Brayton1997} detailed description of the changes to Federal Reserve forecasting models that took place in 1996.} 
+Finally, before empirically digging into partisan explanations of forecast errors, which would largely be the result of Federal Reserve Staff judgment, it is worth examining the possibility that forecast inaccuracy is the result of \textbf{systematic errors in the Staff's predictive econometric models}. Federal Reserve Staff have primarily used two sets of econometric models during the period for which Greenbook data is available.\footnote{This discussion draws heavily on Brayton et al.'s \citeyear{Brayton1997} detailed description of the changes to Federal Reserve forecasting models that took place in 1996.}
 
 The first simultaneous equation models of the US and world economies were developed and adopted by the Federal Reserve between 1966 and 1975. These models were based on adaptive expectations and largely extrapolated future behavior of the economy from its recent past behavior. New models of the American and world economies' near-term trajectories were introduced in the 1990s, fully replacing the older models in 1996. The Federal Reserve Board US model (FRB/US) and its counterpart for the global economy (FRB/Global) explicitly consider the role of economic expectations in economic behavior. The foundational assumption of adaptive expectations in the old models was replaced with rational or model-consistent expectations. In these models prices are sticky and aggregate demand determines short-run output. Furthermore, monetary policy's effects on the economy are extensively modeled. For a more detailed history, please see the discussion in the Supplementary Materials.
 
 Presumably, the move to rational expectations would improve forecast accuracy relative to the earlier period. The goal of incorporating forward looking actors into the models was to account for an important source of endogeneity in earlier models that could lead to overestimates of important economic indicators under some circumstances and underestimates of those same indicators under others. None of these over or underestimates, however, ought to have been linked to the party of the president. We would, however, expect that the \emph{magnitude} of forecast errors shrank after 1996.\footnote{Unfortunately, we cannot more directly observe model errors. Only the consensus forecasts, i.e. model forecasts combined with judgmental adjustments, are made publicly available.}
- 
+
 
 
 %%%%%%%%%%%%%%%%%% Section 3: Forecast Accuracy %%%%%%%%%%%%%%%%%%
 \section{Federal Reserve Staff's Forecast Accuracy}\label{ForecastAcc}
 
-How accurate are Fed Staff forecasts? We focus on Greenbook forecasts of the GNP/GDP price index. We choose this indicator of Federal Reserve forecast accuracy because central bankers are believed to be primarily concerned with inflation \citep[e.g.][]{Cukierman1992,Mukherjee2008,Tillmann2008}. It is also the dominant measure of forecast errors used in the economics literature \citep[c.f.][]{Romer2000}. 
+How accurate are Fed Staff forecasts? We focus on Greenbook forecasts of the GNP/GDP price index. We choose this indicator of Federal Reserve forecast accuracy because central bankers are believed to be primarily concerned with inflation \citep[e.g.][]{Cukierman1992,Mukherjee2008,Tillmann2008}. It is also the dominant measure of forecast errors used in the economics literature \citep[c.f.][]{Romer2000}.
 
 We measure accuracy by calculating {\bf{forecast error}} $E$ as the difference between the Greenbook inflation forecast $F$ for a given quarter $q$ and actual inflation $I$ as a proportion of actual inflation:
 %
@@ -250,9 +250,9 @@ We measure accuracy by calculating {\bf{forecast error}} $E$ as the difference b
     E_{q} = \frac{F_{q} - I_{q}}{I_{q}}.
 \end{equation}
 
-This is different from the accuracy measure \cite{Frendreis2000} used in their preliminary examination of forecast errors. They averaged the absolute value of yearly inflation forecast errors over a 19 year period\footnote{i.e. $\frac{|F_{y} - I_{y}|}{19}$} to examine Federal Reserve accuracy. Their measure has a number of drawbacks. First, it does not give us any indication of the direction of the forecast error, which is crucial for examining possible partisan biases. In their comparison of CBO and administrations' forecasts they did use a simple dichotomous directional indicator of accuracy in a given year (i.e. a forecast greater than or less than the actual level). This does not give us a sense of the relative size of the errors and could easily amplify trivial results. Almost any forecast will be above or below the actual inflation level in all but the unusual cases where the forecasts exactly equal the actual inflation level. 
+This is different from the accuracy measure \cite{Frendreis2000} used in their preliminary examination of forecast errors. They averaged the absolute value of yearly inflation forecast errors over a 19 year period\footnote{i.e. $\frac{|F_{y} - I_{y}|}{19}$} to examine Federal Reserve accuracy. Their measure has a number of drawbacks. First, it does not give us any indication of the direction of the forecast error, which is crucial for examining possible partisan biases. In their comparison of CBO and administrations' forecasts they did use a simple dichotomous directional indicator of accuracy in a given year (i.e. a forecast greater than or less than the actual level). This does not give us a sense of the relative size of the errors and could easily amplify trivial results. Almost any forecast will be above or below the actual inflation level in all but the unusual cases where the forecasts exactly equal the actual inflation level.
 
-Second, the average of the absolute errors values could be highly skewed by years of unusually large errors, which is more likely in years of higher inflation. This is not a trivial concern because the inflation level varies substantially over time (see Figure \ref{absolute}).\footnote{\cite{Frendreis2000} also do not include any other indication of the errors' distribution.} So, we choose to focus on proportional rather than absolute errors by quarter to avoid focusing on a parameter that is highly vulnerable to absolute value outliers. Quarterly proportional errors are also more substantively meaningful for comparing errors across time periods.\footnote{Note that the direction and significance of our main findings do not change when we use absolute rather than proportional errors in our estimation models (discussed below). The magnitude does change, but this is to be expected because the range of the absolute inflation errors is much larger than proportional errors. These results are available from the authors upon request.} 
+Second, the average of the absolute errors values could be highly skewed by years of unusually large errors, which is more likely in years of higher inflation. This is not a trivial concern because the inflation level varies substantially over time (see Figure \ref{absolute}).\footnote{\cite{Frendreis2000} also do not include any other indication of the errors' distribution.} So, we choose to focus on proportional rather than absolute errors by quarter to avoid focusing on a parameter that is highly vulnerable to absolute value outliers. Quarterly proportional errors are also more substantively meaningful for comparing errors across time periods.\footnote{Note that the direction and significance of our main findings do not change when we use absolute rather than proportional errors in our estimation models (discussed below). The magnitude does change, but this is to be expected because the range of the absolute inflation errors is much larger than proportional errors. These results are available from the authors upon request.}
 
 Third, using multi-year or even year-level indicators makes it difficult to examine biases in the run up to an election or any other process that may be observed through variations within years. Using quarterly data--the smallest level available--gives us a much more detailed view of any processes that might influence accuracy.
 
@@ -265,18 +265,22 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
     \caption{Greenbook Inflation Forecasts Made 2 Qtr. Beforehand and Actual Quarterly Inflation}
     \label{absolute}
     \begin{center}
-    
+
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/BaseInflation} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: Could not resolve host: raw.github.com}}\end{kframe}
+
 \end{knitrout}
 
-    
+
     \end{center}
     \begin{singlespace}
-        {\scriptsize{The vertical grey dotted line indicates when the Federal Reserve Board Global (FRB/Global) forecasting model was fully implemented.  
+        {\scriptsize{The vertical grey dotted line indicates when the Federal Reserve Board Global (FRB/Global) forecasting model was fully implemented.
                       }}
     \end{singlespace}
 \end{figure}
@@ -284,23 +288,10 @@ Our dataset has 169 forecast quarters,\footnote{This is the maximum number of ob
 
 \subsection{Are There Partisan Forecast Errors?}
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'cpi.data' not found}}\end{kframe}
-\end{knitrout}
 
-
-Unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2007 the mean standardized forecast error was 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in mean(cpi.data\$error.prop.deflator.q2, na.rm = TRUE) : \\\ \ object 'cpi.data' not found}}, i.e. forecasters under-predicted inflation by about 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in mean(cpi.data\$error.prop.deflator.q2, na.rm = TRUE) : \\\ \ object 'cpi.data' not found}} percent. Our finding of relatively small average error over the entire 35 year period is in line with findings from previous studies. However, this low level of overall bias disguises substantial differences in the mean errors from Republican to Democratic presidencies. Across Republican presidencies the average error was 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in eval(expr, envir, enclos) : object 'RepMean' not found}} percent. It was +
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\\Error in eval(expr, envir, enclos) : object 'DemMean' not found}} percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/WHsRYh}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
+Unbiased forecasts have a mean error of zero \citep[5]{Bruck2006}. Using this criteria, forecast errors should be the same--ideally with a mean of 0--regardless of the incumbent president's party identification. This is not the case. From the second quarter of 1969\footnote{Data availability for two quarter forecasts before 1969 is lacking.} through 2007 the mean standardized forecast error was -0.04, i.e. forecasters under-predicted inflation by about 4 percent. Our finding of relatively small average error over the entire 35 year period is in line with findings from previous studies. However, this low level of overall bias disguises substantial differences in the mean errors from Republican to Democratic presidencies. Across Republican presidencies the average error was -11 percent. It was +13 percent across Democratic presidencies.\footnote{These means are from estimates made two quarters beforehand. Both means are statistically significantly different from 0, the full observation mean, and each other at the 99\% confidence level. For more details see \url{http://bit.ly/1pxb1YY}.} On average, inflation was underestimated in Republican presidencies and overestimated in Democratic ones.
 
 Figure \ref{errors_over_time} plots forecast errors across our sample separated by presidential term and party. The first thing to note is that inflation was rarely underestimated during the three Democratic presidential terms in our sample, and the underestimates that were made were relatively small. The largest overestimates we see were made during Bill Clinton's (Democratic) presidency. All of the major inflation underestimates were made during Republican presidencies, particularly during Richard Nixon's, Gerald Ford's, and George W. Bush's presidencies. Inflation was often overestimated during the second part of Reagan's first term, his second term, and George H.W. Bush's term. Over this period--often referred to as the Volcker Revolution \citep{Bartels1985}--inflation was suddenly much lower than before (see Figure \ref{absolute}). It may have taken awhile for forecasters to adjust to this new lower level of inflation, particularly because the Fed's own models of the economy at the time assumed that money had no real effects on the economy during this period, even while the FOMC was pursuing aggressive anti-inflation policies.
 
@@ -311,15 +302,19 @@ This summary examination of inflation forecast errors suggests that there may be
     \caption{Errors in Inflation Forecasts Made 2 Qtr. Beforehand (1969 - 2007)}
     \label{errors_over_time}
     \begin{center}
-    
+
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/PartisanError} 
+
+}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error: object 'cpi.data' not found}}\end{kframe}
+
 \end{knitrout}
 
-    
+
     \end{center}
     \begin{singlespace}
         {\scriptsize{Note: An error of 0 indicates that inflation was perfectly predicted.}}
@@ -332,19 +327,19 @@ This summary examination of inflation forecast errors suggests that there may be
 
 \section{Regression Models \& Variables}
 
-We used standard regression models to examine the effects of presidential party ID and elections on the continuous inflation forecast error variable.\footnote{Parametric models are estimated using the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} Our main model type was normal linear regression using maximum likelihood estimation of variance.\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model.} To examine if our estimates were dependent on this model type we also ran our analyses with ordinary least squares\footnote{In \texttt{Zelig}, this is the \texttt{ls} model. Because the results were virtually identical, we do not show them below. They are available upon request.} and Bayesian normal linear regression.\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.} Bayesian normal linear regression is particularly useful for our relatively small $n$ sample size as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}.\footnote{Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.} 
+We used standard regression models to examine the effects of presidential party ID and elections on the continuous inflation forecast error variable.\footnote{Parametric models are estimated using the \texttt{R} package \texttt{Zelig} \citep{Zelig2012}.} Our main model type was normal linear regression using maximum likelihood estimation of variance.\footnote{In {\tt{Zelig}} this is the {\tt{normal}} model.} To examine if our estimates were dependent on this model type we also ran our analyses with ordinary least squares\footnote{In \texttt{Zelig}, this is the \texttt{ls} model. Because the results were virtually identical, we do not show them below. They are available upon request.} and Bayesian normal linear regression.\footnote{In {\tt{Zelig}} this is the {\tt{normal.bayes}} model.} Bayesian normal linear regression is particularly useful for our relatively small $n$ sample size as it makes ``valid small sample inferences via draws from the exact posterior" \citep[][38]{Zelig2012}.\footnote{Please see \cite{Goodrich2007} for details about Bayesian normal linear regression.}
 
-As we show below the estimates from all of these model types were very similar in direction, magnitude, and statistical significance. They were almost always substantively identical, especially for our key presidential partisan ID variable. 
+As we show below the estimates from all of these model types were very similar in direction, magnitude, and statistical significance. They were almost always substantively identical, especially for our key presidential partisan ID variable.
 
 \subsection{Variables}
 
-In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identities and/or the existence of an upcoming presidential elections affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when he is a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or in the previous three quarters.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$, $q_{e-1}$, $q_{e-2}$, and $q_{e-3}$ election quarters.} The economic voting literature indicates that it is economic performance in the 6-12 months preceding an American presidential election that seem to matter most for the election's outcome \citep[c.f][]{Gelman1993}. 
+In Section \ref{ForecastAcc} we discussed our dependent variable--inflation forecast errors. To examine possible partisan biases we are interested in whether US presidents' partisan identities and/or the existence of an upcoming presidential elections affect these errors. To do this we created {\bf{president party identification}} and {\bf{election period}} variables. The president party ID variable is 1 when the president is a Democrat and 0 when he is a Republican. Since forecast error data is released on a quarterly basis, we consider a president to be sitting from the first quarter after the election.\footnote{Elections are held almost at the midpoint--early November--of an election year's fourth quarter. Presidents are sworn into office near the beginning--20 January--of the following year's first quarter.} We consider quarters to be in the election period either if the presidential election is held in that quarter or in the previous three quarters.\footnote{If $q_{e}$ is a quarter with an election then we code quarters $q_{e}$, $q_{e-1}$, $q_{e-2}$, and $q_{e-3}$ election quarters.} The economic voting literature indicates that it is economic performance in the 6-12 months preceding an American presidential election that matter most for the election's outcome \citep[c.f][]{Gelman1993}.
 
-To further examine whether or not Federal Reserve Staff were taking into consideration an electoral business cycle either due to a partisan preference or expected incumbent behavior near an election, we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections are coded as 0. 
+To further examine whether or not Federal Reserve Staff were taking into consideration an electoral business cycle either due to a partisan preference or expected incumbent behavior near an election, we include a variable of the {\bf{quarters until the presidential election}}. This simply counts down from the quarter after the previous election.\footnote{There are 15 quarters before a United States presidential election quarter.} The quarters that included presidential elections are coded as 0.
 
 The partisan preference and monetary expectations theories both posit that president's party ID and elections have a non-linear interactive relationship with forecast errors. Both posit that forecast errors across parties will begin to diverge as elections approach. To examine this possibility we include an \textbf{interaction} between the president party ID variable and the square of the quarters until election variable in the analyses.\footnote{An interaction with the non-squared quarters until election variable is also included, following \citep{Brambor2006}. In alternative models we have excluded the interaction with the squared quarters until election variable and found similar null results. See the Supplementary Materials. However, the use of the squared term is preferable here because these theories do not predict that inflation forecast errors will differ linearly by party for across a presidential term, but only late in the term.}
 
-United States presidents do not set the level of government expenditure--a major non-monetary policy source of inflation--by themselves. Instead, presidents are constrained by the two houses of Congress. To examine whether or not Federal Reserve Staff are taking into consideration the partisan composition of Congress as well as presidents' party identifications, we include a variable measuring {\bf{Democratic legislators as a proportion of Republican legislators}} in the House of Representatives and a similar variable for the composition of the Senate.\footnote{Data on the number of legislators with Republican and Democratic party IDs was found at infoplease. See {\url{http://www.infoplease.com/ipa/A0774721.html}}. Accessed May 2012.} 
+United States presidents do not set the level of government expenditure--a major non-monetary policy source of inflation--by themselves. Instead, presidents are constrained by the two houses of Congress. To examine whether or not Federal Reserve Staff are taking into consideration the partisan composition of Congress as well as presidents' party identifications, we include a variable measuring {\bf{Democratic legislators as a proportion of Republican legislators}} in the House of Representatives and a similar variable for the composition of the Senate.\footnote{Data on the number of legislators with Republican and Democratic party IDs was found at infoplease. See {\url{http://www.infoplease.com/ipa/A0774721.html}}. Accessed May 2012.}
 
 Because each chamber of Congress acts as a veto player on the main fiscal expenditures, any Congressional effect on errors likely works through an interaction between the partisan IDs of Congress and the presidency. There are two types of interaction effects that can be derived from the literature. The first interaction possibility is that Federal Reserve Staff, using simple rational partisan expectations, presume that a Democratic president would be able to get policies closer to their ideal point when there is a Congress with similar preferences. If a Democratic president faced chambers of Congress controlled by Democrats, presumably Federal Reserve Staff would expect even higher fiscal expenditures and therefore even higher inflation. Conversely, Republican presidents with a Republican-controlled Congress may be even better at cutting spending, leading to even lower inflation.\footnote{The inflationary effect of these policies may be mitigated if they were offset by higher or lower taxes respectively.}
 
@@ -358,7 +353,7 @@ We included a number of variables to examine if Federal Reserve inflation foreca
 
 To examine how broader economic factors may be related to forecast errors we include variables of the {\bf{GDP output gap}}, {\bf{unemployment rate}} and {\bf{recession}}. The GDP output gap is the potential GDP as a percentage of real GDP measured in nominal terms. The recession variable is a dummy for whether or not the United States was in a recession.The unemployment rate is the percentage of people without work as a proportion of the number of people employed and/or actively seeking employment.\footnote{All three of these variables are from the FRED database, accessed June and October 2012.}
 
-Finally, we include a series of dummies for the sitting {\bf{Federal Reserve Board Chair}}.\footnote{Chairs for the years in our analysis are William McChesney Martin, Jr., Arthur Burns, G. William Miller, Paul Volcker, Alan Greenspan, and Ben Bernanke.} Further variables used to examine additional omitted variable bias are discussed in the paper's Supplementary Materials.
+Finally, we include a series of dummies for the sitting {\bf{Federal Reserve Board Chair}}.\footnote{Chairs for the years in our analysis are William McChesney Martin, Jr., Arthur Burns, G. William Miller, Paul Volcker, Alan Greenspan, and Ben Bernanke.} Further variables used to examine additional omitted variable bias are discussed in the Supplementary Materials.
 
 \section{Results}
 
@@ -369,26 +364,554 @@ We remove quarters from the sample where forecasters would not have known who th
 
 
 
+\begin{figure}[t]
+    \caption{95\% Confidence Bands for Coefficients from a Multiple Parametric Model Specifications}
+    \label{CoefComparePlots}
+    \begin{center}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.95\linewidth]{figure/CoefComparePlots} 
+
+}
+
+
+
+\end{knitrout}
+
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Please see the full estimates tables in tables \ref{OutputNL} and \ref{OutputNB}.}}
+    \end{singlespace}
+\end{figure}
+
+\paragraph{Presidential Party Identification}
+
+Our main finding is that Democratic party identification had a strong positive association with Federal Reserve Staff inflation forecast errors. Inflation forecast errors are estimated to be higher during Democratic presidencies than Republican ones even when we control for the numerous economic and political variables discussed earlier. This finding is robust across virtually all model specifications. Notably, the estimated effect holds even when we control for actual government expenditure and government deficits. This suggests that Federal Reserve Staff are not simply incorrectly predicting spending--which may be correlated with presidential party ID--and its effect on inflation. Instead, they either additionally have a partisan preference or are using partisan heuristics.\footnote{Note that the direction of the relationship--forecasts being overestimated during Democratic presidencies--is the opposite of that predicted by the Monetary Expectations theory.} We can further narrow down the likely causes of the bias by looking at an interaction between presidential party ID and election timing. We can see from the statistically insignificant interaction between partisan ID and election timing in Table \ref{OutputNL} that the estimated presidential party ID effect remains constant across presidential terms, even as the election nears. This finding is what we would expect if Federal Reserve Staff have a presidential partisan heuristic, but not a partisan preference or an expectation that FOMC policy will change as elections near.
+
+
+\begin{figure}[t]
+    \caption{Simulated Expected Inflation Forecast Error for Republican and Democratic Presidencies}
+    \label{ExpectValueParty}
+    \begin{center}
+
+%%% Code is only run when there are changes, since it is very computationally intensive.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.81\linewidth]{figure/ExpectValueParty} 
+
+}
+
+
+
+\end{knitrout}
 
 
 
 
 
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Simulated from a normal linear regression. Variables included are generally the same as those in Model A4 from Table \ref{OutputNL}. The discount rate change variable is adjusted to reflect the change in the discount rate from the quarter when the forecast was made. Discount rate change was not included for the model predicting forecasts made in the present quarter since it is always 0. \\ Each model excludes every quarter when the forecasters would not have known who the president was. Because of this, the number of observations used in each model is noted on the figure. \\ The figure shows 950 simulations per presidential party ID type. They are the middle 95\% of 1000 simulations per presidential party ID type. The grey lines connect the groups' means.}}
+    \end{singlespace}
+\end{figure}
+
+Following \cite{King2000}, we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means, to get a sense of approximately how big the presidential partisan bias is when using different forecast lags. Results from these simulations are shown in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty}. The graph uses visually-weighted regression techniques to communicate uncertainty \citep[see][]{Hsiang2012,Gandrud2013visual}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher than it really is in Democratic presidencies and lower than it is in Republican presidencies.
+
+For forecasts made two quarters in advance, we expect that the Fed overestimates inflation by 18 percent during Democratic presidencies, all else equal. We expect the average inflation forecast during Republican presidencies to be approximately -12 percent of actual inflation. Given that the first quantile of the inflation errors is -22 and the third is 13, \emph{these estimates indicate that partisan biases are on average a large contributor to the overall magnitude of inflation forecasting errors}. These results hold up even when we rerun the models on data where we dropped individual presidential terms (see Table \ref{OutputNLPresDrop}) and Fed chairman terms.\footnote{These are available from the authors upon request.} This indicates that the results are not being driven by one outlier presidential term or chairmanship. Clearly, at least from the 1970s through 2007, Fed Staff were overly pessimistic about Democratic presidents' effect on inflation and overly optimistic about Republican presidents' effect.
+
+\paragraph{Presidential Elections}
+
+Do Federal Reserve Staff also take into consideration election timing as the partisan preference and monetary expectations theories predict?
+
+We do not find much, if any, evidence that inflation forecast errors were associated with elections either independent of presidential party ID or in interaction with it. Estimates of the relationship between the quarters until election variable and forecast errors\footnote{This variable is obviously omitted from the models with the election period variable because they are highly correlated.} also fails to provide any evidence that inflation errors are related to elections.
+
+We examined the monetary policy and partisan preference theories of forecast errors with an interaction between the president's party ID variable and the square of the time to election variable. We used the square of the time to election variable to try to capture the non-linear predicted effect of elections on errors made by the monetary and partisan preference theories (see center and right-hand panels of Figure \ref{ExpectGraphs}). However, when we include the interactions, the coefficient on the president's party ID variable is robust, whereas neither the election variables nor the interaction terms are statistically significant. This is also true when we use the non-squared version of the time to election variable (please see the Supplementary Material). Thus we do not find evidence for either the partisan preference or monetary expectations theories.
+
+Fed Staff do not appear to be over-estimating inflation when a Democratic president is running for re-election in an attempt to influence the FOMC to raise interest rates and lower the president's chances of winning, as hypothesized in the partisan preference theory prediction. These findings have clear implications for how we understand the potential causes of Greenbook partisan inflation forecast biases as well as FOMC interest rate decisions around elections. It seems that FOMC \emph{members}, not their staff, are driving the increases in the Fed Funds Rate around elections when Democrats are in power that \cite{Clark2012} observe. Interestingly, Staff also do not seem to compensate for FOMC partisan biases in an attempt to moderate FOMC-driven partisan electoral business cycles. Thus, we find no evidence in favor of the monetary expectations theory either.
+
+%%%%%%% President/Congress Interaction Plot %%%%%%%%
+\begin{figure}[t]
+    \caption{Simulated Expected Inflation Forecast Error with Interactions Between President Party ID and Congressional Party Control (Qtr. 2 forecasts)}
+    \label{InterPlot}
+    \begin{center}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=0.7\linewidth]{figure/InterPlot} 
+
+}
+
+
+
+\end{knitrout}
+
+
+    \end{center}
+    \begin{singlespace}
+        {\scriptsize{Simulated from estimates in Model A14 in Table \ref{OutputNL}. The figure shows 950 simulations per fitted value. They are the middle 95\% of 1000 simulations per fitted value. The gray lines connect the groups' means.  \\ Both the House and Senate Democratic/Republican variables were set at 1.2 for Democratic congresses and 0.8 for Republican congresses.}}
+    \end{singlespace}
+\end{figure}
+
+\paragraph{Partisan Control of Congress}
+
+Might Federal Reserve Staff be taking into consideration not only the president's party identification, but also the partisan composition of Congress?  We estimate parametric models with two-way and three-way interactions between presidential and congressional party identification to look for evidence in favor of either of the two ways we identified that presidential and congressional partisan ID might be related to forecast errors. All of the partisan interactions are generally statistically significant. To make substantive sense of these estimated interactions we again generate simulations to find expected inflation forecast errors at various levels of the presidential and congressional party identification variables. Figure \ref{InterPlot} shows simulation results with highly contrasting fitted variable values: one party control of the executive and both legislative bodies compared to a situation where one party controls the presidency and the other controls both houses of Congress.\footnote{Both the House and Senate Democratic/Republican variables are set at 1.2 for Democratic congresses and 0.8 for Republican congresses.}
+
+The first thing we should notice in Figure \ref{InterPlot} is how presidential partisan identification still seems to be driving the direction of the inflation forecast errors: inflation is underestimated during Republican presidencies and overestimated during Democratic ones, regardless of what party controls Congress. The substantive effect of congressional control on forecast errors is in the magnitude of the over- or underestimates. In particular, Republican control of Congress seems to exacerbate the differences already noted between Democratic and Republican executives. Inflation is very underestimated for Republican presidencies with Republican congresses and more overestimated for Democratic presidents facing an opposition controlled legislature. There may be an expectation among Fed Staff that solidly Republican governments will cut expenditure much more than they actually do. Forecast errors are also slightly higher on average with Democratic presidencies and Republican congresses compared to when both are controlled by Democrats. This finding would fit with a story where Fed Staff believe spending will be higher with a divided government.
+
+Despite some evidence for an interaction between congressional and presidential party identification, it is not clear at this time how these results can be consistently explained across Democratic and Republican presidencies.
+
+%%%%%%% Table of non-matched data with normal linear parametric model %%%%%%%%
+
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error}
+    \label{OutputNL}
+    \vspace{0.25cm}
+    \begin{center}
+    \scalebox{0.9}{
+    {\tiny
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ A1 } & \multicolumn{ 1 }{ c }{ A2 } & \multicolumn{ 1 }{ c }{ A3 } & \multicolumn{ 1 }{ c }{ A4 } & \multicolumn{ 1 }{ c }{ A5 } & \multicolumn{ 1 }{ c }{ A6 } & \multicolumn{ 1 }{ c }{ A7 } & \multicolumn{ 1 }{ c }{ A8 } & \multicolumn{ 1 }{ c }{ A9 } & \multicolumn{ 1 }{ c }{ A10 } & \multicolumn{ 1 }{ c }{ A11 } & \multicolumn{ 1 }{ c }{ A12 } & \multicolumn{ 1 }{ c }{ A13 } & \multicolumn{ 1 }{ c }{ A14 } \\ \hline
+ %                    & A1              & A2              & A3              & A4              & A5              & A6              & A7              & A8              & A9              & A10             & A11             & A12             & A13             & A14            \\ 
+Intercept            & 3.5 ^\dagger   & 3.6 ^\dagger   & 3.6 ^\dagger   & 4.9 ^{**}       & 4.3 ^*          & 4.1 ^*          & 2.1             & 2.1             & 1.3             & 2.0             & 3.9 ^*          & 3.3 ^\dagger   & 3.4 ^\dagger   & -1.8 ^{***}    \\ 
+                     & (2.0)           & (2.1)           & (2.1)           & (1.7)           & (2.0)           & (1.7)           & (2.0)           & (2.0)           & (2.2)           & (2.1)           & (1.8)           & (1.8)           & (1.8)           & (0.4)          \\ 
+Recession            & 0.0             & 0.0             & 0.0             & 0.1 ^\dagger   & 0.0             & 0.1             & 0.1             & 0.1             & 0.0             & 0.0             & 0.1 ^*          & 0.1 ^\dagger   & 0.1             &                \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.0)           & (0.0)           & (0.1)           &                \\ 
+Expenditure/GDP      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      &                 & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Output Gap           & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{**}      & -0.1 ^{***}     & -0.0 ^*         & -0.1 ^{***}     & -0.1 ^*         & -0.1 ^*         & -0.0            & -0.1 ^*         & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Discount Rate Change & -0.1            & -0.1            & -0.1            & -0.2 ^*         & -0.3 ^*         & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^*         & -0.2 ^*         & -0.2 ^*         &                \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           &                \\ 
+Unemployment Rate    & -0.0            & -0.0            & -0.0            & 0.0             & 0.0             & 0.0             & -0.1            & -0.1            & -0.1            & -0.1            & -0.0            & -0.0            & 0.0             &                \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Qtr. to Election     &                 & 0.0             &                 &                 &                 & 0.0             & 0.0             & 0.0             & -0.0            & 0.0             & 0.0 ^*          & 0.0 ^*          & 0.0 ^*          &                \\ 
+                     &                 & (0.0)           &                 &                 &                 & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           &                \\ 
+Qrt. to Election2    &                 & -0.0            &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                 &                \\ 
+                     &                 & (0.0)           &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
+Election Period      &                 &                 & -0.0            &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                     &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Pres. Party ID       &                 &                 &                 & 0.3 ^{***}      & 0.4 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^*          & 0.3 ^{***}      & 1.0 ^{***}      & 1.1 ^{***}      & 1.7 ^*          & 2.1 ^{**}      \\ 
+                     &                 &                 &                 & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           & (0.0)           & (0.1)           & (0.2)           & (0.7)           & (0.8)          \\ 
+Deficit/GDP          &                 &                 &                 &                 & -0.1 ^{**}      &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+FRB/GlobalModel      &                 &                 &                 &                 &                 & 0.1 ^\dagger   &                 &                 & 0.1             &                 &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 & (0.0)           &                 &                 & (0.1)           &                 &                 &                 &                 &                \\ 
+Senate Dem/Rep       &                 &                 &                 &                 &                 &                 & -0.3 ^\dagger  & -0.3 ^\dagger  & -0.3 ^*         &                 & -0.2            & -0.1            & 0.6             & 0.8 ^*         \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.1)           & (0.1)           & (0.2)           &                 & (0.1)           & (0.1)           & (0.4)           & (0.3)          \\ 
+House Dem/Rep        &                 &                 &                 &                 &                 &                 & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          &                 & 0.5 ^{***}      & 0.4 ^{**}       & 1.1 ^{***}      & 1.6 ^{***}     \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.1)           & (0.1)           & (0.1)           &                 & (0.1)           & (0.1)           & (0.3)           & (0.3)          \\ 
+Pres*Qrt. Election   &                 &                 &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
+Pres*Qrt. Election2  &                 &                 &                 &                 &                 &                 &                 &                 & -0.0            &                 &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
+Burns                &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.3 ^{***}      &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Greenspan            &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.2 ^*          &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Martin               &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.2             &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Miller               &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.3 ^\dagger   &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Volcker              &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.3 ^{**}       &                 &                 &                 &                \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 &                 &                 &                \\ 
+Pres*House           &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.5 ^{***}     &                 & -1.4            & -2.4 ^{**}     \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           &                 & (0.8)           & (0.9)          \\ 
+Pres*Senate          &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.7 ^{***}     & -0.2            & -0.1           \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           & (0.8)           & (0.7)          \\ 
+House*Senate         &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.5 ^*         & -0.9 ^{***}    \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.2)           & (0.2)          \\ 
+Pres*House*Senate    &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.5             & 0.9 ^\dagger  \\ 
+                     &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.5)           & (0.5)           \\
+ $N$                  & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 135             & 135            \\ 
+AIC                  & -4.1            & -0.3            & -2.2            & -54.6           & -7.7            & -54.9           & -56.0           & -56.0           & -52.4           & -57.7           & -83.3           & -80.1           & -85.0           & -49.7          \\ 
+BIC                  & 65.6            & 92.6            & 79.2            & 26.7            & 73.6            & 49.7            & 60.2            & 60.2            & 110.3           & 93.4            & 44.5            & 47.7            & 77.7            & 43.3           \\ 
+$\log L$            & 26.1            & 32.2            & 29.1            & 55.3            & 31.9            & 63.4            & 68.0            & 68.0            & 82.2            & 80.8            & 85.7            & 84.1            & 98.5            & 56.8            \\ \hline
+ \multicolumn{15}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{15}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
+    }
+    }
+    \end{center}
+\end{table}
+
+%%%%%%% Table of pres_party matched data with Bayesian normal linear parametric
+% latex table generated in R 3.1.0 by xtable 1.7-3 package
+% Wed May  7 14:53:49 2014
+\begin{table}[ht]
+\centering
+\caption{Bayesian Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error} 
+\label{OutputNB}
+{\small
+\begin{tabular}{lccccc}
+  \hline
+Variables & Mean & SD & 2.5\% & 50\% & 97.5\% \\ 
+  \hline
+Intercept & 3.62 & 1.56 & 0.54 & 3.63 & 6.73 \\ 
+  Pres. Party ID & 0.30 & 0.04 & 0.23 & 0.30 & 0.37 \\ 
+  Recession & 0.06 & 0.05 & -0.05 & 0.06 & 0.16 \\ 
+  Qtr. to Election & -0.00 & 0.00 & -0.01 & -0.00 & 0.00 \\ 
+  Expenditure/GDP & 0.15 & 0.02 & 0.11 & 0.15 & 0.18 \\ 
+  Output Gap & -0.07 & 0.02 & -0.10 & -0.07 & -0.03 \\ 
+  Discount Rate Change & -0.26 & 0.09 & -0.43 & -0.26 & -0.09 \\ 
+  Unemployment Rate & -0.01 & 0.03 & -0.06 & -0.01 & 0.05 \\ 
+  Global Model & 0.10 & 0.04 & 0.02 & 0.10 & 0.18 \\ 
+  sigma2 & 0.04 & 0.00 & 0.03 & 0.04 & 0.04 \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
 
 
 
 
+%%%%%%% Table of non-matched data with Normal Linear Regression parametric model Dropping presidential terms %%%%%%%%
+
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation of Covariate Effects on 2 Qtr. Inflation Forecast Error, Dropping Presidential Terms}
+    \label{OutputNLPresDrop}
+    \vspace{0.25cm}
+    \begin{center}
+    \scalebox{0.9}{
+    {\tiny
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ Nixon 1 } & \multicolumn{ 1 }{ c }{ Nixon 2 } & \multicolumn{ 1 }{ c }{ Ford } & \multicolumn{ 1 }{ c }{ Carter } & \multicolumn{ 1 }{ c }{ Reagan 1 } & \multicolumn{ 1 }{ c }{ Reagan 2 } & \multicolumn{ 1 }{ c }{ GHW Bush } & \multicolumn{ 1 }{ c }{ Clinton 1 } & \multicolumn{ 1 }{ c }{ Clinton 2 } & \multicolumn{ 1 }{ c }{ GW Bush 1 } & \multicolumn{ 1 }{ c }{ GW Bush 2 } \\ \hline
+ %                    & Nixon 1         & Nixon 2         & Ford            & Carter          & Reagan 1        & Reagan 2        & GHW Bush        & Clinton 1       & Clinton 2       & GW Bush 1       & GW Bush 2      \\ 
+Intercept            & 3.9 ^\dagger   & 4.3 ^*          & 4.0 ^*          & 6.2 ^{**}       & 4.2 ^*          & 3.0             & 3.8 ^*          & 2.6             & 4.4 ^{**}       & 4.6 ^{**}       & 3.7 ^*         \\ 
+                     & (2.1)           & (1.8)           & (1.7)           & (2.0)           & (1.8)           & (1.9)           & (1.9)           & (2.0)           & (1.6)           & (1.6)           & (1.7)          \\ 
+Recession            & 0.0             & 0.1             & 0.1             & 0.0             & 0.1             & 0.1             & 0.0             & 0.0             & 0.1             & 0.1             & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Expenditure/GDP      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.2 ^{***}      & 0.1 ^{***}      & 0.2 ^{***}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Output Gap           & -0.1 ^{**}      & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{**}      & -0.1 ^{***}     & -0.1 ^{**}      & -0.1 ^{***}     & -0.1 ^{***}     & -0.1 ^{***}    \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Discount Rate Change & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^\dagger  & -0.2 ^\dagger \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Unemployment Rate    & -0.0            & 0.0             & -0.0            & 0.1             & -0.0            & -0.0            & 0.0             & -0.0            & 0.0             & 0.0             & -0.0           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election     & 0.0             & -0.0            & 0.0             & 0.0             & 0.0             & 0.0             & -0.0            & 0.0             & -0.0            & -0.0            & 0.0            \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Pres. Party ID       & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.2 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+FRB/GlobalModel      & 0.1             & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.1 ^*          & 0.1 ^\dagger   & 0.1             & 0.1 ^\dagger   & 0.2 ^{**}       & 0.1 ^{**}       & 0.0             & 0.0            \\ 
+                     & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.1)           \\
+ $N$                  & 123             & 129             & 126             & 121             & 121             & 121             & 121             & 121             & 121             & 121             & 125            \\ 
+AIC                  & -40.5           & -48.9           & -51.1           & -45.7           & -49.7           & -44.0           & -38.6           & -54.4           & -67.2           & -71.9           & -50.0          \\ 
+BIC                  & 60.7            & 54.0            & 51.0            & 55.0            & 50.9            & 56.6            & 62.0            & 46.3            & 33.5            & 28.8            & 51.9           \\ 
+$\log L$            & 56.3            & 60.5            & 61.5            & 58.8            & 60.9            & 58.0            & 55.3            & 63.2            & 69.6            & 71.9            & 61.0            \\ \hline
+ \multicolumn{12}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{12}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
 
 
+    }
+    }
+    \end{center}
+\end{table}
+
+\paragraph{Government Expenditure}
+
+It seems that Federal Reserve Staff may also overestimate the effect of government expenditure on inflation. This is indicated by a consistently positive and significant coefficient for the government expenditure variable, even when controlling for president's party ID. Perhaps this is because Fed Staff not only have a presidential partisan heuristic, but also a similar government expenditure heuristic where expenditure is believed to have a larger impact on inflation than it really does. It is plausible that the mechanism for this could be either an informal heuristic that affects the judgmental part of the forecasts or an incorrect assumption built into the formal forecasting models.
+
+\paragraph{Deficits} We avoided including deficits and federal expenditures in the same models, because they are fairly highly correlated.\footnote{In models where they were both included (not shown, but available upon request) the deficit variable's estimated coefficient was very unstable and regularly switched sign.} Deficits as a proportion of GDP had a negative relationship with inflation forecast errors. This is in the same direction as our finding for government expenditure, because a positive deficit to GDP value indicates a surplus, i.e. less spending relative to revenue. However, this estimate was not robust across all models.
+
+\paragraph{FRB Global Forecasting Model}
+
+There is ambiguous evidence that the introduction of the FRB/Global behavioral equation forecasting model in 1996 began a new era of reduced inflation forecasting errors. In the model specification show in Table \ref{OutputNL}, the estimate was statistically significant at the 10 percent level. However it was not robust across many model specifications (see Figure \ref{CoefComparePlots} and tables in the Supplementary Materials).
+
+\paragraph{Changes to the Discount Rate}
+
+As expected, relative changes to the discount rate are often found to be negatively associated with inflation forecast errors. Increasing the discount rate could result in lower inflation than expected and vice versa. Controlling for FOMC policy does not change the estimated relationship between presidential party ID and errors. It should be noted that the discount rate results are not robust across all of the models\footnote{See in particular results from models using matched data in the Supplementary Materials.}
+
+\paragraph{Further Robustness Checks}
+
+The Supplementary Materials includes further robustness checks that we used to test the strength of our key findings. In particular we explore other specifications of the president party ID and time to election interaction, the key variable's relationships with an orthogonal variable (unemployment forecast errors), the inclusion of economic and political shocks, such as oil price and labor productivity changes, and armed conflicts, as well as parametric models with pre-analysis matched data on presidential party ID and election period.
+
+\section*{Discussion: Partisanship \& bureaucratic inflation forecast errors}
+
+Do Fed inflation forecasts have a partisan bias? According to the evidence from our research: yes. Federal Reserve Staff seem to have systematically overestimated inflation during Democratic presidencies and underestimated it during Republican ones for at least a 38 year period between 1969 and the end of 2007. This finding is robust across numerous model specifications where a variety of economic, bureaucratic, and other political factors were controlled for.
+
+In the course of our research we also found that Fed Staff tend to overestimate the inflationary effect of government spending and perhaps deficits, independent of the partisanship bias. Conceptually, the bias nonetheless runs in the same direction as the presidential partisanship bias. More spending, which Democrats are often expected to prefer, is anticipated to increase inflation more than it actually does.\footnote{Of course Fed Staff could be incorrectly forecasting government expenditure and deficits. This could then somehow contribute to biased inflation forecasts. However, we do not have access to complete Fed estimates of government expenditure and deficits to test this possibility.} It is unlikely that Greenbook forecasting models explicitly incorporate the president's party identification, so we can be reasonably certain that the partisan bias enters as a heuristic in the judgmental side of the forecasting process. Predicted inflationary effects for government spending could very well be incorporated into the formal forecasting models. So, the government expenditure bias that we found could be either the result of incorrect explicit model assumptions or heuristics.
+
+Interestingly, in light of recent research on FOMC policy-making, we found no relationship between inflation forecast errors and elections either independent of presidential party identification or in interaction with it. This suggests that any relationship between monetary policy decisions and US presidential election timing is neither the result of partisan preferences that Fed Staff members may have, nor beliefs that Fed Staff may hold about the FOMC's presidential election preferences.
+
+Given the consistency of the bias across presidents' terms, it appears that Fed Staff's partisan inflation forecast bias may be the result of a partisan heuristic. Like heuristics generally, the partisan heuristic may help Fed Staffers simplify very complex phenomenon, with the negative side effect that it can create systematic prediction errors. These errors may not have been noticed by Staffers because, so far, few if anyone has been looking for them. Indeed, the only piece of research we found examining both Fed forecasting errors and partisan forecasting biases \cite[i.e.][]{Frendreis2000} did not actually look for partisan biases {\emph{in}} Fed forecasts. We find that inflation forecasts are consistently underestimated when Republicans hold the White House and are consistently overestimated during Democratic administrations. This is a new finding that helps us better understand how monetary policy bureaucrats address uncertainty and complexity in the relationship between policy and the economy. Though heuristic rules of thumb have been researched extensively in the behavioral economics literature \citep[e.g.][]{kahneman1973, tverskykahneman1974, kahneman2003} and various economically-based monetary policy rules of thumb have been discussed by academic researchers and monetary policy-makers themselves \cite[e.g.][]{McNees1990,Orphanides2008}, the possibility of political heuristics impacting monetary policy bureaucrats’ expectations has previously been ignored. It also challenges previous assumptions in the literature \cite[see in particular][]{Grauwe2011} that actors adapt their heuristics and expectations based on new information. Hopefully our findings will give forecasters an impetus to do just that so that they can more accurately forecast inflation.
+
+What has been the monetary policy and electoral impact of Federal Reserve Staff partisan bias? Our research so far cannot definitively answer this, but it does motivate future research and point in a clear direction. It may be that higher inflation forecasts during Democratic presidencies spur the FOMC to raise interest rates and dampen the money supply generally. The opposite could happen during Republican presidencies. If this is the case, the economy would be inadvertently stimulated during Republican presidencies and depressed during Democratic ones, with electoral implications. The economic voting literature has repeatedly found that poor economic performance results in less electoral support for incumbents \citep[e.g.][]{Alvarez1998, Bloom1975, LewisBeck1988, Powell1993}. Thus, if these partisan biases in inflation forecasts are leading to more restrictive monetary policy during Democratic presidencies and more expansive monetary policy during Republican presidencies, the economic voting mechanism may run afoul of important normative concerns about democratic accountability. Determining the extent to which these biases are shaping monetary policy and real economic performance is therefore an important next step in understanding the linkage between Fed inflation forecasts and larger questions of democracy. This is a very important issue that needs further investigation.
+
+%%%%%%% References %%%%%%%%%%%%
+
+\clearpage
+
+\bibliographystyle{apsr}
+\bibliography{GreenBook.bib}
 
 
+%%%%%% Supplementary Material %%%%%%%%%%
+\clearpage
+
+\section*{Supplementary Material for:\\ \emph{Inflated Expectations: How government partisanship shapes monetary policy bureaucrats' inflation forecasts}}
+
+In this Supplementary Material section we present additional robustness checks to further test the strength of our main empirical findings.
+
+\subsection*{Mid-term election timing}
+
+To further check the robustness of the possible effect of elections on errors we examined models with election variables that included mid-term elections--non-presidential elections when the House of Representatives and a portion of the Senate is elected--in addition to presidential elections. As before, we subsetted the data to exclude quarters when the forecasters would not have known who the winners of the elections would be. This variable was, like the equivalent variable that only included presidential election timing, statistically insignificant. Its interaction with presidential party ID was also insignificant. Table \ref{MidTerm} shows results from two of these models.
+
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation with Standardized 2 Qrt. Inflation Forecasting Error as the Dependent Variable and a Quarter to Election Variables that Included Midterms (non-matched data set)}
+    \label{MidTerm}
+    \vspace{0.25cm}
+    \begin{center}
+    {\small{
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ SM1 } & \multicolumn{ 1 }{ c }{ SM2 } \\ \hline
+ %                                & SM1             & SM2            \\ 
+Intercept                        & -0.2            & -0.2           \\ 
+                                 & (2.2)           & (2.2)          \\ 
+Recession                        & 0.0             & 0.0            \\ 
+                                 & (0.1)           & (0.1)          \\ 
+Expenditure/GDP                  & 0.1 ^{***}      & 0.1 ^{***}     \\ 
+                                 & (0.0)           & (0.0)          \\ 
+Output Gap                       & -0.0            & -0.0           \\ 
+                                 & (0.0)           & (0.0)          \\ 
+Discount Rate Change             & -0.3 ^{**}      & -0.3 ^{**}     \\ 
+                                 & (0.1)           & (0.1)          \\ 
+Unemployment Rate                & -0.1 ^\dagger  & -0.1 ^\dagger \\ 
+                                 & (0.0)           & (0.0)          \\ 
+Pres. Party ID                   & 0.3 ^{***}      & 0.3 ^{***}     \\ 
+                                 & (0.0)           & (0.1)          \\ 
+Qrt. Midterm/Pres. Election      & 0.0             & 0.0            \\ 
+                                 & (0.0)           & (0.0)          \\ 
+FRB/GlobalModel                  & 0.1             & 0.1            \\ 
+                                 & (0.1)           & (0.1)          \\ 
+Senate Dem/Rep                   & -0.4 ^*         & -0.4 ^*        \\ 
+                                 & (0.2)           & (0.2)          \\ 
+House Dem/Rep                    & 0.4 ^*          & 0.4 ^*         \\ 
+                                 & (0.2)           & (0.2)          \\ 
+Pres*Qrt. Midterm/Pres. Election &                 & 0.0            \\ 
+                                 &                 & (0.0)           \\
+ $N$                              & 115             & 115            \\ 
+AIC                              & -39.0           & -37.0          \\ 
+BIC                              & 81.8            & 94.8           \\ 
+$\log L$                        & 63.5            & 66.5            \\ \hline
+ \multicolumn{3}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{3}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
 
 
+    }}
+    \end{center}
+\end{table}
+
+\subsection*{President party ID and election timing linear interaction}
+
+In the body of the paper we presented results from models with president party ID and the square of quarters to the election. The first model in Table \ref{SupTable1} shows results with an interaction between president party ID and the non-squared linear version of election timing. The results are substantively equivalent to those with the squared version. In both cases the interaction is not statistically significant.
+
+\subsection*{Economic and violent conflict shocks}
+
+We examined if economic and/or violent conflict shocks may affect inflation forecast errors. First we examined if the underlying level of inflation could impact the standardized forecast errors. Perhaps if price changes are very volatile, e.g. inflation is very high, then there may be larger errors. We examined this possibility by including two absolute inflation variables in the models: (a) the \textbf{absolute inflation level in the quarter being forecasted} for and (b) \textbf{absolute inflation in the quarter prior} to when the forecast was made.\footnote{In Table \ref{SupTable1} this is referred to as `Lag 3 Abs. Inflation'.} The second and third models in Table \ref{SupTable1} show that including these variables did not substantively change the presidential partisan ID results. Absolute inflation in the quarter being forecasted for has a statistically significant negative relationship with forecast errors. Referring back to figures \ref{absolute} and \ref{errors_over_time} in the main paper, this makes empirical sense as periods of high inflation in the 1970s were actually times when the standardized forecast error was relatively small. This finding persists even if we use absolute inflation forecast errors (i.e. $F_{q} - I_{q}$) as the dependent variable. This can be seen in Model S14 in Table \ref{SupTable2}.
+
+We also interacted the absolute inflation variables with presidential party ID. In both cases we estimated that there are small though statistically significant interaction terms. The interaction terms and absolute inflation coefficient estimates are negative, while presidential partisan ID remains positive. Again returning to figures \ref{absolute} and \ref{errors_over_time}, this finding makes sense as the period of high absolute inflation with a Democratic president (Carter) was a time of low standardized forecast errors.
+
+We consider other economic and political shocks. Perhaps oil price shocks, for example in the late 1970s, increased inflation forecast errors. To examine this possibility we gathered data from the FRED database on the \textbf{change in the West Texas Crude price}\footnote{The series ID is OILPRICE. Accessed October 2013.} from the quarter in the previous year to the quarter the inflation forecast was made for. Similarly, maybe labor productivity increases, especially in the 1990s, created unexpected economic conditions that dampened inflation, changing inflation forecasting errors. To examine this possibility we gathered data from the United States Bureau of Labor Statistics on non-farm business \textbf{labor productivity}.\footnote{The series ID was PR85006092. Accessed October 2013.} The variable is in terms of the percent change from the previous quarter at the annual rate. Finally, perhaps violent conflict also created unexpected economic conditions. To examine this we created an indicator of the \textbf{total number of armed conflicts per year that the United States participated in} using data from the Uppsala Conflict Data Program/Peace Research Institute Oslo \citep{Harbom2008,Themner2013}.
+
+We can see in tables \ref{SupTable1} and \ref{SupTable2} that productivity changes were not robustly associated with inflation forecasting errors. Oil price changes were found to be statistically significantly associated with errors. This association was negative so that high price increases are related to lower errors. This mirrors our finding for the absolute inflation level. High absolute inflation and high oil price increases are associated in time during our observation period. They were both particularly high during the mid to late 1970s. This was simultaneously a period of relatively small to negative inflation forecast errors. The number of armed conflicts that the US participated in was found to be significantly negatively associated with inflation forecast errors. This result is being driven by the fact that a long period of inflation under estimates--primarily during George W. Bush's presidency--also was the period where the United States engaged in the most armed conflicts as part of the so-called `War on Terror'. This evidence suggests that Fed staff do not overestimate the effect that price, oil, and armed conflict shocks have on inflation, though they may underestimate their effects.
+
+In Table~\ref{SupTable1} we also included interactions between presidential party ID and the oil price, productivity, and armed conflict shock variables. None of these interactions were estimated to be statistically significant.
+
+Overall, it is important to note that the presidential partisan ID variable's estimated effect largely does not change in magnitude, direction, or statistical significance when the shock variables are included. It also doesn't change when we use our standardized measure or inflation forecasting errors or absolute errors (results shown in Table~\ref{SupTable2}).
+
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation with Standardized 2 Qtr. Inflation Forecasting Error as the Dependent Variable and Additional Independent Variables (non-matched data set)}
+    \label{SupTable1}
+    \vspace{0.25cm}
+    \begin{center}
+    {\tiny{
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ S1 } & \multicolumn{ 1 }{ c }{ S2 } & \multicolumn{ 1 }{ c }{ S3 } & \multicolumn{ 1 }{ c }{ S4 } & \multicolumn{ 1 }{ c }{ S5 } & \multicolumn{ 1 }{ c }{ S6 } & \multicolumn{ 1 }{ c }{ S7 } & \multicolumn{ 1 }{ c }{ S8 } & \multicolumn{ 1 }{ c }{ S9 } & \multicolumn{ 1 }{ c }{ S10 } & \multicolumn{ 1 }{ c }{ S11 } \\ \hline
+ %                     & S1              & S2              & S3              & S4              & S5              & S6              & S7              & S8              & S9              & S10             & S11            \\ 
+Intercept             & 2.0             & 2.3             & 3.0             & 1.4             & 2.4             & 2.2             & 2.1             & 2.3             & 2.2             & -0.4            & -0.5           \\ 
+                      & (2.0)           & (1.9)           & (1.9)           & (2.1)           & (2.1)           & (1.9)           & (1.9)           & (2.0)           & (1.9)           & (1.8)           & (1.8)          \\ 
+Recession             & 0.0             & 0.1 ^*          & 0.1 ^*          & 0.1             & 0.1             & 0.1             & 0.1             & 0.0             & 0.0             & -0.0            & -0.0           \\ 
+                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Expenditure/GDP       & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}     \\ 
+                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Output Gap            & -0.0 ^*         & -0.0 ^*         & -0.1 ^*         & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0           \\ 
+                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Discount Rate Change  & -0.3 ^{**}      & -0.2 ^\dagger  & -0.2 ^*         & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^*         & -0.2 ^\dagger  & -0.3 ^{**}      & -0.3 ^{**}      & -0.1            & -0.1           \\ 
+                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Unemployment Rate     & -0.1            & -0.0            & -0.0            & -0.1            & -0.0            & -0.1            & -0.1            & -0.1            & -0.1            & -0.1 ^{**}      & -0.1 ^{**}     \\ 
+                      & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+FRB/GlobalModel       & 0.1             & 0.1 ^*          & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.1             & 0.1             & 0.1 ^\dagger   & 0.1 ^\dagger   & 0.0             & 0.0            \\ 
+                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Senate Dem/Rep        & -0.3 ^*         & -0.3 ^*         & -0.3 ^*         & -0.4 ^*         & -0.3 ^*         & -0.3 ^*         & -0.3 ^\dagger  & -0.4 ^*         & -0.3 ^*         & -0.5 ^{***}     & -0.5 ^{***}    \\ 
+                      & (0.2)           & (0.1)           & (0.1)           & (0.2)           & (0.1)           & (0.1)           & (0.2)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+House Dem/Rep         & 0.3 ^*          & 0.4 ^{**}       & 0.4 ^{**}       & 0.3 ^*          & 0.4 ^*          & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          & 0.4 ^{***}      & 0.4 ^{**}      \\ 
+                      & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Pres. Party ID        & 0.3 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.3 ^{***}      & 0.4 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.1 ^*          & 0.1 ^*         \\ 
+                      & (0.1)           & (0.0)           & (0.1)           & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election      & 0.0             & 0.0             &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                      & (0.0)           & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Pres*Qrt. Election    & -0.0            &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                      & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Abs. Inflation        &                 & -0.0 ^{**}      & -0.0            &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                      &                 & (0.0)           & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Pres*Abs. Infl.       &                 &                 & -0.0 ^*         &                 &                 &                 &                 &                 &                 &                 &                \\ 
+                      &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                 &                 &                \\ 
+Lag 3 Abs. Inflation  &                 &                 &                 & -0.0            & -0.0            &                 &                 &                 &                 &                 &                \\ 
+                      &                 &                 &                 & (0.0)           & (0.0)           &                 &                 &                 &                 &                 &                \\ 
+Pres*Lag 3 Abs. Infl. &                 &                 &                 &                 & -0.0 ^*         &                 &                 &                 &                 &                 &                \\ 
+                      &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                 &                 &                \\ 
+Oil Price Change      &                 &                 &                 &                 &                 & -0.0 ^\dagger  & -0.0 ^\dagger  &                 &                 &                 &                \\ 
+                      &                 &                 &                 &                 &                 & (0.0)           & (0.0)           &                 &                 &                 &                \\ 
+Pres*Oil Price Change &                 &                 &                 &                 &                 &                 & 0.0             &                 &                 &                 &                \\ 
+                      &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                 &                 &                \\ 
+Productivity Change   &                 &                 &                 &                 &                 &                 &                 & -0.0            & -0.0            &                 &                \\ 
+                      &                 &                 &                 &                 &                 &                 &                 & (0.0)           & (0.0)           &                 &                \\ 
+Pres*Prod. Change     &                 &                 &                 &                 &                 &                 &                 &                 & 0.0             &                 &                \\ 
+                      &                 &                 &                 &                 &                 &                 &                 &                 & (0.0)           &                 &                \\ 
+No. Armed Conflicts   &                 &                 &                 &                 &                 &                 &                 &                 &                 & -0.1 ^{***}     & -0.1 ^{***}    \\ 
+                      &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.0)           & (0.0)          \\ 
+Pres*No. Armed Confl. &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & 0.1            \\ 
+                      &                 &                 &                 &                 &                 &                 &                 &                 &                 &                 & (0.1)           \\
+ $N$                   & 135             & 135             & 135             & 132             & 132             & 135             & 135             & 135             & 135             & 135             & 135            \\ 
+AIC                   & -55.3           & -64.8           & -69.4           & -53.9           & -58.5           & -60.9           & -59.0           & -57.4           & -58.0           & -83.4           & -81.9          \\ 
+BIC                   & 84.2            & 74.7            & 70.1            & 72.9            & 79.8            & 66.9            & 80.4            & 70.4            & 81.4            & 44.5            & 57.5           \\ 
+$\log L$             & 75.6            & 80.4            & 82.7            & 71.0            & 77.3            & 74.4            & 77.5            & 72.7            & 77.0            & 85.7            & 89.0            \\ \hline
+ \multicolumn{12}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{12}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
 
 
+    }}
+    \end{center}
+\end{table}
 
 
+\begin{table}[ht]
+    \caption{Normal Linear Regression Estimation with Absolute 2 Qtr. Inflation Forecasting Error as the Dependent Variable and Additional Independent Variables (non-matched data set)}
+    \label{SupTable2}
+    \vspace{0.25cm}
+    \begin{center}
+    {\tiny{
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ S12 } & \multicolumn{ 1 }{ c }{ S13 } & \multicolumn{ 1 }{ c }{ S14 } & \multicolumn{ 1 }{ c }{ S15 } & \multicolumn{ 1 }{ c }{ S16 } & \multicolumn{ 1 }{ c }{ S17 } & \multicolumn{ 1 }{ c }{ S18 } & \multicolumn{ 1 }{ c }{ S19 } \\ \hline
+ %                    & S12             & S13             & S14             & S15             & S16             & S17             & S18             & S19            \\ 
+Intercept            & 3.1             & 3.0             & 3.3 ^\dagger   & 2.3             & 3.3 ^\dagger   & 3.3             & 0.5             & 0.8            \\ 
+                     & (2.0)           & (2.0)           & (1.9)           & (2.1)           & (1.9)           & (2.0)           & (1.8)           & (1.9)          \\ 
+Recession            & 0.1             & 0.0             & 0.1 ^*          & 0.1             & 0.1             & 0.0             & -0.0            & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Expenditure/GDP      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}      & 0.1 ^{***}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Output Gap           & -0.0 ^*         & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0 ^*         & -0.0 ^*         & -0.0            & -0.0           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Discount Rate Change & -0.3 ^{**}      & -0.3 ^{**}      & -0.2 ^\dagger  & -0.3 ^{**}      & -0.2 ^*         & -0.3 ^{**}      & -0.1            & -0.1           \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Unemployment Rate    & -0.1            & -0.1            & -0.0            & -0.1            & -0.1            & -0.1            & -0.1 ^{**}      & -0.1 ^{**}     \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Pres. Party ID       & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.3 ^{***}      & 0.1 ^*          & 0.1 ^*         \\ 
+                     & (0.0)           & (0.1)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+Qtr. to Election     & 0.0             & 0.0             & 0.0             & 0.0             & -0.0            & 0.0             & 0.0             & -0.0           \\ 
+                     & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)           & (0.0)          \\ 
+FRB/GlobalModel      & 0.1 ^\dagger   & 0.1             & 0.1 ^*          & 0.1 ^\dagger   & 0.1             & 0.1             & 0.0             & 0.0            \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Senate Dem/Rep       & -0.4 ^*         & -0.3 ^*         & -0.3 ^*         & -0.4 ^*         & -0.3 ^*         & -0.4 ^*         & -0.5 ^{***}     & -0.5 ^{***}    \\ 
+                     & (0.1)           & (0.2)           & (0.1)           & (0.2)           & (0.1)           & (0.2)           & (0.1)           & (0.1)          \\ 
+House Dem/Rep        & 0.3 ^*          & 0.3 ^*          & 0.4 ^{**}       & 0.3 ^*          & 0.3 ^*          & 0.3 ^*          & 0.4 ^{***}      & 0.4 ^{**}      \\ 
+                     & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)           & (0.1)          \\ 
+Pres*Qrt. Election   &                 & -0.0            &                 &                 &                 &                 &                 &                \\ 
+                     &                 & (0.0)           &                 &                 &                 &                 &                 &                \\ 
+Abs Inflation        &                 &                 & -0.0 ^{**}      &                 &                 &                 &                 &                \\ 
+                     &                 &                 & (0.0)           &                 &                 &                 &                 &                \\ 
+Lag 3 Abs. Inflation &                 &                 &                 & -0.0            &                 &                 &                 &                \\ 
+                     &                 &                 &                 & (0.0)           &                 &                 &                 &                \\ 
+Oil Price Change     &                 &                 &                 &                 & -0.0 ^\dagger  &                 &                 & -0.0           \\ 
+                     &                 &                 &                 &                 & (0.0)           &                 &                 & (0.0)          \\ 
+Productivity Change  &                 &                 &                 &                 &                 & -0.0            &                 & -0.0           \\ 
+                     &                 &                 &                 &                 &                 & (0.0)           &                 & (0.0)          \\ 
+No. Armed Conflicts  &                 &                 &                 &                 &                 &                 & -0.1 ^{***}     & -0.1 ^{***}    \\ 
+                     &                 &                 &                 &                 &                 &                 & (0.0)           & (0.0)           \\
+ $N$                  & 135             & 135             & 135             & 132             & 135             & 135             & 135             & 135            \\ 
+AIC                  & -57.0           & -55.3           & -64.8           & -52.2           & -59.0           & -55.5           & -81.6           & -79.5          \\ 
+BIC                  & 70.8            & 84.2            & 74.7            & 86.2            & 80.5            & 84.0            & 57.9            & 83.1           \\ 
+$\log L$            & 72.5            & 75.6            & 80.4            & 74.1            & 77.5            & 75.7            & 88.8            & 95.8            \\ \hline
+ \multicolumn{9}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{9}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
 
+
+    }}
+    \end{center}
+\end{table}
+
+\subsection*{Partisan composition of the Federal Reserve Board}
+
+We examined if the partisan composition of the Federal Reserve Board of Governors (BoG) influenced inflation forecast errors. Governors are appointed by the President and approved by the Senate. Perhaps it is the partisan composition of the BoG that Fed Staff are responding to in their forecasts, rather than, or in interaction with, the presidency. To examine these possibilities we added a variable capturing the \textbf{percentage of the BoG appointed by a Democratic president} when the inflation forecasts were made.\footnote{Data on Board membership was taken from the Federal Reserve Board's website at: \url{http://www.federalreserve.gov/aboutthefed/bios/board/boardmembership.htm}. Accessed March 2014.} Results are shown in Table~\ref{BoardPartisan}. We also show results from a model interacting presidential party ID with BoG partisan composition. In the model without an interaction between the BoG partisan composition variable and presidential party ID we do not estimate a statistically significant effect of BoG composition on errors. There is a very weak (both substatntively and statistically significantly) estimated interaction between presidential party ID and BoG partisan composition. The interaction is positive such that inflation forecasts are even higher when there are Democratic presidents with BoG that have more members appointed by Democratic presidents. However, it is important to reiterate that the estimated effect is very small. In sum it appears that the Staff's errors are primarily driven by the president's party ID.
+
+\begin{table}
+  \caption{Normal Linear Regression Estimation with Standardized 2 Qtr. Inflation Forecasting Error as the Dependent Variable and Partisan Composition (\% Appointed by a Democratic President) added to the Independent Variables (non-matched data set)}
+  \label{BoardPartisan}
+  \begin{center}
+    {\tiny{
+ 
+\begin{tabular}{ l D{.}{.}{1}D{.}{.}{1} } 
+\hline 
+  & \multicolumn{ 1 }{ c }{ S20 } & \multicolumn{ 1 }{ c }{ S21 } \\ \hline
+ %                                & S20            & S21           \\ 
+Intercept                        & 2.1            & 2.1           \\ 
+                                 & (1.9)          & (1.9)         \\ 
+Recession                        & 0.1            & 0.0           \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Expenditure/GDP                  & 0.2 ^{***}     & 0.2 ^{***}    \\ 
+                                 & (0.0)          & (0.0)         \\ 
+Output Gap                       & -0.1 ^*        & -0.1 ^*       \\ 
+                                 & (0.0)          & (0.0)         \\ 
+Discount Rate Change             & -0.3 ^{**}     & -0.3 ^{**}    \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Unemployment Rate                & -0.1           & -0.1          \\ 
+                                 & (0.0)          & (0.0)         \\ 
+FRB/GlobalModel                  & 0.0            & 0.1           \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Senate Dem/Rep                   & -0.2           & -0.2          \\ 
+                                 & (0.2)          & (0.2)         \\ 
+House Dem/Rep                    & 0.3 ^*         & 0.2 ^\dagger \\ 
+                                 & (0.1)          & (0.1)         \\ 
+Pres. Party ID                   & 0.3 ^{***}     & 0.2 ^{***}    \\ 
+                                 & (0.0)          & (0.1)         \\ 
+Partisan Comp. of Fed Board      & 0.0            & 0.0           \\ 
+                                 & (0.0)          & (0.0)         \\ 
+Pres*Partisan Comp. of Fed Board &                & 0.0 ^\dagger \\ 
+                                 &                & (0.0)          \\
+ $N$                              & 135            & 135           \\ 
+AIC                              & -58.7          & -59.7         \\ 
+BIC                              & 69.1           & 79.8          \\ 
+$\log L$                        & 73.3           & 77.8           \\ \hline
+ \multicolumn{3}{l}{\footnotesize{Standard errors in parentheses}}\\
+\multicolumn{3}{l}{\footnotesize{$^\dagger$ significant at $p<.10$; $^* p<.05$; $^{**} p<.01$; $^{***} p<.001$}} 
+\end{tabular} 
+
+
+    }}
+  \end{center}
+\end{table}
+
+\subsection*{Orthogonal dependent variable robustness check: Unemployment forecast errors}
 
 
 

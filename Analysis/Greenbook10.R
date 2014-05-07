@@ -1,24 +1,22 @@
 ###############
 # Run Models with an Orthoganal Variable (Unemployment Errors)
 # Christopher Gandrud 
-# 6 January 2014
+# 5 May 2014
 ###############
 
 # Load libraries
-library(RCurl)
 library(Zelig)
 library(MatchIt)
 library(ggplot2)
 
-# Load data from GitHub
-url <- "https://raw.github.com/christophergandrud/GreenBook/master/Data/GB_FRED_cpi_2007.csv"
-cpi.dataU <- getURL(url)
-cpi.dataU <- read.csv(textConnection(cpi.dataU))
+# Load data
+cpi.dataU <- read.csv("Data/GB_FRED_cpi_2007.csv", stringsAsFactors = FALSE)
 
 ##### Create DV, Other Cleaning ########
 
 # Create presidential party factor variable
-cpi.dataU$pres_party_name <- factor(cpi.dataU$pres_party, label = c("Rep", "Dem"))
+cpi.dataU$pres_party_name <- factor(cpi.dataU$pres_party, 
+                                    label = c("Rep", "Dem"))
 
 # Create standardized forecast error variable
 cpi.dataU$error.unemploy.q0 <-  (cpi.dataU$GB_Unemp0 - cpi.dataU$UNRATE)/cpi.dataU$UNRATE
@@ -28,7 +26,7 @@ cpi.dataU$error.unemploy.q3 <-  (cpi.dataU$GB_Unemp3 - cpi.dataU$UNRATE)/cpi.dat
 cpi.dataU$error.unemploy.q4 <-  (cpi.dataU$GB_Unemp4 - cpi.dataU$UNRATE)/cpi.dataU$UNRATE
 cpi.dataU$error.unemploy.q5 <-  (cpi.dataU$GB_Unemp5 - cpi.dataU$UNRATE)/cpi.dataU$UNRATE
 
-cpi.dataU$error.prop.deflator.q2 <-  (cpi.dataU$GB_CPI_QTR2 - cpi.dataU$deflator)/cpi.dataU$deflator
+cpi.dataU$error.prop.deflator.q2 <- (cpi.dataU$GB_CPI_QTR2 - cpi.dataU$deflator)/cpi.dataU$deflator
 
 
 # Create FRB/Global Model Variable 
@@ -53,10 +51,12 @@ cpi.dataU$president <- as.factor(cpi.dataU$presTerm)
 # Partisan colours
 partisan.colors = c("Rep" = "#C42B00", "Dem" = "#2259B3")
 
-errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2)) +
+errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = 
+                            error.unemploy.q2)) +
                       geom_hline(yintercept = 0, size = 1, alpha = I(0.5)) +
                       geom_point(aes(color = pres_party_name)) +
-  stat_smooth(method = "lm", aes(group = presTerm, color = pres_party_name, fill = pres_party_name)) +
+  stat_smooth(method = "lm", aes(group = presTerm, color = pres_party_name, 
+              fill = pres_party_name)) +
   scale_color_manual(values = partisan.colors, name = "") +
   scale_fill_manual(values = partisan.colors, name = "") +
   xlab("") + ylab("Unemployment Forecast Error\n") + 
@@ -64,7 +64,8 @@ errors.employ.time <- ggplot(cpi.dataU, aes(x = Quarter, y = error.unemploy.q2))
   scale_x_continuous(limits = c(1968, 2008),
                      breaks = c(1970, 1980, 1990, 2000), 
                      labels = c(1970, 1980, 1990, 2000)) +
-  scale_y_continuous(breaks = c(-0.1, 0, 0.1, 0.2, 0.3), labels = c(-0.1, 0, 0.1, 0.2, 0.3)) +
+  scale_y_continuous(breaks = c(-0.1, 0, 0.1, 0.2, 0.3), 
+                    labels = c(-0.1, 0, 0.1, 0.2, 0.3)) +
   guides(colour = guide_legend(reverse = TRUE), 
          fill = guide_legend(reverse = TRUE)) +
   theme_bw(base_size = 12)
@@ -78,7 +79,8 @@ Estat <- as.vector(Cor$estimate)
 Pstat <- as.vector(Cor$p.value)
 
 # Graph the relationship
-ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, error.prop.deflator.q2)) + 
+ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, 
+                            error.prop.deflator.q2)) + 
                               geom_smooth() +
                               geom_point() + 
                               xlab("\n Unemployment Forecast Errors") +
@@ -88,7 +90,12 @@ ErrorOrthogScatter <- ggplot(data = cpi.dataU, aes(error.unemploy.q2, error.prop
 
 ################### Parametric Models (UnMatched) ################
 # Only partisanship
-PLU1 <- zelig(error.unemploy.q2 ~ pres_party, model = "ls", data = cpi.dataU, cite = FALSE)
+PLU1 <- zelig(error.unemploy.q2 ~ pres_party, model = "ls", data = cpi.dataU, 
+            cite = FALSE)
 
-# Only relevant variables (i.e. excluding the inflation relevant variables DiscountRate2qChange)
-PLU2 <- zelig(error.unemploy.q2 ~ pres_party + time_to_election + recession + senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + PotentialGDP + GlobalModel, model = "ls", data = cpi.dataU, cite = FALSE)                       
+# Only relevant variables (i.e. excluding the inflation relevant variables 
+# DiscountRate2qChange)
+PLU2 <- zelig(error.unemploy.q2 ~ pres_party + time_to_election + recession + 
+                senate_dem_rep + house_dem_rep + DebtGDP + ExpenditureGDP + 
+                PotentialGDP + GlobalModel, model = "ls", data = cpi.dataU, 
+                cite = FALSE)                       

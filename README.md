@@ -39,10 +39,9 @@ To reproduce the analyses and plots in the paper first install the necessary
 R packages:
 
 ```{S}
-install.packages("apsrtable", "knitr", "ggplot2", "gridExtra",
+install.packages("apsrtable", "knitr", "ggplot2", "gridExtra", "DataCombine",
                 "devtools", "MatchIt", "MCMCpack", "plotrix", "plyr",
-                "repmis", "reshape", "reshape2", "stringr", "xtable",
-                "Zelig")
+                "repmis", "reshape2", "stringr", "xtable", "Zelig")
 ```
 
 Download this repository.

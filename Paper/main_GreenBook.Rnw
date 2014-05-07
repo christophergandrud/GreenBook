@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inflated Expectations
 % Cassandra Grafström and Christopher Gandrud
-% 25 April 2014
+% 7 May 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % !Rnw weave = knitr
@@ -299,7 +299,7 @@ Our main finding is that Democratic party identification had a strong positive a
     \begin{center}
 
 %%% Code is only run when there are changes, since it is very computationally intensive.
-<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=6, fig.height=4, out.width='0.81\\linewidth'>>=
+<<ExpectValueParty, warning=FALSE, echo=FALSE, message=FALSE, cache=FALSE, results='hide', fig.width=6, fig.height=4, out.width='0.81\\linewidth'>>=
 # Expected value plot ##
   source('Analysis/Greenbook6.R')
 @
