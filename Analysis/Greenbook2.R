@@ -1,7 +1,7 @@
 ###############
 # Difference of Mean Forecast Error
 # Christopher Gandrud 
-# 6 January 2013
+# 7 May 2014
 ###############
 
 ## This code creates a confidence interval of for the difference of mean forecast 
@@ -41,6 +41,7 @@ SEDem <- std.error(DemSubset)
 # Calculate the standard error of the mean difference
 SEDiff <- SEDem + SERep
 
-# Create confidence interval to test the null hypothesis that the differenace of means = 0
+# Create confidence interval to test the null hypothesis that the differenace 
+# of means = 0
 LowerDiff <- MeanDiff - 2.58 * SEDiff
 UpperDiff <- MeanDiff + 2.58 * SEDiff
