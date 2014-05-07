@@ -44,7 +44,7 @@ install.packages("apsrtable", "knitr", "ggplot2", "gridExtra", "DataCombine",
                 "repmis", "reshape2", "stringr", "xtable", "Zelig")
 ```
 
-Download this repository.
+Then download this repository.
 
 Finally, 'knit' the main paper file *main_GreenBook.Rnw* in the *Paper* folder.
 
@@ -54,16 +54,10 @@ Finally, 'knit' the main paper file *main_GreenBook.Rnw* in the *Paper* folder.
 
 The **R** source code for the analyses, tables, and plots are in this
 repository's *Analysis* folder. To reproduce the figures and all of the
-analyses:
+analyses install the necessary R packages as above then:
 
-1. Change the working directories and file paths.
-You will need to  You will need to do this twice:
-
-    - In `Analysis/Greenbook1.R` set the working directory as appropriate on
-    line 10.
-    - Manually change the file path on line 169:
-    `write.csv(ModelParty.evPer2, '/git_repositories/Greenbook/Paper/cache/SimQrt2.csv')`
-    in the file *Analysis/Greenbook6.R*.
+1. Change the working directory in `Analysis/Greenbook1.R` as 
+appropriate on line 10.
 
 2. The source code files must be run in the sequence in which they appear in the
 paper. Start with the file called *Greenbook1.R*. This will load the data set
