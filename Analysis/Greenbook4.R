@@ -1,6 +1,6 @@
 ###############
 # Main Analyses for GreenBook Forecast Error Paper
-# Christopher Gandrud 
+# Christopher Gandrud
 # 7 May 2014
 ###############
 
@@ -8,43 +8,53 @@
 library(MatchIt)
 library(Zelig)
 
-# To run as a stand alone file. First, run the following files from earlier in 
+# To run as a stand alone file. First, run the following files from earlier in
 # the paper:
-## source('Analysis/Greenbook1.R') 
+## source('Analysis/Greenbook1.R')
 
 # Subset for complete (nonmissing) values
 # matchit requires data sets to have no missing values
-vars <- c("Quarter", "ElectionPeriod4", "pres_party", "error.prop.deflator.q2", 
-          "time_to_election", "recession", "senate_dem_rep", 
+vars <- c("Quarter", "ElectionPeriod4", "pres_party", "error.prop.deflator.q2",
+          "time_to_election", "recession", "senate_dem_rep",
           "house_dem_rep", "DebtGDP", "DeficitGDP", "ExpenditureGDP", "UNRATE",
-          "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange", 
+          "PotentialGDP", "GlobalModel", "FedFunds", "FedFunds2qChange",
           "DiscountRate", "DiscountRate2qChange", "Chair"
-          )  
+          )
 cpi.complete <- cpi.data[complete.cases(cpi.data[vars]),]
 cpi.complete <- cpi.complete[vars]
 
-# Remove quarters when president party ID would be unknown for 2 quarter 
+# Remove quarters when president party ID would be unknown for 2 quarter
 # forecasting (time_to_election = 15, 14)
 
 cpi.complete <- subset(cpi.complete, !(time_to_election %in% c(14, 15)))
 
 cpi.data2 <- subset(cpi.data, !(time_to_election %in% c(14, 15)))
 
-# ------------------------------------------------------------------------------------ #
+# --------------------------------------------------------------------------- #
 #### Matching Model ####
 
 # Elections, No interactions
 cpi.matched.election <- matchit(ElectionPeriod4 ~ pres_party + senate_dem_rep +
                                 house_dem_rep + ExpenditureGDP + PotentialGDP +
-                                GlobalModel + DiscountRate2qChange + UNRATE, 
-                                data = cpi.complete, method = "genetic", 
+                                GlobalModel + DiscountRate2qChange + UNRATE,
+                                data = cpi.complete, method = "genetic",
                                 pop.size = 161)
 
 # Matched by Party, All Interactions
-# cpi.matched.party.all <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + UNRATE + GlobalModel + DiscountRate2qChange + pres_party*ElectionPeriod4 + pres_party*senate_dem_rep + pres_party*house_dem_rep + senate_dem_rep + house_dem_rep, data = cpi.complete, method = "genetic", pop.size = 161)
+# cpi.matched.party.all <- matchit(pres_party ~ recession + time_to_election +
+# ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP +
+# PotentialGDP + UNRATE + GlobalModel + DiscountRate2qChange +
+# pres_party*ElectionPeriod4 + pres_party*senate_dem_rep +
+# pres_party*house_dem_rep + senate_dem_rep + house_dem_rep, data =
+# cpi.complete, method = "genetic", pop.size = 161)
 
 # Party, Only pres*ElectionPeriod4 Interaction
-cpi.matched.party <- matchit(pres_party ~ recession + time_to_election + ElectionPeriod4 + senate_dem_rep + house_dem_rep + ExpenditureGDP + PotentialGDP + GlobalModel + DiscountRate2qChange + UNRATE + pres_party*ElectionPeriod4, data = cpi.complete, method = "genetic", pop.size = 161)
+cpi.matched.party <- matchit(pres_party ~ recession + time_to_election +
+                            ElectionPeriod4 + senate_dem_rep + house_dem_rep +
+                            ExpenditureGDP + PotentialGDP + GlobalModel +
+                            DiscountRate2qChange + UNRATE +
+                            pres_party*ElectionPeriod4, data = cpi.complete,
+                            method = "genetic", pop.size = 161)
 
 #### Diagnostics for Covariate Balance ####
 # summary(cpi.matched.election)
@@ -73,21 +83,33 @@ cpi.Mdf.party$elect2 <- (cpi.Mdf.party$time_to_election)^2
 
 ################### Parametric Models ################
 
-# ------------------------------------------------------------------------------------ #
+# --------------------------------------------------------------------------- #
 ###### Non-matched (N) ######
 # Normal Linear
 
-NL1 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.data2, cite = FALSE)
+NL1 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP
+            + DiscountRate2qChange + UNRATE, model = "normal", data = cpi.data2,
+            cite = FALSE)
 
-NL2 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + time_to_election + elect2, model = "normal", data = cpi.data2, cite = FALSE)
+NL2 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP
+            + DiscountRate2qChange + UNRATE + time_to_election + elect2,
+            model = "normal", data = cpi.data2, cite = FALSE)
 
-NL3 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + ElectionPeriod4, model = "normal", data = cpi.data2, cite = FALSE)
+NL3 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP
+            + DiscountRate2qChange + UNRATE + ElectionPeriod4, model = "normal",
+            data = cpi.data2, cite = FALSE)
 
-NL4 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party, model = "normal", data = cpi.data2, cite = FALSE)
+NL4 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP
+            + DiscountRate2qChange + UNRATE + pres_party, model = "normal",
+            data = cpi.data2, cite = FALSE)
 
-NL4.1 <- zelig(error.prop.deflator.q2 ~ recession + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + DeficitGDP, model = "normal", data = cpi.data2, cite = FALSE)
+NL4.1 <- zelig(error.prop.deflator.q2 ~ recession + PotentialGDP +
+                DiscountRate2qChange + UNRATE + pres_party + DeficitGDP,
+                model = "normal", data = cpi.data2, cite = FALSE)
 
-NL5 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + GlobalModel, model = "normal", data = cpi.data2, cite = FALSE)
+NL5 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP
+            + DiscountRate2qChange + UNRATE + pres_party + time_to_election +
+            GlobalModel, model = "normal", data = cpi.data2, cite = FALSE)
 
 NL6 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP + DiscountRate2qChange + UNRATE + pres_party + time_to_election + senate_dem_rep + house_dem_rep, model = "normal", data = cpi.data2, cite = FALSE)
 
@@ -179,7 +201,7 @@ PB1 <- zelig(error.prop.deflator.q2 ~ pres_party + recession + time_to_election 
 #### Save variables model objects #####
 save(cpi.Mdf.party, cpi.Mdf.election, cpi.matched.election, cpi.matched.party, cpi.data2, NL1, NL2, NL3, NL4, NL4.1,
      NL5, NL6, NL7, NL8, NL9, NL10, NL11, NL12, NL13,
-     EL1, EL2, EL3, EL4, EL4.1, EL5, EL6, EL7, EL8, EL9, 
+     EL1, EL2, EL3, EL4, EL4.1, EL5, EL6, EL7, EL8, EL9,
      EL10, EL11, EL12, PL1, PL2, PL3, PL4, PL4.1,	PL5, PL6,
-     PL7, PL8, PL9, PL10, PL11, PL12, NB1, PB1, 
+     PL7, PL8, PL9, PL10, PL11, PL12, NB1, PB1,
      file = 'Paper/ModelObjects.RData')

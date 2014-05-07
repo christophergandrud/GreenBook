@@ -62,7 +62,7 @@ You will need to  You will need to do this twice:
 
     - In `Analysis/Greenbook1.R` set the working directory as appropriate on
     line 10.
-    - Manually change the file path in
+    - Manually change the file path on line 169:
     `write.csv(ModelParty.evPer2, '/git_repositories/Greenbook/Paper/cache/SimQrt2.csv')`
     in the file *Analysis/Greenbook6.R*.
 
