@@ -4,7 +4,7 @@
 # 8 April 2013
 ####################
 
-library(resphape2)
+library(reshape2)
 library(plyr)
 
 #### Figures for Results Catapilar Plot ####

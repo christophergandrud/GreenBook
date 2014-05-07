@@ -34,7 +34,7 @@
 
     opts_chunk$set(concordance=TRUE)
     opts_chunk$set(fig.align='center')
-    library(devtools)
+    # library(devtools)
 @
 
 %%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -314,7 +314,7 @@ Our main finding is that Democratic party identification had a strong positive a
     \end{singlespace}
 \end{figure}
 
-Following \cite{King2000}, we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means, to get a sense of approximately how big the presidential partisan bias is when using different forecast lags. Results from these simulations are shown in Figure \ref{ExpectValueParty}.\footnote{Figure \ref{ExpectValueParty}. The graph uses visually-weighted regression techniques to communicate uncertainty \citep[see][]{Hsiang2012,Gandrud2013visual}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher than it really is in Democratic presidencies and lower than it is in Republican presidencies.
+Following \cite{King2000}, we simulated expected standardized forecast errors for Democratic and Republican presidencies, holding the other covariates at their means, to get a sense of approximately how big the presidential partisan bias is when using different forecast lags. Results from these simulations are shown in Figure \ref{ExpectValueParty}.\footnote{The plot uses visually-weighted regression techniques to communicate uncertainty \citep[see][]{Hsiang2012,Gandrud2013visual}.} There is some variation in the predicted error magnitude depending on how many quarters ago the forecast was made. Nonetheless it is notable that inflation is always predicted to be higher than it really is in Democratic presidencies and lower than it is in Republican presidencies.
 
 For forecasts made two quarters in advance, we expect that the Fed overestimates inflation by \Sexpr{format(mean(Sim2$value[Sim2$variable == "Dem"]*100), digits = 2)} percent during Democratic presidencies, all else equal. We expect the average inflation forecast during Republican presidencies to be approximately \Sexpr{format(mean(Sim2$value[Sim2$variable == "Rep"]*100), digits = 2)} percent of actual inflation. Given that the first quantile of the inflation errors is \Sexpr{round(quantile(cpi.data$error.prop.deflator.q2, prob = 0.25, na.rm = TRUE), digits = 2)*100} and the third is \Sexpr{round(quantile(cpi.data$error.prop.deflator.q2, prob = 0.75, na.rm = TRUE), digits = 2)*100}, \emph{these estimates indicate that partisan biases are on average a large contributor to the overall magnitude of inflation forecasting errors}. These results hold up even when we rerun the models on data where we dropped individual presidential terms (see Table \ref{OutputNLPresDrop}) and Fed chairman terms.\footnote{These are available from the authors upon request.} This indicates that the results are not being driven by one outlier presidential term or chairmanship. Clearly, at least from the 1970s through 2007, Fed Staff were overly pessimistic about Democratic presidents' effect on inflation and overly optimistic about Republican presidents' effect.
 
@@ -334,7 +334,7 @@ Fed Staff do not appear to be over-estimating inflation when a Democratic presid
     \label{InterPlot}
     \begin{center}
 
-<<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, cache=TRUE, results='hide', fig.width=7, fig.height=4, out.width='0.7\\linewidth'>>=
+<<InterPlot, warning=FALSE, echo=FALSE, message=FALSE, cache=FALSE, results='hide', fig.width=7, fig.height=4, out.width='0.7\\linewidth'>>=
     # Pres*Congress Interaction #
     source('Analysis/Greenbook7.R')
     print(PartyInteractionPlot)
