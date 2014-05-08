@@ -173,9 +173,9 @@ S20 <- zelig(abs.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP +
             data = cpi.data2S, cite = FALSE)
 
 # ---------------------------------------------------------------------------- #
-#### Partisan composition of the FOMC
-# Proportion of FOMC members per quarter appointed during democratic presidency, 
-# when forcasts were made 
+#### Partisan composition of the Board of Governors
+# Proportion of Board of Governors members per quarter appointed during 
+# democratic presidency, when forcasts were made 
 S21 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + PotentialGDP 
             + DiscountRate2qChange + UNRATE + GlobalModel + senate_dem_rep + 
             house_dem_rep + pres_party + DemAppointPerc_Lag3, model = "normal", 

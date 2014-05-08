@@ -1,7 +1,7 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph
 # Christopher Gandrud
-# 7 May 2014
+# 8 May 2014
 ####################
 
 library(reshape2)
@@ -9,7 +9,7 @@ library(ggplot2)
 
 setwd('/git_repositories/Greenbook') # Change as appropriate. 
 
-# Load data from GitHub
+# Load data
 cpi.data <- read.csv("Data/GB_FRED_cpi_2007.csv", stringsAsFactors = FALSE)
 
 ##### Create Plot #######
