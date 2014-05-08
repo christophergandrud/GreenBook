@@ -4,7 +4,6 @@
 # 12 March 2012
 ############
 
-
 # Load packages
 library(DataCombine)
 library(lubridate)
