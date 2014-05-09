@@ -46,11 +46,11 @@ install.packages("apsrtable", "knitr", "ggplot2", "gridExtra", "DataCombine",
 
 Then download this repository.
 
-Change the root directory in the *Paper/main_GreenBook.Rnw* file on line 33 as appropriate.
+Change the root directory in the *Paper/main_GreenBook.Rnw* file on line 33 as appropriate. Do the same for the *Paper/supplemental_GreenBook.Rnw* to recreate the Supplemental Materials section.
 
 Finally, 'knit' the main paper file *Paper/main_GreenBook.Rnw*.
 
-**Important:** You will need to change the file paths as discussed in the next section.
+**Important:** You will also need to change the file paths as discussed in the next section.
 
 ## Reproduce only the analyses and plots
 
