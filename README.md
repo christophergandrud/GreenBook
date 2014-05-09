@@ -46,7 +46,9 @@ install.packages("apsrtable", "knitr", "ggplot2", "gridExtra", "DataCombine",
 
 Then download this repository.
 
-Finally, 'knit' the main paper file *main_GreenBook.Rnw* in the *Paper* folder.
+Change the root directory in the *Paper/main_GreenBook.Rnw* file on line 33 as appropriate.
+
+Finally, 'knit' the main paper file *Paper/main_GreenBook.Rnw*.
 
 **Important:** You will need to change the file paths as discussed in the next section.
 
