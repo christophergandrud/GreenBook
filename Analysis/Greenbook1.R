@@ -7,7 +7,7 @@
 library(reshape2)
 library(ggplot2)
 
-setwd('/git_repositories/Greenbook') # Change as appropriate. 
+# setwd() # Change as appropriate.
 
 # Load data
 cpi.data <- read.csv("Data/GB_FRED_cpi_2007.csv", stringsAsFactors = FALSE)

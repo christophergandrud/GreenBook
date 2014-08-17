@@ -3,7 +3,7 @@
 
 *.aux
 *.bbl
-*.blg	
+*.blg
 Paper/figure/*
 Paper/cache/*
 .DS_Store
@@ -14,5 +14,6 @@ Paper/cache/*
 .Rhistory
 *.RData
 PSRM_dvn/*
+*.zip
 
 GreenbookPSRM_R2.pdf
