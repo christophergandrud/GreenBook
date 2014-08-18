@@ -2,12 +2,14 @@
 
 **Christopher Gandrud and Cassandra Grafström**
 
+[![DOI](https://zenodo.org/badge/5350/christophergandrud/GreenBook.png)](http://dx.doi.org/10.5281/zenodo.11320)
+
 These files comprise the paper ''[Inflated Expectations:
 How government
 partisanship shapes bureaucrats' inflation
 expectations](http://ssrn.com/abstract=2125283)''.
 
-The paper has been conditionally accepted at [Political Science
+The paper forthcoming at [Political Science
 Research and Methods](http://journals.cambridge.org/action/displayJournal?jid=RAM).
 
 ## About
