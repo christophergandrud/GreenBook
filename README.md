@@ -9,7 +9,7 @@ How government
 partisanship shapes bureaucrats' inflation
 expectations](http://ssrn.com/abstract=2125283)''.
 
-The paper forthcoming at [Political Science
+The paper is forthcoming at [Political Science
 Research and Methods](http://journals.cambridge.org/action/displayJournal?jid=RAM).
 
 ## About
