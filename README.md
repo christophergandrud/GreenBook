@@ -30,7 +30,7 @@ and underestimate future inflation during right-party ones. Our findings
 suggest that partisan heuristics play an important part in monetary
 policy bureaucrats' inflation expectations.
 
-# Reproduce the paper (including analyses, plots, and tables)
+## Reproduce the paper (including analyses, plots, and tables)
 
 The **R** and knitr source code and data for reproducing the analyses, plots, tables
 and text is in this DVN repository. We used R version 3.1.1.
