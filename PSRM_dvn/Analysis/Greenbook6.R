@@ -1,9 +1,10 @@
 ###############
 # Graph of simulated errors across all quarter estimates for model NL4
 # (A4 in the manuscript table).
+# (Main Paper Figure 5)
 # Uses non-matched data.
 # Christopher Gandrud
-# 7 May 2014
+# 14 October 2014
 ###############
 
 ## Load libraries
@@ -37,42 +38,42 @@ vars <- c("Quarter", "ElectionPeriod", "pres_party", "error.prop.deflator.q3",
           "error.prop.deflator.q4", "error.prop.deflator.q5", "time_to_election",
           "recession", "senate_dem_rep", "house_dem_rep", "DebtGDP", "ExpenditureGDP",
           "PotentialGDP", "GlobalModel", "UNRATE","DiscountRate2qChange",
-          "DiscountRate3qChange", "DiscountRate4qChange", "DiscountRate5qChange", 
+          "DiscountRate3qChange", "DiscountRate4qChange", "DiscountRate5qChange",
           "Chair"
 )
 CPIEstimates35 <- cpi.data[complete.cases(cpi.data[vars]),]
 CPIEstimates35 <- CPIEstimates35[vars]
 
 #### Run Parametric OLS Models ####
-NL.02.0 <- zelig(error.prop.deflator.q0 ~ recession + ExpenditureGDP + 
-                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party, 
-                model = "normal", data = CPIEstimates02, 
+NL.02.0 <- zelig(error.prop.deflator.q0 ~ recession + ExpenditureGDP +
+                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party,
+                model = "normal", data = CPIEstimates02,
                 cite = FALSE)
 
-NL.02.1 <- zelig(error.prop.deflator.q1 ~ recession + ExpenditureGDP + 
-                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party, 
+NL.02.1 <- zelig(error.prop.deflator.q1 ~ recession + ExpenditureGDP +
+                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party,
                 model = "normal",
                 data = subset(CPIEstimates02, time_to_election != 15),
                 cite = FALSE)
 
-NL.02.2 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP + 
-                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party, 
-                model = "normal", data = subset(CPIEstimates02, 
+NL.02.2 <- zelig(error.prop.deflator.q2 ~ recession + ExpenditureGDP +
+                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party,
+                model = "normal", data = subset(CPIEstimates02,
                               !(time_to_election %in% c(15, 14))), cite = FALSE)
 
-NL.35.3 <- zelig(error.prop.deflator.q3 ~ recession + ExpenditureGDP + 
-                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party, 
+NL.35.3 <- zelig(error.prop.deflator.q3 ~ recession + ExpenditureGDP +
+                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party,
                 model = "normal", data = CPIEstimates35, cite = FALSE)
 
-NL.35.4 <- zelig(error.prop.deflator.q4 ~ recession + ExpenditureGDP + 
-                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party, 
+NL.35.4 <- zelig(error.prop.deflator.q4 ~ recession + ExpenditureGDP +
+                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party,
                 model = "normal",
                 data = subset(CPIEstimates35 ,
                               !(time_to_election %in% c(15, 14, 13, 12))),
                 cite = FALSE)
 
-NL.35.5 <- zelig(error.prop.deflator.q5 ~ recession + ExpenditureGDP + 
-                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party, 
+NL.35.5 <- zelig(error.prop.deflator.q5 ~ recession + ExpenditureGDP +
+                PotentialGDP + DiscountRate2qChange + UNRATE + pres_party,
                 model = "normal", data = subset(CPIEstimates35 ,
                               !(time_to_election %in% c(15, 14, 13, 12, 11))),
                 cite = FALSE)
@@ -87,9 +88,9 @@ ModelParty0D <- setx(NL.02.0, pres_party = 1)
 ModelParty.sim0 <- sim(NL.02.0, x = ModelParty0R, x1 = ModelParty0D)
 
 # Extract expected values from simulations
-ModelParty.ev0R = data.frame(simulation.matrix(ModelParty.sim0, 
+ModelParty.ev0R = data.frame(simulation.matrix(ModelParty.sim0,
                                                "Expected Values: E(Y|X)"))
-ModelParty.ev0D = data.frame(simulation.matrix(ModelParty.sim0, 
+ModelParty.ev0D = data.frame(simulation.matrix(ModelParty.sim0,
                                                "Expected Values: E(Y|X1)"))
 ModelParty.ev0 <- cbind(ModelParty.ev0R, ModelParty.ev0D)
 names(ModelParty.ev0) <- c("Rep", "Dem")
@@ -117,9 +118,9 @@ ModelParty1D <- setx(NL.02.1, pres_party = 1)
 ModelParty.sim1 <- sim(NL.02.1, x = ModelParty1R, x1 = ModelParty1D)
 
 # Extract expected values from simulations
-ModelParty.ev1R = data.frame(simulation.matrix(ModelParty.sim1, 
+ModelParty.ev1R = data.frame(simulation.matrix(ModelParty.sim1,
                                                "Expected Values: E(Y|X)"))
-ModelParty.ev1D = data.frame(simulation.matrix(ModelParty.sim1, 
+ModelParty.ev1D = data.frame(simulation.matrix(ModelParty.sim1,
                                                "Expected Values: E(Y|X1)"))
 ModelParty.ev1 <- cbind(ModelParty.ev1R, ModelParty.ev1D)
 names(ModelParty.ev1) <- c("Rep", "Dem")
@@ -147,9 +148,9 @@ ModelParty2D <- setx(NL.02.2, pres_party = 1)
 ModelParty.sim2 <- Zelig::sim(NL.02.2, x = ModelParty2R, x1 = ModelParty2D)
 
 # Extract expected values from simulations
-ModelParty.ev2R = data.frame(simulation.matrix(ModelParty.sim2, 
+ModelParty.ev2R = data.frame(simulation.matrix(ModelParty.sim2,
                                                "Expected Values: E(Y|X)"))
-ModelParty.ev2D = data.frame(simulation.matrix(ModelParty.sim2, 
+ModelParty.ev2D = data.frame(simulation.matrix(ModelParty.sim2,
                                                "Expected Values: E(Y|X1)"))
 ModelParty.ev2 <- cbind(ModelParty.ev2R, ModelParty.ev2D)
 names(ModelParty.ev2) <- c("Rep", "Dem")
@@ -169,8 +170,7 @@ ModelParty.evPer2 <- ddply(ModelParty.evPer2, .(variable), transform,
 ModelParty.evPer2 <- subset(ModelParty.evPer2, Lower == FALSE & Upper == FALSE)
 
 ## Save estimates to be used in the in-text equations
-write.csv(ModelParty.evPer2,
-         file = '/git_repositories/Greenbook/Paper/cache/SimQrt2.csv')
+write.csv(ModelParty.evPer2, file = 'SimQrt2.csv')
 
 #### Quarter 3 ####
 # Set fitted values, all variables other than pres_party set to their means
@@ -181,9 +181,9 @@ ModelParty3D <- setx(NL.35.3, pres_party = 1)
 ModelParty.sim3 <- sim(NL.35.3, x = ModelParty3R, x1 = ModelParty3D)
 
 # Extract expected values from simulations
-ModelParty.ev3R = data.frame(simulation.matrix(ModelParty.sim3, 
+ModelParty.ev3R = data.frame(simulation.matrix(ModelParty.sim3,
                                                "Expected Values: E(Y|X)"))
-ModelParty.ev3D = data.frame(simulation.matrix(ModelParty.sim3, 
+ModelParty.ev3D = data.frame(simulation.matrix(ModelParty.sim3,
                                                "Expected Values: E(Y|X1)"))
 ModelParty.ev3 <- cbind(ModelParty.ev3R, ModelParty.ev3D)
 names(ModelParty.ev3) <- c("Rep", "Dem")
@@ -211,9 +211,9 @@ ModelParty4D <- setx(NL.35.4, pres_party = 1)
 ModelParty.sim4 <- sim(NL.35.4, x = ModelParty4R, x1 = ModelParty4D)
 
 # Extract expected values from simulations
-ModelParty.ev4R = data.frame(simulation.matrix(ModelParty.sim4, 
+ModelParty.ev4R = data.frame(simulation.matrix(ModelParty.sim4,
                                                "Expected Values: E(Y|X)"))
-ModelParty.ev4D = data.frame(simulation.matrix(ModelParty.sim4, 
+ModelParty.ev4D = data.frame(simulation.matrix(ModelParty.sim4,
                                                "Expected Values: E(Y|X1)"))
 ModelParty.ev4 <- cbind(ModelParty.ev4R, ModelParty.ev4D)
 names(ModelParty.ev4) <- c("Rep", "Dem")
@@ -241,9 +241,9 @@ ModelParty5D <- setx(NL.35.5, pres_party = 1)
 ModelParty.sim5 <- sim(NL.35.5, x = ModelParty5R, x1 = ModelParty5D)
 
 # Extract expected values from simulations
-ModelParty.ev5R = data.frame(simulation.matrix(ModelParty.sim5, 
+ModelParty.ev5R = data.frame(simulation.matrix(ModelParty.sim5,
                                                "Expected Values: E(Y|X)"))
-ModelParty.ev5D = data.frame(simulation.matrix(ModelParty.sim5, 
+ModelParty.ev5D = data.frame(simulation.matrix(ModelParty.sim5,
                                                "Expected Values: E(Y|X1)"))
 ModelParty.ev5 <- cbind(ModelParty.ev5R, ModelParty.ev5D)
 names(ModelParty.ev5) <- c("Rep", "Dem")

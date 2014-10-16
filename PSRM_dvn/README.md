@@ -2,14 +2,10 @@
 
 **Christopher Gandrud and Cassandra Grafström**
 
-[![DOI](https://zenodo.org/badge/5350/christophergandrud/GreenBook.png)](http://dx.doi.org/10.5281/zenodo.11320)
+These files comprise the replication material (figures + analyses) for the paper
+''[Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations](http://ssrn.com/abstract=2125283)''.
 
-These files comprise the paper ''[Inflated Expectations:
-How government
-partisanship shapes bureaucrats' inflation
-expectations](http://ssrn.com/abstract=2125283)''.
-
-The paper is forthcoming at [Political Science
+The paper has been conditionally accepted at [Political Science
 Research and Methods](http://journals.cambridge.org/action/displayJournal?jid=RAM).
 
 ## About
@@ -30,7 +26,7 @@ and underestimate future inflation during right-party ones. Our findings
 suggest that partisan heuristics play an important part in monetary
 policy bureaucrats' inflation expectations.
 
-# Reproduce the paper (including analyses, plots, and tables)
+## Reproduce the paper (including analyses, plots, and tables)
 
 The **R** and knitr source code and data for reproducing the analyses, plots, tables
 and text is in this DVN repository. We used R version 3.1.1.

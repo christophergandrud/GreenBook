@@ -13,7 +13,7 @@ Paper/cache/*
 .swp
 .Rhistory
 *.RData
-PSRM_dvn/*
+^PSRM_dvn$
 *.zip
 
 GreenbookPSRM_R2.pdf

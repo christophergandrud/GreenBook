@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+
+pre .str, code .str { color: #65B042; } /* string  - green */
+pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
+pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
+pre .typ, code .typ { color: #89bdff; } /* type - light blue */
+pre .lit, code .lit { color: #3387CC; } /* literal - blue */
+pre .pun, code .pun { color: #fff; } /* punctuation - white */
+pre .pln, code .pln { color: #fff; } /* plaintext - white */
+pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
+pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
+pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.prettyprint, code.prettyprint {
+  background-color: #000;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+pre.prettyprint {
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+	white-space: pre-wrap;
+}
+</style>
+<title>Data Description</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Data Description</h1>
+
+<h4>Christopher Gandrud and Cassandra Grafstrom</h4>
+
+<p>The data set <em>GB_FRED_cpi_2007.csv</em> was used for all analyses in the paper ''Inflated Expectations: How
+government partisanship shapes monetary policy bureaucrats’ inflation forecasts''.</p>
+
+<p>The table below gives a brief description of each variable and its source.
+Please see the paper's text for detailed descriptions of transformations
+that were made to the variables.</p>
+
+<p>The data set was amalgamated and variable transformations were made using source code available at: <a href="https://github.com/christophergandrud/GreenBook/tree/master/Data/DataCreation">https://github.com/christophergandrud/GreenBook/tree/master/Data/DataCreation</a>.</p>
+
+<p>All data is for the United States.</p>
+
+<h2>Variable descriptions and sources</h2>
+
+<h3>Notes</h3>
+
+<ul>
+<li><p>''Authors'' means that the study's authors created the variable using generally available information.</p></li>
+<li><p>''FRED'' refers to the St. Louis Federal Reserve's FRED statistical service. See <a href="http://research.stlouisfed.org/fred2/">http://research.stlouisfed.org/fred2/</a>. Most recently accessed May 2014.</p></li>
+<li><p>''infoplease'' data is available at: <a href="http://www.infoplease.com/ipa/A0774721.html">http://www.infoplease.com/ipa/A0774721.html</a>. Most recently accessed May 2014.</p></li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>  Variable ID      </th>
+<th> Description                </th>
+<th> Source </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>Quarter</code>           </td>
+<td> Quarter with <code>.1</code> indicating the first quarter. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>year</code>              </td>
+<td> Year                       </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>GP_CPI_QTR*</code>       </td>
+<td> Greenbook inflation forecast. Suffix indicates how many quarters in advance it was made. <code>0</code> indicates forecasts made in the present quarter. </td>
+<td> US Federal Reserve </td>
+</tr>
+<tr>
+<td> <code>deflator</code>          </td>
+<td> Quarterly % change in the GNP deflator </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>cpi.change</code>        </td>
+<td> Quarterly % change in the consumer price index </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>president</code>         </td>
+<td> Surname of the sitting president. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>term</code> </td>
+<td> President's term number </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>presTerm</code> </td>
+<td> Combination of <code>president</code> and <code>term</code> </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>EligibleReElect</code> </td>
+<td> Dummy indicating if the president is eligible for re-election (<code>1</code>) or not (<code>0</code>). </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>pres_party</code> </td>
+<td> Dummy indicating the president's party. <code>0</code> is Republican. <code>1</code> is Democrat. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>pres_election</code> </td>
+<td> Dummy indicating if the quarter has a presidential election (<code>1</code>) or not (<code>0</code>). </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>time_to_election</code> </td>
+<td> Quarters until the next presidential election. <code>0</code> is an election quarter. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>ElectionPeriod</code> </td>
+<td> Dummy indicating (<code>1</code>) whether or not (<code>0</code>) the quarter is in the election period defined as the election quarter and the quarter before. See also <code>ElectionPeriod4</code>. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>senate_dems</code> </td>
+<td> Number of Senate Democrats. </td>
+<td> infoplease </td>
+</tr>
+<tr>
+<td> <code>senate_rep</code>  </td>
+<td> Number of Senate Republicans, </td>
+<td> infoplease </td>
+</tr>
+<tr>
+<td> <code>house_dems</code> </td>
+<td> Number of House Democrats. </td>
+<td> infoplease </td>
+</tr>
+<tr>
+<td> <code>house_rep</code>  </td>
+<td> Number of House Republicans. </td>
+<td> infoplease </td>
+</tr>
+<tr>
+<td> <code>senate_dem_rep</code> </td>
+<td> Senate Democrats as a percentage of Senate Republicans. </td>
+<td> Authors' calculations from infoplease data </td>
+</tr>
+<tr>
+<td> <code>house_dem_rep</code> </td>
+<td> House Democrats as a percentage of House Republicans. </td>
+<td> Authors' calculations from infoplease data </td>
+</tr>
+<tr>
+<td> <code>manufoutput</code> </td>
+<td>  Manufacturing output % change from same quarter in previous year. </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>recession</code> </td>
+<td> US recession dummy (<code>1</code> is a recession). </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>sales</code> </td>
+<td> US real retail &amp; food sales % change from quarter in previous year. </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>DebtGDP</code> </td>
+<td> Quarterly US Federal government debt as a % of GDP. </td>
+<td> Authors' calculations based on FRED data </td>
+</tr>
+<tr>
+<td> <code>ExpenditureGDP</code> </td>
+<td> Quarterly US Federal government expenditures as a $ of GDP. </td>
+<td> Authors' calculations based on FRED data </td>
+</tr>
+<tr>
+<td> <code>PotentialGDP</code> </td>
+<td> Potential GDP as a % of GDP. </td>
+<td> Authors' calculations based on FRED data </td>
+</tr>
+<tr>
+<td> <code>UNRATE</code> </td>
+<td> Unemployment rate. </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td><code>GB_Unemp*</code> </td>
+<td> Greenbook unemployment rate forecast. Suffix indicates how many quarters in advance it was made. For example,<code>0</code> indicates forecasts made in the present quarter. </td>
+<td> US Federal Reserve </td>
+</tr>
+<tr>
+<td> <code>FedFunds</code> </td>
+<td> Federal funds rate. </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>FedFunds2qChange</code> </td>
+<td> Federal funds rate change between quarter 0 and quarter 2. </td>
+<td> Authors' calculations based on FRED data </td>
+</tr>
+<tr>
+<td> <code>DiscountRate</code> </td>
+<td> Discount rate. </td>
+<td> Compiled from FRED data by Authors </td>
+</tr>
+<tr>
+<td> <code>DiscountTrate*</code> </td>
+<td> Change in the discount rate between quarter 0 and some other quarter specified in the suffix. For example, the suffix <code>1qchange</code> indicates a change from the previous quarter. </td>
+<td> Authors' calculations based on FRED data </td>
+</tr>
+<tr>
+<td> <code>DeficitGDP</code> </td>
+<td> Annual US Federal government deficit as a % of GDP. </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>pres_party_name</code> </td>
+<td> President's party name. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>error.prop.deflator.*</code> </td>
+<td> Inflation forecasting error. The suffix indicates when the forecast was made. For example, <code>q0</code> means that the forecast was made in the quarter being forecasted for. </td>
+<td> Author's calculations based on US Federal Reserve and FRED data </td>
+</tr>
+<tr>
+<td> <code>GlobalModel</code> </td>
+<td> Dummy indicating that the quarter was from or after 1996 (<code>1</code>) when the Global Forecasting model was introduced or before (<code>0</code>). </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>Chair</code> </td>
+<td> Surname of the Federal Reserve Board of Governors chairperson. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>ElectionPeriod4</code> </td>
+<td> Dummy indicating that the quarter was in the presidential election quarter or the three quarters before (<code>1</code>) or otherwise (<code>0</code>). </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>productivity_change</code> </td>
+<td> Change % of US non-farm labour productivity from the previous quarter at the annual rate. </td>
+<td> United States Bureau of Labor Statistics </td>
+</tr>
+<tr>
+<td> <code>WTI_crude_price</code> </td>
+<td> Change in the West Texas Crude oil price from the same quarter in the previous year. </td>
+<td> FRED </td>
+</tr>
+<tr>
+<td> <code>num_conflicts</code> </td>
+<td> Number of armed conflicts per year which the United States participated. </td>
+<td> Uppsala Conflict Data Program/Peach Research Institute Oslo </td>
+</tr>
+<tr>
+<td> <code>DemAppointPerc</code> </td>
+<td> Percentage of Federal Reserve Board of Governors members appointed by a democratic president. </td>
+<td> Authors </td>
+</tr>
+<tr>
+<td> <code>DemAppontPerc_Lag3</code> </td>
+<td> <code>DemAppointPerc</code> lagged by 3 quarters. </td>
+<td> Authors </td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
