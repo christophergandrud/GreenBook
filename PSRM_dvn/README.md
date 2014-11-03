@@ -2,7 +2,7 @@
 
 **Christopher Gandrud and Cassandra Grafström**
 
-These files comprise the replication material (figures + analyses) for the paper
+These files comprise the replication materials for the paper
 ''[Inflated Expectations: How government partisanship shapes bureaucrats' inflation expectations](http://ssrn.com/abstract=2125283)''.
 
 The paper has been conditionally accepted at [Political Science
