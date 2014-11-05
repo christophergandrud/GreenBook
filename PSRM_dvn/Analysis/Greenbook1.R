@@ -1,13 +1,11 @@
 ####################
 # Greenbook Actual Inflation vs. Forecasts Graph (Main Paper Figure 2)
 # Christopher Gandrud
-# 16 October 2014
+# 5 November 2014
 ####################
 
 library(reshape2)
 library(ggplot2)
-
-setwd('/git_repositories/GreenBook/PSRM_dvn/') # Change as appropriate.
 
 # Load data
 cpi.data <- read.csv("Data/GB_FRED_cpi_2007.csv", stringsAsFactors = FALSE)
