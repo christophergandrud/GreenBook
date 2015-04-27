@@ -42,8 +42,8 @@ To reproduce the figures and all of the analyses:
 ```{S}
 install.packages(c("apsrtable", "ggplot2", "gridExtra", "DataCombine",
                 "devtools", "knitr", "Matching", "MatchIt", "MCMCpack",
-                "plotrix", "plyr", "repmis", "reshape2", "rgenoud", "stringr",
-                "xtable", "Zelig"))
+                "plotrix", "plyr", "repmis", "reshape", "reshape2", 
+                "rgenoud", "stringr", "xtable", "Zelig"))
 ```
 
 2. Knit the *main_GreenBook.Rnw* and *supplemental_GreenBook.Rnw* files in the
