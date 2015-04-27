@@ -41,7 +41,7 @@ To reproduce the figures and all of the analyses:
 
 ```{S}
 install.packages(c("apsrtable", "ggplot2", "gridExtra", "DataCombine",
-                "devtools", "knitr", "matching", "MatchIt", "MCMCpack",
+                "devtools", "knitr", "Matching", "MatchIt", "MCMCpack",
                 "plotrix", "plyr", "repmis", "reshape2", "rgenoud", "stringr",
                 "xtable", "Zelig"))
 ```
