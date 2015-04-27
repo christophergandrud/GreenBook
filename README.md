@@ -40,10 +40,10 @@ To reproduce the figures and all of the analyses:
 1. Install the necessary R packages using the following code:
 
 ```{S}
-install.packages("apsrtable", "ggplot2", "gridExtra", "DataCombine",
+install.packages(c("apsrtable", "ggplot2", "gridExtra", "DataCombine",
                 "devtools", "knitr", "matching", "MatchIt", "MCMCpack",
                 "plotrix", "plyr", "repmis", "reshape2", "rgenoud", "stringr",
-                "xtable", "Zelig")
+                "xtable", "Zelig"))
 ```
 
 2. Knit the *main_GreenBook.Rnw* and *supplemental_GreenBook.Rnw* files in the
